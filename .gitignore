@@ -1,10 +1,6 @@
 # CommonHealth — public push exclusions
-# Rule: docs/ folder NEVER in public repo (peer reviews, emails, personal data, unpublished drafts)
-
 docs/
 **/docs/
-
-# Core files that are NOT for public (per feedback_core_md_files)
 CONCEPT.md
 CLAUDE.md
 TODO.md
@@ -14,29 +10,10 @@ MEMORY.md
 LINKS.md
 KNOWLEDGE.md
 UPGRADE.md
-MEMORY.md
 STRATEGY.md
 REMINDER.md
-
-# Data and credentials
-*.env
-.env*
-credentials.json
-*.pem
-*.key
-
-# Build artifacts
+.aim_env
+Patients/
 target/
+_build/
 node_modules/
-__pycache__/
-*.pyc
-.pytest_cache/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# OS
-.DS_Store
-Thumbs.db
