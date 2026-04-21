@@ -1,0 +1,11 @@
+{
+  "n_samples": 656,
+  "age_min": 19.0,
+  "age_max": 101.0,
+  "age_mean": 64.03506097560975,
+  "age_median": 65.0,
+  "age_std": 14.73668080734771,
+  "beta_implied_anchor_tau100": 0.6403506097560975,
+  "rmse_D_space": 0.1473668080734771,
+  "source": "GSE40279 real sample metadata"
+}
