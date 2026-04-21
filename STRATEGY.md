@@ -1,9 +1,24 @@
 # CommonHealth — Грантовая стратегия
-## Гибридный подход: раздельные заявки по подпроектам
 
-**Версия:** 2.0
-**Дата:** 2026-04-11
-**Статус:** АКТИВНАЯ СТРАТЕГИЯ — обновлена по результатам peer review v1/v2/v3
+> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
+
+## EIC Pathfinder — единая umbrella-заявка CommonHealth с 5 Work Packages
+
+**Версия:** 3.0 (Umbrella restructure 2026-04-17)
+**Дата:** 2026-04-17
+**Статус:** АКТИВНАЯ СТРАТЕГИЯ — Variant C принят: EIC под CommonHealth umbrella, не FCLC соло
+
+> **РЕШЕНИЕ 2026-04-17 (Variant C):**
+> EIC Pathfinder подаётся как единая заявка **CommonHealth** (umbrella) с архитектурой:
+> - **WP1 = FCLC** (federated learning infrastructure) — приватность, SecAgg+, DP
+> - **WP2 = Ze** (biomarker computation) — χ_Ze, EEG/HRV
+> - **WP3 = CDATA** (biological mechanism) — centriolar damage theory
+> - **WP4 = BioSense** (hardware sensor) — EEG/HRV прототип
+> - **WP5 = Aqtivirebuli** (clinical pilot) — традиционная нутрициология, anemia cohort
+>
+> Это объединяет все 5 подпроектов CommonHealth в единое научное и техническое целое.
+> Усиливает Excellence score (комплексная экосистема vs. узкая FCLC infra-заявка).
+> Дедлайн: **2026-05-12** | Host: NGO Georgia Longevity Alliance (Рег. №404506520)
 
 ---
 
@@ -125,7 +140,7 @@ PhD нужен для ERC, Wellcome, NIH. Это долгосрочная инв
 | **T-11** | BUG-F3: deprecated alias `RenyiAccountant` в тестах | `fclc-core/tests/integration_round.rs:188` | Следующий спринт | 🔴 Низкий приоритет |
 | **T-12** | FCLC: шаблон DPA (GDPR Art.28) | `FCLC/docs/DPA_Template_GDPR_Art28.md` | **2026-04-20** | ✅ Создан (2026-04-11) — требует юридической проверки перед использованием |
 | **T-13** | Ze: DESI DR2 1.6σ стандартный текст для ERC | `Ze/CONCEPT.md §15` | **2026-04-20** | ✅ Добавлен раздел §15 с формулой для ERC (2026-04-11) |
-| **T-14** | CDATA: C2 только Drosophila → добавить Wang 2009 (PMID 19264965) mammalian HSC | `CDATA/CONCEPT.md §C2` | До Aging Cell | ✅ Исправлен (2026-04-11) — Wang 2009 добавлен с оговоркой об экстраполяции |
+| **T-14** | CDATA: C2 только Drosophila → добавить Wang 2009 [PMID TBD — previously wrong 19264965] mammalian HSC | `CDATA/CONCEPT.md §C2` | До Aging Cell | ✅ Исправлен (2026-04-11) — Wang 2009 добавлен с оговоркой об экстраполяции |
 | **T-15** | BioSense: heterogeneity Cuban d=1.694 vs Dortmund d=0.732 — Cochran's Q / I² не вычислен | `BioSense/CONCEPT.md` | До подачи статьи | ✅ Предупреждение добавлено (2026-04-11); скрипт нужно написать и запустить |
 | **T-16** | v*_active: bootstrap 95% CI per dataset (BUG-v9-3) | `Ze/simulator/bootstrap_vstar.py` | ~~СЕГОДНЯ~~ | ✅ **ИСПРАВЛЕН (2026-04-11)** — per_dataset/permutation/pooled(deprecated) режимы, Cochran Q guard, MPI-LEMON добавлен. Нужны реальные .npy данные. |
 | **T-17** | BioSense paper: N=1 строка в таблице → перенести в Supplementary | `BioSense/Articles/BioSense.docx` | До подачи статьи | 🟡 Предупреждение в CONCEPT.md (2026-04-11); исправить вручную в docx |
@@ -137,21 +152,32 @@ PhD нужен для ERC, Wellcome, NIH. Это долгосрочная инв
 
 ---
 
-## БЛОК 3 — МАТРИЦА ТРЕКОВ (обновлённая, реалистичная)
+## БЛОК 3 — МАТРИЦА ТРЕКОВ (v3.0, umbrella restructure 2026-04-17)
 
-| Подпроект | Зрелость | Оптимальный инструмент | Дедлайн | Требует PhD? | Требует аффилиацию? |
-|-----------|----------|----------------------|---------|-------------|-------------------|
-| **CDATA** | ✅ Опубликован, R²=0.84 | Longevity Impetus / Lifespan Inst. | Rolling | ❌ Нет | ❌ Нет (Impetus) |
-| **Ze Theory** | 🔬 Аналитика + EEG данные | Longevity Impetus / ERC (через Co-PI) | Rolling / Oct 2026 | ❌/✅ | ❌/✅ |
-| **FCLC** | ⚙️ Код + баги | EIC Pathfinder (с HIA) | **12 мая 2026** | ❌ Нет | ✅ Нужна |
-| **BioSense** | 🔬 EEG TRL3, HW TRL1 | Rustaveli Foundation | ~май 2026 | ❌ Нет | ❌ (Грузия) |
+| Заявка | Зрелость | Инструмент | Дедлайн | Требует PhD? | Аффилиация |
+|--------|----------|-----------|---------|-------------|-----------|
+| **CommonHealth umbrella (WP1-5)** | 🟢 Восстановлена | EIC Pathfinder (с HIA) | **12 мая 2026** | ❌ | ✅ GLA |
+| **CDATA Phase 0** (отдельно) | ✅ LOI v22 готов | Longevity Impetus | **25 апр 2026** | ❌ | ❌ (Impetus) |
+| **Ze Theory** (как paper) | 🔬 Аналитика + EEG | Foundations of Physics | июль 2026 | ❌ | — |
+| **BioSense** (как paper) | 🔬 EEG TRL3 | Rustaveli Foundation | ~май 2026 | ❌ | ❌ (Грузия) |
+| **Aqtivirebuli/Korkoti** (как paper) | 🔬 Концепция готова | Food Chemistry IF 8.5 | июнь 2026 | ❌ | — |
+
+**Дублирование избегается:** CDATA Phase 0 ($75K Impetus, отдельно) → результаты Q3 2026 идут в WP3 EIC.
 
 ---
 
-## ТРЕК 1 — FCLC → EIC Pathfinder Open, 12 мая 2026
+## ТРЕК 1 — CommonHealth (umbrella) → EIC Pathfinder Open, 12 мая 2026
+
+> **Изменение 2026-04-17:** Заявка переоформлена с FCLC соло → CommonHealth umbrella. FCLC становится WP1.
+> Архитектура заявки (5 WP):
+> - **WP1 FCLC** (12 мес, €0.6M) — privacy-preserving federated learning infrastructure
+> - **WP2 Ze** (12 мес, €0.5M) — χ_Ze biomarker validation в EEG/HRV
+> - **WP3 CDATA** (24 мес, €0.8M) — centriolar damage theory + Phase 0 HSC experiment
+> - **WP4 BioSense** (18 мес, €0.6M) — EEG+HRV hardware прототип TRL3→TRL5
+> - **WP5 Aqtivirebuli** (12 мес, €0.5M) — clinical pilot anemia cohort (FL demo data source)
 
 **Дедлайн:** 12 мая 2026, 17:00 CEST (подтверждено)
-**Бюджет:** до €3M / 36 месяцев
+**Бюджет:** до €3M / 36 месяцев (распределён по 5 WP)
 **PhD требование:** Нет — EIC требует только юридическое лицо-заявитель
 **Аффилиация:** ✅ НУЖНА — Грузия является Horizon Europe Associated Country
 
@@ -243,7 +269,7 @@ P0-5: 🟡 ЧАСТИЧНО — данные есть (3 clinics × 500 patients
 ### Что нужно исправить перед любой CDATA-подачей:
 1. ✅ "62,000 patient records" — удалено (2026-04-11). CDATA — чистый in silico симулятор, пациентов нет. Калибровка: 2 свободных параметра × 35 точек литературных средних (NHANES, Jaiswal 2017, Horvath 2013). Для грантов: "model calibrated against population-level biomarker trajectories from published cohort studies; R²=0.84 independent cross-sectional validation."
 2. ✅ BUG-C1 (сезонный модуль) и GAP-C6 (NUTS→MH) — исправлены (2026-04-11)
-3. ✅ ¬R аргумент переработан (2026-04-11): логика «необходимое + три достаточных условия»; "единственный кандидат" → "наиболее сильный кандидат среди ¬R"; NPC/базальные тела добавлены в таблицу с обоснованием почему не выполняют C2/C3; механизм Hayflick ~200 делений у стволовых клеток с активной теломеразой объяснён через PTM накопление в материнской центриоли (PMID 17395836, PMID 20445539)
+3. ✅ ¬R аргумент переработан (2026-04-11): логика «необходимое + три достаточных условия»; "единственный кандидат" → "наиболее сильный кандидат среди ¬R"; NPC/базальные тела добавлены в таблицу с обоснованием почему не выполняют C2/C3; механизм Hayflick ~200 делений у стволовых клеток с активной теломеразой объяснён через PTM накопление в материнской центриоли (PMID 17255513, PMID 20445539)
 4. ✅ CEP135 Test P6 — уже в CONCEPT.md как фальсифицируемое предсказание
 
 ---
@@ -396,6 +422,7 @@ Oct 2026    ERC Starting (через Co-PI с PhD)
 FCLC (инфраструктура)
   └── Ze пилот данные → FCLC training data (синергия)
   └── требует HIA KIU → то же HIA нужно для Ze/ERC
+  └── Aqtivirebuli (Iqalto) → клинические данные анемии для WP4 demo
 
 CDATA (опубликованная теория)
   └── Независимый трек через Longevity Impetus / Lifespan Inst.
@@ -410,6 +437,16 @@ BioSense
   └── Pre-register диапазон → d=1.694 становится validirovannnym
   └── Rustaveli → hardware прототип
   └── Статья → Ze biomarker narrative для ERC
+
+Aqtivirebuli (подпроект Iqalto, НЕ входит в CommonHealth)
+  └── Клинический use case для EIC Pathfinder WP4 — демонстрация FL
+       на реальных данных (anemia intervention cohort, N≥50)
+  └── Фактор «ОРГАНИЗМ» (nutritional intervention) в 4-факторной модели
+       здоровья CommonHealth (организм/психика/сознание/социум)
+  └── Статус: 🟡 concept-only v0.1 (корректно описывать как "planned
+       clinical demonstration pilot, not yet validated" — см. Правило
+       честности Part B)
+  └── Данные Фазы 1 (Q2 2026) → Part B §4 Impact как "near-term pilot"
 
 PhD by Publication (UK)
   └── Разблокирует: ERC (как PI), Wellcome, NIH

@@ -7,7 +7,7 @@
 //!
 //! 2 free parameters (tau_protection, pi_0):
 //!   alpha         = fixed 0.0082 (collinear with tau_protection, r=0.858)
-//!   hsc_nu        = fixed 12.0   (insensitive: ΔR²≈0 at ±20%)
+//!   hsc_nu        = fixed 1.2    (Wilson 2008 standard; insensitive: ΔR²≈0 at ±20%)
 //!   dnmt3a_fitness= fixed 0.15   (insensitive: ΔR²≈0 at ±20%)
 //!
 //! Goal: R-hat < 1.05 for both free parameters (Gelman-Rubin criterion).

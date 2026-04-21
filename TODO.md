@@ -1,5 +1,25 @@
 # CommonHealth — TODO
 
+> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
+
+
+_Обновлено: 2026-04-21 (audit)_
+
+---
+
+## Architectural alignment — Server ↔ Ze ↔ BioSense (из аудита 2026-04-21)
+
+**Источник: `CONCEPT_CODE_AUDIT_server_Ze_BioSense_2026-04-21.md`**
+
+- [ ] **Удалить Health Score 4-factor weights из server/src/models/ze_profile.rs** (W_ORGANISM=0.40, W_PSYCHE=0.25, W_CONSCIOUSNESS=0.20, W_SOCIAL=0.15) и `compute_health_factors()` в `services/ze_compute.rs`. Per CONCEPT.md §A.2 (2026-04-22) формула УДАЛЕНА. Заменить на L_tissue per-tissue вычисление из MCOA (требует определения `w_i(tissue)` через калибровку). На уровне frontend: удалить единый health_score показатель, показывать L_tissue по ключевым тканям (HSC, brain, muscle).
+- [ ] **server/src/services/ze_compute.rs `compute_profile()`**: `bio_age_est = chrono_age * (1 − D_norm * K)` с K_CALIBRATION_{DUAL,EEG_ONLY,HRV_ONLY} остаются как research heuristics без валидации. При разморозке Ze заменить на честно откалиброванное значение или удалить путь (χ_Ze failed all 3 pre-registered tests). Альтернатива: сделать endpoint research-only с флагом "non-clinical" в ответе.
+- [ ] **Ze/backend/ (отдельный микросервис)**: CRUD-API `/api/ze_counters`, `/api/ze_parameters`, `/api/ze_measurements` хранит χ_Ze как полноценные записи. Per CANONICAL_DEFINITIONS.md "НЕТ" для клинического использования. Добавить в Ze/backend/README.md явную шапку "research-only DB, not for clinical interpretation", или переименовать схему `ze_measurements` → `ze_research_measurements`.
+- [ ] **BioSense/backend/ (отдельный микросервис)**: raw-data endpoints (devices, eeg/hrv/olfaction_measurements, sessions) — соответствуют SCOPE_NOTES_2026-04-22 ("sensor-only, raw uploads"). Но не экспортирует явной интеграции с FCLC upload path. Добавить endpoint `POST /api/upload_to_fclc` (stub OK) либо явно документировать, что FCLC-pull модель.
+- [ ] **server/src/models/biosense.rs `BioSenseExport` schema_version = "1.0"** в модели, но `ComputeChiZeResponse.schema_version = "1.1"` в handler. Согласовать до единой версии (скорее "1.1" для handler, при этом поле `schema_version` в Export остаётся "1.0" — ok, но задокументировать соответствие в комментарии).
+- [ ] **CONCEPT.md линия 330** "GET /api/users/:id → Ze·Profile (4 фактора)" и "GET /api/dashboard → 4 факторов панель" — упоминают "4 фактора" которые по A.2 больше не единая метрика. Обновить описание после удаления health_score.
+
+---
+
 _Обновлено: 2026-04-10_
 
 ---
@@ -168,3 +188,57 @@ _Обновлено: 2026-04-10_
 - [ ] Admin: заменить `is_pro` proxy → явный `is_admin` флаг (v2)
 - [x] BioSense: стандартизированный `BioSenseExport` JSON schema — 2026-04-09 ✅
 - [x] BioSense: standalone POST /api/biosense/compute endpoint — 2026-04-09 ✅
+
+---
+
+## 🔴 P0 — Консорциум EIC Pathfinder (добавлено 2026-04-17)
+
+### Beneficiary 2 — Tsertsvadze Research Center
+
+- [ ] **Jaba: получить Letter of Support от директора T. Tsertsvadze Infectious Diseases, AIDS and Clinical Immunology Research Center**
+  - Дедлайн: **2026-04-23** (до EIC submit 12 мая должно быть подписано)
+  - Цель: Tsertsvadze Center становится Beneficiary 2 в Consortium Agreement
+  - Контакт: через Otar Chokoshvili (Head of Dept Infection Control and Analytics) — уже в Center
+  - Содержание LoS:
+    - Подтверждение согласия быть Beneficiary 2
+    - Назначение Otar Chokoshvili как Scientific Co-PI / Epidemiology Lead
+    - Готовность принять ~€200K + overhead для эпидемиологических WP2 (Ze validation) + WP5 (Aqtivirebuli clinical pilot)
+    - Административная поддержка (finance office, IRB committee)
+  - Почему критично: Multi-beneficiary structure значительно усиливает Excellence score EIC Pathfinder и разблокирует ERC path через Otar (PhD professor)
+
+### Beneficiary 1 — GHF (Host + Communications)
+
+- [ ] Megi Sajaia (GHF President) — роль: Communications & Dissemination Lead (не Co-PI)
+- [ ] Подтвердить её согласие на €30-40K за 25% FTE × 36 месяцев
+- [ ] Подписать HIA v2 (обновлённый под 3-beneficiary structure)
+
+### COI — family disclosure (Megi ↔ Otar)
+
+- [ ] COI Declaration v2 с family relationship disclosure (муж-жена в одном консорциуме через разные Beneficiaries)
+- [ ] Recusal protocol: каждый не голосует по зарплате супруга
+- [ ] Independent governance/ethics committee
+
+
+### Megi Sajaia — credentials (верифицированы 2026-04-17)
+
+- [x] Age: 40 лет
+- [x] Role: President of Georgia Health Federation (GHF)
+- [x] Journalism: 5+ years as Head of Medical Section at Asaval-Dasavali
+- [x] Known work: Patient Rights in Georgia (2023 interview, HFG)
+- [x] Languages: Georgian primary; limited English and Russian
+- [x] Proposed EIC role: WP6 Communications & Dissemination Lead + WP5 Patient Engagement
+- [x] Budget: 30% FTE × 36 мес × senior medical journalist rate ≈ €40-60K
+- [x] Family relation: spouse of Otar Chokoshvili (Beneficiary 2 Co-PI)
+
+### Otar Chokoshvili — credentials (верифицированы 2026-04-17)
+
+- [x] Role: Head of Department of Infection Control and Analytics
+- [x] Institution: T. Tsertsvadze Infectious Diseases, AIDS and Clinical Immunology Research Center
+- [x] Publications: 29 PubMed (HIV, TB, HCV epidemiology, 2008-2026)
+- [x] Notable recent: Buziashvili/Baliashvili/Chkhartishvili et al. (2026) TB preventive treatment in Open Forum Infectious Diseases
+- [x] EU cohorts: RESPOND, D:A:D (HIV multicenter international)
+- [x] Language: English primary (29 English publications)
+- [x] Proposed EIC role: Scientific Co-PI Epidemiology, WP2 Ze validation + WP5 clinical epidemiology
+- [x] Budget: 30-40% FTE × 36 мес ≈ €200K through Tsertsvadze Center
+- [x] Family relation: spouse of Megi Sajaia (Beneficiary 1 coordinator)
+

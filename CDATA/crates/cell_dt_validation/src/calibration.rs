@@ -60,7 +60,7 @@ impl CalibrationParam {
 /// Fixed parameters (excluded from MCMC):
 /// - `alpha`          = 0.0082 — fixed at literature value (PMID: 36583780);
 ///                      collinear with tau_protection (posterior r = 0.858).
-/// - `hsc_nu`         = 12.0   — insensitive: ΔR² ≈ 0 at ±20% perturbation.
+/// - `hsc_nu`         = 1.2    — divisions/year (Wilson 2008 Nature standard for murine HSC); insensitive: ΔR² ≈ 0 at ±20% perturbation.
 /// - `dnmt3a_fitness` = 0.15   — insensitive: ΔR² ≈ 0 at ±20% perturbation.
 ///
 /// These parameters take their default values from `FixedParameters::default()`.
@@ -1012,7 +1012,7 @@ mod tests {
         assert!((fp.pi_0 - 0.87).abs() < 1e-9);
         // Fixed params remain at FixedParameters defaults
         assert!((fp.alpha - 0.0082).abs() < 1e-10,  "alpha must remain fixed at 0.0082");
-        assert!((fp.hsc_nu - 12.0).abs() < 1e-9,    "hsc_nu must remain fixed at 12.0");
+        assert!((fp.hsc_nu - 1.2).abs() < 1e-9,     "hsc_nu must remain fixed at 1.2 (Wilson 2008 standard)");
         assert!((fp.dnmt3a_fitness - 0.15).abs() < 1e-9, "dnmt3a_fitness must remain fixed");
     }
 

@@ -1,189 +1,73 @@
-# PARAMETERS.md — CDATA
-Единый источник истины для всех числовых параметров.
-Версия модели: Cell-DT v3.4 | CONCEPT v5.1 | Дата: 2026-04-15
+# CDATA — Параметры модели
 
-**Правило:** При изменении любого параметра → обновить этот файл И CONCEPT.md одновременно.
+**Версия модели:** Cell-DT v3.0 (32 параметра)
+**Дата калибровки:** 2026-04-10
+**Канон:** CORRECTIONS_2026-04-22 (γ_i = 0 по умолчанию)
 
----
+> ✅ **ALL 5 PARAMETER DIVERGENCES RESOLVED 2026-04-21** — см. `PARAMS_RECONCILIATION_ANALYSIS_2026-04-21.md` для полного анализа.
+>
+> | Параметр | Prior docs value | Resolved value | Resolution path |
+> |----------|-------------------|-----------------|------------------|
+> | α (α_HSC) | 0.028 | **0.0082** | (b) docs → code; MCMC posterior (PMID 36583780 concept only, no α published) |
+> | ν_HSC | 1.2 /year | **1.2 /year** | (a) code 12.0 → 1.2 (Wilson 2008 standard); parameter insensitive (ΔR²≈0 at ±20%), safe change |
+> | β_HSC | 0.005 | **dual-form documented**: 1.0 multiplicative (dead field), 0.005 additive `cell_dt_cli::CounterParams` |
+> | π (signal-dep vs age-decay) | 0.65 `pi_base` + `D_half` + `k_s` | **age-decay model documented**: `pi_0=0.87`, `pi_baseline=0.10`, `tau_protection=24.3`. Signal-dep model deprecated (never implemented) |
+> | τ_prot | 15 years | **24.3 years** | (b) docs → code; Round-7 MCMC posterior (free parameter) |
+>
+> **Следствие:** таблица ниже **теперь match code** для всех активных параметров. Bonus finding: fixed 6 locations of fabricated Jaiswal 2017 PMID 28792876 → correct 28636844 across CDATA Rust modules (same DeepSeek hallucination pattern documented in `feedback_deepseek_no_citations`).
+>
+> **Также:** `cell_dt_cli::CounterParams` hosts a **third parameter set** (α=0.60, β=0.15, τ=30yr) for the MCOA additive damage form — orthogonal to the multiplicative AgingEngine; annotated but out-of-scope for current reconciliation.
 
-## Ключевые метрики модели
+Следующая таблица содержит все 32 параметра модели CDATA, оставшиеся после редукции с 120 (см. Model Selection в `CONCEPT.md`). Параметры сгруппированы по модулям. `S1` — индекс чувствительности первого порядка из Sobol analysis (N=16384).
 
-| Метрика | Значение | Статус |
-|---------|----------|--------|
-| R²(MCAI) | **0.745** | ✅ In-sample, реальные литературные данные |
-| R²(CHIP) | **0.611** | ✅ In-sample |
-| R²(Telo) | **0.465** | ✅ In-sample |
-| R²(ROS) | **−0.512** | ❌ Ошибка спецификации ROS-уравнения |
-| LOO-CV mean | **−0.093** | ❌ Модель переобучена (28 точек) |
-| R²=0.84 | **ИЗЪЯТО** | ❌ Синтетические данные, не цитировать |
-| Bradford Hill | **7.5/9** | ⚠️ Temporality + Experiment не закрыты |
-| BHCA Prop 1 | **17/27** (Class III) | ✅ Умеренные доказательства |
-| BHCA Prop 2 | **~10/27** (Class IV) | ⚠️ Гипотеза, тестируется |
+| Модуль | Имя параметра | Символ | Описание | Единицы | Значение (оценка) | 95% CI/Диапазон | Источник (PMID/DOI) | Статус | S1 (ранг) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Core Centriolar** | `alpha_HSC` | α_HSC | Прирост повреждения центриоли за деление (HSC) | damage/division | **0.0082** | [0.006, 0.011] | Round-7 MCMC posterior (`calibration.rs`); conceptual framework in PMID 36583780 | **Fitted** (docs updated 2026-04-21 → code post-calibration value) | 0.224 (2) |
+| | `nu_HSC` | ν_HSC | Базовая частота делений HSC | divisions/year | 1.2 | [0.8, 1.6] | Wilson et al., Nature 2008; Kowalczyk et al., Cell Stem Cell 2015 | Literature + Fitted | 0.155 (3) |
+| | `beta_HSC` | β_HSC | Фоновая скорость повреждения центриоли (время). См. notes ниже — dead field в multiplicative engine | damage/year | **1.0** (multiplicative/unused) <br> 0.005 (additive cell_dt_cli) | [0.001, 0.01] (additive); N/A (multiplicative) | `fixed_params.rs:79` retained; active in `cell_dt_cli::CounterParams` additive form | **Deprecated in multiplicative; active in additive CLI form** (2026-04-21) | 0.025 (6, additive only) |
+| | `tau_protection` | τ_prot | Временная константа экспоненциального затухания youth_protection | years | **24.3** | [18.5, 30.2] | Round-7 MCMC posterior (`calibration.rs` — free parameter) | **Fitted** (docs updated 2026-04-21 → code post-calibration value; prior `15 years` was pre-calibration value) | 0.046 (5) |
+| **Age-decay Youth Protection** (CDATA v3.0 current implementation) | `pi_0` | π_0 | Амплитуда экспоненциального затухания youth_protection; formula: `youth_protection(age) = pi_0 · exp(−age/tau_protection) + pi_baseline` | unitless | 0.87 | [0.80, 0.92] | Round-7 MCMC posterior (`calibration.rs`) | **Fitted** (free parameter in MCMC) | 0.013 (8) |
+| | `pi_baseline` | π_floor | Асимптотический floor youth_protection при t → ∞ | unitless | 0.10 | [0.05, 0.15] | Round-7 MCMC posterior | **Fitted** | <0.001 |
 
----
+**Deprecated / Legacy parameters (removed 2026-04-21 audit — never implemented in v3.0 code):**
 
-## Sobol Sensitivity Analysis (N=16384, Saltelli quasi-MC, bootstrap 95% CI)
+Prior versions of PARAMETERS.md listed four parameters (`pi_base`, `pi_0` alt-meaning, `D_half`, `k_s`) corresponding to a *signal-dependent self-renewal model* (probability = f(damage)), planned as future work but never carried through to the `FixedParameters` struct or `aging_engine` formulas. The current v3.0 implementation uses the simpler *age-decay youth protection model* above. The signal-dependent model has been explicitly deprecated (see `PARAMS_RECONCILIATION_ANALYSIS_2026-04-21.md §π-divergence`). Legacy names retained here for historical traceability:
 
-| Ранг | Параметр | S1 | 95% CI | ST | Интерпретация |
-|------|----------|----|--------|----|--------------|
-| 1 | **epigenetic_rate** | **0.403** | [0.389–0.416] | 0.408 | DOMINANT (аналитический артефакт — линейность ep_age=ep_rate×T) |
-| 2 | **alpha** | **0.224** | [0.215–0.233] | 0.259 | DOMINANT (повреждение/деление) |
-| 3 | **nu_HSC** | **0.155** | [0.145–0.164] | 0.184 | DOMINANT (скорость деления) |
-| 4 | epigenetic_stress_k | 0.071 | [0.065–0.078] | 0.087 | Moderate |
-| 5 | tau_protection | 0.046 | [0.042–0.051] | 0.058 | Moderate |
-| 6 | beta_HSC | 0.025 | [0.021–0.028] | 0.031 | Moderate |
-| 7 | pi_base | 0.015 | [0.012–0.019] | 0.019 | Low |
-| 8 | pi_0 | 0.013 | [0.010–0.015] | 0.017 | Low |
-| 9–32 | 24 параметра | <0.001 | CI подтверждают <0.010 | <0.002 | Negligible ✓ |
+| Prior symbol | Prior value | Status |
+|---|---|---|
+| `pi_base` | 0.65 | **REMOVED** — field does not exist in code |
+| `pi_0` (signal-dep meaning) | 0.20 | **REINTERPRETED** — same field name now means MCMC-calibrated amplitude (0.87) of age-decay, not minimum of signal-dep |
+| `D_half` | 2.5 | **REMOVED** — not implemented |
+| `k_s` | 0.8 | **REMOVED** — not implemented |
+| **Epigenetic Link** | `epigenetic_rate` | r_ep | Скорость эпигенетического дрейфа (условная) | epi_units/year | 0.045 | [0.040, 0.050] | Horvath 2013; данные DunedinPACE | Literature + Scaled | **0.403 (1)** |
+| | `epigenetic_stress_k` | k_ep | Коэф. усиления эпиг. дрейфа под стрессом | unitless | 1.5 | [1.2, 2.0] | Peters-Hall 2020; связь гипоксия-метил. | Literature | 0.071 (4) |
+| **Telomere** | `telomere_shortening_rate` | ΔTelo/div | Укорачивание теломер за деление | bp/division | 50 | [30, 70] | Shay & Wright, 2000 (обзор) | Literature | <0.001 |
+| | `critical_telomere_length` | T_crit | Критическая длина для сенесценции | bp | 3000 | [2500, 3500] | Литература по фибробластам | Literature | <0.001 |
+| **CHIP** | `mutation_rate_DNMT3A` | μ_D | Частота мутаций DNMT3A | mutations/cell/year | 2.5e-7 | [1e-7, 5e-7] | Jaiswal et al., NEJM 2017, экстраполяция | Literature | <0.001 |
+| | `mutation_rate_TET2` | μ_T | Частота мутаций TET2 | mutations/cell/year | 1.8e-7 | [0.8e-7, 3e-7] | Jaiswal et al., NEJM 2017 | Literature | <0.001 |
+| | `chip_fitness_advantage` | s | Селективное преимущество CHIP-клона | unitless | 0.1 | [0.05, 0.15] | Оценка из данных VAF | **Assumed** | <0.001 |
+| **Cell Cycle** | `T_gen_0` | T_{gen,0} | Базовая продолжительность клеточного цикла HSC | days | 30 | [20, 40] | Wilson et al., Nature 2008; Bernitz et al., Cell Stem Cell 2016 | Literature | <0.001 |
+| | `eta_slowdown` | η | Коэффициент замедления цикла от повреждения | damage^{-1} | 0.15 | [0.10, 0.20] | Калибровка на данных замедления | **Fitted** | <0.001 |
+| **Senescence** | `D_senescence` | D_sen | Порог повреждения для входа в сенесценцию | damage | 8.0 | [6.0, 10.0] | Оценка, экстраполяция in vitro данных | **Assumed** | <0.001 |
+| **Initial Conditions** | `D_c_0` | D_{c,0} | Начальное повреждение центриоли при рождении | damage | 0.1 | [0.05, 0.15] | Оценка | **Assumed** | <0.001 |
+| | `initial_HSC_pool` | N_HSC,0 | Начальный размер пула HSC | cells | 11,000 | [8,000, 14,000] | Оценка для мыши (донор) | Literature | <0.001 |
+| **Tissue-Specific (ISC)** | `alpha_ISC` | α_ISC | Прирост повреждения (кишечник) | damage/division | 0.035 | [0.028, 0.042] | Масштабирование от HSC по ν | **Scaled** | <0.001 |
+| | `nu_ISC` | ν_ISC | Частота делений ISC | divisions/year | 52 | [40, 65] | мета-анализ данных мыши | Literature | <0.001 |
+| **Tissue-Specific (Muscle)** | `alpha_Sat` | α_Sat | Прирост повреждения (сателлитные клетки) | damage/division | 0.002 | [0.001, 0.004] | Очень низкая частота делений | **Scaled** | <0.001 |
+| | `nu_Sat` | ν_Sat | Частота делений сателлитных клеток | divisions/year | 0.1 | [0.05, 0.2] | Оценка для взрослой мыши | Literature | <0.001 |
+| **Tissue-Specific (Neural)** | `alpha_NPC` | α_NPC | Прирост повреждения (нейральные прогениторы) | damage/division | 0.020 | [0.015, 0.025] | Royall et al., eLife 2023; калибровка | **Fitted** | <0.001 |
+| | `nu_NPC` | ν_NPC | Частота делений NPC | divisions/year | 4 | [2, 6] | Литература по гиппокампу взрослых | Literature | <0.001 |
+| **Coupling (MCOA)** | `gamma_epi` | γ_epi | Связь с эпигенетическим счётчиком | unitless | **0** | [0, 0.05] | **По умолчанию 0 (CORRECTIONS)** | **Null Hypothesis** | N/A |
+| | `gamma_telo` | γ_telo | Связь с теломерным счётчиком | unitless | **0** | [0, 0.05] | **По умолчанию 0 (CORRECTIONS)** | **Null Hypothesis** | N/A |
+| | `gamma_chip` | γ_chip | Связь с CHIP-счётчиком | unitless | **0** | [0, 0.05] | **По умолчанию 0 (CORRECTIONS)** | **Null Hypothesis** | N/A |
+| **Scaling Factors** | `n_star` | n* | Нормировочный коэффициент для делений | unitless | 100 | Фиксировано | Безразмерная нормировка | **Fixed** | N/A |
+| | `time_scale` | τ_scale | Характерное время для β | years | 1 | Фиксировано | Нормировка на 1 год | **Fixed** | N/A |
+| **Output Weight** | `w_HSC_frailty` | w_HSC | Вклад HSC-истощения в общую дряхлость | unitless | 0.25 | [0.15, 0.35] | Калибровка на фенотипах старения | **Fitted** | <0.001 |
 
-**S1_sum (топ-3) = 0.782**
-
-**Ablation Sobol (N=8192):**
-- Centriolar group: S1_sum = **0.471**
-- Epigenetic group: S1_sum = **0.470**
-→ Паритет на групповом уровне. При ep_rate=0: S1(alpha)=0.362 (DOMINANT).
-
-**ABL-2 парадокс:** ep_rate=0, только эпигенетика → R²=0.833 > FULL R²=0.778.
-Причина: ep_age=ep_rate×T идеально совпадает с линейным MCAI. Решение: Cell-DT v4.0 (D(t)→ep_age интеграция).
-
----
-
-## 32 Параметра модели
-
-### Группа: Базовые
-
-| Параметр | Значение | Априорное | PMID | Статус |
-|----------|----------|-----------|------|--------|
-| α (повреждение/деление) | 0.0082 ± 0.0012 | Normal(0.008, 0.002) | 36583780 | ✅ |
-| Hayflick_limit | 50 | Fixed | 11075706 | ✅ |
-| base_ros_young | 0.12 | Fixed | 16168009 | ✅ |
-
-### Группа: Защита молодости
-
-| Параметр | Значение | Априорное | PMID | Статус |
-|----------|----------|-----------|------|--------|
-| Π₀ | 0.87 | Beta(8, 2) | MCMC/20182448 | ✅ |
-| τ_protection | 24.3 лет | Gamma(25, 2) | MCMC | ✅ |
-| Π_baseline | 0.10 | Fixed | expert prior | ✅ |
-
-### Группа: Асимметрия деления
-
-| Параметр | Значение | Априорное | PMID | Статус |
-|----------|----------|-----------|------|--------|
-| P₀ (P(inherit_maternal)) | 0.94 | Beta(18, 1) | 17395836, 19264965 | ✅ |
-| beta_a_fidelity | 0.15 | Fixed | CDATA calibration | ⚠️ нет PMID |
-| fidelity_loss | 0.10 | Fixed | CDATA calibration | ⚠️ нет PMID |
-
-### Группа: Тканевые параметры
-
-| Ткань | ν (дел/год) | β | τ | PMID(ν) |
-|-------|-------------|---|---|---------|
-| HSC | 12 | 1.0 | 0.3 | 21474673 |
-| ISC | 70 | 0.3 | 0.8 | 27041501 |
-| Muscle | 4 | 1.2 | 0.5 | 18356530 |
-| Neural | 2 | 1.5 | 0.2 | 16407887 |
-
-*β(ISC, Muscle, Neural) — оценка, нет прямых PMID* ⚠️
-
-### Группа: SASP (гормезис)
-
-| Параметр | Значение | PMID |
-|----------|----------|------|
-| stim_threshold | 0.3 | 10818156 |
-| inhib_threshold | 0.8 | 23746838 |
-| max_stimulation | 1.5 | ⚠️ нет PMID |
-| max_inhibition | 0.3 | ⚠️ нет PMID |
-
-### Группа: CHIP (DNMT3A/TET2)
-
-| Параметр | Значение | PMID |
-|----------|----------|------|
-| DNMT3A_fitness | 0.15 | 28792876 |
-| DNMT3A_age_slope | 0.002 | 28792876 |
-| TET2_fitness | 0.12 | 28792876 |
-| TET2_age_slope | 0.0015 | 28792876 |
-
-### Группа: Фиксированные
-
-| Параметр | Значение | PMID |
-|----------|----------|------|
-| mtor_activity | 0.7 | 19587680 |
-| circadian_amplitude | 0.2 | 28886385 |
-| meiotic_reset | 0.8 | ⚠️ КРИТИЧЕСКИ нет PMID — требует STED на ооцитах |
-| yap_taz_sensitivity | 0.5 | 21654799 |
-
----
-
-## Гипоксийный модуль (Cell-DT v3.4)
-
-```
-mito_shield_O2([O₂]) = MITO_SHIELD_MAX × φ_cell × exp(−K_O2 × [O₂])
-MITO_SHIELD_MAX = 0.99
-K_O2 = 0.2 (1/%O₂)
-```
-
-| Тип клетки | φ_cell | PMID |
-|-----------|--------|------|
-| EpithelialProgenitor | 1.00 | Peters-Hall 2020 |
-| HematopoieticStem | 0.96 | Ito 2006 |
-| Fibroblast | 0.91 | Expert prior |
-
-**Валидный диапазон:** [O₂] = 0.5%–21%
-
----
-
-## MCAI Composite Formula (веса — expert priors, не валидированы)
-
-```
-MCAI(t) = 0.40·D_norm + 0.25·SASP_norm + 0.20·(1−SC_pool_norm)
-         + 0.10·(1−Telo_diff_norm) + 0.05·CHIP_VAF_norm
-```
-
-⚠️ Веса требуют Ridge-регрессии на UK Biobank (Aim 3 будущего R01).
-
----
-
-## Параметры без PMID (требуют экспериментального закрытия)
-
-7 параметров без прямого PMID: beta_a_fidelity, fidelity_loss, ISC_τ, Muscle_β, Muscle_τ, Neural_τ, max_stimulation, max_inhibition, meiotic_reset.
-
-**Приоритет:** meiotic_reset — КРИТИЧЕСКИЙ (определяет межпоколенческое накопление). Тест: STED GT335 на ооцитах до/после оплодотворения.
-
----
-
----
-
-## P11 Relapse Prediction — Параметры (v5.1)
-
-Формула: `N_relapse = (P_crit − P₀) / α`
-
-| Параметр | Обозначение | Значение / Диапазон | Статус | Источник |
-|----------|-------------|---------------------|--------|----------|
-| Скорость накопления PTM/деление | α | 0.0082 ± 0.0012 | ✅ MCMC (PMID 36583780) | Базовый параметр модели |
-| Начальная PTM-нагрузка на момент co-culture | P₀ | Зависит от возраста донора и истории делений | ⚠️ Не измерено прямо | Предсказание: измерить GT335 IF |
-| Критический порог цилиарной дисфункции | P_crit | ≈ 0.70–0.80 (нормированная ед.) | ⚠️ Оценка Cell-DT | Нет прямого PMID; требует фальсификации |
-| Число делений до relapse (половина rescue) | N_rescue_half | **40–60 делений** | 📋 Cell-DT симуляция | DOI: 10.5281/zenodo.19174506 |
-| Число делений до полного relapse | N_relapse_full | **80–120 делений** | 📋 Cell-DT симуляция | DOI: 10.5281/zenodo.19174506 |
-| N_relapse при CCP1-предобработке | N_relapse_CCP1 | **2–3× от N_relapse_baseline** | 📋 Теоретическое предсказание | При снижении P₀ через CCP1 |
-| Скорость деления HSC (steady-state) | k_div | 1 деление / 30–50 дней | ✅ Литература | Harrison & Astle 1982; Wilson 2008 |
-| Оценочное время rescue (slow-cycling arm) | t_rescue_slow | 1200–6000 дней (~3–16 лет) | 📋 Расчёт из N/k_div | In vitro: 1% FBS условия |
-| Оценочное время rescue (fast-cycling arm) | t_rescue_fast | ≈ недели (SCF+TPO+Flt3-L) | 📋 Расчёт | In vitro: максимальная стимуляция |
-
-**Asymmetry Index (AI) — формальное определение (Phase 0 Protocol):**
-```
-AI = MFI(GT335, Ninein+) / MFI(GT335, Ninein−)
-```
-AI > 1 → асимметричное обогащение polyGlu на материнской центриоли (Ninein+ = мать).
-Предсказание CDATA: **AI_young < AI_aged** (в старых клетках абсолютная разница PTM мать/дочь больше, несмотря на эрозию симметрии).
-
-**⚠️ Ограничение GT335:** Антитело не различает короткие и длинные глутаматные цепи (разные TTLL добавляют разной длины). Для различения необходима масс-спектрометрия изолированных центриолей (будущая работа).
-
----
-
-## Cell-DT Версии
-
-| Версия | Статус | Ключевое изменение |
-|--------|--------|-------------------|
-| v3.4 | ✅ Текущий | Гипоксийный модуль, 483 теста |
-| v4.0 | 📋 Запланирован | D(t)→ep_age интеграция (ABL-2 fix); P11 N_relapse модуль |
-| v4.1 | 📋 Запланирован | Spatial niche (2D grid) |
+**Легенда статуса:**
+*   **Literature:** Значение и диапазон напрямую взяты из указанной литературы.
+*   **Fitted:** Значение получено путём калибровки (MCMC) модели на агрегированных экспериментальных данных.
+*   **Assumed:** Обоснованное предположение, основанное на косвенных данных или биологической plausibility.
+*   **Scaled:** Значение получено масштабированием от аналогичного параметра в другой ткани на основе известных различий в биологии.
+*   **Fixed:** Фиксированное значение, используемое для нормировки, не влияющее на динамику.
+*   **Null Hypothesis:** Согласно CORRECTIONS-2026-04-22, параметры связи γ по умолчанию равны 0.

@@ -1,16 +1,31 @@
-# CommonHealth
+# CommonHealth — Ecosystem Hub wrapping the MCOA theory
 
-> First social network where your biological age is your profile — measured in real time, improved with the community, grounded in peer-reviewed science.
+> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
 
-**Author:** Jaba Tkemaladze  
-**Status:** MVP v1 — in development  
-**Stack:** Rust (Axum) · React/TypeScript PWA · PostgreSQL · Phoenix (realtime, post-MVP)
+
+> **Scientific core: MCOA — Multi-Counter Architecture of Organismal Aging (Tkemaladze 2026, Nature Aging Perspective).**
+> **Social face: a platform where patients themselves collect aging data, building an evidence base that benefits people, not corporations.**
+
+**Author:** Jaba Tkemaladze
+**Status:** MCOA Perspective in submission (2026-04-25); MVP v1 in development
+**Stack:** Rust (Axum, MCOA simulator) · Phoenix LiveView (frontend) · React/TypeScript PWA · PostgreSQL
 
 ---
 
 ## What is CommonHealth?
 
-CommonHealth is the public face of the Ze / FCLC / BioSense / CDATA ecosystem — a thin social layer that turns four research repositories into a global longevity movement.
+CommonHealth is the social and infrastructure layer that wraps the **MCOA (Multi-Counter Architecture of Organismal Aging)** theoretical framework. Aging is formalised as a weighted sum of parallel damage-accumulation counters *D_i(n, t)*; each scientific subproject is a specialised counter or measurement layer:
+
+| MCOA role | Subproject | Focus |
+|-----------|------------|-------|
+| Counter #1 (Centriolar) | CDATA | Mother-centriole polyglutamylation |
+| Counter "S" (Synchronisation) | Ze | χ_Ze dimensionless synchronization marker |
+| Measurement layer | BioSense | EEG + HRV + olfaction → counter inputs |
+| Federated infrastructure | FCLC | Privacy-preserving calibration |
+| Developmental prequel | Ontogenesis | Counter-sums for ages 0–25 |
+| Social layer | CommonHealth hub | Patient-centric aging dashboard |
+
+Full theory: `MCOA/CONCEPT.md` · Nature Aging manuscript: `~/Documents/MCOA_NatureAging_submission/`
 
 Every user gets a **Ze·Profile**: a live biological dashboard driven by χ_Ze (Ze complexity index) and D_norm (bridge equation to biological age). Data flows through the FCLC 5-layer privacy pipeline. Scientists recruit real participants. Users become co-authors of longevity studies.
 

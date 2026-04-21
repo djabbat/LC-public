@@ -24,7 +24,7 @@ impl InflammagingSystem {
     /// Full update with explicit CHIP VAF (CDATA v3.5, L1 link).
     ///
     /// `chip_vaf`: CHIP variant allele frequency [0.0, 1.0].
-    ///   At age 70: typical VAF ≈ 0.07 (Jaiswal 2017, PMID: 28792876).
+    ///   At age 70: typical VAF ≈ 0.07 (Jaiswal SS et al. 2017 NEJM 377(2):111-121, PMID: 28636844).
     ///   CHIP amplifies SASP: sasp_prod *= (1 + chip_vaf × chip_sasp_strength)
     ///   Prior on chip_sasp_strength: Normal(0.5, 0.15) — Wu et al. 2023.
     pub fn update_with_chip(

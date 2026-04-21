@@ -10,7 +10,7 @@
 ///              Validated: d=0.724, p=0.028, Fantasia N=40 (BCa CI [0.096, 1.653])
 ///   SECONDARY: chi_ze_combined (research; χ_Ze failed 4 pre-registered tests)
 ///
-/// χ_Ze calibration constants (research path, R²=0.84 on Cuban+Dortmund data):
+/// χ_Ze calibration constants (research path; prior "R²=0.84 on Cuban+Dortmund" retracted 2026-04-22 — synthetic-data artefact; constants are research-mode heuristics pending genuine empirical calibration):
 ///   dual     K = 0.45
 ///   eeg_only K = 0.42
 ///   hrv_only K = 0.38

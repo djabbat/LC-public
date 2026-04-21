@@ -7,7 +7,10 @@ pub struct FixedParameters {
     pub alpha: f64,
     pub hayflick_limit: f64,
     pub base_ros_young: f64,
-    // Защита молодости
+    // Защита молодости.
+    // NOTE (audit 2026-04-21): `pi_baseline` corresponds to symbol `π_base` /
+    // `pi_base` in PARAMETERS.md / THEORY.md §3.2. Rename tracked in TODO.md L2.
+    // Numerical defaults below diverge from PARAMETERS.md canon — see TODO.md L1.
     pub pi_0: f64,
     pub tau_protection: f64,
     pub pi_baseline: f64,
@@ -21,6 +24,12 @@ pub struct FixedParameters {
     pub fidelity_loss: f64,
     // Тканевые — HSC
     pub hsc_nu: f64,
+    /// NOTE (2026-04-21 audit): `hsc_beta` is a DEAD FIELD in the multiplicative
+    /// AgingEngine (β_HSC is not used in any damage/SASP/CHIP/division equation
+    /// in `cell_dt_modules/aging_engine/`). Active β_HSC lives in the separate
+    /// additive form `cell_dt_cli::CounterParams` where it participates in
+    /// D = D₀ + α·n + β·t. Retained here for API stability + serialization;
+    /// PARAMETERS.md row annotates the duality.
     pub hsc_beta: f64,
     pub hsc_tau: f64,
     // Тканевые — ISC
@@ -72,7 +81,7 @@ impl Default for FixedParameters {
             p0_inheritance: 0.94,
             beta_a_fidelity: 0.15,
             fidelity_loss: 0.10,
-            hsc_nu: 12.0,
+            hsc_nu: 1.2,
             hsc_beta: 1.0,
             hsc_tau: 0.3,
             isc_nu: 70.0,
@@ -91,7 +100,7 @@ impl Default for FixedParameters {
             // CHIP fitness parameters — reference values for documentation and sensitivity analysis.
             // NOTE: The actual fitness_advantage() formula in chip_drift.rs uses its own calibrated
             // constants (DNMT3A: 0.015 + 0.0002×age; TET2: 0.012 + 0.00015×age), derived by
-            // fitting VAF = 0.07 at age 70 (Jaiswal 2017, PMID 28792876).
+            // fitting VAF = 0.07 at age 70 (Jaiswal SS et al. 2017 NEJM, PMID 28636844 — "Clonal Hematopoiesis and Risk of Atherosclerotic Cardiovascular Disease"). Note: prior comment cited PMID 28792876 which is a different unrelated paper — corrected 2026-04-21.
             // dnmt3a_fitness = 0.15 is the reference population-level value (/10yr unit);
             // the per-year formula coefficients (0.015) = dnmt3a_fitness / 10.
             // These fields are used in calibration sensitivity analysis (insensitive: ΔR²≈0 at ±20%).
@@ -186,7 +195,7 @@ mod tests {
         let p = FixedParameters::default();
         assert!((p.alpha - 0.0082).abs() < 1e-6);
         assert!((p.pi_0 - 0.87).abs() < 1e-6);
-        assert!((p.hsc_nu - 12.0).abs() < 1e-6);
+        assert!((p.hsc_nu - 1.2).abs() < 1e-6);
         assert!((p.isc_nu - 70.0).abs() < 1e-6);
         assert!((p.dnmt3a_fitness - 0.15).abs() < 1e-6);
     }

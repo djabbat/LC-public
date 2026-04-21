@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "crates/cell_dt_core",
+    "crates/cell_dt_cli",
     "crates/cell_dt_modules/mitochondrial",
     "crates/cell_dt_modules/inflammaging",
     "crates/cell_dt_modules/asymmetric_division",

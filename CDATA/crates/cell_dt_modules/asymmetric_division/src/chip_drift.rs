@@ -14,7 +14,7 @@ pub enum ChipDriverMutation {
 
 impl ChipDriverMutation {
     /// Per-year selective advantage (s). Literature: DNMT3A ~0.01-0.03/yr at age 60-70.
-    /// Formula: s_base + s_slope × age, calibrated from Jaiswal 2017 (PMID 28792876).
+    /// Formula: s_base + s_slope × age, calibrated from Jaiswal SS et al. 2017 NEJM (PMID 28636844).
     ///
     /// Relationship to FixedParameters:
     ///   FixedParameters.dnmt3a_fitness = 0.15  (reference value per 10-year unit)

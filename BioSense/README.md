@@ -1,117 +1,53 @@
-# BioSense
+# BioSense — Носимая платформа биомониторинга (ЭЭГ · ВСР · Ольфакция)
 
-**Multisensor wearable platform for Ze-based biomarker analysis: EEG · HRV · Olfaction**
+**BioSense** — это мультисенсорный измерительный слой в рамках архитектуры **MCOA (Multi-Counter Organismal Aging)**. Его задача — предоставлять высокочастотные физиологические сигналы (электроэнцефалография, вариабельность сердечного ритма, летучие органические соединения) для вычисления входных данных (*inputs*) для счетчиков (*counters*) системы MCOA, в первую очередь Counter "S" (синхронизация/Ze) и Counter "A" (автономный/вегетативный).
 
-BioSense applies Ze Theory (Tkemaladze) to three biosignal channels for aging biomarker detection
-and clinical diagnostics. The EEG module is validated across 4 public datasets (N up to 196,
-lifespan ages 5–97). HRV and olfaction modules are in development.
+**Ключевой сдвиг (2026-04-22):** Исходная цель — измерение теоретического биомаркера χ_Ze (Ze-индекс) по ЭЭГ и ВСР — **не была подтверждена** в серии pre-registered исследований. Текущий рабочий фокус смещен на валидированные временные параметры ВСР (SDNN, RMSSD) как промежуточный (*interim*) биомаркер организма, а также на развитие аппаратной платформы для интеграции с FCLC.
 
----
+## Основные компоненты
 
-## Modules
+1.  **ЭЭГ-модуль:** Обработка сигналов электроэнцефалографии. Несмотря на неудачу в подтверждении χ_Ze как возрастного биомаркера, модуль обеспечивает инфраструктуру для анализа мозговых ритмов и их синхронизации (Ze-анализ), остающейся исследовательской темой.
+2.  **ВСР-модуль:** Извлечение RR-интервалов и расчет параметров вариабельности сердечного ритма. **SDNN и RMSSD** (проверенные на базе данных Fantasia, d=0.72) являются текущим основным источником данных для Counter "A" в MCOA.
+3.  **Ольфактометрический модуль (в разработке):** Концепция диагностики по летучим органическим соединениям (ЛОС) на основе теории электронного туннелирования (Турин). Задача — обнаружение молекулярных сигнатур патологических состояний.
 
-| Module | Status | Key metric |
-|--------|--------|------------|
-| EEG | Validated | χ_Ze aging index; Cuban d=1.694; Dortmund p=0.006 |
-| HRV | Planned | χ_Ze of RR intervals, autonomic profiling |
-| Olfaction | Planned | Turin tunneling theory, VOC diagnostics |
+## Связь с другими компонентами системы
 
----
+BioSense является поставщиком данных для:
+*   **MCOA Framework:** Потоковые данные ЭЭГ/ВСР используются для расчета `L_tissue` в рамках модели тканевого старения. [Подробности в THEORY.md](THEORY.md).
+*   **FCLC Platform:** Аппаратная часть BioSense (носимые датчики) интегрируется в клиническую платформу FCLC как сенсорный фронтенд.
+*   **CDATA Experimental Validation:** Стандартизированные протоколы измерения BioSense необходимы для экспериментов по валидации аксиом CDATA.
 
-## Quick Start (EEG)
+**Важное предупреждение:** Утверждения и формулы, отозванные в документе [CORRECTIONS_2026-04-22](../CORRECTIONS_2026-04-22.md), не используются. В частности:
+*   Формула Health Score с априорными весами удалена.
+*   χ_Ze не является валидированным клиническим биомаркером и упоминается только в теоретическом контексте.
+*   Параметр связи `γ_i` по умолчанию равен 0.
 
-```bash
-# Install dependencies
-pip install -r src/requirements.txt
+## Содержание основных файлов
 
-# Demo (no data needed)
-python3 src/eeg_ze_processor.py --demo
+*   **[THEORY.md](THEORY.md):** Формальное изложение Ze Theory, ее связь с MCOA и аксиоматическая основа для анализа сигналов BioSense.
+*   **[EVIDENCE.md](EVIDENCE.md):** Подтверждающие и опровергающие эмпирические данные, включая результаты pre-registered тестов χ_Ze и валидацию параметров ВСР.
+*   **[OPEN_PROBLEMS.md](OPEN_PROBLEMS.md):** Критические нерешенные научные и технические проблемы, сформулированные как фальсифицируемые тесты.
+*   **[PARAMETERS.md](PARAMETERS.md):** Таблица всех количественных параметров платформы (частота дискретизации, пороги, константы) с указанием источника.
+*   **[DESIGN.md](DESIGN.md):** Архитектура программного обеспечения, дерево файлов и API-контракты между модулями.
+*   **[AGENTS.md](AGENTS.md):** Инструкции и жесткие правила для LLM-агентов, работающих с данными и кодом BioSense, включая ограничения безопасности.
+*   **[JOURNAL.md](JOURNAL.md):** Хронологический журнал изменений, решений и их обоснований.
+*   **[ROADMAP.md](ROADMAP.md):** План будущих разработок, приоритеты и зависимости.
 
-# Single EEG file
-python3 src/eeg_ze_processor.py --file recording.edf --age 35 --label "Subj01" --resample 128
+## Статус и ближайшие шаги
 
-# Cuban lifespan dataset
-export ZE_CUBAN_DIR=/path/to/cuban/EyesClose
-python3 src/ze_cuban_analysis.py
-
-# Dortmund young vs old
-export ZE_DORTMUND_DIR=/path/to/dortmund
-python3 src/ze_dortmund_pipeline.py
-```
-
-Or use the launcher:
-
-```bash
-./biosense.sh
-```
+Проект находится в активной разработке. Основное внимание уделяется:
+1.  Консолидации ВСР-пайплайна как надежного источника `input_A` для MCOA.
+2.  Разработке и тестированию прототипа носимого устройства, объединяющего ЭЭГ и ВСР-датчики.
+3.  Участию в качестве измерительного слоя в проекте EIC Pathfinder (вариант B, WP4).
 
 ---
 
-## Ze Theory (Core)
+## BioSense scope vs Ze theory (added 2026-04-21)
 
-```
-Binary sequence:  x_k = 1  if  sample > median, else 0
-Ze velocity:      v = N_S / (N − 1)        [N_S = switches]
-Fixed point:      v* = 0.45631
-Cheating index:   χ_Ze = 1 − |v − v*| / max(v*, 1−v*)    ∈ [0, 1]
-```
+**BioSense responsibility:** Hardware/software for raw EEG + HRV + olfactory sensor data collection. No biomarker claims. No clinical interpretation on-device.
 
-**Aging hypothesis:** signal slows with age → v moves away from v* → χ_Ze decreases.
+**χ_Ze status:** Per [Ze/CANONICAL_DEFINITIONS.md](../Ze/CANONICAL_DEFINITIONS.md), χ_Ze remains a theoretical abstract, NOT a validated clinical biomarker. The R²=0.84 clinical claim is withdrawn (derived from synthetic data per CDATA/CLAUDE.md §2).
 
-Ze-optimal frequency: **f_opt = v* × fs/2** (≈ 29.2 Hz at 128 Hz sampling rate)
+**Data flow:** BioSense raw streams → FCLC federated server → research-lab downstream analysis (not on-device processing).
 
----
-
-## Structure
-
-```
-BioSense/
-├── CONCEPT.md          # Full project concept
-├── README.md           # This file
-├── CLAUDE.md           # AI assistant rules
-├── TODO.md             # Task list
-├── PARAMETERS.md       # Key parameters and constants
-├── MAP.md              # Component and dependency map
-├── MEMORY.md           # Decisions and lessons learned
-├── LINKS.md            # Ecosystem connections
-├── KNOWLEDGE.md        # Domain knowledge corpus
-├── biosense.sh         # Main launcher
-├── src/                # All source code
-│   ├── eeg_ze_processor.py
-│   ├── ze_cuban_analysis.py
-│   ├── ze_dortmund_pipeline.py
-│   ├── ze_ec_eo_analysis.py
-│   ├── ze_lemon_analysis.py
-│   ├── ze_bandwise.py
-│   ├── ze_alpha_peak.py
-│   ├── ze_batch_pipeline.py
-│   └── requirements.txt
-├── data/               # Datasets (not committed to git)
-│   ├── cuban/
-│   ├── lemon/
-│   └── zenodo/
-├── results/            # Analysis outputs (JSON, PNG)
-└── Materials/          # Reference documents (Ze.docx, etc.)
-```
-
----
-
-## Validated Results
-
-| Dataset | N | Age range | Result |
-|---------|---|-----------|--------|
-| Zenodo 3875159 EC vs EO | 1 subj | — | Δχ_Ze = +0.064 |
-| MPI-LEMON | 30 | 22–72 yr | d=0.110, p=0.765 (underpowered) |
-| Dortmund ds005385 | 60 | 20–70 yr | p=0.006, d=0.732; AUC=0.715 |
-| Cuban Zenodo 4244765 | 196 | 5–97 yr | Inverted-U, peak 36.5 yr, d=1.694 |
-
----
-
-## Citation
-
-Tkemaladze, J. (2026). *Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
-Experimental EEG validation across the human lifespan.* [Manuscript under review]
-
-Also cite:
-- PMID 36583780 — Tkemaladze J. *Mol Biol Reports* 2023
-- PMID 20480236 — Lezhava T. et al. *Biogerontology* 2011
+**Scope separation:** Theoretical Ze development runs as **separate publications track** (see [Ze/PUBLICATIONS_TRACK.md](../Ze/PUBLICATIONS_TRACK.md)), not in clinical BioSense or grant applications.

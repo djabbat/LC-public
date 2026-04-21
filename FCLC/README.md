@@ -1,262 +1,37 @@
-# FCLC — Federated Clinical Learning Cooperative
+# FCLC — Федеративная инфраструктура калибровки для MCOA
 
-A privacy-preserving federated learning platform for clinical AI, built in Rust and Elixir.
+**FCLC (Federated Clinical Learning Cooperative)** — это приватный, безопасный вычислительный слой, позволяющий калибровать веса тканевых счётчиков `w_i(tissue)` в рамках теории MCOA (Multi‑Clock Organismal Aging) без передачи исходных медицинских данных. Это реализует ключевое предсказание MCOA: для точной оценки биологического возраста счётчики должны взвешиваться в зависимости от целевой ткани, а веса должны выводиться из реальных клинических когорт. FCLC решает проблему разрозненности и юридической защищённости медицинских данных, предоставляя инфраструктуру для федеративного машинного обучения с криптографическими гарантиями приватности и прозрачным измерением вклада каждого участника.
 
-> **Status:** v0.1.0-alpha · All 13 API endpoints verified live · 38/38 tests pass · **Pilot ready** (2026-04-06)
-> **Grant status:** CONCEPT v6.0 finalised — **ГОТОВО К ПОДАЧЕ** EIC Pathfinder Open (deadline 12 May 2026).
-> PI: Jaba Tkemaladze (ORCID: 0000-0001-8651-7243) · Co-PI: Giorgi Tsomaia (WP2+WP4)
+## Краткое описание решения
 
-## What it does
+Участники (клиники, исследовательские центры) разворачивают локальный узел (node), который подключается к их внутренним системам (HIS, EHR, PACS). Узел выполняет деидентификацию и нормализацию данных до общей схемы OMOP CDM. В процессе обучения глобальной модели (например, модели калибровки MCOA) каждый узел вычисляет локальные градиенты или обновления модели и отправляет их центральному оркестратору. Ключевые технологии:
+*   **SecAgg+ (Secure Aggregation+):** Криптографический протокол, гарантирующий, что оркестратор видит только агрегированную сумму обновлений от всех узлов, но не может восстановить вклад отдельного узла. Реализация включает X25519, ChaCha20 и Shamir (t,n)‑пороговое разделение секрета.
+*   **Дифференциальная приватность:** К обновлениям добавляется статистический шум (Гауссов механизм) для защиты от атак восстановления данных.
+*   **Измерение вклада (Federated Shapley Value):** Вклад каждого участника в качество финальной модели оценивается с помощью приближённого значения Шепли, что обеспечивает справедливое распределение выгод.
+*   **Византийская устойчивость:** Использование алгоритма агрегации Krum для защиты от до 25% злонамеренных узлов.
 
-FCLC enables hospitals and clinics to collaboratively train AI models on patient data **without sharing any raw records**. Each institution trains locally; only privacy-protected gradient updates leave the clinic.
+Исходные данные пациентов никогда не покидают периметр учреждения‑участника.
 
-**Privacy guarantees (5-layer stack):**
-- **L1** Direct identifier removal (name, MRN, exact DOB, address)
-- **L2** Quasi-identifier generalization (age bins, decade dates, HbA1c rounding)
-- **L3** k-anonymity (k≥5) per (age_group, sex) cell
-- **L4** Rényi DP-SGD (ε=2.0/round, δ=1e-5) — **Rényi accounting active**: ~1.985ε saved/round (~30–40 rounds vs 5 with linear)
-- **L5** SecAgg+ additive masking — orchestrator sees only aggregate
+## Позиция в экосистеме CommonHealth
 
-**Fairness:** Shapley value scoring (Monte Carlo, M=150) rewards each node proportionally to its actual contribution to model quality.
+FCLC является критической инфраструктурной компонентой для валидации и применения теоретических框架, разрабатываемых в других подпроектах:
+*   **Для MCOA:** FCLC — это единственный практический путь для калибровки тканевых весов `w_i(tissue)` на реальных мульти‑сайтовых данных. Без FCLC MCOA остаётся теоретической конструкцией.
+*   **Для CDATA:** Потенциальный канал для сбора и обработки экспериментальных данных (например, транскриптомных или эпигенетических) в рамках будущих валидационных исследований (WP2 в EIC), с соблюдением строгих норм приватности.
+*   **Для BioSense:** Может выступать как безопасный канал для агрегации данных с носимых устройств в клинических пилотных проектах.
 
-**Robustness:** Krum algorithm tolerates up to 25% Byzantine (malicious or faulty) nodes per round.
+FCLC не является самостоятельной теорией старения, а представляет собой инструментальный слой, который делает другие теории применимыми на реальных данных.
 
----
+## Связь с другими ключевыми документами
 
-## Architecture
+*   **Формальная теория и аксиомы:** Полное описание роли федеративного обучения в рамках MCOA, аксиомы безопасности и распределения. См. [THEORY.md](THEORY.md).
+*   **Эмпирические основания:** Подтверждённые ссылки на литературу по федеративному обучению, дифференциальной приватности и безопасной агрегации, а также отчёт о внутренних тестах реализации SecAgg+. См. [EVIDENCE.md](EVIDENCE.md).
+*   **Неразрешённые проблемы:** Ключевые научные и инженерные проблемы FCLC, включая масштабируемость, ограничения безопасности против активного противника и нормативные барьеры. Для каждой проблемы приведены тесты на фальсификацию. См. [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md).
+*   **Количественные параметры:** Таблица всех параметров системы (ε, δ, размер маски, порог Krum и т.д.) с указанием источника, единиц измерения и статуса. См. [PARAMETERS.md](PARAMETERS.md).
+*   **Архитектура и API:** Детальное описание структуры кода, файлового дерева и контрактов между компонентами (оркестратор, узел, адаптеры). См. [DESIGN.md](DESIGN.md).
+*   **Инструкции для агентов ИИ:** Жёсткие правила и ограничения безопасности для LLM, работающих с кодом или документацией FCLC. См. [AGENTS.md](AGENTS.md).
+*   **Журнал изменений:** Хронологическая история всех значимых решений по проекту, их обоснование и связи с аудитом 2026‑04‑22. См. [JOURNAL.md](JOURNAL.md).
+*   **Дорожная карта:** План будущих улучшений, приоритеты и зависимости, увязанные с дорожной картой EIC Pathfinder. См. [ROADMAP.md](ROADMAP.md).
 
-```
-fclc-core/        Rust library — DP engine, Shapley, FedProx/Krum, OMOP schema
-fclc-node/        Rust binary + egui GUI — local clinic node (de-id preview, retry logic)
-fclc-server/      Rust binary + Axum REST API — central orchestrator
-fclc-web/         Elixir/Phoenix LiveView — web dashboard
-```
+## Текущий статус
 
-See [MAP.md](MAP.md) for full component interaction diagram and data flow.
-
----
-
-## Quick Start
-
-### Prerequisites
-
-- Rust 1.77+ (`rustup update`)
-- PostgreSQL 15+
-- Elixir 1.16+ / Phoenix 1.7+ (for fclc-web)
-- Python 3.10+ (for data tools and OMOP scripts — see [Python venv setup](#python-venv-setup) below)
-
-### Build
-
-```bash
-# Clone
-git clone https://github.com/djabbat/FCLC.git
-cd FCLC
-
-# Build Rust workspace
-cargo build --workspace --release
-
-# Run fclc-server (orchestrator)
-DATABASE_URL=postgres://localhost/fclc cargo run -p fclc-server
-
-# Run fclc-node (local clinic GUI)
-cargo run -p fclc-node
-```
-
-### Database setup
-
-```bash
-# Create database + user
-createdb fclc
-psql -c "CREATE USER fclc WITH PASSWORD 'fclc';"
-psql -c "ALTER DATABASE fclc OWNER TO fclc;"
-
-# Or via Docker (existing postgres container):
-docker exec postgres psql -U postgres -c "CREATE USER fclc WITH PASSWORD 'fclc';"
-docker exec postgres psql -U postgres -c "CREATE DATABASE fclc OWNER fclc;"
-
-# Migrations run automatically on server startup (sqlx::migrate!)
-# Or manually:
-psql postgres://fclc:fclc@localhost:5432/fclc < fclc-server/migrations/001_init.sql
-psql postgres://fclc:fclc@localhost:5432/fclc < fclc-server/migrations/002_audit_log.sql
-```
-
-### Generate demo data (no real patients needed)
-
-```bash
-cd FCLC
-python3 scripts/generate_demo_data.py --nodes 3 --records 500 --seed 42 --out data/
-# Creates: data/clinic_node1_demo.csv, clinic_node2_demo.csv, clinic_node3_demo.csv
-# Load via fclc-node GUI: Data tab → CSV path
-```
-
-### Web dashboard (fclc-web)
-
-```bash
-cd fclc-web
-mix deps.get
-mix phx.server
-# Open http://localhost:4000
-```
-
-### Docker Compose (server + web + PostgreSQL)
-
-```bash
-# Build and start all services
-docker compose up --build
-
-# Services:
-#   fclc-server  → http://localhost:3000
-#   fclc-web     → http://localhost:4000
-#   PostgreSQL   → localhost:5432
-
-# Environment variables (set in .env or shell):
-DATABASE_URL=postgres://fclc:fclc@db:5432/fclc
-FCLC_API_TOKEN=your-secret-token
-SECRET_KEY_BASE=...   # Phoenix: mix phx.gen.secret
-```
-
-### Python venv setup
-
-Python используется для вспомогательных инструментов: OMOP ETL-скрипты, валидация датасетов, peer review пайплайны (DeepSeek API), анализ результатов федерации.
-
-```bash
-# Создать venv (один раз)
-python3 -m venv venv
-
-# Активировать
-source venv/bin/activate          # Linux/macOS
-# venv\Scripts\activate           # Windows
-
-# Установить зависимости
-pip install -r requirements-python.txt
-```
-
-**Что должно быть в `venv` (файл `requirements-python.txt`):**
-
-| Пакет | Версия | Назначение |
-|-------|--------|-----------|
-| `openai` | ≥1.14.0 | DeepSeek API (OpenAI-compatible) — peer review, анализ |
-| `python-dotenv` | ≥1.0.0 | Загрузка `~/.aim_env` (DEEPSEEK_API_KEY) |
-| `pandas` | ≥2.0.0 | OMOP CDM: обработка таблиц person, condition_occurrence, measurement |
-| `sqlalchemy` | ≥2.0.0 | Подключение к PostgreSQL для OMOP валидации |
-| `psycopg2-binary` | ≥2.9.0 | PostgreSQL драйвер |
-| `pydantic` | ≥2.0.0 | Валидация OMOP-схем, конфигурация |
-| `requests` | ≥2.31.0 | HTTP-клиент для REST API fclc-server |
-| `numpy` | ≥1.26.0 | Обработка градиентов, Shapley-аппроксимации |
-| `scikit-learn` | ≥1.4.0 | AUC/ROC расчёт для MVP-валидации (T2DM AUC>0.75) |
-| `matplotlib` | ≥3.8.0 | Визуализация результатов раундов |
-| `pdfplumber` | ≥0.10.0 | Извлечение данных из медицинских PDF |
-| `pytest` | ≥8.0.0 | Тесты Python-скриптов |
-
-> **Примечание:** `venv/` добавлен в `.gitignore`. Коммитить `requirements-python.txt`, не сам `venv/`. После клонирования репо: `python3 -m venv venv && source venv/bin/activate && pip install -r requirements-python.txt`.
-
----
-
-## Configuration
-
-Key parameters are documented in [PARAMS.md](PARAMS.md). The most important:
-
-| Parameter | Default | File |
-|-----------|---------|------|
-| DP ε per round | 2.0 | `fclc-server/config.toml` |
-| DP δ | 1e-5 | `fclc-server/config.toml` |
-| FedProx μ | 0.1 | `fclc-server/config.toml` |
-| Krum Byzantine fraction | 0.25 | `fclc-server/config.toml` |
-| Shapley MC samples | 150 | `fclc-server/config.toml` |
-| k-anonymity k | 5 | `fclc-node/config.toml` |
-
----
-
-## REST API (fclc-server)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/nodes/register` | Register a new clinic node |
-| POST | `/api/nodes/{id}/update` | Submit gradient update for current round |
-| GET | `/api/model/current` | Download current global model weights |
-| GET | `/api/rounds/{id}` | Get round metadata and results |
-| GET | `/api/nodes/{id}/score` | Get Shapley score history for a node |
-| GET | `/api/metrics` | Aggregated training metrics JSON (for fclc-web) |
-| GET | `/metrics` | Prometheus scrape endpoint (text/plain; version=0.0.4) |
-| GET | `/api/audit` | Hash-chain audit log (tamper-evident round history) |
-
-Full OpenAPI spec: `fclc-server/openapi.yaml` (TODO)
-
----
-
-## Crate Structure
-
-```
-fclc-core/src/
-├── dp/           Differential privacy: Gaussian mechanism, Rényi accountant
-├── scoring/      Shapley value estimation (Monte Carlo)
-├── aggregation/  FedProx weighted average + Krum robust selection
-├── schema/       OMOP CDM structs (OmopRecord, LabResult, Medication…)
-└── privacy/      De-identification, k-anonymity, quasi-identifier generalization
-
-fclc-node/src/
-├── app.rs        egui application loop (3 tabs: Dashboard / Data / Training)
-├── pipeline/     De-identification + OMOP normalization + local training
-├── connector/    CSV and FHIR JSON importers
-└── client/       reqwest HTTP client → fclc-server
-
-fclc-server/src/
-├── main.rs       Axum router, tokio runtime
-├── routes/       REST endpoint handlers
-├── orchestrator/ Round logic: collect → Krum → FedProx → Shapley → persist
-└── db/           sqlx queries against PostgreSQL
-```
-
----
-
-## Data Flow (summary)
-
-1. **Clinic node** imports CSV/FHIR → de-identification preview (user confirms) → normalizes to OMOP → trains locally with DP-SGD
-2. **SecAgg+ masked update** → POST to orchestrator (automatic retry ×3, exponential backoff 1 s / 2 s / 4 s on network errors)
-3. **Orchestrator** runs Krum (reject Byzantine) → FedProx aggregation → Shapley scoring → saves to PostgreSQL
-4. **New global model** distributed to all nodes
-5. **fclc-web** dashboard reads metrics via REST → displays in LiveView (Shapley bar chart with colour coding per node)
-
-Full diagram: [MAP.md](MAP.md)
-
----
-
-## Privacy Model
-
-Layer 1: Direct identifier removal (name, MRN, address, exact DOB)
-Layer 2: Quasi-identifier generalization (age → 5-yr bin, rare Dx → "other")
-Layer 3: k-anonymity (k≥5; groups below threshold suppressed)
-Layer 4: DP-SGD (Gaussian noise, ε=2.0/round, δ=1e-5)
-Layer 5: SecAgg+ (orchestrator sees only the masked sum)
-
----
-
-## Legal & Compliance
-
-- **Georgian PDPL (2023):** Personal data processing requires explicit consent + data minimization
-- **GDPR Article 9:** Special category health data; requires DPA agreement between nodes and orchestrator
-- **DUA template:** Required before any node joins; stored in `legal/DUA_template.docx` (TODO)
-
----
-
-## References
-
-- McMahan et al. (2017). Communication-efficient learning of deep networks from decentralized data. *AISTATS.*
-- Bonawitz et al. (2022). Federated learning and privacy. *CACM.*
-- Wang et al. (2020). Principled evaluation of fairness metrics for federated learning. *AAAI.*
-- Li et al. (2020). FedProx: Federated optimization for heterogeneous networks. *MLSys.*
-- Blanchard et al. (2017). Machine learning with adversaries: Byzantine tolerant gradient descent. *NIPS.*
-- Abadi et al. (2016). Deep learning with differential privacy. *CCS.*
-
----
-
-## License
-
-Apache 2.0 — see `LICENSE`.
-
----
-
-## Contact
-
-Georgia Longevity Alliance · djabbat@gmail.com
-Project public page: https://github.com/djabbat/FCLC-public
+FCLC находится на стадии **исследовательского прототипа** (Research Prototype). Криптографическое ядро SecAgg+ реализовано и протестировано (44/44 тестов). Интеграция с OMOP CDM и механизм дифференциальной приватности находятся в активной разработке. Проект предложен в качестве **WP4 (FCLC Platform)** в заявке на EIC Pathfinder (€0.5M, M1‑M24). Все утверждения в документации приведены в соответствие с каноном [CORRECTIONS_2026‑04‑22](../CORRECTIONS_2026-04-22.md).

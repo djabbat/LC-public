@@ -1,85 +1,44 @@
-# TODO — CDATA
-Последнее обновление: 2026-04-15
+# CDATA — TODO
 
----
+**Last updated:** 2026-04-21
 
-## 🔴 P0 — КРИТИЧНО (до 25 апреля 2026)
+## CONCEPT↔CODE MISMATCHES (2026-04-21 audit)
 
-### Co-PI outreach (статус 2026-04-15)
-- [ ] **Geiger follow-up** — отправить сегодня (письмо от 14.04, ответа нет)
-  - `docs/COPI_LETTERS_2026-04-15/LETTER_GEIGER_FOLLOWUP.md`
-- [ ] **Jacobsen** — отправить сегодня (приоритет #2)
-  - Email: sten.eirik.jacobsen@ki.se
-  - `docs/COPI_LETTERS_2026-04-15/LETTER_JACOBSEN.md`
-- [ ] **Trumpp** — отправить сегодня (приоритет #3)
-  - Email: a.trumpp@dkfz-heidelberg.de
-  - `docs/COPI_LETTERS_2026-04-15/LETTER_TRUMPP.md`
-- [ ] Дедлайн решения: **20 апреля** — кто первый согласился, тот в LOI
-  - Если к 20.04 никто → Nerlov (Oxford) или Bonnet (Crick)
+Source: `CONCEPT_CODE_AUDIT_2026-04-21.md`.
+All items are FIX LATER (non-trivial, require user decision or multi-file refactor).
 
-### Aubrey de Grey (LEVF)
-- [ ] Встреча: **17 апреля (пятница), 09:00 PT / 20:00 Тбилиси** — Zoom
-  - ID: 799 8169 2609 | Passcode: J7aeJ8
-  - Link: https://us04web.zoom.us/j/79981692609?pwd=VkhzmKU0Y9Yd4dShEJTbaNjdPsdEgS.1
-  - Шпаргалка: `docs/AUBREY_MEETING_2026-04-17/SHPARGALKA_AUBREY_v3.md`
-- [ ] Написать подтверждение до встречи — сегодня вечером (короткое письмо)
-- [ ] Получить letter of support → deadline **21 апреля**
+### L1. Parameter value reconciliation (P0, CRITICAL)
+`FixedParameters::default()` in `crates/cell_dt_core/src/parameters/fixed_params.rs` uses numeric defaults that **do not match** `PARAMETERS.md` CORRECTIONS-2026-04-22 canon. Example drifts:
+- α_HSC: docs 0.028, code 0.0082
+- ν_HSC: docs 1.2/yr, code 12.0 (10×)
+- β_HSC: docs 0.005, code 1.0 (200×)
+- τ_protection: docs 15 yr, code 24.3
+- π_base: docs 0.65, code (as `pi_baseline`) 0.10
+- π_0: docs 0.20, code 0.87
 
-### LOI финализация
-- [ ] После получения co-PI письма → обновить LOI v22 → финальный peer review
-- [ ] LOI v22 готов: `docs/AUBREY_MEETING_2026-04-18/LOI_Impetus_v22.docx`
-- [ ] Встреча с Ketevan Shashviashvili (TSU) — **сегодня 16:00–17:00**, Google Meet
-  - Link: https://meet.google.com/wbx-bpfi-kfu
-  - Шпаргалка: `docs/SHASHVIASHVILI_2026-04-15/SHPARGALKA_v2.docx`
-  - Запросить: co-investigator статус + письмо поддержки + CV + equipment list
+**Action required:** user decision which is canonical. If PARAMETERS.md is truth → update `Default` impl + MCMC posteriors + retests. If code is truth → regenerate PARAMETERS.md. Ref user rule `feedback_cdata_docs_sync`.
 
----
+### L2. Rename `pi_baseline` → `pi_base`
+Docs (THEORY.md §3.2, PARAMETERS.md) use `π_base` / `pi_base`. Code uses `pi_baseline`. Cross-crate rename (~30 refs including tests).
 
-## 🟡 P1 — ВАЖНО (май 2026)
+### L3. Document two damage equations
+`cell_dt_cli::compute_damage()` implements canonical CONCEPT/THEORY.md additive form. `cell_dt_modules/aging_engine::AgingEngine::step()` implements a multiplicative rate form (called "article v3.2.3"). Write derivation (or mapping) document, or deprecate one. Currently silent correspondence.
 
-- [ ] EIC Pathfinder CommonHealth (дедлайн **12 мая 2026**) — CDATA как experimental subtrack
-  - TSU Biology Faculty → LEAR регистрация для EIC (если Shashviashvili согласится)
-- [ ] Трёхсторонний call: Jaba + Liz Parrish + co-PI (до 22 апреля)
-- [ ] Cell-DT v4.0: D(t)→ep_age интеграция (ABL-2 парадокс fix):
-  ```
-  ep_age(t) = ep_rate_base × t + k_ep × ∫D(τ)dτ
-  ```
-- [ ] Добавить Arm 0-CAUSAL бюджет (iCTTLL6 конструкт) в Phase 0 смету
+### L4. P1..P10 prediction test harness
+THEORY.md §4 defines 10 falsifiable predictions. `crates/cell_dt_validation/examples/` has scattered tests (hTERT, O2, circadian, centenarian, not-R) but no `predictions_P1_to_P10.rs`. Create harness with explicit stubs for predictions that require wet-lab data (P6 CCP1 KO, P7 TTLL6 inhibition, P9 CCP1 OE) so untested status is visible at build time.
 
----
+### L5. Generate 7 missing core files
+Per `feedback_project_core`, every project needs 10 core files. CDATA has 7 documents, missing: **CLAUDE.md, UPGRADE.md, KNOWLEDGE.md, MAP.md, MEMORY.md, LINKS.md** (TODO.md now exists). README also advertises AGENTS.md, JOURNAL.md, ROADMAP.md — none exist. Generate from CONCEPT.md.
 
-## 🟢 P2 — Планово (Q2 2026)
+### L6. `cdata_coupling` range in Python Sobol
+`scripts/cdata_ablation_sobol.py` L56 samples `cdata_coupling ∈ [0.05, 0.30]`. CORRECTIONS-2026-04-22 + PARAMETERS.md require γ_i default 0 (null hypothesis, range [0, 0.05]). Either narrow the sampling range or add docstring justifying the wider exploration.
 
-- [ ] **Phase 0** (после финансирования):
-  - [ ] Arm 0-CAUSAL: iCTTLL6-GFP (PACT-domain) в молодых LSK → BMT
-  - [ ] Уровень 1: GT335 + Ninein → polyGlu asymmetry index
-  - [ ] Уровень 2: ARL13B → частота первичных ресничек
-  - [ ] Уровень 3: Ki67/EdU + Arm RELAPSE (co-culture P11)
-- [ ] **Aging Cell** preparation:
-  - [ ] Dataset расширить 28 → 80+ точек
-  - [ ] ROS-уравнение исправить (R²(ROS)=-0.512)
-  - [ ] Cell-DT v4.0 Sobol на полной Rust-ODE
-  - [ ] meiotic_reset PMID (STED GT335 на ооцитах)
-  - [ ] BHCA C1+C2 у HSC → Phase 0 данные
+### L7. Python ↔ Rust parameter name map
+Python: `nu_Muscle`, `nu_Neural`, `beta_HSC`, `pi_base`, `epigenetic_rate`. Rust: `muscle_nu`, `neural_nu`, `hsc_beta`, `pi_baseline`, (epigenetic_rate absent as named field — EPI_STRESS_COEFF=0.15 is a hardcoded constant). Create an explicit name map or unify.
 
----
+### L8. Verify ABL-2 disclosure in CONCEPT.md body
+CONCEPT.md is ~200 KB; audit could not fully read it. Grep found no "ABL-2" match in CONCEPT.md/THEORY.md/README.md. CORRECTIONS-2026-04-22 §1.6 + §2.2 require honest disclosure in `CDATA/CONCEPT.md Appendix B`. Verify whether Appendix B exists and contains Sobol paradox text, or add it.
 
-## ✅ ЗАВЕРШЕНО
+### L9. Counter numbering self-consistency
+README.md: "Counter #1" (L3) and "Counter #2" (L12). THEORY.md L4 says "Counter #2", L9 says "Counter #1". Code `COUNTER_NUMBER = 1`. Pick one.
 
-- [x] Три аксиомы зафиксированы в CONCEPT.md v5.0 (locked, 2026-04-15)
-- [x] LOI v22 создан с Arm 0-CAUSAL + PACT-CCP1 + multi-organism evidence (2026-04-15)
-- [x] Ultra-strict peer review LOI v21 (28/100, DO NOT FUND → fatal flaws зафиксированы)
-- [x] Peer review v19/v20/v21 история задокументирована
-- [x] Phase 0 Arm RELAPSE (P11) добавлен в LOI и CONCEPT.md
-- [x] Lavasani/Kovina/Leins/CD150low → CONCEPT.md §Multi-Organism Evidence
-- [x] BHCA: 17/27 (Prop 1), ~10/27 (Prop 2) — BHCA убран из LOI (только внутри)
-- [x] R²=0.84 изъято (синтетика, 2026-04-13)
-- [x] Sobol N=16384, bootstrap CI — S4 закрыт
-- [x] Liz Parrish — Industry Co-PI CONFIRMED (2026-04-14)
-- [x] Письмо Geiger отправлено (2026-04-14)
-- [x] Письма Jacobsen + Trumpp написаны (2026-04-15)
-- [x] Шпаргалка Aubrey v3 (встреча 17.04, Zoom) создана
-- [x] Шпаргалка Shashviashvili v2 (встреча 15.04, Google Meet) создана
-- [x] Все ядерные .md файлы созданы (2026-04-15)
-- [x] Git: private + public push выполнен (2026-04-15)
-- [x] Три статьи написаны и сохранены на Desktop (2026-04-15)

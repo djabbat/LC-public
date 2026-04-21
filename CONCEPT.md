@@ -1,13 +1,46 @@
-# CommonHealth — Ecosystem Hub: Social Longevity Network
+# CommonHealth — Ecosystem Hub вокруг MCOA
 
-**Дата:** 2026-04-09  
-**Автор:** Jaba Tkemaladze  
-**Статус:** ✅ УТВЕРЖДЁН  
-**Версия:** CONCEPT v5.0
+> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
+
+
+**Дата:** 2026-04-21 (MCOA reframe)
+**Автор:** Jaba Tkemaladze
+**Статус:** ✅ УТВЕРЖДЁН
+**Версия:** CONCEPT v5.1 (MCOA flagship)
 
 ---
 
+## Теоретический стержень экосистемы: MCOA
+
+**MCOA — Multi-Counter Architecture of Organismal Aging** (Tkemaladze J., 2026, *Nature Aging* Perspective submission) — flagship meta-теория всего CommonHealth. Организменное старение формализуется как взвешенная сумма параллельных counter'ов:
+
+> *L_tissue(n, t) = Σ_i w_i(tissue) · f_i( D_i(n, t) )*
+> *D_i(n, t) = D_i,0 + α_i·(n/n_i\*) + β_i·(t/τ_i) + γ_i · I(others)*
+
+Под этой крышей живут все научные подпроекты:
+
+| Counter / Layer | Подпроект | Роль |
+|-----------------|-----------|------|
+| Counter #1 (Centriolar) | **CDATA** | Полиглутамилирование материнской центриоли |
+| Counter "S" (Synchronization) | **Ze** | χ_Ze как dimensionless synchronization marker |
+| Measurement layer | **BioSense** | EEG + HRV + olfaction → input для counter'ов |
+| Infrastructure | **FCLC** | Federated privacy-preserving learning для калибровки |
+| Developmental prequel | **Ontogenesis** | Counter-sums от 0 до 25 лет (до начала aging) |
+| Social interface | **CommonHealth hub** | Тонкий social-layer над всеми counter'ами |
+
+**Критические правила MCOA** (см. `MCOA/CONCEPT.md §Axioms`):
+- **M1:** ≥2 параллельных counter'а обязательно
+- **M2:** dimensional consistency — только нормализованные n/n\*, t/τ
+- **M3:** w_i(tissue) определяется a priori, без post-hoc fitting
+- **M4:** falsifiability first-class — каждое утверждение сопровождается falsification test
+
+---
+
+## Social-Network layer (прежняя CONCEPT v5.0)
+
 ## Одна фраза
+
+**CommonHealth takes boring research databases and turns them into a global movement where people track their own aging, keep control of their data, and get credit for helping science.**
 
 CommonHealth — первая платформа, где сами пациенты собирают данные о своём здоровье и старении, формируя доказательную базу в интересах людей, а не корпораций.
 
@@ -70,7 +103,7 @@ CommonHealth — первая платформа, где сами пациент
   │   FCLC   │ │   CDATA  │ │     Ze      │ │  BioSense  │
   │Federated │ │Centriolar│ │Ze Vectors   │ │ EEG+HRV+   │
   │ Learning │ │ Damage   │ │  Theory     │ │ Olfaction  │
-  │  Infra   │ │R²=0.84   │ │ χ_Ze, v*    │ │ Hardware   │
+  │  Infra   │ │MCAI/Ze   │ │ χ_Ze, v*    │ │ Hardware   │
   └──────────┘ └──────────┘ └─────────────┘ └────────────┘
 ```
 
@@ -79,10 +112,13 @@ CommonHealth — первая платформа, где сами пациент
 | Компонент | Роль в экосистеме | Папка |
 |-----------|-------------------|-------|
 | **CommonHealth** | Центр: социальная сеть, Ze·Profile, Ze·Guide, Lab | `CommonHealth/` |
+| **MCOA** | Мета-теоретический фундамент: Multi-Counter Architecture of Organismal Aging (объединяет CDATA + Ze + BioSense как счётчики/измерительные слои) | `CommonHealth/MCOA/` |
 | **FCLC** | Privacy-инфраструктура, федеративное обучение | `CommonHealth/FCLC/` |
-| **Ze** | Теория χ_Ze, алгоритм биологического возраста | `CommonHealth/Ze/` |
-| **CDATA** | Теория повреждения центриолей, MCAI, R²=0.84 | `CommonHealth/CDATA/` |
-| **BioSense** | Аппаратный слой: EEG+HRV → χ_Ze сигналы | `CommonHealth/BioSense/` |
+| **Ze** | Теория χ_Ze, алгоритм биологического возраста (Counter "S" в MCOA) | `CommonHealth/Ze/` |
+| **CDATA** | Теория повреждения центриолей, MCAI (Counter #1 в MCOA); R²(MCAI)=0.745 on literature, R²=0.84 synthetic-data claim retracted 2026-04-13 — см. CDATA/CONCEPT.md | `CommonHealth/CDATA/` |
+| **BioSense** | Аппаратный слой: EEG+HRV → χ_Ze сигналы (измерительный слой MCOA) | `CommonHealth/BioSense/` |
+| **Ontogenesis** | Платформа онтогенеза 0–25 лет | `CommonHealth/Ontogenesis/` |
+| **HAP** | Hepato-Affective Primacy Theory (клиническая нейрогепатология) | `CommonHealth/HAP/` |
 
 ---
 
@@ -94,7 +130,7 @@ CommonHealth — первая платформа, где сами пациент
 | Фарм-компании | Спонсор | Продажа препаратов | Да | Нет |
 | Apple Health / Oura | Корпорация | Продажа устройств | Частично | Нет |
 | 23andMe | Корпорация | Продажа данных | Да | Нет |
-| **CommonHealth** | **Сам пациент** | **Быть здоровым** | **Да (R²=0.84)** | **Да** |
+| **CommonHealth** | **Сам пациент** | **Быть здоровым** | **Да (MCOA framework)** | **Да** |
 
 **Уникальное позиционирование:**  
 > «Единственная платформа, где данные о болезнях и выздоровлении собирает тот, кому это по-настоящему важно — сам человек.»
@@ -178,14 +214,14 @@ Ze Vectors Theory — биологическая теория на основе 
 - `v* = 0.45631` — критическая скорость разрядки
 - `χ_Ze ∈ [0,1]` — биосинхронизация
 - `D_norm = 1.2 × (1 − χ_Ze)` — нормализованный дефицит
-- `bio_age = chrono_age × (1 − D_norm × 0.45)` (R²=0.84)
+- `bio_age = chrono_age × (1 − D_norm × K)` research-path only, K ∈ {0.45 dual, 0.42 EEG, 0.38 HRV} — research-mode heuristics; prior "R²=0.84" claim retracted 2026-04-22 (synthetic-data artefact — see CORRECTIONS_2026-04-22.md)
 
 Ключевые публикации:
 - Ze Theory as Interpretive Framework. DOI: 10.65649/a874t352
 - Observation as Continuous Resource Expenditure. DOI: 10.65649/nhjtra67
 - Mathematical formalism of Ze. DOI: 10.65649/kzj86888
 
-**Валидация:** Cuban EEG N=196 + Dortmund Vital Study.
+**Статус валидации:** χ_Ze — теоретический конструкт (Ze/THEORY.md §3.3). Pre-registered эмпирические тесты на Cuban EEG / Dortmund Vital / MPI-LEMON вернули NULL результаты (Ze/EVIDENCE.md 2026-04-22). Прошлый «N=196 Cuban+Dortmund pool» имеет I²=90.3% → pooling некорректен (см. Ze/CONCEPT.md §8 v7 fix).
 
 ---
 
@@ -345,3 +381,58 @@ Ollama     → тот же VPS, порт 11434
 
 *CONCEPT v5.0 — 2026-04-09*  
 *Ключевые изменения: пациент как субъект, 4 фактора здоровья, BioSense ↔ Ze ↔ CDATA теоретический путь, монорепозиторий CommonHealth*
+
+---
+
+# Приложение A — MCOA как теоретический фундамент экосистемы
+
+**Дата добавления:** 2026-04-21
+**Источник:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md`
+**План:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
+
+## A.1. MCOA как объединяющая теория CommonHealth
+
+**Multi-Counter Architecture of Organismal Aging (MCOA)** — новый мета-фреймворк автора, формализующий старение (и, шире, любую деградацию биологической системы) как взвешенную сумму параллельных счётчиков повреждений:
+
+*D_total(tissue) = Σ_i [ w_i(tissue) · (α_i · (n / n_i\*) + β_i · (t / τ_i)) ]*
+
+с априорным ограничением на *w_i*, дименсиональной консистентностью и фальсифицируемыми предсказаниями.
+
+MCOA объединяет пять подпроектов CommonHealth под единой теоретической крышей:
+
+| WP | Подпроект | MCOA-роль |
+|----|-----------|-----------|
+| WP1 | FCLC | **Инфраструктура калибровки** *w_i(tissue)* через федеративное обучение по кликам/лабораториям |
+| WP2 | Ze | *χ_Ze* = безразмерный **синхронизационный счётчик** (Counter "S"); связывает когнитивную и клеточную дезорганизацию |
+| WP3 | CDATA | **Counter #1** (centriolar polyglutamylation) в явном виде |
+| WP4 | BioSense | **Измерительный слой**: EEG + HRV + обоняние → оценки *D_autonomic*, *D_neural*, *D_olfactory* |
+| WP5 | Aqtivirebuli (из Iqalto) | Социокультурный / образовательный counter (применение в ontogenesis 0–25) |
+
+## A.2. Health Score УДАЛЕН (решение 2026-04-22)
+
+**Решение пользователя 2026-04-22:** формула Health Score вида `0.40·organism + 0.25·psyche + 0.20·consciousness + 0.15·social` **удалена** из концепции CommonHealth.
+
+**Причина:** веса (0.40, 0.25, 0.20, 0.15) не имели математического вывода из MCOA L_tissue уравнения; являлись декларативными без обоснования. Несовместимо с научной заявкой EIC Pathfinder (Вариант Б).
+
+**Взамен — используется напрямую L_tissue из MCOA:**
+
+```
+L_tissue(n, t) = Σ_i w_i(tissue) · f_i( D_i(n, t) )
+```
+
+где `w_i(tissue)` определяются из данных (calibration), а не a priori. Никакого "агрегата 4 факторов" на уровне whole person — остаёмся на tissue-specific уровне, как предписывает MCOA Axiom M2.
+
+Для Ze·Profile UI: показывать L_tissue для нескольких ключевых тканей (HSC, brain, muscle) отдельно, а не единую число.
+
+## A.3. Правила консистентности
+
+1. Новые счётчики определяются по канону MCOA: указывать *τ_i*, *n_i\**, область применимости.
+2. Ze·Guide при ответах использует L_tissue терминологию, **не** "единый Health Score".
+3. В EIC Pathfinder финальной версии (Part B v3, Вариант Б) — MCOA как WP1, рассматривается без "4 факторов агрегации".
+
+## A.4. TODO — следующая итерация CONCEPT
+
+- [ ] Обновить `health_factors` таблицу: переделать в tissue-specific формат (w_i по tissue, а не по домену)
+- [ ] Удалить Health Score компонент из frontend/PWA до пересмотра (сейчас — нет единой метрики "здоровье")
+- [ ] В EIC Part B v3 (Variant B): MCOA Framework WP1 даёт математически строгое определение L_tissue и аксиомы M1-M4
+

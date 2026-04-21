@@ -1,3 +1,13 @@
+# Ontogenesis v4.2 — Developmental prequel to MCOA (0–25 years)
+
+> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+
+
+## Позиция в MCOA
+**Ontogenesis = Developmental prequel layer для MCOA** (Tkemaladze J., 2026, *Nature Aging* Perspective). В MCOA-формализме возраст 0–25 лет — это фаза, предшествующая установлению стабильного L_tissue; параметры Ontogenesis определяют начальные условия *D_i,0* для каждого counter'а при t = 25. Morpho / physio / psycho / socio параметры → 4 counter-families. Meta-архитектура: `~/Desktop/CommonHealth/MCOA/CONCEPT.md`.
+
+---
+
 # Ontogenesis v4.2
 ## Эмпирическая платформа симуляции жизненного цикла человека (зигота → смерть, 0–120 лет)
 
@@ -20,7 +30,7 @@
 | Модули | 1 (Ontogenesis) | **3 (Ontogenesis · Mesogenesis · Gerontogenesis)** |
 | Алгоритм переходов | CV/Range | **LCS (Latent Change Score)** |
 | Коррекция сравнений | Бонферрони only | **FDR (BH) основной + Бонферрони sensitivity** |
-| Данные для старения | Нет | **British Birth Cohorts (n=27 432)** |
+| Данные для старения | Нет | **British Birth Cohorts (n=36 603)** [Shireby 2025, PMID 40825593] |
 | Синдромы старения | Нет | **Accelerated / Normal / Delayed phenotype** |
 | Зонтичный термин | Нет | **Etagenesis** (Frolkis 1999) |
 
@@ -385,15 +395,25 @@ y_t  = y_{t-1} + Δy_t
 ### §9.2. Модуль Gerontogenesis (50–120 лет) — ключевой источник
 
 **British Birth Cohorts (1946–2001)**
-DOI: 10.1093/ije/dyaf141 (препринт: 10.1101/2024.11.06.24316761)
+Shireby G, Morris TT, Wong A et al. (2025). *Int J Epidemiol* 54(5):dyaf141. PMID 40825593; DOI 10.1093/ije/dyaf141 (препринт: 10.1101/2024.11.06.24316761)
 
 | Параметр | Значение |
 |----------|---------|
 | Когорты | 5 (рождённые в 1946, 1958, 1970, 1989–90, 2000–02) |
-| Участников с геномными данными | **n = 27 432** |
+| Участников с геномными данными | **n = 36 603** (24 192 когортных участника + 7 777 матерей + 4 634 отцов из MCS) |
 | SNPs (после импутации) | **6.7 млн** |
 | Доступ | **После одобрения заявки** (cls.ucl.ac.uk, UK Data Service) |
 | Охват | Здоровье + социальный статус от рождения до пожилого возраста |
+
+> **Correction 2026-04-21:** ранее приводилось n = 27 432 — ошибка. Верифицировано по Shireby et al. 2025 (PMID 40825593), точная цифра n = 36 603.
+
+**Педиатрические когорты (дополнение, 2026-04-21):**
+> Ранее упоминался несуществующий «UK Biobank pediatric arm» — UK Biobank является взрослой когортой (40–69 лет при наборе). Замена на реальные педиатрические ресурсы:
+>
+> - **All of Us Research Program — pediatric enrollment** (NIH, старт август 2024; ~1 600 детей возраста 0–4 лет на момент аудита) — https://allofus.nih.gov/
+> - **ABCD Study (Adolescent Brain Cognitive Development)** — n = 11 878, 9–10 лет → лонгитюд до ~20 лет (NIH/NIDA), ключевой нейрокогорт подростков — https://abcdstudy.org/
+> - **ALSPAC / Children of the 90s** (UK Bristol) — birth cohort с глубоким фенотипированием 0–25+
+> - **Generation R** (Rotterdam, Нидерланды) — fetal-onset когорта с педиатрическим МРТ
 
 ---
 
@@ -464,3 +484,73 @@ DOI: 10.1093/ije/dyaf141 (препринт: 10.1101/2024.11.06.24316761)
 ---
 *Версия 4.2 | Дата: 2026-04-16 | Автор: Jaba Tkemaladze, MD*
 *Peer review: ACCEPTED (IF 5–8 level) | Все рекомендации приняты*
+
+---
+
+# Приложение A — Интеграция с MCOA (Multi-Counter Architecture of Organismal Aging)
+
+**Дата добавления:** 2026-04-21
+**Источник:** `~/Desktop/CommonHealth/MCOA/CONCEPT.md` + Nature Aging Perspective `~/Documents/MCOA_NatureAging_submission/`
+**План:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
+**Совместимость:** v4.2 остаётся в силе; MCOA не отменяет LCS-формализм и FibrosisTracker, а переинтерпретирует их в счётчиковых терминах.
+
+## A.1. Ontogenesis в MCOA
+
+Ontogenesis — платформа для детской / пубертатной / юношеской возрастной траектории (0–25 лет). В терминах MCOA это **пре-калибровочный период** счётчиков: именно здесь формируется *D_i(0)* (baseline damage) и складываются индивидуальные *α_i* / *β_i* из родительских, средовых и поведенческих факторов.
+
+## A.2. Соответствие 24 параметров → 5 счётчиков MCOA
+
+Четыре Ontogenesis-домена (морфология · физиология · психика · социум) не заменяются счётчиками, а встраиваются в них как *наблюдаемые переменные*, из которых оцениваются *D_i*:
+
+| MCOA Counter | Ontogenesis-индикаторы (из 24 параметров) |
+|--------------|-------------------------------------------|
+| 1. Telomere | Пролиферативные маркеры → оценивается косвенно через темп роста (Height, Weight/BMI возрастная скорость) |
+| 2. Centriolar | Не прямо измеряется; в детстве считается нулевым (α_cent·n/n\* → 0, когда n << n\*) |
+| 3. Mitochondrial | DOSI-marker, Cortisol, Regeneration coefficient → прокси *D_mito* |
+| 4. Epigenetic | GH, IGF-1, Sex hormones траектория; пубертатный тайминг → прокси *D_epi* |
+| 5. Proteostasis | FibrosisTracker (особенно parenchymal/irreversible ткани) → прямо *D_proteo* |
+| Counter S (Ze) | Psychology-домен (BFI, Working memory, Stress-marker) → прокси χ_Ze-связанных процессов |
+| Socio | Sociology-домен; в v1 MCOA не счётчик, а модулятор *β_i* (аналог γ_ij) |
+
+## A.3. Соответствие LCS → MCOA формулам
+
+**LCS (Latent Change Score):**
+*Δy_t = α + β·y_{t−1} + γ·x_{t−1} + ζ_t*
+
+**MCOA (дискретная):**
+*D_i(n+1, t+Δt) = D_i(n, t) + α_i·Δn/n\* + β_i·Δt/τ_i + γ_i·I(others) + noise*
+
+Соответствие:
+- LCS `α` ↔ MCOA *α_i·(1/n\*)* (additive дрейф)
+- LCS `β·y_{t−1}` ↔ MCOA self-feedback (отсутствует в v1, может быть добавлено как *D_i²* член в будущей редакции)
+- LCS `γ·x_{t−1}` ↔ MCOA *γ_i·I(others)* (cross-domain/coupling)
+- LCS `ζ_t` ↔ MCOA noise term
+
+**Вывод:** LCS — частный случай MCOA-step для случая линейной связи без нормировки. MCOA-совместимая версия LCS должна (i) нормировать время на *τ_domain*, (ii) делать *γ* матричным (кросс-доменные коэффициенты идут в Γ).
+
+## A.4. FibrosisTracker как MCOA Counter #5 (proteostasis)
+
+FibrosisTracker уже отслеживает *D_proteo* (кумулятивный процент замещения фиброзом по анатомическим зонам). Для MCOA-совместимости:
+
+- *τ_proteo* (референтное время) = период от начала повреждения до полной замены ткани: 7–14 дней для поверхностного, 4–8 недель для глубокого, 4–6 мес для паренхиматозного.
+- *n\** не применимо для post-mitotic тканей (neurons, cardiomyocytes) — α_proteo → 0.
+- Возрастные коэффициенты регенерации (1.3× для 0–12 лет → 0.3× для 80–120 лет) — это прямое эмпирическое измерение возрастной зависимости *β_proteo(t)* в MCOA.
+
+**Рекомендация:** Ontogenesis может публиковать age-modulated coefficients как первую калибровку MCOA Counter #5 β-rate по ткани.
+
+## A.5. Пять нейроборологических фаз и MCOA thresholds
+
+Пять фаз (~9, ~32, ~66, ~83 года) — это эмпирические точки перехода *L_tissue > L_critical*. В MCOA такие переходы ожидаются, когда доминирующий счётчик пересекает *D_critical(i, tissue)*. Поэтому phase boundaries Ontogenesis могут использоваться как первая эмпирическая калибровка *L_critical* по возрасту.
+
+## A.6. Обязательства консистентности
+
+1. 4-доменная архитектура Ontogenesis остаётся; MCOA добавляет верхний уровень абстракции (счётчики), не меняя нижние уровни.
+2. При любых правках LCS-алгоритма — проверить, что нормировка *t/τ_domain* не сломана (Axiom M2 MCOA).
+3. При добавлении новых параметров к 24 — указывать, к какому счётчику MCOA они относятся.
+4. Ограничение 120 лет совместимо с MCOA; счётчики не должны уходить в бесконечность — это тоже эмпирический предел.
+
+## A.7. TODO для Session 3 (код)
+
+- [ ] Python-адаптер LCS-статус → MCOA-счётчик (в `Ontogenesis/scripts/`)
+- [ ] Расчёт возраст-модулированного β_proteo(age) как калибровочная кривая MCOA
+- [ ] Сравнительный анализ Ontogenesis LCS vs MCOA-step на одинаковых синтетических данных (как для CDATA сравнение обязательно)

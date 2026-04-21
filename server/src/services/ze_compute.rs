@@ -2,7 +2,7 @@
 /// Implements bridge equation from Ze Theory:
 ///   D_norm = f(chi_ze_combined)
 ///   bio_age = chrono_age * (1 - D_norm * K)
-/// K calibrated from N=196 Cuban EEG dataset (R²=0.84)
+/// K currently a research-mode heuristic; pre-registered empirical tests on Cuban EEG, Dortmund Vital, and MPI-LEMON returned NULL results (Ze EVIDENCE.md 2026-04-22). χ_Ze is NOT a validated clinical biomarker — any "R²=0.84 on Cuban+Dortmund" claim from prior drafts is retracted (synthetic-data artefact per CORRECTIONS_2026-04-22).
 ///
 /// Reference: Tkemaladze J., CDATA series, Ze Vectors Theory
 
@@ -14,11 +14,11 @@ use crate::models::ze_profile::{
 use chrono::{DateTime, Utc};
 use uuid::Uuid;
 
-/// K calibrated on Cuban EEG + Dortmund HRV dual-clock model (R²=0.84)
+/// Research-mode heuristic; "R²=0.84 dual-clock" claim retracted 2026-04-22 (synthetic-data artefact).
 const K_CALIBRATION_DUAL: f64 = 0.45;
-/// K for HRV-only input (Dortmund Vital Study single-sensor calibration)
+/// Research-mode heuristic (HRV-only path); no validated calibration exists.
 const K_CALIBRATION_HRV_ONLY: f64 = 0.38;
-/// K for EEG-only input (Cuban dataset single-sensor calibration)
+/// Research-mode heuristic (EEG-only path); no validated calibration exists.
 const K_CALIBRATION_EEG_ONLY: f64 = 0.42;
 const D_NORM_ALPHA: f64 = 1.2;
 const ANOMALY_CONST_DAYS: i64 = 30;

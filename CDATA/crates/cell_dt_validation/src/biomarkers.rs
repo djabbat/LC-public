@@ -46,10 +46,11 @@ impl BiomarkerDataset {
 
     pub fn synthetic_chip_frequency() -> Self {
         let mut ds = Self::new("Synthetic CHIP Frequency", BiomarkerType::ChipFrequency);
-        // FIX Round 7 (B3): Recalibrated VAF to match Jaiswal et al. 2017 (PMID: 28792876)
+        // FIX Round 7 (B3): Recalibrated VAF to match Jaiswal SS et al. 2017 (PMID: 28636844)
         // NEJM 2017: VAF>0.02 in ~2% at age 40, ~10% at 65, rare >0.10 at age 70
         // Previous values were 2–4× too high (70yo: 0.20 → corrected 0.07)
-        ds.source_pmid = Some(28792876);  // Jaiswal 2017 NEJM
+        // PMID correction 2026-04-21: prior 28792876 → correct 28636844 (Jaiswal NEJM "Clonal Hematopoiesis and Risk of Atherosclerotic CVD")
+        ds.source_pmid = Some(28636844);  // Jaiswal 2017 NEJM 377(2):111-121
         for (age, val, std, n) in [(40.0, 0.005, 0.002, 500u32), (50.0, 0.015, 0.005, 600),
                                     (60.0, 0.040, 0.012, 700), (70.0, 0.070, 0.020, 500),
                                     (80.0, 0.120, 0.035, 300)] {
@@ -159,7 +160,7 @@ mod tests {
     #[test]
     fn test_synthetic_chip_has_pmid() {
         let ds = BiomarkerDataset::synthetic_chip_frequency();
-        assert_eq!(ds.source_pmid, Some(28792876), "CHIP should cite Jaiswal 2017");
+        assert_eq!(ds.source_pmid, Some(28636844), "CHIP should cite Jaiswal 2017 NEJM PMID 28636844");
     }
 
     #[test]

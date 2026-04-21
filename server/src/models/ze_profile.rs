@@ -4,11 +4,14 @@ use sqlx::FromRow;
 use uuid::Uuid;
 
 // ── 4-Factor Health Model ──────────────────────────────────────────────────────
-// Weights from PARAMETERS.md:
-//   organism (SDNN/RMSSD interim) = 0.40   ← organism_sdnn from biosense handler
-//   psyche                        = 0.25   ← χ_Ze is RESEARCH ONLY per CONCEPT v3.2:
-//   consciousness                 = 0.20     χ_Ze_eeg + χ_Ze_hrv failed 4 pre-reg tests
-//   social                        = 0.15
+// DEPRECATED weights (CommonHealth/CONCEPT.md §A.2, 2026-04-22):
+// The formula "0.40·organism + 0.25·psyche + 0.20·consciousness + 0.15·social"
+// was REMOVED from CONCEPT because the weights had no mathematical derivation
+// from MCOA L_tissue. Retained here only as transitional research composite
+// (always accompanied by HEALTH_SCORE_DISCLAIMER). Planned replacement: L_tissue
+// per tissue type from MCOA calibration. See CommonHealth/TODO.md architectural item.
+// Sensor source for organism component: organism_sdnn from biosense handler
+// (χ_Ze_eeg + χ_Ze_hrv failed 4 pre-reg tests — EVIDENCE.md 2026-04-22).
 pub const W_ORGANISM:      f64 = 0.40;
 pub const W_PSYCHE:        f64 = 0.25;
 pub const W_CONSCIOUSNESS: f64 = 0.20;
@@ -51,9 +54,11 @@ pub struct HealthFactorSummary {
     pub consciousness: Option<f64>,
     /// Average social score over the window (0–1)
     pub social: Option<f64>,
-    /// Integrated health score: 0.40*organism + 0.25*psyche + 0.20*consciousness + 0.15*social
-    /// None if fewer than 2 factors have data.
-    /// R7: always accompanied by `health_score_disclaimer` in API responses.
+    /// DEPRECATED composite (weights removed from CONCEPT.md §A.2 on 2026-04-22):
+    /// prior formula `0.40*organism + 0.25*psyche + 0.20*consciousness + 0.15*social`
+    /// is retained here only as a transitional research placeholder and MUST be
+    /// accompanied by `health_score_disclaimer`. Slated for replacement by
+    /// tissue-specific L_tissue from MCOA. None if fewer than 2 factors have data.
     pub health_score: Option<f64>,
     /// Mandatory disclaimer to accompany any health_score display. Never None when health_score is Some.
     pub health_score_disclaimer: Option<&'static str>,

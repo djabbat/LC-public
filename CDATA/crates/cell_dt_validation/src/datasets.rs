@@ -66,7 +66,7 @@ pub struct CentenarianDatasets {
     pub ros: CalibrationDataset,
 
     /// CHIP VAF in centenarians (ages 60–100).
-    /// Jaiswal 2017 (PMID 28792876) extended curve; ~7% at 70, ~15% at 85, ~30% at 100.
+    /// Jaiswal SS et al. 2017 NEJM (PMID 28636844) extended curve; ~7% at 70, ~15% at 85, ~30% at 100.
     pub chip_vaf: CalibrationDataset,
 
     /// Frailty index in Italian cohort (ages 60–100).
@@ -124,7 +124,7 @@ pub struct ReferenceDatasets {
     pub telomere: CalibrationDataset,
 
     /// CHIP VAF (mean clonal variant allele frequency)
-    /// Source: Jaiswal et al. 2017 (PMID 28792876)
+    /// Source: Jaiswal SS et al. 2017 NEJM 377(2):111-121 (PMID 28636844 — corrected from prior 28792876)
     pub chip_vaf: CalibrationDataset,
 
     /// Frailty index (Rockwood accumulation model, 0–1)
@@ -173,7 +173,7 @@ fn telomere_dataset() -> CalibrationDataset {
 }
 
 /// CHIP VAF vs age.
-/// Jaiswal 2017 (PMID 28792876): VAF ≈ 0.5 % at 40 yr, 7% at 70 yr.
+/// Jaiswal SS et al. 2017 NEJM (PMID 28636844): VAF ≈ 0.5 % at 40 yr, 7% at 70 yr.
 /// Training range 20–50 yr (pre-exponential segment).
 fn chip_vaf_dataset() -> CalibrationDataset {
     CalibrationDataset::new(

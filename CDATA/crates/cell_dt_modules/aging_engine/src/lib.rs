@@ -1,5 +1,24 @@
 /// CDATA v3.2.3 — AgingEngine
 ///
+/// # Canonical equation note (audit 2026-04-21)
+///
+/// This engine implements the MULTIPLICATIVE *rate* form of the CDATA damage
+/// dynamics (article v3.2.3):
+///
+///   dD/dt = α · ν · (1 − Π) · S · P_A · M · C
+///
+/// The canonical ADDITIVE form from THEORY.md §3 / CONCEPT.md / PARAMETERS.md is
+/// implemented separately in `cell_dt_cli::compute_damage()`:
+///
+///   D(n, t) = D₀ + α·(n/n*) + β·(t/τ) + γ·I
+///
+/// The two forms are NOT currently cross-derived in any document. Parameter
+/// numerical defaults in `FixedParameters::default()` DIVERGE from the values
+/// tabulated in PARAMETERS.md (see TODO.md L1). Treat both forms as co-existing
+/// implementations until reconciliation (TODO.md L3).
+///
+/// # Subsystems
+///
 /// Integrator that combines all 6 subsystems:
 ///   1. Mitochondrial (ROS, mtDNA mutations, mito_shield)
 ///   2. Inflammaging   (DAMPs, cGAS-STING, NF-κB, SASP, NK, fibrosis)
@@ -210,7 +229,7 @@ pub struct AgeSnapshot {
     pub nk_efficiency: f64,
     pub fibrosis_level: f64,
     /// Total CHIP clone frequency (sum of all clone VAFs, capped at 1.0).
-    /// Maps directly to Jaiswal 2017 CHIP VAF measure (PMID: 28792876).
+    /// Maps directly to Jaiswal 2017 NEJM CHIP VAF measure (PMID: 28636844; prior comment cited 28792876, corrected 2026-04-21).
     pub chip_vaf: f64,
 }
 
