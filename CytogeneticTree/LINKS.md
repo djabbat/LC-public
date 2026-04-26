@@ -2,18 +2,18 @@
 
 ## Internal (within LongevityCommon ecosystem)
 
-- Umbrella: `~/Desktop/CommonHealth/CONCEPT.md`
-- Parent theory (mechanism): `~/Desktop/CommonHealth/CDATA/`
-- Parent theoretical framework: `~/Desktop/CommonHealth/MCOA/` (under Nature Aging review, NATAGING-P13741)
-- Shared hardware platform: `~/Desktop/CommonHealth/AutomatedMicroscopy/`
-- Orthogonal biomarker work: `~/Desktop/CommonHealth/Ze/` + `~/Desktop/CommonHealth/BioSense/`
-- Funding context: `~/Documents/Grants/CommonHealth/CDATA/docs/IMPETUS_2026-04-25/`
+- Umbrella: `~/Desktop/LongevityCommon/CONCEPT.md`
+- Parent theory (mechanism): `~/Desktop/LongevityCommon/CDATA/`
+- Parent theoretical framework: `~/Desktop/LongevityCommon/MCOA/` (under Nature Aging review, NATAGING-P13741)
+- Shared hardware platform: `~/Desktop/LongevityCommon/AutomatedMicroscopy/`
+- Orthogonal biomarker work: `~/Desktop/LongevityCommon/Ze/` + `~/Desktop/LongevityCommon/BioSense/`
+- Funding context: `~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/`
 - Peer collaborator simulator: `~/Documents/Meetings/Ilia_Zheleznov_2026-04-25/MEETING_KIT.md` (external code: https://github.com/zhelilyan-create/hematopoiesis-simulator)
 
 ## Git
 
-- Public view: `djabbat/CommonHealth` (partial — core .md gitignored)
-- Private full: `djabbat/CommonHealth-private` (full content incl. CytogeneticTree)
+- Public view: `djabbat/LongevityCommon` (partial — core .md gitignored)
+- Private full: `djabbat/LongevityCommon-private` (full content incl. CytogeneticTree)
 - Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CDATA-private` mirrors hardware dependencies)
 
 ## External resources

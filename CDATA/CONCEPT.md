@@ -9,7 +9,7 @@
 
 **CDATA = MCOA Counter #1 (Centriolar):** накопление polyGlu PTM на материнской центриоли → D_centriole(n, t) = D_centriole,0 + α_2·(n/n₂\*) + β_2·(t/τ_2) + γ_2·I(others).
 
-Этот документ описывает механистические детали Counter #2; для общей архитектуры см. `~/Desktop/CommonHealth/MCOA/CONCEPT.md`.
+Этот документ описывает механистические детали Counter #2; для общей архитектуры см. `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`.
 
 ## Centriolar Damage Accumulation Theory of Aging (механизм Counter #2)
 

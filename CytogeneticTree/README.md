@@ -56,4 +56,4 @@ CytogeneticTree/
 - **PI:** Dr. Jaba Tkemaladze, MD — jaba@longevity.ge, ORCID 0000-0002-3826-7982
 - **Host:** Georgia Longevity Alliance / კავშირი დღეგრძელობა (NGO #404506520, founded 2016-01-12)
 - **Funding context:** Longevity Impetus Grants LOI 2026-04-25 (Phase A MVCT demonstration)
-- **Parent:** `~/Desktop/CommonHealth/`
+- **Parent:** `~/Desktop/LongevityCommon/`

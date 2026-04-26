@@ -10,7 +10,7 @@
 //! | `cosmology`  | §10 (Cosmology of Imp.)   | Ï + 3HÏ + m²I = 3(ä/a)/Λ_Ze (homogeneous) |
 //! | `autowaves`  | §13 §17                   | 1D reaction-diffusion cheating autowaves  |
 //!
-//! Source of truth: `Ze Theory.pdf` / `Ze Теория.pdf` in `~/Desktop/CommonHealth/Ze/`.
+//! Source of truth: `Ze Theory.pdf` / `Ze Теория.pdf` in `~/Desktop/LongevityCommon/Ze/`.
 
 use serde::{Deserialize, Serialize};
 

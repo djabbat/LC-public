@@ -75,7 +75,7 @@
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision
 - Related open problems: `OPEN_PROBLEMS.md` §1 AI judgment quality, §2 hardware reliability
 - Parameter provenance: `PARAMETERS.md`
-- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/CommonHealth/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
+- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
 
 ---
 

@@ -4,7 +4,7 @@
 
 
 ## Позиция в MCOA
-**Ontogenesis = Developmental prequel layer для MCOA** (Tkemaladze J., 2026, *Nature Aging* Perspective). В MCOA-формализме возраст 0–25 лет — это фаза, предшествующая установлению стабильного L_tissue; параметры Ontogenesis определяют начальные условия *D_i,0* для каждого counter'а при t = 25. Morpho / physio / psycho / socio параметры → 4 counter-families. Meta-архитектура: `~/Desktop/CommonHealth/MCOA/CONCEPT.md`.
+**Ontogenesis = Developmental prequel layer для MCOA** (Tkemaladze J., 2026, *Nature Aging* Perspective). В MCOA-формализме возраст 0–25 лет — это фаза, предшествующая установлению стабильного L_tissue; параметры Ontogenesis определяют начальные условия *D_i,0* для каждого counter'а при t = 25. Morpho / physio / psycho / socio параметры → 4 counter-families. Meta-архитектура: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`.
 
 ---
 
@@ -490,7 +490,7 @@ Shireby G, Morris TT, Wong A et al. (2025). *Int J Epidemiol* 54(5):dyaf141. PMI
 # Приложение A — Интеграция с MCOA (Multi-Counter Architecture of Organismal Aging)
 
 **Дата добавления:** 2026-04-21
-**Источник:** `~/Desktop/CommonHealth/MCOA/CONCEPT.md` + Nature Aging Perspective `~/Documents/MCOA_NatureAging_submission/`
+**Источник:** `~/Desktop/LongevityCommon/MCOA/CONCEPT.md` + Nature Aging Perspective `~/Documents/MCOA_NatureAging_submission/`
 **План:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
 **Совместимость:** v4.2 остаётся в силе; MCOA не отменяет LCS-формализм и FibrosisTracker, а переинтерпретирует их в счётчиковых терминах.
 

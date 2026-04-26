@@ -31,7 +31,7 @@
 
 - Always check `CONCEPT.md` is in sync with `CDATA/CONCEPT.md` + `MCOA/` claims. If CDATA updates its theory, CytogeneticTree predictions might need update.
 - Keep clear separation: Impetus = funded Phase A (MVCT fibroblasts, binary Go/No-Go). Cytogenetic Tree = 3-phase multi-year programme.
-- `~/Desktop/CommonHealth/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
+- `~/Desktop/LongevityCommon/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
 
 ## Related memory files
 

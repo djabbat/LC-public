@@ -94,4 +94,4 @@ $4,500 (Вариант A DIY) allocated within CDATA Phase A Impetus grant line 
 
 ---
 
-*CONCEPT v1.0, 2026-04-21. Part of LongevityCommon ecosystem per `~/Desktop/CommonHealth/CONCEPT.md`.*
+*CONCEPT v1.0, 2026-04-21. Part of LongevityCommon ecosystem per `~/Desktop/LongevityCommon/CONCEPT.md`.*

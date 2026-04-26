@@ -1,6 +1,6 @@
 //! BioSense core — types and Ze constants.
 //!
-//! Constants must match `~/Desktop/CommonHealth/server/src/services/ze_compute.rs`.
+//! Constants must match `~/Desktop/LongevityCommon/server/src/services/ze_compute.rs`.
 
 use serde::{Deserialize, Serialize};
 use thiserror::Error;

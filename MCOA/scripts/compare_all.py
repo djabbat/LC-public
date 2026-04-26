@@ -9,7 +9,7 @@ pairwise counter-vs-counter residuals across 6 tissues = 90 cells.
 
 Usage
 -----
-    cd ~/Desktop/CommonHealth/MCOA/scripts
+    cd ~/Desktop/LongevityCommon/MCOA/scripts
     python3 compare_all.py --days 3650 --rate 0.01 \
         --out ../docs/comparisons/2026-04-21_full/
 

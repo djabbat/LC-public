@@ -1,6 +1,6 @@
 //! BioSense HRV — SDNN, RMSSD, autonomic switching v_HRV → χ_Ze.
 //!
-//! Rust port of `~/Desktop/CommonHealth/BioSense/src/ze_hrv.py`.
+//! Rust port of `~/Desktop/LongevityCommon/BioSense/src/ze_hrv.py`.
 //!
 //! Validated metrics:
 //!   - SDNN (Standard Deviation of NN intervals) — Fantasia DB d=0.72

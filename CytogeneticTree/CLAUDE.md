@@ -3,9 +3,9 @@
 ## Sources of truth
 
 1. `CONCEPT.md` (this subproject)
-2. `~/Desktop/CommonHealth/CONCEPT.md` (umbrella)
-3. `~/Desktop/CommonHealth/CDATA/CONCEPT.md` (parent theory)
-4. `~/Desktop/CommonHealth/MCOA/` (parent theoretical framework)
+2. `~/Desktop/LongevityCommon/CONCEPT.md` (umbrella)
+3. `~/Desktop/LongevityCommon/CDATA/CONCEPT.md` (parent theory)
+4. `~/Desktop/LongevityCommon/MCOA/` (parent theoretical framework)
 5. Global `~/CLAUDE.md`
 
 ## Rules
@@ -18,7 +18,7 @@
 
 ## Git
 
-- Tracked under `djabbat/CommonHealth` (public view, core .md gitignored) AND `djabbat/CommonHealth-private` (full content).
+- Tracked under `djabbat/LongevityCommon` (public view, core .md gitignored) AND `djabbat/LongevityCommon-private` (full content).
 - Large binary outputs (sample images, DAG visualizations >1 MB) → `docs/figures/` with Git LFS if needed, or excluded via .gitignore.
 
 ## Naming

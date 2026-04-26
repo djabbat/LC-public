@@ -34,8 +34,8 @@ AutomatedMicroscopy — **инфраструктурный слой** для exp
 
 ## Ссылки
 
-- Parent: `~/Desktop/CommonHealth/CONCEPT.md`
-- Related grant: `~/Documents/Grants/CommonHealth/CDATA/docs/IMPETUS_2026-04-25/`
+- Parent: `~/Desktop/LongevityCommon/CONCEPT.md`
+- Related grant: `~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/`
 - External source: `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/`
 
 ## License
