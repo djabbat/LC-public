@@ -1,5 +1,5 @@
 # Cryptographic Scope for KU Leuven ESAT/COSIC
-## Advisory and Audit Role — CommonHealth EIC Pathfinder Open 2026
+## Advisory and Audit Role — LongevityCommon EIC Pathfinder Open 2026
 
 **WP1 (FCLC) + WP3 (CDATA data integration)** · €3M total project, €0.6M WP1 · 36 months
 
@@ -13,7 +13,7 @@ World-leading cryptography group (Preneel, Vercauteren, Rijmen, Verbauwhede, Sma
 - Post-quantum + homomorphic encryption (Vercauteren)
 - Hardware security + side-channel (Verbauwhede)
 
-CommonHealth cryptographic core must survive EU AI Act Art. 22 scrutiny and independent academic audit. **Only a COSIC-grade advisory ensures this.**
+LongevityCommon cryptographic core must survive EU AI Act Art. 22 scrutiny and independent academic audit. **Only a COSIC-grade advisory ensures this.**
 
 ## Current cryptographic stack (to be audited)
 

@@ -1,6 +1,6 @@
 # CDATA Backend
 
-Centriolar Damage Accumulation Theory of Aging backend implementation for CommonHealth project.
+Centriolar Damage Accumulation Theory of Aging backend implementation for LongevityCommon project.
 
 ## Overview
 

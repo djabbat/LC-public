@@ -188,4 +188,4 @@
 
 ---
 
-*დოკუმენტი მომზადდა Dr Jaba Tkemaladze-ის CommonHealth პროექტისთვის, 17.04.2026.*
+*დოკუმენტი მომზადდა Dr Jaba Tkemaladze-ის LongevityCommon პროექტისთვის, 17.04.2026.*

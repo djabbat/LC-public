@@ -14,7 +14,7 @@
 
 ## 1. Project identity
 
-MCOA is the theoretical mother-project of the CommonHealth aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
+MCOA is the theoretical mother-project of the LongevityCommon aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
 
 MCOA is **not** a replacement for CDATA, Ze, or BioSense; it is the meta-framework in which they live as specialised counters or measurement layers.
 
@@ -110,7 +110,7 @@ Test 4 is the near-term priority.
 
 ---
 
-## 7. Relationship to subprojects of CommonHealth
+## 7. Relationship to subprojects of LongevityCommon
 
 | Subproject | MCOA role |
 |------------|-----------|

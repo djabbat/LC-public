@@ -2,8 +2,8 @@
 
 **for the EIC Pathfinder Open Project**
 
-**Project Acronym:** CommonHealth
-**Project Full Title:** CommonHealth — Integrated Longevity Research Platform
+**Project Acronym:** LongevityCommon
+**Project Full Title:** LongevityCommon — Integrated Longevity Research Platform
 **Grant Agreement Number:** [To be completed upon notification]
 **Call Identifier:** EIC Pathfinder Open 2026
 **Duration:** 36 months
@@ -31,7 +31,7 @@ The Host and the PI are hereinafter jointly referred to as the "Parties".
 
 ### **2. Project Hosting Commitment**
 
-2.1. The Host hereby commits to host the Project titled "CommonHealth — Integrated Longevity Research Platform" (the "Project") funded under the EIC Pathfinder Open 2026 call.
+2.1. The Host hereby commits to host the Project titled "LongevityCommon — Integrated Longevity Research Platform" (the "Project") funded under the EIC Pathfinder Open 2026 call.
 
 2.2. The Host accepts full legal, administrative, and financial responsibility for the Project towards the European Commission (EC) / European Climate, Infrastructure and Environment Executive Agency (CINEA) as the Granting Authority, in accordance with the Horizon Europe Model Grant Agreement (HE MGA) and the Grant Agreement (GA) to be signed.
 
@@ -107,7 +107,7 @@ By signing below, the Parties acknowledge they have read, understood, and agree 
 **AS THE PRINCIPAL INVESTIGATOR:**
 
 **Name:** Dr. Jaba Tkemaladze, MD
-**Title:** Principal Investigator, CommonHealth Project
+**Title:** Principal Investigator, LongevityCommon Project
 **Date:** _________________________
 **Signature:** ____________________
 

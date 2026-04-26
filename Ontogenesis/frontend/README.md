@@ -1,6 +1,6 @@
 # Ontogenesis Frontend
 
-Phoenix 1.7 LiveView frontend for the CommonHealth subproject "Ontogenesis".
+Phoenix 1.7 LiveView frontend for the LongevityCommon subproject "Ontogenesis".
 
 ## Overview
 

@@ -2,7 +2,7 @@
 
 **Version:** v1.0 (initial scaffolding)
 **Date:** 2026-04-21
-**Status:** 🟡 Active (new CommonHealth subproject)
+**Status:** 🟡 Active (new LongevityCommon subproject)
 **Parent umbrella:** `~/Desktop/CommonHealth/` (coordinator of CDATA, FCLC, Ze, BioSense, MCOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
 
 ---
@@ -31,7 +31,7 @@ Such a tree would reveal:
 
 ## §2 Scientific Framing
 
-### 2.1 Position within the CommonHealth ecosystem
+### 2.1 Position within the LongevityCommon ecosystem
 
 | Subproject | Role vs Cytogenetic Tree |
 |------------|---------------------------|
@@ -186,4 +186,4 @@ Across replicate embryos / tissue systems, the cytogenetic tree has conserved st
 
 ---
 
-*Generated 2026-04-21. Part of CommonHealth ecosystem. Connected to MCOA (theoretical), CDATA (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*
+*Generated 2026-04-21. Part of LongevityCommon ecosystem. Connected to MCOA (theoretical), CDATA (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*

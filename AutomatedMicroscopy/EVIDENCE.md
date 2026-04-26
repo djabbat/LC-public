@@ -47,7 +47,7 @@
 ## Internal Data / Artifacts
 
 - `AUTOMATED_MICROSCOPY_SETUP.md` — full engineering specification (this subproject)
-- `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/` — source material (pre-CommonHealth integration)
+- `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/` — source material (pre-LongevityCommon integration)
 - Future: PROMPT.md templates for each Aim
 - Future: Claude Code policy file `microscope-operator.md`
 - Future: bill-of-materials spreadsheet с актуальными 2026 prices

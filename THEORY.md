@@ -1,8 +1,8 @@
-# THEORY — CommonHealth (Ecosystem)
+# THEORY — LongevityCommon (Ecosystem)
 
-**Назначение:** теоретическая основа экосистемы CommonHealth. Формальные определения для интеграции подпроектов.
+**Назначение:** теоретическая основа экосистемы LongevityCommon. Формальные определения для интеграции подпроектов.
 
-**CommonHealth** — это thin social layer + ML-инфраструктура поверх научных подпроектов. Сама по себе CommonHealth не имеет формальной теории — она использует теории подпроектов:
+**LongevityCommon** — это thin social layer + ML-инфраструктура поверх научных подпроектов. Сама по себе LongevityCommon не имеет формальной теории — она использует теории подпроектов:
 
 | Подпроект | THEORY.md | Что формализовано |
 |---|---|---|
@@ -24,7 +24,7 @@ Sensors (BioSense)  →  Counter inputs (HRV → input_A; etc.)
                               ↓
                     L_tissue per organ
                               ↓
-              Personal aging dashboard (CommonHealth UX)
+              Personal aging dashboard (LongevityCommon UX)
 ```
 
 ### 2. FCLC role

@@ -54,7 +54,7 @@ realtime/                  ← существует, базовый Phoenix Chan
 
 1. **Меньше кода** — LiveView устраняет JS state management
 2. **Realtime out of box** — Phoenix Channels уже работают
-3. **Стек унифицирован** — экосистема CommonHealth уже использует Elixir для realtime/
+3. **Стек унифицирован** — экосистема LongevityCommon уже использует Elixir для realtime/
 4. **Server-side rendering** — лучше SEO + быстрее первая загрузка
 5. **Меньше CVE-surface** — нет npm dependency hell
 

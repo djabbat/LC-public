@@ -150,4 +150,4 @@ sqlx migrate revert
 
 ## License
 
-Proprietary - CommonHealth Project
+Proprietary - LongevityCommon Project

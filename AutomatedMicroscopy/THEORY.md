@@ -71,7 +71,7 @@ P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action 
 - Cross-lab federated coordination (that's FCLC scope)
 - Therapeutic intervention decisions (outside AI policy)
 
-### 6. Interfaces с другими подпроектами CommonHealth
+### 6. Interfaces с другими подпроектами LongevityCommon
 
 | Subproject | Interface |
 |------------|-----------|

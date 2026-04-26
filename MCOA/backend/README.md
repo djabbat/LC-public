@@ -4,7 +4,7 @@ Multi-Counter Architecture of Organismal Aging backend service.
 
 ## Overview
 
-This is the backend service for the MCOA (Multi-Counter Architecture of Organismal Aging) subproject of CommonHealth. It provides a REST API for managing the five canonical aging counters, tissues, subjects, damage measurements, and computing tissue loads according to the MCOA framework.
+This is the backend service for the MCOA (Multi-Counter Architecture of Organismal Aging) subproject of LongevityCommon. It provides a REST API for managing the five canonical aging counters, tissues, subjects, damage measurements, and computing tissue loads according to the MCOA framework.
 
 ## Features
 

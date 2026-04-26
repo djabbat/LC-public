@@ -1,4 +1,4 @@
-# CommonHealth — Ecosystem Hub wrapping the MCOA theory
+# LongevityCommon — Ecosystem Hub wrapping the MCOA theory
 
 > ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
 
@@ -12,9 +12,9 @@
 
 ---
 
-## What is CommonHealth?
+## What is LongevityCommon?
 
-CommonHealth is the social and infrastructure layer that wraps the **MCOA (Multi-Counter Architecture of Organismal Aging)** theoretical framework. Aging is formalised as a weighted sum of parallel damage-accumulation counters *D_i(n, t)*; each scientific subproject is a specialised counter or measurement layer:
+LongevityCommon is the social and infrastructure layer that wraps the **MCOA (Multi-Counter Architecture of Organismal Aging)** theoretical framework. Aging is formalised as a weighted sum of parallel damage-accumulation counters *D_i(n, t)*; each scientific subproject is a specialised counter or measurement layer:
 
 | MCOA role | Subproject | Focus |
 |-----------|------------|-------|
@@ -23,7 +23,7 @@ CommonHealth is the social and infrastructure layer that wraps the **MCOA (Multi
 | Measurement layer | BioSense | EEG + HRV + olfaction → counter inputs |
 | Federated infrastructure | FCLC | Privacy-preserving calibration |
 | Developmental prequel | Ontogenesis | Counter-sums for ages 0–25 |
-| Social layer | CommonHealth hub | Patient-centric aging dashboard |
+| Social layer | LongevityCommon hub | Patient-centric aging dashboard |
 
 Full theory: `MCOA/CONCEPT.md` · Nature Aging manuscript: `~/Documents/MCOA_NatureAging_submission/`
 
@@ -194,4 +194,4 @@ All user data can be exported or deleted at any time (GDPR Art. 17).
 
 MIT — see `LICENSE`
 
-*CommonHealth v1.0-dev — 2026-04-08*
+*LongevityCommon v1.0-dev — 2026-04-08*

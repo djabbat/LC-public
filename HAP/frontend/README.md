@@ -1,6 +1,6 @@
 # HAP Frontend
 
-Phoenix 1.7 LiveView frontend for the CommonHealth subproject "HAP" (HepatoEmotions Project).
+Phoenix 1.7 LiveView frontend for the LongevityCommon subproject "HAP" (HepatoEmotions Project).
 
 ## Overview
 
@@ -65,4 +65,4 @@ Custom telemetry events:
 
 ## License
 
-Part of the CommonHealth project. See project root for licensing information.
+Part of the LongevityCommon project. See project root for licensing information.

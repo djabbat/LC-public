@@ -42,7 +42,7 @@
 
 | Проект | Связь |
 |---|---|
-| CommonHealth | umbrella |
+| LongevityCommon | umbrella |
 | MCOA | потенциальный Counter #6 (печёночно-аффективный) |
 | BioSense | EEG/HRV корреляты HAP |
 | FCLC | клиническая валидация HAP |

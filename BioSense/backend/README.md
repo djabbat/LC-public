@@ -1,6 +1,6 @@
 # BioSense Backend
 
-Measurement layer backend for the CommonHealth MCOA framework. Handles raw biosignal data storage from wearable devices (EEG, HRV, Olfaction sensors).
+Measurement layer backend for the LongevityCommon MCOA framework. Handles raw biosignal data storage from wearable devices (EEG, HRV, Olfaction sensors).
 
 ## Architecture
 

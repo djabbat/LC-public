@@ -1,6 +1,6 @@
 **HOST INSTITUTION AGREEMENT (HIA)**
 
-**for the EIC Pathfinder Open 2026 Project “CommonHealth”**
+**for the EIC Pathfinder Open 2026 Project “LongevityCommon”**
 
 **Agreement Number:** [GHF-HIA-2026-001]
 
@@ -31,7 +31,7 @@ Hereinafter individually referred to as a “Party” and collectively as the �
 
 **2. PROJECT DESCRIPTION**
 
-**2.1** This Agreement governs the relationship between the Parties concerning the Project **“CommonHealth — Integrated Longevity Research Platform”** (the “Project”).
+**2.1** This Agreement governs the relationship between the Parties concerning the Project **“LongevityCommon — Integrated Longevity Research Platform”** (the “Project”).
 
 **2.2** The Project has been submitted for funding under the **EIC Pathfinder Open 2026** call (submission deadline 12 May 2026). The proposed duration is 36 months with a total requested grant of approximately €3,000,000 (three million Euros).
 

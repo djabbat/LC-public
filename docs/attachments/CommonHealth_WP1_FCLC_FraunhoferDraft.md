@@ -1,7 +1,7 @@
 # WP1 — FCLC Federated Clinical Learning Cooperative
 ## Scope for Fraunhofer IESE Technical Partnership
 
-**EIC Pathfinder Open 2026** · CommonHealth · €0.6M · 12 months · TRL 3→5
+**EIC Pathfinder Open 2026** · LongevityCommon · €0.6M · 12 months · TRL 3→5
 
 ---
 
