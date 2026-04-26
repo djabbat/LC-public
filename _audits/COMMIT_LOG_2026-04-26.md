@@ -2,7 +2,7 @@
 
 **Дата:** 2026-04-26
 **Trigger:** Wave 1 peer review v2 (CommonHealth Empirical, agent ab87c710)
-**Source:** `/home/oem/Desktop/CommonHealth/_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
+**Source:** `/home/oem/Desktop/LongevityCommon/_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
 **Mode:** Overnight autonomous corrections (between Wave 1 and Wave 2)
 
 ---
@@ -41,7 +41,7 @@ S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигене�
 - Reformulation core CDATA hypothesis
 - Возможно reset gипотезы
 
-Уже adressed в `~/Desktop/CommonHealth/CDATA/docs/CDATA_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
+Уже adressed в `~/Desktop/LongevityCommon/CDATA/docs/CDATA_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
 
 ### HAP — stub state, требует rebuild
 

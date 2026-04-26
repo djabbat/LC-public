@@ -1,6 +1,6 @@
 //! mcoa-sim — run an MCOA simulation and write per-step records to CSV.
 //!
-//! Per the mandatory comparison rule (see ~/Desktop/CommonHealth/MCOA/CLAUDE.md), every simulation
+//! Per the mandatory comparison rule (see ~/Desktop/LongevityCommon/MCOA/CLAUDE.md), every simulation
 //! output MUST be paired with an analogous CDATA run via `scripts/compare_mcoa_cdata.py`.
 
 use clap::Parser;

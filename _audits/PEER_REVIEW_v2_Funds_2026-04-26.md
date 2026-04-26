@@ -10,7 +10,7 @@ Schmidt Sciences, NIH R01, Impetus Longevity)
 **Принципалы:** PI Jaba Tkemaladze (independent researcher, Грузия);
 host org — Georgia Longevity Alliance NGO, рег. №404506520
 **Источники:**
-- `/home/oem/Desktop/CommonHealth/CONCEPT.md` (v5.1)
+- `/home/oem/Desktop/LongevityCommon/CONCEPT.md` (v5.1)
 - CONCEPT/EVIDENCE/THEORY/PARAMETERS/STATE.md всех 7 подпроектов
 - Wave 1 reviews: `_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`,
   `_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`

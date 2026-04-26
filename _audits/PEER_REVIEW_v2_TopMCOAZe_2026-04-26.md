@@ -3,9 +3,9 @@
 **Дата:** 2026-04-26
 **Целевые журналы:** *Nature*, *Cell*, *Science*, *eLife*, *Lancet*, *PNAS*, *Nature Aging*, *Nature Medicine*, *Phys. Rev. X*, *JHEP* (IF 18+)
 **Рецензируемые файлы:**
-- `/home/oem/Desktop/CommonHealth/CONCEPT.md` (v5.1, 2026-04-23)
-- `/home/oem/Desktop/CommonHealth/MCOA/{CONCEPT,EVIDENCE,THEORY,PARAMETERS,OPEN_PROBLEMS}.md` (v1.0, 2026-04-21/22)
-- `/home/oem/Desktop/CommonHealth/Ze/{CONCEPT,EVIDENCE,THEORY,STATE}.md` (v2.2, 2026-04-23/25)
+- `/home/oem/Desktop/LongevityCommon/CONCEPT.md` (v5.1, 2026-04-23)
+- `/home/oem/Desktop/LongevityCommon/MCOA/{CONCEPT,EVIDENCE,THEORY,PARAMETERS,OPEN_PROBLEMS}.md` (v1.0, 2026-04-21/22)
+- `/home/oem/Desktop/LongevityCommon/Ze/{CONCEPT,EVIDENCE,THEORY,STATE}.md` (v2.2, 2026-04-23/25)
 
 **Метод:** инвентаризация всех PMID/DOI/arXiv → верификация через PubMed/Crossref/arXiv → мета-анализ 3+3+3 ключевых утверждений (DeepSeek-reasoner) → итоговый вердикт.
 
@@ -172,4 +172,4 @@
 **Рецензент:** ультра-строгий audit-агент, 2026-04-26
 **Метод верификации:** прямые запросы к PubMed (pubmed.ncbi.nlm.nih.gov), Crossref (api.crossref.org), arXiv. Мета-анализ — DeepSeek-reasoner (per CLAUDE.md «всё через DeepSeek»).
 **Время аудита:** ~2 часа machine-time, 24 цитирования верифицированы 1-к-1.
-**Файл сохранён:** `/home/oem/Desktop/CommonHealth/_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`
+**Файл сохранён:** `/home/oem/Desktop/LongevityCommon/_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`

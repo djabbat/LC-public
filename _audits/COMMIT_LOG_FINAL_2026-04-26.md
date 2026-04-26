@@ -115,8 +115,8 @@ Reviewers see **already-corrected** documents (Wave 1 fixes applied), so Wave 2 
 
 ### LICENSE files created (EIC mandate compliance)
 10 MIT LICENSE files created в:
-- /home/oem/Desktop/CommonHealth/LICENSE
-- /home/oem/Desktop/CommonHealth/{MCOA,FCLC,Ze,CDATA,BioSense,Ontogenesis,HAP}/LICENSE
+- /home/oem/Desktop/LongevityCommon/LICENSE
+- /home/oem/Desktop/LongevityCommon/{MCOA,FCLC,Ze,CDATA,BioSense,Ontogenesis,HAP}/LICENSE
 - /home/oem/Desktop/E0/LICENSE
 - /home/oem/Desktop/PhD/LICENSE
 
@@ -142,7 +142,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 ### Decision #1 — Trademark Conflict ✅ RESOLVED
 **Choice:** Option C — **LongevityCommon** (focus on longevity domain)
 **Applied:** 161 brand replacements in 79 .md files (context-aware, paths preserved)
-**Pending:** Directory `/home/oem/Desktop/CommonHealth/` оставлена для backwards compat; full directory rename — отдельная structural decision (low priority, файловые ссылки в этой сессии не сломаны)
+**Pending:** Directory `/home/oem/Desktop/LongevityCommon/` оставлена для backwards compat; full directory rename — отдельная structural decision (low priority, файловые ссылки в этой сессии не сломаны)
 
 ### Decision #2 — Co-PI Letter ✅ RESOLVED (wait)
 **Choice:** Option A — wait для встречи 2026-05-02 в 15:00 Tbilisi с Илья

@@ -8,7 +8,7 @@ Code Availability Statement (Nature Methods requirement):
     This script provides the complete, reproducible analysis pipeline
     for χ_Ze computation from EEG data as described in:
     Tkemaladze J. (2026). BioSense: Ze-based EEG aging biomarker. [target journal]
-    GitHub: github.com/djabbat/CommonHealth (private; available upon request)
+    GitHub: github.com/djabbat/LongevityCommon (private; available upon request)
 
 Dependencies:
     pip install mne numpy scipy pandas matplotlib

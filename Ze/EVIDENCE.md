@@ -83,12 +83,12 @@
 
 | Проект | Путь | Связь |
 |---|---|---|
-| LongevityCommon | `~/Desktop/CommonHealth/` | umbrella |
-| CDATA | `~/Desktop/CommonHealth/CDATA/` | пересечение через `C = −dI/dt` |
-| MCOA | `~/Desktop/CommonHealth/MCOA/` | универсальный фреймворк |
-| HAP | `~/Desktop/CommonHealth/HAP/` | гепато-аффективная теория |
-| BioSense | `~/Desktop/CommonHealth/BioSense/` | данные для T5-T7 |
-| FCLC | `~/Desktop/CommonHealth/FCLC/` | федеративное обучение |
+| LongevityCommon | `~/Desktop/LongevityCommon/` | umbrella |
+| CDATA | `~/Desktop/LongevityCommon/CDATA/` | пересечение через `C = −dI/dt` |
+| MCOA | `~/Desktop/LongevityCommon/MCOA/` | универсальный фреймворк |
+| HAP | `~/Desktop/LongevityCommon/HAP/` | гепато-аффективная теория |
+| BioSense | `~/Desktop/LongevityCommon/BioSense/` | данные для T5-T7 |
+| FCLC | `~/Desktop/LongevityCommon/FCLC/` | федеративное обучение |
 | AIM | `~/Desktop/AIM/` | DeepSeek для переводов |
 
 ---
