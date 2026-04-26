@@ -1,4 +1,4 @@
-# EVIDENCE — CommonHealth (Ecosystem)
+# EVIDENCE — LongevityCommon (Ecosystem)
 
 **Назначение:** umbrella reference list. Подробные ссылки в EVIDENCE.md каждого подпроекта.
 
@@ -46,7 +46,7 @@
 
 Полный список: `~/Desktop/Claude/PUBLICATIONS.md` (149+ публикаций).
 
-Ключевые в контексте CommonHealth:
+Ключевые в контексте LongevityCommon:
 - *MCOA* (Nature Aging submission 2026)
 - *CDATA Theory* (Longevity Horizon 2026)
 - *Ze Vectors Theory* (Zenodo 2026)

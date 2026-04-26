@@ -62,7 +62,7 @@ Created `crates/mcoa_compare/`:
 Добавлены CLAUDE + STATE. Существующие 7 файлов (CONCEPT/DESIGN/EVIDENCE/OPEN_PROBLEMS/PARAMETERS/README/THEORY) уже соответствуют новой схеме.
 
 ### 2026-04-19 — Nature Aging submission
-MCOA v5 поданa в Nature Aging как flagship мета-теория CommonHealth. Включает Counter #1 (CDATA), и формализует общую multi-counter архитектуру.
+MCOA v5 поданa в Nature Aging как flagship мета-теория LongevityCommon. Включает Counter #1 (CDATA), и формализует общую multi-counter архитектуру.
 
 ---
 

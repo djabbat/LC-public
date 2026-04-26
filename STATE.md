@@ -1,4 +1,4 @@
-# STATE — CommonHealth (Ecosystem)
+# STATE — LongevityCommon (Ecosystem)
 
 ---
 
@@ -95,7 +95,7 @@ TODO.md архивирован. STATE.md создан с миграцией за
 → EIC Pathfinder 2026-05-12 deferred to 2027-Q1.
 
 ### 2026-04-21 — MCOA добавлена как мета-теория
-MCOA (Multi-Counter Architecture) включена в CommonHealth как теоретический фундамент для всех counter-проектов.
+MCOA (Multi-Counter Architecture) включена в LongevityCommon как теоретический фундамент для всех counter-проектов.
 
 ---
 

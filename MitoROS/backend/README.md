@@ -4,7 +4,7 @@ Mitochondrial ROS and mtDNA Damage as Counter #3 in the Multi-Counter Architectu
 
 ## Overview
 
-This backend implements the MitoROS (Counter #3) subproject for CommonHealth. It provides REST API endpoints for managing and computing mitochondrial damage accumulation according to the MCOA framework.
+This backend implements the MitoROS (Counter #3) subproject for LongevityCommon. It provides REST API endpoints for managing and computing mitochondrial damage accumulation according to the MCOA framework.
 
 ## Features
 
@@ -42,7 +42,7 @@ This backend implements the MitoROS (Counter #3) subproject for CommonHealth. It
 
 ## Canonical Rules
 
-According to CommonHealth CORRECTIONS_2026-04-22:
+According to LongevityCommon CORRECTIONS_2026-04-22:
 
 1. **γ3 = 0 by default**: Interaction coefficients are set to 0 as the null hypothesis
 2. **No Health Score aggregation**: Removed from all scaffold counters

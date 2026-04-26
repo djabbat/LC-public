@@ -1,4 +1,4 @@
-# DESIGN — CommonHealth (Ecosystem)
+# DESIGN — LongevityCommon (Ecosystem)
 
 **Назначение:** архитектура umbrella + связь подпроектов.
 

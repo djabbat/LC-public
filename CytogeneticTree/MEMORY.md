@@ -12,7 +12,7 @@
 
 ### 2026-04-21
 
-- Subproject created (CytogeneticTree) as new CommonHealth subproject per Jaba's request.
+- Subproject created (CytogeneticTree) as new LongevityCommon subproject per Jaba's request.
 - Umbrella CONCEPT + 10 core files scaffolded (this set).
 - 12 technology sub-subprojects scaffolded via parallel agent (CONCEPT + 5-file core each).
 - Literature landscape agent (parallel) gathering KNOWLEDGE.md — PubMed + bioRxiv + arXiv + Google Scholar. **Search starts AFTER scaffolding completes** (per Jaba's explicit instruction).

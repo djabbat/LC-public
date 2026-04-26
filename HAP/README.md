@@ -1,6 +1,6 @@
 # HAP (HepatoEmotions) — Теория гепатогенного происхождения эмоций
 
-> **MCOA Integration (2026-04-21 fix):** HAP (Hepato-Affective Primacy) is conceptually a candidate MCOA damage counter. Per [MCOA framework](../MCOA/THEORY.md), HAP dynamics could be formalized as `D_HAP(n, t) = D_0 + α·(n/n*) + β·(t/τ) + γ·I(other_counters)` where n = chronic stress episodes, t = time since initial hepatic dysregulation. Per CommonHealth CORRECTIONS §1.3, `γ_HAP = 0` by default (independence from other counters) pending post-hoc statistical rejection.
+> **MCOA Integration (2026-04-21 fix):** HAP (Hepato-Affective Primacy) is conceptually a candidate MCOA damage counter. Per [MCOA framework](../MCOA/THEORY.md), HAP dynamics could be formalized as `D_HAP(n, t) = D_0 + α·(n/n*) + β·(t/τ) + γ·I(other_counters)` where n = chronic stress episodes, t = time since initial hepatic dysregulation. Per LongevityCommon CORRECTIONS §1.3, `γ_HAP = 0` by default (independence from other counters) pending post-hoc statistical rejection.
 
 
 **HAP (HepatoEmotions)** — это строгая эволюционно-онтогенетическая гипотеза, утверждающая, что для развития аффективных состояний (эмоций, чувств) у билатеральных животных необходим орган, выполняющий специфические гепатические функции. Проще говоря: **нет печени (или её функционального аналога) — нет эмоций.**
@@ -20,7 +20,7 @@
 *   **[DESIGN.md](DESIGN.md) — Архитектура и дизайн.** Описание структуры репозитория, взаимосвязей между скриптами для анализа данных, моделирования и визуализации, а также API для доступа к ключевым функциям.
 *   **[AGENTS.md](AGENTS.md) — Инструкции для ИИ-агентов.** Жёсткие правила для LLM (как Claude), работающих с материалами HAP. Запрещает спекуляции вне доказательной базы, требует указания на ограничения и соблюдения канонов CORRECTIONS_2026-04-22.
 *   **[JOURNAL.md](JOURNAL.md) — Научный журнал.** Хронологическая лента всех значимых изменений в гипотезе, дизайне экспериментов и интерпретациях данных с указанием даты, решения и его обоснования.
-*   **[ROADMAP.md](ROADMAP.md) — Дорожная карта.** План будущих работ: приоритетные эксперименты (например, условный нокаут гепатоцитов у zebrafish), цели по публикациям, зависимости от других проектов экосистемы CommonHealth.
+*   **[ROADMAP.md](ROADMAP.md) — Дорожная карта.** План будущих работ: приоритетные эксперименты (например, условный нокаут гепатоцитов у zebrafish), цели по публикациям, зависимости от других проектов экосистемы LongevityCommon.
 
 ## Краткое резюме для нового участника
 

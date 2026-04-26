@@ -1,6 +1,6 @@
 # BioSense Frontend
 
-Phoenix 1.7 LiveView frontend for the BioSense measurement layer subproject of CommonHealth.
+Phoenix 1.7 LiveView frontend for the BioSense measurement layer subproject of LongevityCommon.
 
 ## Overview
 
@@ -120,4 +120,4 @@ Use `:observer_cli` or configure your preferred telemetry consumer.
 
 ## License
 
-Part of the CommonHealth project. See main project repository for licensing information.
+Part of the LongevityCommon project. See main project repository for licensing information.

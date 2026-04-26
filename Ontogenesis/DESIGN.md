@@ -56,7 +56,7 @@ pub trait Domain {
 *   `configs/simulation_default.yaml`: Главный конфигурационный файл. Определяет размер синтетической когорты, длину симуляции, активные домены, флаги (например, `use_generic_social_model`).
 
 ### 2.6. API (`src/api/`)
-*   `internal_api.rs`: Программный интерфейс для использования симулятора из других Rust-модулей экосистемы CommonHealth (например, MCOA). Основная функция: `generate_initial_conditions(age: u8) -> HashMap<String, f64>`.
+*   `internal_api.rs`: Программный интерфейс для использования симулятора из других Rust-модулей экосистемы LongevityCommon (например, MCOA). Основная функция: `generate_initial_conditions(age: u8) -> HashMap<String, f64>`.
 *   `rest_api.rs` (планируется): Thin REST-сервер на `warp` или `axum` для удалённого запуска симуляций и запроса результатов. Пока не реализовано, приоритет низкий.
 
 ## 3. Контракты API

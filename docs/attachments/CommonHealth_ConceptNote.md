@@ -1,4 +1,4 @@
-# CommonHealth — Concept Note
+# LongevityCommon — Concept Note
 
 **Integrated Longevity Research Platform** — EIC Pathfinder Open 2026
 
@@ -20,7 +20,7 @@ To transition longevity research from fragmented, descriptive, single-mechanism 
 
 ## Breakthrough Claim
 
-CommonHealth delivers the first **theory-to-bedside pipeline** that integrates:
+LongevityCommon delivers the first **theory-to-bedside pipeline** that integrates:
 - A novel mechanistic theory (CDATA — Centriolar Damage Accumulation Theory of Aging)
 - A falsifiable physiological biomarker (χ_Ze from Ze Vectors Theory)
 - Open-source federated learning infrastructure (FCLC) meeting EU AI Act Article 22 compliance

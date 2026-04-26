@@ -5,7 +5,7 @@
 
 ## Родительская теория
 
-**CDATA является одним из треков MCOA** — Multi-Counter Architecture of Organismal Aging (Tkemaladze J., 2026, Nature Aging submission). MCOA = flagship meta-теория экосистемы CommonHealth; организменное старение формализуется как взвешенная сумма параллельных damage-accumulation counter'ов D_i, каждый с собственной division-зависимой (α_i) и time-зависимой (β_i) кинетикой.
+**CDATA является одним из треков MCOA** — Multi-Counter Architecture of Organismal Aging (Tkemaladze J., 2026, Nature Aging submission). MCOA = flagship meta-теория экосистемы LongevityCommon; организменное старение формализуется как взвешенная сумма параллельных damage-accumulation counter'ов D_i, каждый с собственной division-зависимой (α_i) и time-зависимой (β_i) кинетикой.
 
 **CDATA = MCOA Counter #1 (Centriolar):** накопление polyGlu PTM на материнской центриоли → D_centriole(n, t) = D_centriole,0 + α_2·(n/n₂\*) + β_2·(t/τ_2) + γ_2·I(others).
 

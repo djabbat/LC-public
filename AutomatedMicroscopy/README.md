@@ -1,8 +1,8 @@
-# AutomatedMicroscopy — CommonHealth subproject
+# AutomatedMicroscopy — LongevityCommon subproject
 
 **Purpose:** Low-cost ($4,500) AI-operated time-lapse microscopy platform для round-the-clock live-cell imaging, enabling single-PI labs to conduct industrial-grade imaging experiments without human shift overhead.
 
-**Parent ecosystem:** CommonHealth (longevity research ecosystem)
+**Parent ecosystem:** LongevityCommon (longevity research ecosystem)
 **Flagship role:** Experimental infrastructure for CDATA Phase A (Impetus Grant 2026-04-25) + future MCOA Counter validation experiments
 
 **Status:** Engineering design complete (2026-04-21). Bill-of-materials ready. Assembly expected Months 1-2 of Phase A Impetus grant (if funded).
@@ -22,7 +22,7 @@
 - **Changelog / decisions:** see `JOURNAL.md`
 - **Future roadmap:** see `ROADMAP.md`
 
-## Контекст в экосистеме CommonHealth
+## Контекст в экосистеме LongevityCommon
 
 AutomatedMicroscopy — **инфраструктурный слой** для experimental подпроектов (CDATA, Telomere, MitoROS, EpigeneticDrift, Proteostasis), которые требуют длительного live-cell imaging.
 

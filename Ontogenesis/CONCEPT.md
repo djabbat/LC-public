@@ -417,7 +417,7 @@ Shireby G, Morris TT, Wong A et al. (2025). *Int J Epidemiol* 54(5):dyaf141. PMI
 
 ---
 
-## §10. Связь с экосистемой AIM / CommonHealth
+## §10. Связь с экосистемой AIM / LongevityCommon
 
 1. **AIM/llm.py** — LLM-роутер получает онтогенетический контекст для клинических рекомендаций
 2. **AIM/lab_reference.py** — возрастные нормы гормонов (параметры 9–12) из Ontogenesis

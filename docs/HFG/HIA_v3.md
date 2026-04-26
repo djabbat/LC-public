@@ -1,6 +1,6 @@
 # Host Institution Agreement (HIA)
 
-**EIC Pathfinder Open 2026 — CommonHealth**
+**EIC Pathfinder Open 2026 — LongevityCommon**
 Integrated Longevity Research Platform
 Version 3.0 | 17 April 2026
 
@@ -41,7 +41,7 @@ Status: no liquidation, reorganization, insolvency, liens, or tax encumbrances r
 
 ### 1.3 The Project
 
-**Project acronym:** CommonHealth
+**Project acronym:** LongevityCommon
 **Project full title:** Integrated Longevity Research Platform
 **Funding instrument:** EIC Pathfinder Open 2026 (Call identifier: HORIZON-EIC-2026-PATHFINDEROPEN-01)
 **Budget (requested):** up to €3,000,000
@@ -160,7 +160,7 @@ Place: Tbilisi, Georgia
 
 _____________________________________
 **Dr. Jaba Tkemaladze, MD**
-Principal Investigator, CommonHealth Project
+Principal Investigator, LongevityCommon Project
 Editor-in-Chief, *Longevity Horizon*
 Date: ______________
 Place: Tbilisi, Georgia
@@ -174,7 +174,7 @@ Place: Tbilisi, Georgia
 - **Annex C.** Public Registry extract, not older than 3 months (current: B25144411 dated 16 October 2025)
 - **Annex D.** Tax identification documentation
 - **Annex E.** Audited financial statements, years 2022, 2023, 2024
-- **Annex F.** Board resolution authorizing participation in the CommonHealth Project
+- **Annex F.** Board resolution authorizing participation in the LongevityCommon Project
 - **Annex G.** Conflict of Interest Declaration v3 (separate document, executed in parallel)
 
 ---

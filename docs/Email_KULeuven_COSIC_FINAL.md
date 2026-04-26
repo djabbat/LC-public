@@ -15,7 +15,7 @@ Dear Professor Preneel,
 
 My name is Dr. Jaba Tkemaladze, a physician-scientist with over 150 peer-reviewed publications and Editor-in-Chief of *Longevity Horizon*. I am writing to you because of COSIC's world-leading reputation in cryptography, which is directly relevant to a Horizon Europe EIC Pathfinder Open 2026 project that I am coordinating and that critically depends on rigorous cryptographic foundations.
 
-The project, **"CommonHealth,"** is a €3M, 36-month Integrated Longevity Research Platform. Its integrity hinges on the cryptographic protocols within its Federated Learning core (WP1 — FCLC). Specifically, we require expert guidance on:
+The project, **"LongevityCommon,"** is a €3M, 36-month Integrated Longevity Research Platform. Its integrity hinges on the cryptographic protocols within its Federated Learning core (WP1 — FCLC). Specifically, we require expert guidance on:
 
 1. **Differential privacy** (ε ≤ 1.0 target, currently ε = 2.0 — optimization path under review)
 2. **Secure aggregation (SecAgg+)** — currently ChaCha20-Poly1305 + Shamir GF(257) dropout recovery, needs independent cryptographic audit
@@ -25,7 +25,7 @@ The role we envision for COSIC is an **advisory and audit partner** — providin
 
 Our request: a **one-page Letter of Support** from COSIC, expressing your group's interest in this advisory role at the proposal stage, to be submitted by **25 April 2026**. This is non-binding at the LoI stage. **Would you (or a colleague you designate) be available for a 20-minute Zoom call this week or early next week** to discuss technical specifics?
 
-Attached: (1) a one-page CommonHealth Concept Note, (2) the draft WP1/WP3 cryptographic scope. Your group's involvement would be foundational to the project's credibility.
+Attached: (1) a one-page LongevityCommon Concept Note, (2) the draft WP1/WP3 cryptographic scope. Your group's involvement would be foundational to the project's credibility.
 
 Respectfully,
 

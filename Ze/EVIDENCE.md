@@ -29,7 +29,7 @@
 | Ryu, Lee, Kim (2018) — *Geometric monogamy in no-signaling theories* | arXiv:1812.01494 | гл. 7.3 |
 | Braunstein & Caves (1988) — *Information-theoretic Bell inequalities* | Phys. Rev. Lett. 61(6) | гл. 7.5 |
 | Xu, Chen, Li (2017) — *Freezing of quantum correlations in dissipative environments* | Sci. Rep. 7 | гл. 8.5 |
-| Kerenidis & Cherrat (2025) — *Quantum agents for CHSH games* | arXiv:2501.12345 | гл. 16.4 |
+| ⚠️ ~~Kerenidis & Cherrat (2025) — *Quantum agents for CHSH games*~~ | ❌ FABRICATED — arXiv:2501.12345 на самом деле Malhotra & Ito *doubly librating Plutinos* (астрофизика). Удалено из доказательной базы 2026-04-26. | гл. 16.4 — replace с verified citation либо удалить параграф |
 
 ## 4. Сознание и интегрированная информация
 
@@ -79,11 +79,11 @@
 
 ---
 
-## 9. Связанные проекты экосистемы CommonHealth
+## 9. Связанные проекты экосистемы LongevityCommon
 
 | Проект | Путь | Связь |
 |---|---|---|
-| CommonHealth | `~/Desktop/CommonHealth/` | umbrella |
+| LongevityCommon | `~/Desktop/CommonHealth/` | umbrella |
 | CDATA | `~/Desktop/CommonHealth/CDATA/` | пересечение через `C = −dI/dt` |
 | MCOA | `~/Desktop/CommonHealth/MCOA/` | универсальный фреймворк |
 | HAP | `~/Desktop/CommonHealth/HAP/` | гепато-аффективная теория |

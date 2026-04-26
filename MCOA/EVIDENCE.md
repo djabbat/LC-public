@@ -7,26 +7,26 @@
 ### Поддерживает концепцию параллельных счётчиков (Аксиома M1)
 | Утверждение | PMID/DOI | Статья | Верифицировано | Сила |
 |-------------|----------|--------|----------------|------|
-| Существование нескольких независимых признаков клеточного старения (сенесценции) in vitro. | 29227991 | Hernández-Segura A. et al. Unmasking Transcriptional Heterogeneity in Senescent Cells // Curr Biol. 2017. | ✅ 2026-04-22 | Strong |
-| Разные типы клеток in vivo стареют с разной скоростью и по разным паттернам молекулярных повреждений. | 29643502 | Schaum N. et al. Ageing hallmarks exhibit organ-specific temporal signatures // Nature. 2020. | ✅ 2026-04-22 | Strong |
-| Накопление различных видов макромолекулярных повреждений (белки, липиды, ДНК) с возрастом идёт с разной кинетикой. | 16909132 | Balaban R.S. et al. Mitochondria, oxidants, and aging // Cell. 2005. | ✅ 2026-04-22 | Moderate |
+| Существование нескольких независимых признаков клеточного старения (сенесценции) in vitro. | 28844647 | Hernández-Segura A. et al. Unmasking Transcriptional Heterogeneity in Senescent Cells // Curr Biol. 2017;27(17):2652-2660. | ✅ 2026-04-26 (CORRECTED: prior PMID 29227991 was fabricated, pointed to MitoTIP paper) | Strong |
+| Разные типы клеток in vivo стареют с разной скоростью и по разным паттернам молекулярных повреждений. | 32669715 | Schaum N. et al. Ageing hallmarks exhibit organ-specific temporal signatures // Nature. 2020;583:596-602. | ✅ 2026-04-26 (CORRECTED: prior PMID 29643502 was fabricated) | Strong |
+| Накопление различных видов макромолекулярных повреждений (белки, липиды, ДНК) с возрастом идёт с разной кинетикой. | 15734681 | Balaban RS, Nemoto S, Finkel T. Mitochondria, oxidants, and aging // Cell. 2005;120(4):483-95. | ✅ 2026-04-26 (CORRECTED: prior PMID 16909132 was fabricated) | Moderate |
 
 ### Поддерживает тканеспецифичность весов (Аксиома M3)
 | Утверждение | PMID/DOI | Статья | Верифицировано | Сила |
 |-------------|----------|--------|----------------|------|
-| Скорость оборота белков широко варьирует между тканями, что может влиять на накопление повреждений протеостаза. | 30174316 | Mathieson T. et al. Systematic analysis of protein turnover in primary cells // Nature. 2018. | ✅ 2026-04-22 | Moderate |
-| Базальный уровень пролиферации клеток сильно различается между тканями, влияя на вклад репликативно-зависимых счётчиков. | 33268865 | Enge M. et al. Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns // Cell. 2017. | ✅ 2026-04-22 | Strong |
+| Скорость оборота белков широко варьирует между тканями, что может влиять на накопление повреждений протеостаза. | 29449567 | Mathieson T. et al. Systematic analysis of protein turnover in primary cells // **Nat Commun**. 2018;9:689. | ✅ 2026-04-26 (CORRECTED: prior PMID 30174316 was fabricated; journal also wrong — Nat Commun, NOT Nature) | Moderate |
+| Базальный уровень пролиферации клеток сильно различается между тканями, влияя на вклад репликативно-зависимых счётчиков. | 28965763 | Enge M. et al. Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns // Cell. 2017;171(2):321-330. | ✅ 2026-04-26 (CORRECTED: prior PMID 33268865 was fabricated) | Strong |
 
 ### Поддерживает связи между счётчиками (Матрица Γ)
 | Утверждение | PMID/DOI | Статья | Верифицировано | Сила |
 |-------------|----------|--------|----------------|------|
-| Окислительный стресс ускоряет укорочение теломер. | 12612578 | Parrinello S. et al. Oxygen sensitivity severely limits the replicative lifespan of murine fibroblasts // Nat Cell Biol. 2003. | ✅ 2026-04-22 | Strong |
-| Дисфункция митохондрий влияет на NAD+-зависимые эпигенетические модификаторы (сиртуины). | 26833090 | Sun N. et al. Measuring In Vivo Mitophagy // Mol Cell. 2016. (Обзор механизмов) | ✅ 2026-04-22 | Moderate |
-| Эпигенетические изменения могут регулировать экспрессию генов, связанных с функцией центриолей и цилии. | 31844045 | Janke C., Magiera M.M. The tubulin code and its role in controlling microtubule properties and functions // Nat Rev Mol Cell Biol. 2020. | ✅ 2026-04-22 | Weak (косвенное) |
+| Окислительный стресс ускоряет укорочение теломер. | 12855956 | Parrinello S. et al. Oxygen sensitivity severely limits the replicative lifespan of murine fibroblasts // Nat Cell Biol. 2003;5(8):741-7. | ✅ 2026-04-26 (CORRECTED: prior PMID 12612578 was fabricated, pointed to Foxp3 Treg paper) | Strong |
+| ⚠️ ~~Дисфункция митохондрий влияет на NAD+-зависимые эпигенетические модификаторы (сиртуины).~~ FLAGGED — needs replacement | ❌ DELETED | ~~Sun N. et al. Measuring In Vivo Mitophagy // Mol Cell. 2016~~ — paper does NOT exist as cited; Sun N "Measuring In Vivo Mitophagy" was published as *Nat Protoc* 2017 (PMID 28132843), not Mol Cell 2016. Citation removed pending verified replacement on NAD+/sirtuin/mito-epigenetic axis. | ❌ 2026-04-26 (DELETED — fabricated) | — |
+| Эпигенетические изменения могут регулировать экспрессию генов, связанных с функцией центриолей и цилии. | 32107477 | Janke C., Magiera MM. The tubulin code and its role in controlling microtubule properties and functions // Nat Rev Mol Cell Biol. 2020;21:307-326. | ✅ 2026-04-26 (CORRECTED: prior PMID 31844045 was fabricated) | Weak (косвенное) |
 
 ## 2. Внутренние данные и симуляции
 
-*Данные, сгенерированные в рамках проекта CommonHealth для валидации концепций MCOA.*
+*Данные, сгенерированные в рамках проекта LongevityCommon для валидации концепций MCOA.*
 
 1.  **Соболь-анализ чувствительности CDATA v5.1:**
     *   Файл: `data/mcoa/sensitivity/sobol_results_2026-04-15.csv`
@@ -35,11 +35,11 @@
     *   Ключевой результат: Первый порядок (S1) для параметра `α_cent` (деления) составляет 0.68 ± 0.05, для `β_cent` (время) — 0.22 ± 0.04 в симуляции эпителиальной ткани. Подтверждает доминирование делений, но значимый вклад времени.
     *   Статус: Проверено, воспроизводимо.
 
-2.  **Перекрёстная проверка LOO-CV для предсказания нагрузки:**
+2.  **Перекрёстная проверка LOO-CV для предсказания нагрузки:** ⚠️ **FLAGGED 2026-04-26**
     *   Файл: `data/mcoa/validation/LOO_CV_2026-04-17.json`
     *   Метод: Leave-One-Out Cross-Validation на гипотетическом наборе данных по 5 тканям и 3 временным точкам.
-    *   Результат: Среднеквадратическая ошибка (MSE) = -0.093 (отрицательное значение указывает на потенциальную проблему с калибровкой или переобучение в текущей тестовой реализации).
-    *   Статус: Требуется повторный анализ и калибровка.
+    *   Результат: ~~Среднеквадратическая ошибка (MSE) = -0.093~~. **Mathematically impossible (MSE ≥ 0 by definition).** Скорее всего это R² (negative R² = модель хуже базовой средней). Цифра удалена из submission-grade документа до коррекции метрики.
+    *   Статус: ⚠️ **REQUIRED ACTION:** переделать с правильной метрикой (R², MAE, RMSE с положительным значением); либо отметить как «model fails baseline» если R²<0.
 
 ## 3. Опровергающие свидетельства и нерешённые проблемы (честное раскрытие)
 

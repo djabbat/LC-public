@@ -18,7 +18,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | Polyglutamylation регулирует функцию центриоли и реснички | [DOI: 10.1016/j.celrep.2016.07.012](https://doi.org/10.1016/j.celrep.2016.07.012) | Whitfield et al., Cell Rep 2016 | 2026-04-20 | Сильная |
 | Дефекты полиглутамилирования нарушают сборку аксонемы реснички | [DOI: 10.1038/ncb3509](https://doi.org/10.1038/ncb3509) | Mukhopadhyay et al., Nat Cell Biol 2017 | 2026-04-20 | Сильная |
-| Первичная ресничка необходима для передачи сигналов Hedgehog | [DOI: 10.1038/nature08117](https://doi.org/10.1038/nature08117) | Goetz & Anderson, Nat Rev Genet 2010 | 2026-04-20 | Сильная (обзор) |
+| Первичная ресничка необходима для передачи сигналов Hedgehog | [DOI: 10.1038/nrg2774](https://doi.org/10.1038/nrg2774) | Goetz SC, Anderson KV. *Nat Rev Genet* 2010 May;11(5):331-44. PMID 20395968 | 2026-04-26 (DOI corrected: was 10.1038/nature08117 — that DOI is a different paper) | Сильная (обзор) |
 | Ninein опосредует асимметричное наследование материнской центриоли | [DOI: 10.7554/eLife.88840.1](https://doi.org/10.7554/eLife.88840.1) | Royall et al., eLife 2023 | 2026-04-22 | Сильная (C2 доказано) |
 | Асимметричное наследование материнской центриоли в T-клетках | [DOI: 10.1016/j.celrep.2025.114091](https://doi.org/10.1016/j.celrep.2025.114091) | Barandun & Oxenius, Cell Rep 2025 | 2026-04-22 | Сильная (C2 доказано) |
 | PTM-статус центриоли влияет на ориентацию веретена | [DOI: 10.1126/science.adg8682](https://doi.org/10.1126/science.adg8682) | Pimenta-Marques et al., Science 2023 | 2026-04-20 | Умеренная |

@@ -1,6 +1,6 @@
 # Epigenetic Drift Frontend
 
-Phoenix 1.7 LiveView frontend for CommonHealth subproject "Epigenetic Drift" (MCOA Counter #4).
+Phoenix 1.7 LiveView frontend for LongevityCommon subproject "Epigenetic Drift" (MCOA Counter #4).
 
 ## Overview
 

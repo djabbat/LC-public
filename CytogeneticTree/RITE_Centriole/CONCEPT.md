@@ -1,6 +1,6 @@
 # RITE_Centriole — Recombination-Induced Tag Exchange for Centriole Age Tracking
 
-**Parent project:** [CytogeneticTree](../CONCEPT.md) (CommonHealth umbrella)
+**Parent project:** [CytogeneticTree](../CONCEPT.md) (LongevityCommon umbrella)
 
 ## §1 Purpose
 

@@ -28,6 +28,6 @@ Open http://localhost:4000 — dashboard with tissue selector and counter trajec
 ## Why Phoenix
 
 Per user's canonical stack rule: Rust for backend, Phoenix for frontend. Consistent with
-CommonHealth's realtime stack.
+LongevityCommon's realtime stack.
 
 Long-form rule: `../CLAUDE.md` §"Language / stack".

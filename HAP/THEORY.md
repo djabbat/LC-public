@@ -1,6 +1,6 @@
 # HAP: Формальная теория гепатогенного происхождения аффекта
 
-> **MCOA Integration (2026-04-21 fix):** HAP (Hepato-Affective Primacy) is conceptually a candidate MCOA damage counter. Per [MCOA framework](../MCOA/THEORY.md), HAP dynamics could be formalized as `D_HAP(n, t) = D_0 + α·(n/n*) + β·(t/τ) + γ·I(other_counters)` where n = chronic stress episodes, t = time since initial hepatic dysregulation. Per CommonHealth CORRECTIONS §1.3, `γ_HAP = 0` by default (independence from other counters) pending post-hoc statistical rejection.
+> **MCOA Integration (2026-04-21 fix):** HAP (Hepato-Affective Primacy) is conceptually a candidate MCOA damage counter. Per [MCOA framework](../MCOA/THEORY.md), HAP dynamics could be formalized as `D_HAP(n, t) = D_0 + α·(n/n*) + β·(t/τ) + γ·I(other_counters)` where n = chronic stress episodes, t = time since initial hepatic dysregulation. Per LongevityCommon CORRECTIONS §1.3, `γ_HAP = 0` by default (independence from other counters) pending post-hoc statistical rejection.
 
 
 **Версия:** 1.0.0 (на основе CONCEPT v4.0)

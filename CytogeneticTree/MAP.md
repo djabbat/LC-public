@@ -66,7 +66,7 @@ LentiviralTools  FluorescentCameras     LaserAblation_405
  10. Output: Cytogenetic Tree visualization + dataset + manuscript
 ```
 
-## Integrations with CommonHealth ecosystem
+## Integrations with LongevityCommon ecosystem
 
 ```
   CytogeneticTree  ──┬──→  CDATA (theoretical validation data)

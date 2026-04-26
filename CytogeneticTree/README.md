@@ -1,6 +1,6 @@
 # CytogeneticTree
 
-**Cytogenetic Tree of Differentiation** — a CommonHealth subproject to reconstruct the complete genealogical tree of cellular differentiation, from zygote to terminally-differentiated cells, by tracking centriole age across every asymmetric division.
+**Cytogenetic Tree of Differentiation** — a LongevityCommon subproject to reconstruct the complete genealogical tree of cellular differentiation, from zygote to terminally-differentiated cells, by tracking centriole age across every asymmetric division.
 
 ## Why
 

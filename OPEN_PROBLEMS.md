@@ -1,4 +1,4 @@
-# OPEN_PROBLEMS — CommonHealth (Ecosystem)
+# OPEN_PROBLEMS — LongevityCommon (Ecosystem)
 
 **Назначение:** umbrella-level лимитации и блокеры. Подробности в OPEN_PROBLEMS.md каждого подпроекта.
 

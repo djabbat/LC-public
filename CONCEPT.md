@@ -1,4 +1,4 @@
-# CommonHealth — Ecosystem Hub вокруг MCOA
+# LongevityCommon — Ecosystem Hub вокруг MCOA
 
 > ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
 
@@ -12,7 +12,7 @@
 
 ## Теоретический стержень экосистемы: MCOA
 
-**MCOA — Multi-Counter Architecture of Organismal Aging** (Tkemaladze J., 2026, *Nature Aging* Perspective submission) — flagship meta-теория всего CommonHealth. Организменное старение формализуется как взвешенная сумма параллельных counter'ов:
+**MCOA — Multi-Counter Architecture of Organismal Aging** (Tkemaladze J., 2026, *Nature Aging* Perspective submission) — flagship meta-теория всего LongevityCommon. Организменное старение формализуется как взвешенная сумма параллельных counter'ов:
 
 > *L_tissue(n, t) = Σ_i w_i(tissue) · f_i( D_i(n, t) )*
 > *D_i(n, t) = D_i,0 + α_i·(n/n_i\*) + β_i·(t/τ_i) + γ_i · I(others)*
@@ -26,7 +26,7 @@
 | Measurement layer | **BioSense** | EEG + HRV + olfaction → input для counter'ов |
 | Infrastructure | **FCLC** | Federated privacy-preserving learning для калибровки |
 | Developmental prequel | **Ontogenesis** | Counter-sums от 0 до 25 лет (до начала aging) |
-| Social interface | **CommonHealth hub** | Тонкий social-layer над всеми counter'ами |
+| Social interface | **LongevityCommon hub** | Тонкий social-layer над всеми counter'ами |
 
 **Критические правила MCOA** (см. `MCOA/CONCEPT.md §Axioms`):
 - **M1:** ≥2 параллельных counter'а обязательно
@@ -40,9 +40,9 @@
 
 ## Одна фраза
 
-**CommonHealth takes boring research databases and turns them into a global movement where people track their own aging, keep control of their data, and get credit for helping science.**
+**LongevityCommon takes boring research databases and turns them into a global movement where people track their own aging, keep control of their data, and get credit for helping science.**
 
-CommonHealth — первая платформа, где сами пациенты собирают данные о своём здоровье и старении, формируя доказательную базу в интересах людей, а не корпораций.
+LongevityCommon — первая платформа, где сами пациенты собирают данные о своём здоровье и старении, формируя доказательную базу в интересах людей, а не корпораций.
 
 ---
 
@@ -50,7 +50,7 @@ CommonHealth — первая платформа, где сами пациент
 
 Сегодня данные о болезнях и выздоровлении собирают **незаинтересованные или противоположно заинтересованные стороны** — страховые компании, фармацевтические корпорации, больницы. Их коммерческий интерес часто противоречит интересу пациента быть здоровым.
 
-**CommonHealth переворачивает эту логику:**  
+**LongevityCommon переворачивает эту логику:**  
 Данные о болезнях и выздоровлении собирает **заинтересованная сторона — сами пациенты**.
 
 Это фундаментально меняет баланс сил:
@@ -81,7 +81,7 @@ CommonHealth — первая платформа, где сами пациент
 └─────────────────────────────────────────────────────────┘
 ```
 
-**Почему это важно для CommonHealth:**
+**Почему это важно для LongevityCommon:**
 - Платформа измеряет и отслеживает все 4 измерения, не только биологическое
 - Ze·Profile включает биомаркеры (организм), журнал настроения (психика), практики осознанности (сознание), Ze·Guide для социальной поддержки (социум)
 - FCLC собирает клинические данные по всем 4 доменам
@@ -93,7 +93,7 @@ CommonHealth — первая платформа, где сами пациент
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                     CommonHealth                         │
+│                     LongevityCommon                         │
 │     (социальный слой · Ze·Profile · Ze·Guide AI)         │
 │     Публичное лицо всей экосистемы                       │
 │     Пациент как субъект, собирающий данные о себе        │
@@ -112,7 +112,7 @@ CommonHealth — первая платформа, где сами пациент
 
 | Компонент | Роль в экосистеме | Папка |
 |-----------|-------------------|-------|
-| **CommonHealth** | Центр: социальная сеть, Ze·Profile, Ze·Guide, Lab | `CommonHealth/` |
+| **LongevityCommon** | Центр: социальная сеть, Ze·Profile, Ze·Guide, Lab | `CommonHealth/` |
 | **MCOA** | Мета-теоретический фундамент: Multi-Counter Architecture of Organismal Aging (объединяет CDATA + Ze + BioSense как счётчики/измерительные слои) | `CommonHealth/MCOA/` |
 | **FCLC** | Privacy-инфраструктура, федеративное обучение | `CommonHealth/FCLC/` |
 | **Ze** | Counter "S" в MCOA. ODE-модель петли плазма/SASP → индекс χ_Ze (синхронизация) и PAG (ProtAgeGap, Argentieri 2024); симулятор на Rust, UI на Phoenix LiveView. Переработан 2026-04-23. | `CommonHealth/Ze/` |
@@ -131,7 +131,7 @@ CommonHealth — первая платформа, где сами пациент
 | Фарм-компании | Спонсор | Продажа препаратов | Да | Нет |
 | Apple Health / Oura | Корпорация | Продажа устройств | Частично | Нет |
 | 23andMe | Корпорация | Продажа данных | Да | Нет |
-| **CommonHealth** | **Сам пациент** | **Быть здоровым** | **Да (MCOA framework)** | **Да** |
+| **LongevityCommon** | **Сам пациент** | **Быть здоровым** | **Да (MCOA framework)** | **Да** |
 
 **Уникальное позиционирование:**  
 > «Единственная платформа, где данные о болезнях и выздоровлении собирает тот, кому это по-настоящему важно — сам человек.»
@@ -203,7 +203,7 @@ CommonHealth — первая платформа, где сами пациент
 | 4 | Дифференциальная приватность (ε=2.0, δ=10⁻⁵, Rényi DP) |
 | 5 | Secure Aggregation — оркестратор видит только агрегат |
 
-**Связь с CommonHealth:** каждый пользователь с включённым узлом участвует в федеративном обучении. Данные χ_Ze криптографически подписываются FCLC-узлом.
+**Связь с LongevityCommon:** каждый пользователь с включённым узлом участвует в федеративном обучении. Данные χ_Ze криптографически подписываются FCLC-узлом.
 
 ---
 
@@ -235,7 +235,7 @@ Ze Vectors Theory — биологическая теория на основе 
 
 Ключевая публикация: CDATA Theory. DOI: 10.65649/cynzx718
 
-**Роль в CommonHealth:** научная основа для объяснения биологического возраста. Ze·Guide цитирует CDATA DOI. Lab использует CDATA-гипотезы.
+**Роль в LongevityCommon:** научная основа для объяснения биологического возраста. Ze·Guide цитирует CDATA DOI. Lab использует CDATA-гипотезы.
 
 ---
 
@@ -249,7 +249,7 @@ CDATA Theory (MCAI, старение)
     ↓ объясняет, ПОЧЕМУ это важно
 BioSense (EEG+HRV устройство)
     ↓ реализует физическое измерение
-CommonHealth (Ze·Profile)
+LongevityCommon (Ze·Profile)
     ↓ визуализирует для пользователя
 ```
 
@@ -280,7 +280,7 @@ DeepSeek API (`deepseek-reasoner`) + Llama 3 8B fallback.
 
 | Канал | Описание | Доход |
 |-------|----------|-------|
-| CommonHealth Pro | Расширенная панель по 4 факторам, экспорт | €5–7/мес |
+| LongevityCommon Pro | Расширенная панель по 4 факторам, экспорт | €5–7/мес |
 | BioSense | Устройство по себестоимости + наценка | Вторичный |
 | Спонсорство исследований | Фарма / добавки (прозрачно, тег "Sponsored") | Вторичный |
 | API доступ | Агрегированные Ze-данные (DP-защита) | Третичный |
@@ -381,7 +381,7 @@ Ollama     → тот же VPS, порт 11434
 ---
 
 *CONCEPT v5.0 — 2026-04-09*  
-*Ключевые изменения: пациент как субъект, 4 фактора здоровья, BioSense ↔ Ze ↔ CDATA теоретический путь, монорепозиторий CommonHealth*
+*Ключевые изменения: пациент как субъект, 4 фактора здоровья, BioSense ↔ Ze ↔ CDATA теоретический путь, монорепозиторий LongevityCommon*
 
 ---
 
@@ -391,7 +391,7 @@ Ollama     → тот же VPS, порт 11434
 **Источник:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md`
 **План:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
 
-## A.1. MCOA как объединяющая теория CommonHealth
+## A.1. MCOA как объединяющая теория LongevityCommon
 
 **Multi-Counter Architecture of Organismal Aging (MCOA)** — новый мета-фреймворк автора, формализующий старение (и, шире, любую деградацию биологической системы) как взвешенную сумму параллельных счётчиков повреждений:
 
@@ -399,7 +399,7 @@ Ollama     → тот же VPS, порт 11434
 
 с априорным ограничением на *w_i*, дименсиональной консистентностью и фальсифицируемыми предсказаниями.
 
-MCOA объединяет пять подпроектов CommonHealth под единой теоретической крышей:
+MCOA объединяет пять подпроектов LongevityCommon под единой теоретической крышей:
 
 | WP | Подпроект | MCOA-роль |
 |----|-----------|-----------|
@@ -411,7 +411,7 @@ MCOA объединяет пять подпроектов CommonHealth под е
 
 ## A.2. Health Score УДАЛЕН (решение 2026-04-22)
 
-**Решение пользователя 2026-04-22:** формула Health Score вида `0.40·organism + 0.25·psyche + 0.20·consciousness + 0.15·social` **удалена** из концепции CommonHealth.
+**Решение пользователя 2026-04-22:** формула Health Score вида `0.40·organism + 0.25·psyche + 0.20·consciousness + 0.15·social` **удалена** из концепции LongevityCommon.
 
 **Причина:** веса (0.40, 0.25, 0.20, 0.15) не имели математического вывода из MCOA L_tissue уравнения; являлись декларативными без обоснования. Несовместимо с научной заявкой EIC Pathfinder (Вариант Б).
 

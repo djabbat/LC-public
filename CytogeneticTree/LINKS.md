@@ -1,6 +1,6 @@
 # LINKS — CytogeneticTree
 
-## Internal (within CommonHealth ecosystem)
+## Internal (within LongevityCommon ecosystem)
 
 - Umbrella: `~/Desktop/CommonHealth/CONCEPT.md`
 - Parent theory (mechanism): `~/Desktop/CommonHealth/CDATA/`

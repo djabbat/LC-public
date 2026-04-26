@@ -8,7 +8,7 @@
 | Утверждение / Концепт | PMID/DOI | Цитирование | Дата верификации | Сила поддержки |
 | :--- | :--- | :--- | :--- | :--- |
 | Концепция этагенеза (Etagenesis) | 10.1159/000022092 | Frolkis V.V. "Aging and aging-related diseases" в *Interdisciplinary Topics in Gerontology*, 1999, Vol. 28, pp. 1-22. | 2026-04-22 | **Сильная** (концептуальный краеугольный камень) |
-| Пять нейробиологических фаз развития и старения | 10.1038/s41467-025-65974-8 | Smith, J. et al. "Revealing the multi-stage aging dynamics of the human brain". *Nature Communications* 16, 4501 (2025). | 2026-04-22 | **Сильная** (эмпирическое основание для временной сетки v4.2) |
+| Пять нейробиологических фаз развития и старения | ⚠️ FLAGGED — likely fabrication | ~~Smith, J. et al. "Revealing the multi-stage aging dynamics of the human brain". *Nature Communications* 16, 4501 (2025).~~ DOI 10.1038/s41467-025-65974-8 не разрешается (проверено 2026-04-26); single-letter author "J." на Nat Commun — red flag fabrication. **Удалить или заменить на verified ref.** | ⚠️ 2026-04-26 (FAILED verification) | ❌ Удалено из доказательной базы до верификации |
 | Предел Хайфлика (теоретическая основа) | 13905658 | Hayflick L., Moorhead P.S. "The serial cultivation of human diploid cell strains". *Exp Cell Res*. 1961 Dec;25:585-621. | 2026-04-22 | **Умеренная** (доказательство in vitro, экстраполяция на организм спорна) |
 | Плато смертности после 105 лет | 10.1126/science.aat3119 | Barbi E. et al. "The plateau of human mortality: Demography of longevity pioneers". *Science*. 2018 Jun 29;360(6396):1459-1461. | 2026-04-22 | **Сильная** (эмпирическое ограничение для симуляции) |
 | Динамический индикатор состояния организма (DOSI) и критическая точка | 34035236 / 10.1038/s41467-021-23014-1 | Pyrkov T.V. et al. "Longitudinal analysis of blood markers reveals progressive loss of resilience and predicts human lifespan limit". *Nat Commun*. 2021 May 25;12(1):2765. | 2026-04-22 | **Сильная** (обоснование предела в 120-150 лет и концепции резильентности) |
@@ -17,7 +17,7 @@
 | Утверждение / Концепт | PMID/DOI | Цитирование | Дата верификации | Сила поддержки |
 | :--- | :--- | :--- | :--- | :--- |
 | Обзор и применение LCS моделей | 29325701 | Kievit R.A. et al. "Developmental cognitive neuroscience using latent change score models: A tutorial and applications". *Dev Cogn Neurosci*. 2018 Oct;33:99-117. | 2026-04-22 | **Сильная** (методологический фундамент) |
-| Моделирование кумулятивного ущерба и старения с помощью LCS | 10.1016/j.dcn.2021.100971 | (Гипотетический релевантный источник для связи LCS и геронтологии). | | **Требуется** (необходимо найти прямую работу) |
+| ~~Моделирование кумулятивного ущерба и старения с помощью LCS~~ | ❌ УДАЛЕНО 2026-04-26 | ~~10.1016/j.dcn.2021.100971 (гипотетический источник, признанный авторами; недопустим в EVIDENCE.md)~~ | ❌ Удалено как hypothetical/non-verified | — |
 
 ### 1.3. Данные для параметризации
 | Утверждение / Концепт | PMID/DOI | Цитирование | Дата верификации | Сила поддержки |
