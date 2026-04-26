@@ -1,5 +1,15 @@
 # Ontogenesis v4.2 — Developmental prequel to MCOA (0–25 years)
 
+> ⚠️ **STATUS DOWNGRADED 2026-04-26 (per Decision #7 overnight strategic review):**
+> **Ontogenesis — CONCEPTUAL FRAMEWORK ONLY, без empirical backing на текущий момент.**
+> KNOWLEDGE.md имеет 6/6 fabricated PMIDs (quarantined 2026-04-21 в `KNOWLEDGE.md.QUARANTINED_2026-04-21`).
+> EVIDENCE.md содержал hypothetical DOI и likely fabrication «Smith J. 2025 Nat Commun» — оба flagged 2026-04-26.
+> Full literature rebuild **отложен до approval гранта** (Impetus / EIC). До approval:
+> - НЕ submit в peer-reviewed journals
+> - НЕ claim «эмпирическая платформа» — это conceptual framework
+> - Ontogenesis остаётся as future research direction
+> - При reference в other docs — explicitly mark as «hypothetical conceptual framework, no empirical backing»
+
 > ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 

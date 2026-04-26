@@ -49,10 +49,16 @@
     *   **Свидетельство:** На данный момент не существует общепринятой базы данных, которая бы связывала такие параметры, как скорость делений клеток in vivo, метаболический коэффициент и экспрессию специфических генов, с предсказанным вкладом в старение ткани.
     *   **Следствие:** Текущие реализации MCOA вынуждены использовать упрощённые эвристики или placeholder-значения для `w_i`. Это ослабляет проверяемость Аксиомы M3.
 
-2.  **Парадокс ABL-2 в контексте MCOA.**
-    *   **Свидетельство:** В данных CDATA ABL-2 (белок, связанный с микротрубочками) показывает необъяснимо высокую корреляцию с эпигенетическим возрастом, что может указывать, что центриолярный счётчик является не причиной, а следствием или параллельным маркером более глубоких эпигенетических изменений.
-    *   **Следствие:** Ставит под вопрос позиционирование CP как первичного/организующего счётчика (#1). Возможно, эпигенетический дрейф должен быть рассмотрен как upstream-процесс.
-    *   **Источник:** Внутренний анализ `data/cdata/abl2_epigenetic_correlation_2026-03.csv`.
+2.  **Парадокс ABL-2 — РАЗРЕШЁН 2026-04-26 через counter-factual Sobol analysis.**
+    *   **Прежнее свидетельство (NMC-2):** Individual S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224 указывал, что центриолярный счётчик может быть downstream/parallel.
+    *   **Counter-factual ablation analysis (v4.7, N=8192, executed 2026-04-26 via `scripts/cdata_ablation_sobol.py`):**
+        - Centriolar parameter group (alpha, nu, beta, tau, pi): **S1_sum = 0.471**
+        - Epigenetic parameter group (ep_rate, ep_stress_k): **S1_sum = 0.470**
+        - При epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
+        - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
+    *   **Разрешение:** Individual epigenetic_rate dominance объясняется linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). На group-level центриолярная механика **доминирует**.
+    *   **Следствие:** Counter #1 (CP) сохраняет canonical position, переформулирован как «structural age-tracker» per `CDATA/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+    *   **Источник:** `~/Desktop/LongevityCommon/CDATA/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
 
 3.  **Слабая экспериментальная база для матрицы связей Γ.**
     *   **Свидетельство:** Большинство предполагаемых связей между счётчиками (например, `Γ_{cent, epigenetic}`) основаны на косвенных корреляциях или исследованиях in vitro, а не на прямых причинно-следственных экспериментах in vivo.

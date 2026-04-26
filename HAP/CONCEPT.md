@@ -17,8 +17,17 @@
 
 # CONCEPT: HepatoEmotions — Теория гепатогенного происхождения эмоций (сильная версия, v4.0)
 
-**Версия:** CONCEPT v4.0 (STRONG) | **Статус:** Рабочая гипотеза, эмпирически подтверждённая, принята к публикации (Biological Reviews, IF ~10)
-**Дата:** 2026-04-14
+> ⚠️ **STATUS DOWNGRADED 2026-04-26 (per Decision #7 overnight strategic review):**
+> **HAP — CONCEPTUAL FRAMEWORK ONLY, без empirical backing на текущий момент.**
+> EVIDENCE.md имеет stub state после обнаружения 10/10 fabricated PMIDs (audit 2026-04-21).
+> Full literature rebuild **отложен до approval гранта** (Impetus / EIC). До approval:
+> - НЕ submit в peer-reviewed journals
+> - НЕ position как «published в Biological Reviews» (claim не verified)
+> - HAP остаётся as future research direction, не active scientific claim
+> - При reference к HAP в other docs — explicitly mark as «hypothetical conceptual framework»
+
+**Версия:** CONCEPT v4.0 (STRONG) | **Статус:** ⚠️ Conceptual hypothesis only — EVIDENCE base in rebuild queue
+**Дата:** 2026-04-14 (status disclaimer added 2026-04-26)
 **Автор:** Dr. Tkemaladze / AIM Lab
 
 ---
