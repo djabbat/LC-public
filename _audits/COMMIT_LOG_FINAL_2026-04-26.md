@@ -165,3 +165,78 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 1. Email TSU Office of Research Grants — explore MoU template
 2. Direct ask Eric Klien — possibility Lifeboat Foundation как fiscal sponsor
 3. Compare overhead/admin burden и выбрать
+
+### Decision #4 — CDATA Sobol Counter-Factual ✅ RESOLVED (F)
+**Choice:** Counter-factual analysis (script `cdata_ablation_sobol.py` уже существует) + reframe Counter #1 как "structural age-tracker" (не "dominant determinant").
+**Status:** Script paused (overnight rename + FCLC priority took precedence). SALib installed. To resume — run `python3 scripts/cdata_ablation_sobol.py` после FCLC deployment complete.
+
+### Decision #5 — MCOA Априорные w_i ✅ RESOLVED (F)
+**Choice:** Hybrid pilot — Tabula Muris/Sapiens ridge prediction для 3 best-characterized counters (CDATA centriolar, telomere, mitoROS) перед Impetus LOI; остальные 3 (epigenetic_drift, proteostasis, autophagy/mitophagy) explicitly помечены как «to-be-derived in Phase II».
+**Implementation plan:**
+1. Download Tabula Muris/Sapiens RNA-seq counts data
+2. Define gene panels per counter:
+   - Centriolar: CCP1/AGBL1, AGBL5, TTLL family, Ninein, Cep164
+   - Telomere: TERT, TERC, POT1, TRF1/2, ATM, ATR
+   - MitoROS: SOD1/2, GPX1, CAT, NDUFA-family, OXPHOS markers
+3. Ridge regression (sklearn): tissue-counter expression × predicted w_i
+4. Pre-register on OSF before fitting
+5. Output: PARAMETERS.md w_i(tissue) updated с predicted values + 95% CI
+**Time:** 2-3 weeks Python; trigger after FCLC deployment + Impetus LOI draft started
+
+### Decision #6 — FCLC PATE Implementation ✅ RESOLVED (D)
+**Choice:** RDP composition (1 неделя) + PATE classic (2-3 нед). Total ~4 недели Rust work, $0.
+**Where:** Локальная разработка на Desktop в `/home/oem/Desktop/LongevityCommon/FCLC/fclc-core/src/dp/` и `pate/`. Server только для staging/integration tests + production deployment.
+**Trigger:** после FCLC server deployment complete + Impetus LOI draft started (~2026-Q3).
+**Target metric:** ε ~1.0-2.0 после RDP + PATE classic (vs current ε=10).
+
+### Decision #7 — HAP + Ontogenesis Rebuild ✅ RESOLVED (G)
+**Choice:** Punt rebuild оба до funding approval (Impetus / EIC). До approval — Demote оба до «conceptual only» status в CONCEPT.md, explicit «no empirical backing yet» disclaimer.
+**Reasoning:** оба subprojects не приоритет; rebuild через DeepSeek-aided search (3-4 нед HAP + 4-6 нед Ontogenesis = 2 мес) waste self-time без funding leverage.
+
+### Decision #8 — 5 PhD PMID Misattributions ✅ RESOLVED (B)
+**Choice:** Spawn dedicated PhD-fix subagent (background a034007be925f2514). Agent reads Georgian chapters 02/08/09, verifies PMIDs via PubMed, applies fixes, documents в `PhD/docs/PMID_CORRECTIONS_2026-04-26.md`.
+**Status:** Agent running (~10-15 мин). Awaiting completion notification.
+
+### Decision #9 — PhD Pilot HSC Experiment ✅ RESOLVED (E)
+**Choice:** Computational pilot (B+D combined):
+1. Илья HSC-симулятор validation against published RNA-seq aged HSC data
+2. Re-analysis published datasets: Kowalczyk 2015 Cell Stem Cell (PMID 26299571) + Nestorowa 2016 Blood (PMID 27365425)
+3. Output: dissertation computational chapter с centriole-related gene expression correlations
+**Time:** 6-8 нед. **Cost:** $0 (computational).
+**Trigger:** после Илья симулятор calibration (post-2026-05-02 встреча).
+
+### Decision #10 — Phase II E0 Budget Update ✅ RESOLVED (C)
+**Choice:** Phased budget в Impetus LOI:
+- **Phase IIa (minimum-viable pilot):** $30-40K — iPSC line + Kaede-Centrin1 + reagents + small antibody panel + use existing 450 nm CW + existing fluorescence inverted optics
+- **Phase IIb (milestone-conditional upgrade):** $45-80K — pulsed UV/NIR laser + Plan-Apo 100×/1.4 + new sCMOS camera + culture chamber upgrade — released only if IIa demonstrates measurable effect
+- **Total ceiling:** $75-120K, milestone-based release (matches Impetus funding pattern)
+**Update в E0 docs:** заменить $20-35K → $30-40K (IIa) / $45-80K (IIb conditional) в `UNIVERSAL_RIG_2026-04-26.md` §8 + `E1` doc если recreated.
+
+---
+
+## Final Decision Matrix (All 10)
+
+| # | Decision | Choice | Status |
+|---|---|---|---|
+| 1 | Trademark | LongevityCommon (option C) | ✅ Applied (161 brand replacements + directory + GitHub repos + 408 path refs) |
+| 2 | Co-PI letter | Wait Saturday 2026-05-02 (option A) | ✅ No proactive action |
+| 3 | NGO grants office | Phased: self → uni/Lifeboat (option G) | ✅ Documented |
+| 4 | CDATA Sobol counter-factual | Counter-factual + structural reframe (option F) | 🟡 Script ready, pending execution |
+| 5 | MCOA априорные w_i | Hybrid pilot Tabula Muris ridge (option F) | 🟡 Pending implementation |
+| 6 | FCLC PATE | RDP + PATE classic local dev (option D) | 🟡 Pending implementation |
+| 7 | HAP + Ontogenesis | Punt + demote to conceptual (option G) | 🟡 Pending demote disclaimer |
+| 8 | 5 PhD PMID misattributions | Subagent fix (option B) | 🟡 Agent running |
+| 9 | PhD pilot HSC | Computational B+D (option E) | 🟡 Pending Илья simulator + dataset re-analysis |
+| 10 | Phase II E0 budget | Phased IIa+IIb (option C) | 🟡 Documented, pending E0 doc update |
+
+---
+
+## Pending Implementation (post-decisions)
+
+После завершения всех decisions, выполнить implementations:
+- D7 demote disclaimers в HAP/Ontogenesis CONCEPT.md
+- D10 E0 budget update в UNIVERSAL_RIG.md §8
+- D8 review subagent output + apply fixes
+- D4 run cdata_ablation_sobol.py (script ready, SALib installed)
+
+После всех implementations — push to git + resume FCLC deployment (per user's «не переноси до завершения decisions» rule).
