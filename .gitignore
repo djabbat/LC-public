@@ -17,3 +17,6 @@ Patients/
 target/
 _build/
 node_modules/
+
+# FCLC has own git remote (djabbat/FCLC)
+FCLC/
