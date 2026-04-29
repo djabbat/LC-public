@@ -26,6 +26,28 @@ export function Dashboard() {
 
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: 16 }}>
+      <div
+        style={{
+          background: '#fef3c7',
+          border: '1px solid #f59e0b',
+          color: '#92400e',
+          padding: '10px 14px',
+          borderRadius: 8,
+          marginBottom: 16,
+          fontSize: 13,
+          lineHeight: 1.5,
+        }}
+        role="alert"
+        aria-label="Research disclosure"
+      >
+        ⚠ <strong>Hypothesis-stage research platform.</strong>{' '}
+        Metrics shown (χ_Ze, biological age estimate) are{' '}
+        <em>exploratory hypothesis-generating</em>, not validated medical
+        biomarkers. Pre-registered tests of v1 χ_Ze yielded NULL results
+        (deprecated/superseded). Current v2 multimodal is post-hoc.
+        Confirmatory validation pending pre-registered N≥2000 cohort. Not
+        medical advice. See LongevityCommon CONCEPT v5.6.
+      </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
         <div>
           {profile ? (

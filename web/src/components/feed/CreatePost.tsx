@@ -129,6 +129,25 @@ export function CreatePost({ onCreated }: Props) {
           style={inputStyle}
         />
       </div>
+      {doi.includes('10.65649') && (
+        <div
+          style={{
+            marginTop: 6,
+            padding: '6px 10px',
+            background: '#fef3c7',
+            border: '1px solid #f59e0b',
+            color: '#92400e',
+            borderRadius: 6,
+            fontSize: 12,
+            lineHeight: 1.4,
+          }}
+        >
+          ⚠ This DOI prefix (10.65649) belongs to <em>Longevity Horizon</em> —
+          an internal publishing channel that is NOT indexed in PubMed,
+          MEDLINE, Scopus or Web of Science. Posts citing this DOI will be
+          ranked as non-peer-reviewed (rank_penalty applied automatically).
+        </div>
+      )}
 
       {feedback && (
         <div style={{ fontSize: 12, color: '#94a3b8', marginTop: 8 }}>{feedback}</div>

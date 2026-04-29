@@ -1,113 +1,97 @@
-# STATE — LongevityCommon (Ecosystem)
+# LongevityCommon · STATE
+
+**Last touched:** 2026-04-28
+**CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LongevityCommon.md` on 2026-04-28)
 
 ---
 
-## Current status (2026-04-25)
+## §1. Что сделано в эту итерацию (2026-04-28)
 
-- **Версия:** CONCEPT v4.0 (Ecosystem Edition), CONCEPT APPROVED
-- **EIC Pathfinder:** ⏸ DEFERRED TO 2027 (после deep audit 2026-04-21)
-- **Подпроекты:** 7 (MCOA, CDATA, HAP, Ze, BioSense, FCLC, Ontogenesis) + Aqtivirebuli (WP5 из Iqalto)
-- **Code stack:** Rust + React + Phoenix — функционирует prototype
+- ✅ Прошлый CONCEPT/THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS архивированы в `_archive/v_pre_2026-04-28/`
+- ✅ Регенерированы новые core .md из article v5.6: CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE (this), TODO, README
+- ✅ Article на Desktop как `LongevityCommon.md` (50 KB) + .docx (40 KB)
+- ✅ Three iteration outputs (v1/v2/v3 articles + peer reviews + audits) сохранены на Desktop как backup
 
----
+## §2. Subproject status snapshot
 
-## Active TODOs
+| Subproject | Status | Last updated |
+|------------|--------|--------------|
+| **MCOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
+| **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
+| **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
+| **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
+| **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
+| **Activated** | clinical pilot ready (Шашвиашвили) | (extern) |
+| HAP / Ontogenesis | TOXIC — not in v5.6 ecosystem | halted 2026-04-21 |
 
-### P0 — EIC 2027 Q1 rebuild path
+## §3. Open blockers
 
-- [ ] Acquire ≥2 signed EU-MS LoIs (DFKI, INRIA, ETH или эквивалент) — 2026-06 → 2026-08
-- [ ] PATE demo для FCLC (ε≈0.63 path) — 2026-09 → 2026-12
-- [ ] CDATA ABL-2 Sobol paradox resolution (extended global sensitivity) — 2026-10
-- [ ] HAP EVIDENCE.md полный rebuild из верифицированных PubMed — 2026-05 → 2026-09
-- [ ] Ontogenesis EVIDENCE.md аналогично — 2026-05 → 2026-09
+### Top 3 critical:
+1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester meeting сегодня 12:30 gating
+2. **N≥2000 pre-registered cohort** — все scientific claims hypothesis-stage до этого
+3. **FCLC malicious-secure (v14)** — GDPR Art. 9 blocker; Q1 2027 timeline
 
-### P1 — Code
+Полный список: `OPEN_PROBLEMS.md`.
 
-- [ ] Auth через Keycloak OIDC
-- [ ] Frontend ze_guide UX
-- [ ] Realtime dashboard
-- [ ] FCLC интеграция в server (REST endpoint stubs)
+## §4. Live services
 
-### P2 — UX / community
+| Service | Status | URL |
+|---------|--------|-----|
+| Ze backend | up :4001 | http://127.0.0.1:4001/healthz |
+| Ze Phoenix | up :4000 | http://127.0.0.1:4000 |
+| BioSense backend | up :4101 | http://127.0.0.1:4101/healthz |
+| BioSense Phoenix | up :4100 | http://127.0.0.1:4100 |
+| BioSense /datasets | up :4100/datasets | 12 datasets registry |
+| FCLC (server-resident) | up :4002 server-side | https://fclc.longevity.ge |
+| Social server (`server/`) | not started this session | — |
+| Social web (`web/`) | not started this session | — |
+| Social realtime | not started; port conflict pending fix | — |
 
-- [ ] Лента ранжирования посты + DOI верификация
-- [ ] Ze·Guide AI с RAG над THEORY.md подпроектов
-- [ ] Биологический возраст dashboard с CI
+## §5. Code that may need changes after CONCEPT v5.6 (audit list)
 
-### P3 — Documentation
+Per `DESIGN.md §5`:
 
-- [ ] STRATEGY.md (5-track grant strategy)
-- [ ] REMINDER.md (повседневные напоминания)
-- [ ] Перевод CONCEPT.md на грузинский (DeepSeek)
+### §5.1 Server (`~/Desktop/LongevityCommon/server/src/`)
+- [ ] `handlers/biosense.rs` — add header `X-LongevityCommon-Status: hypothesis-stage-exploratory`
+- [ ] `handlers/dashboard.rs` — strings "biological age" → "exploratory aging activity index (research only)"
+- [ ] `handlers/ze_guide.rs` — system prompt update: explicit "research-grade exploratory metric, not validated medical biomarker; v1 NULL retracted; v2 post-hoc; no medical advice; decline confirmatory clinical claims"
+- [ ] new endpoint `GET /api/disclosures/v5_changes` returning changelog
+- [ ] `migrations/003_health_factors.sql` — add comment "thresholds exploratory, see CONCEPT v5.6 §2"
 
----
+### §5.2 Web (`~/Desktop/LongevityCommon/web/src/`)
+- [ ] `pages/Dashboard.tsx` — add banner "⚠ Hypothesis-stage research platform. Metrics are exploratory, not clinical advice."
+- [ ] `pages/Studies.tsx` — each study card: "v1 NULL deprecated/superseded; v2 multimodal post-hoc"
+- [ ] `pages/Profile.tsx` — tooltip on χ_Ze: "exploratory metric; not validated on N≥2000 pre-registered cohort"
+- [ ] `components/feed/PostComposer.tsx` — DOI Crossref check; warn if DOI is Longevity Horizon
 
-## Milestones
+### §5.3 Realtime (`~/Desktop/LongevityCommon/realtime/`)
+- [ ] `config/dev.exs` — port 4001 → 4500 (avoid Ze conflict)
+- [ ] BioSense live stream channel — add metadata `{disclosure: "exploratory"}`
 
-### v9-file core ✅ 2026-04-25
-- [x] TODO.md → `_archive/core_pre_9file_2026-04-25/`
-- [x] THEORY, DESIGN, EVIDENCE, STATE, OPEN_PROBLEMS созданы
-- [x] CONCEPT, README, CLAUDE сохранены
+### §5.4 Deploy
+- [ ] `deploy/docker-compose-all.yml` — port + service name updates per §5.3
+- [ ] env `LONGEVITYCOMMON_VERSION=v5.6`
 
-### Code baseline ✅ 2026-04-25 (overnight #1 fixed)
-- [x] **server build SUCCESS** после `cargo sqlx prepare`
-- [x] Установлен `sqlx-cli` v0.8.6 (postgres + sqlite features)
-- [x] Установлен пароль для user `longevitycommon` в локальной Postgres (`ALTER USER longevitycommon WITH PASSWORD 'longevitycommon'`)
-- [x] `DATABASE_URL=postgres://longevitycommon:longevitycommon@localhost/longevitycommon cargo sqlx prepare` → `.sqlx/` cache сгенерирован
-- [x] `SQLX_OFFLINE=true cargo build --release` → success (1 warning unused import; sqlx-postgres 0.7.4 future-incompat)
-- [ ] TODO: `.sqlx/` директория commit в git для CI/CD без БД
-- [ ] TODO: обновить sqlx 0.7.4 → 0.8 (future-incompat warning)
-- [ ] web/, realtime/ — не проверены отдельно
+### §5.5 Subproject CONCEPTs cross-check
+- [ ] `Ze/CONCEPT.md` — pull latest cross-cutting status from umbrella
+- [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
+- [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
+- [ ] `MCOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
+- [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
-### CONCEPT v4.0 ✅ 2026-04-21
-- [x] Ecosystem Edition
-- [x] CONCEPT APPROVED status
-- [x] MCOA как мета-теоретический фундамент
+**None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
 
-### CORRECTIONS_2026-04-22 canon ✅
-- [x] Health Score формула УДАЛЕНА
-- [x] χ_Ze не валидированный biomarker
-- [x] γ_i = 0 default
+## §6. Versions
 
-### Deep audit ✅ 2026-04-21
-- [x] EIC blockers identified
-- [x] Submission deferred to 2027
+- CONCEPT: v5.6 (this regeneration; supersedes v4.0 in `_archive/v_pre_2026-04-28/CONCEPT.md`)
+- Article: v5.6 + iterations 1-3 (article on Desktop as `LongevityCommon.md`; backups: `LongevityCommon_Article_v3_2026-04-28.md`)
+- Subproject CONCEPTs: pending cross-check (see §5.5)
+- Social layer code: pending point-edits (see §5.1-§5.4)
 
----
+## §7. Pinning
 
-## Decision Log
-
-### 2026-04-25 — 9-file core scheme migration
-TODO.md архивирован. STATE.md создан с миграцией задач. THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS созданы как umbrella refs.
-
-### 2026-04-25 — Ze description fixed in CLAUDE.md
-Старая строка "Counter S MCOA: плазма/SASP/χ_Ze/PAG" → корректное физическое описание (Entropic-Geometric TOE). χ_Ze в MCOA остаётся отдельным биомаркером.
-
-### 2026-04-22 — CORRECTIONS canon
-См. `_archive/audits/CORRECTIONS_2026-04-22.md`.
-
-### 2026-04-21 — EIC Deep audit, submission deferred
-1. 0 signed EU LoIs (нужно ≥2)
-2. ε_total=10 без PATE demo (Reviewer C REJECT)
-3. CDATA ABL-2 paradox unresolved
-4. Ontogenesis 6/6 + HAP 10/10 fabricated PMIDs
-
-→ EIC Pathfinder 2026-05-12 deferred to 2027-Q1.
-
-### 2026-04-21 — MCOA добавлена как мета-теория
-MCOA (Multi-Counter Architecture) включена в LongevityCommon как теоретический фундамент для всех counter-проектов.
-
----
-
-## Что НЕ делать
-
-- Не подавать на EIC 2026 (deferred)
-- Не использовать Health Score формулу с весами (удалено)
-- Не цитировать χ_Ze как clinical biomarker
-- Не игнорировать CORRECTIONS_2026-04-22
-
-## Startup
-
-1. CONCEPT + STATE Decision Log
-2. Если работа над EIC submission → DEEP_AUDIT_2026-04-21.md (FCLC папка)
-3. Спросить пользователя
+To make CONCEPT verifiable later, record source-document md5:
+```
+md5sum ~/Desktop/LongevityCommon.md
+```
+[record on next commit]

@@ -1,53 +1,38 @@
-# BioSense — Носимая платформа биомониторинга (ЭЭГ · ВСР · Ольфакция)
+# BioSense
 
-**BioSense** — это мультисенсорный измерительный слой в рамках архитектуры **MCOA (Multi-Counter Organismal Aging)**. Его задача — предоставлять высокочастотные физиологические сигналы (электроэнцефалография, вариабельность сердечного ритма, летучие органические соединения) для вычисления входных данных (*inputs*) для счетчиков (*counters*) системы MCOA, в первую очередь Counter "S" (синхронизация/Ze) и Counter "A" (автономный/вегетативный).
+A reference simulator + wearable-platform companion for **BioSense Theory** — aging conceptualised as a Total Chronic Disease, monitored via the χ_Ze index derived from EEG, HRV, respiration, and sleep.
 
-**Ключевой сдвиг (2026-04-22):** Исходная цель — измерение теоретического биомаркера χ_Ze (Ze-индекс) по ЭЭГ и ВСР — **не была подтверждена** в серии pre-registered исследований. Текущий рабочий фокус смещен на валидированные временные параметры ВСР (SDNN, RMSSD) как промежуточный (*interim*) биомаркер организма, а также на развитие аппаратной платформы для интеграции с FCLC.
+The canonical exposition lives in [`CONCEPT.md`](./CONCEPT.md), with formal derivations in [`THEORY.md`](./THEORY.md). The source paper is `BioSense.docx` on the author's desktop (Tkemaladze 2026, *Longevity Horizon* 2(5), DOI 10.65649/23ba5z09).
 
-## Основные компоненты
+## What this project is
 
-1.  **ЭЭГ-модуль:** Обработка сигналов электроэнцефалографии. Несмотря на неудачу в подтверждении χ_Ze как возрастного биомаркера, модуль обеспечивает инфраструктуру для анализа мозговых ритмов и их синхронизации (Ze-анализ), остающейся исследовательской темой.
-2.  **ВСР-модуль:** Извлечение RR-интервалов и расчет параметров вариабельности сердечного ритма. **SDNN и RMSSD** (проверенные на базе данных Fantasia, d=0.72) являются текущим основным источником данных для Counter "A" в MCOA.
-3.  **Ольфактометрический модуль (в разработке):** Концепция диагностики по летучим органическим соединениям (ЛОС) на основе теории электронного туннелирования (Турин). Задача — обнаружение молекулярных сигнатур патологических состояний.
+A Rust workspace + a Phoenix LiveView UI that compute and visualise five quantities:
 
-## Связь с другими компонентами системы
+1. **Ze velocity** `v` from a binary symbolised physiological signal.
+2. **Predictive information** `I_pred` (closed form for symmetric Markov; numerical estimator for arbitrary signals).
+3. **χ_Ze index** — composite over EEG/HRV/respiration/sleep modalities, normalised against the theoretical fixed point `v* = 0.45631`.
+4. **CDATA bridge** — maps centriolar damage `D(t)` to disease activity `A(t)` and to χ_Ze.
+5. **Exacerbation risk** — 30-day binary risk classifier on rolling χ_Ze.
 
-BioSense является поставщиком данных для:
-*   **MCOA Framework:** Потоковые данные ЭЭГ/ВСР используются для расчета `L_tissue` в рамках модели тканевого старения. [Подробности в THEORY.md](THEORY.md).
-*   **FCLC Platform:** Аппаратная часть BioSense (носимые датчики) интегрируется в клиническую платформу FCLC как сенсорный фронтенд.
-*   **CDATA Experimental Validation:** Стандартизированные протоколы измерения BioSense необходимы для экспериментов по валидации аксиом CDATA.
+Plus a software 5-layer privacy stack (DP noise, k-anonymity, secure aggregation) wrapping every released aggregate.
 
-**Важное предупреждение:** Утверждения и формулы, отозванные в документе [CORRECTIONS_2026-04-22](../CORRECTIONS_2026-04-22.md), не используются. В частности:
-*   Формула Health Score с априорными весами удалена.
-*   χ_Ze не является валидированным клиническим биомаркером и упоминается только в теоретическом контексте.
-*   Параметр связи `γ_i` по умолчанию равен 0.
+## Run it
 
-## Содержание основных файлов
+```bash
+# Rust simulator + HTTP backend on :4101
+cargo build --release
+cargo run -p biosense-backend
 
-*   **[THEORY.md](THEORY.md):** Формальное изложение Ze Theory, ее связь с MCOA и аксиоматическая основа для анализа сигналов BioSense.
-*   **[EVIDENCE.md](EVIDENCE.md):** Подтверждающие и опровергающие эмпирические данные, включая результаты pre-registered тестов χ_Ze и валидацию параметров ВСР.
-*   **[OPEN_PROBLEMS.md](OPEN_PROBLEMS.md):** Критические нерешенные научные и технические проблемы, сформулированные как фальсифицируемые тесты.
-*   **[PARAMETERS.md](PARAMETERS.md):** Таблица всех количественных параметров платформы (частота дискретизации, пороги, константы) с указанием источника.
-*   **[DESIGN.md](DESIGN.md):** Архитектура программного обеспечения, дерево файлов и API-контракты между модулями.
-*   **[AGENTS.md](AGENTS.md):** Инструкции и жесткие правила для LLM-агентов, работающих с данными и кодом BioSense, включая ограничения безопасности.
-*   **[JOURNAL.md](JOURNAL.md):** Хронологический журнал изменений, решений и их обоснований.
-*   **[ROADMAP.md](ROADMAP.md):** План будущих разработок, приоритеты и зависимости.
+# Phoenix LiveView on :4100 (separate shell)
+cd biosense-web && mix phx.server
+```
 
-## Статус и ближайшие шаги
+Then open `http://127.0.0.1:4100`.
 
-Проект находится в активной разработке. Основное внимание уделяется:
-1.  Консолидации ВСР-пайплайна как надежного источника `input_A` для MCOA.
-2.  Разработке и тестированию прототипа носимого устройства, объединяющего ЭЭГ и ВСР-датчики.
-3.  Участию в качестве измерительного слоя в проекте EIC Pathfinder (вариант B, WP4).
+## Datasets (Phase 2)
 
----
+The `datasets/` crate (planned) exposes loaders for LEMON, Cuban, NHATS, All-of-Us Fitbit, and UK Biobank wearable subsets behind a single `Dataset` trait. See [`TODO §2`](./TODO.md).
 
-## BioSense scope vs Ze theory (added 2026-04-21)
+## License
 
-**BioSense responsibility:** Hardware/software for raw EEG + HRV + olfactory sensor data collection. No biomarker claims. No clinical interpretation on-device.
-
-**χ_Ze status:** Per [Ze/CANONICAL_DEFINITIONS.md](../Ze/CANONICAL_DEFINITIONS.md), χ_Ze remains a theoretical abstract, NOT a validated clinical biomarker. The R²=0.84 clinical claim is withdrawn (derived from synthetic data per CDATA/CLAUDE.md §2).
-
-**Data flow:** BioSense raw streams → FCLC federated server → research-lab downstream analysis (not on-device processing).
-
-**Scope separation:** Theoretical Ze development runs as **separate publications track** (see [Ze/PUBLICATIONS_TRACK.md](../Ze/PUBLICATIONS_TRACK.md)), not in clinical BioSense or grant applications.
+MIT (see `LICENSE`). Research project; correctness claims are bounded by the B1–B6 tests in `biosense-simulator/tests/`.

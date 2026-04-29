@@ -32,7 +32,7 @@ where *n_i\** and *τ_i* are counter-specific reference scales fixed *a priori* 
 
 **Axiom M3 — A-priori tissue weighting.** *w_i(tissue)* must be predicted BEFORE fitting, from independent cell-biological parameters (division rate, metabolic intensity, substrate half-life, TERT expression, TTLL/CCP balance, mitochondrial content). Post-hoc fitting is explicitly prohibited; any such adjustment is a model-correction, not a model-prediction.
 
-**Axiom M4 — Falsifiability is first-class.** Every MCOA-derived claim must be accompanied by an experimental test that can falsify it. The canonical test set is §6.1–6.5 of the Nature Aging Perspective.
+**Axiom M4 — Falsifiability is first-class (operational threshold v5.6 update 2026-04-28).** Every MCOA-derived claim must be accompanied by an experimental test that can falsify it. **Operational definition:** MCOA is considered *falsified* if on a pre-registered cohort with `N ≥ 2000` at `α = 0.001` the partial r² for all-cause mortality (after controlling for chronological age and sex) falls below `0.05` for every counter `i`. Power analysis: `N = 1875` required to detect `R² = 0.3` at 80% power; threshold set at `N ≥ 2000` per community standard. The earlier provisional threshold `R² < 0.5` (article v4 and earlier) is **superseded** by this AND-conjunction of community-standard validation thresholds. The canonical test set is §6.1–6.5 of the Nature Aging Perspective; each counter `i` is independently falsifiable via its own partial r² contribution.
 
 ---
 

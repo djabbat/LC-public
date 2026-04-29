@@ -1,91 +1,139 @@
-# OPEN_PROBLEMS — Ze Theory
+# Ze · OPEN_PROBLEMS
 
-**Назначение:** лимитации, открытые вопросы, валидационные пробелы, что НЕ доказано / НЕ реализовано / НЕ замкнуто.
-**Версия:** 2.0 / **Дата:** 2026-04-25
+**Status:** Known gaps · regenerated 2026-04-28
 
----
-
-## 1. Validation gaps — экспериментальные предсказания книги
-
-| # | Тест | Глава | Статус | Препятствие |
-|---|---|---|---|---|
-| T1 | CHSH `S(H) = 2.828·(1 − 2αH)`, α≈0.03 (BBO) | 8.4 / 19 | ❌ нет измерений | Нужна лаборатория с энтропийным модулятором + BBO-кристаллом |
-| T2 | `γ_Ze ≈ −0.031 ± 0.007` в P(k) Planck 2018 | 10.4 | ❌ MCMC не запущен | Требует cobaya/MontePython + HEALPix; ~100 CPU-часов |
-| T3 | H₀ = 69.2 ± 1.8 (снижает 5σ → 2.1σ tension) | 10.5 | ⚠️ требует совместной MCMC | Связан с T2 |
-| T4 | S₈ = 0.798 ± 0.010 (3σ → 1.4σ) | 10.5 | ⚠️ требует совместной MCMC | Связан с T2 |
-| T5 | EEG `Φ_Ze` в медитации | 21 | ❌ pre-registered нет | Связь с BioSense проектом; OSF Registries |
-| T6 | EEG критические переходы при `I → I_crit` | 21 | ❌ | То же |
-| T7 | DMN ↔ снижение I (Raichle 2001) | 21 | ❌ | То же |
-| T8 | Shift-опт CHSH `δ · 1.7478 ≈ 0.085` (42σ при 10⁹ совп., 5σ за 24ч) | 7.4 / 19 | ❌ | Связан с T1 |
-
-**Все 8 предсказаний — потенциально фальсифицируемые,** но ни одно ещё не проверено. Это главный риск Ze Theory как научной программы.
-
-## 2. Theory-level open questions
-
-### 2.1 Незамкнутые формальные элементы
-
-- **`δ(∇I)` функциональная зависимость не задана.** В MVP симулятора используется ad-hoc `δ = δ₀·(1 − 2αH)`. Книга гл. 7.2 говорит `δ ∝ ∇I`, но точная функциональная форма не выведена из первых принципов.
-- **`V(I)` потенциал** в релятивистском блоке (гл. 9). Используется как `V(I) = ½m_Ze²I² + (λ/4)I⁴` (гл. 10.2 inflaton-like), но обоснование выбора параметров ad-hoc.
-- **`m_Ze`, `Λ_Ze` масса и масштаб Ze-поля** (гл. 9-11). Феноменологические; не выведены из первых принципов.
-
-### 2.2 Внутренние противоречия / hypothetical extrapolations
-
-Книга явно помечает их как «hypothetical extrapolations without experimental confirmation»:
-
-- **Время внутри чёрной дыры ускоряется** (гл. 3.3 / 9.4). Противоречит ОТО.
-- **Bounce вместо Big Bang singularity** (гл. 10.1).
-- **Гравитоны получают малую массу** (гл. 11.4) — изменённый сигнал от нейтронных звёзд, но никто не измерял с такой точностью.
-- **«Being → dark energy» feedback** (гл. 5.8). Через quantum damping — гипотеза без формализма.
-
-### 2.3 Спекулятивные обобщения
-
-- **Quantum damping на произвольной плотности** (гл. 8.2). Доказан только для singlet; для произвольной `ρ` не выведено сохранение positivity и trace.
-- **Quantization of impedance** vs quantization of metric (гл. 11). Заявлено как решение renormalization, но детали не разобраны.
-- **`Z` содержит abstract structures (numbers, theorems)** (гл. 1.3). Близко к Algorithmic Idealism (Sienicki 2025), но границы между «physical states» и «mathematical states» в `Z` размыты.
-
-## 3. Implementation gaps — что не реализовано в коде
-
-| Глава | Что нужно | Статус |
-|---|---|---|
-| 8.2 | Quantum damping на произвольной плотности | ❌ только singlet |
-| 9 | Релятивистский блок (GR-интегратор для action) | ❌ не в MVP |
-| 10 | Космологический solver `Ï + 3HÏ + m_Ze²I = 3(ä/a)/Λ_Ze` | ❌ |
-| 11 | Квантование импеданса `[Î(x), π̂_I(y)] = iℏδ(x−y)` | ❌ требует QFT |
-| 12 | Полная вычислительная Φ_Ze для произвольной системы | ⚠️ только через intgral I |
-| 15 | EEG-корреляты | ❌ требует BioSense интеграции |
-| 17 | 2D autowaves (спиральные волны) | ❌ только 1D |
-| 19-21 | Лабораторные/нейро протоколы | ⚠️ только unit tests F1-F6 |
-
-## 4. Scope-level limitations
-
-- **TOE-уровневые амбиции:** теория покрывает QM + GR + cosmology + consciousness + AI + philosophy. Ни один тест не валидирует всё одновременно. Есть риск, что в одной области теория будет подтверждена, в другой опровергнута.
-- **Originality vs replication:** многие центральные конструкты (Ze-deformation of Bell, quantum damping operator) — original proposals книги. Не найдены в существующей литературе. Это новизна, но и риск отсутствия независимой замешанной проверки.
-- **Terminology overlap:** символ `χ_Ze` в MCOA — биомаркер старения. В Ze Theory `χ_Ze` не используется напрямую, но потенциальная путаница в экосистеме LongevityCommon.
-- **Reviewer-резистенция:** TOE-теории обычно встречают высокий скепсис. Стратегия: разбить на ~5 публикаций по главам.
-
-## 5. Repository-level
-
-- **Frontend** (Phoenix LiveView) реализован, но без визуализации Chart.js — пока только сырые JSON ответы.
-- **Параметры симулятора** не калиброваны на эксперименте — стартовые значения из книги.
-- **CI/CD не настроен** — F-tests запускаются вручную через `cargo test`.
-- **Документация для разработчика** отсутствует — только для пользователя.
-
-## 6. Strategic risks
-
-| Риск | Вероятность | Митигация |
-|---|---|---|
-| T1-T8 не подтверждаются | средняя | Формализм всё равно полезен как unifying framework; разбить на отдельные публикации |
-| Reviewer rejection как TOE | высокая | Публиковать главы 7-8 (Bell deformation) отдельно — самый узкий и тестируемый блок |
-| Конфликт с χ_Ze в MCOA | низкая | Разделено в CONCEPT.md и CLAUDE.md; в публикациях явно различать |
-| Изменения в книге → код устарел | средняя | При v3+ книги — пересинхронизация, STATE.md фиксирует версии |
-| Платная инфраструктура для T2 (MCMC ~100 CPU-h) | средняя | Через университетские кластеры; запрос времени на CCRT/Sissa/CINECA |
-| Коммерциализация vs открытость | низкая | Книги CC-BY на Zenodo; код MIT/Apache |
+This file is the project's intellectual debt log. If you are tempted to "just add" something to the simulator, check that it isn't tracked here as deferred — and if it is, decide explicitly whether you are resolving it or postponing it again.
 
 ---
 
-## Как этот файл обновляется
+## §1. Theoretical / mathematical
 
-- При появлении новой работы, которая частично закрывает T1-T8 → обновить статус
-- При реализации блока кода (P1 в STATE.md) → перевести из §3 в реализованные
-- При новом теоретическом open question → добавить в §2
-- При публикации, которая снимает risk → обновить §6
+### §1.1 Tsirelson-bound interpretation of `S_Ze > 2√2`
+
+**Problem.** The Ze prediction `S_Ze = 2√2 + δ·1.7478` exceeds the Tsirelson bound `2√2` for any `δ > 0`. The standard reading is that this would falsify quantum mechanics. The Ze reading is that the *measured* CHSH parameter under realistic experimental conditions follows the deformed correlation function, not the QM-pure one — but a rigorous re-derivation of the bound on the deformed correlation is missing.
+
+**Status.** Open. Affects how the simulator should *label* its `S_Ze` output.
+
+**What the simulator does for now.** Returns both `s_qm = 2√2` and `s_ze = 2√2 + δ·1.7478`, and includes a `"warning": "exceeds_tsirelson_bound"` flag whenever `δ > 0`.
+
+### §1.2 Choice of `α`, `β`, `Λ_Ze`
+
+**Problem.** No experiment fixes any of `α`, `β`, `Λ_Ze`. They are all `O(1)` by convention. The theory is therefore predictive only up to ratios of these constants.
+
+**Status.** Open. May be fixed by a fit to specific experimental data (e.g., Pearson 2021 nanoscale clock scaling), but no such fit is in scope of Phase 1.
+
+### §1.3 Quantum density-matrix support
+
+**Problem.** Impedance is currently implemented for classical probability distributions and for **real symmetric** density matrices. Complex Hermitian density matrices are not supported.
+
+**Status.** Phase 2. Tracked in TODO.
+
+### §1.4 Non-dissipative regimes
+
+**Problem.** The equality `I = ⟨ΔS⟩_gen` holds only for dissipative Markovian processes. The simulator currently does not detect non-dissipative regimes; it computes `I` and assumes the equality.
+
+**Status.** Open. Mitigation: simulator output includes `"regime": "dissipative_assumed"` until detection logic is added.
+
+### §1.5 Information-gradient `(∇I)`
+
+**Problem.** `δ ∝ (∇I)²/Λ_Ze²` connects the deformation to the impedance gradient, but the gradient is over the abstract state-space metric. Phase 1 treats `δ` as an independent input. We do not compute `δ` from a given `I(state)` field.
+
+**Status.** Phase 2 deferred. Requires a state-space parameterization that we do not yet have.
+
+### §1.6 Connection to MCOA / CDATA
+
+**Problem.** Top-level CLAUDE.md positions Ze as one of several "counters" in the MCOA framework (Counter for synchronization). The mathematical bridge from the canonical Ze quantities to a population-level aging counter is missing.
+
+**Status.** Cross-subproject coordination needed (MCOA + Ze). Out of scope of Ze Phase 1.
+
+---
+
+## §2. Numerical / engineering
+
+### §2.1 CHSH grid optimizer cost
+
+**Problem.** F3 verifies `1.7478` via grid search. At `n=64`, the search is over `64⁴ ≈ 1.7 × 10⁷` quadruples — feasible (~seconds in release), but `n=256` (`4 × 10⁹`) is not. We use Nelder–Mead in production and grid only for the F3 verification at small `n`.
+
+**Status.** Acceptable trade-off. Documented in PARAMETERS §2.
+
+### §2.2 `BTAU_LIMIT` boundary behavior
+
+**Problem.** When `β·I·τ → 1`, the `(1 − β·I·τ)` factor in the QFI lower bound goes to zero. The simulator returns "extrapolation_refused" beyond `BTAU_LIMIT = 1.0`. The transition is discontinuous in the API, which can confuse users sweeping through the boundary.
+
+**Status.** Acceptable for now. UI plot will show a clear "regime boundary" line.
+
+### §2.3 LiveView debounce vs `qfi_sweep` latency
+
+**Problem.** A 200-ms debounce on slider updates is fine for single-point evaluations but `qfi_sweep` at `n=50` may take longer than 200 ms on some servers, causing a visible lag and queueing of LiveView events.
+
+**Status.** Acceptable for Phase 1; revisit if profiling shows queuing.
+
+---
+
+## §3. Architectural / scope
+
+### §3.1 Reaction–diffusion demos
+
+**Problem.** Previous Ze interpretations had a 1D `(I, x, y)` RD system as a third simulator block ("autowaves"). It is retracted as a canonical primitive (`CONCEPT §6`) but may legitimately be reintroduced as a *demo* of impedance gradients in space.
+
+**Status.** Deferred indefinitely. If reintroduced, must live under a clearly labeled `ze-simulator/src/demo/rd.rs` and not be exposed via the canonical HTTP API.
+
+### §3.2 Quantum Darwinism / consciousness modeling
+
+**Problem.** Source docx §6 (Quantum Darwinism) and §7 (consciousness, active inference) are *labeling* sections. They identify `I` with KL terms in existing frameworks. The simulator could in principle implement a Friston-style active-inference loop, but this is a separate research direction.
+
+**Status.** Deferred. Not in TODO. Re-evaluate only if a concrete user need arises.
+
+### §3.3 Multi-language interop with MCOA
+
+**Problem.** MCOA subproject under LongevityCommon is in a different language stack (TBD). If MCOA wants to call `ze-simulator`, the cleanest path is the existing HTTP API. No FFI layer planned.
+
+**Status.** Deferred until MCOA explicitly needs it.
+
+### §3.4 Public deployment of `ze-backend`
+
+**Problem.** Backend is loopback-only. Public deployment would need TLS, auth, rate limiting, and a story for distribution-sized DoS protection.
+
+**Status.** Out of scope. Subproject is for local exploration.
+
+---
+
+## §4. Documentation / governance
+
+### §4.1 Source-document drift
+
+**Problem.** Master `~/Desktop/Ze Theory.docx` may be edited. The current core .md files are pinned to the version with mtime `Apr 28 00:16` and md5 (to be recorded on next commit). Without a strict regeneration ritual, drift is silent.
+
+**Status.** Mitigation: `CONCEPT §8` defines the regeneration rule. Should be enforced by a startup check (not yet implemented).
+
+### §4.2 Self-citation policy applicability
+
+**Problem.** Memory rule "self-citations ≤15% in articles" applies to publications. `EVIDENCE.md` is internal documentation, but if it is reused in a paper draft, the rule kicks in. Make sure to filter Tkemaladze's own publications out before reusing this list.
+
+**Status.** Procedural; flagged here as a reminder.
+
+---
+
+## §5. Process
+
+### §5.1 No CI
+
+**Problem.** F1–F6 tests are not run in CI; they pass on the developer machine but nothing prevents a future regression.
+
+**Status.** Phase 2. Add a GitHub Actions workflow that runs `cargo test -p ze-simulator` on push.
+
+### §5.2 No regeneration script
+
+**Problem.** Re-running the docx-to-md conversion and a consistency check (CONCEPT §3 ↔ THEORY §§2–5 ↔ PARAMETERS §1) is currently manual.
+
+**Status.** Phase 2 nice-to-have.
+
+---
+
+## §6. How to retire an entry
+
+When an open problem is closed:
+
+1. Don't delete the entry — change its **Status** line to `**Resolved 2026-MM-DD: <pointer to commit / file>**`.
+2. Move the resolved entry to a new section `## §∞. Resolved` at the bottom of this file.
+3. If the resolution changed any of the canonical quantities, also bump CONCEPT version per CONCEPT §8.

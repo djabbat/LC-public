@@ -1,13 +1,19 @@
 [workspace]
 resolver = "2"
-members = ["simulator", "backend"]
+members = ["ze-simulator", "ze-backend"]
 
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze"]
+authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
 license = "MIT"
+repository = "https://github.com/djabbat/LongevityCommon"
 
 [workspace.dependencies]
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+thiserror = "1"
+ndarray = "0.16"
+rayon = "1.10"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }

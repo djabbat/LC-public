@@ -1,0 +1,24 @@
+18:37:42 INFO step1: applying v2 review edits → v3
+18:37:42 INFO Router → DeepSeek-reasoner
+18:37:43 INFO HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+18:47:19 INFO [deepseek/deepseek-v4-pro] cache: hit=0  miss=18,183  ratio=0%  (10% billed on hits)
+18:47:19 INFO wrote /home/oem/Desktop/Ze_Theory_v3_2026-04-29.md (53673 bytes)
+18:47:19 INFO step2: citation verification
+18:47:19 INFO extracted 28 citation tokens
+18:47:20 INFO HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+18:49:38 INFO [deepseek/deepseek-v4-pro] cache: hit=0  miss=659  ratio=0%  (10% billed on hits)
+18:49:38 INFO wrote /home/oem/Desktop/LongevityCommon/Ze/docs/citation_verification_v3_2026-04-29.md (11326 bytes)
+18:49:38 INFO step3: meta-analysis of 6 empirical pillars
+18:49:39 INFO HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+18:53:45 INFO [deepseek/deepseek-v4-pro] cache: hit=0  miss=14,878  ratio=0%  (10% billed on hits)
+18:53:45 INFO wrote /home/oem/Desktop/LongevityCommon/Ze/docs/meta_analysis_pillars_2026-04-29.md (18696 bytes)
+18:53:45 INFO step4: super-strict v3 peer review for IF 18+
+18:53:46 INFO HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+18:57:02 INFO [deepseek/deepseek-v4-pro] cache: hit=0  miss=23,586  ratio=0%  (10% billed on hits)
+18:57:02 INFO wrote /home/oem/Desktop/LongevityCommon/Ze/docs/peer_review_v3_2026-04-29.md (17987 bytes)
+18:57:02 INFO pipeline done in 1159.7s
+18:57:02 INFO outputs:
+18:57:02 INFO   /home/oem/Desktop/Ze_Theory_v3_2026-04-29.md (53913 bytes)
+18:57:02 INFO   /home/oem/Desktop/LongevityCommon/Ze/docs/citation_verification_v3_2026-04-29.md (15822 bytes)
+18:57:02 INFO   /home/oem/Desktop/LongevityCommon/Ze/docs/meta_analysis_pillars_2026-04-29.md (18975 bytes)
+18:57:02 INFO   /home/oem/Desktop/LongevityCommon/Ze/docs/peer_review_v3_2026-04-29.md (30328 bytes)

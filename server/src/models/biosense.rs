@@ -154,4 +154,27 @@ pub struct ComputeChiZeResponse {
     pub calibration: String,
     /// Schema version echo
     pub schema_version: String,
+
+    /// Cross-cutting disclosure (umbrella CONCEPT v5.6, 2026-04-28).
+    /// Always set; clients SHOULD surface this to end users.
+    #[serde(default = "default_disclosure")]
+    pub disclosure: String,
+    /// LongevityCommon umbrella version this response is aligned to.
+    #[serde(default = "default_lc_version")]
+    pub longevitycommon_version: String,
+}
+
+pub fn default_disclosure() -> String {
+    "Hypothesis-stage research metric, NOT a validated medical biomarker. \
+     Pre-registered tests of v1 χ_Ze formulation yielded NULL results (deprecated/superseded). \
+     Current multimodal v2 is post-hoc; modality weights are pilot fits, not theory-fixed. \
+     All AUCs are exploratory hypothesis-generating only (Ioannidis 2005 PMID 16060722). \
+     Confirmatory validation requires pre-registered cohort N≥2000. \
+     Not medical advice. \
+     See LongevityCommon CONCEPT.md v5.6 for full status."
+        .to_string()
+}
+
+pub fn default_lc_version() -> String {
+    "v5.6".to_string()
 }

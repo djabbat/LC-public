@@ -6,29 +6,46 @@
 ## Project Identity
 
 **LongevityCommon** — центральная платформа экосистемы долголетия + **umbrella для EIC Pathfinder заявки**.
-**Подпроекты (подпапки):** MCOA · Ze · CDATA · BioSense · Ontogenesis · HAP (+ Aqtivirebuli из Iqalto как WP5). **MCOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCOA как счётчики или измерительные слои.
+**Подпроекты (подпапки):** MCOA · Ze · CDATA · BioSense · Ontogenesis · HAP (+ Activated из Iqalto как WP5). **MCOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCOA как счётчики или измерительные слои.
 **Версия:** CONCEPT v4.0 (Ecosystem Edition) | **Status: CONCEPT APPROVED**
 **Location:** `~/Desktop/LongevityCommon/`
 
-**EIC Pathfinder — ⏸ DEFERRED TO 2027 (per 2026-04-21 deep audit):**
+**EIC Pathfinder — ✅ ACTIVE TARGET: Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing"** (verified 2026-04-28 on eic.ec.europa.eu):
 
-Blocker summary (cannot be fixed in 21 days before 2026-05-12):
-1. **0 signed EU LoIs.** EIC requires ≥2 independent EU-MS partners in 2 different Member States with signed commitment letters. DFKI cold-contacted 2026-04-01; realistic LoI turnaround 4-8 weeks.
-2. **ε_total=10 without working PATE demo** — Reviewer C scored this REJECT in internal peer review v10 (1.86/5).
-3. **CDATA ABL-2 paradox** (Sobol S1 inverted vs central claim) unresolved.
-4. **Subproject audit failures:** Ontogenesis 6/6 KNOWLEDGE.md PMIDs fabricated; HAP 10/10 EVIDENCE.md PMIDs fabricated (both halted 2026-04-21).
+- **Deadline:** 28 October 2026, 17:00 Brussels time (CET/CEST). 6 months runway.
+- **Budget:** up to €4M per project (challenge budget €32M; ~8 projects funded).
+- **TRL target:** TRL3-4 (proof of principle + scientific validation).
+- **NOT** Pathfinder Open 2026 (12 May 2026) — withdrawn 2026-04-21 after internal peer review v10 (1.86/5 REJECT).
+- **NOT** Pathfinder Open 2027 — superseded by the Challenges 2026 pivot (decision 2026-04-17, Variant C).
 
-**Canonical next submission target:** Horizon Europe Pathfinder Open 2027 (Q1 call). Timeline:
-- 2026-05 → 2026-09: rebuild HAP EVIDENCE.md + Ontogenesis KNOWLEDGE.md from verified PubMed
-- 2026-06 → 2026-08: acquire ≥2 signed EU-MS LoIs (DFKI, INRIA, ETH, or equivalent)
-- 2026-09 → 2026-12: PATE demo implementation (ε≈0.63 path) with working code + benchmark
-- 2026-10: resolve CDATA ABL-2 Sobol paradox via extended global sensitivity analysis
-- 2027-Q1: EIC Pathfinder Open resubmission
+**Why Challenges 2026 instead of Open 2027:**
+The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scientific fit than the generic Open call. Higher topical alignment → higher Excellence score for the same content.
 
-*Historical (frozen):* Variant C structure (WP1 FCLC €0.6M + WP2 Ze €0.5M + WP3 CDATA €0.8M + WP4 BioSense €0.6M + WP5 Aqtivirebuli €0.5M = €3.0M / 36 mo, host NGO Georgia Longevity Alliance) preserved for 2027 resubmission scaffolding but **not the submission plan for 2026-05-12**.
+**Architecture (Variant C, decided 2026-04-17, ACTIVE):**
+- WP1 FCLC (€0.6M, 12 mo) — federated learning
+- WP2 Ze (€0.5M, 12 mo) — biomarker
+- WP3 CDATA (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
+- WP4 BioSense (€0.6M, 18 mo) — wearable hardware
+- WP5 Aqtivirebuli/Korkoti (€0.5M, 12 mo) — clinical pilot anaemia
+- **Total: €3.0M, 36 mo** (revisable up to €4M ceiling)
+- **Host:** NGO Georgia Longevity Alliance (reg. №404506520)
 
-*Deep audit file:* `~/Desktop/LongevityCommon/FCLC/DEEP_AUDIT_2026-04-21.md`
-*Canonical deferral record:* `~/Desktop/LongevityCommon/_archive/EIC_CONSORTIUM_STRUCTURE_2026-04-21.md`
+**Consortium status (2026-04-28):**
+- ✅ Geiger (Ulm DE) — Phase B Co-PI, LoS signed 2026-04-23
+- 🟡 Miguel A. Gonzalez Ballester (UPF Barcelona ES) — meeting 2026-04-28, awaiting reply ~2026-05-01-05
+- 🟡 Janke (Curie FR) — declined personally (CoI), introducing his co-PI as real partner lab
+- ⏳ Need ≥2 confirmed EU-MS signed LoIs by ~2026-09 to be safe
+
+**Outstanding blockers from 2026-04-21 audit (must resolve before submission):**
+1. PATE demo implementation (ε≈0.63 path) — target Sep 2026
+2. CDATA ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
+3. HAP/Ontogenesis fabricated PMIDs — already halted; rebuilt before any inclusion in proposal
+
+**Concept Note preprint:** Tkemaladze, J. (2026) "LongevityHealth", Zenodo v3, DOI 10.5281/zenodo.19849384 (28 April 2026; supersedes earlier "LongevityCommon" preprint 19546679).
+
+*Deep audit file (still relevant):* `~/Desktop/LongevityCommon/FCLC/DEEP_AUDIT_2026-04-21.md`
+*Variant C decision record:* `~/Desktop/LongevityCommon/_archive/EIC_CONSORTIUM_STRUCTURE_2026-04-21.md`
+*Canonical deferral record (DEFERRAL CANCELLED 2026-04-28; kept for history):* same path
 
 ---
 

@@ -96,8 +96,14 @@ export function Profile() {
       {/* Ze Profile */}
       {data.ze_profile ? (
         <div style={{ marginBottom: 20 }}>
-          <div style={{ fontSize: 13, color: '#94a3b8', marginBottom: 12, fontWeight: 600 }}>
+          <div style={{ fontSize: 13, color: '#94a3b8', marginBottom: 4, fontWeight: 600 }}>
             ZE PROFILE
+          </div>
+          <div
+            style={{ fontSize: 11, color: '#fbbf24', marginBottom: 10, lineHeight: 1.4 }}
+            title="Hypothesis-stage research metric, not validated medical biomarker. v1 pre-registered NULL results (deprecated); v2 multimodal post-hoc; pending pre-registered N≥2000 cohort. CONCEPT v5.6."
+          >
+            ⚠ exploratory metric · not validated · pre-registration pending
           </div>
           <ZeProfileCard profile={data.ze_profile} />
         </div>

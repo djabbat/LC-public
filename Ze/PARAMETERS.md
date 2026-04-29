@@ -1,110 +1,92 @@
-# PARAMETERS — Ze Simulator
+# Ze · PARAMETERS
 
-**Версия:** 2.0 / **Дата:** 2026-04-25
-**Источник истины:** соответствующие главы `Ze Theory.pdf`. Этот файл — извлечение для симулятора.
-
-> Ни одно значение **не калибровано на эксперименте**; это стартовые точки из книги и общефизических соображений.
+**Status:** Canonical numerical parameters · regenerated 2026-04-28
+**Authority:** Any change here without re-running F1–F6 (see `THEORY §7`) is invalid.
 
 ---
 
-## 1. Impedance ODE (гл. 2-3, симулятор `impedance`)
+## §1. Theoretical constants (dimensionless)
 
-```
-dI/dτ = σ(τ) − λ · I · (1 − I/I_max)
-t_phys(τ) = ∫₀^τ I(τ') dτ'
-C(τ) = −dI/dτ
-Φ_Ze(T) = ∫₀^T I(τ) dτ
-K(τ) = −I(τ)
-```
+| Symbol | Default | Range | Meaning | Source |
+|--------|--------:|-------|---------|--------|
+| `α` | `1.0` | `(0, ∞)` | Coupling between impedance and proper-time consumption rate. Sets the unit of `τ_Ze`. | Postulate (THEORY §2.2). Numerical value chosen by convention; no experiment fixes it. |
+| `β` | `1.0` | `(0, ∞)` | Coefficient in `C(τ) = C₀ exp(−β·I·τ)`. Depends on state-space geometry. | THEORY §4. |
+| `δ` | `0.0` | `[0, 0.5]` | Ze deformation parameter for CHSH. `δ = 0` = standard QM. | THEORY §3. Source §4.3, §8.2. |
+| `Λ_Ze` | `1.0` | `(0, ∞)` | Impedance scale parameter. Enters `δ ∝ (∇I)² / Λ_Ze²`. | THEORY §3.2. |
+| `C₀` | `1.0` | `(0, ∞)` | Initial correlation amplitude. | THEORY §4. |
 
-| Параметр | Значение | Диапазон | Обоснование (книга) |
-|---|---|---|---|
-| `I(0)` | 0.05 | [0, 1] | малое начальное расхождение |
-| `I_max` | 5.0 | 1-20 nats | порог pure learning (гл. 18.3) |
-| `λ` | 0.5 | 0.1-2 | скорость обучения |
-| `σ_base` | 0.1 | 0-1 | базовый сенсорный поток |
-| `h` (RK4) | 0.01 | — | шаг интегратора |
-| `T` | 50 | 10-200 | горизонт |
+Default values are chosen so that all five canonical quantities are `O(1)` for `I = 1`, `τ = 1`. This is purely a sanity-of-output convention; the *meaningful* outputs are scale-invariant ratios (e.g. `S_Ze − 2√2`).
 
-**Сценарии `σ(τ)`:**
-- routine: `σ = 0.05`
-- novelty: `σ = 0.05 + 0.6 · step(τ−5)`
-- meditation: `σ = 0.05 · exp(−τ/10)`, `λ_eff = 2λ`
-- cheating: `σ = σ_base`; в `τ=10` сброс `I → 0.2 · I` (гл. 13)
+---
 
-## 2. CHSH Ze-deformation (гл. 7-8, симулятор `chsh`)
+## §2. CHSH evaluation
 
-```
-E_Ze(a,b) = −a·b + δ · [(a·b)² − 1/3]                    # гл. 7.2
-δ(∇I, H) = δ₀ · (1 − 2α · H)                              # гл. 8.4
-```
+| Parameter | Default | Range | Meaning |
+|-----------|--------:|-------|---------|
+| `chsh.opt_method` | `"nelder_mead"` | `nelder_mead`, `lbfgs`, `grid` | Optimizer for measurement-angle search. `grid` is for F3 verification only. |
+| `chsh.grid_n` | `64` | `[16, 256]` | Resolution of polar angle grid in `grid` mode (CHSH lives on `S²`, so total grid is `n² × n²`). |
+| `chsh.tolerance` | `1e-8` | `[1e-12, 1e-4]` | Convergence tolerance for optimizer. |
+| `chsh.expected_const` | `1.7478` | (fixed) | The constant in `S_Ze = 2√2 + δ·1.7478`. F3 must reproduce this from grid optimization to within `1e-4`. |
 
-| Параметр | Значение | Диапазон | Обоснование |
-|---|---|---|---|
-| `α` | 0.03 | 0.01-0.1 | BBO-кристалл, гл. 19 |
-| `δ₀` | 0.05 | 0-0.2 | феноменологический Ze-сдвиг |
-| `H` (entropy modulator) | 0.5 | 0-1 | гл. 19.4 |
-| singlet-опт углы | 0°, 90°, 45°, 135° | — | классика CHSH |
-| shift-опт углы | 0°, 45°, 22.5°, −22.5° | — | гл. 7.4 |
+---
 
-**Предсказания (defaults):**
-- `S_QM = 2√2 ≈ 2.8284`
-- `S_Ze − S_QM = δ · 1.7478` (shift-опт) ≈ 0.085 при `δ(H=0.5) = 0.0485`
-- `S(H=0.5) = 2.8284 · (1 − 0.03) = 2.7434`
-- σ-бюджет: 42σ при 10⁹ совпадений; 5σ за 24 ч.
+## §3. Proper-time integrator
 
-## 3. Cheating autowaves (гл. 13, 17, симулятор `autowaves`)
+| Parameter | Default | Range | Meaning |
+|-----------|--------:|-------|---------|
+| `pt.method` | `"rk4"` | `rk4`, `euler` | Integration method for `dτ/dt = −α·I(t)`. RK4 is canonical. Euler is for F2 baseline. |
+| `pt.dt` | `1e-3` | `[1e-6, 1e-1]` | Time step. Smaller = more accurate, slower. |
+| `pt.t_max` | `10.0` | `[0.1, 1e3]` | Default time horizon. |
 
-```
-∂I/∂t = D·∇²I + α_aw·(1−x)·I − β_aw·x·y
-∂x/∂t = γ_aw·I·(1−x) − δ_aw·x
-∂y/∂t = ε_aw·[I > I_crit] − ζ_aw·y
-```
+---
 
-| Параметр | Значение | Диапазон | Обоснование |
-|---|---|---|---|
-| `D` | 0.2 | 0.05-1 | диффузия импеданса |
-| `α_aw` | 1.0 | 0.1-3 | рост I при низком x |
-| `β_aw` | 0.8 | 0.1-3 | гашение I через жульничество |
-| `γ_aw` | 0.5 | 0.1-2 | рост обучения под I |
-| `δ_aw` | 0.2 | 0.05-1 | декей обучения |
-| `ε_aw` | 0.6 | 0.1-2 | включение жульничества |
-| `ζ_aw` | 0.3 | 0.05-1 | декей жульничества |
-| `I_crit` | 0.5 | 0.1-1 | порог жульничества |
-| `k` (сигмоида) | 20 | 5-50 | гладкость индикатора |
-| `N` | 200 | 50-500 | размер 1D-сетки |
-| `dx` | 1.0 | — | шаг сетки |
-| `dt` | 0.01 | — | шаг по времени |
-| `T_steps` | 2000 | — | число шагов |
+## §4. Reaction–diffusion and other deferred primitives
 
-**Начальные условия:** `I(0,x) = 0.1 + 0.5·𝟙_{|x−N/2|<10}`, `x(0)=0`, `y(0)=0`.
+Not part of canonical simulator. Their previous parameters from CLAUDE.md (`σ`, `λ`, `I_max`) are **archived**. If/when reintroduced as a demo of impedance gradients in a 1D spatial setting, parameters will live in `_archive/` or in a separate sub-directory and will be explicitly labeled "demo, not canonical."
 
-## 4. Космология (гл. 10, не в MVP)
+---
 
-| Параметр | Книга | Стандарт ΛCDM |
-|---|---|---|
-| `γ_Ze` | −0.031 ± 0.007 | — |
-| `H₀` | 69.2 ± 1.8 | 67.4 ± 0.5 |
-| `S₈` | 0.798 ± 0.010 | 0.811 ± 0.006 |
-| `A_L` | 0.96 ± 0.03 | 1.00 ± 0.02 |
+## §5. Numerical safety
 
-Снижает H₀-tension с 5σ → 2.1σ; S₈-tension с 3σ → 1.4σ.
+| Constant | Value | Rationale |
+|----------|------:|-----------|
+| `LOG_EPS` | `1e-30` | Floor for `log(p)` to avoid `−inf` when `p ≈ 0`. |
+| `KL_NORMALIZE` | `true` | Re-normalize input distributions to sum to 1 (within `1e-12`) before computing KL. Reject if normalization fails. |
+| `BTAU_LIMIT` | `1.0` | Maximum value of `β·I·τ` before the QFI formula returns "extrapolation regime — refused" instead of a number. |
+| `RNG_SEED` | `20260428` | Master seed for any stochastic routine (probability-distribution sampling in tests). YYYYMMDD of regeneration. |
 
-## 5. CLI флаги симулятора
+---
 
-| Флаг | Значения | Default |
-|---|---|---|
-| `--mode` | impedance / chsh / autowaves | impedance |
-| `--scenario` | routine / novelty / meditation / cheating | routine |
-| `--horizon` | int | 50 (ODE) / 200 (autowaves) |
-| `--h` | float (entropy modulator) | 0.5 |
-| `--steps` | int | 2000 |
-| `--output` | stdout JSON | — |
+## §6. API defaults
 
-## 6. Что НЕ настроено
+| Parameter | Default | Meaning |
+|-----------|--------:|---------|
+| `backend.port` | `4001` | axum HTTP port. Locked by CLAUDE.md. |
+| `backend.host` | `127.0.0.1` | Loopback only. |
+| `backend.cors_origin` | `http://127.0.0.1:4000` (dev) | Phoenix dev origin. Production must whitelist explicitly (CLAUDE.md). |
+| `backend.timeout_ms` | `5000` | Per-request timeout. CHSH grid mode at `n=256` may exceed this; use `nelder_mead` for production. |
+| `backend.max_body_kb` | `64` | Reject larger payloads. Distributions of length > 1024 are out of scope. |
 
-- `δ(∇I)` — функциональная зависимость не замкнута; в MVP `δ = δ₀·(1 − 2αH)` ad-hoc
-- `V(I)` — потенциал в релятивистском блоке (гл. 9); не используется
-- `m_Ze`, `Λ_Ze` — масса и масштаб Ze-поля (гл. 9-11); вне MVP
-- 2D autowaves (только 1D)
-- Калибровка `γ_Ze` (CMB) — требует MCMC-обвязки
+---
+
+## §7. Phoenix LiveView defaults
+
+| Parameter | Default | Meaning |
+|-----------|--------:|---------|
+| `phoenix.port` | `4000` | Locked by CLAUDE.md. |
+| `phoenix.simulation_debounce_ms` | `200` | Debounce slider input. |
+| `phoenix.plot_resolution` | `200` | Number of points per plotted curve. |
+| `phoenix.tau_max_default` | `5.0` | Default x-axis upper bound for `C(τ)` and `F_Q(τ)` plots. |
+
+---
+
+## §8. Source-document anchors for these parameters
+
+| Parameter | docx § |
+|-----------|--------|
+| `α` | §2.2 |
+| `β` | §5.2 (introduced in derivation; numerical value not fixed by source) |
+| `δ` | §4.3, §8.2 |
+| `Λ_Ze` | §4.3 |
+| `1.7478` | §4.4 (Lemma C) and §8.2 |
+| `C₀` | §5.2, §5.3 (introduced in correlation-decay derivation) |

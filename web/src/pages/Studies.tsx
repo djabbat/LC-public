@@ -17,8 +17,29 @@ export function Studies() {
       <div style={{ fontSize: 20, fontWeight: 700, color: '#7dd3fc', marginBottom: 4, fontFamily: 'monospace' }}>
         Lab — Citizen Science
       </div>
-      <div style={{ fontSize: 13, color: '#64748b', marginBottom: 20 }}>
+      <div style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
         Join a study. Contribute your Ze data. Get listed as co-author.
+      </div>
+      <div
+        style={{
+          background: '#fef3c7',
+          border: '1px solid #f59e0b',
+          color: '#92400e',
+          padding: '8px 12px',
+          borderRadius: 8,
+          marginBottom: 16,
+          fontSize: 12,
+          lineHeight: 1.5,
+        }}
+        role="alert"
+        aria-label="Research-only disclosure"
+      >
+        ⚠ <strong>Research only.</strong> v1 of the χ_Ze biomarker had
+        pre-registered NULL results (deprecated/superseded). Current v2
+        multimodal version is a post-hoc reformulation, not yet validated
+        on a pre-registered N≥2000 cohort. All studies listed here are
+        hypothesis-generating; results are not clinical advice. See
+        LongevityCommon CONCEPT v5.6.
       </div>
 
       {isLoading ? (

@@ -1,197 +1,78 @@
-# LongevityCommon — Ecosystem Hub wrapping the MCOA theory
+# LongevityCommon
 
-> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
+**An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
 
+LongevityCommon — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
 
-> **Scientific core: MCOA — Multi-Counter Architecture of Organismal Aging (Tkemaladze 2026, Nature Aging Perspective).**
-> **Social face: a platform where patients themselves collect aging data, building an evidence base that benefits people, not corporations.**
+| Подпроект | Уровень | Что делает |
+|-----------|---------|------------|
+| **MCOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
+| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
+| **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
+| **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
+| **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
 
-**Author:** Jaba Tkemaladze
-**Status:** MCOA Perspective in submission (2026-04-25); MVP v1 in development
-**Stack:** Rust (Axum, MCOA simulator) · Phoenix LiveView (frontend) · React/TypeScript PWA · PostgreSQL
+Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
 
----
+Каноническая статья: `~/Desktop/LongevityCommon.md` (v5.6).
 
-## What is LongevityCommon?
+## Status (2026-04-28, v5.6)
 
-LongevityCommon is the social and infrastructure layer that wraps the **MCOA (Multi-Counter Architecture of Organismal Aging)** theoretical framework. Aging is formalised as a weighted sum of parallel damage-accumulation counters *D_i(n, t)*; each scientific subproject is a specialised counter or measurement layer:
+⚠ **Hypothesis-stage research platform.** Все эмпирические результаты — exploratory (hypothesis-generating), не confirmatory. Pre-registered тесты ранней univariate χ_Ze formulation на Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Текущая мультимодальная χ_Ze — post-hoc reformulation. AUC и r² values — exploratory с явным p-hacking risk (Ioannidis 2005, PMID 16060722).
 
-| MCOA role | Subproject | Focus |
-|-----------|------------|-------|
-| Counter #1 (Centriolar) | CDATA | Mother-centriole polyglutamylation |
-| Counter "S" (Synchronisation) | Ze | χ_Ze — systemic coupling via plasma/SASP loop (rewritten 2026-04-23 on Argentieri 2024 / Jeon 2022 basis; see `Ze/CONCEPT.md`) |
-| Measurement layer | BioSense | EEG + HRV + olfaction → counter inputs |
-| Federated infrastructure | FCLC | Privacy-preserving calibration |
-| Developmental prequel | Ontogenesis | Counter-sums for ages 0–25 |
-| Social layer | LongevityCommon hub | Patient-centric aging dashboard |
+Ключевые публикации (MCOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
 
-Full theory: `MCOA/CONCEPT.md` · Nature Aging manuscript: `~/Documents/MCOA_NatureAging_submission/`
+## Authority order on conflict
 
-Every user gets a **Ze·Profile**: a live biological dashboard driven by χ_Ze (systemic synchronization index over plasma/SASP coupling — research metric, see `Ze/CONCEPT.md` §4) and D_norm (bridge equation to biological age). Data flows through the FCLC 5-layer privacy pipeline. Scientists recruit real participants. Users become co-authors of longevity studies.
+1. `LongevityCommon/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
+2. `<subproject>/CONCEPT.md` (internal math)
+3. `<subproject>/THEORY.md` (formal derivations)
+4. Article (`~/Desktop/LongevityCommon.md`) — full narrative
+5. Code — следует за CONCEPT соответствующего уровня
 
----
-
-## Repository layout
+## Repository structure
 
 ```
 LongevityCommon/
-├── CONCEPT.md          — approved product concept (v2.0)
-├── ARCHITECTURE.md     — technical spec: DB schema, API, data models
-├── README.md           — this file
-├── docs/
-│   ├── API.md          — OpenAPI reference (Swagger)
-│   └── DATABASE.md     — full schema with ERD notes
-├── server/             — Rust / Axum REST API (MVP backend)
-│   ├── Cargo.toml
-│   ├── migrations/     — SQL migrations (sqlx)
-│   └── src/
-│       ├── main.rs
-│       ├── config.rs
-│       ├── db/
-│       ├── models/
-│       ├── handlers/
-│       ├── middleware/
-│       ├── services/
-│       └── routes.rs
-├── web/                — React + TypeScript PWA (Vite)
-│   ├── package.json
-│   ├── vite.config.ts
-│   └── src/
-│       ├── App.tsx
-│       ├── components/
-│       ├── pages/
-│       ├── hooks/
-│       ├── store/
-│       └── types/
-└── realtime/           — Phoenix / Elixir (WebSocket, post-MVP)
-    ├── mix.exs
-    └── lib/
+├── *.md                         # umbrella core (CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, ...)
+├── server/                      # Rust/axum REST API (social layer)
+├── web/                         # React+TS PWA (social layer UI)
+├── realtime/                    # Phoenix Channels (social layer WS)
+├── deploy/                      # docker-compose-all.yml
+├── docs/EIC_PartB_2026/         # active grant track
+├── _archive/                    # старые версии
+├── _audits/                     # audit reports
+│
+└── <subprojects>/               # MCOA, CDATA, Ze, BioSense, ...
 ```
 
----
-
-## Quick start (development)
-
-### Prerequisites
-
-- Rust 1.77+ (`rustup update stable`)
-- Node.js 20+ / pnpm 9+
-- PostgreSQL 16+
-- Elixir 1.16+ / Erlang 26+ (for realtime, optional in MVP)
-
-### 1. Database
+## Run (subproject backends)
 
 ```bash
-psql -U postgres -c "CREATE DATABASE longevitycommon;"
-cd server
-cargo install sqlx-cli --no-default-features --features postgres
-sqlx migrate run
+cd Ze && ./run.sh         # :4000 / :4001
+cd BioSense && ./run.sh   # :4100 / :4101
 ```
 
-### 2. Backend
+Social layer (server/web/realtime) — отдельный stack, см. `DESIGN.md §7`.
+
+## Tests
 
 ```bash
-cd server
-cp .env.example .env   # edit DATABASE_URL, DEEPSEEK_API_KEY, JWT_SECRET
-cargo run
-# → http://localhost:3000
+cargo test --release       # in any subproject root
+mix test                   # in any Phoenix subproject
 ```
 
-### 3. Frontend
+## Grant track (active)
 
-```bash
-cd web
-pnpm install
-pnpm dev
-# → http://localhost:5173
-```
-
-### 4. Realtime (post-MVP)
-
-```bash
-cd realtime
-mix deps.get
-mix phx.server
-# → http://localhost:4000
-```
-
----
-
-## Core concepts
-
-| Term | Meaning |
-|------|---------|
-| **χ_Ze** | Ze complexity index — research metric under validation (0–1); see `Ze/CONCEPT.md` — **NOT a clinical biomarker; 3 pre-registered tests failed, used as research signal only** |
-| **D_norm** | Normalized biological distance — bridge to chronological age |
-| **Ze·Profile** | User's live biological dashboard with 95% CI on bio age |
-| **Ze·Guide** | AI assistant (DeepSeek + Llama 3 fallback) for scientific Q&A |
-| **FCLC node** | Federated Citizen Longevity Computing node — privacy-preserving data contributor |
-| **Lab study** | Citizen science experiment — hypothesis → protocol → data → publication |
-
----
-
-## Architecture overview
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  Web PWA (React/TS)          Mobile (React Native, v2)  │
-└──────────────────┬──────────────────────────────────────┘
-                   │ REST (MVP) / WebSocket (post-MVP)
-┌──────────────────▼──────────────────────────────────────┐
-│  Rust / Axum API (server/)                               │
-│  ┌───────────┐  ┌───────────┐  ┌────────────────────┐  │
-│  │  Auth     │  │  Posts    │  │  Ze compute engine │  │
-│  │ passkeys  │  │  Feed     │  │  χ_Ze / D_norm     │  │
-│  │ email OTP │  │  Ranking  │  │  CI intervals      │  │
-│  └───────────┘  └───────────┘  └────────────────────┘  │
-│  ┌───────────┐  ┌───────────┐  ┌────────────────────┐  │
-│  │ Ze·Guide  │  │  Studies  │  │  Data import       │  │
-│  │ DeepSeek  │  │  Lab      │  │  JSON / CSV        │  │
-│  │ + Llama3  │  │  Consent  │  │  BioSense/Oura/... │  │
-│  └───────────┘  └───────────┘  └────────────────────┘  │
-└──────────────────┬──────────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────────┐
-│  PostgreSQL 16   (OMOP CDM compatible schema)            │
-└─────────────────────────────────────────────────────────┘
-                   │ post-MVP
-┌──────────────────▼──────────────────────────────────────┐
-│  Phoenix / Elixir  (realtime channels, PubSub)           │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## API (summary)
-
-Full spec: `docs/API.md`
-
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/api/auth/register` | Register with email OTP |
-| POST | `/api/auth/login` | Login, returns JWT |
-| GET | `/api/users/:id` | Public Ze·Profile |
-| GET | `/api/feed` | Ranked post feed |
-| POST | `/api/posts` | Create post (with DOI validation) |
-| GET | `/api/dashboard` | Personal χ_Ze dashboard |
-| POST | `/api/data/import` | Upload JSON data (BioSense/Oura/Garmin) |
-| GET | `/api/data/export` | Download all personal data (GDPR) |
-| GET | `/api/studies` | List open studies |
-| POST | `/api/studies/:id/join` | Join study (generates consent record) |
-| POST | `/api/ze-guide/ask` | Ask Ze·Guide (logged, with disclaimer) |
-
----
-
-## Legal
-
-χ_Ze and D_norm are **research metrics**, not medical devices.  
-Ze·Guide is **not a physician**. Every response includes a mandatory legal disclaimer.  
-All user data can be exported or deleted at any time (GDPR Art. 17).
-
----
+**EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
+LongevityCommon umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
+Подробности: `docs/EIC_PartB_2026/`.
 
 ## License
 
-MIT — see `LICENSE`
+MIT (see LICENSE).
 
-*LongevityCommon v1.0-dev — 2026-04-08*
+## Contact
+
+Jaba Tkemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
+Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)

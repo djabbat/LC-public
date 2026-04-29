@@ -1,41 +1,32 @@
-# Ze Theory
+# Ze
 
-Entropic-Geometric Theory of Everything (Tkemaladze).
+A reference simulator for **Ze Theory** — the proposal that time is a thermodynamic resource consumed by prediction error, with quantitative consequences for CHSH correlations and quantum Fisher information.
 
-**Канон:** `Ze Theory.pdf` (англ.) + `Ze Теория.pdf` (рус.) — 24 главы + 4 приложения.
-**Источник истины проекта:** `CONCEPT.md`.
+The canonical exposition lives in [`CONCEPT.md`](./CONCEPT.md), with formal derivations in [`THEORY.md`](./THEORY.md). The source paper is `Ze Theory.docx` on the author's desktop.
 
-## Структура
+## What this project is
 
-```
-Ze/
-├── Ze Theory.pdf · Ze Теория.pdf   ← канон
-├── CONCEPT.md                       ← мост книга ↔ код
-├── README · CLAUDE · TODO · PARAMETERS · MAP · MEMORY · LINKS · KNOWLEDGE · UPGRADE
-├── Cargo.toml                       ← Rust workspace
-├── simulator/                       ← crate ze_simulator (3 модуля + CLI)
-├── backend/                         ← crate ze_backend (axum REST)
-├── frontend/                        ← Phoenix LiveView
-└── _archive/articles_2026-04-23/    ← старые THEORY/EVIDENCE/PARAMETERS/README
-```
+A Rust workspace + a Phoenix LiveView UI that compute and visualize five quantities:
 
-## Быстрый старт
+1. **Impedance** — `I(Z) = S(Z_real ‖ Z_model)`, the Kullback–Leibler divergence between actual and modeled state.
+2. **Proper-time consumption** — `dτ_Ze/dt = −α·I(Z)`.
+3. **CHSH deformation** — `E_Ze(a, b) = −a·b + δ·[(a·b)² − 1/3]`, giving `S_Ze = 2√2 + δ·1.7478`.
+4. **Correlation decay** — `C(τ) = C₀·exp(−β·I·τ)`.
+5. **QFI bound** — `F_Q ≥ 8·C₀·(β·I·τ)²·(1 − β·I·τ)` and, optimized, `F_Q,max ∝ |dτ_Ze/dt|`.
 
-```sh
+## Run it
+
+```bash
+# Rust simulator + HTTP backend on :4001
 cargo build --release
-cargo test --release -p ze_simulator
-./target/release/ze_sim impedance --scenario novelty --horizon 50
-./target/release/ze_sim chsh --h 0.5
-./target/release/ze_sim autowaves --steps 2000
-./target/release/ze_backend                    # 127.0.0.1:4001
-cd frontend && mix deps.get && mix phx.server  # 127.0.0.1:4000
+cargo run -p ze-backend
+
+# Phoenix LiveView on :4000 (separate shell)
+cd ze-web && mix phx.server
 ```
 
-## Что покрывает код (из 24 глав книги)
+Then open `http://127.0.0.1:4000`.
 
-✅ гл. 2-5 (impedance ODE) · гл. 7 (CHSH) · гл. 8.4 (quantum damping) · гл. 13/17 (autowaves)
-❌ гл. 9-11 (GR/cosmology/quantum gravity) · гл. 15 (EEG correlates) · гл. 19-21 (lab experiments)
+## License
 
-Полная карта в `CONCEPT.md §6`.
-
-Private only.
+MIT (see `LICENSE`). This is a research project; correctness claims are bounded by the F1–F6 tests in `ze-simulator/tests/`.
