@@ -1,7 +1,0 @@
-20:30:23 INFO reading v6
-20:30:23 INFO calling DeepSeek (long context, large output)
-20:30:23 INFO Router → DeepSeek-reasoner
-20:30:24 INFO HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
-20:41:26 INFO [deepseek/deepseek-v4-pro] cache: hit=0  miss=6,167  ratio=0%  (10% billed on hits)
-20:41:26 INFO response received in 662.5s (54035 chars)
-20:41:26 INFO wrote /home/oem/Desktop/Ze_Book_v7_2026-04-29.md (93193 bytes)
