@@ -34,7 +34,7 @@ Status: no liquidation, reorganization, insolvency, liens, or tax encumbrances r
 
 **Name:** Dr. Jaba Tkemaladze, MD
 **Position:** Principal Investigator of the Project
-**Publications:** 150+ peer-reviewed works; Editor-in-Chief, *Longevity Horizon*
+**Publications:** 150+ peer-reviewed works; Editor-in-Chief, *Annals of Rejuvenation Science* (e-ISSN 3088-439X)
 **Contact email:** jaba@longevity.ge
 **Contact phone:** +995 555 185 161
 **Affiliation basis:** Independent researcher; for this Project, engaged through Host Institution under the terms of this HIA.
@@ -161,7 +161,7 @@ Place: Tbilisi, Georgia
 _____________________________________
 **Dr. Jaba Tkemaladze, MD**
 Principal Investigator, LongevityCommon Project
-Editor-in-Chief, *Longevity Horizon*
+Editor-in-Chief, *Annals of Rejuvenation Science* (e-ISSN 3088-439X)
 Date: ______________
 Place: Tbilisi, Georgia
 

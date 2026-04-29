@@ -5,7 +5,7 @@ use axum::{
 };
 
 use crate::{
-    handlers::{admin, auth, biosense, dashboard, data, posts, studies, users, ze_guide},
+    handlers::{admin, auth, biosense, dashboard, data, disclosures, posts, studies, users, ze_guide},
     middleware::{
         auth::require_auth,
         rate_limit::{self, rate_limit_fn},
@@ -30,6 +30,7 @@ fn public_routes() -> Router<AppState> {
         .route("/api/studies", get(studies::list_studies))
         .route("/api/studies/:id", get(studies::get_study))
         .route("/api/biosense/compute", post(biosense::compute_chi_ze))
+        .route("/api/disclosures/v5_changes", get(disclosures::get_v5_changes))
         .route("/health", get(|| async { "ok" }))
         .route_layer(middleware::from_fn_with_state(
             rate_limit::api_limiter(),

@@ -1,6 +1,15 @@
 -- Migration 003: Health Factors (4-factor health model)
 -- Organism (χ_Ze) is already tracked in ze_samples.
 -- This table covers the other 3 factors: psyche, consciousness, social.
+--
+-- ⚠ DISCLOSURE (umbrella CONCEPT v5.6, 2026-04-28):
+-- All numerical thresholds in this table (and any aggregations built on top of it)
+-- are EXPLORATORY (hypothesis-generating) only. Pre-registered tests of v1 χ_Ze
+-- yielded NULL results (deprecated/superseded). Current v2 multimodal χ_Ze and
+-- the (organism, psyche, consciousness, social) 4-factor model are post-hoc;
+-- weights and thresholds are NOT theory-fixed. Confirmatory validation pending
+-- pre-registered cohort N≥2000. Do NOT use these values for clinical decisions.
+-- See ~/Desktop/LongevityCommon/CONCEPT.md §2.
 
 CREATE TABLE health_factors (
     id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),

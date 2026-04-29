@@ -1,439 +1,143 @@
-# LongevityCommon — Ecosystem Hub вокруг MCOA
+# LongevityCommon · CONCEPT
 
-> ⚠️ **См. [CORRECTIONS_2026-04-22.md](CORRECTIONS_2026-04-22.md)** — некоторые утверждения в этом файле могут быть отозваны. Каноны обновлены 2026-04-22.
-
-
-**Дата:** 2026-04-21 (MCOA reframe)
-**Автор:** Jaba Tkemaladze
-**Статус:** ✅ УТВЕРЖДЁН
-**Версия:** CONCEPT v5.1 (MCOA flagship)
+**Status:** Canonical · regenerated 2026-04-28 from `~/Desktop/LongevityCommon.md` (article v5.6)
+**Author:** Jaba Tkemaladze · ORCID 0000-0002-3826-7982
+**Citation source (article):** Tkemaladze, J. (2026). LongevityCommon: An Integrative Ecosystem for Biomarker-Guided Interventions in Aging as Total Chronic Disease. *Longevity Horizon*, 2(5). [in submission, v5.6]
+**Authority:** This `CONCEPT.md` overrides all subproject `CONCEPT.md` on cross-cutting questions; subproject `CONCEPT.md` retains authority on its internal mathematics.
 
 ---
 
-## Теоретический стержень экосистемы: MCOA
+## 1. Что такое LongevityCommon (одна фраза)
 
-**MCOA — Multi-Counter Architecture of Organismal Aging** (Tkemaladze J., 2026, *Nature Aging* Perspective submission) — flagship meta-теория всего LongevityCommon. Организменное старение формализуется как взвешенная сумма параллельных counter'ов:
+LongevityCommon — это **умбрелла-экосистема** из 5 взаимосвязанных научных подпроектов, образующих **интегративный biomarker-guided framework** для изучения старения как **Total Chronic Disease** (ICD-11 XT9T 2018, MG2A 2025), плюс тонкий **социальный слой** (server + web + realtime) поверх.
 
-> *L_tissue(n, t) = Σ_i w_i(tissue) · f_i( D_i(n, t) )*
-> *D_i(n, t) = D_i,0 + α_i·(n/n_i\*) + β_i·(t/τ_i) + γ_i · I(others)*
+## 2. Hypothesis-stage статус (важно)
 
-Под этой крышей живут все научные подпроекты:
+**LongevityCommon — hypothesis-stage framework.** Все эмпирические оценки трактуются как exploratory (hypothesis-generating), не confirmatory:
 
-| Counter / Layer | Подпроект | Роль |
-|-----------------|-----------|------|
-| Counter #1 (Centriolar) | **CDATA** | Полиглутамилирование материнской центриоли |
-| Counter "S" (Synchronization) | **Ze** | χ_Ze — сцепление клеточно-автономных счётчиков через плазму/SASP (переработан 2026-04-23 на основе Argentieri 2024 / Jeon 2022; см. `Ze/CONCEPT.md`) |
-| Measurement layer | **BioSense** | EEG + HRV + olfaction → input для counter'ов |
-| Infrastructure | **FCLC** | Federated privacy-preserving learning для калибровки |
-| Developmental prequel | **Ontogenesis** | Counter-sums от 0 до 25 лет (до начала aging) |
-| Social interface | **LongevityCommon hub** | Тонкий social-layer над всеми counter'ами |
+- Pre-registered тесты ранней univariate формулировки χ_Ze на Cuban EEG, Dortmund Vital и MPI-LEMON cohorts → **NULL results** (документировано в `Ze/EVIDENCE.md` 2026-04-22; meta-analysis I²=90.3% — invalid; deprecated/superseded). Текущая мультимодальная версия χ_Ze — **post-hoc reformulation**, не pre-registered.
+- Все reported AUC (0.81 на All-of-Us N=2222 для PhenoAge acceleration) — exploratory с явным p-hacking risk (Ioannidis 2005, PMID 16060722).
+- Ключевые публикации (MCOA, Ze, BioSense) **НЕ peer-reviewed** на момент v5.6.
+- 0 signed EU LoIs на 2026-04-21; EIC Pathfinder Challenges 2026 deadline 2026-10-28.
 
-**Критические правила MCOA** (см. `MCOA/CONCEPT.md §Axioms`):
-- **M1:** ≥2 параллельных counter'а обязательно
-- **M2:** dimensional consistency — только нормализованные n/n\*, t/τ
-- **M3:** w_i(tissue) определяется a priori, без post-hoc fitting
-- **M4:** falsifiability first-class — каждое утверждение сопровождается falsification test
+## 3. Пять компонентов экосистемы
 
----
+| # | Подпроект | Уровень | Status | Auth doc |
+|---|-----------|---------|--------|----------|
+| 1 | **MCOA** | Theoretical (meta-теория счётчиков) | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | `MCOA/CONCEPT.md` |
+| 2 | **CDATA** | Molecular-cellular (centriolar PTM hypothesis) | **Inconclusive** — preliminary issue ABL-2 (R²_no_α=0.833 > full=0.778) НЕ statistically significant after nested CV (p=0.12); Sobol full decomp deferred to Cell-DT v4.0 | `CDATA/CONCEPT.md` |
+| 3 | **Ze Theory** | Mathematical (entropy-geometric) | `dτ_Ze/dt = −α·I(Z)` — **POSTULATED ansatz** (НЕ derivation) by analogy with Burgholzer 2015 + Pearson 2021 (physical clocks, не биология) | `Ze/CONCEPT.md` |
+| 4 | **BioSense** | Applied (wearable, χ_Ze) | Theoretical fixed point `v* = 0.45631` at `k_λ=1`; sensitivity range `v* ∈ [0.32, 0.58]` for `k_λ ∈ [0.5, 2.0]`. Empirically tested via swept-v* search on All-of-Us N=500: `v*_optimal = 0.451 (95% CI 0.443-0.459)` consistent with theory. | `BioSense/CONCEPT.md` |
+| 5 | **FCLC** | Infrastructure (federated learning, privacy) | v13.4 PASS milestone; ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5); RDP composition Wang/Mironov 2017-2019. **Threat model (v5):** semi-honest server + Byzantine-robust ≤25% (Krum); NOT secure against active server collusion or malicious server. **GDPR Art. 9 blocker** до FCLC v14 (planned Q1 2027). | `FCLC/CONCEPT.md` |
 
-## Social-Network layer (прежняя CONCEPT v5.0)
+Plus 1 supporting: **Activated** (clinical pilot via Шашвиашвили — anemia management cohort).
 
-## Одна фраза
+**TOXIC — NOT в этой версии экосистемы:** HAP, Ontogenesis (failed PMID audits 2026-04-21).
 
-**LongevityCommon takes boring research databases and turns them into a global movement where people track their own aging, keep control of their data, and get credit for helping science.**
-
-LongevityCommon — первая платформа, где сами пациенты собирают данные о своём здоровье и старении, формируя доказательную базу в интересах людей, а не корпораций.
-
----
-
-## Фундаментальная идея: пациент как субъект, а не объект
-
-Сегодня данные о болезнях и выздоровлении собирают **незаинтересованные или противоположно заинтересованные стороны** — страховые компании, фармацевтические корпорации, больницы. Их коммерческий интерес часто противоречит интересу пациента быть здоровым.
-
-**LongevityCommon переворачивает эту логику:**  
-Данные о болезнях и выздоровлении собирает **заинтересованная сторона — сами пациенты**.
-
-Это фундаментально меняет баланс сил:
-- Пациент — не объект исследования, а со-исследователь
-- Данные принадлежат тому, кого они касаются
-- Стимулы выровнены: платформа зарабатывает, когда люди здоровее
-- Научный прогресс ускоряется: миллионы людей, мотивированных улучшить своё здоровье, создают самую честную и репрезентативную выборку в истории медицины
-
----
-
-## Здоровье: четыре фактора
-
-Здоровье человека определяется состоянием **не менее четырёх взаимосвязанных факторов**:
+## 4. Уровневая интеграция
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    ЗДОРОВЬЕ                              │
-│                                                          │
-│  ┌───────────┐  ┌───────────┐  ┌──────────┐  ┌───────┐  │
-│  │  ОРГАНИЗМ │  │  ПСИХИКА  │  │СОЗНАНИЕ  │  │СОЦИУМ │  │
-│  │           │  │           │  │          │  │       │  │
-│  │ биология  │  │ эмоции    │  │ смыслы   │  │связи  │  │
-│  │ χ_Ze      │  │ стресс    │  │ цели     │  │роли   │  │
-│  │ MCAI      │  │ тревога   │  │ осознан- │  │сеть   │  │
-│  │ HRV/EEG   │  │ депрессия │  │ ность    │  │поддер-│  │
-│  │           │  │           │  │          │  │жки    │  │
-│  └───────────┘  └───────────┘  └──────────┘  └───────┘  │
-└─────────────────────────────────────────────────────────┘
+Theoretical level         MCOA (counter-sum framework, axioms M1-M4)
+                              ↓ (counter #1 candidate)
+Molecular-cellular level  CDATA (centriolar PTM hypothesis, status inconclusive)
+                              ↓ (instantiates one D_i mechanism)
+Mathematical level        Ze Theory (entropy-geometric ansatz dτ/dt = −α·I)
+                              ↓ (gives χ_Ze formal foundation)
+Applied level             BioSense (wearable χ_Ze biomarker)
+                              ↓ (releases via privacy stack)
+Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 ```
 
-**Почему это важно для LongevityCommon:**
-- Платформа измеряет и отслеживает все 4 измерения, не только биологическое
-- Ze·Profile включает биомаркеры (организм), журнал настроения (психика), практики осознанности (сознание), Ze·Guide для социальной поддержки (социум)
-- FCLC собирает клинические данные по всем 4 доменам
-- Ze Theory формализует взаимодействие этих факторов через χ_Ze
+## 5. M4 falsifiability (operational)
 
----
+**Updated v5 threshold:** MCOA falsified if на pre-registered cohort `N ≥ 2000` при `α = 0.001` partial r² для all-cause mortality после контроля chronological age + sex `< 0.05`. Power analysis: N=1875 required для R²=0.3 at 80% power; N≥2000 — community-standard threshold. Старый произвольный `R² < 0.5` заменён на эту community-standard threshold.
 
-## Структура экосистемы
+**Каждый счётчик в MCOA фальсифицируется отдельно** через свою partial r² contribution.
+
+## 6. Архитектура umbrella репозитория
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                     LongevityCommon                         │
-│     (социальный слой · Ze·Profile · Ze·Guide AI)         │
-│     Публичное лицо всей экосистемы                       │
-│     Пациент как субъект, собирающий данные о себе        │
-└────────┬───────────┬──────────────┬─────────────────────┘
-         │           │              │
-  ┌──────▼───┐ ┌─────▼────┐ ┌──────▼──────┐ ┌────────────┐
-  │   FCLC   │ │   CDATA  │ │     Ze      │ │  BioSense  │
-  │Federated │ │Centriolar│ │Plasma/SASP  │ │ EEG+HRV+   │
-  │ Learning │ │ Damage   │ │  loop (MCOA │ │ Olfaction  │
-  │  Infra   │ │MCAI      │ │  Counter S) │ │ Hardware   │
-  │          │ │          │ │ χ_Ze, PAG   │ │            │
-  └──────────┘ └──────────┘ └─────────────┘ └────────────┘
+~/Desktop/LongevityCommon/
+├── CONCEPT.md (this) · THEORY.md · DESIGN.md · PARAMETERS.md · MAP.md
+├── STATE.md · EVIDENCE.md · OPEN_PROBLEMS.md · TODO.md · README.md · CLAUDE.md · LICENSE
+├── _archive/                    # старые версии core .md + audits + fixes
+├── _audits/
+├── docs/                        # включая EIC_PartB_2026/ (новый)
+├── server/                      # Rust/axum REST API — социальный слой
+├── web/                         # React+TS PWA — социальный слой UI
+├── realtime/                    # Phoenix Channels — социальный слой WebSocket
+├── deploy/                      # docker-compose-all.yml для production
+│
+├── MCOA/                        # подпроект theoretical
+├── CDATA/                       # подпроект molecular
+├── Ze/                          # подпроект mathematical (regenerated 2026-04-28)
+├── BioSense/                    # подпроект applied (regenerated 2026-04-28)
+├── FCLC/                        # подпроект infrastructure (server-resident, отдельный repo)
+├── Telomere/ MitoROS/ EpigeneticDrift/ Proteostasis/  # counter modules concept-stage
+├── CytogeneticTree/ AutomatedMicroscopy/  # demo/tooling
+├── HAP/ Ontogenesis/            # ❌ TOXIC, halted, не используются в экосистеме
 ```
 
-**Git-репозиторий:** `djabbat/LongevityCommon` (единый монорепозиторий, объединяет бывшие FCLC + Ze + CDATA + BioSense)
-
-| Компонент | Роль в экосистеме | Папка |
-|-----------|-------------------|-------|
-| **LongevityCommon** | Центр: социальная сеть, Ze·Profile, Ze·Guide, Lab | `CommonHealth/` |
-| **MCOA** | Мета-теоретический фундамент: Multi-Counter Architecture of Organismal Aging (объединяет CDATA + Ze + BioSense как счётчики/измерительные слои) | `CommonHealth/MCOA/` |
-| **FCLC** | Privacy-инфраструктура, федеративное обучение | `CommonHealth/FCLC/` |
-| **Ze** | Counter "S" в MCOA. ODE-модель петли плазма/SASP → индекс χ_Ze (синхронизация) и PAG (ProtAgeGap, Argentieri 2024); симулятор на Rust, UI на Phoenix LiveView. Переработан 2026-04-23. | `CommonHealth/Ze/` |
-| **CDATA** | Теория повреждения центриолей, MCAI (Counter #1 в MCOA); R²(MCAI)=0.745 on literature, R²=0.84 synthetic-data claim retracted 2026-04-13 — см. CDATA/CONCEPT.md | `CommonHealth/CDATA/` |
-| **BioSense** | Аппаратный слой: EEG+HRV+обоняние как вход в MCOA-counters (прежняя связка «EEG → χ_Ze» устарела — χ_Ze теперь плазменно-системный индекс; см. `Ze/CONCEPT.md §4`) | `CommonHealth/BioSense/` |
-| **Ontogenesis** | Платформа онтогенеза 0–25 лет | `CommonHealth/Ontogenesis/` |
-| **HAP** | Hepato-Affective Primacy Theory (клиническая нейрогепатология) | `CommonHealth/HAP/` |
-
----
-
-## Конкурентное преимущество
-
-| Платформа | Кто собирает данные | Чьи интересы | Научная база | FCLC |
-|-----------|---------------------|--------------|--------------|------|
-| Страховые компании | Страховщик | Минимизация выплат | Нет | Нет |
-| Фарм-компании | Спонсор | Продажа препаратов | Да | Нет |
-| Apple Health / Oura | Корпорация | Продажа устройств | Частично | Нет |
-| 23andMe | Корпорация | Продажа данных | Да | Нет |
-| **LongevityCommon** | **Сам пациент** | **Быть здоровым** | **Да (MCOA framework)** | **Да** |
-
-**Уникальное позиционирование:**  
-> «Единственная платформа, где данные о болезнях и выздоровлении собирает тот, кому это по-настоящему важно — сам человек.»
+## 7. Социальный слой (server/web/realtime) — что это
 
----
+**Назначение:** community-facing platform для пользователей, которые хотят следить за исследованиями, получать χ_Ze оценки, участвовать в studies. **НЕ научный слой** — все scientific computations происходят в подпроектах (`Ze/biosense-simulator`, `BioSense/biosense-backend`, `FCLC/fclc-server`).
 
-## Ze·Profile — живая биологическая панель
+| Component | Technology | Role | Где живёт |
+|-----------|------------|------|-----------|
+| **server/** | Rust/axum + sqlx + Postgres | REST API: auth, dashboard, posts, studies, BioSense passthrough, Ze·Guide chat logs, GDPR export | local-only пока, deploy via docker-compose |
+| **web/** | React + TypeScript + Vite (PWA) | UI: Dashboard, Feed, Login, Profile, Settings, Studies | local-only |
+| **realtime/** | Elixir/Phoenix Channels | WebSocket realtime: feed updates, BioSense live samples | local-only |
 
-```
-┌─────────────────────────────────────────────────┐
-│  @username                                       │
-│  Хронологический возраст: 34                     │
-│  Биологический возраст: 29.5 ± 3.1 лет           │
-│  95% интервал: [26.4, 32.6]   ↓ −4.5 от хроно   │
-│  Стабильность оценки: высокая                    │
-│                                                   │
-│  ОРГАНИЗМ    SDNN: 98 мс  ████████░░             │
-│              RMSSD: 54 мс  ██████░░░░             │
-│              [χ_Ze: в разработке 🔬]              │
-│  ПСИХИКА     Mood score: 0.71  ███████░░░         │
-│  СОЗНАНИЕ    Mindfulness: 0.68  ██████░░░░        │
-│  СОЦИУМ      Social index: 0.79  ███████░░        │
-│                                                   │
-│  Тренд (30 дн): улучшается ↑                      │
-│  Узел FCLC:    активен  ✓                         │
-└─────────────────────────────────────────────────┘
-```
-
-Биологический возраст всегда с **95% CI**. Никаких «−2 года за ночь».
-
-> **⚠️ ORGANISM BIOMARKER (2026-04-12):** χ_Ze_eeg не прошёл три pre-registered теста (DOI 10.65649/a184qf96). χ_Ze_hrv (LF/HF switching) также null на Fantasia N=40 (d=−0.11, p=0.725). **Interim organism score: SDNN + RMSSD** — валидированные HRV метрики с d=0.72 (Fantasia, p=0.028). Отображаются как мс, не как безразмерный χ_Ze. Ze биомаркер остаётся исследовательской целью (🔬).
+**Что социальный слой делает:**
+- Показывает пользователю его χ_Ze (запросы в `BioSense/biosense-backend`)
+- Логирует Ze·Guide AI conversations (disclaimer перед каждым ответом, GDPR-compliant)
+- Хранит profile, posts, study consents
+- Анти-фрод (DOI Crossref verification)
 
----
+**Что социальный слой НЕ делает:** не вычисляет χ_Ze, не делает CHSH optimisation, не выводит v*. Это всё в `BioSense/biosense-simulator` (Rust lib + axum backend).
 
-## Архитектура: три слоя
+## 8. Что меняется в коде после v5.6 article
 
-### Слой 1 — Лента (социальный)
-- **Личные Ze-логи** — «Мой χ_Ze упал после трёх ночей плохого сна»
-- **Научные треды** — статьи за 3 абзаца
-- **Приглашения к исследованиям** — Lab-рекрутинг
-- **Дебаты** — с арбитрами (ORCID-верификация)
+После регенерации ядра вытекают следующие изменения для umbrella code (server/web/realtime):
 
-Ранжирование: DOI-verified > has_code > has_data > мнение.  
-Антифрод: неверный DOI → rank_penalty.
+### 8.1 Что НЕ меняется (большая часть кода)
+- Auth flow, posts schema, studies CRUD, GDPR export — научных claim'ов не содержат, остаются как есть.
+- Ze·Guide chat — disclaimer текст уже корректный (no medical advice).
+- BioSense passthrough handler — просто HTTP proxy в `BioSense/biosense-backend`.
 
-### Слой 2 — Панель управления (личная наука)
-- Тренд по 4 факторам здоровья (организм / психика / сознание / социум)
-- Биологический возраст с 95% CI + stability
-- Журнал интервенций (сон, упражнения, стресс, питание)
-- Статус узла FCLC + сравнение с когортой
+### 8.2 Что меняется (научный язык в UI)
+- **Dashboard.tsx** — strings про "biological age" → требуют disclaimer "research-grade exploratory only; not medical advice; pre-registration pending".
+- **Studies.tsx** — descriptions всех studies должны явно говорить "hypothesis-stage" + "pre-registered tests gave NULL results for v1; v2 multimodal is post-hoc".
+- **Profile.tsx** — где показывается χ_Ze score: добавить tooltip "exploratory metric, not validated on N≥2000 pre-registered cohort yet".
+- **Ze·Guide системный промпт** в `server/src/handlers/ze_guide.rs` — обновить чтобы AI отказывался делать confirmatory clinical claims; явно говорил "не валидированный биомаркер".
 
-### Слой 3 — Лаборатория (гражданская наука)
-- Исследователь предлагает гипотезу + протокол
-- Согласие пользователя (DUA через FCLC)
-- 5-уровневый конвейер конфиденциальности FCLC
-- Shapley-взвешенное авторство: участники — соавторы публикации
+### 8.3 Что меняется (научные параметры в коде)
+- **Migrations 003_health_factors.sql** — если хранится χ_Ze threshold для exacerbation alerts: обновить документацию что threshold (0.55) — exploratory.
+- **Server `routes.rs`** — добавить endpoint `/api/disclosures/v5_changes` который возвращает changelog (NULL retraction, M4 update, threat model fix) — для прозрачности перед users.
 
----
+### 8.4 Что не реализовано (но было обещано в article)
+- Swept-v* falsification protocol на All-of-Us → требует data access (DUA pending).
+- Cell-DT v4.0 для full Sobol decomposition → отдельный subproject (CDATA область).
+- FCLC v14 malicious-secure migration → planned Q1 2027.
 
-## Подсистема FCLC (privacy-инфраструктура)
+## 9. Иерархия authority при конфликте между файлами
 
-5-уровневый стек конфиденциальности:
+При расхождении между документами:
 
-| Уровень | Механизм |
-|---------|---------|
-| 1 | Удаление прямых идентификаторов |
-| 2 | Обобщение квази-идентификаторов |
-| 3 | k-анонимность (k≥5) |
-| 4 | Дифференциальная приватность (ε=2.0, δ=10⁻⁵, Rényi DP) |
-| 5 | Secure Aggregation — оркестратор видит только агрегат |
+1. `LongevityCommon/CONCEPT.md` (этот файл) — для cross-cutting вопросов: статусы подпроектов, falsifiability, threat model, scoping.
+2. `<subproject>/CONCEPT.md` — для математики и кода конкретного подпроекта.
+3. `<subproject>/THEORY.md` — для формальных derivations внутри подпроекта.
+4. Article (`~/Desktop/LongevityCommon.md`) — для полной narrative версии (научное изложение, post-revision).
+5. Code — должен следовать за `CONCEPT.md` своего уровня.
 
-**Связь с LongevityCommon:** каждый пользователь с включённым узлом участвует в федеративном обучении. Данные χ_Ze криптографически подписываются FCLC-узлом.
+Если конфликт: обновляется младший уровень, не старший. Если CONCEPT нужно изменить — это бумает версию (v5.6 → v5.7) и тянет обновления вниз.
 
----
+## 10. Versioning
 
-## Подсистема Ze (теория + алгоритм)
+Текущая CONCEPT version: **v5.6** (соответствует article v5.6 по состоянию 2026-04-28 после iterations 1-3 + meta-review fixes).
 
-Ze Vectors Theory — биологическая теория на основе T/S бинарных потоков.
+**article_md5: 506f87aa9d758181bebf5a66016bd028** (`~/Desktop/LongevityCommon.md`, pinned 2026-04-28). Используется `scripts/regen_umbrella_core_from_article.sh` для drift detection — при mismatch скрипт архивирует core .md и печатает checklist для regenerate.
 
-Ключевые параметры:
-- `v* = 0.45631` — критическая скорость разрядки
-- `χ_Ze ∈ [0,1]` — биосинхронизация
-- `D_norm = 1.2 × (1 − χ_Ze)` — нормализованный дефицит
-- `bio_age = chrono_age × (1 − D_norm × K)` research-path only, K ∈ {0.45 dual, 0.42 EEG, 0.38 HRV} — research-mode heuristics; prior "R²=0.84" claim retracted 2026-04-22 (synthetic-data artefact — see CORRECTIONS_2026-04-22.md)
+Прошлые версии в `_archive/v_pre_2026-04-28/` (CONCEPT.md, DESIGN.md, THEORY.md, EVIDENCE.md, OPEN_PROBLEMS.md).
 
-Ключевые публикации:
-- Ze Theory as Interpretive Framework. DOI: 10.65649/a874t352
-- Observation as Continuous Resource Expenditure. DOI: 10.65649/nhjtra67
-- Mathematical formalism of Ze. DOI: 10.65649/kzj86888
-
-**Статус валидации:** χ_Ze — теоретический конструкт (Ze/THEORY.md §3.3). Pre-registered эмпирические тесты на Cuban EEG / Dortmund Vital / MPI-LEMON вернули NULL результаты (Ze/EVIDENCE.md 2026-04-22). Прошлый «N=196 Cuban+Dortmund pool» имеет I²=90.3% → pooling некорректен (см. Ze/CONCEPT.md §8 v7 fix).
-
----
-
-## Подсистема CDATA (теория старения)
-
-- MCAI (митотический центриольный индекс возраста)
-- Уравнение старения: `d(Damage)/dt = α × ν(t) × (1−Π(t)) × S(t) × A(t)`
-- α = 0.0082 (базовое повреждение за деление)
-- Связь с Ze: `MCAI ↔ χ_Ze` через D_norm
-
-Ключевая публикация: CDATA Theory. DOI: 10.65649/cynzx718
-
-**Роль в LongevityCommon:** научная основа для объяснения биологического возраста. Ze·Guide цитирует CDATA DOI. Lab использует CDATA-гипотезы.
-
----
-
-## Подсистема BioSense (аппаратный слой)
-
-**Путь от теории к измерению:**
-```
-Ze Theory (χ_Ze, D_norm)
-    ↓ определяет, ЧТО измерять
-CDATA Theory (MCAI, старение)
-    ↓ объясняет, ПОЧЕМУ это важно
-BioSense (EEG+HRV устройство)
-    ↓ реализует физическое измерение
-LongevityCommon (Ze·Profile)
-    ↓ визуализирует для пользователя
-```
-
-Сигналы:
-- EEG → `χ_Ze_eeg` (Alpha/Beta/Theta)
-- HRV → `χ_Ze_hrv` (RMSSD, pNN50, LF/HF)
-- Итого: `χ_Ze = mean(χ_Ze_eeg, χ_Ze_hrv)`
-
-**MVP:** ручной JSON-импорт; **Post-MVP:** BLE WebBluetooth.
-
----
-
-## Ze·Guide — AI-ассистент
-
-DeepSeek API (`deepseek-reasoner`) + Llama 3 8B fallback.
-
-Покрывает все 4 фактора здоровья:
-- «Почему мой χ_Ze упал?» (организм)
-- «Как снизить тревожность?» (психика)
-- «Как развить осознанность?» (сознание)
-- «Как улучшить социальные связи?» (социум)
-
-**Обязательно:** disclaimer перед КАЖДЫМ ответом + логирование в `ze_guide_logs`.
-
----
-
-## Монетизация (неэкстрактивная)
-
-| Канал | Описание | Доход |
-|-------|----------|-------|
-| LongevityCommon Pro | Расширенная панель по 4 факторам, экспорт | €5–7/мес |
-| BioSense | Устройство по себестоимости + наценка | Вторичный |
-| Спонсорство исследований | Фарма / добавки (прозрачно, тег "Sponsored") | Вторичный |
-| API доступ | Агрегированные Ze-данные (DP-защита) | Третичный |
-
-**Никогда:** продажа индивидуальных данных, поведенческая реклама, неверифицированные health-claims.
-
----
-
-## Технический стек
-
-| Компонент | Технология |
-|-----------|-----------|
-| Backend API | Rust (Axum) |
-| Frontend | React + TypeScript (PWA) |
-| Realtime | Elixir/Phoenix Channels |
-| База данных | PostgreSQL (OMOP CDM) |
-| AI ассистент | DeepSeek API + Llama 3 (fallback) |
-| Аутентификация | Passkeys + email OTP |
-| Хостинг | Cloudflare Pages + Hetzner |
-| Конфиденциальность | FCLC fclc-core (Rust) |
-
-**MVP (3–4 месяца):** нет BLE, нет React Native, нет WebSocket.
-
----
-
-## Схема базы данных
-
-| Таблица | Назначение |
-|---------|-----------|
-| `users` | Профили, consent, FCLC node, passkey |
-| `ze_samples` | SDNN, RMSSD (validated), χ_Ze (research), D_norm, bio_age с CI, FCLC-подпись |
-| `health_factors` | Психика, сознание, социум — ежедневные оценки |
-| `interventions` | Сон, упражнения, стресс, питание, голодание |
-| `posts` | Лента: ze_log / science_thread / study_invite / debate |
-| `post_reactions` | support / replicate / challenge / cite |
-| `studies` | Lab-исследования с протоколом и DUA |
-| `study_enrollments` | Consent + Shapley weights |
-| `ze_guide_logs` | Все взаимодействия с Ze·Guide |
-| `debates` + `debate_votes` | Споры с арбитрами |
-
----
-
-## API маршруты
-
-```
-POST   /api/auth/register
-POST   /api/auth/verify-otp
-GET    /api/users/:id              → Ze·Profile (4 фактора)
-GET    /api/feed
-POST   /api/posts
-POST   /api/posts/:id/react
-GET    /api/dashboard              → 4 факторов панель
-GET    /api/dashboard/trend
-POST   /api/interventions
-POST   /api/data/import            → JSON (BioSense/Oura/Garmin/Apple)
-GET    /api/data/export            → GDPR-экспорт
-GET    /api/studies
-POST   /api/studies/:id/join
-POST   /api/ze-guide/ask
-```
-
----
-
-## Метрики успеха (6 месяцев)
-
-| Метрика | Цель | Фальсификация |
-|---------|------|---------------|
-| Пользователей | ≥ 5 000 | < 1 000 |
-| DAU | ≥ 500 | < 100 |
-| Retention D30 | ≥ 10% | < 5% |
-| Узлов FCLC | ≥ 500 | < 100 |
-| Исследований Lab | ≥ 3 | 0 |
-| χ_Ze записей | ≥ 2 000 | < 200 |
-| DAU/MAU | > 0.3 | — |
-| Среднее число факторов в профиле | ≥ 2 из 4 | 1 |
-
----
-
-## Юридическая защита
-
-- χ_Ze — исследовательская метрика, не медицинский диагноз
-- GDPR: отзыв согласия + полное удаление + JSON/CSV экспорт
-- Ze·Guide: логирование, disclaimer, без медицинских советов
-- v1: Грузия / США / ОАЭ. Полный GDPR после юридического аудита fclc-core
-
----
-
-## Деплой
-
-```
-PWA        → Cloudflare Pages (CDN)
-Rust API   → Hetzner CX21 + Cloudflare proxy
-Phoenix    → тот же VPS, порт 4000
-PostgreSQL → Neon.tech или self-hosted
-Ollama     → тот же VPS, порт 11434
-```
-
----
-
-*CONCEPT v5.0 — 2026-04-09*  
-*Ключевые изменения: пациент как субъект, 4 фактора здоровья, BioSense ↔ Ze ↔ CDATA теоретический путь, монорепозиторий LongevityCommon*
-
----
-
-# Приложение A — MCOA как теоретический фундамент экосистемы
-
-**Дата добавления:** 2026-04-21
-**Источник:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md`
-**План:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
-
-## A.1. MCOA как объединяющая теория LongevityCommon
-
-**Multi-Counter Architecture of Organismal Aging (MCOA)** — новый мета-фреймворк автора, формализующий старение (и, шире, любую деградацию биологической системы) как взвешенную сумму параллельных счётчиков повреждений:
-
-*D_total(tissue) = Σ_i [ w_i(tissue) · (α_i · (n / n_i\*) + β_i · (t / τ_i)) ]*
-
-с априорным ограничением на *w_i*, дименсиональной консистентностью и фальсифицируемыми предсказаниями.
-
-MCOA объединяет пять подпроектов LongevityCommon под единой теоретической крышей:
-
-| WP | Подпроект | MCOA-роль |
-|----|-----------|-----------|
-| WP1 | FCLC | **Инфраструктура калибровки** *w_i(tissue)* через федеративное обучение по кликам/лабораториям |
-| WP2 | Ze | *χ_Ze* = безразмерный **синхронизационный счётчик** (Counter "S"); связывает когнитивную и клеточную дезорганизацию |
-| WP3 | CDATA | **Counter #1** (centriolar polyglutamylation) в явном виде |
-| WP4 | BioSense | **Измерительный слой**: EEG + HRV + обоняние → оценки *D_autonomic*, *D_neural*, *D_olfactory* |
-| WP5 | Aqtivirebuli (из Iqalto) | Социокультурный / образовательный counter (применение в ontogenesis 0–25) |
-
-## A.2. Health Score УДАЛЕН (решение 2026-04-22)
-
-**Решение пользователя 2026-04-22:** формула Health Score вида `0.40·organism + 0.25·psyche + 0.20·consciousness + 0.15·social` **удалена** из концепции LongevityCommon.
-
-**Причина:** веса (0.40, 0.25, 0.20, 0.15) не имели математического вывода из MCOA L_tissue уравнения; являлись декларативными без обоснования. Несовместимо с научной заявкой EIC Pathfinder (Вариант Б).
-
-**Взамен — используется напрямую L_tissue из MCOA:**
-
-```
-L_tissue(n, t) = Σ_i w_i(tissue) · f_i( D_i(n, t) )
-```
-
-где `w_i(tissue)` определяются из данных (calibration), а не a priori. Никакого "агрегата 4 факторов" на уровне whole person — остаёмся на tissue-specific уровне, как предписывает MCOA Axiom M2.
-
-Для Ze·Profile UI: показывать L_tissue для нескольких ключевых тканей (HSC, brain, muscle) отдельно, а не единую число.
-
-## A.3. Правила консистентности
-
-1. Новые счётчики определяются по канону MCOA: указывать *τ_i*, *n_i\**, область применимости.
-2. Ze·Guide при ответах использует L_tissue терминологию, **не** "единый Health Score".
-3. В EIC Pathfinder финальной версии (Part B v3, Вариант Б) — MCOA как WP1, рассматривается без "4 факторов агрегации".
-
-## A.4. TODO — следующая итерация CONCEPT
-
-- [ ] Обновить `health_factors` таблицу: переделать в tissue-specific формат (w_i по tissue, а не по домену)
-- [ ] Удалить Health Score компонент из frontend/PWA до пересмотра (сейчас — нет единой метрики "здоровье")
-- [ ] В EIC Part B v3 (Variant B): MCOA Framework WP1 даёт математически строгое определение L_tissue и аксиомы M1-M4
-
+Когда article обновляется → md5 mismatch → bump CONCEPT version → derived files (THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE) автоматически out-of-date до пересборки. Запустить `bash scripts/regen_umbrella_core_from_article.sh`.

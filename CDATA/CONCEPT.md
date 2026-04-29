@@ -1,6 +1,8 @@
-# CDATA — Concept v5.2 — Counter #1 (Centriolar) in MCOA
+# CDATA — Concept v5.6 — Counter (Centriolar) in MCOA · status: INCONCLUSIVE
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22; cross-cutting status aligned with umbrella v5.6 on 2026-04-28.
+
+> 🔴 **STATUS UPDATE 2026-04-28 (per umbrella CONCEPT v5.6):** CDATA is **INCONCLUSIVE**, not "Counter #1 confirmed". Preliminary Sobol analysis on synthetic data shows ABL-2 paradox (R²_no_α = 0.833 > full R² = 0.778), but this difference is **NOT statistically significant after nested cross-validation** (p = 0.12 after correction). Full S1+S2+ST decomposition with nested CV on real GTEx data (N = 948) is **deferred to Cell-DT v4.0** (planned, not started). CDATA remains an **open, falsifiable hypothesis**; the wording "Counter #1" is provisional and may downgrade to "candidate counter" pending Cell-DT v4.0 results.
 
 
 ## Родительская теория

@@ -7,6 +7,7 @@ pub mod dashboard;
 pub mod studies;
 pub mod ze_guide;
 pub mod data;
+pub mod disclosures;
 
 pub use auth::*;
 pub use users::*;

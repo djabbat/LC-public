@@ -152,6 +152,9 @@ pub async fn compute_chi_ze(
         ci_stability,
         calibration: calibration_label.to_string(),
         schema_version: "1.1".to_string(),
+        // Cross-cutting disclosure (umbrella CONCEPT v5.6, 2026-04-28)
+        disclosure: crate::models::biosense::default_disclosure(),
+        longevitycommon_version: crate::models::biosense::default_lc_version(),
     }))
 }
 
