@@ -387,6 +387,156 @@ def test_run_streaming_final_clean_when_refs_real(monkeypatch):
     assert out["broken_refs"] == []
 
 
+# ── 8. AST verify (semantic checks beyond regex) ─────────────────────────
+
+def test_ast_def_at_finds_function():
+    from pathlib import Path
+    from agents.ast_verify import def_at
+    p = Path(__file__).resolve().parent.parent / "agents" / "orchestrator.py"
+    sym = def_at(p, 273)  # def orchestrate(...) per current file
+    # Whatever the actual line, def_at must return a real symbol when given
+    # a real def's lineno. Search a window for the function we know exists.
+    import ast
+    src = p.read_text(encoding="utf-8")
+    tree = ast.parse(src)
+    target = next((n for n in tree.body
+                   if isinstance(n, ast.FunctionDef) and n.name == "orchestrate"),
+                  None)
+    assert target is not None
+    sym = def_at(p, target.lineno)
+    assert sym is not None
+    assert sym.name == "orchestrate"
+    assert sym.kind == "def"
+
+
+def test_ast_def_at_returns_none_for_blank_line():
+    from pathlib import Path
+    from agents.ast_verify import def_at
+    p = Path(__file__).resolve().parent.parent / "agents" / "orchestrator.py"
+    # Line 1 is the docstring; not a top-level def/class/const → None
+    assert def_at(p, 1) is None
+
+
+def test_ast_find_callers_excludes_imports():
+    """Imports should NOT count as callers."""
+    from pathlib import Path
+    from agents.ast_verify import find_callers
+    root = Path(__file__).resolve().parent.parent
+    callers = find_callers("evaluate_l_consent", root)
+    # We expect at least 2 real call-sites: orchestrator and email_agent.
+    files = {c.file for c in callers}
+    assert any(f.endswith("orchestrator.py") for f in files)
+    assert any(f.endswith("email_agent.py") for f in files)
+
+
+def test_ast_extract_claims_finds_symbol_at_line_pattern():
+    from agents.ast_verify import extract_claims
+    text = "The function orchestrate @ orchestrator.py:273 routes everything."
+    claims = extract_claims(text)
+    syms = [c for c in claims if c.kind == "symbol_at_line"]
+    assert any(c.symbol == "orchestrate" and c.line == 273 for c in syms)
+
+
+def test_ast_extract_claims_finds_negative_call():
+    from agents.ast_verify import extract_claims
+    text = "evaluate_l3 has 0 external callers (verified by grep)."
+    claims = extract_claims(text)
+    nc = [c for c in claims if c.kind == "negative_call"]
+    assert any(c.symbol == "evaluate_l3" for c in nc)
+
+
+def test_ast_verify_claims_flags_wrong_symbol_at_line():
+    """Real file, real line, but wrong symbol → BAD."""
+    from pathlib import Path
+    from agents.ast_verify import verify_claims
+    root = Path(__file__).resolve().parent.parent
+    # def orchestrate is around line ~273; assert "score_decision @ orchestrator.py:273"
+    # which is wrong (score_decision is in kernel.py)
+    text = "Per docs, score_decision @ orchestrator.py:273 handles everything."
+    rep = verify_claims(text, search_root=root)
+    assert rep.total >= 1
+    assert any("score_decision" in b for b in rep.bad)
+
+
+def test_ast_verify_claims_passes_correct_symbol_at_line():
+    from pathlib import Path
+    import ast
+    from agents.ast_verify import verify_claims
+    root = Path(__file__).resolve().parent.parent
+    p = root / "agents" / "orchestrator.py"
+    src = p.read_text(encoding="utf-8")
+    target = next((n for n in ast.parse(src).body
+                   if isinstance(n, ast.FunctionDef) and n.name == "orchestrate"),
+                  None)
+    text = f"The orchestrator's main entry is orchestrate @ orchestrator.py:{target.lineno}."
+    rep = verify_claims(text, search_root=root)
+    assert rep.bad == [], rep.bad
+    assert rep.ok >= 1
+
+
+def test_ast_verify_claims_flags_negative_call_when_real_callers_exist():
+    from pathlib import Path
+    from agents.ast_verify import verify_claims
+    root = Path(__file__).resolve().parent.parent
+    text = "evaluate_l_consent has 0 external callers in the codebase."
+    rep = verify_claims(text, search_root=root)
+    # We added real callers in 2026-05-02 fix; this negative claim must fail.
+    assert any("evaluate_l_consent" in b and "0 callers" in b for b in rep.bad), \
+        f"expected a 0-callers failure, got: {rep.bad}"
+
+
+def test_ze_verify_symbol_tool_match():
+    import json as _json
+    from pathlib import Path
+    import ast
+    from agents.generalist import _t_ze_verify_symbol
+    p = Path(__file__).resolve().parent.parent / "agents" / "orchestrator.py"
+    src = p.read_text(encoding="utf-8")
+    target = next((n for n in ast.parse(src).body
+                   if isinstance(n, ast.FunctionDef) and n.name == "orchestrate"),
+                  None)
+    out = _json.loads(_t_ze_verify_symbol(
+        symbol="orchestrate", file=str(p), line=target.lineno, kind="def"))
+    assert out["verdict"] == "MATCH"
+
+
+def test_ze_verify_symbol_tool_wrong_symbol():
+    import json as _json
+    from pathlib import Path
+    import ast
+    from agents.generalist import _t_ze_verify_symbol
+    p = Path(__file__).resolve().parent.parent / "agents" / "orchestrator.py"
+    src = p.read_text(encoding="utf-8")
+    target = next((n for n in ast.parse(src).body
+                   if isinstance(n, ast.FunctionDef) and n.name == "orchestrate"),
+                  None)
+    out = _json.loads(_t_ze_verify_symbol(
+        symbol="i_do_not_exist", file=str(p), line=target.lineno, kind="def"))
+    assert out["verdict"] == "WRONG_SYMBOL"
+    assert out["actual_symbol"] == "orchestrate"
+
+
+def test_ze_verify_symbol_tool_file_not_found():
+    import json as _json
+    from agents.generalist import _t_ze_verify_symbol
+    out = _json.loads(_t_ze_verify_symbol(
+        symbol="anything", file="not/a/real/file.py", line=1))
+    assert out["verdict"] == "FILE_NOT_FOUND"
+
+
+def test_orchestrate_auto_ast_flags_wrong_symbol_at_line():
+    """Output asserts symbol_at_line that is semantically wrong → [Ze-AST] header."""
+    from agents.orchestrator import orchestrate
+    from agents.kernel import Decision
+    decision = Decision(id="t.ast.bad", description="t",
+                        action_type="emit_text",
+                        payload={"text": "x"})
+    # claim: score_decision is at orchestrator.py:1 (it isn't; that's a docstring)
+    out = orchestrate(decision, lambda: "see score_decision @ orchestrator.py:1 for details")
+    assert "[Ze-AST]" in out
+    assert "WRONG" in out
+
+
 def test_resolve_path_finds_bare_basename_in_subdirs():
     """Bare 'orchestrator.py' should resolve to agents/orchestrator.py."""
     from agents.orchestrator import orchestrate

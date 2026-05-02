@@ -390,6 +390,34 @@ def orchestrate(
     except Exception as e:
         log.debug(f"_ze_verify_output failed: {e}")
 
+    # 6b) Ze-AST verify — semantic check of symbol-at-line and negative-call
+    # claims. Catches what regex auto-verify cannot (file exists + line exists,
+    # but the symbol on that line is something else; or "no callers" claim
+    # while AST shows real callers).
+    ast_header = ""
+    try:
+        from agents.ast_verify import verify_claims as _ast_verify_claims
+        aim_root = Path(__file__).resolve().parent.parent
+        ast_rep = _ast_verify_claims(out_text, search_root=aim_root)
+        if ast_rep.bad:
+            joined = "; ".join(ast_rep.bad[:5])
+            extra = "" if len(ast_rep.bad) <= 5 else f"; +{len(ast_rep.bad)-5} more"
+            ast_header = (
+                f"[Ze-AST] {ast_rep.ok}/{ast_rep.total} claims OK; "
+                f"WRONG ({len(ast_rep.bad)}): {joined}{extra}"
+            )
+            _persist_ze_event(
+                Decision(id=f"{decision.id}.ast",
+                         description="auto Ze-AST verify",
+                         action_type="ze_ast_auto",
+                         payload={"total_claims": ast_rep.total,
+                                  "bad_claims": ast_rep.bad[:10]}),
+                blocked_at="AST_WRONG",
+                output_chars=len(out_text),
+            )
+    except Exception as e:
+        log.debug(f"AST verify failed: {e}")
+
     # 7) Ze scoring — POST, advisory only.
     ze_header = ""
     metrics: Optional[_ZeMetrics] = None
@@ -404,10 +432,10 @@ def orchestrate(
         except Exception as e:
             log.debug(f"Ze scoring failed for {decision.id}: {e}")
 
-    # 8) Persist + return. Verify-warning, if any, leads the header stack.
+    # 8) Persist + return. Verify-warnings, if any, lead the header stack.
     _persist_ze_event(decision, blocked_at=None, metrics=metrics,
                       output_chars=len(out_text))
-    headers = [h for h in (verify_header, ze_header) if h]
+    headers = [h for h in (verify_header, ast_header, ze_header) if h]
     if headers:
         return "\n".join(headers) + f"\n\n{out}"
     return str(out)
