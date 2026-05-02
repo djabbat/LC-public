@@ -1203,6 +1203,59 @@ def _t_ze_verify(hypothesis: str, observation: str) -> str:
     }, ensure_ascii=False)
 
 
+@register_tool(
+    "ze_verify_symbol",
+    "AST-verify that a Python symbol (function/class/constant) is actually "
+    "defined at file:line. Catches the kind of hallucination where the line "
+    "number is correct but the symbol on it is something else. Use BEFORE "
+    "asserting 'X defined at file:N'.",
+    {"symbol": "name of the function/class/constant",
+     "file": "path to .py file (absolute, or repo-relative)",
+     "line": "1-indexed line number where the symbol is claimed to be defined",
+     "kind": "expected kind: 'def' | 'class' | 'const' | 'any' (default 'any')"},
+)
+def _t_ze_verify_symbol(symbol: str, file: str, line: int,
+                        kind: str = "any") -> str:
+    from pathlib import Path as _P
+    from agents.ast_verify import def_at as _def_at
+    p = _P(file).expanduser()
+    if not p.is_absolute():
+        # Try AIM root prefix, then a few subdirs.
+        root = _P(__file__).resolve().parent.parent
+        for cand in (root / file, *(root / sub / p.name
+                                     for sub in ("agents", "tools", "tests",
+                                                  "scripts", "web", "cli"))):
+            if cand.is_file():
+                p = cand
+                break
+    if not p.is_file():
+        return json.dumps({"verdict": "FILE_NOT_FOUND",
+                           "given_path": file}, ensure_ascii=False)
+    sym = _def_at(p, int(line))
+    if sym is None:
+        return json.dumps({"verdict": "NO_SYMBOL_AT_LINE",
+                           "file": str(p), "line": int(line)},
+                          ensure_ascii=False)
+    name_ok = sym.name == symbol
+    kind_ok = (kind == "any" or sym.kind == kind
+               or (kind == "def" and sym.kind == "async_def"))
+    if name_ok and kind_ok:
+        verdict = "MATCH"
+    elif name_ok:
+        verdict = "WRONG_KIND"
+    else:
+        verdict = "WRONG_SYMBOL"
+    return json.dumps({
+        "verdict": verdict,
+        "expected_symbol": symbol,
+        "expected_kind": kind,
+        "actual_symbol": sym.name,
+        "actual_kind": sym.kind,
+        "actual_lineno": sym.lineno,
+        "actual_end_lineno": sym.end_lineno,
+    }, ensure_ascii=False)
+
+
 # ── Tool-loop driver ───────────────────────────────────────────────────────
 
 
@@ -1619,6 +1672,7 @@ def run(task: str, *, max_iters: int = 10, kernel: bool = True,
             # so the user (or downstream agent) sees them. Best-effort —
             # never block on Ze-verify failure here; the answer still goes out.
             broken_refs: list[str] = []
+            ast_wrong: list[str] = []
             try:
                 from agents.orchestrator import _ze_verify_output
                 _vr = _ze_verify_output(final_text)
@@ -1633,13 +1687,31 @@ def run(task: str, *, max_iters: int = 10, kernel: bool = True,
                     )
             except Exception as _e:
                 log.debug(f"final-stage Ze-verify failed: {_e}")
+            try:
+                from agents.ast_verify import verify_claims as _ast_verify_claims
+                from pathlib import Path as _Path
+                _aim_root = _Path(__file__).resolve().parent.parent
+                _ar = _ast_verify_claims(final_text, search_root=_aim_root)
+                if _ar.bad:
+                    ast_wrong = list(_ar.bad)
+                    head = "; ".join(ast_wrong[:5])
+                    extra = "" if len(ast_wrong) <= 5 else f"; +{len(ast_wrong)-5} more"
+                    final_text = (
+                        f"[Ze-AST] {_ar.ok}/{_ar.total} claims OK; "
+                        f"WRONG ({len(ast_wrong)}): {head}{extra}\n\n"
+                        + final_text
+                    )
+            except Exception as _e:
+                log.debug(f"final-stage AST verify failed: {_e}")
 
             emit({"type": "final", "answer": final_text,
                   "tools_used": tools_used, "iters": it + 1,
-                  "broken_refs": broken_refs})
+                  "broken_refs": broken_refs,
+                  "ast_wrong": ast_wrong})
             return {"answer": final_text, "trace": trace,
                     "tools_used": tools_used, "iters": it + 1,
-                    "broken_refs": broken_refs}
+                    "broken_refs": broken_refs,
+                    "ast_wrong": ast_wrong}
 
         # Multi-action pipeline (A3) — mixed sequential + parallel groups
         if isinstance(action.get("actions"), list) and action["actions"]:
