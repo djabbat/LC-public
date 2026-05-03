@@ -326,6 +326,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-ai-runner"
+version = "0.1.0"
+dependencies = [
+ "aim-ai-ledger",
+ "aim-ai-meta-evaluator",
+ "aim-ai-prompt-versions",
+ "aim-ai-safety-gate",
+ "aim-ai-self-diagnostic",
+ "async-trait",
+ "chrono",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "aim-ai-safety-gate"
 version = "0.1.0"
 dependencies = [
@@ -335,6 +355,19 @@ dependencies = [
  "tempfile",
  "thiserror 2.0.18",
  "tracing",
+]
+
+[[package]]
+name = "aim-ai-self-diagnostic"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "once_cell",
+ "regex",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
