@@ -18,6 +18,13 @@ aim-ai-regression = { path = "../aim-ai-regression" }
 aim-ai-health = { path = "../aim-ai-health" }
 aim-ai-prompt-versions = { path = "../aim-ai-prompt-versions" }
 aim-ai-cases = { path = "../aim-ai-cases" }
+aim-ai-safety-gate = { path = "../aim-ai-safety-gate" }
+aim-ai-suppressions = { path = "../aim-ai-suppressions" }
+aim-ai-prompt-impact = { path = "../aim-ai-prompt-impact" }
+aim-ai-compliance-promoter = { path = "../aim-ai-compliance-promoter" }
+aim-ai-distillation = { path = "../aim-ai-distillation" }
+aim-ai-gap-detector = { path = "../aim-ai-gap-detector" }
+aim-ai-reflexion = { path = "../aim-ai-reflexion" }
 
 serde = { workspace = true }
 serde_json = { workspace = true }
