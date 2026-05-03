@@ -170,6 +170,10 @@ def _build_parser() -> argparse.ArgumentParser:
                     help="auto-validate findings in latest diagnostic")
     g.add_argument("--explain", action="store_true",
                     help="explain score breakdown with concrete recovery actions")
+    g.add_argument("--hive-preview", action="store_true",
+                    help="preview anonymized payload that hive worker would send")
+    g.add_argument("--hive-status", action="store_true",
+                    help="show hive worker sync state + queen state")
 
     # passthroughs
     sub.add_parser("memory", help="memory hygiene scan")
@@ -495,6 +499,22 @@ def _cmd_diag(args) -> int:
     if getattr(args, "explain", False):
         from AI.ai.explainer import summary
         print(summary())
+        return 0
+
+    if getattr(args, "hive_preview", False):
+        from AI.ai.hive_telemetry import preview
+        print(preview())
+        return 0
+
+    if getattr(args, "hive_status", False):
+        from AI.ai.hive_telemetry import summary as ts
+        from AI.ai.hive_queen import summary as qs
+        from AI.ai.hive_consumer import summary as cs
+        print(ts())
+        print()
+        print(qs())
+        print()
+        print(cs())
         return 0
 
     if getattr(args, "validate_findings", False):
