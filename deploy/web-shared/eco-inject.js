@@ -220,12 +220,13 @@
     document.head.appendChild(link);
   }
 
-  // Project essence — rich "what is this project, why, how to use" block
-  // injected on Phoenix subdomains where the home page is a live tool
-  // (Ze simulator, BioSense dashboard, FCLC orchestrator). The block is
-  // collapsible and remembers its state via localStorage. Static landings
-  // (MCOA, CDATA, Hive) carry their own essence in-page and are skipped.
-  function injectEssence(){
+  // Project essence injection was removed 2026-05-04 — Phoenix templates now
+  // ship the essence block directly (see Ze SimulatorLive, BioSense
+  // SimulatorLive, FCLC PageLive). Static landings (MCOA, CDATA, Hive)
+  // carry their own essence in-page. Function kept as a no-op for
+  // graceful degradation if a stale page references it.
+  function injectEssence(){ return; /* superseded by template-level content */
+    /* legacy stub:
     var essences = {
       "ze.longevity.ge": {
         title: "Ze Theory · entropic-geometric ansatz",
@@ -285,6 +286,7 @@
       chev.textContent = nowCollapsed ? "▸" : "▾";
       localStorage.setItem(KEY, nowCollapsed ? "1" : "0");
     });
+    */
   }
 
   function init(){
