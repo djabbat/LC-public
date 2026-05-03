@@ -198,52 +198,45 @@
 <div class="container">
 
   <h2 id="ecosystem" class="section-title">The LongevityCommon ecosystem</h2>
-  <p class="section-lead">Six core sub-projects, a supporting clinical pilot, and a Diamond Open Access journal — each autonomous, sharing one ecosystem. Click any card to open its dedicated subdomain.</p>
+  <p class="section-lead">Six core sub-projects, a supporting clinical pilot, and a Diamond Open Access journal — each autonomous, sharing one ecosystem. Click any card for the full project page.</p>
 
   <div class="grid">
 
     <div class="card link" onclick="location='https://mcoa.longevity.ge'">
       <h3>MCOA <span class="arrow">→</span></h3>
-      <p><strong>Multi-Counter Architecture of Organismal Aging</strong> — meta-framework that formalises aging as a weighted sum of independent damage-accumulation counters (centriolar, telomeric, mitochondrial, epigenetic, proteostatic). Tissue weights w<sub>i</sub> are fixed <em>a priori</em>, preserving falsifiability via Axiom M4: rejected if partial r² for all-cause mortality &lt; 0.05 on any counter on a pre-registered N≥2000 cohort. Manuscript NATAGING-P13741 under Nature Aging review.</p>
-      <p class="card-meta">For: biogerontologists · reviewers · cohort-study designers</p>
+      <p>Multi-Counter Architecture of Organismal Aging — meta-framework of parallel damage-accumulation counters across tissues.</p>
     </div>
 
     <div class="card link" onclick="location='https://cdata.longevity.ge'">
       <h3>CDATA <span class="arrow">→</span></h3>
-      <p><strong>Centriolar Damage Accumulation Theory of Aging</strong> — open hypothesis: progressive polyglutamylation of the mother centriole in adult stem cells acts as a cumulative damage sensor and primary aging driver. The asymmetric inheritance pattern (old centriole stays in stem cell, new one goes to differentiated daughter) makes the lineage permanently exposed to lifelong damage. Provisional MCOA Counter #1 candidate; Cell-DT v3.x sensitivity analysis inconclusive pending GTEx N=948 decomposition. <a href="https://pubmed.ncbi.nlm.nih.gov/36583780">Tkemaladze 2023</a>.</p>
-      <p class="card-meta">For: cell biologists · centriole researchers · stem-cell aging community</p>
+      <p>Centriolar Damage Accumulation Theory of Aging — hypothesis that mother-centriole damage drives stem-cell aging. <a href="https://pubmed.ncbi.nlm.nih.gov/36583780">Tkemaladze 2023</a>.</p>
     </div>
 
     <div class="card link" onclick="location='https://ze.longevity.ge'">
       <h3>Ze Theory <span class="arrow">→</span></h3>
-      <p><strong>Entropic-geometric formalism</strong> for aging-as-decoherence. Central law dτ_Ze/dt = −α·I(Z) where I(Z) is the KL-divergence between actual and modelled state. From this single ansatz the simulator <em>derives</em>: a quadratic CHSH deformation, an LGI-QFI bound (Abboud 2026), and the universal fixed point χ_Ze = 0.45631 at k_λ=1. Subdomain hosts an <strong>interactive Phoenix simulator</strong> — drag k_λ in real time, watch χ_Ze converge.</p>
-      <p class="card-meta">For: theorists · physicists · readers checking the CHSH/LGI derivation</p>
+      <p>Entropy-geometric formalism with a theoretical aging-time invariant. Open interactive simulator.</p>
     </div>
 
     <div class="card link" onclick="location='https://biosense.longevity.ge'">
       <h3>BioSense <span class="arrow">→</span></h3>
       <div class="badges"><span class="badge green">v* empirically verified</span></div>
-      <p><strong>Wearable platform</strong> that measures the χ_Ze aging-activity biomarker from EEG + HRV + respiration + sleep continuously. Variational principle F = E − T·S − λ·I_pred; theoretical fixed point v* = 0.45631 was confirmed empirically on All-of-Us N=500 (95% CI 0.443–0.459). Privacy-first, on-device estimation — raw signals never leave the device. Subdomain hosts a <strong>live dashboard</strong> for sample-data upload and χ_Ze trajectory inspection.</p>
-      <p class="card-meta">For: wearable-device engineers · sleep scientists · exacerbation-prediction clinicians</p>
+      <p>Wearable platform measuring the χ_Ze aging-activity biomarker from EEG, HRV, respiration, and sleep — privacy-first, on-device.</p>
     </div>
 
     <div class="card link" onclick="location='https://fclc.longevity.ge'">
       <h3>FCLC <span class="arrow">→</span></h3>
-      <p><strong>Federated Clinical Learning Cooperative</strong> — privacy-preserving infrastructure that lets hospitals jointly train MCOA counter-weight models without sharing raw patient data. Stack: Rényi differential privacy (Mironov 2017, ε≤1.0/round), k-anonymity (k≥7), Krum Byzantine-robust aggregation, SecAgg+ secure aggregation (Bonawitz 2017). v13.4 PASS milestone reached. Subdomain hosts the <strong>orchestrator dashboard</strong>: federation rounds, ε spent, contribution leaderboard. Active-adversary v14 → GDPR Article 9 unblock planned Q1 2027.</p>
-      <p class="card-meta">For: hospital IT · GDPR officers · clinical AI engineers</p>
+      <p>Federated Clinical Learning Cooperative — privacy-preserving infrastructure for cross-institutional aging research, GDPR-aligned.</p>
     </div>
 
     <div class="card link" onclick="location='https://hive.longevity.ge'">
       <h3>Hive <span class="arrow">→</span></h3>
       <div class="badges"><span class="badge green">queen up</span></div>
-      <p><strong>AIM Hive — federated agent intelligence.</strong> Conceptually patterned on FCLC but for AIM users instead of hospitals: workers (bees) run AIM locally, accumulate diagnostic / reflexion / eval signal, and share an <em>anonymized</em> summary with a queen that distills cross-worker patterns into eval-gated skill updates. L_PRIVACY filter strips PII before send; L_CONSENT lets users opt out per-kind; L_VERIFIABILITY re-runs evals locally before any update is installed. Subdomain hosts <strong>OS-detected install instructions</strong> for Linux/macOS/Windows and a live healthz indicator.</p>
-      <p class="card-meta">For: AIM users running local nodes · agent-tooling researchers</p>
+      <p>Federated AIM agent network — workers run AIM locally, queen distills eval-gated skill updates. Opt-in.</p>
     </div>
 
     <div class="card">
       <h3>Activated</h3>
-      <p><strong>Aqtivirebuli korkoti</strong> (აქტივირებული კორკოტი) anemia-management clinical pilot in Tbilisi via partner Shashviashvili. Provides the real-patient cohort that pre-registered χ_Ze confirmatory analyses run against. EIC Pathfinder Challenges 2026 WP5.</p>
-      <p class="card-meta">For: clinical investigators · IRB reviewers</p>
+      <p>Anemia-management clinical pilot in Tbilisi — real-patient cohort for χ_Ze validation.</p>
     </div>
 
     <div class="card link" onclick="location='https://longevity.ge/rescience/'">
