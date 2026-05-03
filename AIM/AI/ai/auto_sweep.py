@@ -110,15 +110,8 @@ def sweep(*, dry_run: bool = False) -> SweepResult:
     except Exception as e:
         notes.append(f"impact step failed: {e}")
 
-    # Step 5: snapshot the health score so we have a daily trend
-    if not dry_run:
-        try:
-            from AI.ai.health_score import record as record_score
-            record_score()
-        except Exception as e:
-            notes.append(f"score snapshot failed: {e}")
-
-    # Step 6: prune phantom ledger rows (test-fixture leftovers)
+    # Step 5: prune phantom ledger rows (test-fixture leftovers).
+    # Done BEFORE score snapshot so the score reflects post-cleanup state.
     n_phantom = 0
     try:
         from AI.ai.diagnostic_ledger import prune_phantom
@@ -127,7 +120,7 @@ def sweep(*, dry_run: bool = False) -> SweepResult:
     except Exception as e:
         notes.append(f"prune step failed: {e}")
 
-    # Step 7: prune expired finding-suppressions
+    # Step 6: prune expired finding-suppressions
     if not dry_run:
         try:
             from AI.ai.finding_suppressions import prune_expired
@@ -136,6 +129,15 @@ def sweep(*, dry_run: bool = False) -> SweepResult:
                 notes.append(f"removed {n_exp} expired suppression(s)")
         except Exception as e:
             notes.append(f"suppression prune failed: {e}")
+
+    # Step 7: snapshot the health score (post-cleanup) so the daily
+    # trend reflects production state, not test pollution.
+    if not dry_run:
+        try:
+            from AI.ai.health_score import record as record_score
+            record_score()
+        except Exception as e:
+            notes.append(f"score snapshot failed: {e}")
 
     return SweepResult(
         started_at=started,
