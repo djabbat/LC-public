@@ -24,6 +24,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-ai-backup"
+version = "0.1.0"
+dependencies = [
+ "aim-ai-ledger",
+ "chrono",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-ai-cases"
 version = "0.1.0"
 dependencies = [
@@ -109,6 +123,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-ai-prompt-impact"
+version = "0.1.0"
+dependencies = [
+ "aim-ai-ledger",
+ "aim-ai-prompt-versions",
+ "serde",
+ "tempfile",
+ "thiserror 2.0.18",
+]
+
+[[package]]
 name = "aim-ai-prompt-versions"
 version = "0.1.0"
 dependencies = [
@@ -137,6 +162,17 @@ dependencies = [
  "tempfile",
  "thiserror 2.0.18",
  "tracing",
+]
+
+[[package]]
+name = "aim-ai-regression-alert"
+version = "0.1.0"
+dependencies = [
+ "aim-ai-ledger",
+ "aim-ai-regression",
+ "serde",
+ "tempfile",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
