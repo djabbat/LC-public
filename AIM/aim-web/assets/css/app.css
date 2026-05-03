@@ -166,3 +166,21 @@ table.updates td { padding: 6px 8px; border-bottom: 1px solid #f4f4f5; }
 [data-theme="dark"] .comp-v { color: #e0e3eb; }
 [data-theme="dark"] .comp-k { color: #a1a1aa; }
 [data-theme="dark"] .notes { color: #a1a1aa; }
+
+/* Donate CTA — appears in HiveLive + DiagLive */
+.card.donate { background: #fef2f2; border-color: #fecaca; }
+.card.donate h2 { color: #b91c1c; }
+.donate-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #dc2626; color: #fff !important; border-radius: 6px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(220,38,38,0.3); transition: transform 0.15s, background 0.15s; }
+.donate-btn:hover { background: #b91c1c; transform: translateY(-1px); text-decoration: none; }
+[data-theme="dark"] .card.donate { background: #2a1212; border-color: #5b1f1f; }
+[data-theme="dark"] .card.donate h2 { color: #fca5a5; }
+
+/* Top bar — always visible on every aim-web page */
+.aim-topbar { position: sticky; top: 0; z-index: 100; background: #15171f; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.aim-topbar-brand { color: #fff !important; font-weight: 700; font-size: 16px; text-decoration: none; }
+.aim-topbar-brand:hover { color: #fbbf24 !important; }
+.aim-topbar-nav { display: flex; gap: 4px; align-items: center; }
+.aim-topbar-nav a { color: #cbd5e1; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 13px; transition: background 0.15s, color 0.15s; }
+.aim-topbar-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.aim-donate-pill { background: #dc2626 !important; color: #fff !important; font-weight: 600; padding: 6px 14px !important; border-radius: 999px !important; box-shadow: 0 1px 3px rgba(220,38,38,0.4); margin-left: 8px; }
+.aim-donate-pill:hover { background: #b91c1c !important; transform: translateY(-1px); }

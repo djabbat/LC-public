@@ -12,6 +12,8 @@ path = "src/bin/info.rs"
 [dependencies]
 aim-ai-ledger = { path = "../aim-ai-ledger" }
 aim-ai-regression = { path = "../aim-ai-regression" }
+aim-ai-prompt-versions = { path = "../aim-ai-prompt-versions" }
+aim-ai-cases = { path = "../aim-ai-cases" }
 
 serde = { workspace = true }
 serde_json = { workspace = true }

@@ -20,7 +20,9 @@
 //! ledger (`health_scores` table, schema parity with the Python
 //! version), so a single backup covers both.
 
+use aim_ai_cases::validate_dir as validate_cases_dir;
 use aim_ai_ledger::Ledger;
+use aim_ai_prompt_versions::PromptStore;
 use aim_ai_regression::detect as detect_regression;
 use rusqlite::{params, Connection, OpenFlags};
 use serde::{Deserialize, Serialize};
@@ -160,12 +162,64 @@ fn compliance_component(ledger: &Ledger) -> Result<(i64, Vec<String>), HealthErr
 }
 
 fn cases_component() -> (i64, Vec<String>) {
-    // TODO: integrate aim-ai-cases (case_validator) once ported.
-    (W_CASES, vec![])
+    let report = validate_cases_dir(None);
+    if report.n_cases == 0 {
+        // No cases yet — full credit (matches Python policy).
+        return (W_CASES, vec![]);
+    }
+    if report.n_failed == 0 {
+        return (W_CASES, vec![]);
+    }
+    let ratio = report.n_ok as f64 / report.n_cases as f64;
+    let pts = (W_CASES as f64 * ratio).round() as i64;
+    (
+        pts,
+        vec![format!(
+            "cases: {} invalid eval case(s) out of {}",
+            report.n_failed, report.n_cases
+        )],
+    )
 }
 
 fn prompt_drift_component() -> (i64, Vec<String>) {
-    // TODO: integrate aim-ai-prompt-versions once ported.
+    // Prompt-drift component opens the same DB as the ledger, since
+    // PromptStore lives alongside it.
+    let store = match PromptStore::open_default() {
+        Ok(s) => s,
+        Err(e) => {
+            return (
+                0,
+                vec![format!("prompt versions: open failed: {e}")],
+            )
+        }
+    };
+    let drift = match store.drift_since_last(None) {
+        Ok(d) => d,
+        Err(e) => {
+            return (
+                0,
+                vec![format!("prompt versions: drift failed: {e}")],
+            )
+        }
+    };
+    if !drift.prompt_present {
+        return (
+            W_PROMPT_DRIFT / 2,
+            vec!["prompt drift: SELF_DIAGNOSTIC_PROMPT.md missing".to_string()],
+        );
+    }
+    if !drift.have_baseline {
+        return (
+            W_PROMPT_DRIFT / 2,
+            vec!["prompt drift: never fingerprinted yet".to_string()],
+        );
+    }
+    if drift.changed {
+        return (
+            W_PROMPT_DRIFT / 2,
+            vec!["prompt drift: prompt changed since last record".to_string()],
+        );
+    }
     (W_PROMPT_DRIFT, vec![])
 }
 
