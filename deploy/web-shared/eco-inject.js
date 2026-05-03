@@ -37,9 +37,11 @@
     return path.indexOf(l[3]) === 0;
   }
   var nav = links.map(function(l){
-    var act = isActive(l) ? " class=\"active\"" : "";
+    var cls = "";
+    if (isActive(l)) cls = " class=\"active\"";
+    if (l[1] === "Donate") cls = " class=\"donate-cta\"";
     var rel = (l[1] === "Source") ? " rel=\"noopener\"" : "";
-    return "<a href=\"" + l[0] + "\"" + act + rel + ">" + l[1] + "</a>";
+    return "<a href=\"" + l[0] + "\"" + cls + rel + ">" + l[1] + "</a>";
   }).join("\n");
 
   var html = "<div class=\"eco-bar-injected\"><div class=\"eco-inner-i\"><span class=\"eco-brand-i\">LongevityCommon</span><nav class=\"eco-nav-i\">" + nav + "<button type=\"button\" class=\"theme-toggle-i\" aria-label=\"Toggle dark mode\">☾</button></nav></div></div>";
@@ -54,6 +56,9 @@
     ".eco-nav-i a{color:#cbd5e1 !important;padding:6px 12px !important;border-radius:6px !important;font-size:13px !important;font-weight:500 !important;transition:all 0.15s !important;text-decoration:none !important;line-height:1.2 !important;background:transparent !important;border:none !important}",
     ".eco-nav-i a:hover{background:rgba(255,255,255,0.08) !important;color:#fff !important}",
     ".eco-nav-i a.active{background:#4f46e5 !important;color:#fff !important}",
+    ".eco-nav-i a.donate-cta{background:#dc2626 !important;color:#fff !important;font-weight:600 !important;padding:6px 14px !important;border-radius:6px !important;box-shadow:0 1px 3px rgba(220,38,38,0.4) !important}",
+    ".eco-nav-i a.donate-cta:hover{background:#b91c1c !important;color:#fff !important;transform:translateY(-1px) !important}",
+    ".eco-nav-i a.donate-cta::before{content:\"\\2665 \" !important;color:#fff !important;margin-right:2px !important}",
     ".theme-toggle-i{background:transparent !important;border:1px solid rgba(255,255,255,0.35) !important;color:#fff !important;cursor:pointer !important;padding:4px 10px !important;border-radius:4px !important;font-size:16px !important;margin-left:12px !important;line-height:1 !important}",
     ".theme-toggle-i:hover{background:rgba(255,255,255,0.12) !important}",
     "html[data-theme=\"dark\"] body{background:#0f1117 !important;color:#e0e3eb !important}",

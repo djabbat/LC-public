@@ -160,6 +160,17 @@ defmodule AimWebWeb.HiveLive do
         </section>
       </div>
 
+      <section class="card donate">
+        <h2>support AIM</h2>
+        <p class="muted small">
+          AIM is an open-source non-profit project from Georgia Longevity Alliance.
+          The Hive infrastructure is hosted on community-funded servers.
+        </p>
+        <a class="donate-btn" href="https://longevity.ge/#donate" target="_blank" rel="noopener">
+          ♥ Donate to GLA
+        </a>
+      </section>
+
       <section class="card">
         <h2>recent updates</h2>
         <%= if @updates == [] do %>

@@ -224,3 +224,14 @@ section h3 { font-size: 17px; margin: 0 0 12px; }
   .hero .lead { font-size: 17px; }
   .topnav { gap: 12px; }
 }
+
+/* ── donate ──────────────────────────────────────────────── */
+.donate-cta { background: #fef2f2; border-bottom: 1px solid #fecaca; }
+.donate-cta h2 { color: #b91c1c; }
+.donate-cta p { max-width: 720px; color: #52525b; }
+.donate-button { display: inline-block; margin-top: 14px; padding: 12px 26px; background: #dc2626; color: #fff !important; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 10px rgba(220,38,38,0.3); transition: transform 0.15s, background 0.15s; text-decoration: none; }
+.donate-button:hover { background: #b91c1c; transform: translateY(-2px); text-decoration: none; }
+
+html[data-theme="dark"] .donate-cta { background: #2a1212 !important; border-color: #5b1f1f !important; }
+html[data-theme="dark"] .donate-cta h2 { color: #fca5a5 !important; }
+html[data-theme="dark"] .donate-cta p { color: #d8dce4 !important; }
