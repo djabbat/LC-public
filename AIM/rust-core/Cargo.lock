@@ -67,6 +67,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-ai-compliance-promoter"
+version = "0.1.0"
+dependencies = [
+ "aim-ai-ledger",
+ "serde",
+ "tempfile",
+ "thiserror 2.0.18",
+]
+
+[[package]]
 name = "aim-ai-dashboard"
 version = "0.1.0"
 dependencies = [
@@ -226,6 +236,16 @@ dependencies = [
  "tempfile",
  "thiserror 2.0.18",
  "tracing",
+]
+
+[[package]]
+name = "aim-ai-skill-standard"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
