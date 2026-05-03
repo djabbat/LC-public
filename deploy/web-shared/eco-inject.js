@@ -172,8 +172,39 @@
     "html[data-theme=\"dark\"] .section::before,html[data-theme=\"dark\"] .section::after{border-color:#2a2f40 !important}"
   ].join("\n");
 
+  // Favicon — one emoji per subdomain. Idempotent: skip if a non-default
+  // <link rel="icon"> is already present in <head>.
+  function ensureFavicon(){
+    var faviconMap = {
+      "mcoa.longevity.ge":      "\u{1F9EE}",  // abacus — multi-counter
+      "cdata.longevity.ge":     "\u{1F52C}",  // microscope — centriolar damage
+      "ze.longevity.ge":        "\u{1F300}",  // cyclone — Ze entropic-geometric
+      "biosense.longevity.ge":  "\u{1F4E1}",  // satellite — wearable sensor
+      "fclc.longevity.ge":      "\u{1F517}",  // chain — federated
+      "hive.longevity.ge":      "\u{1F41D}",  // bee — Hive (already in queen HTML)
+      "longevity.ge":           "\u{1F331}"   // seedling — root
+    };
+    var emoji = faviconMap[host];
+    if (!emoji) return;
+    // If any <link rel~="icon"> already present and non-default, do nothing.
+    var existing = document.querySelector('link[rel~="icon"]');
+    if (existing && existing.getAttribute("href") &&
+        existing.getAttribute("href").indexOf("favicon.ico") === -1) {
+      return;
+    }
+    if (existing) existing.parentNode.removeChild(existing);
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
+              '<text y=".9em" font-size="90">' + emoji + '</text></svg>';
+    var link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/svg+xml";
+    link.href = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+    document.head.appendChild(link);
+  }
+
   function init(){
     document.head.appendChild(style);
+    ensureFavicon();
     var div = document.createElement("div");
     div.innerHTML = html;
     document.body.insertBefore(div.firstChild, document.body.firstChild);
