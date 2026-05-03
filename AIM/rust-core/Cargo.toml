@@ -1,0 +1,43 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/aim-common",
+    "crates/aim-llm",
+    "crates/aim-rag",
+    "crates/aim-medkb",
+    "crates/aim-doctor",
+    "crates/aim-generalist",
+]
+# Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
+# They are part of the same logical Rust core but compiled independently
+# until we promote AIM/ to the workspace root.
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Proprietary"
+authors = ["AIM team"]
+
+[workspace.dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "signal"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "stream"], default-features = false }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+thiserror = "2"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+async-trait = "0.1"
+parking_lot = "0.12"
+
+aim-common = { path = "crates/aim-common" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

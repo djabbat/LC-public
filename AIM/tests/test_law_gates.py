@@ -417,13 +417,18 @@ def test_bash_blocks_redirection():
 
 
 def test_bash_blocks_dangerous_token_as_argument():
-    """`find . -exec rm {} \\;` is fatal; rm in args is detected."""
+    """`find . -exec rm {} \\;` is fatal — refused before exec is reached.
+
+    2026-05-02 hardening order: per-command flag policy (`-exec` forbidden
+    for `find`) fires *before* the dangerous-token scan. Both refusals are
+    correct security outcomes; we just check the command was refused.
+    The argument-token deny-list is still tested via test_bash_sandbox.py.
+    """
     from agents.generalist import _t_bash
-    # No metachars in this version, but `rm` appears as token →
-    # blocked by token deny-list.
     r = _t_bash("find . -name foo -exec rm")
     assert r.startswith("ERROR:PERMISSION:")
-    assert "rm" in r
+    # Either policy layer is fine; ensure something dangerous was named.
+    assert "-exec" in r or "rm" in r
 
 
 def test_bash_allows_simple_whitelisted_command():

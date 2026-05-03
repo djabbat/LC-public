@@ -75,6 +75,9 @@ def register_tool(name: str, description: str, schema: dict,
      "limit": "int line count (default 200)"},
 )
 def _t_read_file(path: str, offset: int = 0, limit: int = 200) -> str:
+    blocked = _gate_path(path, write=False)
+    if blocked:
+        return blocked
     p = Path(path).expanduser()
     if not p.exists():
         return f"ERROR:NOT_FOUND:{p}"
@@ -139,6 +142,69 @@ def _gate_external(action_type: str, payload: dict,
     return None
 
 
+# ── G2 path sandbox (2026-05-02) ──────────────────────────────────────
+# read/write tools previously accepted any absolute path. The secret-path
+# deny-list and the optional AIM_GENERALIST_ROOT prefix-check below close
+# the read-side leak (e.g. `read_file('~/.aim_env')`) and the write-side
+# escape (e.g. `write_file('~/.ssh/authorized_keys', …)`).
+_SECRET_PATH_RE = re.compile(
+    r"(?:^|/)\.ssh(?:/|$)"
+    r"|(?:^|/)\.aim_env(?:$|\.)"
+    r"|(?:^|/)\.aws(?:/|$)"
+    r"|(?:^|/)\.kube(?:/|$)"
+    r"|(?:^|/)\.gnupg(?:/|$)"
+    r"|(?:^|/)\.netrc(?:$|\.)"
+    r"|(?:^|/)\.config/sops(?:/|$)"
+    r"|/etc/shadow(?:$|-)"
+    r"|/etc/sudoers"
+    r"|/etc/gshadow"
+    r"|(?:^|/)\.bash_history(?:$|\.)"
+    r"|(?:^|/)\.zsh_history(?:$|\.)"
+    r"|(?:^|/)\.npmrc(?:$|\.)"
+    r"|(?:^|/)\.pypirc(?:$|\.)"
+    r"|(?:^|/)\.docker/config\.json"
+)
+
+
+def _gate_path(path: str, *, write: bool) -> Optional[str]:
+    """Validate a filesystem path against the G2 sandbox.
+
+    Returns an ERROR string when the access must be refused, None otherwise.
+    Bypass with AIM_NO_PATH_SANDBOX=1 (only for trusted CLI use).
+
+    Order of checks:
+      1. Resolve path (follows symlinks; rejects un-resolvable parents).
+      2. Match against the secret-path deny-list — applied to both reads
+         and writes, since exfiltration is the primary risk.
+      3. For writes, require the path to live under AIM_GENERALIST_ROOT
+         (default ~/Desktop). This prevents overwriting ~/.bashrc, dotfiles,
+         or anything under /etc, /var, /usr without explicit override.
+    """
+    if os.environ.get("AIM_NO_PATH_SANDBOX") == "1":
+        return None
+    try:
+        p_in = Path(path).expanduser()
+        # For non-existent leaves, resolve(strict=False) still canonicalises
+        # the parent — that's enough to defeat `~/Desktop/../etc/passwd`.
+        p = p_in.resolve()
+    except (RuntimeError, OSError) as e:
+        return f"ERROR:INVALID_INPUT:cannot resolve path: {e}"
+    s = str(p)
+    if _SECRET_PATH_RE.search(s):
+        return (f"ERROR:PERMISSION:path '{p}' matches secret-path deny-list "
+                "(SSH/AWS/GnuPG/aim_env/etc).")
+    if write:
+        root = Path(os.environ.get(
+            "AIM_GENERALIST_ROOT", str(Path.home() / "Desktop")
+        )).expanduser().resolve()
+        try:
+            p.relative_to(root)
+        except ValueError:
+            return (f"ERROR:PERMISSION:write outside AIM_GENERALIST_ROOT "
+                    f"({root}). Set AIM_NO_PATH_SANDBOX=1 to override.")
+    return None
+
+
 def _gate_write(path: str, content: str = "") -> Optional[str]:
     """Run kernel L_PRIVACY + L_CONSENT before any file write.
 
@@ -182,6 +248,9 @@ def _gate_write(path: str, content: str = "") -> Optional[str]:
 )
 def _t_view_file(path: str, start_line: int = 1, end_line: int = 200,
                  context_around: str = "") -> str:
+    blocked = _gate_path(path, write=False)
+    if blocked:
+        return blocked
     p = Path(path).expanduser()
     if not p.exists():
         return f"ERROR:NOT_FOUND:{p}"
@@ -229,7 +298,7 @@ def _t_view_file(path: str, start_line: int = 1, end_line: int = 200,
     {"path": "absolute path", "content": "text to write"},
 )
 def _t_write_file(path: str, content: str) -> str:
-    blocked = _gate_write(path, content)
+    blocked = _gate_path(path, write=True) or _gate_write(path, content)
     if blocked:
         return blocked
     p = Path(path).expanduser()
@@ -245,6 +314,9 @@ def _t_write_file(path: str, content: str) -> str:
     {"path": "abs path", "old_text": "exact match", "new_text": "replacement"},
 )
 def _t_edit_file(path: str, old_text: str, new_text: str) -> str:
+    blocked = _gate_path(path, write=True)
+    if blocked:
+        return blocked
     p = Path(path).expanduser()
     if not p.exists():
         return f"ERROR:NOT_FOUND:{p}"
@@ -288,6 +360,23 @@ def _t_apply_patch(diff: str, strip: int = 0) -> str:
         return "ERROR:INVALID_INPUT:empty diff"
     if "@@" not in diff:
         return "ERROR:INVALID_INPUT:not a unified diff (no @@ hunk markers)"
+    # G2 path sandbox: validate every target path in the diff before
+    # touching the filesystem. The `+++ b/<path>` line names the file
+    # that will receive writes.
+    for line in diff.splitlines():
+        if not line.startswith("+++ "):
+            continue
+        rhs = line[4:].strip()
+        if rhs == "/dev/null":  # delete-file diff has +++ /dev/null
+            continue
+        # Strip the `b/` prefix when strip>0
+        parts = rhs.split("/", strip) if strip > 0 else [rhs]
+        target = parts[-1]
+        # Skip timestamp suffix (some diffs have "path<TAB>2026-…")
+        target = target.split("\t", 1)[0]
+        blocked_path = _gate_path(target, write=True)
+        if blocked_path:
+            return blocked_path
     # L_PRIVACY: scan diff for Patients/ paths or PII patterns
     blocked = _gate_write("(patch)", diff)
     if blocked:
@@ -384,7 +473,18 @@ def _bwrap_available() -> bool:
 
 def _maybe_sandbox(command: str) -> list[str]:
     """If AIM_SANDBOX=1 and bwrap is installed, wrap the command. Otherwise
-    return the command as a normal shell invocation."""
+    return a direct argv list (no shell parsing).
+
+    We always shlex.split into argv so subprocess.Popen runs the binary
+    directly without /bin/sh — this means even if our metachar regex
+    missed something exotic, no shell will interpret it.
+    """
+    try:
+        argv = shlex.split(command)
+    except ValueError:
+        # Fallback: validation should have rejected this earlier; if we
+        # got here with unparseable input, force-fail by returning a no-op.
+        argv = ["false"]
     if os.environ.get("AIM_SANDBOX") == "1" and _bwrap_available():
         return ["bwrap",
                 "--ro-bind", "/", "/",
@@ -394,13 +494,19 @@ def _maybe_sandbox(command: str) -> list[str]:
                 "--unshare-all", "--share-net",
                 "--die-with-parent",
                 "--bind", str(Path.cwd()), str(Path.cwd()),  # writable cwd
-                "/bin/sh", "-c", command]
-    return ["/bin/sh", "-c", command]
+                "--"] + argv
+    return argv
 
 
 _BASH_ALLOW = ("ls", "cat", "head", "tail", "wc", "grep", "find",
                "git", "python", "python3", "pytest", "pip", "echo",
                "diff", "stat", "file", "which")
+# Async bash uses a wider allowlist for build/test workflows. Shells
+# (bash/sh/zsh) and `make` are NOT allowed — they break the gate model.
+_BASH_ASYNC_ALLOW = ("ls", "cat", "head", "tail", "wc", "grep", "find",
+                     "git", "python", "python3", "pytest", "pip", "npm", "yarn",
+                     "ollama", "echo", "diff", "uvicorn", "node", "rsync",
+                     "cargo", "go", "mvn", "gradle")
 # Shell metacharacters that enable command chaining / IO redirection /
 # subshell execution. If any of these appears in the command, the
 # whitelist on "first token" is meaningless.
@@ -411,7 +517,83 @@ _BASH_DANGEROUS_TOKENS = {
     "rm", "mv", "cp", "chmod", "chown", "dd", "mkfs",
     "sudo", "su", "doas", "kill", "killall",
     "curl", "wget", "ncat", "nc", "socat", "ssh", "scp", "sftp",
+    # Shell / arbitrary exec wrappers — never allowed as args.
+    "bash", "sh", "zsh", "fish", "ksh", "csh", "tcsh", "dash",
+    "eval", "exec", "source",
+    # File-mutating helpers that bypass per-command policy.
+    "xargs", "tee", "truncate", "shred",
+    # In-place editors.
+    "ex", "vim", "nvim", "emacs",
 }
+
+# Per-command flag policy. Maps allowlisted first-token → set of forbidden
+# argv tokens (case-sensitive, exact match). This is the second line of
+# defence after metachar / dangerous-token checks: a whitelisted command
+# may still be coerced into arbitrary execution via a single dangerous
+# flag (`python -c`, `find -delete`, `pip install <pypi-pkg>`).
+_BASH_FORBIDDEN_FLAGS = {
+    # python -c / -m run arbitrary code; also disallow privileged stdin tricks
+    # (-i interactive, -P isolated-but-still-arbitrary)
+    "python":  {"-c", "-m", "-i"},
+    "python3": {"-c", "-m", "-i"},
+    # find: actions that mutate FS or execute external commands
+    "find":    {"-delete", "-exec", "-execdir", "-ok", "-okdir",
+                "-fprintf", "-fprint", "-fprint0", "-fls"},
+    # git: subcommands that touch network, config, or remote state
+    "git":     {"config", "remote", "clone", "fetch", "pull", "push",
+                "submodule", "credential"},
+    # pip: install/uninstall execute arbitrary setup.py from PyPI
+    "pip":     {"install", "uninstall", "wheel", "download"},
+    # pytest: --collect-only is fine; -p plugins can load arbitrary code
+    "pytest":  {"-p", "--rootdir", "--import-mode"},
+    # npm / yarn / cargo / go / mvn / gradle (used in async): block install/run
+    "npm":     {"install", "i", "publish", "exec", "run-script"},
+    "yarn":    {"add", "install", "publish", "exec", "run"},
+    "cargo":   {"install", "publish", "run"},
+    "go":      {"install", "get", "run"},
+    "mvn":     {"deploy", "install"},
+    "gradle":  {"publish"},
+}
+
+
+def _validate_bash(command: str, allow: tuple[str, ...]) -> Optional[str]:
+    """Return None if command is safe to execute under the given allowlist,
+    or an "ERROR:..." string explaining why it was rejected.
+
+    Centralises the security gate so sync and async bash share the same
+    policy. Order of checks (most cheap → most specific):
+
+      1. metacharacters that enable chaining / redirection / subshells
+      2. shlex parse (rejects unbalanced quotes etc.)
+      3. first-token allowlist
+      4. per-command forbidden-flag policy (python -c, find -delete, …)
+      5. dangerous-token deny-list scan over remaining argv
+    """
+    if not isinstance(command, str):
+        return "ERROR:INVALID_INPUT:command must be a string"
+    if _BASH_META_RE.search(command):
+        return ("ERROR:PERMISSION:shell metacharacters disallowed (; & | < > "
+                "` $( newline). Run separate bash calls instead of chaining.")
+    try:
+        toks = shlex.split(command)
+    except ValueError as e:
+        return f"ERROR:INVALID_INPUT:cannot parse command: {e}"
+    if not toks:
+        return "ERROR:INVALID_INPUT:empty command"
+    first = toks[0].split("/")[-1]
+    if first not in allow:
+        return (f"ERROR:PERMISSION:command '{first}' not whitelisted; "
+                f"allowed: {allow}")
+    forbidden = _BASH_FORBIDDEN_FLAGS.get(first, set())
+    for t in toks[1:]:
+        if t in forbidden:
+            return (f"ERROR:PERMISSION:flag/subcommand '{t}' forbidden for "
+                    f"'{first}' (deny-list).")
+        bare = t.split("/")[-1]
+        if bare in _BASH_DANGEROUS_TOKENS:
+            return (f"ERROR:PERMISSION:dangerous token '{bare}' not allowed "
+                    "as argument (deny-list)")
+    return None
 
 
 @register_tool(
@@ -425,30 +607,9 @@ _BASH_DANGEROUS_TOKENS = {
     {"command": "shell command string"},
 )
 def _t_bash(command: str) -> str:
-    if not isinstance(command, str):
-        return "ERROR:INVALID_INPUT:command must be a string"
-    if _BASH_META_RE.search(command):
-        return ("ERROR:PERMISSION:shell metacharacters disallowed (; & | < > "
-                "` $( newline). Run separate bash calls instead of chaining.")
-    try:
-        toks = shlex.split(command)
-    except ValueError as e:
-        return f"ERROR:INVALID_INPUT:cannot parse command: {e}"
-    if not toks:
-        return "ERROR:INVALID_INPUT:empty command"
-    first = toks[0].split("/")[-1]
-    if first not in _BASH_ALLOW:
-        return (f"ERROR:PERMISSION:command '{first}' not whitelisted; "
-                f"allowed: {_BASH_ALLOW}")
-    # Even after first-token whitelist, scan tokens for known-dangerous
-    # binaries that might appear as args (e.g. `python3 -c "import os; ..."`
-    # is already blocked by the metachar check; this catches `xargs rm`-style
-    # tricks, `find ... -exec rm`, etc.).
-    for t in toks[1:]:
-        bare = t.split("/")[-1]
-        if bare in _BASH_DANGEROUS_TOKENS:
-            return (f"ERROR:PERMISSION:dangerous token '{bare}' not allowed "
-                    "as argument (deny-list)")
+    err = _validate_bash(command, _BASH_ALLOW)
+    if err is not None:
+        return err
     cmd_list = _maybe_sandbox(command)
     try:
         proc = subprocess.run(cmd_list, capture_output=True,
@@ -535,17 +696,25 @@ _BG_JOBS_LOCK = threading.RLock()
 )
 def _t_bash_async(command: str, cwd: Optional[str] = None) -> str:
     import secrets as _sec, tempfile
-    allow = ("ls", "cat", "head", "tail", "wc", "grep", "find",
-             "git", "python", "python3", "pytest", "pip", "npm", "yarn",
-             "make", "bash", "sh", "ollama", "echo", "diff",
-             "uvicorn", "node", "rsync")
-    first = (shlex.split(command) or [""])[0].split("/")[-1]
-    if first not in allow:
-        return f"ERROR:PERMISSION:command '{first}' not whitelisted for bash_async"
+    err = _validate_bash(command, _BASH_ASYNC_ALLOW)
+    if err is not None:
+        return err
+    # cwd hardening — must be an existing directory, no traversal tricks.
+    if cwd is not None:
+        try:
+            cwd_p = Path(cwd).expanduser().resolve(strict=True)
+        except (FileNotFoundError, RuntimeError, OSError) as e:
+            return f"ERROR:INVALID_INPUT:cwd not accessible: {e}"
+        if not cwd_p.is_dir():
+            return f"ERROR:INVALID_INPUT:cwd is not a directory: {cwd_p}"
+        cwd = str(cwd_p)
     job_id = "j" + _sec.token_hex(4)
     out_path = Path(tempfile.gettempdir()) / f"aim_{job_id}.log"
     f = out_path.open("w", encoding="utf-8")
-    proc = subprocess.Popen(command, shell=True, stdout=f, stderr=subprocess.STDOUT,
+    # shell=False — Popen receives an argv list; no shell parsing means
+    # metacharacters in args are literal even if our regex missed them.
+    cmd_list = _maybe_sandbox(command)
+    proc = subprocess.Popen(cmd_list, stdout=f, stderr=subprocess.STDOUT,
                             cwd=cwd, text=True)
     _BG_JOBS[job_id] = {"proc": proc, "log": out_path,
                         "started": __import__("time").time(),
