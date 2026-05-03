@@ -42,6 +42,33 @@ from agents.kernel import (
 
 log = logging.getLogger("aim.orchestrator")
 
+# ── F1 reflexion auto-pull (2026-05-03) ──────────────────────────────
+
+
+def _reflexion_auto_enabled() -> bool:
+    import os
+    return os.environ.get("AIM_REFLEXION_AUTO") == "1"
+
+
+def _gather_reflexion_hints(decision: Decision) -> list[str]:
+    """Return up to 3 recent verbal reflections for this task class.
+
+    The bucket key is taken from `decision.action_type`; if reflexion
+    has no bucket for it, we fall back to the description text classifier.
+    """
+    try:
+        from agents import reflexion as rfx
+    except Exception:
+        return []
+    try:
+        bucket = decision.action_type or rfx.classify(decision.description or "")
+        return list(rfx.recent_reflections(decision.description or decision.id,
+                                            n=3, bucket=bucket)) or []
+    except Exception as e:
+        log.debug("reflexion gather failed: %s", e)
+        return []
+
+
 # action_type families that need extended-law gating.
 _PRIVACY_ACTIONS = {
     "email_send", "web_post", "git_push_public", "upload_external",
@@ -339,9 +366,33 @@ def orchestrate(
             _persist_ze_event(decision, blocked_at="L_CONSENT")
             return f"ERROR:KERNEL:{reason}"
 
+    # 3.5) Reflexion hints — F1 (2026-05-03). When AIM_REFLEXION_AUTO=1
+    # we attach recent verbal-failure notes for this task class into
+    # kwargs["_aim_reflexion_hints"]. Service_fn can read them or ignore;
+    # downstream prompt-building wraps see them via `kwargs.get(...)`.
+    if _reflexion_auto_enabled():
+        hints = _gather_reflexion_hints(decision)
+        if hints:
+            kwargs = dict(kwargs)
+            kwargs["_aim_reflexion_hints"] = hints
+
     # 4) Dispatch to the actual service.
     try:
         out = service_fn(*args, **kwargs)
+    except TypeError as e:
+        # The service likely doesn't accept _aim_reflexion_hints. Drop the
+        # hint and retry once — never let reflexion break a real call.
+        if "_aim_reflexion_hints" in kwargs and "_aim_reflexion_hints" in str(e):
+            kwargs = {k: v for k, v in kwargs.items()
+                      if k != "_aim_reflexion_hints"}
+            try:
+                out = service_fn(*args, **kwargs)
+            except Exception as e2:
+                _persist_ze_event(decision, blocked_at=f"INTERNAL:{type(e2).__name__}")
+                return f"ERROR:INTERNAL:{decision.id}: {e2}"
+        else:
+            _persist_ze_event(decision, blocked_at=f"INTERNAL:{type(e).__name__}")
+            return f"ERROR:INTERNAL:{decision.id}: {e}"
     except Exception as e:
         _persist_ze_event(decision, blocked_at=f"INTERNAL:{type(e).__name__}")
         return f"ERROR:INTERNAL:{decision.id}: {e}"
