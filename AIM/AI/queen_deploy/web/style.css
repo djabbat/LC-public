@@ -171,6 +171,43 @@ section h3 { font-size: 17px; margin: 0 0 12px; }
 .card h3 { color: var(--accent-dark); }
 .card p  { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
 
+/* ── install (OS detection) ────────────────────────────────── */
+
+.install .lead-sm { color: var(--muted); margin: 0 0 18px; max-width: 720px; }
+.os-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 12px;
+  flex-wrap: wrap;
+}
+.os-tabs button {
+  font: inherit;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--fg);
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.os-tabs button:hover { border-color: var(--accent); }
+.os-tabs button.active {
+  border-bottom-color: var(--accent);
+  background: var(--code-bg);
+  color: var(--code-fg);
+}
+.install pre {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 16px 18px;
+  border-radius: 0 6px 6px 6px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+.os-note { font-size: 13px; margin: 12px 0 0; }
+
 /* ── footer ─────────────────────────────────────────────────── */
 
 .site-footer {
