@@ -166,6 +166,8 @@ def _build_parser() -> argparse.ArgumentParser:
                     help="restore from a backup JSON file")
     g.add_argument("--validate-findings", action="store_true",
                     help="auto-validate findings in latest diagnostic")
+    g.add_argument("--explain", action="store_true",
+                    help="explain score breakdown with concrete recovery actions")
 
     # passthroughs
     sub.add_parser("memory", help="memory hygiene scan")
@@ -481,6 +483,11 @@ def _cmd_diag(args) -> int:
             print(f"{db}:")
             for t, n in tcounts.items():
                 print(f"  {verb} {n} into {t}")
+        return 0
+
+    if getattr(args, "explain", False):
+        from AI.ai.explainer import summary
+        print(summary())
         return 0
 
     if getattr(args, "validate_findings", False):
