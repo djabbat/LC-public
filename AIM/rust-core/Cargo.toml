@@ -145,6 +145,8 @@ members = [
     "crates/aim-project-pdf-export",
     "crates/aim-project-graph",
     "crates/aim-auth",
+    "crates/aim-ui-theme",
+    "crates/aim-telegram-extras",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
