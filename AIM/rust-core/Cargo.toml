@@ -53,6 +53,7 @@ members = [
     "crates/aim-evals",
     "crates/aim-literature-watch",
     "crates/aim-citation-linter",
+    "crates/aim-complexity",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
