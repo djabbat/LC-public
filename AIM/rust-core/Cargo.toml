@@ -86,6 +86,7 @@ members = [
     "crates/aim-voice",
     "crates/aim-regimen-validator",
     "crates/aim-own-pubs-tracker",
+    "crates/aim-recall-perf",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently

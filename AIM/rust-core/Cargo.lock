@@ -1057,6 +1057,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-recall-perf"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "parking_lot",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-reflexion"
 version = "0.1.0"
 dependencies = [
