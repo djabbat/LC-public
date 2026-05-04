@@ -944,6 +944,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-memory-deduplicate"
+version = "0.1.0"
+dependencies = [
+ "regex",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-memory-health"
 version = "0.1.0"
 dependencies = [
