@@ -970,6 +970,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-memory-priority"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "regex",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-notify"
 version = "0.1.0"
 dependencies = [
