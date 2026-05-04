@@ -984,6 +984,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-memory-versioning"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "hex",
+ "md-5",
+ "serde",
+ "serde_json",
+ "sha1",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-notify"
 version = "0.1.0"
 dependencies = [
