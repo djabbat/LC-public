@@ -93,6 +93,7 @@ members = [
     "crates/aim-memory-deduplicate",
     "crates/aim-project-archive",
     "crates/aim-memory-priority",
+    "crates/aim-memory-versioning",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
