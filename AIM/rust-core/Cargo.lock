@@ -1036,6 +1036,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-project-archive"
+version = "0.1.0"
+dependencies = [
+ "aim-project-owner",
+ "chrono",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-project-owner"
 version = "0.1.0"
 dependencies = [
