@@ -119,6 +119,8 @@ members = [
     "crates/aim-chat",
     "crates/aim-context-compressor",
     "crates/aim-session-manager",
+    "crates/aim-aider-tool",
+    "crates/aim-speculative-prefetch",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
