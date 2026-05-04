@@ -137,6 +137,8 @@ members = [
     "crates/aim-interactions",
     "crates/aim-diff-analyser",
     "crates/aim-labs",
+    "crates/aim-patient-dedup",
+    "crates/aim-patient-memory",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
