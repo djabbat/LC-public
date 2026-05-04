@@ -1020,6 +1020,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-smart-routing"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "parking_lot",
+ "regex",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-tool-synthesis"
 version = "0.1.0"
 dependencies = [
