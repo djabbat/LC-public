@@ -519,6 +519,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-evals"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "parking_lot",
+ "regex",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
 name = "aim-generalist"
 version = "0.1.0"
 dependencies = [
