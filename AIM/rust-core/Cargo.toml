@@ -55,6 +55,7 @@ members = [
     "crates/aim-citation-linter",
     "crates/aim-complexity",
     "crates/aim-prompt-optimizer",
+    "crates/aim-ast-verify",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
