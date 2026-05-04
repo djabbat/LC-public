@@ -100,6 +100,7 @@ members = [
     "crates/aim-memory-store",
     "crates/aim-memory-date-correction",
     "crates/aim-memory-cli",
+    "crates/aim-memory-tui",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
