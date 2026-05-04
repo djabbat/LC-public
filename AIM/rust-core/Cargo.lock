@@ -537,6 +537,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-cost-monitor"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "chrono",
+ "parking_lot",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "aim-deadline-scanner"
 version = "0.1.0"
 dependencies = [
