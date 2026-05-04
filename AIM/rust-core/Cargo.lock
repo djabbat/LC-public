@@ -269,6 +269,8 @@ dependencies = [
  "aim-ai-case-archiver",
  "aim-ai-ledger",
  "aim-ai-regression",
+ "aim-deadline-scanner",
+ "chrono",
  "serde",
  "serde_json",
  "tempfile",
@@ -432,6 +434,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "aim-citation-guard"
+version = "0.1.0"
+dependencies = [
+ "once_cell",
+ "regex",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "thiserror 2.0.18",
+]
+
+[[package]]
 name = "aim-common"
 version = "0.1.0"
 dependencies = [
@@ -455,6 +469,18 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "rusqlite",
+ "serde",
+ "tempfile",
+ "thiserror 2.0.18",
+]
+
+[[package]]
+name = "aim-deadline-scanner"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "once_cell",
+ "regex",
  "serde",
  "tempfile",
  "thiserror 2.0.18",

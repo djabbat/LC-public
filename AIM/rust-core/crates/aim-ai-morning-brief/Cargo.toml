@@ -16,6 +16,8 @@ path = "src/bin/brief.rs"
 aim-ai-ledger = { path = "../aim-ai-ledger" }
 aim-ai-regression = { path = "../aim-ai-regression" }
 aim-ai-case-archiver = { path = "../aim-ai-case-archiver" }
+aim-deadline-scanner = { path = "../aim-deadline-scanner" }
+chrono = { workspace = true }
 
 serde = { workspace = true }
 serde_json = { workspace = true }
