@@ -73,6 +73,7 @@ members = [
     "crates/aim-kpi-tracker",
     "crates/aim-brief-preamble",
     "crates/aim-smart-routing",
+    "crates/aim-stakeholder-tracker",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
