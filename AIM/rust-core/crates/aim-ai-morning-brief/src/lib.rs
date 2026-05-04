@@ -32,10 +32,9 @@ pub fn render_struct(ledger: &Ledger) -> Brief {
     let (regr_text, regr_bad) = section_regression(ledger);
     let ledger_text = section_ledger(ledger);
     let archive_text = section_archive(ledger);
-    // Wiring + deadlines are pending other crates.
+    // Wiring probe is still on the to-do list (agents/doctor.py).
     let wiring_text = "(wiring probe pending Rust port of agents/doctor)".to_string();
-    let deadlines_text =
-        "(deadline scanner pending Rust port of agents/deadline_scanner)".to_string();
+    let deadlines_text = section_deadlines();
 
     let overall_bad = regr_bad;
     let headline = if overall_bad {
@@ -154,6 +153,43 @@ fn section_archive(ledger: &Ledger) -> String {
         "{} regression case(s) ready to archive — run `aim ai archive-cases` to retire",
         cands.len()
     )
+}
+
+fn section_deadlines() -> String {
+    let today = chrono::Local::now().date_naive();
+    let opts = aim_deadline_scanner::ScanOpts::default();
+    let deadlines = aim_deadline_scanner::scan_memory(today, &opts);
+    if deadlines.is_empty() {
+        return "(no deadlines on the radar)".into();
+    }
+    let buckets = aim_deadline_scanner::by_horizon(&deadlines, today);
+    let n_high_pending = buckets.today.len() + buckets.this_week.len()
+        + buckets
+            .this_month
+            .iter()
+            .filter(|d| matches!(d.criticality, aim_deadline_scanner::Criticality::High))
+            .count();
+    if n_high_pending == 0 {
+        return "(no high-criticality pending deadlines)".into();
+    }
+    let mut out = vec![format!("{} high-criticality pending:", n_high_pending)];
+    let mut shown: Vec<&aim_deadline_scanner::Deadline> =
+        buckets.today.iter().chain(buckets.this_week.iter()).collect();
+    shown.sort_by_key(|d| d.when);
+    for d in shown.iter().take(5) {
+        let delta = d.days_from(today);
+        let when = if delta == 0 {
+            "TODAY".to_string()
+        } else {
+            format!("+{}d", delta)
+        };
+        let label: String = d.label.replace('\n', " ").chars().take(80).collect();
+        out.push(format!("  • {:>5}  {}  {}", when, d.when, label));
+    }
+    if shown.len() > 5 {
+        out.push(format!("  (+{} more)", shown.len() - 5));
+    }
+    out.join("\n")
 }
 
 #[cfg(test)]
