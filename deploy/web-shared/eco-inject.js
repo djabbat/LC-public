@@ -257,6 +257,15 @@
     "html[data-theme=\"dark\"] header.site-header nav a,html[data-theme=\"dark\"] header.header nav a,html[data-theme=\"dark\"] .aim-subnav nav a,html[data-theme=\"dark\"] header.site-header .topnav a{color:#cbd5e1 !important}",
     "html[data-theme=\"dark\"] header.site-header nav a:hover,html[data-theme=\"dark\"] header.header nav a:hover,html[data-theme=\"dark\"] .aim-subnav nav a:hover{background:#1a2440 !important;color:#88a8ff !important}",
     "html[data-theme=\"dark\"] header.site-header nav a.active,html[data-theme=\"dark\"] header.header nav a.active,html[data-theme=\"dark\"] .aim-subnav nav a.active{background:#4f46e5 !important;color:#fff !important}",
+
+    /* ── Bottom language switcher (auto-injected on all subdomains) */
+    ".lc-lang-bar{background:#fff !important;border-top:1px solid #e2e8f0 !important;padding:14px 1.5rem !important;font-family:Inter,sans-serif !important}",
+    ".lc-lang-bar-inner{max-width:1100px !important;margin:0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:0.6rem !important;flex-wrap:wrap !important}",
+    ".lc-lang-bar label{color:#64748b !important;font-size:0.8125rem !important;font-weight:500 !important}",
+    ".lc-lang-bar select{background:#fff !important;color:#0f172a !important;border:1px solid #cbd5e1 !important;border-radius:6px !important;padding:5px 9px !important;font-size:0.875rem !important;font-family:inherit !important;cursor:pointer !important}",
+    "html[data-theme=\"dark\"] .lc-lang-bar{background:#15171f !important;border-top-color:#2a2f40 !important}",
+    "html[data-theme=\"dark\"] .lc-lang-bar label{color:#a0a8b5 !important}",
+    "html[data-theme=\"dark\"] .lc-lang-bar select{background:#1a1d28 !important;color:#e0e3eb !important;border-color:#2a2f40 !important}",
     "html .container{padding:4.5rem 2rem !important}",
     /* NOTE: hero gradient/background is owned by each subdomain — Hive
      * has its own light fade, AIM has its own native styles, home has
@@ -494,9 +503,7 @@
   function injectSubHero(){
     var spec = SUB_HERO[host];
     if (!spec) return;
-    // Idempotent — only skip if WE already injected one. Native
-    // <section class="hero"> from the page itself (e.g. hive's light
-    // fade) is allowed to coexist below our indigo banner.
+    // Idempotent — only skip if WE already injected one.
     if (document.querySelector(".lc-sub-hero")) return;
     var sec = document.createElement("section");
     sec.className = "lc-sub-hero";
@@ -506,7 +513,16 @@
         '<h1>' + spec.title + '</h1>' +
         '<p>' + spec.desc + '</p>' +
       '</div>';
-    // Insert directly after the eco-bar (which is body's first child).
+    // Order: eco-bar → site own-header → lc-sub-hero → content.
+    // Insert AFTER the page's own <header> if present, otherwise
+    // directly after the eco-bar.
+    var ownHeader = document.querySelector(
+      "header.site-header, header.header, .aim-subnav, header[data-aim-subnav]"
+    );
+    if (ownHeader && ownHeader.parentNode) {
+      ownHeader.parentNode.insertBefore(sec, ownHeader.nextSibling);
+      return;
+    }
     var bar = document.querySelector(".eco-bar-injected");
     if (bar && bar.nextSibling) {
       document.body.insertBefore(sec, bar.nextSibling);
@@ -552,6 +568,48 @@
     });
   }
 
+  // Bottom-of-page language switcher — same UX as AIM's subnav lang
+  // selector but rendered as a uniform bar above the page footer
+  // on every subdomain. Persists choice via ?locale=XX query param
+  // (Phoenix LocaleHook + AIM I18n.parse both honour it).
+  var LANG_NAMES = [
+    ["en", "English"], ["fr", "Français"], ["es", "Español"],
+    ["ru", "Русский"], ["zh", "中文"], ["ar", "العربية"],
+    ["ka", "ქართული"]
+  ];
+  function currentLocale(){
+    var q = new URLSearchParams(window.location.search).get("locale");
+    if (q) return q;
+    var html = document.documentElement.getAttribute("lang");
+    if (html) return html.split("-")[0];
+    return "en";
+  }
+  function injectLangBar(){
+    if (document.querySelector(".lc-lang-bar")) return;
+    var bar = document.createElement("div");
+    bar.className = "lc-lang-bar";
+    var sel = LANG_NAMES.map(function(p){
+      var sel = (currentLocale() === p[0]) ? " selected" : "";
+      return '<option value="' + p[0] + '"' + sel + '>' + p[1] + '</option>';
+    }).join("");
+    bar.innerHTML =
+      '<div class="lc-lang-bar-inner">' +
+        '<label for="lc-lang-select">🌐 Language</label>' +
+        '<select id="lc-lang-select" aria-label="Select language">' + sel + '</select>' +
+      '</div>';
+    var footer = document.querySelector("footer");
+    if (footer) {
+      footer.parentNode.insertBefore(bar, footer);
+    } else {
+      document.body.appendChild(bar);
+    }
+    bar.querySelector("select").addEventListener("change", function(e){
+      var url = new URL(window.location.href);
+      url.searchParams.set("locale", e.target.value);
+      window.location.href = url.toString();
+    });
+  }
+
   // On Hive: a duplicate hero appears because the page already ships
   // a native <section class="hero"> covering the same topic. Hide the
   // native one — our injected .lc-sub-hero is the canonical brand
@@ -574,6 +632,7 @@
       injectSubHero();
       dedupeHiveHero();
       forceHeroBranding();
+      injectLangBar();
       injectEssence();
       return;
     }
@@ -583,6 +642,7 @@
     injectSubHero();
     dedupeHiveHero();
     forceHeroBranding();
+    injectLangBar();
     injectEssence();
     var btn = document.querySelector(".theme-toggle-i");
     function syncIcon(){
