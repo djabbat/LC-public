@@ -172,6 +172,10 @@ members = [
     "crates/aim-config",
     "crates/aim-rate-limit",
     "crates/aim-webhooks",
+    "crates/aim-db",
+    "crates/aim-user-keys",
+    "crates/aim-lab-reference",
+    "crates/aim-llm-router",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.
 # They are part of the same logical Rust core but compiled independently
