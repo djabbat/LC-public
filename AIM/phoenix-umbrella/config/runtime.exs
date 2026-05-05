@@ -19,7 +19,14 @@ secret_key_base =
 host = System.get_env("PHX_HOST") || "127.0.0.1"
 prod? = env == :prod
 
+# Releases set PHX_SERVER=true; the umbrella has no Application that
+# auto-starts the Endpoints, so without `server: true` the HTTP
+# listener never binds. Honour both PHX_SERVER and a default of true
+# in :prod so `mix release` boots cleanly.
+phx_server? = System.get_env("PHX_SERVER") == "true" or prod?
+
 config :aim_web, AimWeb.Endpoint,
+  server: phx_server?,
   url: [host: host, port: if(prod?, do: 443, else: 4002),
         scheme: if(prod?, do: "https", else: "http")],
   http: [
@@ -29,6 +36,7 @@ config :aim_web, AimWeb.Endpoint,
   secret_key_base: secret_key_base
 
 config :aim_gateway, AimGateway.Endpoint,
+  server: phx_server?,
   http: [
     ip: if(prod?, do: {0, 0, 0, 0}, else: {127, 0, 0, 1}),
     port: String.to_integer(System.get_env("AIM_GATEWAY_PORT") || "4003")
