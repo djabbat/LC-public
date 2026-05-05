@@ -6,7 +6,7 @@
     <meta name="csrf-token" content={Plug.CSRFProtection.get_csrf_token()} />
     <title><%= AimWeb.I18n.t("app.title", assigns[:locale] || :en) %> · LongevityCommon</title>
     <link rel="icon" type="image/svg+xml"
-          href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%E2%8C%AC%3C/text%3E%3C/svg%3E" />
+          href={"data:image/svg+xml;utf8," <> URI.encode(~s(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#e0e7ff"/><circle cx="50" cy="50" r="32" fill="#312e81"/><circle cx="50" cy="50" r="14" fill="#a5b4fc"/></svg>))} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -408,7 +408,7 @@
       html[data-theme="dark"] .btn-ghost { color: #fff !important; border-color: rgba(255,255,255,0.4) !important; }
     </style>
 
-    <script src="https://longevity.ge/eco-inject.js?v=57" defer></script>
+    <script src="https://longevity.ge/eco-inject.js?v=58" defer></script>
     <script>
       // Read shared theme cookie (.longevity.ge), fall back to localStorage,
       // and apply data-theme="dark" pre-paint to avoid FOUC. Sync theme-toggle button
