@@ -34,6 +34,18 @@
 </header>
 <% end %>
 <%= @inner_content %>
+<div class="lc-lang-bar">
+  <div class="lc-lang-bar-inner">
+    <form method="get">
+      <label for="lc-lang-select">🌐 Language</label>
+      <select id="lc-lang-select" name="locale" onchange="this.form.submit()">
+        <%= for loc <- AimWeb.I18n.locales() do %>
+          <option value={loc} selected={loc == @locale}><%= AimWeb.I18n.name(loc) %></option>
+        <% end %>
+      </select>
+    </form>
+  </div>
+</div>
 <footer class="aim-footer">
   AIM · 178 Rust crates · 2531 tests · 0 warnings ·
   <a href="https://github.com/djabbat/LongevityCommon-public" target="_blank" rel="noopener">source</a> ·

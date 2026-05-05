@@ -642,6 +642,9 @@
     return "en";
   }
   function injectLangBar(){
+    // Idempotent — Phoenix subdomains (e.g. AIM) may already render
+    // <div class="lc-lang-bar"> server-side; in that case we don't
+    // need to inject another.
     if (document.querySelector(".lc-lang-bar")) return;
     var bar = document.createElement("div");
     bar.className = "lc-lang-bar";
