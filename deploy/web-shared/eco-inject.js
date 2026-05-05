@@ -272,7 +272,10 @@
     /* HERO must stay indigo + white in BOTH themes. Highest specificity
      * via html.html attribute trick + tag selector chain. !important on
      * everything so subdomain CSS or our broad dark fallback can't win. */
-    "html .hero,html body .hero,html[data-theme=\"dark\"] .hero,html[data-theme=\"dark\"] body .hero,html[data-theme=\"dark\"] body section.hero{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 35%,#4338ca 75%,#6366f1 100%) !important;color:#fff !important;padding:4rem 2.5rem !important;position:relative !important;overflow:hidden !important}",
+    "html .hero,html body .hero,html[data-theme=\"dark\"] .hero,html[data-theme=\"dark\"] body .hero,html[data-theme=\"dark\"] body section.hero,html .page-hero,html body .page-hero,html[data-theme=\"dark\"] .page-hero,html[data-theme=\"dark\"] body .page-hero{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 35%,#4338ca 75%,#6366f1 100%) !important;color:#fff !important;padding:3rem 2rem !important;position:relative !important;overflow:hidden !important}",
+    "html .page-hero h1,html .page-hero p,html .page-hero a,html .page-hero .breadcrumb,html .page-hero .breadcrumb a,html[data-theme=\"dark\"] .page-hero,html[data-theme=\"dark\"] .page-hero *{color:#fff !important;background:transparent !important}",
+    "html .page-hero a{opacity:0.9 !important}",
+    "html .page-hero-inner{max-width:1100px !important;margin:0 auto !important;position:relative !important}",
     "html .hero::before,html body .hero::before{content:'' !important;position:absolute !important;top:0 !important;right:0 !important;width:60% !important;height:100% !important;background:radial-gradient(circle at top right,rgba(167,139,250,0.25),transparent 60%) !important;pointer-events:none !important}",
     "html .hero,html .hero *,html body .hero,html body .hero *{color:#fff !important}",
     "html .hero h1,html .hero h2,html .hero h3,html .hero h4,html .hero .hero-title,html .hero strong,html .hero em,html .hero a,html body .hero h1{color:#fff !important;background:transparent !important}",
@@ -488,15 +491,15 @@
   // text descendant so it beats any subdomain CSS or our broad dark
   // cascade. Scoped to home (longevity.ge) and AIM Phoenix native hero.
   function forceHeroBranding(){
-    // Apply to every host that has a .hero (home, AIM, future);
-    // skip Hive because we already display:none its native hero.
+    // Apply to every host with a .hero / .page-hero (home, /team/,
+    // /grants/, AIM, future); skip Hive because we already display:none
+    // its native hero.
     if (host === "hive.longevity.ge") return;
-    var heroes = document.querySelectorAll('.hero');
+    var heroes = document.querySelectorAll('.hero, .page-hero');
     var grad = 'linear-gradient(135deg,#1e1b4b 0%,#312e81 35%,#4338ca 75%,#6366f1 100%)';
     heroes.forEach(function(h){
       h.style.setProperty('background', grad, 'important');
       h.style.setProperty('color', '#fff', 'important');
-      // Walk every descendant — force inline color:white !important.
       var all = h.querySelectorAll('*');
       for (var i = 0; i < all.length; i++) {
         all[i].style.setProperty('color', '#fff', 'important');
