@@ -709,6 +709,21 @@
     hero.parentNode.insertBefore(ownHeader, hero.nextSibling);
   }
 
+  // FCLC ships a <details><summary>EN</summary>… dropdown lang picker
+  // styled with Tailwind. Hide it so the injected <select> matches AIM.
+  function dedupeFclcLang(){
+    if (host !== "fclc.longevity.ge") return;
+    document.querySelectorAll("header").forEach(function(h){
+      if (h.classList.contains("eco-bar-injected")) return;
+      h.querySelectorAll("details").forEach(function(d){
+        var sum = d.querySelector("summary");
+        if (sum && /^[A-Z]{2}$/.test(sum.textContent.trim())) {
+          d.style.setProperty("display", "none", "important");
+        }
+      });
+    });
+  }
+
   function dedupeHiveHero(){
     if (host !== "hive.longevity.ge") return;
     document.querySelectorAll('section.hero').forEach(function(h){
@@ -726,6 +741,7 @@
     if (document.querySelector(".eco-bar-injected")) {
       injectSubHero();
       dedupeHiveHero();
+      dedupeFclcLang();
       relocateOwnHeader();
       injectOwnHeader();
       forceHeroBranding();
@@ -738,6 +754,7 @@
     document.body.insertBefore(div.firstChild, document.body.firstChild);
     injectSubHero();
     dedupeHiveHero();
+    dedupeFclcLang();
     relocateOwnHeader();
     injectOwnHeader();
     forceHeroBranding();
@@ -774,6 +791,7 @@
   function reapply(){
     if (typeof injectSubHero === "function") injectSubHero();
     if (typeof dedupeHiveHero === "function") dedupeHiveHero();
+    if (typeof dedupeFclcLang === "function") dedupeFclcLang();
     if (typeof relocateOwnHeader === "function") relocateOwnHeader();
     if (typeof injectOwnHeader === "function") injectOwnHeader();
     if (typeof addLangToOwnHeader === "function") addLangToOwnHeader();
