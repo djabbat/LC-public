@@ -192,6 +192,17 @@ pub async fn react_to_post(
     // Recalculate score
     update_post_score(&state, post_id).await?;
 
+    // Phase 4.5 broadcast bridge — feed clients refresh on reaction
+    // change so reaction counts update live. Best-effort.
+    let _ = sqlx::query("SELECT pg_notify('feed_events', $1)")
+        .bind(serde_json::json!({
+            "kind": "post_updated",
+            "post_id": post_id,
+            "reason": "reaction",
+        }).to_string())
+        .execute(&state.db)
+        .await;
+
     Ok(StatusCode::NO_CONTENT)
 }
 
