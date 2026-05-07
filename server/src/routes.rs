@@ -109,3 +109,4 @@ fn protected_routes(state: AppState) -> Router<AppState> {
         .merge(general_router)
         .route_layer(middleware::from_fn_with_state(state, require_auth))
 }
+// autopull rebuild trigger 2026-05-08
