@@ -21,8 +21,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now longevitycommon-server.service
 sudo systemctl restart longevitycommon-server.service
 sleep 2
-curl -sf http://127.0.0.1:8080/health > /dev/null \
-    && echo "  ✓ server :8080 healthy" \
+curl -sf http://127.0.0.1:4600/health > /dev/null \
+    && echo "  ✓ server :4600 healthy" \
     || { echo "  ✗ server unhealthy" >&2; exit 1; }
 
 echo "═══ 2/3  realtime ═══"
