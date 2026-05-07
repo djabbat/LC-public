@@ -8,6 +8,42 @@ SemVer-compatible.
 
 ## [Unreleased]
 
+### Cornerstone citation finalize + cohort dashboard + unit conversion (2026-05-08)
+
+- **Citation finalize:** Tkemaladze J. (2026) "Patient as a Project",
+  *Longevity Horizon* 2(5), DOI 10.65649/qqwva850. Replaced placeholder
+  `longhoriz/article/view/177` and pre-print DOI 10.65649/4cxxhe47 across
+  CONCEPT.md / CLAUDE.md / THEORY.md / UPGRADE.md / kernel_legacy.py /
+  about_live.ex / home_live.ex / docs/audits/AUDIT_PATIENT_AS_PROJECT_*.md
+  / docs/manuscripts/PATIENT_AS_PROJECT.md. about_live_test asserts new
+  DOI is present and old placeholder is gone. Memory: closed
+  `pending_aim_about_citation`, transitioned `unpublished_patient_as_project`
+  → `published_patient_as_project`. Added to `publications.md` self-citation
+  list (155 total).
+
+- **`/cohort` Phoenix LiveView (~150 LoC, 3 integration tests):**
+  STRATEGY P1-2 dashboard. Per peer-review #3.1 (no overengineering),
+  reused existing `scripts/pilot_cohort_extract.py --json` instead of
+  creating dedicated Rust statistical crate. Empty-state explains
+  recruitment is bottleneck + cites cornerstone DOI.
+
+- **`crates/aim-lab-units` Rust (~290 LoC, 10 tests):** unit conversion
+  (g/dL ↔ g/L, mg/dL ↔ mmol/L, μmol/L conversions etc.). Closes mismatch
+  warning surfaced by `aim-lab-parser` integration: Beridze HGB 13.7 g/dL
+  was flagging "critical_low" against 120-160 g/L norm; now correctly
+  converts to 137 g/L → "normal". `tools/lab_evaluate.py` extended to
+  call `aim-lab-units batch` before evaluating; result includes
+  `raw_value`/`converted_value`/`was_unit_converted` for UI traceability.
+
+- **Drug-interactions DB extension (35 → 62 pairs):** FDA DailyMed
+  verified additions (no fabricated PMIDs per `feedback_deepseek_no_citations`):
+  DOAC × CYP3A4 modulators, antibiotic × statin/warfarin/amiodarone,
+  cardiology depth (amiodarone/verapamil/diltiazem × statins/warfarin),
+  psychotropic + opioid (BZD × opioid FDA black-box, SSRI × tramadol),
+  PPI × clopidogrel, metformin × topiramate/cimetidine. 20/20 tests pass.
+  Phase 2 (target 200+ via RxNav) still requires real pharmacology
+  curation; this Phase 1 closes peer-review safety lock-in baseline.
+
 ### Patient-as-Project workspace + safety-checker (2026-05-08, overnight)
 
 Адресует requirements пользователя 2026-05-08 ("структура пациент-проект",

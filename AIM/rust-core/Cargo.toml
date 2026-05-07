@@ -192,6 +192,7 @@ members = [
     "crates/aim-compat",
     "crates/aim-lab-parser",
     "crates/aim-patient-events",
+    "crates/aim-lab-units",
     "crates/aim-experiment-state-machine",
     "crates/aim-experiment-owner",
     "crates/aim-journal-watcher",
