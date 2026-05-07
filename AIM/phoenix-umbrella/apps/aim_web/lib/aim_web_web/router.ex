@@ -40,6 +40,7 @@ defmodule AimWeb.Router do
     # Patient as a Project cornerstone (Fix #3, 2026-05-07):
     live "/pam",                   PamLive,           :cohort
     live "/pam/:patient_id",       PamLive,           :patient
+    live "/cohort",                CohortLive,        :index
     live "/codesign/:patient_id",  CodesignLive,      :index
     live "/disagreement",          DisagreementLive,  :index
     live "/activation",            ActivationLive,    :index
