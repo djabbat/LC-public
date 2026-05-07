@@ -5,6 +5,10 @@ use std::process::Command;
 
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
+    // Re-stamp on every git HEAD move so BUILD_TS / GIT_SHA stay fresh
+    // even when only comments changed (cargo would otherwise skip).
+    println!("cargo:rerun-if-changed=../.git/HEAD");
+    println!("cargo:rerun-if-changed=../.git/refs/heads/main");
     println!("cargo:rerun-if-env-changed=GIT_SHA");
     println!("cargo:rerun-if-env-changed=BUILD_TS");
 
