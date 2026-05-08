@@ -201,6 +201,7 @@ members = [
     "crates/aim-weekly-project-digest",
     "crates/aim-kernel-py",
     "crates/aim-fs",
+    "crates/aim-fs-crypto",
     "crates/aim-onboarding",
 ]
 # Note: DiffDiagnosis/backend and SSA/backend keep their own workspaces.

@@ -81,6 +81,10 @@ path = "src/bin/aim_fs_cli.rs"
 name = "aim-fs-fsck"
 path = "src/bin/aim_fs_fsck.rs"
 
+[[bin]]
+name = "aim-fs-migrate-patient"
+path = "src/bin/aim_fs_migrate_patient.rs"
+
 [features]
 default = []
 http = ["axum"]
@@ -91,3 +95,6 @@ optional = true
 
 [dependencies.walkdir]
 version = "2"
+
+[dependencies.aim-fs-crypto]
+path = "../aim-fs-crypto"
