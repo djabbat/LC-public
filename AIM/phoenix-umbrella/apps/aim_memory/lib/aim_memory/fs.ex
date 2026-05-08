@@ -18,14 +18,31 @@ defmodule AimMemory.FS do
     idempotency_key = Keyword.get(opts, :idempotency_key) || Ecto.UUID.generate()
     policy = Keyword.get(opts, :policy, default_policy())
 
-    P.call(%{
-      op: "propose",
-      tenant_id: tenant_id,
-      new: new_entity,
-      rationale: rationale,
-      idempotency_key: idempotency_key,
-      policy: policy
-    })
+    result =
+      P.call(%{
+        op: "propose",
+        tenant_id: tenant_id,
+        new: new_entity,
+        rationale: rationale,
+        idempotency_key: idempotency_key,
+        policy: policy
+      })
+
+    case result do
+      {:ok, outcome} = ok ->
+        # Push to InboxLive only when the entity is actually pending —
+        # auto-approved entries don't need the badge bump.
+        if Map.get(outcome, "auto_approved") == false or
+             Map.get(outcome, "entity_status") in ["pending", "disputed"] do
+          Phoenix.PubSub.broadcast(
+            AIM.PubSub,
+            "inbox:#{tenant_id}",
+            {:proposed, outcome}
+          )
+        end
+        ok
+      err -> err
+    end
   end
 
   @spec approve(tenant_id, String.t(), map()) :: {:ok, map()} | {:error, term()}
@@ -140,6 +157,18 @@ defmodule AimMemory.FS do
       err -> err
     end
   end
+
+  @spec profile_view(tenant_id) :: {:ok, map()} | {:error, term()}
+  def profile_view(tenant_id),
+    do: P.call(%{op: "profile_view", tenant_id: tenant_id})
+
+  @spec project_activity(tenant_id, String.t()) :: {:ok, map()} | {:error, term()}
+  def project_activity(tenant_id, slug),
+    do: P.call(%{op: "project_activity", tenant_id: tenant_id, slug: slug})
+
+  @spec entity_detail(tenant_id, String.t()) :: {:ok, map()} | {:error, term()}
+  def entity_detail(tenant_id, id),
+    do: P.call(%{op: "entity_detail", tenant_id: tenant_id, id: id})
 
   defp default_policy do
     %{

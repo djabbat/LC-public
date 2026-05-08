@@ -92,15 +92,35 @@ fn handle(text: &str, tenant: &str) -> anyhow::Result<String> {
         }
         return cmd_search(tenant, q);
     }
+    if trimmed.starts_with("/digest") {
+        return cmd_digest(tenant);
+    }
+    if trimmed.starts_with("/profile") {
+        return cmd_profile(tenant);
+    }
+    if let Some(rest) = trimmed.strip_prefix("/entity") {
+        let id = rest.trim();
+        if id.is_empty() {
+            return Ok("⚠ usage: `/entity <8-char prefix>`".into());
+        }
+        return cmd_entity(tenant, id);
+    }
+    if trimmed.starts_with("/projects") {
+        return cmd_projects(tenant);
+    }
     Ok(help_text())
 }
 
 fn help_text() -> String {
     "*AIM_FS Telegram bridge*\n\
      `/inbox` — pending proposals (top 10)\n\
-     `/approve <id>` — approve a proposal\n\
+     `/approve <id>` — approve a proposal (8-char prefix OK)\n\
      `/reject <id> [reason]` — reject a proposal\n\
-     `/search <query>` — search active entities"
+     `/search <query>` — search active entities (FTS5)\n\
+     `/digest` — daily AIM_FS summary\n\
+     `/profile` — your AIM_FS profile counts\n\
+     `/projects` — list projects\n\
+     `/entity <id>` — show entity by short id"
         .to_string()
 }
 
@@ -161,6 +181,142 @@ fn cmd_reject(tenant: &str, partial_id: &str, reason: Option<&str>) -> anyhow::R
         "reason": reason,
     }))?;
     Ok(format!("✗ rejected `{}`", &id[..id.len().min(8)]))
+}
+
+fn cmd_digest(tenant: &str) -> anyhow::Result<String> {
+    let pending = aim_fs_call(serde_json::json!({
+        "op": "list_pending", "tenant_id": tenant, "limit": 10,
+    }))?;
+    let pending_n = pending.as_array().map(|a| a.len()).unwrap_or(0);
+    let disputes = aim_fs_call(serde_json::json!({
+        "op": "list_disputes", "tenant_id": tenant,
+    }))?;
+    let disputes_n = disputes.as_array().map(|a| a.len()).unwrap_or(0);
+    let profile = aim_fs_call(serde_json::json!({
+        "op": "profile_view", "tenant_id": tenant,
+    }))?;
+    let counts = profile.get("counts").cloned().unwrap_or(Value::Null);
+
+    let mut out = format!(
+        "📊 *AIM_FS digest*\n\n\
+         📥 inbox: *{pending_n}* pending\n\
+         ⚖ disputes: *{disputes_n}*\n\n\
+         counts:\n"
+    );
+    if let Some(obj) = counts.as_object() {
+        for (k, v) in obj {
+            out.push_str(&format!("  • {}: {}\n", k, v));
+        }
+    }
+    if pending_n > 0 {
+        out.push_str("\n_send /inbox to review pending_\n");
+    }
+    if disputes_n > 0 {
+        out.push_str("_send /search <topic> to find disputed pairs_\n");
+    }
+    Ok(out)
+}
+
+fn cmd_profile(tenant: &str) -> anyhow::Result<String> {
+    let profile = aim_fs_call(serde_json::json!({
+        "op": "profile_view", "tenant_id": tenant,
+    }))?;
+    let counts = profile.get("counts").cloned().unwrap_or(Value::Null);
+    let mut out = format!("👤 *Profile* `{tenant}`\n\n");
+    if let Some(obj) = counts.as_object() {
+        for (k, v) in obj {
+            out.push_str(&format!("  • {}: {}\n", k, v));
+        }
+    }
+    Ok(out)
+}
+
+fn cmd_projects(tenant: &str) -> anyhow::Result<String> {
+    let projects = aim_fs_call(serde_json::json!({
+        "op": "list_projects", "user_id": tenant,
+    }))?;
+    let arr = projects.as_array().cloned().unwrap_or_default();
+    if arr.is_empty() {
+        return Ok("(no projects yet — /onboard via web)".into());
+    }
+    let mut out = format!("📁 *{} projects*\n\n", arr.len());
+    for p in arr.iter().take(15) {
+        let slug = p.get("slug").and_then(|v| v.as_str()).unwrap_or("?");
+        let title = p.get("title").and_then(|v| v.as_str()).unwrap_or("(no title)");
+        out.push_str(&format!("  • `{slug}` — {}\n", truncate(title, 60)));
+    }
+    Ok(out)
+}
+
+fn cmd_entity(tenant: &str, partial_id: &str) -> anyhow::Result<String> {
+    // Try direct entity_detail; if that fails (partial), fall back to search.
+    if partial_id.len() >= 26 {
+        let v = aim_fs_call(serde_json::json!({
+            "op": "entity_detail", "tenant_id": tenant, "id": partial_id,
+        }))?;
+        return Ok(format_entity(&v));
+    }
+    // Use search to find by id prefix.
+    let hits = aim_fs_call(serde_json::json!({
+        "op": "search", "tenant_id": tenant,
+        "query": partial_id, "scope": {}, "limit": 1,
+    }))?;
+    let arr = hits.as_array().cloned().unwrap_or_default();
+    if arr.is_empty() {
+        // Fallback: scan list_pending for matching id prefix
+        let pending = aim_fs_call(serde_json::json!({
+            "op": "list_pending", "tenant_id": tenant, "limit": 100,
+        }))?;
+        for p in pending.as_array().cloned().unwrap_or_default() {
+            if let Some(id) = p.get("id").and_then(|v| v.as_str()) {
+                if id.to_uppercase().starts_with(&partial_id.to_uppercase()) {
+                    let v = aim_fs_call(serde_json::json!({
+                        "op": "entity_detail", "tenant_id": tenant, "id": id,
+                    }))?;
+                    return Ok(format_entity(&v));
+                }
+            }
+        }
+        return Ok(format!("⚠ no entity found for `{partial_id}`"));
+    }
+    if let Some(id) = arr[0].get("id").and_then(|v| v.as_str()) {
+        let v = aim_fs_call(serde_json::json!({
+            "op": "entity_detail", "tenant_id": tenant, "id": id,
+        }))?;
+        return Ok(format_entity(&v));
+    }
+    Ok(format!("⚠ malformed search result for `{partial_id}`"))
+}
+
+fn format_entity(v: &Value) -> String {
+    let id = v.get("id").and_then(|v| v.as_str()).unwrap_or("?");
+    let title = v.get("title").and_then(|v| v.as_str()).unwrap_or("(no title)");
+    let schema = v.get("schema").and_then(|v| v.as_str()).unwrap_or("?");
+    let status = v.get("status").and_then(|v| v.as_str()).unwrap_or("?");
+    let body = v.get("body").and_then(|v| v.as_str()).unwrap_or("");
+    let scope = v
+        .get("scope_project_ids")
+        .and_then(|v| v.as_array())
+        .map(|a| {
+            a.iter()
+                .filter_map(|v| v.as_str())
+                .collect::<Vec<_>>()
+                .join(", ")
+        })
+        .unwrap_or_default();
+    format!(
+        "*{title}*\n\
+         `{}` · {schema} · {status}\n\
+         {}\n\n\
+         ```\n{}\n```",
+        id.chars().take(12).collect::<String>(),
+        if scope.is_empty() {
+            "".to_string()
+        } else {
+            format!("scope: {scope}")
+        },
+        truncate(body, 600)
+    )
 }
 
 fn cmd_search(tenant: &str, query: &str) -> anyhow::Result<String> {

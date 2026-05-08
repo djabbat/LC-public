@@ -49,6 +49,8 @@ defmodule AimWebWeb.InboxLive do
   @impl true
   def handle_info({:approved, _}, socket), do: {:noreply, reload(socket)}
   def handle_info({:rejected, _}, socket), do: {:noreply, reload(socket)}
+  def handle_info({:proposed, _outcome}, socket), do: {:noreply, reload(socket)}
+  def handle_info({:dispute_resolved, _, _}, socket), do: {:noreply, reload(socket)}
   def handle_info(_, socket), do: {:noreply, socket}
 
   defp reload(socket) do

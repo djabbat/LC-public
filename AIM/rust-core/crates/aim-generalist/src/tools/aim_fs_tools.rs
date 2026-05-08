@@ -251,3 +251,63 @@ impl Tool for InboxRejectAimFs {
         Ok(format!("rejected {proposal_id}"))
     }
 }
+
+/// AIM_FS-backed semantic recall (FTS5 BM25). Symmetric counterpart to
+/// `memory_save_aim_fs`. Use this when the agent needs to look up
+/// previously approved facts/feedback rules during a conversation.
+///
+///   memory_recall_aim_fs { query, project_id?, schema?, k?: 5 }
+pub struct MemoryRecallAimFs;
+#[async_trait]
+impl Tool for MemoryRecallAimFs {
+    fn name(&self) -> &'static str {
+        "memory_recall_aim_fs"
+    }
+    async fn run(&self, args: &Value, _ctx: &ToolCtx) -> Result<String, String> {
+        let query = args
+            .get("query")
+            .and_then(|v| v.as_str())
+            .ok_or_else(|| "missing arg: query".to_string())?;
+        let k = args.get("k").and_then(|v| v.as_u64()).unwrap_or(5);
+
+        let mut scope = serde_json::Map::new();
+        if let Some(p) = args.get("project_id").and_then(|v| v.as_str()) {
+            scope.insert("project_id".into(), Value::String(p.to_string()));
+        }
+        if let Some(p) = args.get("patient_id").and_then(|v| v.as_str()) {
+            scope.insert("patient_id".into(), Value::String(p.to_string()));
+        }
+        if let Some(s) = args.get("schema").and_then(|v| v.as_str()) {
+            scope.insert("schema".into(), Value::String(s.to_string()));
+        }
+
+        let payload = json!({
+            "op": "search",
+            "tenant_id": tenant(),
+            "query": query,
+            "scope": Value::Object(scope),
+            "limit": k as i64,
+        });
+        let result = call(payload).await?;
+        let hits = result.as_array().cloned().unwrap_or_default();
+        if hits.is_empty() {
+            return Ok(format!("(no AIM_FS hits for `{query}`)"));
+        }
+        let lines: Vec<String> = hits
+            .iter()
+            .map(|h| {
+                let id = h.get("id").and_then(|v| v.as_str()).unwrap_or("?");
+                let short = id.chars().take(8).collect::<String>();
+                let score = h.get("score").and_then(|v| v.as_i64()).unwrap_or(0);
+                let schema = h.get("schema").and_then(|v| v.as_str()).unwrap_or("?");
+                let title = h.get("title").and_then(|v| v.as_str()).unwrap_or("");
+                let snippet = h.get("snippet").and_then(|v| v.as_str()).unwrap_or("");
+                format!(
+                    "[{short} score={score} {schema}] {title}\n  {}",
+                    snippet.chars().take(160).collect::<String>()
+                )
+            })
+            .collect();
+        Ok(lines.join("\n\n"))
+    }
+}

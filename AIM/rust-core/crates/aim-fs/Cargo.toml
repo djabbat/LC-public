@@ -23,6 +23,7 @@ tracing = "0.1"
 
 [dev-dependencies]
 tempfile = "3"
+proptest = "1"
 
 # Benchmark binary (compiled with main binaries) needs tempfile too.
 [dependencies.tempfile]
@@ -58,6 +59,31 @@ path = "src/bin/aim_fs_bench.rs"
 [[bin]]
 name = "aim-fs-replay"
 path = "src/bin/aim_fs_replay.rs"
+
+[[bin]]
+name = "aim-fs-http"
+path = "src/bin/aim_fs_http.rs"
+required-features = ["http"]
+
+[[bin]]
+name = "aim-fs-distribute"
+path = "src/bin/aim_fs_distribute.rs"
+
+[[bin]]
+name = "aim-fs-export"
+path = "src/bin/aim_fs_export.rs"
+
+[[bin]]
+name = "aim-fs-cli"
+path = "src/bin/aim_fs_cli.rs"
+
+[features]
+default = []
+http = ["axum"]
+
+[dependencies.axum]
+version = "0.7"
+optional = true
 
 [dependencies.walkdir]
 version = "2"
