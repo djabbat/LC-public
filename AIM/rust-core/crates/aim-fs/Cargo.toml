@@ -85,12 +85,25 @@ path = "src/bin/aim_fs_fsck.rs"
 name = "aim-fs-migrate-patient"
 path = "src/bin/aim_fs_migrate_patient.rs"
 
+[[bin]]
+name = "aim-fs-jwt"
+path = "src/bin/aim_fs_jwt.rs"
+required-features = ["jwt"]
+
 [features]
 default = []
-http = ["axum"]
+# Note: http enables jsonwebtoken transitively so JWT auth is built into
+# aim-fs-http. JWT can also be used standalone via the `jwt` feature for
+# the aim-fs-jwt admin binary alone.
+http = ["axum", "jsonwebtoken"]
+jwt = ["jsonwebtoken"]
 
 [dependencies.axum]
 version = "0.7"
+optional = true
+
+[dependencies.jsonwebtoken]
+version = "9"
 optional = true
 
 [dependencies.walkdir]
@@ -98,3 +111,6 @@ version = "2"
 
 [dependencies.aim-fs-crypto]
 path = "../aim-fs-crypto"
+
+[dependencies.rand]
+version = "0.8"

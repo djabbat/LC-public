@@ -116,17 +116,55 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-fn check_auth(headers: &HeaderMap, expected: &str) -> Result<(), StatusCode> {
+/// Authorisation: accepts either
+///   1. legacy shared Bearer token (== `AIM_FS_HTTP_TOKEN` env), OR
+///   2. HS256 JWT issued by `aim-fs-jwt` (signed with `AIM_FS_JWT_SECRET`).
+///
+/// Returns the validated tenant_id when JWT auth is used (so the handler
+/// can cross-check it against the request body's `tenant_id` field), or
+/// `None` for legacy shared-token mode.
+///
+/// Phase B Hub-mode H.1.  RS256 + per-tenant scope enforcement is the
+/// next step (see `HUB_MODE.md` §3.1).
+fn check_auth(headers: &HeaderMap, expected: &str) -> Result<Option<String>, StatusCode> {
     let auth = headers
         .get("authorization")
         .and_then(|v| v.to_str().ok())
         .unwrap_or("");
-    if let Some(tok) = auth.strip_prefix("Bearer ") {
-        if subtle_eq(tok.as_bytes(), expected.as_bytes()) {
-            return Ok(());
-        }
+    let tok = match auth.strip_prefix("Bearer ") {
+        Some(t) => t,
+        None => return Err(StatusCode::UNAUTHORIZED),
+    };
+    // Legacy shared-token path.
+    if subtle_eq(tok.as_bytes(), expected.as_bytes()) {
+        return Ok(None);
+    }
+    // JWT path — try to verify against AIM_FS_JWT_SECRET.
+    if let Some(tenant) = verify_jwt(tok) {
+        return Ok(Some(tenant));
     }
     Err(StatusCode::UNAUTHORIZED)
+}
+
+#[cfg(feature = "http")]
+fn verify_jwt(token: &str) -> Option<String> {
+    let secret = std::env::var("AIM_FS_JWT_SECRET").ok()?;
+    let secret_bytes = hex::decode(secret.trim()).ok()?;
+    use jsonwebtoken::{decode, Algorithm, DecodingKey, Validation};
+    #[derive(serde::Deserialize)]
+    struct Claims {
+        sub: String,
+    }
+    let mut validation = Validation::new(Algorithm::HS256);
+    validation.set_issuer(&["aim-fs-jwt"]);
+    decode::<Claims>(token, &DecodingKey::from_secret(&secret_bytes), &validation)
+        .ok()
+        .map(|d| d.claims.sub)
+}
+
+#[cfg(not(feature = "http"))]
+fn verify_jwt(_: &str) -> Option<String> {
+    None
 }
 
 fn subtle_eq(a: &[u8], b: &[u8]) -> bool {
@@ -158,7 +196,7 @@ async fn propose(
     headers: HeaderMap,
     Json(body): Json<ProposeBody>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.propose(
         &body.tenant_id,
         body.new,
@@ -182,7 +220,7 @@ async fn approve(
     headers: HeaderMap,
     Json(body): Json<ApproveBody>,
 ) -> Result<&'static str, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.approve_proposal(&body.tenant_id, &body.proposal_id, &body.actor)
         .map(|_| "ok")
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -201,7 +239,7 @@ async fn reject(
     headers: HeaderMap,
     Json(body): Json<RejectBody>,
 ) -> Result<&'static str, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.reject_proposal(
         &body.tenant_id,
         &body.proposal_id,
@@ -222,7 +260,7 @@ async fn inbox(
     headers: HeaderMap,
     Query(q): Query<InboxQuery>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.list_pending(&q.tenant_id, q.limit.unwrap_or(50))
         .map(|v| Json(serde_json::to_value(v).unwrap()))
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -241,7 +279,7 @@ async fn search(
     headers: HeaderMap,
     Json(body): Json<SearchBody>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.search(
         &body.tenant_id,
         &body.query,
@@ -261,7 +299,7 @@ async fn projects(
     headers: HeaderMap,
     Query(q): Query<ProjectsQuery>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.list_projects(&q.user_id)
         .map(|v| Json(serde_json::to_value(v).unwrap()))
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -276,7 +314,7 @@ async fn patients(
     headers: HeaderMap,
     Query(q): Query<PatientsQuery>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.list_patients(&q.doctor_id)
         .map(|v| Json(serde_json::to_value(v).unwrap()))
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -291,7 +329,7 @@ async fn disputes(
     headers: HeaderMap,
     Query(q): Query<DisputesQuery>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.list_disputes(&q.tenant_id)
         .map(|v| Json(serde_json::to_value(v).unwrap()))
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -309,7 +347,7 @@ async fn resolve_dispute(
     headers: HeaderMap,
     Json(body): Json<ResolveDisputeBody>,
 ) -> Result<&'static str, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.resolve_dispute(&body.tenant_id, &body.winner_id, &body.loser_id, &body.actor)
         .map(|_| "ok")
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -327,7 +365,7 @@ async fn add_link(
     headers: HeaderMap,
     Json(body): Json<AddLinkBody>,
 ) -> Result<&'static str, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.add_link(&body.tenant_id, &body.source_id, &body.target_id, body.link_type)
         .map(|_| "ok")
         .map_err(|e| (StatusCode::BAD_REQUEST, e.to_string()))
@@ -343,7 +381,7 @@ async fn outgoing_links(
     headers: HeaderMap,
     Query(q): Query<LinksOutgoingQuery>,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     s.fs.list_outgoing_links(&q.tenant_id, &q.source_id)
         .map(|v| {
             Json(serde_json::Value::Array(
@@ -361,7 +399,7 @@ async fn sweep(
     State(s): State<AppState>,
     headers: HeaderMap,
 ) -> Result<Json<Value>, (StatusCode, String)> {
-    check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
+    let _auth = check_auth(&headers, &s.token).map_err(|c| (c, "unauthorised".into()))?;
     let pool = aim_fs::db::open_pool(
         &s.fs.root().join("_service").join("db").join("aim_fs.db"),
     )
