@@ -25,6 +25,7 @@ pub fn validate(new: &NewEntity) -> Result<()> {
         "project_state_v1" => validate_project_state(new),
         "patient_anamnesis_v1" => validate_patient_anamnesis(new),
         "recipe_v1" => validate_recipe(new),
+        "diagnosis_v1" => validate_diagnosis(new),
         // imported / unknown — pass through
         _ => Ok(()),
     }
@@ -117,6 +118,53 @@ fn validate_recipe(new: &NewEntity) -> Result<()> {
     if new.scope_patient_ids.is_empty() {
         return Err(AimFsError::SchemaInvalid(
             "recipe_v1 must be scoped to at least one patient".into(),
+        ));
+    }
+    let body = new.body.as_deref().unwrap_or("");
+    // recipe_v1 must list explicit dose with a numeric value so the
+    // doctor can audit what the AI agent prescribed.  We look for a
+    // "Dose:" / "Доза:" line followed by digits within the same body.
+    let needles = ["Dose:", "dose:", "Доза:", "доза:", "Доз:"];
+    let has_kw = needles.iter().any(|n| body.contains(n));
+    let has_digit_near_kw = body
+        .lines()
+        .any(|l| {
+            needles.iter().any(|n| l.contains(n))
+                && l.chars().any(|c| c.is_ascii_digit())
+        });
+    if !has_kw {
+        return Err(AimFsError::SchemaInvalid(
+            "recipe_v1 body must include `Dose:` / `Доза:` line".into(),
+        ));
+    }
+    if !has_digit_near_kw {
+        return Err(AimFsError::SchemaInvalid(
+            "recipe_v1 dose line must include a numeric value".into(),
+        ));
+    }
+    Ok(())
+}
+
+fn validate_diagnosis(new: &NewEntity) -> Result<()> {
+    need_title(new)?;
+    if new.scope_patient_ids.is_empty() {
+        return Err(AimFsError::SchemaInvalid(
+            "diagnosis_v1 must be scoped to a patient".into(),
+        ));
+    }
+    let body = new.body.as_deref().unwrap_or("");
+    if !(body.contains("Differential")
+        || body.contains("Дифдиагноз")
+        || body.contains("DDx")
+        || body.contains("Working diagnosis"))
+    {
+        return Err(AimFsError::SchemaInvalid(
+            "diagnosis_v1 body must include Differential / Дифдиагноз / DDx / Working diagnosis section".into(),
+        ));
+    }
+    if new.confidence.is_none() {
+        return Err(AimFsError::SchemaInvalid(
+            "diagnosis_v1 must declare confidence (0..1) explicitly".into(),
         ));
     }
     Ok(())
