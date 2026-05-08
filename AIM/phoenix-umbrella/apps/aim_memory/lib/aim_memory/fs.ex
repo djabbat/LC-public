@@ -173,6 +173,10 @@ defmodule AimMemory.FS do
   @spec stats(tenant_id) :: {:ok, map()} | {:error, term()}
   def stats(tenant_id), do: P.call(%{op: "stats", tenant_id: tenant_id})
 
+  @spec list_events(tenant_id, integer()) :: {:ok, list()} | {:error, term()}
+  def list_events(tenant_id, limit \\ 50),
+    do: P.call(%{op: "list_events", tenant_id: tenant_id, limit: limit})
+
   defp default_policy do
     %{
       auto_approve_user_commands: true,

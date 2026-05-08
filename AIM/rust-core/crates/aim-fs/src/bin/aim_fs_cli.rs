@@ -364,16 +364,21 @@ fn cmd_digest() -> Result<String, String> {
         "op": "list_disputes", "tenant_id": tenant(),
     }))?;
     let disputes_n = disputes.as_array().map(|a| a.len()).unwrap_or(0);
-    let profile = call(serde_json::json!({
-        "op": "profile_view", "tenant_id": tenant(),
+    // Use stats.total_entities — counts ALL schemas, not just profile_view
+    // categories (which omit fact_v1, audit_v1, project_state_v1, ai_artifact_v1).
+    let stats = call(serde_json::json!({
+        "op": "stats", "tenant_id": tenant(),
     }))?;
-    let counts = profile.get("counts").cloned().unwrap_or(Value::Null);
-    let total: i64 = counts
-        .as_object()
-        .map(|o| o.values().filter_map(|v| v.as_i64()).sum())
+    let total = stats
+        .get("total_entities")
+        .and_then(|v| v.as_i64())
+        .unwrap_or(0);
+    let events = stats
+        .get("events_total")
+        .and_then(|v| v.as_i64())
         .unwrap_or(0);
     Ok(format!(
-        "AIM_FS · {pending_n} pending · {disputes_n} disputes · {total} entities total"
+        "AIM_FS · {pending_n} pending · {disputes_n} disputes · {total} entities · {events} events"
     ))
 }
 

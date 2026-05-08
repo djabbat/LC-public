@@ -186,6 +186,49 @@ impl AimFs {
     }
 }
 
+/// Recent events — chronological audit feed.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AuditEvent {
+    pub id: String,
+    pub event_type: String,
+    pub entity_id: Option<String>,
+    pub entity_title: Option<String>,
+    pub entity_schema: Option<String>,
+    pub payload: Option<String>,
+    pub created_at: String,
+}
+
+impl AimFs {
+    pub fn list_events(
+        &self,
+        tenant_id: &str,
+        limit: i64,
+    ) -> Result<Vec<AuditEvent>> {
+        let conn = self.pool.get()?;
+        let mut stmt = conn.prepare(
+            "SELECT ev.id, ev.event_type, ev.entity_id, e.title, e.schema, ev.payload, ev.created_at \
+             FROM events ev \
+             LEFT JOIN entities e ON e.id = ev.entity_id \
+             WHERE ev.tenant_id = ?1 OR ev.tenant_id = '_system' \
+             ORDER BY ev.created_at DESC LIMIT ?2",
+        )?;
+        let rows = stmt
+            .query_map(rusqlite::params![tenant_id, limit], |r| {
+                Ok(AuditEvent {
+                    id: r.get(0)?,
+                    event_type: r.get(1)?,
+                    entity_id: r.get(2)?,
+                    entity_title: r.get(3)?,
+                    entity_schema: r.get(4)?,
+                    payload: r.get(5)?,
+                    created_at: r.get(6)?,
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+        Ok(rows)
+    }
+}
+
 /// Stats / analytics — entity creation rate per week + top scopes / sources.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Stats {

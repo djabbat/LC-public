@@ -77,6 +77,10 @@ path = "src/bin/aim_fs_export.rs"
 name = "aim-fs-cli"
 path = "src/bin/aim_fs_cli.rs"
 
+[[bin]]
+name = "aim-fs-fsck"
+path = "src/bin/aim_fs_fsck.rs"
+
 [features]
 default = []
 http = ["axum"]

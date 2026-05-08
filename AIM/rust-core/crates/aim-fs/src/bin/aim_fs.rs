@@ -103,6 +103,10 @@ enum Cmd {
     Stats {
         tenant_id: String,
     },
+    ListEvents {
+        tenant_id: String,
+        limit: i64,
+    },
 }
 
 fn default_limit() -> i64 {
@@ -302,6 +306,10 @@ fn dispatch(fs: &AimFs, cmd: Cmd) -> Reply {
             Err(e) => err(e),
         },
         Cmd::Stats { tenant_id } => match fs.stats(&tenant_id) {
+            Ok(v) => ok(serde_json::to_value(v).unwrap()),
+            Err(e) => err(e),
+        },
+        Cmd::ListEvents { tenant_id, limit } => match fs.list_events(&tenant_id, limit) {
             Ok(v) => ok(serde_json::to_value(v).unwrap()),
             Err(e) => err(e),
         },
