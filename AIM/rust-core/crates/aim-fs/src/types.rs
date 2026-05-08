@@ -215,11 +215,20 @@ pub struct Actor {
 }
 
 /// Auto-approve preferences (per-user, loaded from preferences.md).
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct ApprovalPolicy {
+    #[serde(default)]
     pub auto_approve_user_commands: bool,
+    #[serde(default)]
     pub auto_approve_observational_with_confidence_above: f64, // 0..1
+    #[serde(default)]
     pub auto_approve_service_events: bool,
+    #[serde(default)]
     pub require_approval_for: Vec<String>,
+    #[serde(default = "default_max_inactivity")]
     pub max_inactivity_days: i64,
+}
+
+fn default_max_inactivity() -> i64 {
+    30
 }

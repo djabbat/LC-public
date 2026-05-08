@@ -77,8 +77,9 @@ impl Registry {
             Box::new(notes_tool::Notes),
             Box::new(memory_tools::MemoryRecall),
             Box::new(memory_tools::MemorySave),
-            // AIM_FS bridge — propose / approve / reject (SPEC §4.x).
+            // AIM_FS bridge — propose / approve / reject + recall (SPEC §4.x + §5.2).
             Box::new(aim_fs_tools::MemorySaveAimFs),
+            Box::new(aim_fs_tools::MemoryRecallAimFs),
             Box::new(aim_fs_tools::InboxPendingAimFs),
             Box::new(aim_fs_tools::InboxApproveAimFs),
             Box::new(aim_fs_tools::InboxRejectAimFs),

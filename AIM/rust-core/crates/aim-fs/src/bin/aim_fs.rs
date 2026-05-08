@@ -89,6 +89,17 @@ enum Cmd {
         loser_id: String,
         actor: Actor,
     },
+    ProfileView {
+        tenant_id: String,
+    },
+    ProjectActivity {
+        tenant_id: String,
+        slug: String,
+    },
+    EntityDetail {
+        tenant_id: String,
+        id: String,
+    },
 }
 
 fn default_limit() -> i64 {
@@ -273,6 +284,18 @@ fn dispatch(fs: &AimFs, cmd: Cmd) -> Reply {
             actor,
         } => match fs.resolve_dispute(&tenant_id, &winner_id, &loser_id, &actor) {
             Ok(()) => ok(serde_json::json!({})),
+            Err(e) => err(e),
+        },
+        Cmd::ProfileView { tenant_id } => match fs.profile_view(&tenant_id) {
+            Ok(v) => ok(serde_json::to_value(v).unwrap()),
+            Err(e) => err(e),
+        },
+        Cmd::ProjectActivity { tenant_id, slug } => match fs.project_activity(&tenant_id, &slug) {
+            Ok(v) => ok(serde_json::to_value(v).unwrap()),
+            Err(e) => err(e),
+        },
+        Cmd::EntityDetail { tenant_id, id } => match fs.entity_detail(&tenant_id, &id) {
+            Ok(v) => ok(serde_json::to_value(v).unwrap()),
             Err(e) => err(e),
         },
     }

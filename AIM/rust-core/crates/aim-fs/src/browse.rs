@@ -4,8 +4,14 @@
 
 use crate::error::Result;
 use crate::AimFs;
+use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
+
+fn count_one(conn: &Connection, sql: &str, tenant: &str) -> Result<u32> {
+    let n: i64 = conn.query_row(sql, rusqlite::params![tenant], |r| r.get(0))?;
+    Ok(n as u32)
+}
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProjectSummary {
@@ -29,7 +35,426 @@ pub struct PatientSummary {
     pub last_visit_complaint: Option<String>,
 }
 
+/// Full entity record with linked references — for detail UI.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct EntityDetail {
+    pub id: String,
+    pub schema: String,
+    pub schema_version: i64,
+    pub status: String,
+    pub title: Option<String>,
+    pub description: Option<String>,
+    pub body: Option<String>,
+    pub source: String,
+    pub user_id: String,
+    pub session_id: Option<String>,
+    pub llm_model: Option<String>,
+    pub confidence: Option<f64>,
+    pub tags: Vec<String>,
+    pub scope_global: bool,
+    pub scope_user_ids: Vec<String>,
+    pub scope_project_ids: Option<Vec<String>>,
+    pub scope_patient_ids: Vec<String>,
+    pub decay_ttl_days: Option<i64>,
+    pub decay_expires_at: Option<String>,
+    pub version: i64,
+    pub created_at: String,
+    pub updated_at: String,
+    pub outgoing_links: Vec<LinkRow>,
+    pub incoming_links: Vec<LinkRow>,
+    pub events: Vec<ActivityEvent>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct LinkRow {
+    pub other_id: String,
+    pub other_title: Option<String>,
+    pub link_type: String,
+    pub created_at: String,
+}
+
 impl AimFs {
+    pub fn entity_detail(&self, tenant_id: &str, id: &str) -> Result<EntityDetail> {
+        let conn = self.pool.get()?;
+        let cols = "id,schema,schema_version,status,title,description,body,source,\
+                    user_id,session_id,llm_model,confidence,tags,scope_global,\
+                    scope_user_ids,scope_project_ids,scope_patient_ids,\
+                    decay_ttl_days,decay_expires_at,version,created_at,updated_at";
+        let row = conn.query_row(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 AND id = ?2"
+            ),
+            rusqlite::params![tenant_id, id],
+            |r| {
+                Ok(EntityDetail {
+                    id: r.get(0)?,
+                    schema: r.get(1)?,
+                    schema_version: r.get(2)?,
+                    status: r.get(3)?,
+                    title: r.get(4)?,
+                    description: r.get(5)?,
+                    body: r.get(6)?,
+                    source: r.get(7)?,
+                    user_id: r.get(8)?,
+                    session_id: r.get(9)?,
+                    llm_model: r.get(10)?,
+                    confidence: r.get(11)?,
+                    tags: r
+                        .get::<_, Option<String>>(12)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default())
+                        .unwrap_or_default(),
+                    scope_global: r.get::<_, i64>(13)? != 0,
+                    scope_user_ids: r
+                        .get::<_, Option<String>>(14)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default())
+                        .unwrap_or_default(),
+                    scope_project_ids: r
+                        .get::<_, Option<String>>(15)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default()),
+                    scope_patient_ids: r
+                        .get::<_, Option<String>>(16)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default())
+                        .unwrap_or_default(),
+                    decay_ttl_days: r.get(17)?,
+                    decay_expires_at: r.get(18)?,
+                    version: r.get(19)?,
+                    created_at: r.get(20)?,
+                    updated_at: r.get(21)?,
+                    outgoing_links: vec![],
+                    incoming_links: vec![],
+                    events: vec![],
+                })
+            },
+        )?;
+        let mut detail = row;
+
+        // Outgoing links.
+        let mut s = conn.prepare(
+            "SELECT l.target_id, e.title, l.link_type, l.created_at \
+             FROM links l LEFT JOIN entities e ON e.id = l.target_id \
+             WHERE l.tenant_id = ?1 AND l.source_id = ?2",
+        )?;
+        detail.outgoing_links = s
+            .query_map(rusqlite::params![tenant_id, id], |r| {
+                Ok(LinkRow {
+                    other_id: r.get(0)?,
+                    other_title: r.get(1)?,
+                    link_type: r.get(2)?,
+                    created_at: r.get(3)?,
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+
+        // Incoming links.
+        let mut s = conn.prepare(
+            "SELECT l.source_id, e.title, l.link_type, l.created_at \
+             FROM links l LEFT JOIN entities e ON e.id = l.source_id \
+             WHERE l.tenant_id = ?1 AND l.target_id = ?2",
+        )?;
+        detail.incoming_links = s
+            .query_map(rusqlite::params![tenant_id, id], |r| {
+                Ok(LinkRow {
+                    other_id: r.get(0)?,
+                    other_title: r.get(1)?,
+                    link_type: r.get(2)?,
+                    created_at: r.get(3)?,
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+
+        // Events.
+        let mut s = conn.prepare(
+            "SELECT event_type, entity_id, created_at FROM events \
+             WHERE tenant_id = ?1 AND entity_id = ?2 \
+             ORDER BY created_at DESC LIMIT 30",
+        )?;
+        detail.events = s
+            .query_map(rusqlite::params![tenant_id, id], |r| {
+                Ok(ActivityEvent {
+                    event_type: r.get(0)?,
+                    entity_id: r.get(1)?,
+                    created_at: r.get(2)?,
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+
+        Ok(detail)
+    }
+}
+
+/// Per-tenant aggregated user profile — derived view, not stored.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProfileView {
+    pub tenant_id: String,
+    pub identity_facts: Vec<ProfileEntry>,
+    pub preferences: Vec<ProfileEntry>,
+    pub feedback_rules: Vec<ProfileEntry>,
+    pub recent_decisions: Vec<ProfileEntry>,
+    pub contacts: Vec<ProfileEntry>,
+    pub counts: ProfileCounts,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProfileCounts {
+    pub user_facts: u32,
+    pub feedback_rules: u32,
+    pub projects: u32,
+    pub patients: u32,
+    pub contacts: u32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProfileEntry {
+    pub id: String,
+    pub title: Option<String>,
+    pub description: Option<String>,
+    pub schema: String,
+    pub status: String,
+    pub tags: Vec<String>,
+    pub scope_project_ids: Option<Vec<String>>,
+    pub created_at: String,
+    pub snippet: Option<String>,
+}
+
+/// Per-project aggregated activity — derived view from entities + events.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProjectActivity {
+    pub slug: String,
+    pub summary: ProjectSummary,
+    pub entries: Vec<ProfileEntry>,
+    pub recent_events: Vec<ActivityEvent>,
+    pub counts: ProjectCounts,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProjectCounts {
+    pub feedback_rules: u32,
+    pub project_state: u32,
+    pub audits: u32,
+    pub references: u32,
+    pub other: u32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ActivityEvent {
+    pub event_type: String,
+    pub entity_id: Option<String>,
+    pub created_at: String,
+}
+
+impl AimFs {
+    pub fn profile_view(&self, tenant_id: &str) -> Result<ProfileView> {
+        let conn = self.pool.get()?;
+        let collect = |sql: &str, args: &[&dyn rusqlite::ToSql]| -> Result<Vec<ProfileEntry>> {
+            let mut stmt = conn.prepare(sql)?;
+            let rows = stmt
+                .query_map(args, |r| {
+                    Ok(ProfileEntry {
+                        id: r.get(0)?,
+                        title: r.get(1)?,
+                        description: r.get(2)?,
+                        schema: r.get(3)?,
+                        status: r.get(4)?,
+                        tags: r
+                            .get::<_, Option<String>>(5)?
+                            .as_deref()
+                            .map(|s| serde_json::from_str(s).unwrap_or_default())
+                            .unwrap_or_default(),
+                        scope_project_ids: r
+                            .get::<_, Option<String>>(6)?
+                            .as_deref()
+                            .map(|s| serde_json::from_str(s).unwrap_or_default()),
+                        created_at: r.get(7)?,
+                        snippet: r.get::<_, Option<String>>(8)?.map(|b| {
+                            let s = b.replace('\n', " ");
+                            s.chars().take(200).collect()
+                        }),
+                    })
+                })?
+                .collect::<std::result::Result<Vec<_>, _>>()?;
+            Ok(rows)
+        };
+        let cols =
+            "id,title,description,schema,status,tags,scope_project_ids,created_at,body";
+
+        let identity_facts = collect(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 \
+                 AND schema IN ('user_fact_v1','user_v1','user_directive_v1') \
+                 AND status = 'active' ORDER BY created_at DESC LIMIT 30"
+            ),
+            &[&tenant_id],
+        )?;
+        let preferences = collect(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 \
+                 AND schema = 'feedback_v1' AND status = 'active' \
+                 AND (tags LIKE '%language%' OR tags LIKE '%style%' \
+                      OR title LIKE '%preference%' OR title LIKE '%language%') \
+                 ORDER BY created_at DESC LIMIT 15"
+            ),
+            &[&tenant_id],
+        )?;
+        let feedback_rules = collect(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 \
+                 AND schema = 'feedback_v1' AND status = 'active' \
+                 ORDER BY created_at DESC LIMIT 30"
+            ),
+            &[&tenant_id],
+        )?;
+        let recent_decisions = collect(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 \
+                 AND schema IN ('project_state_v1','fact_v1','audit_v1') \
+                 AND status = 'active' ORDER BY created_at DESC LIMIT 20"
+            ),
+            &[&tenant_id],
+        )?;
+        let contacts = collect(
+            &format!(
+                "SELECT {cols} FROM entities WHERE tenant_id = ?1 \
+                 AND schema = 'contact_v1' AND status = 'active' \
+                 ORDER BY created_at DESC LIMIT 30"
+            ),
+            &[&tenant_id],
+        )?;
+
+        let counts = ProfileCounts {
+            user_facts: count_one(
+                &conn,
+                "SELECT COUNT(*) FROM entities WHERE tenant_id=?1 AND schema IN ('user_fact_v1','user_v1','user_directive_v1') AND status='active'",
+                tenant_id,
+            )?,
+            feedback_rules: count_one(
+                &conn,
+                "SELECT COUNT(*) FROM entities WHERE tenant_id=?1 AND schema='feedback_v1' AND status='active'",
+                tenant_id,
+            )?,
+            projects: self
+                .list_projects(tenant_id)
+                .map(|v| v.len() as u32)
+                .unwrap_or(0),
+            patients: self
+                .list_patients(tenant_id)
+                .map(|v| v.len() as u32)
+                .unwrap_or(0),
+            contacts: count_one(
+                &conn,
+                "SELECT COUNT(*) FROM entities WHERE tenant_id=?1 AND schema='contact_v1' AND status='active'",
+                tenant_id,
+            )?,
+        };
+
+        Ok(ProfileView {
+            tenant_id: tenant_id.to_string(),
+            identity_facts,
+            preferences,
+            feedback_rules,
+            recent_decisions,
+            contacts,
+            counts,
+        })
+    }
+
+    pub fn project_activity(
+        &self,
+        tenant_id: &str,
+        slug: &str,
+    ) -> Result<ProjectActivity> {
+        let conn = self.pool.get()?;
+        let summary = self
+            .list_projects(tenant_id)?
+            .into_iter()
+            .find(|p| p.slug == slug)
+            .unwrap_or(ProjectSummary {
+                slug: slug.to_string(),
+                path: String::new(),
+                title: None,
+                description: None,
+                status: None,
+                created_at: None,
+            });
+
+        let scope_pat = format!("%\"{}\"%", slug);
+        let mut stmt = conn.prepare(
+            "SELECT id,title,description,schema,status,tags,scope_project_ids,created_at,body \
+             FROM entities WHERE tenant_id = ?1 \
+               AND scope_project_ids LIKE ?2 AND status IN ('active','disputed','superseded') \
+             ORDER BY created_at DESC LIMIT 100",
+        )?;
+        let entries: Vec<ProfileEntry> = stmt
+            .query_map(rusqlite::params![tenant_id, scope_pat], |r| {
+                Ok(ProfileEntry {
+                    id: r.get(0)?,
+                    title: r.get(1)?,
+                    description: r.get(2)?,
+                    schema: r.get(3)?,
+                    status: r.get(4)?,
+                    tags: r
+                        .get::<_, Option<String>>(5)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default())
+                        .unwrap_or_default(),
+                    scope_project_ids: r
+                        .get::<_, Option<String>>(6)?
+                        .as_deref()
+                        .map(|s| serde_json::from_str(s).unwrap_or_default()),
+                    created_at: r.get(7)?,
+                    snippet: r.get::<_, Option<String>>(8)?.map(|b| {
+                        let s = b.replace('\n', " ");
+                        s.chars().take(200).collect()
+                    }),
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+
+        let mut counts = ProjectCounts {
+            feedback_rules: 0,
+            project_state: 0,
+            audits: 0,
+            references: 0,
+            other: 0,
+        };
+        for e in &entries {
+            match e.schema.as_str() {
+                "feedback_v1" => counts.feedback_rules += 1,
+                "project_state_v1" => counts.project_state += 1,
+                "audit_v1" => counts.audits += 1,
+                "reference_v1" => counts.references += 1,
+                _ => counts.other += 1,
+            }
+        }
+
+        let mut stmt2 = conn.prepare(
+            "SELECT event_type, entity_id, created_at FROM events \
+             WHERE tenant_id = ?1 AND entity_id IN \
+                (SELECT id FROM entities WHERE tenant_id=?1 AND scope_project_ids LIKE ?2) \
+             ORDER BY created_at DESC LIMIT 50",
+        )?;
+        let recent_events = stmt2
+            .query_map(rusqlite::params![tenant_id, scope_pat], |r| {
+                Ok(ActivityEvent {
+                    event_type: r.get(0)?,
+                    entity_id: r.get(1)?,
+                    created_at: r.get(2)?,
+                })
+            })?
+            .collect::<std::result::Result<Vec<_>, _>>()?;
+
+        Ok(ProjectActivity {
+            slug: slug.to_string(),
+            summary,
+            entries,
+            recent_events,
+            counts,
+        })
+    }
+
     pub fn list_projects(&self, user_id: &str) -> Result<Vec<ProjectSummary>> {
         let dir = self.root().join("users").join(user_id).join("projects");
         if !dir.is_dir() {

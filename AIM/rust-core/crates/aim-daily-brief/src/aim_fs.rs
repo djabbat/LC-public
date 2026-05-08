@@ -15,12 +15,17 @@ use std::io::Write;
 use std::process::{Command, Stdio};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(bound(deserialize = "T: serde::Deserialize<'de>"))]
 struct Reply<T> {
     ok: bool,
-    #[serde(default)]
+    #[serde(default = "default_none")]
     result: Option<T>,
     #[serde(default)]
     error: Option<String>,
+}
+
+fn default_none<T>() -> Option<T> {
+    None
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -38,6 +43,15 @@ struct PatientSummary {
     name: Option<String>,
     dob: Option<String>,
     last_visit_complaint: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+struct Hit {
+    id: String,
+    title: Option<String>,
+    schema: String,
+    score: i64,
+    created_at: String,
 }
 
 /// Render a markdown-flavoured digest of the top `top_n` pending proposals
@@ -90,24 +104,89 @@ pub fn render_inbox_block(
     let pending = pending_reply.result.unwrap_or_default();
     let patients = patients_reply.result.unwrap_or_default();
 
+    // Pull recent decisions / disputes for richer brief.
+    let recent = call_aim_fs::<Vec<Hit>>(
+        binary,
+        aim_root,
+        &serde_json::json!({
+            "op": "search",
+            "tenant_id": tenant_id,
+            "query": "today yesterday plan deadline",
+            "scope": {"status": "active"},
+            "limit": 3,
+        }),
+    )
+    .unwrap_or_default();
+
+    let disputes = call_aim_fs::<Vec<serde_json::Value>>(
+        binary,
+        aim_root,
+        &serde_json::json!({"op": "list_disputes", "tenant_id": tenant_id}),
+    )
+    .unwrap_or_default();
+
     let mut out = String::new();
     out.push_str(&format!(
-        "📥 AIM Inbox: **{}** pending · 🧑 patients: {}\n",
+        "📥 AIM Inbox: **{}** pending · 🧑 patients: {} · ⚖ disputes: {}\n",
         pending.len(),
-        patients.len()
+        patients.len(),
+        disputes.len()
     ));
     if !pending.is_empty() {
+        out.push_str("  pending:\n");
         for p in pending.iter().take(top_n) {
             let rationale = p.rationale.as_deref().unwrap_or("");
             let date = p.created_at.split('T').next().unwrap_or(&p.created_at);
             out.push_str(&format!(
-                "  • [{}] {}: {}\n",
-                date, p.proposal_type, truncate(rationale, 80)
+                "    • [{}] {}: {}\n",
+                date,
+                p.proposal_type,
+                truncate(rationale, 80)
             ));
         }
-        out.push_str("  → Review at /inbox\n");
+        out.push_str("    → Review at /inbox\n");
+    }
+    if !disputes.is_empty() {
+        out.push_str(&format!(
+            "  ⚖ {} unresolved disputes — open /fs/disputes\n",
+            disputes.len()
+        ));
+    }
+    if !recent.is_empty() {
+        out.push_str("  recent active facts:\n");
+        for h in recent.iter().take(3) {
+            let title = h.title.as_deref().unwrap_or("(no title)");
+            out.push_str(&format!("    • {}\n", truncate(title, 80)));
+        }
     }
     Some(out)
+}
+
+/// Generic helper for one-shot Port calls — returns parsed result or None.
+fn call_aim_fs<T: for<'de> Deserialize<'de>>(
+    binary: &str,
+    aim_root: &str,
+    payload: &serde_json::Value,
+) -> Option<T> {
+    let mut child = Command::new(binary)
+        .env("AIM_FS_ROOT", aim_root)
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::null())
+        .spawn()
+        .ok()?;
+    if let Some(stdin) = child.stdin.as_mut() {
+        let _ = writeln!(stdin, "{}", serde_json::to_string(payload).ok()?);
+    }
+    let out = child.wait_with_output().ok()?;
+    let stdout = String::from_utf8_lossy(&out.stdout).to_string();
+    let first = stdout.lines().next().unwrap_or("{}");
+    let v: Reply<T> = serde_json::from_str(first).ok()?;
+    if v.ok {
+        v.result
+    } else {
+        None
+    }
 }
 
 fn truncate(s: &str, max: usize) -> String {
