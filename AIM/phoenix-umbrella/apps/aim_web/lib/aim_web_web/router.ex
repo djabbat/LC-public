@@ -46,6 +46,7 @@ defmodule AimWeb.Router do
     live "/fs",                FsDashboardLive,      :index
     live "/fs/replay",         ReplayLive,           :index
     live "/fs/stats",          StatsLive,            :index
+    live "/fs/audit",          AuditLive,            :index
     # Phase A/B (HW1, 2026-05-06):
     live "/patients",    PatientLive,    :index
     live "/patients/:id", PatientWorkspaceLive, :show
