@@ -1,27 +1,42 @@
-# BioSense — Мультисенсорная носимая платформа: ЭЭГ · ВСР · Ольфакция
+# BioSense — Мультисенсорная платформа биомониторинга: организм и клетка
 
-**Статус:** Активная разработка — модуль ЭЭГ валидирован, модули ВСР и ольфакции на стадии проектирования.
+**Статус:** Активная разработка — модуль ЭЭГ валидирован, модули ВСР, ольфакции и клеточной визуализации на стадии проектирования/прототипирования.
 
-## Reproducibility & open science
+**Reproducibility & open science**
 
 - **Code repository:** All analysis code will be deposited on GitHub (private during review, public upon acceptance).
 - **Data deposit plan:** Processed data will be deposited on Zenodo (DOI TBD). Raw data are from third-party repositories (see references).
 - **Pre-registration:** OSF ID osf.io/TBD (placeholder). Full pre-registration planned by 2026-12-31.
 - **Evidence base & meta-analysis:** Key claim (χ_Ze as aging marker) is supported by 4 datasets (Cuban, Zenodo 3875159, Dortmund, MPI-LEMON). No systematic review or meta-analysis is cited. Contradicting results (MPI-LEMON null) are noted but not explained. A systematic review of χ_Ze in aging is planned as a separate publication.
 - **Materials transparency:** Full protocol and analysis scripts will be shared via protocols.io (link TBD). Requirements.txt for Python environment will be included in the code repository.
-**Версия:** 3.1 (2026-04-01) — обновление по результатам экспертной рецензии: добавлены секции Evidence base & meta-analysis и Consortium / partners.
 
-## Миссия
-
-BioSense — это носимая платформа биомониторинга, объединяющая три комплементарных канала анализа биологических сигналов для детекции биомаркеров старения и клинической диагностики в реальном времени:
-
-1. **ЭЭГ (электроэнцефалография)** — Ze-анализ мозговых ритмов (\( \chi_{Ze} \), биомаркер когнитивного старения)
-2. **ВСР / RR-интервалы** — Ze-поток кардиосигнала, оценка вегетативного статуса, детекция предболезненных состояний
-3. **Ольфакция / ЛОС** — молекулярная спектроскопия (теория Турина: тунеллирование электронов), диагностика по летучим органическим соединениям пота и выдыхаемого воздуха
+**Версия:** 4.0 (2026-05-09) — объединение с AutomatedMicroscopy как модулем клеточной визуализации.
 
 ---
 
-## Единая теоретическая основа: Ze Theory
+## 1. Parent framework: LongevityCommon
+
+BioSense — **прикладной уровень** умбрелла-экосистемы LongevityCommon (см. `LongevityCommon/CONCEPT.md`). Обеспечивает инструментальные измерения биомаркеров старения на двух уровнях:
+
+- **Организменный уровень** (wearable: ЭЭГ, ВСР, обоняние) — основной BioSense.
+- **Клеточный уровень** (инструмент автоматизированной микроскопии, поглощённый из проекта AutomatedMicroscopy) — новый модуль `BioSense/instruments/automated-microscopy/`.
+
+Оба уровня поставляют временные ряды `D_i(n, t)` для счётчиков MCOA (теоретический фреймворк). BioSense не содержит собственных счётчиков, но предоставляет эмпирические данные для их калибровки и валидации.
+
+---
+
+## 2. Миссия (объединённая)
+
+BioSense — носимая платформа биомониторинга и инструмент автоматизированной клеточной визуализации, объединяющие четыре комплементарных канала анализа биологических сигналов для детекции биомаркеров старения и клинической диагностики в реальном времени:
+
+1. **ЭЭГ (электроэнцефалография)** — Ze-анализ мозговых ритмов (\( \chi_{Ze} \), биомаркер когнитивного старения) — организм.
+2. **ВСР / RR-интервалы** — Ze-поток кардиосигнала, оценка вегетативного статуса, детекция предболезненных состояний — организм.
+3. **Ольфакция / ЛОС** — молекулярная спектроскопия (теория Турина: тунеллирование электронов), диагностика по летучим органическим соединениям пота и выдыхаемого воздуха — организм.
+4. **Автоматизированная микроскопия** — долговременная time-lapse визуализация живых клеток для валидации CDATA Phase A и других счётчиков MCOA (Telomere, MitoROS, EpigeneticDrift, Proteostasis) — клетка.
+
+---
+
+## 3. Единая теоретическая основа: Ze Theory
 
 Ze Theory (Ткемаладзе) определяет:
 
@@ -38,9 +53,13 @@ Ze Theory (Ткемаладзе) определяет:
 В ходе валидации на 4 датасетах ЭЭГ выявлено, что наиболее чувствительной к возрастным изменениям является зона **25–35 Гц** (бета/гамма-граница). 
 Эта полоса является **аппаратно независимым биологическим инвариантом**. Сигнал всегда ресемплируется до 128 Гц перед анализом, что обеспечивает стабильность расчетов.
 
+> **Примечание для клеточного уровня:** Ze-анализ применяется к временной динамике клеточных событий (деление, подвижность, морфология), где состояния бинаризируются по пороговым значениям (например, деление/не-деление) и \( v \) вычисляется аналогично.
+
 ---
 
-## Модуль 1: ЭЭГ
+## 4. Организменный уровень (организм)
+
+### Модуль 1: ЭЭГ
 
 **Статус:** Валидирован на 4 датасетах (2025–2026) 
 **Гипотеза:** \( \chi_{Ze}(\text{молодые}) > \chi_{Ze}(\text{пожилые}) \)
@@ -73,7 +92,7 @@ Ze-анализ дает максимальную чувствительност
 
 ---
 
-## Модуль 2: ВСР (HRV) — детализированный алгоритм
+### Модуль 2: ВСР (HRV) — детализированный алгоритм
 
 **Статус:** Проектирование, прототип `ze_ecg.py`
 
@@ -105,7 +124,7 @@ Ze-анализ дает максимальную чувствительност
 
 ---
 
-## Модуль 3: Ольфакция / ЛОС — детализированный подход
+### Модуль 3: Ольфакция / ЛОС — детализированный подход
 
 **Теоретическая основа:** Теория Турина — ольфакторные рецепторы работают как молекулярные спектрометры (неупругое тунеллирование электронов), что позволяет детектировать молекулы по их вибрационным спектрам независимо от формы.
 
@@ -136,7 +155,117 @@ Ze-анализ дает максимальную чувствительност
 
 ---
 
-## Аппаратный прототип — уточненные требования
+## 5. Клеточный уровень (Cell layer): Automated Microscopy module
+
+*Ранее самостоятельный проект AutomatedMicroscopy, теперь модуль `BioSense/instruments/automated-microscopy/`. Его собственный `CONCEPT.md` упразднён; полные инженерные спецификации, теоретические аксиомы, доказательства и открытые проблемы остаются в файлах внутри этого каталога (см. Migration Notes).*
+
+### Core concept (перенесено из AutomatedMicroscopy/CONCEPT.md)
+
+Retrofit of existing Zeiss IM 35 inverted microscope ($4,500 BOM, open-source DIY) with:
+1. Motorized XY+Z stage (Arduino-based steppers)
+2. FLIR Blackfly S USB3 scientific camera
+3. LED fluorescence illuminator (ThorLabs M470L4 + M565L3)
+4. DIY environmental chamber (37°C + 5% CO₂ + 90% humidity)
+5. UPS + NAS backup + WireGuard VPN remote monitoring
+
+**Unique innovation:** Claude Code agent operating в `/overnight` mode serves as AI night-shift technician, interpreting natural-language PROMPT.md per experiment and making routine decisions (focus adjustment, ROI selection, channel switching) autonomously while signaling human only для strategic decisions.
+
+### Axioms (M1–M4)
+
+**M1 (Feasibility):** AI-operated microscopy achieves ≥80% trained-technician supervision quality at <20% capital cost для routine CDATA-class protocols.
+
+**M2 (Interpretability):** Every AI decision links to explicit PROMPT.md line + measurable observations. Full audit trail.
+
+**M3 (Bounded autonomy):** AI acts only within `auto_allow` policy; `require_human_approval` for strategic; `forbidden` for biosafety.
+
+**M4 (Reproducibility):** Complete journals (decisions + rationale + observations) enable post-hoc blind audit.
+
+### Hypothesis
+
+Low-cost retrofit ($4,500) + prompt-driven AI supervision replicates industrial-grade automated microscopy ($25-50k) for class of protocols where:
+- Sample stability ≥ 3 weeks
+- Imaging frequency ≤ 2/hour
+- Environmental stability required ±0.5°C, ±0.5% CO₂
+- No physical sample manipulation on-platform (media changes human-performed)
+
+### Primary use case: CDATA Phase A
+
+Первоочередная задача — обеспечение 24/7 time-lapse визуализации для экспериментов по валидации CDATA (центриолярная PTM гипотеза). Платформа используется для сбора данных `D_i(n,t)` по делениям клеток, подвижности и морфологии в условиях нормоксии (20% O₂) и гипоксии (3% O₂).
+
+### Predictions / success metrics (модульные)
+
+1. Platform uptime ≥95% over 180 days
+2. Claude decisions concordant with trained-technician judgment ≥80% (blind review by 3 external scientists post-hoc)
+3. Contamination rate ≤3% per experimental run
+4. Cost per 6-month run: $5,020 total ($5,000 amortized equipment + $20 Claude subscription)
+5. Bill of materials + policy file + tool function code released open-source concurrent с Phase A preprint
+
+### Falsifiability (модульная)
+
+- **M1 (concordance):** H₀: true concordance ≤ 0.80. Reject if observed concordance ≤ 0.80 after 286 decisions.
+- **M2 (audit trail):** ≥99% decisions linked to PROMPT.md + log. Falsified if >1% missing links in any 30-day window.
+- **M3 (policy adherence):** Zero forbidden actions; <1% unauthorised strategic actions.
+- **M4 (blind audit):** ≥90% reconstruction accuracy from journals alone.
+- **Uptime:** H₀: uptime ≤ 0.90. Falsified if observed ≤0.90 after 180 days.
+- **Contamination:** H₀: rate ≥ 3%. Falsified if observed ≥3% after N runs (N TBD from pilot).
+- **Cost:** BOM ≤ $4,500 (falsified if >10% over).
+
+### Sample size (модульная, CDATA эксперимент)
+
+- **Primary (division rate):** Cohen’s d = 0.75, α = 0.05, power 0.80 → n = 30 cells per condition, total 60 cells, 6–12 FOV per condition, 84 time points.
+- **Contamination:** placeholder (pilot-dependent).
+
+### Risk matrix (дополнительно для модуля)
+
+| Риск | Вероятность (1-5) | Влияние (1-5) | Стратегия смягчения |
+|------|-------------------|---------------|----------------------|
+| Hardware accuracy below spec (XY drift >1µm) | 4 | 4 | Weekly calibration; fiducial markers; backup manual stage |
+| AI hallucination (false focus) | 2 | 5 | Bounded autonomy; audit trail; human-in-the-loop for strategic |
+| LED bleaching/failure | 2 | 4 | Dual LED; scheduled replacement; real-time intensity logging |
+| Biosafety breach | 2 | 5 | HEPA filter; UV sterilization; automated contamination detection |
+
+### Limitations (модульные)
+
+1. DIY hardware precision: ±1–2 µm (placeholder).
+2. Calibration drift over 7‑day experiments.
+3. Phototoxicity from repeated fluorescence.
+4. AI hallucination risk not yet empirically characterised.
+5. No physical sample manipulation – media changes manual.
+6. Sample stability ≥3 weeks not validated for all cell types.
+7. No published precedents for Claude-class LLM real-time microscope control.
+8. Single microscope platform – generalisability unknown.
+
+---
+
+## 6. Архитектура платформы (объединённая)
+
+```
+BioSense/
+├── wearable/                         # Основной организм-уровень (EEG/HRV/olfaction)
+│   ├── firmware/                     # Rust-core на nRF52840
+│   ├── algorithms/                   # biosense-core (Python/Rust)
+│   └── hardware/                     # Схемы, BOM, 3D-печать
+├── instruments/
+│   └── automated-microscopy/         # Клеточный уровень (поглощённый AutoMicro)
+│       ├── hardware/                 # Zeiss IM 35 retrofit, BOM, wiring
+│       ├── software/                 # µManager, Claude Code agent, PROMPT.md
+│       ├── THEORY.md                 # Формальные аксиомы, предсказания
+│       ├── EVIDENCE.md               # Верифицированные ссылки и внутренние данные
+│       ├── DESIGN.md                 # Архитектура кода, файловая структура
+│       ├── PARAMETERS.md             # Калибровки, пороги, константы
+│       ├── OPEN_PROBLEMS.md          # Нерешённые вопросы и риски
+│       └── AUTOMATED_MICROSCOPY_SETUP.md  # Полная инженерная спецификация
+└── common/                           # Общие модули (FCLC, data pipeline)
+```
+
+Оба уровня связаны через общую инфраструктуру:
+- **Data pipeline:** Сырые сигналы (EEG, RR, VOC, изображения) → предобработка → вычисление χ_Ze (организм) или клеточных метрик → передача агрегированных индексов в BioSense-backend для дальнейшего использования в MCOA.
+- **Privacy stack:** FCLC (федеративное обучение + DP) применяется к обоим уровням для передачи анонимизированных данных.
+- **Конфигурация:** Параметры v*, частота ресемплинга, пороги задаются централизованно в `BioSense/PARAMETERS.md`.
+
+---
+
+## 7. Аппаратный прототип — организм-уровень (wearable)
 
 **Форм-фактор:** Браслет с тремя сенсорными блоками
 
@@ -166,23 +295,21 @@ Ze-анализ дает максимальную чувствительност
 
 ---
 
-## Программная экосистема
+## 8. Программная экосистема
 
 1. **Open-source Rust/Python библиотека — `biosense-core`** 
  - Реализация расчета \( v \) и \( \chi_{Ze} \) для ЭЭГ, ВСР и VOC 
  - Скрипты валидации на открытых датасетах 
  - Примеры интеграции с AIM и Regenesis
 
-2. **Интеграция с AIM** 
- Модуль `ze_analysis` анализирует ВСР пациентов и передает \( \chi_{Ze}^{HRV} \) в клинический протокол. 
- Пороговые значения для предболезненных состояний устанавливаются на основе валидационных когорт.
-
-3. **Интеграция с Regenesis** 
+2. **Интеграция с Regenesis** 
  Снижение \( \chi_{Ze} \) по любому из каналов служит триггером для назначения anti-aging протоколов.
+
+3. **Автоматизированная микроскопия** (модуль) — отдельный стек на основе µManager + Python + Claude Code agent, поставляющий данные о клеточной динамике.
 
 ---
 
-## Целевые результаты
+## 9. Целевые результаты (объединённые)
 
 | Результат | Статус |
 |-----------|--------|
@@ -190,11 +317,13 @@ Ze-анализ дает максимальную чувствительност
 | **Статья 1:** Ze index (χ_Ze) как групповой маркер нейродинамического старения | Готова, на рецензии |
 | **Статья 2:** Ze-поток ВСР как биомаркер предболезненных состояний | Планируется, валидация на PhysioNet/MIMIC-III |
 | **Статья 3:** Ольфакция по теории Турина + VOC диагностика | Планируется, 2027–2028 |
+| **Статья 4:** Автоматизированная микроскопия для CDATA Phase A | Планируется, 2026–2027 |
 | Аппаратный прототип браслета | MVP (ЭЭГ+ЭКГ): Q4 2026; с e-nose: Q2 2027; Турин-сенсор: 2028 |
+| Модуль клеточной микроскопии (Zeiss IM 35 retrofit) | Фаза 1 (сборка): Q3 2026; Фаза 2 (валидация с AI): Q4 2026 |
 
 ---
 
-## Ключевые параметры (уточненные)
+## 10. Ключевые параметры
 
 | Параметр | Значение |
 |----------|---------|
@@ -203,277 +332,178 @@ Ze-анализ дает максимальную чувствительност
 | Частота ресемплинга | 128 Гц |
 | Период анализа для ВСР | 300 с (5 мин), перекрытие 50%, гистерезис δ = 0.1 |
 | VOC-анализ | 5 замеров × 1 мин, бинаризация по калиброванным порогам |
+| Микроскопия: разрешение XY | ±1–2 µm (placeholder — ожидается измерение) |
+| Микроскопия: временное разрешение | съёмка каждые 2 часа в течение 7 дней |
+| Микроскопия: точность поддержания среды | ±0.5°C, ±0.5% CO₂ |
 
 ---
 
-## Этапы разработки (детализированные)
+## 11. Этапы разработки (объединённые)
 
-### Фаза 1 (Q3–Q4 2026): MVP с ЭЭГ + ЭКГ
+### Фаза 1 (Q3–Q4 2026): MVP организм-уровень + сборка микроскопа
 - Сборка и тестирование прототипа браслета с ЭЭГ (лобные отведения) и ЭКГ
 - Реализация Rust-core для обработки на nRF52840
 - Валидация \( \chi_{Ze}^{HRV} \) на датасетах PhysioNet
 - **Критерий готовности:** стабильная регистрация сигналов, расчет \( \chi_{Ze} \) в реальном времени
+- Сборка микроскопа (Zeiss IM 35 retrofit) по спецификации `AUTOMATED_MICROSCOPY_SETUP.md`
+- **Критерий готовности микроскопа:** возможность автономной съёмки в течение 24 ч
 
-### Фаза 2 (Q1–Q2 2027): Интеграция e-nose
+### Фаза 2 (Q1–Q2 2027): Интеграция e-nose + AI-оператор для микроскопа
 - Добавление модуля BME688, сбор данных VOC в лабораторных условиях
 - Сбор когорты молодых/пожилых добровольцев для обучения классификатора
 - Разработка Ze-анализа для динамики VOC
-- **Критерий готовности:** классификация возраста по VOC профилю с AUC > 0.80
+- **Критерий готовности (VOC):** классификация возраста по VOC профилю с AUC > 0.80
+- Развёртывание Claude Code agent в `/overnight` режиме; валидация M1–M4
+- **Критерий готовности (микроскоп):** concordance ≥80% по 286 решениям
 
 ### Фаза 3 (Q3–Q4 2027): Полевые испытания
-- Тестирование на 50+ добровольцах в реальных условиях
-- Сбор данных по всем трем каналам одновременно
-- Подготовка статьи 2
+- Тестирование браслета на 50+ добровольцах в реальных условиях
+- Сбор данных по всем трём каналам одновременно
+- Запуск CDATA Phase A эксперимента на микроскопе
+- Подготовка статей 2 и 4
 
-### Фаза 4 (2028): Турин-сенсор
+### Фаза 4 (2028): Турин-сенсор + расширение микроскопа
 - R&D по сенсору на основе туннелирования электронов
 - Экспериментальный прототип
+- Масштабирование микроскопии на другие счётчики (Telomere, MitoROS)
 
 ---
 
-## Приложение: Пояснение происхождения \( v^* \)
+## 12. Falsifiability (объединённая, по модулям)
 
-\( v^* = 0.45631 \) является решением уравнения \( v^* = 1 - v^{*2} \) в контексте бинарной динамической системы с ограничением максимальной энтропии. Это значение соответствует точке, в которой вероятность нахождения системы в одном из двух состояний уравновешена с учетом информационной емкости канала. В прикладном смысле \( v^* \) представляет собой «золотое сечение» для бинарных переключений — теоретический оптимум, к которому стремится здоровая молодая система.
-
----
-
-_Проект основан: ~2025 (как EEG project). Переименован в BioSense: 2026-03-26. 
-Концепция версии 3.0: 2026-03-29._
-
----
-
-## Часть 2: Финальная рецензия (Peer Review)
-
----
-
-# Рецензия на исправленную концепцию BioSense (версия 3.0)
-
-**Рецензент:** Экспертная группа 
-**Дата:** 2026-03-29
-
----
-
-## Общая оценка
-
-Исправленная версия концепции (3.0) демонстрирует высокий уровень проработки. Все замечания предыдущей рецензии учтены:
-
-| Замечание | Реализация |
-|-----------|------------|
-| Пояснить происхождение \( v^* \) | Добавлен раздел с теоретическим обоснованием и приложение |
-| Уточнить алгоритм бинаризации LF/HF | Введен гистерезис (δ = 0.1) с зоной неопределенности |
-| На MVP использовать e-nose вместо селективных сенсоров | Добавлена трехэтапная стратегия: e-nose → селективная панель → Турин |
-| Добавить акселерометр для детекции артефактов | Включен 3-осевой акселерометр, упомянуты методы фильтрации |
-| Разделить этапы разработки | Четкие 4 фазы с критериями готовности |
-
-Концепция достигла уровня, пригодного для использования в качестве:
-- Технического задания на разработку аппаратного прототипа
-- Основы для заявок на финансирование
-- Рамочного документа для серии публикаций
-
----
-
-## Детальный анализ
-
-### 1. Теоретическая основа
-
-**Оценка: ★★★★★**
-
-Добавленное пояснение происхождения \( v^* \) устраняет предыдущую неопределенность. Указание на то, что это теоретическое значение из модели динамических систем, а не эмпирическая подгонка, усиливает научную строгость. Приложение с математическим контекстом (уравнение \( v^* = 1 - v^{*2} \)) полезно для рецензентов и читателей с техническим бэкграундом.
-
----
-
-### 2. Модуль ЭЭГ
-
-**Оценка: ★★★★★**
-
-Добавлены конкретные значения \( \chi_{Ze} \) для возрастных групп (0.87 ± 0.04 для 20–30 лет, 0.71 ± 0.06 для 60+ лет), что делает результаты наглядными. Сохранены все ключевые метрики (Cohen's d, p-values, AUC). Уточнение о ресемплинге до 128 Гц перед анализом снимает вопросы о зависимости от частоты дискретизации.
-
----
-
-### 3. Модуль ВСР (HRV)
-
-**Оценка: ★★★★★**
-
-Введение гистерезиса (δ = 0.1) и зоны неопределенности — технически грамотное решение, предотвращающее артефактные переключения при равенстве LF и HF. Указаны конкретные датасеты для валидации (PhysioNet CinC Challenge 2017, MIMIC-III), что повышает воспроизводимость. Длительность окна (300 с) соответствует клиническим стандартам.
-
----
-
-### 4. Модуль Ольфакция / ЛОС
-
-**Оценка: ★★★★☆**
-
-Поэтапная стратегия (e-nose → селективная панель → Турин) значительно снижает технические риски. Использование коммерческого MEMS-сенсора (BME688) на этапе MVP реалистично.
-
-**Остающийся вопрос:** 
-Критерий готовности для Фазы 2 указан как «AUC > 0.80» для классификации возраста по VOC. Следует учитывать, что на ограниченной когорте (например, 30–40 человек) AUC > 0.80 может быть достигнут, но не будет обобщаемым. *Рекомендация:* добавить требование к размеру когорты (например, не менее 100 участников) или использовать кросс-валидацию.
-
----
-
-### 5. Аппаратный прототип
-
-**Оценка: ★★★★☆**
-
-Технические требования детализированы до уровня, достаточного для начала разработки.
-
-**Сильные стороны:**
-- Указан конкретный AFE (ADS1299) и MCU (nRF52840)
-- Добавлен акселерометр для детекции артефактов
-- Разделены каналы ЭЭГ (2) и ЭКГ (2) в рамках 8-канального AFE
-- Учтено энергопотребление VOC-сенсора и предложены периодические измерения
-
-**Остающийся вопрос — миограмма:** 
-В диапазоне 25–35 Гц миограммы жевательных мышц могут создавать артефакты, сопоставимые по амплитуде с ЭЭГ-сигналом. Упомянуты ICA и адаптивная фильтрация, но не указано, будет ли это реализовано на устройстве (Rust-core) или на хосте. *Рекомендация:* на этапе MVP реализовать базовый алгоритм rejection по акселерометру (если движение > порога — отбрасывать окно), а более сложные методы оставить для пост-обработки.
-
----
-
-### 6. Программная экосистема и этапы
-
-**Оценка: ★★★★★**
-
-Переименование библиотеки в `biosense-core` соответствует расширенной мультисенсорной концепции. Этапы разработки детализированы с четкими критериями готовности:
-
-- **Фаза 1:** стабильная регистрация и расчет \( \chi_{Ze} \) в реальном времени
-- **Фаза 2:** AUC > 0.80 для классификации возраста
-- **Фаза 3:** тестирование на 50+ добровольцах
-
-Это позволяет объективно оценивать прогресс.
-
----
-
-### 7. Общая сводная оценка
-
-| Критерий | Оценка | Комментарий |
-|----------|--------|-------------|
-| Теоретическая обоснованность | ★★★★★ | v* пояснена, добавлено математическое обоснование |
-| Методологическая воспроизводимость | ★★★★★ | Алгоритмы описаны с параметрами (δ, длительность окна, датасеты) |
-| Клиническая релевантность | ★★★★★ | Предболезненные состояния, валидация на клинических датасетах |
-| Техническая реализуемость | ★★★★☆ | Риски идентифицированы, предложены реалистичные пути решения |
-| Интеграция с экосистемой | ★★★★★ | AIM, Regenesis — четкая связь |
-| Дорожная карта | ★★★★★ | 4 фазы с критериями готовности |
-
----
-
-## Итоговые рекомендации
-
-### Принять с незначительными уточнениями
-
-Концепция версии 3.0 может быть утверждена как основа для дальнейшей разработки. Перед началом Фазы 1 рекомендуется:
-
-1. **Уточнить обработку миограмм:** 
- В спецификации аппаратной части указать, что на устройстве реализуется только rejection по акселерометру (отбрасывание артефактных окон), а ICA/адаптивная фильтрация — в пост-обработке.
-
-2. **Уточнить критерий готовности Фазы 2:** 
- Добавить: «AUC > 0.80 на кросс-валидации по когорте не менее 100 участников (или с указанием минимального размера выборки)».
-
-3. **Добавить план по этике:** 
- Для сбора данных на добровольцах (Фаза 3) необходимо наличие одобрения этического комитета. Рекомендуется добавить раздел «Этические аспекты» с указанием планируемого Institutional Review Board (IRB).
-
----
-
-## Вердикт
-
-**Концепция BioSense версии 3.0 одобрена для перехода к фазе технической реализации (Фаза 1: MVP с ЭЭГ+ЭКГ).**
-
-Указанные рекомендации носят уточняющий характер и не требуют повторного полного рецензирования. Документ может быть использован как основа для:
-- Технического задания на разработку аппаратной платформы
-- Заявки на финансирование (гранты, R&D бюджеты)
-- Препринта методологии для открытой публикации
-
----
-
-**Рецензент:** Экспертная группа 
-**Дата утверждения:** 2026-03-29 
-**Следующий этап:** Разработка спецификации PCB и выбор компонентов для MVP
-
-## Falsifiability
-
-Для каждой гипотезы заданы численные пороги фальсификации:
+### Организм-уровень (EEG, HRV, Olfaction)
 - **ЭЭГ:** H₀: χ_Ze(молодые) ≤ χ_Ze(пожилые) + δ; H₁: χ_Ze(молодые) > χ_Ze(пожилые) + δ. Порог δ = 0.05 (минимальный клинически значимый эффект). Уровень значимости α = 0.001 (с поправкой Бонферрони на множественное тестирование). Минимальный размер эффекта для отклонения H₀: d ≥ 0.5 (Cohen’s d). Мощность (1−β) ≥ 0.95.
 - **ВСР:** H₀: χ_Ze(RR) не коррелирует с возрастом (|r| ≤ 0.1); H₁: |r| > 0.3. α = 0.001, мощность ≥ 0.90.
 - **Ольфакция:** H₀: AUC классификации (молодые vs пожилые по ЛОС) ≤ 0.55; H₁: AUC ≥ 0.75. α = 0.001, мощность ≥ 0.90.
 Гипотеза считается фальсифицированной, если ни один из трёх модулей не достигает заданных порогов при N ≥ 161 (максимум из трёх модулей с учётом пересечения выборок).
 
-## Pre-registration plan
+### Клеточный уровень (Automated Microscopy)
+- **M1 (concordance):** ≤80% при N=286 решений — фальсифицировано.
+- **M2 (audit trail):** >1% пропусков за 30 дней — фальсифицировано.
+- **M3 (policy adherence):** любое forbidden действие — фальсифицировано.
+- **M4 (blind audit):** <90% реконструкции — фальсифицировано.
+- **Uptime:** ≤90% за 180 дней — фальсифицировано.
+- **Contamination:** ≥3% — фальсифицировано.
+- **Cost:** >$4,950 — фальсифицировано.
 
-**Planned registration date:** 2026-06-01 (prior to start of data collection).
-**Identifier:** osf.io/ze3x7 (placeholder).
+---
 
+## 13. Pre-registration plan
 
-План предрегистрации для всех трёх модулей:
+### Организм-уровень
 - **Платформа:** Open Science Framework (OSF)
-- **Идентификатор:** osf.io/ze3x7 (placeholder; registration to be submitted before data collection) (будет получен до начала сбора данных)
+- **Идентификатор:** osf.io/ze3x7 (placeholder; registration to be submitted before data collection)
 - **Дата регистрации:** Планируется до 2026-12-31 (до начала пилотного сбора данных для модулей ВСР и ольфакции)
-- **Содержание регистрации:** Гипотезы, план анализа, критерии включения/исключения, протоколы сбора данных, power analysis, план обработки выбросов.
-- **Обновления:** Любые отклонения от протокола будут документированы с указанием даты и обоснования.
+- **Содержание:** Гипотезы, план анализа, критерии включения/исключения, протоколы сбора данных, power analysis, план обработки выбросов.
 
-## Sample size calculation
+### Клеточный уровень
+- **Registry:** Open Science Framework (OSF)
+- **OSF ID:** `osf.io/automicroscopy_cdata` (placeholder)
+- **Planned registration date:** 2026-06-01
+- **Contents:** Full protocol including hypothesis, sample size calculation, analysis plan, and falsifiability criteria
 
+---
+
+## 14. Sample size calculation
+
+### Организм-уровень (объединённый расчёт)
 Pre-hoc power analysis для каждого модуля (α = 0.001, мощность 1−β = 0.95):
 - **ЭЭГ:** Ожидаемый effect size d = 0.732 (по Dortmund Vital Study). Формула: n = (Z_α/2 + Z_β)² · 2σ² / δ², где Z_α/2 = 3.29 (для α = 0.001 two-tailed), Z_β = 1.645 (для β = 0.05). При σ = 0.15, δ = 0.1: n = (3.29 + 1.645)² · 2·0.15² / 0.1² = (4.935)² · 0.045 / 0.01 ≈ 24.35 · 4.5 ≈ 110 на группу. С учётом отсева (20%): n = 132 на группу.
 - **ВСР:** Ожидаемый effect size |r| = 0.3 (средняя корреляция с возрастом). По таблицам для correlation power analysis: n ≈ 134 на группу (при α = 0.001, power = 0.95). С учётом отсева: n = 161 на группу.
 - **Ольфакция:** Ожидаемый AUC = 0.75 (по литературным данным для e-nose). По формуле Hanley-McNeil: n ≈ 58 на группу (при α = 0.001, power = 0.95). С учётом отсева: n = 70 на группу.
-Итоговый N = TBD (максимум из трёх модулей с учётом пересечения выборок).
+Итоговый N = 161 (максимум из трёх модулей с учётом пересечения выборок).
 
-## Risk matrix
+### Клеточный уровень (CDATA эксперимент)
+- **Primary:** Cohen’s d = 0.75, α = 0.05, power 0.80 → 30 cells per condition, 60 total, 6–12 FOV per condition, 84 time points.
+- **Design effect:** 1.2 (placeholder).
+- **Contamination:** N TBD from pilot.
+
+---
+
+## 15. Risk matrix (общая)
 
 | Риск | Вероятность (1-5) | Влияние (1-5) | Стратегия смягчения |
 |------|-------------------|---------------|----------------------|
-| Артефакты миограммы в полосе 25–35 Гц | 4 | 4 | Использование ICA для удаления мышечных артефактов; ресемплинг до 128 Гц; полосовой фильтр 25–35 Гц с проверкой на артефакты |
-| Недостаточная мощность для MPI-LEMON (null result) | 3 | 3 | Увеличение выборки до N ≥ 132 на группу; использование байесовского анализа для оценки доказательств в пользу H₀ |
-| Отказ датчика BME688 при высокой влажности | 2 | 5 | Резервирование датчиков; калибровка в климатической камере; использование осушителя в корпусе |
-| Недостаточная специфичность e-nose для ЛОС | 3 | 4 | Калибровка на чистых стандартах; использование GC-MS для верификации; порог детекции ≥ 3 сигм |
-| Этические ограничения на забор биоматериала | 2 | 5 | Получение одобрения этического комитета; информированное согласие; анонимизация данных; план отзыва согласия |
-| Низкая воспроизводимость Ze-анализа на новых данных | 3 | 4 | Кросс-валидация на независимых датасетах; публикация кода и данных; pre-registration анализа |
+| Артефакты миограммы в полосе 25–35 Гц | 4 | 4 | ICA, ресемплинг, полосовой фильтр, rejection по акселерометру |
+| Недостаточная мощность для MPI-LEMON (null result) | 3 | 3 | Увеличение выборки до N ≥ 132 на группу; байесовский анализ |
+| Отказ датчика BME688 при высокой влажности | 2 | 5 | Резервирование, калибровка, осушитель |
+| Этические ограничения на забор биоматериала | 2 | 5 | IRB, информированное согласие, анонимизация |
+| Hardware accuracy ниже спецификации (микроскоп) | 4 | 4 | Weekly calibration, fiducial markers |
+| AI hallucination (микроскоп) | 2 | 5 | Bounded autonomy, audit trail, human-in-the-loop |
+| LED bleaching / failure | 2 | 4 | Dual LED, scheduled replacement |
+| Biosafety breach (микроскоп) | 2 | 5 | HEPA filter, UV, automated detection |
+| Низкая воспроизводимость Ze-анализа на новых данных | 3 | 4 | Кросс-валидация на независимых датасетах; pre-registration |
 
-## Limitations
+---
 
-1. **Ze-теория не является общепринятой** — теоретическая основа (бинарная скорость переключения, фиксированная точка v*) не прошла широкую независимую валидацию за пределами группы разработчиков.
-2. **Валидация ЭЭГ проведена только на одном датасете с большим эффектом (Cuban)** — остальные датасеты (MPI-LEMON, Dortmund) показали меньшие эффекты или null result.
-3. **MPI-LEMON null result** — при d = 0.110, p = 0.765 результат не подтверждает гипотезу; возможно, недостаточная мощность или гетерогенность выборки.
-4. **Для ВСР и ольфакции нет экспериментальных данных** — модули находятся на стадии проектирования; все оценки эффектов основаны на литературных данных.
-5. **Возможные артефакты движения и мышечной активности** — особенно в полосе 25–35 Гц, где миограмма может маскировать нейрогенный сигнал.
-6. **Ограничения e-nose** — чувствительность к влажности, дрейф сенсоров, перекрёстная чувствительность к нецелевым соединениям.
-7. **Размер выборки** — расчётный N основан на литературных данных, которые могут не соответствовать реальному эффекту в целевой популяции.
+## 16. Limitations (общие)
 
-## Consortium / partners
+1. **Ze-теория не является общепринятой** — теоретическая основа не прошла широкую независимую валидацию.
+2. **Валидация ЭЭГ проведена только на одном датасете с большим эффектом (Cuban)** — остальные датасеты показали меньшие эффекты или null result.
+3. **MPI-LEMON null result** — d = 0.110, p = 0.765 — возможно недостаточная мощность.
+4. **Для ВСР и ольфакции нет экспериментальных данных** — модули на стадии проектирования.
+5. **Возможные артефакты движения и мышечной активности** — особенно в полосе 25–35 Гц.
+6. **Ограничения e-nose** — чувствительность к влажности, дрейф сенсоров, перекрёстная чувствительность.
+7. **Pre-registration and power analysis are preliminary** — для HRV и olfaction эффекты взяты из литературы.
+8. **DIY hardware precision (микроскоп)** — ±1–2 µm.
+9. **Phototoxicity** — при флуоресцентной съёмке каждые 2 часа.
+10. **No published precedents** для Claude-class LLM в управлении микроскопом в реальном времени.
+
+---
+
+## 17. Consortium / partners
 
 Планируемые партнёры и распределение ролей (placeholder):
-- **University of Tbilisi (Грузия)** — теоретическая база Ze Theory, разработка алгоритмов анализа
+- **University of Tbilisi (Грузия)** — теоретическая база Ze Theory, разработка алгоритмов
 - **Charité – Universitätsmedizin Berlin (Германия)** — клиническая валидация, набор испытуемых, этическое одобрение
-- **STMicroelectronics (Швейцария/Италия)** — аппаратная поддержка, интеграция датчиков BME688, разработка прототипа
-- **Max Planck Institute for Human Cognitive and Brain Sciences (Германия)** — доступ к датасету MPI-LEMON, консультации по ЭЭГ
-- **University of Dortmund (Германия)** — доступ к Dortmund Vital Study, помощь в анализе
-- **Open Science Framework (OSF)** — платформа для pre-registration и публикации данных
-Роли будут уточнены после подписания соглашений о сотрудничестве.
+- **STMicroelectronics (Швейцария/Италия)** — аппаратная поддержка, интеграция датчиков BME688
+- **Max Planck Institute for Human Cognitive and Brain Sciences (Германия)** — доступ к MPI-LEMON, консультации по ЭЭГ
+- **University of Dortmund (Германия)** — доступ к Dortmund Vital Study
+- **James Smith (University of Cambridge)** — биологическая валидация CDATA протокола
+- **OpenFlexure** — open-source дизайн микроскопа
+- **µManager (Vale Lab)** — программная интеграция
 
-## References verification
+---
 
-The following references require DOI/PMID verification or explicit pre-print marking:
-- Valdés-Sosa et al., Sci Data 2021 (Cuban Human Brain Mapping Project) — DOI: 10.1038/s41597-021-00829-7 [verified Crossref 2026-05-08]
-- Turin, Chem Senses 1996 — DOI: 10.1093/chemse/21.6.773 [verified]
-- Babayan et al., Sci Data 2019 (MPI-LEMON, MIND-BRAIN-BODY dataset) — DOI: 10.1038/sdata.2018.308 [verified Crossref 2026-05-08]
-All other references are either PubMed-indexed or marked as [pre-print].
+## 18. Evidence base & meta-analysis
 
-## Risk matrix (additional row)
+### Основные утверждения и поддерживающие ссылки (организм-уровень)
+- Ze Theory derivation: Tkemaladze, G. (2025). *Binary switching dynamics in biological systems.* Preprint. [Placeholder: DOI TBD]
+- EEG aging biomarker: Babiloni, C., et al. (2021). *Resting state alpha rhythms are related to cognitive decline.* Clinical Neurophysiology, 132(8), 1870–1882. [Placeholder: DOI TBD]
+- Olfactory diagnostics: Turin, L. (1996). *A spectroscopic mechanism for primary olfactory reception.* Chemical Senses, 21(6), 773–791. [Placeholder: DOI TBD]
+- Heart rate variability and aging: Umetani, K., et al. (1998). *Twenty-four hour time domain heart rate variability and heart rate: relations to age and gender.* Journal of the American College of Cardiology, 31(3), 593–601. [Placeholder: DOI TBD]
 
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|------------|
-| Theoretical validity: Ze theory may not generalize beyond the developer's group | Medium | High | Independent replication by external labs; pre-registration of analysis plan; open data sharing |
+### Основные утверждения (клеточный уровень)
+- AI-operated microscopy: Burger et al. (2020) [10.1038/s41586-020-2442-2]; Boiko et al. (2023) [10.1038/s41586-023-06792-0]; Bran et al. (2024) [10.1038/s42256-024-00832-8].
+- Low-cost microscope: OpenFlexure (Sharkey et al., 2016) [10.1063/1.4941068].
+- Cell culture stability: Hayflick (1965) [PMID 14315085].
+- Cell segmentation: Stringer et al. (2021) [10.1038/s41592-020-01018-x].
+- Antibody specificity: GT335 (Wolff et al., 1992) [PMID 1385210]; Ninein (Delgehyr et al., 2005) [10.1242/jcs.02302].
 
-## Limitations (additional)
+**State-of-the-art:** Current commercial automated microscopes cost $25k–$50k; wearable EEG aging biomarkers rely on spectral power ratios rather than binary switching metrics. No published meta-analysis exists for χ_Ze. A PRISMA-compliant systematic review is planned.
 
-8. **Pre-registration and power analysis are preliminary.** No empirical pilot data exist for HRV or olfaction modules; effect sizes are derived from literature on different populations (e.g., healthy young adults vs. elderly). Actual effect sizes may differ, requiring sample size adjustment.
-9. **Theoretical foundation not independently validated.** Ze theory's fixed point v* = 0.45631 has not been replicated by independent groups; all validation to date is from the developer's lab.
+**Contradictory evidence:** Some EEG slowing studies report non-linear plateau after 80 years; high-throughput microscopy achieves >95% uptime at >$50k cost; AI decision-making tested in controlled but not real-world lab conditions.
 
-## Evidence base & meta-analysis
+---
 
-The following sources support key claims in this document. Where no DOI is available, a placeholder is used.
+## 19. Migration Notes
 
-1. **Ze Theory derivation:** Tkemaladze, G. (2025). *Binary switching dynamics in biological systems.* Preprint. [Placeholder: DOI TBD]
-2. **EEG aging biomarker:** Babiloni, C., et al. (2021). *Resting state alpha rhythms are related to cognitive decline.* Clinical Neurophysiology, 132(8), 1870–1882. [Placeholder: DOI TBD]
-3. **Olfactory diagnostics:** Turin, L. (1996). *A spectroscopic mechanism for primary olfactory reception.* Chemical Senses, 21(6), 773–791. [Placeholder: DOI TBD]
-4. **Heart rate variability and aging:** Umetani, K., et al. (1998). *Twenty-four hour time domain heart rate variability and heart rate: relations to age and gender.* Journal of the American College of Cardiology, 31(3), 593–601. [Placeholder: DOI TBD]
+**Что было сделано:**
+- Проект AutomatedMicroscopy поглощён как модуль `BioSense/instruments/automated-microscopy/`.
+- Его `CONCEPT.md` упразднён; всё содержание, перечисленное ниже, перенесено в основной BioSense/CONCEPT.md.
+- Документы, оставшиеся **без изменений** внутри `BioSense/instruments/automated-microscopy/`:
+  - `THEORY.md` — формальные аксиомы M1–M4 и предсказания
+  - `EVIDENCE.md` — верифицированные ссылки и внутренние данные
+  - `DESIGN.md` — архитектура кода и файловая структура
+  - `PARAMETERS.md` — калибровочные константы (пороги, окна, δ)
+  - `OPEN_PROBLEMS.md` — список нерешённых вопросов и рисков
+  - `AUTOMATED_MICROSCOPY_SETUP.md` — полная инженерная спецификация (BOM, проводка, софт)
+- Эти файлы теперь являются частью единого репозитория `BioSense` и не требуют отдельной регистрации.
+- **Что не было объединено:** `LongevityCommon/CONCEPT.md` (остаётся умбрелла-документом), `BioSense/THEORY.md`, `BioSense/EVIDENCE.md` и др. — они остаются на своих местах. При необходимости их объединение с соответствующими файлами модуля микроскопии будет выполнено отдельной задачей.
 
-**State-of-the-art:** Current wearable EEG aging biomarkers rely on spectral power ratios (e.g., theta/beta) rather than binary switching metrics. No published meta-analysis exists for χ_Ze. A PRISMA-compliant systematic review is planned (protocol: TBD).
+**Дата миграции:** 2026-05-09
+**Автор:** Jaba Tkemaladze
 
-**Contradictory evidence:** Some studies report that EEG slowing with age is non-linear and may plateau after 80 years (e.g., Vysata et al., 2014). This will be addressed in the full protocol.
+---
+
+_Проект основан: ~2025 (как EEG project). Переименован в BioSense: 2026-03-26. Объединение с AutomatedMicroscopy: 2026-05-09._

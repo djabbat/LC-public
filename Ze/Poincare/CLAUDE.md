@@ -4,7 +4,7 @@
 
 **Код — Claude. Всё остальное — DeepSeek API.**
 Примеры: анализ трудов, философские эссе, математические объяснения, переводы.
-**Ключ:** `~/.aim_env → DEEPSEEK_API_KEY` · **Вход:** `~/Desktop/Claude/scripts/llm.py`
+**Ключ:** `~/.aim_env → DEEPSEEK_API_KEY` · **Вход:** `~/Desktop/Services/scripts/llm.py`
 **Модели:** `deepseek-chat` (быстро) · `deepseek-reasoner` (глубокий анализ)
 
 ---
