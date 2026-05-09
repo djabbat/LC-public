@@ -1,7 +1,9 @@
 import Config
 
+# BIOSENSE_BACKEND_URL default updated 2026-05-07 from :4101 to :4502
+# per cross-subproject port matrix decision (root PARAMETERS.md § 8).
 config :biosense_web,
-  backend_url: System.get_env("BIOSENSE_BACKEND_URL") || "http://127.0.0.1:4101"
+  backend_url: System.get_env("BIOSENSE_BACKEND_URL") || "http://127.0.0.1:4502"
 
 if config_env() == :prod do
   secret_key_base =

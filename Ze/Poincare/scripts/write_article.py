@@ -4,7 +4,7 @@ write_article.py — Poincaré Phase 3
 Пишет статью «Poincaré and Ze-theory: Intuition as Ze-Stream» через DeepSeek.
 """
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/Desktop/Claude/scripts"))
+sys.path.insert(0, os.path.expanduser("~/Desktop/Services/scripts"))
 from llm import ask_llm, MODEL_SMART
 
 BASE = os.path.dirname(os.path.abspath(__file__))

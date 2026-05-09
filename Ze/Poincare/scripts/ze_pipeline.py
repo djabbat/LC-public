@@ -6,7 +6,7 @@ Self-citation: Tkemaladze, J. (2026). Ze Theory as an Interpretive Framework
   for Quantum Mechanics. Longevity Horizon, 2(4). DOI: 10.65649/a874t352
 """
 import sys, os, time
-sys.path.insert(0, os.path.expanduser('~/Desktop/Claude/scripts'))
+sys.path.insert(0, os.path.expanduser('~/Desktop/Services/scripts'))
 from llm import ask_llm, MODEL_SMART, MODEL_FAST
 
 SELF_CITE = """Tkemaladze, J. (2026). Ze Theory as an Interpretive Framework for Quantum Mechanics. Longevity Horizon, 2(4). DOI: https://doi.org/10.65649/a874t352

@@ -121,6 +121,22 @@ pub async fn create_post(
     .await
     .map_err(|e| (StatusCode::INTERNAL_SERVER_ERROR, e.to_string()))?;
 
+    // Phase 4.5 (2026-05-08): broadcast bridge to Phoenix realtime via
+    // postgres LISTEN/NOTIFY. Phoenix listens on channel `feed_events`
+    // and re-publishes to the `feed:lobby` Phoenix Channel; client's
+    // useRealtime hook invalidates the feed query on receipt.
+    // Best-effort — errors don't fail the post creation.
+    let notify_payload = serde_json::json!({
+        "kind":   "new_post",
+        "post_id": post_id,
+        "author_id": auth_user.id,
+        "type":   req.post_type,
+    }).to_string();
+    let _ = sqlx::query("SELECT pg_notify('feed_events', $1)")
+        .bind(&notify_payload)
+        .execute(&state.db)
+        .await;
+
     // Non-blocking DOI verification: spawn background task
     if let Some(doi) = req.doi.clone() {
         let db = state.db.clone();
@@ -176,6 +192,17 @@ pub async fn react_to_post(
     // Recalculate score
     update_post_score(&state, post_id).await?;
 
+    // Phase 4.5 broadcast bridge — feed clients refresh on reaction
+    // change so reaction counts update live. Best-effort.
+    let _ = sqlx::query("SELECT pg_notify('feed_events', $1)")
+        .bind(serde_json::json!({
+            "kind": "post_updated",
+            "post_id": post_id,
+            "reason": "reaction",
+        }).to_string())
+        .execute(&state.db)
+        .await;
+
     Ok(StatusCode::NO_CONTENT)
 }
 
@@ -197,6 +224,10 @@ pub async fn delete_post(
     if rows == 0 {
         return Err((StatusCode::NOT_FOUND, "Post not found or unauthorized".into()));
     }
+    let _ = sqlx::query("SELECT pg_notify('feed_events', $1)")
+        .bind(serde_json::json!({"kind":"post_deleted","post_id":post_id}).to_string())
+        .execute(&state.db)
+        .await;
     Ok(StatusCode::NO_CONTENT)
 }
 
