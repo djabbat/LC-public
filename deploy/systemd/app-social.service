@@ -1,0 +1,35 @@
+[Unit]
+Description=LongevityCommon Social — Rust axum server (native)
+After=network.target postgresql@16-main.service
+Wants=network.target
+Requires=postgresql@16-main.service
+
+[Service]
+Type=exec
+User=jaba
+Group=jaba
+WorkingDirectory=/opt/app-social
+
+# Pin to host loopback port that nginx already proxies (4600).
+# Was Docker-mapped 8080 -> 4600; now native binary listens on 4600 directly.
+Environment="APP_PORT=4600"
+Environment="RUST_LOG=info"
+Environment="LONGEVITYCOMMON_VERSION=v5.6"
+
+# Database — DATABASE_URL lives in /etc/app-social/.env (mode 0600).
+EnvironmentFile=/etc/app-social/.env
+
+ExecStart=/opt/app-social/bin/longevitycommon-server
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+# Hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/tmp
+
+[Install]
+WantedBy=multi-user.target

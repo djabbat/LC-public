@@ -4,7 +4,7 @@ ze_foundations.py — Блок I
 Mathematical Foundations of Ze-Theory: аксиоматика, базовые теоремы.
 """
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/Desktop/Claude/scripts"))
+sys.path.insert(0, os.path.expanduser("~/Desktop/Services/scripts"))
 from llm import ask_llm, MODEL_SMART
 
 BASE = os.path.dirname(os.path.abspath(__file__))
