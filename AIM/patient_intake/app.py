@@ -6,14 +6,17 @@
 Открыть в браузере: http://localhost:5050
 """
 
+import io
 import json
 import os
+import shutil
 import sqlite3
 import uuid
+import zipfile
 from datetime import datetime
 from pathlib import Path
 
-from flask import Flask, request, jsonify, send_from_directory, render_template_string
+from flask import Flask, request, jsonify, send_file, send_from_directory, render_template_string
 
 app = Flask(__name__)
 BASE_DIR = Path(__file__).resolve().parent
@@ -197,6 +200,9 @@ INDEX_HTML = """<!DOCTYPE html>
     <button class="btn btn-primary" onclick="savePatient()">💾 Сохранить</button>
     <button class="btn btn-success" onclick="saveAndBackup()">☁️ Сохранить + Backup в Google Drive</button>
     <button class="btn btn-outline" onclick="newPatient()">📄 Новый пациент</button>
+    <span style="flex:1"></span>
+    <button class="btn btn-outline" onclick="archiveDownload()" title="Скачать ZIP-архив всех записей">📦 Скачать архив</button>
+    <button class="btn btn-outline" onclick="archiveToDesktop()" title="Сохранить архив в ~/Desktop/AIM_Archives">💿 Архив → Desktop</button>
     <span id="saveStatus" style="font-size:13px;color:var(--soft);align-self:center"></span>
   </div>
 
@@ -252,6 +258,25 @@ async function saveAndBackup(){
 }
 
 function newPatient(){currentId=null;document.getElementById('patientId').value='';document.getElementById('patientForm').reset();showToast('📄 Новый пациент')}
+
+async function archiveDownload(){
+  showToast('⏳ Архивирую...');
+  const resp=await fetch(API+'/api/archive',{method:'POST'});
+  if(!resp.ok){showToast('❌ Ошибка архивации',false);return}
+  const blob=await resp.blob();
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='AIM_patients_archive.zip';a.click();
+  URL.revokeObjectURL(url);
+  showToast('📦 Архив скачан')
+}
+
+async function archiveToDesktop(){
+  showToast('⏳ Архивирую в Desktop/AIM_Archives...');
+  const resp=await fetch(API+'/api/archive_to',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+  const r=await resp.json();
+  if(r.ok)showToast('💿 Архив сохранён: '+r.archive+' ('+r.patients+' пациентов). GDrive: '+r.gdrive)
+  else showToast('❌ '+r.error,false)
+}
 
 async function loadPatient(id){
   const resp=await fetch(API+'/api/get/'+id);
@@ -315,6 +340,81 @@ def api_get(pid):
 @app.route("/api/list")
 def api_list():
     return jsonify(patients=list_patients())
+
+@app.route("/api/archive", methods=["POST"])
+def api_archive():
+    """Архивирует все записи пациентов (SQLite + JSON backups) в ZIP."""
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        # Add SQLite database
+        if DB_PATH.exists():
+            zf.write(str(DB_PATH), "patients.db")
+        # Add all JSON backups
+        if BACKUP_DIR.exists():
+            for f in sorted(BACKUP_DIR.glob("*.json")):
+                zf.write(str(f), f"backups/{f.name}")
+        # Add summary manifest
+        patients = list_patients()
+        manifest = {
+            "archived_at": datetime.now().isoformat(),
+            "total_patients": len(patients),
+            "patients": patients,
+        }
+        zf.writestr("manifest.json", json.dumps(manifest, ensure_ascii=False, indent=2))
+
+    buf.seek(0)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    return send_file(
+        buf,
+        mimetype="application/zip",
+        as_attachment=True,
+        download_name=f"AIM_patients_archive_{timestamp}.zip",
+    )
+
+
+@app.route("/api/archive_to", methods=["POST"])
+def api_archive_to():
+    """Архивирует в указанную папку (по умолчанию ~/Desktop/AIM_Archives)."""
+    data = request.get_json(silent=True) or {}
+    target_dir = Path(data.get("path", str(Path.home() / "Desktop" / "AIM_Archives")))
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    zip_path = target_dir / f"AIM_patients_archive_{timestamp}.zip"
+
+    with zipfile.ZipFile(str(zip_path), "w", zipfile.ZIP_DEFLATED) as zf:
+        if DB_PATH.exists():
+            zf.write(str(DB_PATH), "patients.db")
+        if BACKUP_DIR.exists():
+            for f in sorted(BACKUP_DIR.glob("*.json")):
+                zf.write(str(f), f"backups/{f.name}")
+        patients = list_patients()
+        zf.writestr("manifest.json", json.dumps({
+            "archived_at": datetime.now().isoformat(),
+            "total_patients": len(patients),
+            "patients": patients,
+        }, ensure_ascii=False, indent=2))
+
+    # Also copy to GDrive if configured
+    gdrive_msg = ""
+    try:
+        from gdrive_backup import backup_to_gdrive, check_gdrive_ready
+        if check_gdrive_ready():
+            gdrive_msg = backup_to_gdrive(
+                f"archive_{timestamp}",
+                {"type": "full_archive", "file": str(zip_path), "patients": len(patients)},
+                str(target_dir),
+            )
+    except Exception:
+        pass
+
+    return jsonify(
+        ok=True,
+        archive=str(zip_path),
+        patients=len(patients),
+        gdrive=gdrive_msg or "не настроен",
+    )
+
 
 @app.route("/backups/<path:filename>")
 def serve_backup(filename):

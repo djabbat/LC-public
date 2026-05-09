@@ -80,7 +80,7 @@ Infrastructure level FCLC (federated learning + DP + k-anon + secagg)
 ├── BioSense/ # подпроект applied (regenerated 2026-04-28)
 ├── FCLC/ # подпроект infrastructure (server-resident, отдельный repo)
 ├── Telomere/ MitoROS/ EpigeneticDrift/ Proteostasis/ # counter modules concept-stage
-├── CytogeneticTree/ AutomatedMicroscopy/ # demo/tooling
+├── CytogeneticTree/ # demo/tooling
 ├── HAP/ Ontogenesis/ # ❌ TOXIC, halted, не используются в экосистеме
 ```
 

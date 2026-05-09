@@ -1421,7 +1421,7 @@ N_relapse = (P_crit − P₀) / α
 
 **Дата добавления:** 2026-04-21
 **Источник:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md` (Nature Aging Perspective, submission planned 2026-04-25)
-**Авторитет:** `~/Desktop/Claude/protocols/MCOA_PROPAGATION_PLAN.md`
+**Авторитет:** `~/Desktop/Services/protocols/MCOA_PROPAGATION_PLAN.md`
 
 ## A.1. Позиционирование CDATA в MCOA
 

@@ -52,7 +52,7 @@
 
 - Статьи: Articles/ (создать если нет)
 - Скрипты: scripts/ze_pipeline.py → автоматический write→review→revise
-- Самоцитирование: max 15%; реестр → ~/Desktop/Claude/writing/PUBLICATIONS.md
+- Самоцитирование: max 15%; реестр → ~/Desktop/Services/writing/PUBLICATIONS.md
 - ZeAnastasis переименован в Ze: `~/Desktop/Ze/` — исправить все ссылки
 
 ---
