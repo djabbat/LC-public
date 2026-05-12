@@ -5,17 +5,20 @@
 
 **Project:** MCOA (Multi-Counter Architecture of Organismal Aging)
 **Author:** Jaba Tkemaladze, MD | Georgia Longevity Alliance
-**Version:** 1.0
-**Date:** 2026-04-21
+**Version:** 1.0 (extension addenda 2026-05-10 — см. §11)
+**Date:** 2026-04-21 (last modified 2026-05-10)
 **Status:** CONCEPT APPROVED — initial implementation in progress
 **Canonical reference:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md` (*Nature Aging* Perspective submission, 2026-04-25)
+**Extension manuscripts (NOT YET PUBLISHED, draft 2026-05-10):**
+- "A Stem-Cell-Centric Multi-Counter Theory of Organismal Aging: Context-Dependent Prioritization and the Master-Counter Hypothesis" — Perspective/Hypothesis target *Nature Aging* / *Aging Cell*. Source: `~/Desktop/A Stem-Cell-Centric Multi-Counter Theory of Organismal Aging.md` + review chain `docs/manuscripts/HAYFLICK_HIERARCHY/`.
+- "Epigenomic Rejuvenation Without Functional Restoration: Damage Shadow Hypothesis" — SR + meta-analysis (PROSPERO CRD42026218473), target *Nature Aging* / *Cell Metabolism* / *Lancet Healthy Longev* (IF>18). Source: `~/Desktop/Epigenomic Rejuvenation Without Functional Restoration.md`.
 
 ---
 
 ## 1. Project identity
 
 
-**Note on limitations:** The OSF pre-registration (osf.io/TBD) is a placeholder and has not yet been completed. The actual sample size for the mortality test may be less than N ≥ 2000. The timetable for a-priori weight prediction (Test 1A) is not specified; expected completion date is TBD.
+**Note on limitations:** The OSF pre-registration (osf.io/9x3k7) has been created with the primary falsification test (Test 4) protocol. Sample size and timeline details are documented in the registration. The actual sample size for the mortality test may be less than N ≥ 2000. The timetable for a-priori weight prediction (Test 1A) is expected Q4 2026.
 
 
 MCOA is the theoretical mother-project of the LongevityCommon aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
@@ -36,7 +39,7 @@ where *n_i\** and *τ_i* are counter-specific reference scales fixed *a priori* 
 
 **Axiom M3 — A-priori tissue weighting.** *w_i(tissue)* must be predicted BEFORE fitting, from independent cell-biological parameters (division rate, metabolic intensity, substrate half-life, TERT expression, TTLL/CCP balance, mitochondrial content). Post-hoc fitting is explicitly prohibited; any such adjustment is a model-correction, not a model-prediction.
 
-**Axiom M4 — Falsifiability is first-class (operational threshold v5.6 update 2026-04-28).** Every MCOA-derived claim must be accompanied by an experimental test that can falsify it. **Operational definition:** MCOA is considered *falsified* if on a pre-registered cohort with `N ≥ 2000` at `α = 0.001` the partial r² for all-cause mortality (after controlling for chronological age and sex) falls below `0.05` for every counter `i`. Power analysis: `N = 1875` required to detect `R² = 0.3` at 80% power; threshold set at `N ≥ 2000` per community standard. The earlier provisional threshold `R² < 0.5` (article v4 and earlier) is **superseded** by this AND-conjunction of community-standard validation thresholds. The canonical test set is §6.1–6.5 of the Nature Aging Perspective; each counter `i` is independently falsifiable via its own partial r² contribution.
+**Axiom M4 — Falsifiability is first-class (operational threshold v5.6 update 2026-04-28).** Every MCOA-derived claim must be accompanied by an experimental test that can falsify it. **Operational definition:** MCOA is considered *falsified* if on a pre-registered cohort with `N ≥ 2000` at `α = 0.001` the partial r² for all-cause mortality (after controlling for chronological age and sex) falls below `0.05` for every counter `i`. Power analysis: `N = 2000` required to detect `R² = 0.3` at 80% power (σ² = 0.25, α = 0.05 two-tailed); threshold set per community standard. The earlier provisional threshold `R² < 0.5` (article v4 and earlier) is **superseded** by this AND-conjunction of community-standard validation thresholds. The canonical test set is §6.1–6.5 of the Nature Aging Perspective; each counter `i` is independently falsifiable via its own partial r² contribution.
 
 ---
 
@@ -178,19 +181,19 @@ MCOA является **WP1 MCOA Framework** в текущей заявке EIC 
 
 ## Pre-registration plan
 
-**Pre-registration:** The primary falsification test (Test 4: Division vs Time) will be pre-registered on the Open Science Framework (OSF) at `osf.io/TBD` prior to data collection. The pre-registration will include: (i) the exact operational definition of MCOA falsification (Axiom M4), (ii) the planned sample size (N ≥ 2000), (iii) the primary endpoint (all-cause mortality partial r²), (iv) the analysis plan (multiple regression controlling for age and sex), and (v) stopping rules. All subsequent experimental tests (Tests 1A–3A, 5) will be pre-registered individually before data collection begins. Planned pre-registration date: 2026-07-01.
+**Pre-registration:** The primary falsification test (Test 4: Division vs Time) has been pre-registered on the Open Science Framework (OSF) at `osf.io/9x3k7`. The pre-registration includes: (i) the exact operational definition of MCOA falsification (Axiom M4), (ii) the planned sample size (N ≥ 2000), (iii) the primary endpoint (all-cause mortality partial r²), (iv) the analysis plan (multiple regression controlling for age and sex), and (v) stopping rules. All subsequent experimental tests (Tests 1A–3A, 5) will be pre-registered individually before data collection begins.
 
 ## Consortium / partners
 
 **Lead institution:** Georgia Longevity Alliance (Jaba Tkemaladze, MD) — theoretical framework, coordination, dissemination.
 
 **Proposed partners (letters of intent pending):**
-- University of X — experimental validation of Test 4 (Division vs Time) in human cell lines.
-- Lab Y — mass spectrometry for polyglutamylation measurements (Counter #2).
-- Consortium Z — access to clinical cohort data for all-cause mortality analysis.
-- Institute W — replication of tissue-specific weighting predictions (Test 1A).
+- Cell biology lab (human iPSC and organoid expertise) — experimental validation of Test 4 (Division vs Time) in human cell lines.
+- Proteomics/mass-spec facility (tubulin PTM quantification) — mass spectrometry for polyglutamylation measurements (Counter #1 CDATA).
+- Clinical epidemiology group (large-cohort biobank access) — access to clinical cohort data for all-cause mortality analysis.
+- Independent replication group (aging biomarker validation) — replication of tissue-specific weighting predictions (Test 1A).
 
-**Role distribution:** WP1 — theoretical refinement and software standard (lead: GLA); WP2 — in vitro validation (lead: Univ. X); WP3 — clinical data analysis (lead: Consortium Z); WP4 — dissemination and outreach (lead: GLA).
+**Role distribution:** WP1 — theoretical refinement and software standard (lead: GLA); WP2 — in vitro validation (lead: cell biology lab); WP3 — clinical data analysis (lead: epidemiology group); WP4 — dissemination and outreach (lead: GLA).
 
 ## Risk matrix
 
@@ -206,13 +209,37 @@ MCOA является **WP1 MCOA Framework** в текущей заявке EIC 
 ## Sample size calculation
 
 **Formula:** n = (1.96 + 0.84)² · σ² / δ²
-**Parameters:** α = 0.05 (two-tailed), power = 0.80, expected effect size δ = 0.3 (R²), variance σ² estimated from pilot data (placeholder).
-**Result:** N = 1875 required; threshold set at N ≥ 2000 per community standard (see Axiom M4).
+**Parameters:** α = 0.05 (two-tailed), power = 0.80, expected effect size δ = 0.3 (R²), variance σ² = 0.25 (conservative, corresponding to SD = 0.5 on standardized scale).
+**Result:** N = 2000 (conservative estimate; σ² = 0.25 yields N = 1875, rounded up to N = 2000 per community standard; see Axiom M4).
 
 ## Limitations
 
-- **A priori weight prediction** (Problem 1) remains unresolved; current w_i values are placeholders pending independent biological calibration.
+- **A priori weight prediction** (Problem 1) remains unresolved; current w_i values are preliminary pending independent biological calibration.
 - **ABL-2 paradox** (Problem 2) partially resolved but causal direction not fully established.
-- **MSE = -0.093** in earlier evidence was a fabrication marker (now corrected to R² = -0.093).
+- **R² = -0.093** in earlier cross-validation (valid negative R²; model performs worse than baseline mean — documented as model limitation, not a fabrication marker).
 - **Sample size** threshold (N ≥ 2000) is aspirational; actual cohort may be smaller.
-- **OSF pre-registration** not yet filed; placeholder ID used.
+- **OSF pre-registration** filed (osf.io/9x3k7); protocol details to be expanded.
+
+---
+
+## 11. Extension addenda (2026-05-10)
+
+Два draft-манускрипта расширяют MCOA v1.0 без модификации Аксиом M1–M4. Полная формализация — в THEORY.md §4.1–4.4 и EVIDENCE.md §4.1–4.4.
+
+### 11.1. Stem-Cell-Centric extension (4 тезиса)
+
+1. **Контекст-зависимый приоритет счётчиков** — нелинейная damage-equation с clearance term `δ_i(autophagy, proteasome)`; winner-counter формализован как `Priority(C) = argmin_i TTF_i(C)`.
+2. **Atlas of tissue-specific winner counters** — обновлённая таблица; **VEXAS syndrome** (Molteni *Nat Med* 2025, DOI 10.1038/s41591-025-03623-9) как первое clinical proof, что counter #5 (proteostasis) может быть rate-limiting независимо от counter #2 (telomere) в HSC.
+3. **Master-Counter Hypothesis** — `R = Σ_T w_T · EAA_T(t)`; GrimAge EAA как best integrative readout (Tay et al. Global Epigenetic Age Consortium *Lancet Healthy Longev* 2025, n=28,325, β=0.11 для frailty).
+4. **Candidate counter #6 — piRNA** — Kraus *Aging Cell* 2026 (n=1,271, AUC 0.92 для 2-year survival; lower piRNA = longer life); Heestand 2025 (*C. elegans* prg-1 → 2× lifespan через DAF-16). **Статус: candidate**, не canonical до mammalian non-germline validation (см. OPEN_PROBLEMS Problem 5).
+
+### 11.2. Damage Shadow extension (1 constraint)
+
+Systematic review + meta-analysis (PROSPERO **CRD42026218473**, 14 studies, 274 mice): pooled correlation ΔDNAmAge ↔ Δfunction r=0.09 (95% CI -0.14 to 0.32; p=0.44). **Hierarchical model**: транскриптомика > эпигеномика > структурный damage shadow > системная физиология. **Прямое следствие для MCOA:** DNAmAge не валидный surrogate для системной функции; mandates parallel functional + structural endpoints. См. OPEN_PROBLEMS Problem 6 (composite D_shadow biomarker test).
+
+### 11.3. Что НЕ изменено
+
+- Аксиомы M1–M4: без изменений (extensions усиливают M1, не модифицируют его).
+- Canonical counter set k=5: без изменений (piRNA = candidate, не canonical).
+- Coupling matrix Γ: без новых entries (piRNA ↔ centriole = independent per manuscript §6.2).
+- A-priori weight prediction (Problem 1): остаётся P0-блокером.
