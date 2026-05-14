@@ -12,7 +12,7 @@
 
 - **PI:** Dr. Jaba Tkemaladze (Georgia Longevity Alliance) — bench lead Phase A, theoretical/conceptual lead both phases.
 - **Strategic Co-PI:** Elizabeth Parrish (BioViva Sciences LLC, Seattle, WA) — Letter of Support signed 2026-04-22, 4 advisory commitments (quarterly review calls × 4, FDA/EMA pathway consultation for Phase B, BioViva industry network introductions, public-communication support), non-compensated.
-- **Phase B Co-PI:** Hartmut Geiger (Univ. Ulm) — Letter of Support signed 2026-04-23, €100,000 subcontract for 12-month in vivo BMT.
+- **Phase B subcontracted PI partner:** Hartmut Geiger (Univ. Ulm) — Letter of Support signed 2026-04-23, €100,000 subcontract for 12-month in vivo BMT. *Not Co-PI per user instruction 2026-05-14; sole Co-PI is Parrish.*
 - **Phase A AI agent:** Claude-class API in operator-approved mode for 24/7 ROI/asymmetry detection across the 6-month window (no autonomous laser firing).
 - **Phase A GLA technician:** TBD, 50% FTE × 6 months at GLA Abastumani.
 - **Postdoctoral fellow:** TBD, 50% FTE × 6 months (Phase A image analysis + lineage stitching).
