@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 04:13
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LongevityCommon/CDATA/experiments/CellLineageTree/Aubrey/ARGUS`
+- **Текущий score:** 34/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 14 баллов
+- **Cycle:** 2
+
+## In-progress concerns (cycle 2)
+
+1. [PARANOID] **Replace fabricated PMIDs**:
+2. [PARANOID] Find correct PMIDs for Tkemaladze 2023 (Mol Biol Rep) and Tkemaladze+Chichinadze 2024 (Mech Ageing Dev).
+3. [PARANOID] If not found, remove claims and add gap justification: *"PI has theoretical contributions but no verified experimental publications. Project relies on engineering protocols with automated validation."*
+4. [PARANOID] **Strengthen consortium**:
+5. [PARANOID] Secure institutional commitment from BioViva (e.g., letter on letterhead with lab access details).
+6. [PARANOID] Add a technical co-PI with microscopy/robotics expertise (e.g., from a university engineering department).

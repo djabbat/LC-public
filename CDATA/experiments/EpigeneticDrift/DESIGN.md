@@ -186,3 +186,8 @@ epigenetic_drift:
 Для R-скриптов: `scripts/generate_figures.R` зависит от `ggplot2`, `dplyr`, `cowplot`.
 
 ---
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

@@ -82,3 +82,9 @@ Phase B leadership at the Geiger lab (Ulm) is supported by Geiger's signed LoS d
 10. Dull T et al. 1998, *J Virol*, PMID 9765382 — third-generation lentivirus packaging.
 
 Self-citation ratio: 1 / 10 = 10 % (compliant with ≤ 15 % cap).
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

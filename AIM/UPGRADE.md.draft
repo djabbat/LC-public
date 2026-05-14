@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 06:58
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LongevityCommon/AIM`
+- **Текущий score:** 34/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 14 баллов
+- **Cycle:** 2
+
+## In-progress concerns (cycle 2)
+
+1. [PARANOID] **IMPLEMENT CORE MODULES FIRST** — Before any further design work, implement and test:
+2. [PARANOID] `profiler/chi_ze.py` with PARAMETERS.md loading (not hardcoded)
+3. [PARANOID] `profiler/mcoa.py` with actual D_i calculation
+4. [PARANOID] `knowledge/counters.py` with CONCEPT.md parsing
+5. [PARANOID] `integrator.py` with knowledge aggregation Target: 80%+ test coverage on these 4 modules before proceeding.
+6. [PARANOID] **FIX DEPENDENCY AND SECURITY ISSUES** — Immediate actions:

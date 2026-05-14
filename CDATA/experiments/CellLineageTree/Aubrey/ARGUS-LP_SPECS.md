@@ -58,11 +58,11 @@ The CONCEPT.md non-personnel direct subtotal is €50,495; equipment + compute =
 | Karyotyping (G-banding, external service Tbilisi) × 2 timepoints | 2 × €200 | 400 |
 | Flow cytometry tag-swap QC × 9 imaging blocks | 9 × €150 | 1,350 |
 | Plasticware (T75 / T175 flasks, plates, tubes) | 6-month consumption | 600 |
-| Antibodies for centriole IF (Centrin, Ninein, γ-tubulin) | 1 set | 800 |
+| Antibodies + reagents for centriole IF validation block (12 experiments — Centrin-1 20H5, CEP164, Centrobin, CP110, γ-Tubulin + Alexa 488/555/647 + fixation/permeabilization + slides/mounting) — **detailed BOM in `E0/E2_IF_Validation_Block.md`** | 1 set (sufficient for ≥100 IF) | 3,200 |
 | Mycoplasma testing kit + general consumables | 6-month supply | 945 |
-| **Consumables total** | | **9,995** |
+| **Consumables total** | | **12,395** |
 
-(Rounded up to €11,995 in the CONCEPT.md table to cover small reagent inflation; the €2,000 buffer is absorbed in institutional overhead per the budget note.)
+(CONCEPT.md table lists €11,995; this updated total of €12,395 reflects the detailed E2 IF Validation BOM in `E0/E2_IF_Validation_Block.md` (12 experiments) which expands the original lump "Antibodies for centriole IF €800" into the full 5 primary + 3 secondary + fixation/permeabilization + slides/mounting set. The €400 delta is absorbed in institutional overhead per the budget note.)
 
 ## 4. Build timeline
 

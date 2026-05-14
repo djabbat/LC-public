@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 05:47
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LongevityCommon/CDATA/experiments/Telomere`
+- **Текущий score:** 30/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 18 баллов
+- **Cycle:** 3
+
+## In-progress concerns (cycle 3)
+
+1. [RED-TEAM] **Add a non-linear alternative model.** The linear additive model is likely wrong. Propose a non-linear model where α₂ and β₂ interact (e.g., *dD₂/dt = α₂·(dn/dt) + β₂ + γ·α₂·β₂*). Show how this would be tested. This addresses the most fundamental theoretical weakness. ---
+2. [PARANOID] **Заполнить раздел PI.** Указать ФИО, ORCID, аффилиацию, h-index (с датой проверки), 5 ключевых публикаций за последние 5 лет (с PMID) и предыдущие гранты. Это критически важно.
+3. [PARANOID] **Указать конкретный конкурс.** Добавить раздел, в котором каждая цель проекта (Objectives) будет явно сопоставлена с ключевыми словами (keywords) выбранного грантового конкурса. Это повысит traceability.
+4. [PARANOID] **Усилить раздел предварительных данных.** Если возможно, добавить хотя бы минимальные предварительные данные (pilot data). Если нет, то более убедительно обосновать, почему литературных данных достаточно для начала проекта, и как первый этап работ (WP1) быстро восполнит этот пробел. Такж
+5. [CYNIC] **Complete the PI section**
+6. [CYNIC] Add PI name, ORCID, h-index, prior grants, and key publications. Ensure h-index is field-normalized (e.g., compare to gerontology median for career stage).

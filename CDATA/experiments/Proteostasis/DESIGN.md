@@ -171,3 +171,8 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
 
 ---
 *Эта архитектура позволяет независимо развивать модель Proteostasis, тестировать её и интегрировать в более широкую систему. Все компоненты фальсифицируемы и заменяемы.*
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

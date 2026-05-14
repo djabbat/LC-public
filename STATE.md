@@ -1,3 +1,5 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: mixed. Original preserved at STATE.x.md. -->
+
 # LongevityCommon · STATE
 
 **Last touched:** 2026-04-28
@@ -5,12 +7,12 @@
 
 ---
 
-## §1. Что сделано в эту итерацию (2026-04-28)
+## §1. What was done in this iteration (2026-04-28)
 
-- ✅ Прошлый CONCEPT/THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS архивированы в `_archive/v_pre_2026-04-28/`
-- ✅ Регенерированы новые core .md из article v5.6: CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE (this), TODO, README
-- ✅ Article на Desktop как `LongevityCommon.md` (50 KB) + .docx (40 KB)
-- ✅ Three iteration outputs (v1/v2/v3 articles + peer reviews + audits) сохранены на Desktop как backup
+- ✅ Previous CONCEPT/THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS archived in `_archive/v_pre_2026-04-28/`
+- ✅ New core .md files regenerated from article v5.6: CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE (this), TODO, README
+- ✅ Article on Desktop as `LongevityCommon.md` (50 KB) + .docx (40 KB)
+- ✅ Three iteration outputs (v1/v2/v3 articles + peer reviews + audits) saved on Desktop as backup
 
 ## §2. Subproject status snapshot
 
@@ -21,17 +23,17 @@
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
-| **Activated** | clinical pilot ready (Шашвиашвили) | (extern) |
+| **Activated** | clinical pilot ready (Shashviashvili) | (extern) |
 | HAP / Ontogenesis | TOXIC — not in v5.6 ecosystem | halted 2026-04-21 |
 
 ## §3. Open blockers
 
 ### Top 3 critical:
-1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester meeting сегодня 12:30 gating
-2. **N≥2000 pre-registered cohort** — все scientific claims hypothesis-stage до этого
+1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester meeting today 12:30 gating
+2. **N≥2000 pre-registered cohort** — all scientific claims hypothesis-stage until this
 3. **FCLC malicious-secure (v14)** — GDPR Art. 9 blocker; Q1 2027 timeline
 
-Полный список: `OPEN_PROBLEMS.md`.
+Full list: `OPEN_PROBLEMS.md`.
 
 ## §4. Live services
 

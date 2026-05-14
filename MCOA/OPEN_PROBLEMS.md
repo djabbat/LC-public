@@ -1,150 +1,150 @@
-# Открытые проблемы и фальсифицируемые тесты для MCOA
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at OPEN_PROBLEMS.ru.md. -->
 
-*Версия: 2026-04-22. Каждая проблема содержит конкретный фальсифицируемый тест с чёткими исходами и приоритетом.*
+# Open Problems and Falsifiable Tests for MCOA
 
-## Проблема 1: Определение *априорных* весов тканей `w_i(tissue)`
+*Version: 2026-04-22. Each problem contains a specific falsifiable test with clear outcomes and priority.*
 
+## Problem 1: Defining *A Priori* Tissue Weights `w_i(tissue)`
 
 **Power analysis for Test 1A:** Placeholder — effect size δ = 0.3, α = 0.05, power = 0.80, required N = 1875 (to be specified in pre-registration). For Tests 2A and 3A: similar placeholder values TBD. For Test 4A: N_replicates = 1000.
 
+**Description:** Axiom M3 requires that the weight of each counter in a tissue be determined prior to model fitting, based on independent biological knowledge. Currently, there is no generally accepted, quantitative method for predicting `w_i`. The use of heuristics or placeholder values undermines falsifiability.
 
-**Описание:** Аксиома M3 требует, чтобы вес каждого счётчика в ткани определялся до фиттинга модели, на основе независимых биологических знаний. В настоящее время отсутствует общепринятый, количественный метод для предсказания `w_i`. Использование эвристик или placeholder-значений подрывает фальсифицируемость.
+**Priority:** **High** (P0). Blocks full experimental validation of MCOA.
 
-**Приоритет:** **Высокий** (P0). Блокирует полноценную экспериментальную проверку MCOA.
+### Falsifiable Test 1A: Prediction of Tissue Hierarchy of Counters
 
-### Фальсифицируемый тест 1A: Прогноз тканевой иерархии счётчиков
+**Hypothesis:** Based on a combination of RNA-seq data (expression of genes related to counters), in vivo cell division rate measurements, and metabolomics, a predictive model for `w_i` can be constructed that will correlate with the experimentally measured importance of each counter for the tissue's aging phenotype.
 
-**Гипотеза:** На основе комбинации данных RNA-seq (экспрессия генов, связанных со счётчиками), измерений скорости деления клеток in vivo и метаболомики можно построить прогностическую модель для `w_i`, которая будет коррелировать с измеренной в эксперименте важностью каждого счётчика для возрастного фенотипа ткани.
+**Experiment:**
+1.  **Sample:** 5-7 different mouse tissues (e.g., liver, skin, intestine, brain, skeletal muscle, spleen, fat).
+2.  **Prediction:** For each tissue, compute `w_i_pred` based on:
+    *   Expression levels of key genes (e.g., TERT for telomeres, TTLL/CCP for CP, oxidative stress markers for mito).
+    *   In vivo proliferation rate estimates (e.g., via EdU).
+    *   Metabolomics data (NAD+/NADH, ATP/ADP).
+3.  **Measurement:** Conduct a longitudinal study (3 age points) for the same tissues. Quantitatively measure the age-related change for each counter (telomere shortening via qFISH, CP level via GT335, 8-OHdG, epigenetic age via clock CpGs).
+4.  **Criterion:** Calculate the correlation between the predicted weight `w_i_pred` and the measured proportion of age-related phenotypic variance explained by that counter in that tissue.
 
-**Эксперимент:**
-1. **Выборка:** 5-7 различных тканей мыши (напр., печень, кожа, кишечник, мозг, скелетная мышца, селезёнка, жир).
-2. **Прогноз:** Для каждой ткани вычислить `w_i_pred` на основе:
- * Уровня экспрессии ключевых генов (напр., TERT для теломер, TTLL/CCP для CP, маркеры окислительного стресса для мито).
- * Оценки in vivo скорости пролиферации (например, по EdU).
- * Данных метаболомики (NAD+/NADH, АТФ/АДФ).
-3. **Измерение:** Провести лонгитюдное исследование (3 возрастные точки) для тех же тканей. Количественно измерить возрастное изменение для каждого счётчика (укорочение теломер qFISH, уровень CP по GT335, 8-OHdG, эпигенетический возраст по часовым CpG).
-4. **Критерий:** Рассчитать корреляцию между предсказанным весом `w_i_pred` и измеренной долей объяснённой возрастной дисперсии фенотипа для данного счётчика в данной ткани.
+**Possible Outcomes:**
+1.  **✅ Strong correlation (R² > 0.7):** Confirms the possibility of *a priori* weight prediction. MCOA passes this test.
+2.  **⚠️ Moderate correlation (0.3 < R² < 0.7):** Indicates partial predictive power of the method. Refinement of the weight prediction model is required (e.g., adding new parameters).
+3.  **❌ Weak/absent correlation (R² < 0.3):** Falsifies the specific method for predicting `w_i`. Calls into question the practical feasibility of Axiom M3 in its current formulation. Requires searching for fundamentally different ways of *a priori* fixing weights.
+4.  **🔀 Contradictory result:** Different prediction methods yield widely varying `w_i_pred`. Indicates fundamental uncertainty in the selection of *a priori* parameters, which weakens the entire MCOA framework.
 
-**Возможные исходы:**
-1. **✅ Сильная корреляция (R² > 0.7):** Подтверждает возможность *априорного* предсказания весов. MCOA проходит этот тест.
-2. **⚠️ Умеренная корреляция (0.3 < R² < 0.7):** Указывает на частичную предсказательную силу метода. Требуется уточнение модели предсказания весов (например, добавление новых параметров).
-3. **❌ Слабая/отсутствующая корреляция (R² < 0.3):** Фальсифицирует конкретный метод предсказания `w_i`. Ставит под сомнение практическую реализуемость Аксиомы M3 в её текущей формулировке. Требуется поиск принципиально иных способов *априорной* фиксации весов.
-4. **🔀 Противоречивый результат:** Разные методы предсказания дают сильно различающиеся `w_i_pred`. Указывает на фундаментальную неопределённость в выборе *априорных* параметров, что ослабляет всю конструкцию MCOA.
+## Problem 2: Resolving the ABL-2 Paradox and Positioning the CP Counter
 
-## Проблема 2: Разрешение парадокса ABL-2 и позиционирование CP-счётчика
+**Description:** The high correlation of ABL-2 protein levels with epigenetic age in CDATA data questions the causal relationship. Is centriolar polyglutamylation (CP) an upstream driver of aging, a downstream effect, or a parallel process?
 
-**Описание:** Высокая корреляция уровней белка ABL-2 с эпигенетическим возрастом в данных CDATA ставит под вопрос причинно-следственную связь. Является ли центриолярная полиглутамилизация (CP) upstream-драйвером старения, downstream-эффектом или параллельным процессом?
+**Priority:** **High** (P1). Concerns the validity of selecting CP as counter #1.
 
-**Приоритет:** **Высокий** (P1). Касается обоснованности выбора CP как счётчика #1.
+### Falsifiable Test 2A: Causal Intervention in the CP Pathway
 
-### Фальсифицируемый тест 2A: Причинное вмешательство в путь CP
+**Hypothesis:** If CP is an upstream driver, then experimental inhibition of polyglutamylation enzymes (TTLL) or activation of deglutamylating enzymes (CCP) in young animals should slow the accumulation of damage in other counters (telomeres, epigenetic drift) and delay age-related phenotypes.
 
-**Гипотеза:** Если CP является upstream-драйвером, то экспериментальное ингибирование ферментов полиглутамилирования (TTLL) или активация деглутамилирующих ферментов (CCP) в молодых животных должно замедлить накопление повреждений в других счётчиках (теломеры, эпигенетический дрейф) и отсрочить возрастные фенотипы.
+**Experiment:**
+1.  **Model:** Mice with conditional knockout/inhibition of a key TTLL enzyme in intestinal epithelium (high proliferation) or hepatocytes (low proliferation). Control — wild-type mice.
+2.  **Intervention:** Activation of knockout/start of inhibitor administration at 6 months of age.
+3.  **Measurements (at 12 and 18 months):**
+    *   **CP counter:** Tubulin polyglutamylation level (mass spectrometry).
+    *   **Other counters:** Telomere length (qFISH), DNA methylation (clock CpGs), mitochondrial function markers.
+    *   **Phenotype:** Histology for fibrosis/inflammation, tissue functional tests.
+4.  **Criterion:** Comparison of the rate of change of other counters and the severity of phenotypes between the experimental and control groups.
 
-**Эксперимент:**
-1. **Модель:** Мыши с условным нокаутом/ингибированием ключевого TTLL фермента в эпителии кишечника (высокая пролиферация) или гепатоцитах (низкая пролиферация). Контроль — мыши дикого типа.
-2. **Вмешательство:** Активация нокаута/начало приёма ингибитора в возрасте 6 месяцев.
-3. **Измерения (в 12 и 18 месяцев):**
- * **CP-счётчик:** Уровень полиглутамилирования тубулина (масс-спектрометрия).
- * **Другие счётчики:** Длина теломер (qFISH), метилирование ДНК (часовые CpG), маркеры митохондриальной функции.
- * **Фенотип:** Гистология на фиброз/воспаление, функциональные тесты ткани.
-4. **Критерий:** Сравнение скорости изменения других счётчиков и выраженности фенотипов между экспериментальной и контрольной группой.
+**Possible Outcomes:**
+1.  **✅ Slowing of all counters and phenotypes:** Strongly supports an upstream role for CP. MCOA with CP #1 is confirmed.
+2.  **⚠️ Slowing of CP only, but not other counters:** Indicates that CP is a parallel, but not causal, process. Requires revision of its position in the hierarchy.
+3.  **❌ No effect or acceleration of aging:** Falsifies the hypothesis of CP as a significant driver of aging in this tissue. May indicate compensatory mechanisms or an error in target selection.
+4.  **🔀 Tissue-specific effect:** Slowing observed only in the highly proliferative intestinal epithelium, but not in the liver. Confirms a context-dependent role for CP, which is consistent with MCOA but complicates the overall theory.
 
-**Возможные исходы:**
-1. **✅ Замедление всех счётчиков и фенотипов:** Сильно поддерживает upstream-роль CP. MCOA с CP #1 подтверждён.
-2. **⚠️ Замедление только CP, но не других счётчиков:** Указывает, что CP — параллельный, но не причинный процесс. Требуется пересмотр его позиции в иерархии.
-3. **❌ Отсутствие эффекта или ускорение старения:** Фальсифицирует гипотезу о CP как значимом драйвере старения в данной ткани. Может указывать на компенсаторные механизмы или ошибку в выборе мишени.
-4. **🔀 Тканеспецифичный эффект:** Замедление наблюдается только в высокопролиферативном эпителии кишечника, но не в печени. Подтверждает контекстно-зависимую роль CP, что согласуется с MCOA, но усложняет общую теорию.
+## Problem 3: Measuring the Connection Matrix Γ and Testing the Hypothesis `γ_i = 0`
 
-## Проблема 3: Измерение матрицы связей Γ и проверка гипотезы `γ_i = 0`
+**Description:** By default, MCOA assumes `γ_i = 0` (counter independence hypothesis). Non-zero connections must be proven. There is no standardized in vivo protocol for directly measuring the elements `Γ_{ij}`.
 
-**Описание:** По умолчанию в MCOA принимается `γ_i = 0` (гипотеза независимости счётчиков). Ненулевые связи должны быть доказаны. Не существует стандартизированного in vivo протокола для прямого измерения элементов `Γ_{ij}`.
+**Priority:** **Medium** (P2). Critical for predicting intervention synergy.
 
-**Приоритет:** **Средний** (P2). Критично для предсказания синергии интервенций.
+### Falsifiable Test 3A: MCOA Test 2 Protocol (in vitro calibration)
 
-### Фальсифицируемый тест 3A: Протокол MCOA Test 2 (in vitro калибровка)
+**Hypothesis:** Under controlled cell culture conditions, by manipulating one counter (e.g., inducing oxidative stress in mitochondria), one can quantitatively measure the acceleration of damage accumulation in another counter (e.g., telomere shortening rate).
 
-**Гипотеза:** В контролируемых условиях клеточной культуры можно, манипулируя одним счётчиком (например, вызывая окислительный стресс для митохондрий), количественно измерить ускорение накопления повреждений в другом счётчике (например, скорость укорочения теломер).
+**Experiment:**
+1.  **System:** Primary human fibroblasts or mesenchymal stem cells.
+2.  **Intervention:** Treatment with low doses of rotenone (mitochondrial stress) or direct generation of ROS in mitochondria (optogenetics).
+3.  **Measurements:** Parallel, longitudinal monitoring of:
+    *   Mitochondrial ROS level (MitoSOX).
+    *   Telomere length (qFISH or flow-FISH) at each passage.
+    *   (Optional) CP level, epigenetic change markers.
+4.  **Analysis:** Compare the telomere shortening rate (Δtelomeres/passage) under stress and control conditions. Calculate `Γ_{telomere, mito}` as the ratio of these rates.
 
-**Эксперимент:**
-1. **Система:** Первичные человеческие фибробласты или мезенхимальные стволовые клетки.
-2. **Вмешательство:** Лечение низкими дозами ротенона (митохондриальный стресс) или прямая генерация ROS в митохондриях (оптогенетика).
-3. **Измерения:** Параллельный, лонгитюдный мониторинг:
- * Уровень митохондриальных ROS (MitoSOX).
- * Длина теломер (qFISH или flow-FISH) на каждом пассаже.
- * (Опционально) Уровень CP, маркеры эпигенетических изменений.
-4. **Анализ:** Сравнить скорость укорочения теломер (Δтеломеры/пассаж) в условиях стресса и контроля. Рассчитать `Γ_{telomere, mito}` как отношение этих скоростей.
+**Possible Outcomes:**
+1.  **✅ `Γ_{telomere, mito}` significantly > 1:** Confirms the existence of a connection. Allows establishing a numerical value for this matrix element.
+2.  **✅ `Γ_{telomere, mito}` ≈ 1:** Does not reject the independence hypothesis (`γ_i = 0`) for this pair in this system.
+3.  **❌ `Γ_{telomere, mito}` < 1 (slowing):** Falsifies the commonly assumed direction of the connection. Indicates a possible protective effect of mild stress or a system artifact.
+4.  **🔀 Non-linear dependence:** The effect is observed only after a certain threshold of mitochondrial damage. Would require modification of the linear connection model in MCOA to a threshold or sigmoidal model.
 
-**Возможные исходы:**
-1. **✅ `Γ_{telomere, mito}` значимо > 1:** Подтверждает наличие связи. Позволяет установить численное значение для этого элемента матрицы.
-2. **✅ `Γ_{telomere, mito}` ≈ 1:** Не отвергает гипотезу независимости (`γ_i = 0`) для этой пары в данной системе.
-3. **❌ `Γ_{telomere, mito}` < 1 (замедление):** Фальсифицирует общепринятое направление связи. Указывает на возможный защитный эффект mild стресса или артефакт системы.
-4. **🔀 Нелинейная зависимость:** Эффект наблюдается только после определённого порога повреждения митохондрий. Потребует модификации линейной модели связи в MCOA на пороговую или сигмоидальную.
+## Problem 4: Operationalizing "Load" `L_tissue` and its Threshold
 
-## Проблема 4: Операционализация «нагрузки» `L_tissue` и её порога
+**Description:** The equation `L_tissue = Σ_i [ w_i · f_i(D_i) ]` and the condition `L_tissue > L_critical` are abstractions. It is unclear which specific biological quantity (cell mortality, secretory phenotype, functional decline) should be mapped onto `L_tissue` and how to measure `L_critical`.
 
-**Описание:** Уравнение `L_tissue = Σ_i [ w_i · f_i(D_i) ]` и условие `L_tissue > L_critical` являются абстракциями. Не ясно, какую конкретную биологическую величину (смертность клеток, секреторный фенотип, функциональный спад) следует отображать на `L_tissue` и как измерить `L_critical`.
+**Priority:** **Medium** (P2). Necessary for quantitative predictions.
 
-**Приоритет:** **Средний** (P2). Необходимо для количественных предсказаний.
+### Falsifiable Test 4A: Linking Computed `L_tissue` to the Replicative Limit in vitro
 
-### Фальсифицируемый тест 4A: Связь вычисленной `L_tissue` с репликативным лимитом in vitro
+**Hypothesis:** In a fibroblast culture where the telomere counter dominates, the MCOA-computed load `L_tissue` will increase monotonically with passages and will reach a constant value `L_critical` at the moment of entry into senescence (Hayflick limit).
 
-**Гипотеза:** В культуре фибробластов, где доминирует теломерный счётчик, вычисленная по MCOA нагрузка `L_tissue` будет монотонно расти с пассажами и достигнет постоянного значения `L_critical` в момент вхождения в сенесценцию (лимит Хейфлика).
+**Experiment:**
+1.  **System:** Culture of human fibroblasts from a young donor.
+2.  **Measurements at each passage:**
+    *   Telomere length (primary counter, `w ≈ 1`).
+    *   CP level, oxidative stress markers (secondary counters, `w` small).
+    *   Senescence marker (SA-β-Gal).
+3.  **Calculation:** Compute `L_tissue(passage)` using a simplified model (functions `f_i` — linear).
+4.  **Calibration:** Determine `L_critical` as the value of `L_tissue` at the passage when >70% of cells become SA-β-Gal+.
 
-**Эксперимент:**
-1. **Система:** Культура фибробластов человека от молодого донора.
-2. **Измерения на каждом пассаже:**
- * Длина теломер (основной счётчик, `w ≈ 1`).
- * Уровень CP, маркеры окислительного стресса (второстепенные счётчики, `w` малы).
- * Маркер сенесценции (SA-β-Gal).
-3. **Расчёт:** Вычислить `L_tissue(passage)` по упрощённой модели (функции `f_i` — линейные).
-4. **Калибровка:** Определить `L_critical` как значение `L_tissue` в пассаже, когда >70% клеток становятся SA-β-Gal+.
+**Possible Outcomes:**
+1.  **✅ Clear threshold:** `L_tissue` increases smoothly and stabilizes around `L_critical` at senescence. The `L_critical` value is consistent across replicates.
+2.  **⚠️ Threshold with large scatter:** `L_critical` varies between lines or experiments. Indicates additional hidden variables or noise.
+3.  **❌ Absence of threshold/correlation:** `L_tissue` does not correlate with entry into senescence. Falsifies the simple linear additive model for `L_tissue` in this system.
+4.  **🔀 `L_tissue` reaches `L_critical` before senescence:** Predicts senescence earlier than it occurs. May indicate that the threshold is stochastic or that additional events are required.
 
-**Возможные исходы:**
-1. **✅ Чёткий порог:** `L_tissue` плавно растёт и стабилизируется около `L_critical` при сенесценции. Значение `L_critical` консистентно между репликами.
-2. **⚠️ Порог с большим разбросом:** `L_critical` варьирует между линиями или экспериментами. Указывает на дополнительные скрытые переменные или шум.
-3. **❌ Отсутствие порога/корреляции:** `L_tissue` не коррелирует со вхождением в сенесценцию. Фальсифицирует простую линейную аддитивную модель для `L_tissue` в данной системе.
-4. **🔀 `L_tissue` достигает `L_critical` до сенесценции:** Предсказывает сенесценцию раньше, чем она происходит. Может указывать на то, что порог стохастичен или требуются дополнительные события.
+## Problem 5: Validation of Candidate Counter #6 (piRNA) in Mammalian Non-Germline Tissue
 
-## Проблема 5: Валидация candidate counter #6 (piRNA) в mammalian non-germline tissue
+*Added 2026-05-10 in connection with the Stem-Cell-Centric extension manuscript.*
 
-*Добавлено 2026-05-10 в связи со Stem-Cell-Centric extension manuscript.*
+**Description:** Kraus et al. *Aging Cell* 2026 showed the predictive value of 9 circulating piRNAs for 2-year survival (AUC 0.92, n=1,271 ≥71 years, Duke-EPESE). Heestand et al. 2025 demonstrated in *C. elegans* a lifespan doubling via prg-1/DAF-16. However, **mammalian non-germline piRNA biology is poorly characterized**, which blocks the inclusion of #6 in the canonical counter set.
 
-**Описание:** Kraus et al. *Aging Cell* 2026 показали predictive value 9 циркулирующих piRNA для 2-year survival (AUC 0.92, n=1,271 ≥71 лет, Duke-EPESE). Heestand et al. 2025 продемонстрировали в *C. elegans* удвоение lifespan через prg-1/DAF-16. Однако **mammalian non-germline piRNA-биология плохо охарактеризована**, что блокирует включение #6 в canonical counter set.
+**Priority:** **Medium** (P2). Blocking issue for the canonization of #6.
 
-**Приоритет:** **Средний** (P2). Blocking-issue для канонизации #6.
+### Falsifiable Test 5A: Knockdown of 9 Identified piRNAs in an Aged Mouse Model
 
-### Фальсифицируемый тест 5A: Knockdown 9 идентифицированных piRNA в aged mouse model
+**Hypothesis:** Antisense oligonucleotides against the 9 piRNAs identified by Kraus et al., upon systemic administration to old mice (≥18 mo), will increase:
+1.  survival (primary endpoint, log-rank vs scrambled-AON)
+2.  functional measures (frailty index, GTT, grip strength)
+3.  reduce GrimAge EAA (mouse-equivalent clock)
 
-**Гипотеза:** Антисенс-олигонуклеотиды против 9 piRNA, идентифицированных Kraus et al., при системном введении старым мышам (≥18 мес) увеличат:
-1. survival (primary endpoint, log-rank vs scrambled-AON)
-2. функциональные показатели (frailty index, GTT, grip strength)
-3. снизят GrimAge EAA (mouse-equivalent clock)
+**Possible Outcomes:**
+1.  **✅ ↑survival + ↓EAA + ↑function:** piRNA counter #6 transitions to the canonical set; added to PARAMETERS.md.
+2.  **⚠️ ↑survival, but without ↓EAA:** counter #6 acts through a damage-shadow-independent pathway; revision of the hierarchical model (THEORY §4.4).
+3.  **❌ No effect:** Kraus 2026 — biomarker, not driver; counter #6 remains a placeholder without promotion.
+4.  **🔀 Tissue-dependent:** requires tissue-specific weighting `w_pi(tissue)` — extends MCOA scope.
 
-**Возможные исходы:**
-1. **✅ ↑survival + ↓EAA + ↑function:** piRNA-counter #6 переходит в canonical set; добавляется в PARAMETERS.md.
-2. **⚠️ ↑survival, но без ↓EAA:** counter #6 действует через damage-shadow-independent путь; пересмотр hierarchical model (THEORY §4.4).
-3. **❌ Нет эффекта:** Kraus 2026 — biomarker, не driver; counter #6 остаётся placeholder без promotion.
-4. **🔀 Tissue-dependent:** требует tissue-specific weighting `w_pi(tissue)` — extends MCOA scope.
+## Problem 6: Operationalization of Damage Shadow and Quantitative Dissociation of Epigenetic vs. Structural Rejuvenation
 
-## Проблема 6: Operationalisation damage shadow и quantitative dissociation эпигенетического vs структурного омоложения
+*Added 2026-05-10 in connection with the Damage Shadow systematic review (PROSPERO CRD42026218473).*
 
-*Добавлено 2026-05-10 в связи с Damage Shadow systematic review (PROSPERO CRD42026218473).*
+**Description:** Meta-analysis of 14 studies n=274 mice showed a disconnect between ΔDNAmAge and Δfunction (r=0.09, p=0.44). The hierarchical model (THEORY §4.4) postulates a division into 4 levels: transcriptomics > epigenomics > structural damage shadow > systemic physiology. However, the **operational measurement** of the structural damage shadow is not standardized.
 
-**Описание:** Meta-analysis 14 studies n=274 mice показал disconnect между ΔDNAmAge и Δfunction (r=0.09, p=0.44). Hierarchical model (THEORY §4.4) постулирует разделение на 4 уровня: транскриптомика > эпигеномика > структурный damage shadow > системная физиология. Однако **operational measurement** структурного damage shadow не стандартизировано.
+**Priority:** **High** (P1). Blocks the valid use of DNAmAge as a surrogate endpoint in MCOA-driven trials.
 
-**Приоритет:** **Высокий** (P1). Блокирует валидное использование DNAmAge как surrogate endpoint в MCOA-driven trials.
+### Falsifiable Test 6A: Composite Damage-Shadow Biomarker
 
-### Фальсифицируемый тест 6A: Composite damage-shadow biomarker
+**Hypothesis:** A composite marker D_shadow = w_AGE · [pentosidine] + w_mtDNA · heteroplasmy_fraction + w_aggreg · [insoluble_protein] + w_lipo · lipofuscin_AUF — upon partial reprogramming **does not decrease** statistically significantly, in contrast to ΔDNAmAge.
 
-**Гипотеза:** Композитный маркер D_shadow = w_AGE · [pentosidine] + w_mtDNA · heteroplasmy_fraction + w_aggreg · [insoluble_protein] + w_lipo · lipofuscin_AUF — при partial reprogramming **не снижается** статистически значимо, в отличие от ΔDNAmAge.
+**Possible Outcomes:**
+1.  **✅ ΔD_shadow ≈ 0 with ΔDNAmAge < 0:** confirms damage shadow as an epigenetically-independent counter group; mandates parallel functional + structural endpoints in MCOA trials.
+2.  **⚠️ Partial decrease in ΔD_shadow:** some components (e.g., mtDNA heteroplasmy) are reset via clonal selection; refine model.
+3.  **❌ ΔD_shadow correlates with ΔDNAmAge:** refutes the hierarchical model; DNAmAge may be a valid surrogate for D_shadow.
+4.  **🔀 Tissue-specific:** in highly plastic populations (RGC, engram neurons) ΔD_shadow < 0; in systemic — ≈ 0; confirms the tissue-specific formulation (Lu 2020 / Berdugo-Vega 2026 reconciliation).
 
-**Возможные исходы:**
-1. **✅ ΔD_shadow ≈ 0 при ΔDNAmAge < 0:** подтверждает damage shadow как epigenetically-independent counter group; mandates parallel functional + structural endpoints в MCOA trials.
-2. **⚠️ Частичное снижение ΔD_shadow:** некоторые компоненты (например, mtDNA heteroplasmy) ре-сетятся через clonal selection; refine model.
-3. **❌ ΔD_shadow коррелирует с ΔDNAmAge:** опровергает hierarchical model; DNAmAge может быть валидным surrogate для D_shadow.
-4. **🔀 Tissue-specific:** в highly plastic populations (RGC, engram neurons) ΔD_shadow < 0; в systemic — ≈ 0; подтверждает tissue-specific формулировку (Lu 2020 / Berdugo-Vega 2026 reconciliation).
+### Connection to Axiom M3 (a-priori weights)
 
-### Связь с Аксиомой M3 (a-priori weights)
-
-D_shadow operationalisation требует *априорных* весов `w_AGE`, `w_mtDNA`, `w_aggreg`, `w_lipo` для каждой ткани. Это расширяет Test 1A (Problem 1) до структурного компонента и должно быть pre-registered одновременно.
+D_shadow operationalization requires *a priori* weights `w_AGE`, `w_mtDNA`, `w_aggreg`, `w_lipo` for each tissue. This extends Test 1A (Problem 1) to the structural component and must be pre-registered simultaneously.

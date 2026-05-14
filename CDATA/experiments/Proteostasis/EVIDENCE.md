@@ -76,3 +76,9 @@ The following PMIDs from CONCEPT.md require verification for existence and relev
 - PMID 28170377 (Wong 2017)
 
 If any are invalid or do not support the cited claim, replace with verified alternatives (e.g., PMID 29127110 for proteostasis network decline).
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

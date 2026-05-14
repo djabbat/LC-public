@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED from CONCEPT.md by TBPR orchestrator 2026-05-10 ensure_core (DeepSeek-reasoner). Review and edit as needed. -->
 
-# DESIGN.md — Experiment 0: Architecture & Implementation
+# DESIGN.md — ARGUS: Architecture & Implementation
 
 **Версия:** 1.0  
 **Статус:** Pre‑commissioning design
@@ -108,3 +108,16 @@ Camera ──USB──> Python API ──Base64──> Agent (Image stored local
 - Logging: all actions, errors, images saved with UTC timestamp.
 
 ---
+## v3.1 Hardware Design Updates (2026-05-13)
+
+### Modern motor stack (replaces Arduino Nano)
+- MCU: ESP32-S3 / RP2040 / STM32 (RTOS-capable, OTA updates)
+- Stepper driver: TMC2209 / TMC5160 silent step + StallGuard
+- Closed-loop integrated: MKS SERVO42 (NEMA с magnetic encoder)
+- Z focus: piezo actuator или voice coil servo
+- Firmware: Klipper / Reach (lookahead motion planning)
+
+### Laser Phase A vs Phase B
+- Phase A: 450 nm CW, $500, ~50 µm spot — simulator commissioning
+- Phase B: 355 nm Q-switched, $15-20K, ~200 nm diffraction-limited — biology
+- Phase B UV objective: Nikon CFI Plan Fluor или Olympus XLUMPLFL ($8-12K)

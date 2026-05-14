@@ -42,3 +42,16 @@
 Проект является частью более широкой экосистемы LongevityCommon и следует канонам, установленным в документе **CORRECTIONS_2026-04-22**. Все утверждения, отозванные в этом документе (например, о формуле Health Score или χ_Ze как валидированном биомаркере), здесь не используются.
 
 ---
+
+## v3 Update (2026-05-13)
+
+CONCEPT.md updated with TBPR peer-review responses:
+- Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
+- Removed fabricated references
+- Addressed top blocking/critical reviewer concerns
+- Statistical protocol additions where applicable
+- Honest TODO sections для unmet requirements
+
+See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
+для project-specific changes.
+

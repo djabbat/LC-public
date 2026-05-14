@@ -49,3 +49,16 @@ L_{tissue}(n,t) = \sum_{i} w_i(tissue) \cdot f_i(D_i(n,t))
 3. **Модулем** для интеграции в более крупные вычислительные модели старения в рамках экосистемы LongevityCommon.
 
 Для погружения в детали начните с `THEORY.md` и `EVIDENCE.md`.
+
+## v3 Update (2026-05-13)
+
+CONCEPT.md updated with TBPR peer-review responses:
+- Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
+- Removed fabricated references
+- Addressed top blocking/critical reviewer concerns
+- Statistical protocol additions where applicable
+- Honest TODO sections для unmet requirements
+
+See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
+для project-specific changes.
+

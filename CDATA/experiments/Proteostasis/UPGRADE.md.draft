@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-13 21:57
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LongevityCommon/CDATA/experiments/Proteostasis`
+- **Текущий score:** 25/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 23 баллов
+- **Cycle:** 5
+
+## In-progress concerns (cycle 5)
+
+1. [RED-TEAM] **Add explicit alternative hypotheses and justify rejection.** For each component of the model (n-linked, t-linked, additivity, coupling), state at least one plausible alternative and explain why the chosen form is superior. For example:
+2. [RED-TEAM] "Alternative: D₅ follows exponential decay (D₅ = D₅,₀·e^(kt)). We reject this because... [evidence for threshold behavior]"
+3. [RED-TEAM] "Alternative: n-linked and t-linked terms are multiplicative (D₅ = D₅,₀ + α₅·β₅·(n/n₅*)·(t/τ₅)). We reject this because... [evidence for independence]" This directly addresses AlternativeHypothesis score.
+4. [RED-TEAM] Discuss the possibility that the model is wrong (falsification beyond the proposed tests)
+5. [PARANOID] **Identify PI and provide track record** — Name, institution, h-index, senior-author publications (last 5 years with PMIDs), previous grants (PI/Co-PI), and trajectory assessment. This is non-negotiable.
+6. [PARANOID] **Reconcile falsifiability framework** — The "Falsifiability" section (Section 2) and "Sample size calculation" (Section 4) use different thresholds, sample sizes, and statistical criteria. Merge into a single coherent framework with consistent N, p, and effect size values.
