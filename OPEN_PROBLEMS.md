@@ -1,3 +1,5 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: mixed. Original preserved at OPEN_PROBLEMS.x.md. -->
+
 # LongevityCommon · OPEN_PROBLEMS
 
 **Status:** Cross-cutting open issues · 2026-04-28 (CONCEPT v5.6)
@@ -8,9 +10,9 @@
 ## §1. Scientific (cross-subproject)
 
 ### §1.1 Pre-registered confirmatory cohort (N ≥ 2000)
-**Problem:** Все pilots underpowered (N=150 for BioSense, N=196 Cuban, N=2222 All-of-Us без pre-registration). M4 falsifiability требует N≥2000 при α=0.001 для partial r²<0.05 mortality test.
+**Problem:** All pilots underpowered (N=150 for BioSense, N=196 Cuban, N=2222 All-of-Us without pre-registration). M4 falsifiability requires N≥2000 at α=0.001 for partial r²<0.05 mortality test.
 **Status:** open. **Largest blocker for Nature Aging-tier submission.**
-**Path forward:** UK Biobank wearable subset DUA + cost (years), All-of-Us Researcher Workbench DUA (months), or new prospective cohort via Аqtивиребули clinical pilot.
+**Path forward:** UK Biobank wearable subset DUA + cost (years), All-of-Us Researcher Workbench DUA (months), or new prospective cohort via Aqtivirebuli clinical pilot.
 
 ### §1.2 CDATA inconclusive (Sobol nested CV)
 **Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CDATA contributes uniquely.
@@ -18,8 +20,8 @@
 **Path forward:** Cell-DT v4.0 (planned, not started); GTEx access already available.
 
 ### §1.3 Ze Theory → biology bridge (formal)
-**Problem:** `dτ_Ze/dt = −α·I(Z)` postulated by analogy с Burgholzer 2015 + Pearson 2021 (физические clocks). Formal derivation для biological systems отсутствует. v5 honest relabel to "ansatz" not "derivation" applied — но hypothesis-stage.
-**Status:** open theoretical problem. Empirical validation `v* = 0.451 ± 0.008` consistent with theory но не proves bridge.
+**Problem:** `dτ_Ze/dt = −α·I(Z)` postulated by analogy with Burgholzer 2015 + Pearson 2021 (physical clocks). Formal derivation for biological systems is absent. v5 honest relabel to "ansatz" not "derivation" applied — but hypothesis-stage.
+**Status:** open theoretical problem. Empirical validation `v* = 0.451 ± 0.008` consistent with theory but does not prove bridge.
 **Path forward:** swept-v* on extended cohort + cross-modality replication.
 
 ### §1.4 v* full sensitivity & identifiability
@@ -40,7 +42,7 @@
 ## §2. Engineering / infrastructure
 
 ### §2.1 FCLC malicious-secure migration (v14)
-**Problem:** v13.4 PASS milestone is **semi-honest server only** + Byzantine-robust (Krum ≤25%); NOT secure against active server collusion or malicious server. **GDPR Article 9 blocker** для медицинских данных.
+**Problem:** v13.4 PASS milestone is **semi-honest server only** + Byzantine-robust (Krum ≤25%); NOT secure against active server collusion or malicious server. **GDPR Article 9 blocker** for medical data.
 **Status:** open. v14 planned Q1 2027.
 **Path forward:** integrate cryptographic protocol (verifiable secret sharing + zero-knowledge proofs) — significant engineering work.
 
@@ -51,7 +53,7 @@
 
 ### §2.3 Real EEGLAB / EDF readers in Rust
 **Problem:** Datasets crate (BioSense Phase 2) has skeleton loaders for LEMON/Cuban/Dortmund but actual `.set` (EEGLAB) and `.edf` parsers not implemented in Rust (Python pipelines used MNE; Rust has no mature equivalent).
-**Status:** open. Phase 2 backlog в `BioSense/datasets/MIGRATION_NOTES.md`.
+**Status:** open. Phase 2 backlog in `BioSense/datasets/MIGRATION_NOTES.md`.
 **Path forward:** either port MNE EEGLAB reader to Rust, OR shell out to Python sidecar, OR pre-convert datasets to a common format.
 
 ### §2.4 Subproject CONCEPT.md alignment
@@ -84,24 +86,24 @@
 ## §4. Strategic / external
 
 ### §4.1 0 signed EU LoIs (EIC blocker)
-**Problem:** EIC Pathfinder Challenges 2026 deadline 2026-10-28 requires consortium with ≥1 EU-MS + ≥2 different MS/AC. Geiger (Ulm DE) ✅ confirmed; Janke (Curie FR) pending; Miguel Angel González Ballester (UPF ES) — meeting сегодня 2026-04-28 12:30.
+**Problem:** EIC Pathfinder Challenges 2026 deadline 2026-10-28 requires consortium with ≥1 EU-MS + ≥2 different MS/AC. Geiger (Ulm DE) ✅ confirmed; Janke (Curie FR) pending; Miguel Angel González Ballester (UPF ES) — meeting today 2026-04-28 12:30.
 **Status:** open. **Largest non-scientific blocker.**
 **Path forward:** today's meeting outcome is gating item.
 
 ### §4.2 PhD enrollment (Lezhava single-point-of-failure)
-**Problem:** Lezhava 76+ years; PhD timeline до 2027-04. Risk of supervisor unavailability over 3-year cycle.
-**Status:** open. Backup co-supervisor search в TSU (Trapaidze, Dzidziguri).
+**Problem:** Lezhava 76+ years; PhD timeline until 2027-04. Risk of supervisor unavailability over 3-year cycle.
+**Status:** open. Backup co-supervisor search at TSU (Trapaidze, Dzidziguri).
 **Path forward:** initiate co-supervisor approach by 2026-08.
 
 ### §4.3 ICD-11 MG2A overclaim (article §1.1)
 **Problem:** Article phrase implies WHO recognized aging as a disease — MG2A actually defines decline in intrinsic capacity, not aging itself.
 **Status:** flagged in v3 review; cosmetic fix needed in §1.1.
-**Path forward:** rephrase в next iteration.
+**Path forward:** rephrase in next iteration.
 
 ### §4.4 Abstract vs §5.6 terminology contradiction
 **Problem:** Article Abstract uses "retracted"; §5.6 uses "deprecated/superseded". Should unify.
 **Status:** flagged in v3 review.
-**Path forward:** unify to "deprecated/superseded" в всём документе при следующей revision.
+**Path forward:** unify to "deprecated/superseded" in the entire document at the next revision.
 
 ## §5. Retirement procedure
 

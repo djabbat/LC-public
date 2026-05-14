@@ -29,3 +29,9 @@ Integrated control plane:
 4. **After P4 (integration):** >70% of tracked cells complete ≥8 divisions with resolvable RITE signal; otherwise revise illumination or accept lower depth.
 
 ---
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

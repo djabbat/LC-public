@@ -1,4 +1,4 @@
-# Experiment 0 — HW+SW Commissioning
+# ARGUS — HW+SW Commissioning
 
 **Цель:** валидировать hardware + software stack для AI-directed laser ablation rig на Zeiss IM 35 / ICM 405. **НЕ биологический пилот.**
 
@@ -129,7 +129,7 @@
 
 ## Транзит к Experiment A (Impetus Phase A, 2026 Q3+)
 
-**Что переиспользуется из Experiment 0:**
+**Что переиспользуется из ARGUS:**
 - ✅ Бокс + interlock + вентиляция
 - ✅ Overview cameras (RPi + endoscope)
 - ✅ Arduino sketch (расширить для fluorescence PWM каналов)
@@ -152,3 +152,12 @@
 ---
 
 *README создан 2026-04-23. Reframe после peer review.*
+
+## v3.1 status (2026-05-13)
+
+- **Score:** 49/55 — APPROVED for Impetus Phase A ($80K, 6-month commissioning)
+- **Scope:** Simulator-only, no live cells (graduates to Aubrey biology phase after)
+- **Stack:** Modern motors (ESP32+TMC2209) + AI brain (DeepSeek+pi+Gemini vision)
+- **Acceptance gates:** SNR ≥5×, stage ±5µm, AI ≥95% accuracy, 6-mo stability
+
+См. CONCEPT.md v3.1 для полного TBPR-approved документа.

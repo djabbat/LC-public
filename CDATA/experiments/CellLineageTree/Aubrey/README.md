@@ -38,3 +38,17 @@ Plasmids deposited on Addgene (community non‑profit).
 Control code: MIT.
 
 ---
+
+
+## v3 Update (2026-05-13)
+
+CONCEPT.md updated with TBPR peer-review responses:
+- Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
+- Removed fabricated references
+- Addressed top blocking/critical reviewer concerns
+- Statistical protocol additions where applicable
+- Honest TODO sections для unmet requirements
+
+See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
+для project-specific changes.
+

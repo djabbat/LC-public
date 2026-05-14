@@ -51,3 +51,16 @@ See the full matrix in OPEN_PROBLEMS.md for decision rules and model update prot
 * **Язык:** Основное техническое описание — на английском. Пояснительный нарратив и комментарии — на русском.
 
 Следующий шаг для новых участников — изучение **[THEORY.md](./THEORY.md)** для понимания формальной основы, затем **[PARAMETERS.md](./PARAMETERS.md)** для ознакомления с конкретными числовыми значениями и их источниками.
+
+## v3 Update (2026-05-13)
+
+CONCEPT.md updated with TBPR peer-review responses:
+- Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
+- Removed fabricated references
+- Addressed top blocking/critical reviewer concerns
+- Statistical protocol additions where applicable
+- Honest TODO sections для unmet requirements
+
+See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
+для project-specific changes.
+

@@ -1,144 +1,150 @@
-# Теоретическое обоснование MCOA
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at THEORY.ru.md. -->
 
-## 1. Философские и методологические предпосылки
+# Theoretical Foundation of MCOA
 
-MCOA строится на принципах **плюрализма механизмов** и **строгой фальсифицируемости**. Он отвергает редукционистский поиск единой «первопричины» старения, признавая, что множественные, частично независимые процессы накопления повреждений могут достигать критических порогов в разных тканях и в разное время. Ключевая методологическая установка — запрет на пост-фактумную подгонку весов счётчиков (`w_i`). Все веса и референтные масштабы (`n_i*`, `τ_i`) должны быть зафиксированы *априорно*, на основе независимых биологических знаний, до валидации модели на данных. Это превращает MCOA из инструмента кривой подгонки в набор проверяемых предсказаний.
+## 1. Philosophical and Methodological Premises
 
-## 2. Аксиоматическая основа
+MCOA is built upon the principles of **mechanism pluralism** and **strict falsifiability**. It rejects the reductionist search for a single "root cause" of aging, recognizing that multiple, partially independent damage accumulation processes can reach critical thresholds in different tissues at different times. The key methodological tenet is the prohibition of post-hoc adjustment of counter weights (`w_i`). All weights and reference scales (`n_i*`, `τ_i`) must be fixed *a priori*, based on independent biological knowledge, prior to model validation on data. This transforms MCOA from a curve-fitting tool into a set of testable predictions.
 
-**Аксиома M1 (Параллельные счётчики).** Организменное старение управляется как минимум двумя (`k ≥ 2`) различными процессами накопления повреждений, которые протекают параллельно. Ни один счётчик `i` не является достаточным для объяснения универсальности репликативных пределов и разнообразия паттернов старения тканей. Формально: `∃ i, j (i ≠ j)`, такие что для некоторых тканей вклад `w_i·f_i(D_i)` и `w_j·f_j(D_j)` сравним, и отсутствие любого из них делает модель неадекватной.
+## 2. Axiomatic Foundation
 
-**Аксиома M2 (Размерная согласованность).** В кинетическом уравнении счётчика недопустимо прямое сложение членов, зависящих от числа делений (`n`) и хронологического времени (`t`), без приведения к общей безразмерной форме. Каноническая форма:
+**Axiom M1 (Parallel Counters).** Organismal aging is governed by at least two (`k ≥ 2`) distinct damage accumulation processes that proceed in parallel. No single counter `i` is sufficient to explain the universality of replicative limits and the diversity of tissue aging patterns. Formally: `∃ i, j (i ≠ j)`, such that for some tissues the contributions `w_i·f_i(D_i)` and `w_j·f_j(D_j)` are comparable, and the absence of either renders the model inadequate.
+
+**Axiom M2 (Dimensional Consistency).** In the kinetic equation of a counter, direct summation of terms dependent on the number of divisions (`n`) and chronological time (`t`) is inadmissible without conversion to a common dimensionless form. The canonical form is:
 `D_i(n, t) = D_i₀ + α_i · (n / n_i*) + β_i · (t / τ_i) + γ_i · I(other counters)`.
-Здесь `n_i*` (референтное число делений) и `τ_i` (референтное время) — константы, *априорно* фиксируемые для каждого счётчика на основе клеточной биологии (например, `n_i*` = лимит Хейфлика для теломерного счётчика в фибробластах; `τ_i` = период полураспада тубулина для CDATA). Это гарантирует, что `α_i` и `β_i` становятся безразмерными *интенсивностями* повреждения на одну единицу нормированной шкалы.
+Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are constants, fixed *a priori* for each counter based on cell biology (e.g., `n_i*` = Hayflick limit for the telomere counter in fibroblasts; `τ_i` = tubulin half-life for CDATA). This ensures that `α_i` and `β_i` become dimensionless *intensities* of damage per unit of normalized scale.
 
-**Аксиома M3 (Априорное весовое взвешивание тканей).** Вес `w_i(tissue)`, определяющий вклад счётчика `i` в общую нагрузку ткани, должен быть предсказан ДО процедуры фиттинга модели к экспериментальным данным по старению. Прогноз основывается на независимых клеточно-тканевых параметрах: базальная скорость делений, метаболическая интенсивность, время полужизни основного субстрата счётчика, экспрессия релевантных генов (напр., TERT для теломер, TTLL/CCP для CDATA), содержание митохондрий. Любая пост-фактумная корректировка `w_i` для улучшения согласия с данными рассматривается как корректировка модели, а не её предсказание, и должна быть явно задекларирована как гипотеза для следующего цикла проверки.
+**Axiom M3 (A Priori Tissue Weighting).** The weight `w_i(tissue)`, defining the contribution of counter `i` to the total tissue burden, must be predicted BEFORE the model fitting procedure to experimental aging data. The prediction is based on independent cellular-tissue parameters: basal division rate, metabolic intensity, half-life of the counter's primary substrate, expression of relevant genes (e.g., TERT for telomeres, TTLL/CCP for CDATA), mitochondrial content. Any post-hoc adjustment of `w_i` to improve agreement with data is considered a model adjustment, not a prediction, and must be explicitly declared as a hypothesis for the next verification cycle.
 
-**Аксиома M4 (Фальсифицируемость как принцип первого порядка).** Любое утверждение, дедуктивно выведенное из MCOA, должно сопровождаться описанием практически выполнимого экспериментального теста, результат которого может это утверждение опровергнуть. Наличие таких тестов является обязательным атрибутом завершённой теоретической конструкции в рамках MCOA.
+**Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCOA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCOA.
 
-## 3. Формальные определения
+## 3. Formal Definitions
 
-### 3.1. Кинетика одиночного счётчика
+### 3.1. Single Counter Kinetics
 
-Повреждение `i`-го счётчика описывается уравнением:
+Damage for the `i`-th counter is described by the equation:
 `D_i(n, t) = D_i₀ + α_i · (n / n_i*) + β_i · (t / τ_i) + γ_i · I(other counters)`
 
-**Определения символов:**
-* `D_i`: Накопленное повреждение для счётчика `i`. Безразмерная величина, `D_i ≥ 0`.
-* `D_i₀`: Базовый уровень повреждения при рождении (или в референтном молодом состоянии). `D_i₀ ≥ 0`.
-* `α_i`: Интенсивность повреждения, driven by cell divisions. Безразмерная величина, представляет прирост повреждения за одну референтную единицу делений (`n / n_i* = 1`). `α_i ≥ 0`.
-* `β_i`: Интенсивность повреждения, driven by chronological time. Безразмерная величина, представляет прирост повреждения за одну референтную единицу времени (`t / τ_i = 1`). `β_i ≥ 0`.
-* `γ_i`: Скаляр связи. Определяет силу влияния других счётчиков на скорость накопления повреждения в счётчике `i`. `γ_i ∈ ℝ`. **Каноническое значение по умолчанию:** `γ_i = 0` (гипотеза независимости). Отклонение от нуля требует статистического обоснования на данных.
-* `I(other counters)`: Функция влияния. Простейшая линейная форма: `I = Σ_{j≠i} (Γ_{ij} · D_j / D_j_crit)`, где `Γ_{ij}` — безразмерный элемент матрицы связей, `D_j_crit` — критическое значение повреждения для счётчика `j`. Могут быть предложены нелинейные формы.
-* `n_i*`: Референтное число делений для счётчика `i`. Фиксируется *априорно* (напр., лимит Хейфлика для данного типа клеток).
-* `τ_i`: Референтная временная шкала для счётчика `i`. Фиксируется *априорно* (напр., время полужизни тубулина для CDATA, константа дрейфа эпигенетических часов).
+**Symbol Definitions:**
+* `D_i`: Accumulated damage for counter `i`. Dimensionless quantity, `D_i ≥ 0`.
+* `D_i₀`: Baseline damage level at birth (or in the reference young state). `D_i₀ ≥ 0`.
+* `α_i`: Damage intensity driven by cell divisions. Dimensionless quantity, represents the damage increment per one reference unit of divisions (`n / n_i* = 1`). `α_i ≥ 0`.
+* `β_i`: Damage intensity driven by chronological time. Dimensionless quantity, represents the damage increment per one reference unit of time (`t / τ_i = 1`). `β_i ≥ 0`.
+* `γ_i`: Coupling scalar. Defines the strength of influence from other counters on the damage accumulation rate in counter `i`. `γ_i ∈ ℝ`. **Canonical default value:** `γ_i = 0` (independence hypothesis). Deviation from zero requires statistical justification based on data.
+* `I(other counters)`: Influence function. Simplest linear form: `I = Σ_{j≠i} (Γ_{ij} · D_j / D_j_crit)`, where `Γ_{ij}` is a dimensionless element of the coupling matrix, `D_j_crit` is the critical damage value for counter `j`. Non-linear forms may be proposed.
+* `n_i*`: Reference number of divisions for counter `i`. Fixed *a priori* (e.g., Hayflick limit for a given cell type).
+* `τ_i`: Reference time scale for counter `i`. Fixed *a priori* (e.g., tubulin half-life for CDATA, drift constant of epigenetic clocks).
 
-### 3.2. Интегрированная нагрузка на ткань
+### 3.2. Integrated Tissue Burden
 
-Общая фенотипическая нагрузка, обусловленная старением, в данной ткани определяется как взвешенная сумма преобразованных значений повреждений от всех счётчиков:
+The total phenotypic burden due to aging in a given tissue is defined as the weighted sum of transformed damage values from all counters:
 `L_tissue(n, t) = Σ_{i=1}^{k} [ w_i(tissue) · f_i( D_i(n, t) ) ]`
 
-**Условия:**
-1. `Σ_i w_i(tissue) ≈ 1.0`. Значимое отклонение от 1 (напр., > 0.05) интерпретируется как указание на отсутствие в модели важного счётчика для данной ткани.
-2. `f_i(x)` — монотонно возрастающая функция преобразования, приводящая повреждение к общей шкале вклада в нагрузку. Простейший вариант — линейный: `f_i(x) = x`. Альтернативы — сигмоидальные функции для учёта пороговых эффектов.
+**Conditions:**
+1. `Σ_i w_i(tissue) ≈ 1.0`. A significant deviation from 1 (e.g., > 0.05) is interpreted as an indication that an important counter for this tissue is missing from the model.
+2. `f_i(x)` is a monotonically increasing transformation function that converts damage to a common scale of contribution to burden. The simplest option is linear: `f_i(x) = x`. Alternatives include sigmoidal functions to account for threshold effects.
 
-### 3.3. Функциональный переход (сенесценция/дисфункция)
+### 3.3. Functional Transition (Senescence/Dysfunction)
 
-Клетка или тканевая ниша переходит в состояние сенесценции, апоптоза или выраженной дисфункции при выполнении одного из двух условий:
-1. `L_tissue(n, t) > L_critical(tissue)`, где `L_critical` — тканеспецифичный порог интегральной нагрузки.
-2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, где `D_critical` — тканеспецифичный порог для конкретного счётчика (например, критическое укорочение теломер).
+A cell or tissue niche transitions into a state of senescence, apoptosis, or pronounced dysfunction upon fulfillment of one of two conditions:
+1. `L_tissue(n, t) > L_critical(tissue)`, where `L_critical` is a tissue-specific threshold for integrated burden.
+2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, where `D_critical` is a tissue-specific threshold for a specific counter (e.g., critical telomere shortening).
 
-## 4. Канонический набор счётчиков MCOA (v1.0)
+## 4. Canonical Set of MCOA Counters (v1.0)
 
-| # | Название | Проект | Природа | `n_i*` (якорь) | `τ_i` (якорь) | Комментарий |
-|---|----------|--------|---------|----------------|---------------|-------------|
-| 1 | **Центриолярная полиглутамилизация (CP)** | CDATA | Деления + Время | ~50–80 (для HSC), ~30–50 (для эпителия) | Месяцы–годы (калибруется по масс-спектрометрии) | Структурный счётчик асимметричного наследования. `α_i` значим, `β_i` обусловлен оборотом тубулина. |
-| 2 | **Укорочение теломер / теломерный стресс** | Telomere | Доминантно деления | Лимит Хейфлика для типа клеток (напр., ~50 для фибробластов человека) | Время оборота теломерных повторов (недели) | Классический репликативный счётчик. `β_i ≈ 0` для большинства соматических клеток. |
-| 3 | **Митохондриальный ROS / повреждение мтДНК** | MitoROS | Доминантно время | `α_i → 0` для постмитотических клеток | Дни–недели (оборот повреждений мтДНК) | Метаболический/временной счётчик. `β_i` значим, может усиливаться при дисфункции. |
-| 4 | **Эпигенетический дрейф (метилирование ДНК)** | EpigeneticDrift | Доминантно время | `α_i → 0` для большинства клеток | Время удвоения эпигенетического возраста (напр., ~3.6 года по DunedinPACE) | «Молекулярные часы». Вклад делений (`α_i`) мал, но может быть ненулевым в стволовых/пролиферирующих компартментах. |
-| 5 | **Нарушение протеостаза (агрегация белков)** | Proteostasis | Смешанная | Зависит от типа клеток (частота делений влияет на «разбавление» агрегатов) | Время полужизни доминирующего агрегирующего белка (дни–годы) | `α_i` может быть отрицательным, если деление удаляет агрегаты; `β_i` положительный. |
+| # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
+|---|------|--------|---------|----------------|---------------|---------|
+| 1 | **Centriolar Polyglutamylation (CP)** | CDATA | Divisions + Time | ~50–80 (for HSC), ~30–50 (for epithelium) | Months–Years (calibrated by mass spectrometry) | Structural counter of asymmetric inheritance. `α_i` significant, `β_i` driven by tubulin turnover. |
+| 2 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit for cell type (e.g., ~50 for human fibroblasts) | Turnover time of telomeric repeats (weeks) | Classic replicative counter. `β_i ≈ 0` for most somatic cells. |
+| 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (turnover of mtDNA damage) | Metabolic/temporal counter. `β_i` significant, may be amplified upon dysfunction. |
+| 4 | **Epigenetic Drift (DNA Methylation)** | EpigeneticDrift | Dominantly Time | `α_i → 0` for most cells | Doubling time of epigenetic age (e.g., ~3.6 years per DunedinPACE) | "Molecular clock". Contribution of divisions (`α_i`) is small but may be non-zero in stem/proliferating compartments. |
+| 5 | **Proteostasis Disruption (Protein Aggregation)** | Proteostasis | Mixed | Depends on cell type (division frequency affects "dilution" of aggregates) | Half-life of the dominant aggregating protein (days–years) | `α_i` may be negative if division removes aggregates; `β_i` positive. |
 
-**Порядок и обоснование:** Счётчик CP (#1) занимает первое место как структурный элемент, организующий асимметричное наследование повреждений — ключевой принцип в гипотезе изнашивания стволовых клеток. Теломерный счётчик (#2) рассматривается как зависимый от CP (возможно, через сигнальные пути, регулируемые состоянием центриолей). Остальные счётчики представляют основные клеточные машинерии (энергетика, регуляция генома, качество белков).
+**Order and Rationale:** Counter CP (#1) occupies the first position as a structural element organizing asymmetric damage inheritance — a key principle in the stem cell attrition hypothesis. The telomere counter (#2) is considered dependent on CP (possibly via signaling pathways regulated by centriole state). The remaining counters represent core cellular machineries (energetics, genome regulation, protein quality).
 
-### 4.1. Candidate counter #6 — piRNA (placeholder, NOT canonical в v1.0)
+### 4.1. Candidate counter #6 — piRNA (placeholder, NOT canonical in v1.0)
 
-| # | Название | Проект | Природа | `n_i*` (якорь) | `τ_i` (якорь) | Комментарий |
-|---|----------|--------|---------|----------------|---------------|-------------|
-| 6 | **piRNA-mediated regulation (циркулирующие piRNA как маркер/драйвер)** | piRNA (TBD subproject) | Доминантно время | `α_i → 0` для большинства соматических клеток; `α_i > 0` в активных стволовых и germline-компартментах | TBD — половина оборота PIWI/piRNA cluster transcripts; для соматики млекопитающих не формализовано | Кандидат на счётчик #6. Эмпирика: Kraus et al. *Aging Cell* 2026 (n=1,271 ≥71 лет, Duke-EPESE) — 9 piRNA → 2-year survival AUC 0.92 (Discovery), 0.87 (External Validation), превосходит >180 клинических показателей; **lower piRNA = longer survival** (направление противоположно классическому "protective" взгляду). Heestand et al. *Aging Cell* 2025 — prg-1 mutation удваивает lifespan *C. elegans* через DAF-16/FOXO. **Блокер включения в canonical set:** piRNA-механизмы вне germline у млекопитающих плохо охарактеризованы; требуется validation в mammalian non-germline context. До этого — статус **candidate**. |
+| # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
+|---|------|--------|---------|----------------|---------------|---------|
+| 6 | **piRNA-mediated regulation (circulating piRNA as marker/driver)** | piRNA (TBD subproject) | Dominantly Time | `α_i → 0` for most somatic cells; `α_i > 0` in active stem and germline compartments | TBD — half-life of PIWI/piRNA cluster transcripts; not formalized for mammalian soma | Candidate for counter #6. Empirical evidence: Kraus et al. *Aging Cell* 2026 (n=1,271 ≥71 years, Duke-EPESE) — 9 piRNA → 2-year survival AUC 0.92 (Discovery), 0.87 (External Validation), surpasses >180 clinical markers; **lower piRNA = longer survival** (direction opposite to classic "protective" view). Heestand et al. *Aging Cell* 2025 — prg-1 mutation doubles lifespan *C. elegans* via DAF-16/FOXO. **Barrier to inclusion in canonical set:** piRNA mechanisms outside germline in mammals are poorly characterized; requires validation in mammalian non-germline context. Until then, status is **candidate**. |
 
-**Связь с другими счётчиками:** piRNA функции **независимы** от центриолярных механизмов (#1) — координация через общий сигналинг (CCR4-NOT translation control, P-bodies/SG), но прямых взаимодействий не идентифицировано. Это оправдывает классификацию как отдельный счётчик, а не подсчётчик #1 или #4.
+**Relationship with other counters:** piRNA functions are **independent** of centriolar mechanisms (#1) — coordination via common signaling (CCR4-NOT translation control, P-bodies/SG), but no direct interactions identified. This justifies classification as a separate counter, rather than a sub-counter of #1 or #4.
 
-**Therapeutic relevance:** 9 piRNA идентифицированы как potential therapeutic targets (Kraus 2026); GLP-1-индуцированные сдвиги piRNA-профилей и lifestyle-interventions (exercise) активно изучаются. Требуют независимого подтверждения до операционализации в MCOA-протоколе.
+**Therapeutic relevance:** 9 piRNA identified as potential therapeutic targets (Kraus 2026); GLP-1-induced shifts in piRNA profiles and lifestyle-interventions (exercise) are actively studied. Require independent confirmation prior to operationalization in MCOA protocol.
 
-### 4.2. Доказательство независимости счётчика #5 (Proteostasis) — VEXAS syndrome
+### 4.2. Proof of Independence for Counter #5 (Proteostasis) — VEXAS Syndrome
 
-**VEXAS** (Vacuoles, E1 enzyme, X-linked, Autoinflammatory, Somatic) — приобретённый синдром, обусловленный соматической мутацией *UBA1* (Met41) в HSC. Распространённость ~1:4,000 у мужчин >50 лет, 50% 5-летняя смертность. Молтени и др. *Nature Medicine* 2025 (DOI 10.1038/s41591-025-03623-9) показали:
-1. Дисфункциональная UBA1c-изоформа → потеря убиквитилирования белков
-2. ER-стресс, активация UPR (BiP↑), накопление misfolded proteins
-3. Senescence-like программы в UBA1-mutant HSPC
-4. Клональное доминирование mutant cells; истощение wild-type
-5. Прогрессирующая bone marrow failure
+**VEXAS** (Vacuoles, E1 enzyme, X-linked, Autoinflammatory, Somatic) is an acquired syndrome caused by a somatic mutation in *UBA1* (Met41) in HSC. Prevalence ~1:4,000 in men >50 years, 50% 5-year mortality. Molteni et al. *Nature Medicine* 2025 (DOI 10.1038/s41591-025-03623-9) demonstrated:
+1. Dysfunctional UBA1c isoform → loss of protein ubiquitination
+2. ER stress, UPR activation (BiP↑), accumulation of misfolded proteins
+3. Senescence-like programs in UBA1-mutant HSPC
+4. Clonal dominance of mutant cells; depletion of wild-type
+5. Progressive bone marrow failure
 
-**Критически:** у VEXAS-пациентов нет мутаций теломеразы и теломеры **не укорочены**. Это прямо демонстрирует, что **счётчик #5 (proteostasis) может быть rate-limiting независимо от счётчика #2 (telomere)** в HSC-компартменте. Это первое clinical proof-of-existence для Аксиомы M1 в человеческой популяции.
+**Critically:** VEXAS patients have no telomerase mutations and telomeres are **not shortened**. This directly demonstrates that **counter #5 (proteostasis) can be rate-limiting independently of counter #2 (telomere)** in the HSC compartment. This is the first clinical proof-of-existence for Axiom M1 in a human population.
 
-**Дополнительная поддержка:** Keyvani Chahi et al. *Blood* 2022 (DOI 10.1182/blood.2021014602) — overexpression PLAG1 → **15.6-кратное** усиление функциональной HSC-частоты через подавление трансляции (4EBP1↑, miR-127↑) независимо от c-MYC. Catic *Trends Cell Biol* 2025 — HSC поддерживают low translation rates; повышение трансляции без компенсации аутофагией → токсичная агрегация.
+**Additional Support:** Keyvani Chahi et al. *Blood* 2022 (DOI 10.1182/blood.2021014602) — overexpression PLAG1 → **15.6-fold** enhancement of functional HSC frequency via suppression of translation (4EBP1↑, miR-127↑) independently of c-MYC. Catic *Trends Cell Biol* 2025 — HSC maintain low translation rates; increased translation without autophagy compensation → toxic aggregation.
 
-**Терапевтические следствия (атлас, draft):**
-- **HSC:** активаторы аутофагии, PLAG1-модуляция (counters #5 ± #1).
-- **VEXAS:** ингибиторы NLRP3, JAK-ингибиторы, аллогенная HSC-трансплантация (целятся в #5-driven воспаление).
-- **ISC (intestinal stem cells):** активация теломеразы (counter #2).
-- **Новые направления:** piRNA-таргетная терапия, GLP-1-эффекты на piRNA-профили (counter #6 candidate).
+**Therapeutic Implications (Atlas, Draft):**
+- **HSC:** Autophagy activators, PLAG1 modulation (counters #5 ± #1).
+- **VEXAS:** NLRP3 inhibitors, JAK inhibitors, allogeneic HSC transplantation (target #5-driven inflammation).
+- **ISC (intestinal stem cells):** Telomerase activation (counter #2).
+- **New Directions:** piRNA-targeted therapy, GLP-1 effects on piRNA profiles (counter #6 candidate).
 
-### 4.3. Master-Counter Hypothesis (extension thesis, draft)
+### 4.3. Master-Counter Hypothesis (Extension Thesis, Draft)
 
-Скорость организменного старения `R` определяется как взвешенная функция отказа стволовых клеток:
+The rate of organismal aging `R` is defined as a weighted function of stem cell failure:
 
 `R = Σ_T w_T · EAA_T(t)`
 
-где EAA (Epigenetic Age Acceleration) служит системным readout мастер-счётчика для каждой ткани T. **Эмпирическая опора:** Tay et al. (Global Epigenetic Age Consortium) *Lancet Healthy Longevity* 2025 (DOI 10.1016/S2666-7568(25)00128-2), мета-анализ N=28,325 — GrimAge EAA имеет наибольшую ассоциацию с frailty (β=0.11, 95% CI 0.06–0.15, I²=90.5%); PhenoAge β=0.07; DunedinPACE β=0.10.
+where EAA (Epigenetic Age Acceleration) serves as a systemic readout of the master counter for each tissue T. **Empirical Basis:** Tay et al. (Global Epigenetic Age Consortium) *Lancet Healthy Longevity* 2025 (DOI 10.1016/S2666-7568(25)00128-2), meta-analysis N=28,325 — GrimAge EAA has the strongest association with frailty (β=0.11, 95% CI 0.06–0.15, I²=90.5%); PhenoAge β=0.07; DunedinPACE β=0.10.
 
-**Следствие для MCOA:** GrimAge — наилучший integrative marker мастер-счётчика; его использование в качестве primary endpoint оправдано, **но** см. damage shadow rule (THEORY §4.4): эпигенетический reset не = функциональное омоложение.
+**Consequence for MCOA:** GrimAge is the best integrative marker of the master counter; its use as a primary endpoint is justified, **but** see damage shadow rule (THEORY §4.4): epigenetic reset ≠ functional rejuvenation.
 
-### 4.4. Damage Shadow constraint (extension thesis, из meta-analysis 2026-05-10)
+### 4.4. Damage Shadow Constraint (Extension Thesis, from Meta-Analysis 2026-05-10)
 
-Систематический обзор и meta-analysis (PROSPERO **CRD42026218473**, n=14 studies, 274 mice) показал, что снижение DNAmAge при partial reprogramming **не транслируется** в системное функциональное улучшение в моделях естественного старения: pooled Fisher's Z = 0.09 (95% CI -0.14 to 0.32; p=0.44). Идентифицирован threshold ΔDNAmAge ≈ -2.4 yrs-equiv, выше которого появляется modest tissue-specific gain (но не системный).
+A systematic review and meta-analysis (PROSPERO **CRD42026218473**, n=14 studies, 274 mice) showed that reduction in DNAmAge upon partial reprogramming **does not translate** into systemic functional improvement in natural aging models: pooled Fisher's Z = 0.09 (95% CI -0.14 to 0.32; p=0.44). A threshold ΔDNAmAge ≈ -2.4 yrs-equiv was identified, above which modest tissue-specific gain appears (but not systemic).
 
-**Damage shadow** — структурные/молекулярные повреждения, **не корректируемые эпигенетическим reset**:
+**Damage Shadow** — structural/molecular damages **not corrected by epigenetic reset**:
 1. ECM cross-linking (AGE, pentosidine)
-2. mtDNA мутации (heteroplasmy)
+2. mtDNA mutations (heteroplasmy)
 3. Nuclear non-epimutation damage (DSB, telomere attrition, lipofuscin)
 4. Protein aggregation (Aβ, tau, etc.)
 
-**Hierarchical model rejuvenation potential** (поддерживает MCOA pluralism):
+**Hierarchical Model of Rejuvenation Potential** (supports MCOA pluralism):
 
-| Уровень | Пластичность | Reversibility partial reprogramming |
-|---------|--------------|--------------------------------------|
-| Транскриптомика (mesenchymal drift, Li & Tay 2026) | High | Yes |
-| Эпигеномика (DNAmAge) | Moderate | Yes |
-| Структурный damage shadow | Low | No |
-| Системная физиология | Very Low | No (current evidence) |
+| Level | Plasticity | Reversibility by Partial Reprogramming |
+|-------|------------|----------------------------------------|
+| Transcriptomics (mesenchymal drift, Li & Tay 2026) | High | Yes |
+| Epigenomics (DNAmAge) | Moderate | Yes |
+| Structural damage shadow | Low | No |
+| Systemic physiology | Very Low | No (current evidence) |
 
-**Tissue-specific исключения** (refine, не refute): Lu et al. *Nature* 2020 — RGC vision restoration после optic nerve crush; Berdugo-Vega et al. *Neuron* 2026 — engram neurons cognitive restoration. Оба — высокопластичные cell-type specific контексты, не systemic natural aging.
+**Tissue-Specific Exceptions** (refine, not refute): Lu et al. *Nature* 2020 — RGC vision restoration after optic nerve crush; Berdugo-Vega et al. *Neuron* 2026 — engram neurons cognitive restoration. Both are highly plastic cell-type specific contexts, not systemic natural aging.
 
-**Прямое следствие для MCOA:** DNAmAge **не валидный surrogate endpoint** для системных функциональных исходов; необходимо parallel functional validation. Подтверждает M1: single-counter intervention (только #4) недостаточна для омоложения.
+**Direct Consequence for MCOA:** DNAmAge is **not a valid surrogate endpoint** for systemic functional outcomes; parallel functional validation is necessary. Confirms M1: single-counter intervention (only #4) is insufficient for rejuvenation.
 
-См. рукописи "Stem-Cell-Centric Multi-Counter Theory of Organismal Aging" и "Epigenomic Rejuvenation Without Functional Restoration" (обе NOT YET PUBLISHED, draft 2026-05-10).
+See manuscripts "Stem-Cell-Centric Multi-Counter Theory of Organismal Aging" and "Epigenomic Rejuvenation Without Functional Restoration" (both NOT YET PUBLISHED, draft 2026-05-10).
 
-## 5. Матрица связей между счётчиками (Γ)
+## 5. Coupling Matrix Between Counters (Γ)
 
-Матрица `Γ ∈ ℝ^{k×k}` определяет направленное влияние: элемент `Γ_{ij}` — это скорость, с которой накопленное повреждение в счётчике `j` ускоряет накопление повреждения в счётчике `i`.
+The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is the rate at which accumulated damage in counter `j` accelerates damage accumulation in counter `i`.
 
-**Известные (из литературы) предполагаемые ненулевые связи:**
-* `Γ_{telomere, mito} > 0`: Окислительный стресс (митохондрии) ускоряет укорочение теломер (Parrinello et al., 2003).
-* `Γ_{epigenetic, mito} > 0`: Митохондриальные сигналы (NAD+/NADH) влияют на активность эпигенетических модификаторов (Schultz & Sinclair, *Cell* 2019, PMID 30982602 — обзор по NAD+/sirtuin/aging axis). <!-- corrected 2026-04-26: prior citation «Sun et al. 2016 Measuring In Vivo Mitophagy» was fabricated (PMID 26833090 → unrelated paper; real Sun 2017 Nat Protoc PMID 28132843 also unrelated to NAD+/epigenetic axis). См. _audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md §0 row 7 -->
-* `Γ_{centriole, epigenetic} > 0` (гипотетическая): Эпигенетическая дерегуляция может изменять баланс ферментов TTLL/CCP, влияющих на полиглутамилирование (Janke & Magiera, 2020).
+**Known (from literature) Proposed Non-Zero Couplings:**
+* `Γ_{telomere, mito} > 0`: Oxidative stress (mitochondria) accelerates telomere shortening (Parrinello et al., 2003).
+* `Γ_{epigenetic, mito} > 0`: Mitochondrial signals (NAD+/NADH) influence the activity of epigenetic modifiers (Schultz & Sinclair, *Cell* 2019, PMID 30982602 — review on NAD+/sirtuin/aging axis). <!-- corrected 2026-04-26: prior citation «Sun et al. 2016 Measuring In Vivo Mitophagy» was fabricated (PMID 26833090 → unrelated paper; real Sun 2017 Nat Protoc PMID 28132843 also unrelated to NAD+/epigenetic axis). See _audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md §0 row 7 -->
+* `Γ_{centriole, epigenetic} > 0` (hypothetical): Epigenetic dysregulation may alter the balance of TTLL/CCP enzymes affecting polyglutamylation (Janke & Magiera, 2020).
 
-**Ключевое правило:** Элементы `Γ_{ij}` (и, следовательно, `γ_i` в упрощённой форме) должны **измеряться** в контролируемых экспериментах (см. MCOA Test 2), а не быть свободными параметрами для подгонки. Это отделяет причинно-следственный вывод от корреляционного.
+**Key Rule:** Elements `Γ_{ij}` (and consequently `γ_i` in simplified form) must be **measured** in controlled experiments (see MCOA Test 2), not be free parameters for fitting. This separates causal inference from correlational analysis.
 
-## 6. Предсказания теории MCOA
+## 6. Predictions of MCOA Theory
 
-1. **Гетерогенность доминирующих счётчиков:** В разных тканях один и тот же счётчик будет иметь разный вес `w_i`. Например, в печени (`low division rate`) вес митохондриального и эпигенетического счётчиков будет выше, чем теломерного.
-2. **Нелинейная реакция на интервенции:** Эффект от вмешательства, направленного на конкретный счётчик (напр., активатор теломеразы), будет максимальным в тканях, где `w_telomere` велико, и минимальным — где оно мало.
-3. **Синергия таргетных интервенций:** Комбинированное воздействие на несколько счётчиков с высокими `w_i` в данной ткани даст сверхаддитивный эффект на продление здоровья, в то время как воздействие на нерелевантные счётчики — не даст.
-4. **Существование «развязанных» тканей:** Можно идентифицировать ткани, где общая нагрузка `L_tissue` остаётся низкой, несмотря на высокие значения одного из счётчиков (`D_i`), благодаря компенсаторно низким весам других счётчиков.
-5. **Прогноз траекторий старения:** При известных *априорных* `w_i(tissue)`, `n_i*`, `τ_i` и начальных `D_i₀`, модель предсказывает траекторию накопления нагрузки `L_tissue(t)` для каждой ткани, которую можно проверить в лонгитюдных исследованиях.
+1. **Heterogeneity of Dominant Counters:** In different tissues, the same counter will have a different weight `w_i`. For example, in the liver (`low division rate`), the weight of mitochondrial and epigenetic counters will be higher than that of the telomere counter.
+2. **Non-Linear Response to Interventions:** The effect of an intervention targeting a specific counter (e.g., a telomerase activator) will be maximal in tissues where `w_telomere` is large, and minimal where it is small.
+3. **Synergy of Targeted Interventions:** Combined intervention on several counters with high `w_i` in a given tissue will yield a super-additive effect on healthspan extension, whereas intervention on irrelevant counters will not.
+4. **Existence of "Uncoupled" Tissues:** Tissues can be identified where the total burden `L_tissue` remains low, despite high values of one counter (`D_i`), due to compensatorily low weights of other counters.
+5. **Prediction of Aging Trajectories:** Given known *a priori* `w_i(tissue)`, `n_i*`, `τ_i` and initial `D_i₀`, the model predicts the trajectory of burden accumulation `L_tissue(t)` for each tissue, which can be verified in longitudinal studies.
+
+## v3 Update (2026-05-13)
+
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.

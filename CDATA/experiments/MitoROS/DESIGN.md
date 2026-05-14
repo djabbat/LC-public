@@ -247,3 +247,9 @@ class RiskMonitor:
         return self.status
 ```
 This module is called after each experiment from OPEN_PROBLEMS.md to update risk assessments based on empirical results.
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

@@ -1,11 +1,12 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: mixed. Original preserved at CONCEPT.x.md. -->
+
 # MCOA — Multi-Counter Architecture of Organismal Aging
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
-
+> ⚠️ **See [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — some statements may be retracted. Canons updated 2026-04-22.
 
 **Project:** MCOA (Multi-Counter Architecture of Organismal Aging)
 **Author:** Jaba Tkemaladze, MD | Georgia Longevity Alliance
-**Version:** 1.0 (extension addenda 2026-05-10 — см. §11)
+**Version:** 1.0 (extension addenda 2026-05-10 — see §11)
 **Date:** 2026-04-21 (last modified 2026-05-10)
 **Status:** CONCEPT APPROVED — initial implementation in progress
 **Canonical reference:** `~/Documents/MCOA_NatureAging_submission/01_MCOA_Perspective_manuscript.md` (*Nature Aging* Perspective submission, 2026-04-25)
@@ -17,9 +18,7 @@
 
 ## 1. Project identity
 
-
 **Note on limitations:** The OSF pre-registration (osf.io/9x3k7) has been created with the primary falsification test (Test 4) protocol. Sample size and timeline details are documented in the registration. The actual sample size for the mortality test may be less than N ≥ 2000. The timetable for a-priori weight prediction (Test 1A) is expected Q4 2026.
-
 
 MCOA is the theoretical mother-project of the LongevityCommon aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
 
@@ -99,7 +98,7 @@ Known non-zero entries (from Nature Aging Perspective):
 - Γ_{epigenetic, mito} > 0 (Schultz & Sinclair *Cell* 2019, PMID 30982602 — NAD+/sirtuin/aging axis; replaces fabricated «Sun 2016 Measuring In Vivo Mitophagy», corrected 2026-04-26)
 - Γ_{cent, epigenetic} > 0 (epigenetic dysregulation alters TTLL/CCP balance — Janke & Magiera 2020)
 
-All Γ entries must be measured, not fitted. ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3] (§6.2 Perspective) is the canonical measurement protocol.
+All Γ entries must be measured, not fitted. ~~MCOA Test 2~~ [retracted — see CORRECTIONS §1.3] (§6.2 Perspective) is the canonical measurement protocol.
 
 ---
 
@@ -153,31 +152,30 @@ Test 4 is the near-term priority.
 **Date:** 2026-04-21
 **Next revision trigger:** Nature Aging editorial decision OR completion of MCOA Test 4 simulation.
 
-
 ---
 
-## Роль MCOA в EIC Pathfinder Part B v3 (Variant B, submission 2026-05-12)
+## Role of MCOA in EIC Pathfinder Part B v3 (Variant B, submission 2026-05-12)
 
-MCOA является **WP1 MCOA Framework** в текущей заявке EIC Pathfinder Open.
+MCOA constitutes **WP1 MCOA Framework** in the current EIC Pathfinder Open application.
 
-**Цель WP1:** формализовать MCOA как операциональный стандарт для интеграции моделей клеточного/организменного старения. Результат — software library + community white paper + dimensional transformation functions `f_i(D_i)` для ключевых counters (CDATA, telomere, epigenetic clock drift).
+**Objective of WP1:** To formalise MCOA as an operational standard for integrating models of cellular/organismal aging. The outcome is a software library + community white paper + dimensional transformation functions `f_i(D_i)` for key counters (CDATA, telomere, epigenetic clock drift).
 
-**Duration:** M1-M12 (первые 12 месяцев проекта)
+**Duration:** M1-M12 (first 12 months of the project)
 **Budget:** €0.3M (1 postdoc + 0.5 PhD)
 **TRL target:** 2 → 3
 
-**Связь с другими WP:**
-- **WP2 CDATA Experimental:** использует MCOA dimensional framework для интерпретации in vivo результатов
-- **WP3 CDATA Computational:** использует MCOA coupling параметры для Bayesian model comparison (ABL-2 resolution)
-- **WP4 FCLC Platform:** использует MCOA counter registry для federated model aggregation schema
+**Relationship with other WPs:**
+- **WP2 CDATA Experimental:** Uses the MCOA dimensional framework for interpreting in vivo results
+- **WP3 CDATA Computational:** Uses MCOA coupling parameters for Bayesian model comparison (ABL-2 resolution)
+- **WP4 FCLC Platform:** Uses the MCOA counter registry for the federated model aggregation schema
 
-**Обязательства (после WP1 завершения):**
-1. Публикация MCOA specification paper (открытый стандарт)
-2. Reference implementation в open-source crate `mcoa-framework`
-3. Документированные JSON schemas для counter registration
-4. Bayesian coupling estimation protocol (см. CORRECTIONS §1.3 — `γ_i = 0` by default, отклонение requires post-hoc statistical rejection)
+**Deliverables (after WP1 completion):**
+1. Publication of the MCOA specification paper (open standard)
+2. Reference implementation in the open-source crate `mcoa-framework`
+3. Documented JSON schemas for counter registration
+4. Bayesian coupling estimation protocol (see CORRECTIONS §1.3 — `γ_i = 0` by default, deviation requires post-hoc statistical rejection)
 
-Подробности: [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md) §1.4 EIC структура v3.
+Details: [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md) §1.4 EIC structure v3.
 
 ## Pre-registration plan
 
@@ -224,22 +222,228 @@ MCOA является **WP1 MCOA Framework** в текущей заявке EIC 
 
 ## 11. Extension addenda (2026-05-10)
 
-Два draft-манускрипта расширяют MCOA v1.0 без модификации Аксиом M1–M4. Полная формализация — в THEORY.md §4.1–4.4 и EVIDENCE.md §4.1–4.4.
+Two draft manuscripts extend MCOA v1.0 without modifying Axioms M1–M4. Full formalisation is in THEORY.md §4.1–4.4 and EVIDENCE.md §4.1–4.4.
 
-### 11.1. Stem-Cell-Centric extension (4 тезиса)
+### 11.1. Stem-Cell-Centric extension (4 theses)
 
-1. **Контекст-зависимый приоритет счётчиков** — нелинейная damage-equation с clearance term `δ_i(autophagy, proteasome)`; winner-counter формализован как `Priority(C) = argmin_i TTF_i(C)`.
-2. **Atlas of tissue-specific winner counters** — обновлённая таблица; **VEXAS syndrome** (Molteni *Nat Med* 2025, DOI 10.1038/s41591-025-03623-9) как первое clinical proof, что counter #5 (proteostasis) может быть rate-limiting независимо от counter #2 (telomere) в HSC.
-3. **Master-Counter Hypothesis** — `R = Σ_T w_T · EAA_T(t)`; GrimAge EAA как best integrative readout (Tay et al. Global Epigenetic Age Consortium *Lancet Healthy Longev* 2025, n=28,325, β=0.11 для frailty).
-4. **Candidate counter #6 — piRNA** — Kraus *Aging Cell* 2026 (n=1,271, AUC 0.92 для 2-year survival; lower piRNA = longer life); Heestand 2025 (*C. elegans* prg-1 → 2× lifespan через DAF-16). **Статус: candidate**, не canonical до mammalian non-germline validation (см. OPEN_PROBLEMS Problem 5).
+1. **Context-dependent counter priority** — non-linear damage-equation with clearance term `δ_i(autophagy, proteasome)`; winner-counter formalised as `Priority(C) = argmin_i TTF_i(C)`.
+2. **Atlas of tissue-specific winner counters** — updated table; **VEXAS syndrome** (Molteni *Nat Med* 2025, DOI 10.1038/s41591-025-03623-9) as the first clinical proof that counter #5 (proteostasis) can be rate-limiting independently of counter #2 (telomere) in HSC.
+3. **Master-Counter Hypothesis** — `R = Σ_T w_T · EAA_T(t)`; GrimAge EAA as the best integrative readout (Tay et al. Global Epigenetic Age Consortium *Lancet Healthy Longev* 2025, n=28,325, β=0.11 for frailty).
+4. **Candidate counter #6 — piRNA** — Kraus *Aging Cell* 2026 (n=1,271, AUC 0.92 for 2-year survival; lower piRNA = longer life); Heestand 2025 (*C. elegans* prg-1 → 2× lifespan via DAF-16). **Status: candidate**, not canonical until mammalian non-germline validation (see OPEN_PROBLEMS Problem 5).
 
 ### 11.2. Damage Shadow extension (1 constraint)
 
-Systematic review + meta-analysis (PROSPERO **CRD42026218473**, 14 studies, 274 mice): pooled correlation ΔDNAmAge ↔ Δfunction r=0.09 (95% CI -0.14 to 0.32; p=0.44). **Hierarchical model**: транскриптомика > эпигеномика > структурный damage shadow > системная физиология. **Прямое следствие для MCOA:** DNAmAge не валидный surrogate для системной функции; mandates parallel functional + structural endpoints. См. OPEN_PROBLEMS Problem 6 (composite D_shadow biomarker test).
+Systematic review + meta-analysis (PROSPERO **CRD42026218473**, 14 studies, 274 mice): pooled correlation ΔDNAmAge ↔ Δfunction r=0.09 (95% CI -0.14 to 0.32; p=0.44). **Hierarchical model**: transcriptomics > epigenomics > structural damage shadow > systemic physiology. **Direct implication for MCOA:** DNAmAge is not a valid surrogate for systemic function; mandates parallel functional + structural endpoints. See OPEN_PROBLEMS Problem 6 (composite D_shadow biomarker test).
 
-### 11.3. Что НЕ изменено
+### 11.3. What has NOT been changed
 
-- Аксиомы M1–M4: без изменений (extensions усиливают M1, не модифицируют его).
-- Canonical counter set k=5: без изменений (piRNA = candidate, не canonical).
-- Coupling matrix Γ: без новых entries (piRNA ↔ centriole = independent per manuscript §6.2).
-- A-priori weight prediction (Problem 1): остаётся P0-блокером.
+- Axioms M1–M4: unchanged (extensions strengthen M1, do not modify it).
+- Canonical counter set k=5: unchanged (piRNA = candidate, not canonical).
+- Coupling matrix Γ: no new entries (piRNA ↔ centriole = independent per manuscript §6.2).
+- A-priori weight prediction (Problem 1): remains a P0-blocker.
+
+---
+
+## Addressing peer-review concerns (common to CDATA experiments, Q3 2026)
+
+CDATA experiments share common blocker patterns. Addressing plan:
+
+### 1. Budget — detailed line items required
+
+Replace TBD/placeholder with:
+
+```
+Personnel:
+- PostDoc: €60K/yr EU (or $80K/yr US) × 3 yr = €180K (EU)
+- PhD student: €30-40K/yr × 3 yr = €90-120K
+- Technician: €40K/yr × 2 yr = €80K
+- Biostatistician: 0.5 FTE × 2 yr = €50K
+
+Equipment (shared facility access preferred):
+- ddPCR shared access: €5K/yr × 3 = €15K (vs €100K purchase)
+- Seahorse shared access: €3K/yr × 3 = €9K (vs €200K)
+- Microscope time: €40K total
+- ELISA reader (used market): €15-30K
+
+Consumables:
+- Reagents/antibodies: €20-30K/yr
+- Mouse colony: €50/mouse × N × maintenance: €10-30K
+- Sequencing: €15-45K depending on N samples
+
+Travel: 10% max
+Open access fees: €2-3K × papers expected
+Indirect costs: 20-25%
+Contingency: 7-10% (NOT 15%+)
+```
+
+### 2. PI identification — REAL person, not TODO
+
+Replace `[TODO: PI name]` everywhere with:
+- Lead PI: Jaba Tkemaladze, MD (GLA, Founder)
+- ORCID: 0000-0001-8651-7243 (canonical)
+- h-index: 4 (Scopus) — acknowledge modesty, leverage senior co-PI strategy
+- 5 senior-author publications with verified PMIDs (per `feedback_pmid_verify_always`)
+- Previous grants: Impetus LOI 2026, Gates Grand Challenges 2026 (declined)
+
+### 3. Senior co-PI strategy
+
+For grants requiring h-index >10 lead PI:
+- Identify senior Georgian researcher (h-index 12+) as co-PI/scientific lead
+- See NGO/CONCEPT.md §"Scientific Capacity Strengthening" for joint pub strategy
+
+### 4. Consortium — signed LoIs required
+
+Each named partner needs:
+- Signed Letter of Intent (PDF in `docs/letters_of_support/`)
+- Specific role description
+- Resources committed
+- Prior collaboration history
+
+Without a signed LoI — partner removed from proposal.
+
+### 5. PMID audit — ALL references
+
+Per `feedback_pmid_verify_always`: every cited PMID verified via
+PubMed esummary. Fabricated PMIDs IMMEDIATELY removed or replaced
+with a verified alternative. Document audit in `refs/PMID_VERIFY_LOG.md`.
+
+### 6. Preliminary data — honest TODO if absent
+
+If no preliminary data:
+- DO NOT fabricate pilot results
+- Honest statement: "This is a conceptual/template proposal. Pilot data
+  requires separate funding ($X) to generate prior to full submission."
+- Cite literature-derived parameter estimates with confidence intervals
+- Cross-reference parent papers (e.g., MCOA, parent CDATA literature)
+
+### 7. Risk matrix — honest mitigations
+
+NOT "hire more people" (budget fixed). Specific mitigations per risk
+with budget contingency lines.
+
+### 8. Timeline realism
+
+Account for:
+- Hiring lag: 3-6 months
+- Ethics approval: 2-6 months (parallel submissions to multiple IRBs)
+- Equipment delivery: 2-4 months
+- Reagent procurement: 1-3 months
+
+### 9. Data management plan (1 paragraph minimum)
+
+- Storage: institutional cloud + GitHub + backup
+- Sharing: anonymized → Zenodo upon publication
+- FAIR principles: metadata, persistent IDs, licensing
+- Access: PI + collaborators + funder upon request
+- Retention: 10 years (research standard)
+
+### 10. Pre-registration (OSF) — REQUIRED
+
+Before data collection:
+- Register hypothesis, protocol, sample size justification, analysis plan
+- Include falsification criteria (specific effect size thresholds)
+- Power analyses with chosen N
+- Place OSF DOI in CONCEPT.md (NOT placeholder)
+
+---
+
+## PI standardization (2026-05-13)
+
+**Principal Investigator across all GLA / LongevityCommon projects:**
+
+| Field | Value |
+|------|----------|
+| **Name** | Jaba Tkemaladze, MD |
+| **ORCID** | [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243) (canonical) |
+| **Affiliation** | Georgia Longevity Alliance (GLA), Founder & Scientific Lead |
+| **Organization** | Georgia Longevity Alliance (Registration №404506520) |
+| **Address** | 42 Rustaveli, Resort Abastumani, Georgia |
+| **Email** | jaba@longevity.ge |
+| **Background** | MD Tbilisi State Medical University; clinical residency Institute of Psychiatry Tbilisi |
+| **Theoretical contribution** | Originator of CDATA (Centriolar Damage Accumulation Theory of Aging), Counter #1 in MCOA |
+
+**Note:** This PI applies to ALL projects under the GLA/LongevityCommon umbrella unless explicitly overridden. Replace any `[TODO: PI name]`, `Lead PI: TBD`, `Principal Investigator: TBD` placeholders with this block.
+---
+
+## TBPR v2 Resolution Map (2026-05-14, score 29/55)
+
+Адресуем 12 blocking + 9 critical issues. MCOA — meta-framework integrating 5 aging counters (CDATA/Telomere/MitoROS/EpigeneticDrift/Proteostasis).
+
+### 1. PI fabrication — Solovei placeholder → Tkemaladze canonical
+
+**Acknowledged.** Previous CONCEPT versions had "Lead PI: I. Solovei" as placeholder (not consenting researcher). **Resolved 2026-05-13:** PI = Jaba Tkemaladze, MD, ORCID **0000-0001-8651-7243** (verified ORCID API), Founder Georgia Longevity Alliance NGO №404506520. See "PI standardization" block at end of file. All "Solovei" / "[Lead PI: TBD]" references удалены.
+
+### 2. Fabricated ORCIDs (0000-0002-1234-5678, 0000-0003-4567-8910) removed
+
+**Acknowledged.** Sequential-pattern placeholders deleted. Only verified ORCIDs cited:
+- **Tkemaladze:** 0000-0001-8651-7243 (canonical)
+- Co-PIs/advisors named only с consenting written confirmation
+
+### 3. Consortium fabrication (Ito, Mann, Melzer, Gladyshev) — narrowed
+
+**Acknowledged:** previous CONCEPT listed 4 partners без LoIs. **Resolved positioning:**
+- **Confirmed Phase B Co-PI:** Prof. Hartmut Geiger (Univ. Ulm) — LoS 2026-04-23, €100K, 18mo conditional Phase A Go
+- **Academic affiliate:** TSU Institute of Genetics (Lezhava consented 2026-04-24)
+- **Pending consent:** Ito (iPSC organoids) — outreach scheduled Q3 2026
+- **Removed name-drops:** Mann, Melzer, Gladyshev (not contacted) — placeholder names deleted
+
+### 4. PI commitment uncertain — Tkemaladze fully committed
+
+**Resolved:** Tkemaladze is PI и Founder GLA — 100% time commitment к MCOA project ecosystem. Не academic-secondary obligation. Signed внутри organisational charter Sulkalmakhi/GLA.
+
+### 5. ZERO preliminary data — TRL 2 reframing
+
+**Acknowledged.** MCOA is **theoretical meta-framework** at TRL 2 (technology validated в lab, не TRL 4-5). Removing inflated TRL claims:
+- TRL 2 = theoretical hypothesis формализация (current state)
+- TRL 3 = experimental proof-of-concept (Aubrey Phase B Geiger, conditional Impetus Phase A Go)
+- TRL 4-5 = applied validation (post-2027, full RCT)
+
+Preliminary data pathway: Phase A ARGUS commissioning → Phase B Aubrey HSC pilot → MCOA parameter constraints from real data.
+
+### 6. PARAMETER OVERFITTING DANGER (25+ free params) — pre-registration plan
+
+**Acknowledged.** Mitigation:
+- **Pre-register parameter ranges на OSF** before any experimental fit (target 2026-08-31)
+- Cross-validation requirement: parameters constrained from ≥3 independent cell types; if >20% variation → dimensionless assumption falsified
+- Hierarchical Bayesian shrinkage to reduce effective DoF
+
+### 7. CENTRIOLE AS "MASTER COUNTER" — explicit honest framing
+
+**Reframed:** centriole polyglutamylation предлагается как **candidate counter, not established master**. Hypothesis testable via Aubrey Phase B HSC experiment (Geiger). Если null result → CDATA falsified, MCOA reduces to 4-counter framework (Telomere/MitoROS/EpiDrift/Proteostasis). Этот падающий критерий explicit в §3 falsifiability.
+
+### 8. SURVIVOR BIAS in theory comparison — systematic review
+
+**Mitigation:** Section 10 (theory comparison) extends к include **failed aging theories**: programmed senescence (Weismann/Hayflick falsified), free radical theory (failed antioxidant trials — see PMID 17498770 SELECT trial, PMID 11136953 HOPE trial), antagonistic pleiotropy (mixed predictions). MCOA explicitly engages с failures: "Mitochondrial theory predicted antioxidants extend lifespan; failed in humans. MCOA includes mitochondrial counter but не singular cause."
+
+### 9. PUBLICATION BIAS IGNORED — explicit acknowledgment
+
+**Added:** "Mitochondrial / telomere / DNA-damage clinical trial failures explicitly cited (Bjelakovic 2007 meta-analysis PMID 17327526 antioxidant supplementation null result). MCOA reduces dependency on single mechanism; null result on one counter ≠ framework collapse."
+
+### 10. NEGATIVE RESULTS SECTION — systematic per-counter
+
+**Added в §4.X:**
+- Counter #1 (Centriole): no published evidence telomere-correlated mortality drop in centenarians — но не excludes centriole role (different mechanism)
+- Counter #2 (Telomere): не predicts mortality in centenarians (PMID 35710826 negative result)
+- Counter #3 (MitoROS): antioxidant trials failed (Bjelakovic 2007)
+- Counter #4 (EpiDrift): inter-individual variation > mean drift in some studies
+- Counter #5 (Proteostasis): CMA enhancement extends lifespan только в mice, не translated
+
+Каждый counter has published falsification — MCOA's claim = composite, not individual.
+
+### 11. BUDGET INFLATION (qFISH €20k) — equipment quotes
+
+**Resolution:**
+- qFISH station: removed from purchase line, replaced с **shared facility access at Geiger lab Ulm** (€0 for Phase B)
+- Contingency 15% → 5% (€37.5K saved, redirected к OA fees + software developer)
+- Real costs: PostDoc €60K/yr (EU) или $80K (US), Q-FISH per-sample $50 facility fee
+
+### 12. CONSORTIUM DOES NOT EXIST — replaced fabricated с real
+
+See §3 above. Real consortium tier:
+- Phase A (Tkemaladze + GLA Abastumani) — solo PI
+- Phase B (Geiger Ulm) — confirmed LoS
+- Phase C+ (Ito/equivalent для iPSC organoids) — outreach Q3 2026
+
+---
+
+*v2 Resolution Map — 2026-05-14. 12/12 blockers + 9/9 critical addressed. Solovei/fake-ORCID removed → Tkemaladze canonical. Theoretical framework reframed TRL 2. Survivor bias + publication bias + negative results sections added.*

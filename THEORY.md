@@ -1,7 +1,9 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at THEORY.ru.md. -->
+
 # LongevityCommon · THEORY (umbrella view)
 
 **Status:** Canonical · regenerated 2026-04-28 from CONCEPT v5.6 + article §3-§4
-**Authority:** Cross-cutting math summary; полные derivations — в `<subproject>/THEORY.md`
+**Authority:** Cross-cutting math summary; complete derivations are in `<subproject>/THEORY.md`
 
 ---
 
@@ -28,7 +30,7 @@
 ```
 MCOA L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
  ↑
- один из Dᵢ — CDATA (hypothetical)
+ one of Dᵢ is CDATA (hypothetical)
 
 CDATA A(t) = a + b·D(t) + c·D(t)² (status: inconclusive)
  χ_Ze = g₀ − g₁·A(t) (linear bridge, 5 free params, underpowered)
@@ -49,7 +51,7 @@ FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
 
 ## §3. Authoritative derivations
 
-Полные derivations — в подпроектах:
+Complete derivations are in the subprojects:
 
 | Lemma | Where | Status |
 |-------|-------|--------|
@@ -63,29 +65,29 @@ FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
 | CDATA bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
 | RDP composition for DP-SGD | `FCLC/THEORY.md` | Mironov 2017 + Wang/Balle/Kasiviswanathan 2019 |
 
-## §4. Что **не** теорема, а ansatz / hypothesis
+## §4. What is **not** a theorem, but an ansatz / hypothesis
 
-(после v5 honest relabel)
+(after v5 honest relabel)
 
 | Claim | Old framing | New framing |
 |-------|-------------|-------------|
-| `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy с physical clocks; биология не валидирована |
-| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
+| `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy with physical clocks; biology not validated |
+| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** on N=196 underpowered; moved to Supplementary |
 | `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
 | Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
 | CDATA "Counter #1 in MCOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
 
 ## §5. Falsifiability (operational)
 
-- **MCOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
-- **CDATA**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
-- **Ze fixed point v***: falsified if swept-v* search на All-of-Us N≥500 показывает `v*_optimal` за пределами `[0.32, 0.58]` (sensitivity range для `k_λ ∈ [0.5, 2.0]`). **Test status:** done на N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent с theory.
-- **FCLC**: falsified as GDPR-compliant infrastructure if active server attack succeeds. Текущий статус: semi-honest secure only; известный блокер; v14 planned Q1 2027.
+- **MCOA M4** (article §3.1): falsified if on a pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² for all-cause mortality (controlling age, sex) `< 0.05` for each counter. Power analysis: N=1875 for R²=0.3 at 80% power.
+- **CDATA**: falsified if a full Sobol decomposition (S1+S2+ST) with nested CV on real GTEx-like data shows that the α-component does not contribute significantly. Current Sobol on synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), but difference NOT significant (p=0.12 after correction).
+- **Ze fixed point v***: falsified if a swept-v* search on All-of-Us N≥500 shows `v*_optimal` outside `[0.32, 0.58]` (sensitivity range for `k_λ ∈ [0.5, 2.0]`). **Test status:** done on N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent with theory.
+- **FCLC**: falsified as GDPR-compliant infrastructure if an active server attack succeeds. Current status: semi-honest secure only; known blocker; v14 planned Q1 2027.
 
-## §6. Связь с реализацией
+## §6. Relationship to implementation
 
-- Все 6 канонических Ze quantities → `Ze/biosense-simulator/` (Rust)
-- Все 5 канонических BioSense computations → `BioSense/biosense-simulator/` (Rust)
+- All 6 canonical Ze quantities → `Ze/biosense-simulator/` (Rust)
+- All 5 canonical BioSense computations → `BioSense/biosense-simulator/` (Rust)
 - FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
-- MCOA aggregator → `MCOA/CellDT_v4/` (planned, не реализован полностью)
-- CDATA bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
+- MCOA aggregator → `MCOA/CellDT_v4/` (planned, not fully implemented)
+- CDATA bridge fitting → out of canonical simulator surface; Python prototype in `_archive/`

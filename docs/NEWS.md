@@ -1,63 +1,65 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at NEWS.ru.md. -->
+
 # LongevityCommon — News & Science Feed
 
-**Дата обновления:** 2026-04-10 
-**Статус:** ЯДРО · не публиковать в public git 
-**Назначение:** агрегатор свежих научных новостей для обогащения всей экосистемы
+**Date of Update:** 2026-04-10 
+**Status:** CORE · do not publish in public git 
+**Purpose:** aggregator of recent scientific news for enriching the entire ecosystem
 
 ---
 
-## Как использовать этот файл
+## How to Use This File
 
-- Обновлять при каждой сессии (поиск свежих статей)
-- Находки тематически дублируются в KNOWLEDGE.md соответствующего подпроекта
-- Формат: дата · источник · тезис · связь с LongevityCommon
-
----
-
-## Апрель 2026
+- Update at each session (search for recent articles)
+- Findings are thematically duplicated in KNOWLEDGE.md of the corresponding subproject
+- Format: date · source · thesis · connection to LongevityCommon
 
 ---
 
-### [ОБЩЕЕ] Citizen Science и здоровье в 2026
+## April 2026
 
-**Источники:**
+---
+
+### [GENERAL] Citizen Science and Health in 2026
+
+**Sources:**
 - [The Rise of Citizen Science in Health Research — Tandfonline](https://www.tandfonline.com/doi/full/10.1080/15265161.2019.1619859)
 - [Citizen Health Science: Foundations of a New Data Science Arena — PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7299478/)
 - [Patient-Powered Digital Health 2026 — DCI Network](https://www.dcinetwork.org/patients2026)
 - [Digital Citizen Science Observatory — Frontiers](https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2024.1399992/full)
 
-**Ключевые тезисы:**
-- Citizen science получает признание в public health, urban health, policy-making как «bottom-up» подход
-- Digital Citizen Science Observatory (DiScO): цель — трансформация систем здравоохранения через этически собранные данные граждан → поддержка принятия решений на уровне policy и пациента одновременно
-- 08.04.2026: UNC Chapel Hill + UNC Health запустили **SHIRE** (Secure Health Informatics Research Environment) — облачная платформа для ответственного AI с real-world clinical data
-- OpenAI и Anthropic объявили возможность синхронизации личных health data с ChatGPT/Claude — показатель растущего спроса на «персонального медицинского ассистента»
+**Key Theses:**
+- Citizen science is gaining recognition in public health, urban health, and policy-making as a "bottom-up" approach
+- Digital Citizen Science Observatory (DiScO): goal — transformation of healthcare systems through ethically collected citizen data → support for decision-making at both policy and patient levels simultaneously
+- 08.04.2026: UNC Chapel Hill + UNC Health launched **SHIRE** (Secure Health Informatics Research Environment) — a cloud platform for responsible AI with real-world clinical data
+- OpenAI and Anthropic announced the possibility of synchronizing personal health data with ChatGPT/Claude — an indicator of growing demand for a "personal medical assistant"
 
-**Связь с LongevityCommon:**
-> LongevityCommon строится на той же концепции — пациент как субъект исследования, а не объект. DiScO и SHIRE — институциональное подтверждение правильности вектора. Ze·Guide + Lab = реализация citizen science внутри экосистемы.
+**Connection to LongevityCommon:**
+> LongevityCommon is built on the same concept — the patient as a subject of research, not an object. DiScO and SHIRE are institutional confirmation of the correctness of the vector. Ze·Guide + Lab = implementation of citizen science within the ecosystem.
 
 ---
 
-### [ОБЩЕЕ] Права пациентов на данные и Longevity Medicine 2026
+### [GENERAL] Patient Data Rights and Longevity Medicine 2026
 
-**Источники:**
+**Sources:**
 - [2026 — The Longevity Medicine Manifesto — David Luu](https://newsletter.longevitydocs.org/p/2026-the-longevity-medicine-manifesto)
 - [Patient Data Ownership — Oxford JLB](https://academic.oup.com/jlb/article/8/2/lsab023/6380070)
 - [Ownership of Health Data, Sharing, and Governance — BMC Medical Ethics](https://bmcmedethics.biomedcentral.com/articles/10.1186/s12910-022-00848-y)
 - [Recent Digital Health Trends February 2026 — OpenLoop Health](https://openloophealth.com/blog/recent-digital-health-trends-and-news-february-2026)
 
-**Ключевые тезисы:**
-- В 2026 году сеть 500+ врачей в 50+ странах формирует «Longevity Medicine Manifesto» — 5 элементов: клинические стандарты, real-world outcomes data, управление без коммерческого влияния, инфраструктура для медицинских карьер, критическая масса обученных специалистов
-- Дебаты об «ownership» здоровых данных: ни частная, ни публичная модель не решает задачу полностью — акцент смещается на **Data Access Committees** и процедурные механизмы
-- Консенсус 2026: нужны прозрачные universal privacy policies, охватывающие сбор, хранение, передачу и ownership raw data
+**Key Theses:**
+- In 2026, a network of 500+ physicians in 50+ countries is forming the "Longevity Medicine Manifesto" — 5 elements: clinical standards, real-world outcomes data, governance without commercial influence, infrastructure for medical careers, critical mass of trained specialists
+- Debates on "ownership" of health data: neither private nor public model fully solves the problem — the focus shifts to **Data Access Committees** and procedural mechanisms
+- Consensus 2026: transparent universal privacy policies are needed, covering collection, storage, transfer, and ownership of raw data
 
-**Связь с LongevityCommon:**
-> FCLC + 5-уровневый privacy stack напрямую решает этот вопрос. Данные остаются у пользователя, агрегируются криптографически — не продаются. LongevityCommon Pro = модель, где платформа зарабатывает на здоровье людей, а не на их данных.
+**Connection to LongevityCommon:**
+> FCLC + 5-level privacy stack directly addresses this issue. Data remains with the user, aggregated cryptographically — not sold. LongevityCommon Pro = a model where the platform earns from people's health, not from their data.
 
 ---
 
-### [FCLC] Федеративное обучение и приватность в здравоохранении 2026
+### [FCLC] Federated Learning and Privacy in Healthcare 2026
 
-**Источники:**
+**Sources:**
 - [Securing FL with Blockchain in Medical Field — JMIR 2026](https://www.jmir.org/2026/1/e79052)
 - [Federated Learning 2026: Privacy-First AI — Programming Helper](https://www.programming-helper.com/tech/federated-learning-2026-privacy-first-ai-training)
 - [Federated Microservices + Blockchain — Nature Scientific Reports 2026](https://www.nature.com/articles/s41598-026-39837-1)
@@ -65,93 +67,93 @@
 - [FED-EHR Decentralized Analytics — MDPI 2026](https://www.mdpi.com/2079-9292/14/16/3261)
 - [Federated Deep Learning for IoT Healthcare — Frontiers 2026](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1725597/full)
 
-**Ключевые тезисы:**
+**Key Theses:**
 - Federated microservices: Kubernetes + TensorFlow Federated + Hyperledger Fabric → predictive accuracy 95.2%, API latency −42%, recovery time 10× faster vs monolithic
-- Defense-in-depth: FL + Secure Enclaves + Differential Privacy — стандарт де-факто для sensitive medical data
-- Secure Aggregation: сервер видит только агрегат, никогда индивидуальные апдейты
-- DP + calibrated noise → математическая гарантия privacy при gradient leakage
-- HIPAA + GDPR compliance теперь реализуется через federated архитектуры напрямую
+- Defense-in-depth: FL + Secure Enclaves + Differential Privacy — de facto standard for sensitive medical data
+- Secure Aggregation: server sees only the aggregate, never individual updates
+- DP + calibrated noise → mathematical guarantee of privacy against gradient leakage
+- HIPAA + GDPR compliance is now implemented directly through federated architectures
 
-**→ Дублировано в FCLC/KNOWLEDGE.md**
+**→ Duplicated in FCLC/KNOWLEDGE.md**
 
 ---
 
-### [Ze] EEG-based Brain Age Clock — прорыв 2026
+### [Ze] EEG-based Brain Age Clock — Breakthrough 2026
 
-**Источники:**
+**Sources:**
 - [BrainYears: EEG Brain Age Clock — bioRxiv 2026](https://www.biorxiv.org/content/10.64898/2026.03.26.714124v1.full)
 - [Wearable Aging Clock — Nature Communications 2025](https://www.nature.com/articles/s41467-025-64275-4)
 - [WHOOP 2026 Health Report: Rise of Healthspan — The Manual](https://www.themanual.com/fitness/whoop-2026-health-report/)
 - [HRV-CV as Digital Biomarker 2026 — Science for ME](https://www.s4me.info/threads/heart-rate-variability-coefficient-of-variation-during-sleep-as-a-digital-biomarker-that-reflects-behavior-and-varies-by-age-and-sex-2026-grosicki.49521/)
 
-**Ключевые тезисы:**
-- **BrainYears (bioRxiv, март 2026):** EEG brain age clock на ML — Pearson r = **0.92**, MAE = **4.43 лет**. Нейромодуляционная интервенция снизила predicted brain age на **−5.18 лет** в группе. Нет MRI — только EEG. Portable, cost-effective, повторяемые измерения дома
-- **Nature Communications (2025):** Wearable PPG aging clock сильно ассоциирует с болезнями, поведением, продольными изменениями. Подтверждает: wearable bio-age viable
-- **HRV-CV (2026):** coefficient of variation HRV за ночь = scalable digital biomarker для поведенческого мониторинга, стратификации риска. Связан с алкоголем, физактивностью, качеством сна
-- **WHOOP Age:** 9 параметров (sleep consistency, HRV, time in HR zones и др.) → biological age. Массовый продукт, подтверждающий рыночный спрос
+**Key Theses:**
+- **BrainYears (bioRxiv, March 2026):** EEG brain age clock using ML — Pearson r = **0.92**, MAE = **4.43 years**. Neuromodulation intervention reduced predicted brain age by **−5.18 years** in the group. No MRI — only EEG. Portable, cost-effective, repeatable measurements at home
+- **Nature Communications (2025):** Wearable PPG aging clock strongly associated with diseases, behavior, longitudinal changes. Confirms: wearable bio-age viable
+- **HRV-CV (2026):** coefficient of variation of HRV overnight = scalable digital biomarker for behavioral monitoring, risk stratification. Associated with alcohol, physical activity, sleep quality
+- **WHOOP Age:** 9 parameters (sleep consistency, HRV, time in HR zones, etc.) → biological age. Mass-market product confirming market demand
 
-**Связь с Ze:**
-> BrainYears (r=0.92, MAE=4.43 лет) — прямой конкурент/валидатор χ_Ze. Chi_Ze даёт R²=0.84 ~~[отозвано: синтетические данные; см. CORRECTIONS §1.2]~~ на EEG+HRV. BrainYears — чисто EEG r=0.92. Нужно: 1) позиционировать χ_Ze как более интерпретируемый (физический смысл vs black-box ML); 2) WHOOP Age = доказательство рынка.
+**Connection to Ze:**
+> BrainYears (r=0.92, MAE=4.43 years) — direct competitor/validator of χ_Ze. Chi_Ze gives R²=0.84 ~~[withdrawn: synthetic data; see CORRECTIONS §1.2]~~ on EEG+HRV. BrainYears — pure EEG r=0.92. Needed: 1) position χ_Ze as more interpretable (physical meaning vs black-box ML); 2) WHOOP Age = proof of market.
 
-**→ Дублировано в Ze/KNOWLEDGE.md**
+**→ Duplicated in Ze/KNOWLEDGE.md**
 
 ---
 
-### [BioSense] Wearable EEG/HRV для longevity 2026
+### [BioSense] Wearable EEG/HRV for Longevity 2026
 
-**Источники:**
+**Sources:**
 - [Wearable EEG for MCI Detection — npj Digital Medicine 2026](https://www.nature.com/articles/s41746-026-02342-w)
 - [Bioelectric Signal Healthcare Monitoring — npj Biomedical Innovations 2025](https://www.nature.com/articles/s44385-025-00061-7)
 - [Hume Band: Biological Age Wearable 2026 — Newswire](https://www.newswire.com/news/hume-band-review-2026-biological-age-metabolic-health-wearable)
 - [10 Top HRV Biofeedback Monitors 2026 — Outliyr](https://outliyr.com/best-hrv-biofeedback-monitors)
 
-**Ключевые тезисы:**
-- **npj Digital Medicine (2026):** Wearable EEG показывает высокий потенциал как скрининговый инструмент MCI (mild cognitive impairment) — прямое измерение нейронных осцилляций и функциональной связности
-- **Hume Band 2026:** коммерческий wearable с HRV, SpO2, sleep, temperature → longevity feedback + biological age. Рынок wearable sleep-tracking к 2026 достиг **$7B**
-- **Биоэлектрические сигналы:** multi-sensor EEG+PPG → real-time brain activity + blood flow + cognitive performance + emotional regulation — всё в одном устройстве
-- Основная проблема consumer EEG: overestimation sleep, underestimation wakefulness vs polysomnography
+**Key Theses:**
+- **npj Digital Medicine (2026):** Wearable EEG shows high potential as a screening tool for MCI (mild cognitive impairment) — direct measurement of neural oscillations and functional connectivity
+- **Hume Band 2026:** commercial wearable with HRV, SpO2, sleep, temperature → longevity feedback + biological age. Wearable sleep-tracking market reached **$7B** by 2026
+- **Bioelectric signals:** multi-sensor EEG+PPG → real-time brain activity + blood flow + cognitive performance + emotional regulation — all in one device
+- Main problem of consumer EEG: overestimation of sleep, underestimation of wakefulness vs polysomnography
 
-**Связь с BioSense:**
-> Hume Band — прямой аналог BioSense MVP. BioSense должен позиционироваться: 1) открытый стандарт (не закрытый Hume), 2) χ_Ze как теоретически обоснованный индекс (не proprietary black-box), 3) интеграция с CommonHealth/FCLC.
+**Connection to BioSense:**
+> Hume Band — direct analogue of BioSense MVP. BioSense should be positioned: 1) open standard (not closed Hume), 2) χ_Ze as a theoretically grounded index (not proprietary black-box), 3) integration with CommonHealth/FCLC.
 
-**→ Дублировано в BioSense/KNOWLEDGE.md**
+**→ Duplicated in BioSense/KNOWLEDGE.md**
 
 ---
 
-### [CDATA] Центросомы, старение и сенесценция 2025–2026
+### [CDATA] Centrosomes, Aging, and Senescence 2025–2026
 
-**Источники:**
+**Sources:**
 - [Drivers of Centrosome Abnormalities: Senescence Progression and Tumor Immune Escape — ScienceDirect 2025](https://www.sciencedirect.com/science/article/abs/pii/S1044579X25000173)
 - [PLK4: Master Regulator of Centriole Duplication — Cytoskeleton 2025](https://onlinelibrary.wiley.com/doi/full/10.1002/cm.22031)
 - [Senescence in Cancer — Cancer Cell 2025](https://www.cell.com/cancer-cell/fulltext/S1535-6108(25)00224-7)
 - [Centrosome Dysfunction: Link Between Senescence and Tumor Immunity — Nature STTT](https://www.nature.com/articles/s41392-020-00214-7)
 
-**Ключевые тезисы:**
-- **ScienceDirect 2025:** Центросомные аберрации — hallmarks рака + сенесценции. ECASP (extra centrosome-associated secretory phenotype) через хроническую NF-κB активацию → IL-8, GDF-15, ANGPTL4. IL-8 = компонент SASP → иммуносупрессивное микроокружение
-- **PLK4 клинические испытания (2025):** PLK4 — master regulator дупликации центриолей. Ингибитор **RP-1664** (orally bioavailable) вошёл в клинические испытания
-- **Cancer Cell 2025:** Сенесценция играет двойную роль в предраке: сначала тумор-супрессорный барьер, потом про-туморальный PreTME через паракринный SASP
-- Центросомная амплификация — наиболее частый дефект в опухолях; связана с геномной нестабильностью и ускоренным старением
+**Key Theses:**
+- **ScienceDirect 2025:** Centrosome aberrations — hallmarks of cancer + senescence. ECASP (extra centrosome-associated secretory phenotype) via chronic NF-κB activation → IL-8, GDF-15, ANGPTL4. IL-8 = component of SASP → immunosuppressive microenvironment
+- **PLK4 clinical trials (2025):** PLK4 — master regulator of centriole duplication. Inhibitor **RP-1664** (orally bioavailable) entered clinical trials
+- **Cancer Cell 2025:** Senescence plays a dual role in precancer: first a tumor-suppressive barrier, then a pro-tumoral PreTME via paracrine SASP
+- Centrosome amplification — the most frequent defect in tumors; associated with genomic instability and accelerated aging
 
-**Связь с CDATA:**
-> PLK4 ингибитор в клинике — прямое подтверждение терапевтического направления #2 (протеасомальная очистка / регуляция дупликации). ECASP + NF-κB путь хорошо согласуется с CDATA моделью: поврежденные центриоли → SASP → сенесценция → старение ткани. Обновить MCAI-модель с учётом ECASP компонента.
+**Connection to CDATA:**
+> PLK4 inhibitor in the clinic — direct confirmation of therapeutic direction #2 (proteasomal clearance / regulation of duplication). ECASP + NF-κB pathway aligns well with the CDATA model: damaged centrioles → SASP → senescence → tissue aging. Update the MCAI model considering the ECASP component.
 
-**→ Дублировано в CDATA/KNOWLEDGE.md**
-
----
-
-## Ссылки для дальнейшего чтения
-
-| Тема | Приоритет | Ссылка |
-|------|-----------|--------|
-| BrainYears preprint (полный текст) | ВЫСОКИЙ | https://www.biorxiv.org/content/10.64898/2026.03.26.714124v1.full |
-| Federated Microservices + Blockchain (Nature) | ВЫСОКИЙ | https://www.nature.com/articles/s41598-026-39837-1 |
-| PLK4 inhibitor RP-1664 clinical trial | ВЫСОКИЙ | https://onlinelibrary.wiley.com/doi/full/10.1002/cm.22031 |
-| Wearable EEG for MCI (npj Digital Med) | СРЕДНИЙ | https://www.nature.com/articles/s41746-026-02342-w |
-| DiScO — Digital Citizen Science Observatory | СРЕДНИЙ | https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2024.1399992/full |
-| SHIRE platform UNC (08.04.2026) | СРЕДНИЙ | https://www.unc.edu/posts/2026/04/08/university-unc-health-unveil-shire-health-care-innovation-platform/ |
-| Senescence in Cancer (Cancer Cell 2025) | СРЕДНИЙ | https://www.cell.com/cancer-cell/fulltext/S1535-6108(25)00224-7 |
-| HRV-CV biomarker 2026 | НИЗКИЙ | https://www.s4me.info/threads/heart-rate-variability-coefficient-of-variation-during-sleep-as-a-digital-biomarker-that-reflects-behavior-and-varies-by-age-and-sex-2026-grosicki.49521/ |
+**→ Duplicated in CDATA/KNOWLEDGE.md**
 
 ---
 
-*NEWS.md — файл ядра LongevityCommon | обновлять при каждой сессии*
+## Links for Further Reading
+
+| Topic | Priority | Link |
+|-------|----------|------|
+| BrainYears preprint (full text) | HIGH | https://www.biorxiv.org/content/10.64898/2026.03.26.714124v1.full |
+| Federated Microservices + Blockchain (Nature) | HIGH | https://www.nature.com/articles/s41598-026-39837-1 |
+| PLK4 inhibitor RP-1664 clinical trial | HIGH | https://onlinelibrary.wiley.com/doi/full/10.1002/cm.22031 |
+| Wearable EEG for MCI (npj Digital Med) | MEDIUM | https://www.nature.com/articles/s41746-026-02342-w |
+| DiScO — Digital Citizen Science Observatory | MEDIUM | https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2024.1399992/full |
+| SHIRE platform UNC (08.04.2026) | MEDIUM | https://www.unc.edu/posts/2026/04/08/university-unc-health-unveil-shire-health-care-innovation-platform/ |
+| Senescence in Cancer (Cancer Cell 2025) | MEDIUM | https://www.cell.com/cancer-cell/fulltext/S1535-6108(25)00224-7 |
+| HRV-CV biomarker 2026 | LOW | https://www.s4me.info/threads/heart-rate-variability-coefficient-of-variation-during-sleep-as-a-digital-biomarker-that-reflects-behavior-and-varies-by-age-and-sex-2026-grosicki.49521/ |
+
+---
+
+*NEWS.md — core file of LongevityCommon | update at each session*

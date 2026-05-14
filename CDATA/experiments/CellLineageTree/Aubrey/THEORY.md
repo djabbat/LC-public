@@ -28,3 +28,9 @@ The number of cells after \(g\) generations is \(2^g\) under full expansion. Las
 - **Photolesion theory** → one‑photon vs. two‑photon damage, ROS generation, focal volume scaling
 
 ---
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

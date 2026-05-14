@@ -1,25 +1,27 @@
+<!-- AUTO-TRANSLATED from README.md via DeepSeek 2026-05-13. Source language: russian. Original (README.md) is canonical; re-run scripts/translate_core_files.py after edits. -->
+
 # deploy/web-shared/ — cross-subdomain assets
 
-Серверные ассеты, которые инжектятся через nginx `sub_filter` или
-включаются темой OJS на ВСЕХ longevity.ge поддоменах.
+Server assets that are injected via nginx `sub_filter` or
+included by the OJS theme on ALL longevity.ge subdomains.
 
-## Файлы
+## Files
 
-- **`eco-inject.js`** — общий sticky header (LongevityCommon brand +
- навигация по экосистеме) + dark/light переключатель + dark theme
- CSS overrides для PKP/OJS, Tailwind, кастомных стилей.
+- **`eco-inject.js`** — common sticky header (LongevityCommon brand +
+ ecosystem navigation) + dark/light toggle + dark theme
+ CSS overrides for PKP/OJS, Tailwind, custom styles.
 
- Грузится на каждом поддомене из `https://longevity.ge/eco-inject.js`.
- Cookie `lc_theme` на `.longevity.ge` синхронизирует тему между
- поддоменами.
+ Loaded on each subdomain from `https://longevity.ge/eco-inject.js`.
+ Cookie `lc_theme` on `.longevity.ge` synchronizes the theme across
+ subdomains.
 
- Тема, навигация и dark mode — единственный механизм; не дублировать
- в темах OJS / Phoenix / Vite.
+ The theme, navigation, and dark mode constitute the sole mechanism; do not duplicate
+ in OJS / Phoenix / Vite themes.
 
-## Deploy на server
+## Deploy to server
 
-Канонический путь на сервере: `/home/jaba/web/longevity/eco-inject.js`
-(симлинки/копии в `/home/jaba/web/ngo/`, и т.д. для legacy путей).
+Canonical path on the server: `/home/jaba/web/longevity/eco-inject.js`
+(symlinks/copies in `/home/jaba/web/ngo/`, etc. for legacy paths).
 
 ```bash
 scp deploy/web-shared/eco-inject.js \
@@ -28,15 +30,14 @@ ssh server "sudo cp /home/jaba/web/longevity/eco-inject.js \
  /home/jaba/web/ngo/eco-inject.js"
 ```
 
-После деплоя — bump `?v=` query string в OJS теме / nginx snippet,
-иначе CF и браузеры закэшируют старую версию.
+After deployment — bump `?v=` query string in OJS theme / nginx snippet,
+otherwise CF and browsers will cache the old version.
 
 ## Bump cache version
 
-После любого изменения JS:
+After any change to the JS:
 
 ```bash
 ssh server 'cd /home/jaba/web/longevity && \
  grep -rl "eco-inject.js?v=" plugins/themes/ | \
  xargs sed -i "s/eco-inject.js?v=[0-9]*/eco-inject.js?v=$(date +%s | tail -c 4)/g"'
-```

@@ -1,37 +1,51 @@
-# MCOA — Мультисчётная Архитектура Старения Организма
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at README.ru.md. -->
 
-**MCOA** — это теоретический мета-фреймворк, формализующий старение организма как взвешенную сумму нескольких параллельных процессов накопления повреждений («счётчиков»). Каждый счётчик имеет собственную кинетику, зависящую от делений клеток и хронологического времени, и фиксированные *априорные* весовые коэффициенты для каждой ткани, что обеспечивает фальсифицируемость. MCOA не заменяет специфические подпроекты (CDATA, Ze, BioSense), а предоставляет общий формальный язык и архитектуру для их интеграции.
+# MCOA — Multi-Counter Architecture of Organismal Aging
 
-## Основные принципы
+**MCOA** is a theoretical meta-framework that formalizes organismal aging as a weighted sum of several parallel damage accumulation processes ("counters"). Each counter possesses its own kinetics, dependent on cell divisions and chronological time, and fixed *a priori* weight coefficients for each tissue, ensuring falsifiability. MCOA does not replace specific subprojects (CDATA, Ze, BioSense) but provides a common formal language and architecture for their integration.
 
-* **Параллельные счётчики:** Старение определяется как минимум двумя независимыми процессами накопления повреждений, протекающими параллельно. Ни один счётчик не является достаточным для объяснения универсальности репликативных лимитов (Аксиома M1).
-* **Размерная согласованность:** Все компоненты уравнения повреждения должны быть приведены к безразмерному виду с использованием *априорно* заданных референтных масштабов (деления `n_i*`, время `τ_i`) из независимых клеточно-биологических знаний (Аксиома M2).
-* **Априорное весовое взвешивание тканей:** Вклад каждого счётчика `w_i(tissue)` в общую нагрузку ткани должен предсказываться до подгонки модели, на основе биологических параметров (частота делений, метаболическая активность и др.). Пост-фактумная подгонка весов запрещена (Аксиома M3).
-* **Фальсифицируемость — первоклассная цель:** Каждое утверждение, выведенное из MCOA, должно сопровождаться чётким экспериментальным тестом, который может его опровергнуть (Аксиома M4).
+## Core Principles
 
-## Ключевые компоненты
+* **Parallel Counters:** Aging is defined by at least two independent damage accumulation processes operating in parallel. No single counter is sufficient to explain the universality of replicative limits (Axiom M1).
+* **Dimensional Consistency:** All components of the damage equation must be rendered dimensionless using *a priori* specified reference scales (divisions `n_i*`, time `τ_i`) derived from independent cell-biological knowledge (Axiom M2).
+* **A Priori Tissue Weighting:** The contribution of each counter `w_i(tissue)` to the total tissue burden must be predicted prior to model fitting, based on biological parameters (division rate, metabolic activity, etc.). Post-hoc fitting of weights is prohibited (Axiom M3).
+* **Falsifiability as a First-Class Goal:** Every claim derived from MCOA must be accompanied by a clear experimental test that could refute it (Axiom M4).
 
-1. **Канонические счётчики:** MCOA определяет пять основных счётчиков: (1) центриолярная полиглутамилизация (CDATA), (2) теломеры, (3) митохондриальные ROS/мтДНК, (4) эпигенетический дрейф, (5) коллапс протеостаза.
-2. **Формализм:** Повреждение для счётчика `i` описывается как `D_i(n, t) = D_i₀ + α_i·(n/n_i*) + β_i·(t/τ_i) + γ_i·I(others)`. Общая нагрузка на ткань: `L_tissue = Σ_i [ w_i(tissue) · f_i(D_i(n, t)) ]`.
-3. **Матрица связей (Γ):** Определяет, как один счётчик ускоряет другой (например, окислительный стресс ускоряет укорочение теломер). Элементы Γ должны измеряться, а не подгоняться. По умолчанию `γ_i = 0` (гипотеза независимости).
-4. **Функциональный переход:** Клетка входит в состояние сенесценции, апоптоза или дисфункции при превышении `L_tissue > L_critical(tissue)` или `D_i > D_critical(i, tissue)`.
+## Key Components
 
-## Связь с другими проектами LongevityCommon
+1.  **Canonical Counters:** MCOA defines five primary counters: (1) centriolar polyglutamylation (CDATA), (2) telomeres, (3) mitochondrial ROS/mtDNA, (4) epigenetic drift, (5) proteostasis collapse.
+2.  **Formalism:** Damage for counter `i` is described as `D_i(n, t) = D_i₀ + α_i·(n/n_i*) + β_i·(t/τ_i) + γ_i·I(others)`. Total tissue burden: `L_tissue = Σ_i [ w_i(tissue) · f_i(D_i(n, t)) ]`.
+3.  **Coupling Matrix (Γ):** Defines how one counter accelerates another (e.g., oxidative stress accelerates telomere shortening). Elements of Γ must be measured, not fitted. By default `γ_i = 0` (independence hypothesis).
+4.  **Functional Transition:** A cell enters a state of senescence, apoptosis, or dysfunction upon exceeding `L_tissue > L_critical(tissue)` or `D_i > D_critical(i, tissue)`.
 
-* **[THEORY.md](THEORY.md):** Полное формальное изложение аксиом, уравнений и предсказаний MCOA.
-* **[EVIDENCE.md](EVIDENCE.md):** Проверенные литературные источники (PMID/DOI), внутренние данные и опровергающие свидетельства, поддерживающие или оспаривающие MCOA.
-* **[OPEN_PROBLEMS.md](OPEN_PROBLEMS.md):** Неразрешённые научные проблемы, приоритеты и конкретные фальсифицируемые тесты для MCOA.
-* **[PARAMETERS.md](PARAMETERS.md):** Таблица всех количественных параметров, их источников, единиц измерения и статуса калибровки.
-* **[DESIGN.md](DESIGN.md):** Архитектура кода, файловая структура и API контракты эталонной реализации на Rust.
-* **[AGENTS.md](AGENTS.md):** Инструкции и жёсткие правила для LLM-агентов, работающих с кодом и документацией MCOA.
-* **[JOURNAL.md](JOURNAL.md):** Хронологический журнал изменений, решений и их обоснований.
-* **[ROADMAP.md](ROADMAP.md):** План будущих разработок, приоритеты и зависимости.
+## Relationship with Other LongevityCommon Projects
 
-## Важные канонические исправления (2026-04-22)
+* **[THEORY.md](THEORY.md):** Complete formal exposition of MCOA axioms, equations, and predictions.
+* **[EVIDENCE.md](EVIDENCE.md):** Verified literature sources (PMID/DOI), internal data, and refuting evidence supporting or challenging MCOA.
+* **[OPEN_PROBLEMS.md](OPEN_PROBLEMS.md):** Unresolved scientific problems, priorities, and specific falsifiable tests for MCOA.
+* **[PARAMETERS.md](PARAMETERS.md):** Table of all quantitative parameters, their sources, units of measurement, and calibration status.
+* **[DESIGN.md](DESIGN.md):** Code architecture, file structure, and API contracts for the Rust reference implementation.
+* **[AGENTS.md](AGENTS.md):** Instructions and strict rules for LLM agents working with MCOA code and documentation.
+* **[JOURNAL.md](JOURNAL.md):** Chronological log of changes, decisions, and their justifications.
+* **[ROADMAP.md](ROADMAP.md):** Plan for future development, priorities, and dependencies.
 
-* **Формула Health Score удалена.** Веса 0.40·organism + 0.25·psyche... не имели математического обоснования из MCOA. Вместо неё используется прямая тканевая нагрузка `L_tissue`.
-* **χ_Ze — теоретический конструкт, а не валидированный биомаркер.** Утверждение "χ_Ze predicts biological age with R²=0.84" отозвано, так как было основано на синтетических данных.
-* **Связь γ_i и MCOA Test 2.** Параметр связи `γ_i` по умолчанию равен 0. MCOA Test 2 — это будущий протокол для *измерения* связей между уже работающими счётчиками, а не источник *априорных* значений `γ_i`.
-* **Структура EIC Pathfinder.** В текущей заявке (Variant B) MCOA является WP1 (€0.3M, M1-M12). Подпроекты Ze, BioSense и Aqtivirebuli не включены в качестве отдельных рабочих пакетов.
+## Important Canonical Corrections (2026-04-22)
 
-**Статус:** Концепция утверждена. Идёт подготовка рукописи для *Nature Aging* (дедлайн 2026-04-25) и разработка эталонной реализации на Rust.
+* **Health Score formula removed.** The weights 0.40·organism + 0.25·psyche... lacked mathematical justification from MCOA. Direct tissue burden `L_tissue` is used instead.
+* **χ_Ze — theoretical construct, not a validated biomarker.** The claim "χ_Ze predicts biological age with R²=0.84" has been retracted, as it was based on synthetic data.
+* **Coupling γ_i and MCOA Test 2.** The coupling parameter `γ_i` defaults to 0. MCOA Test 2 is a future protocol for *measuring* couplings between already operational counters, not a source of *a priori* `γ_i` values.
+* **EIC Pathfinder Structure.** In the current application (Variant B), MCOA constitutes WP1 (€0.3M, M1-M12). Subprojects Ze, BioSense, and Aqtivirebuli are not included as separate work packages.
+
+**Status:** Concept approved. Manuscript preparation for *Nature Aging* (deadline 2026-04-25) and development of the Rust reference implementation are underway.
+
+## v3 Update (2026-05-13)
+
+CONCEPT.md updated with TBPR peer-review responses:
+- Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
+- Removed fabricated references
+- Addressed top blocking/critical reviewer concerns
+- Statistical protocol additions where applicable
+- Honest TODO sections for unmet requirements
+
+See `CONCEPT.md` Section marked "v3" / "Address peer-review concerns"
+for project-specific changes.

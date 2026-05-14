@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED from CONCEPT.md by TBPR orchestrator 2026-05-10 ensure_core (DeepSeek-reasoner). Review and edit as needed. -->
 
-# EVIDENCE.md — Experiment 0: Existing Evidence & Gaps
+# EVIDENCE.md — ARGUS: Existing Evidence & Gaps
 
 **Версия:** 1.0  
 **Статус:** Pre‑commissioning literature review
@@ -72,3 +72,20 @@
 ---
 
 **Conclusion:** No direct experimental evidence exists for the integrated E0 system. All components have prior art but not in combination. Validation will generate the evidence required for Experiment A design.
+---
+
+## v3.1 (2026-05-13) — Verified PMID corrections
+
+После TBPR v3.1 audit все PMIDs verified через PubMed esummary:
+
+| PMID | Author | Source | Notes |
+|------|--------|--------|-------|
+| **36583780** | Tkemaladze 2023 | *Mol Biol Rep* | CDATA Counter #1 conceptual parent |
+| **37882444** | Royall et al 2023 | *eLife* | Asymmetric centrosome inheritance, human NPCs |
+| **16336191** | Tkemaladze & Chichinadze 2005 | *Biochemistry (Mosc)* | Centriolar mechanisms differentiation |
+| **15886028** | Tkemaladze 2005 | *Cell Biol Int* | Morphogenetic status determination |
+| **21407209** | Januschke et al 2011 | *Nat Commun* | Drosophila neuroblasts retain daughter |
+| **40243666** | Schaeffer et al 2025 | *J Cell Biol* | Microtubule + actomyosin centrosome positioning |
+
+**Removed (fabricated):** ~~38015348~~ (osteopontin), ~~38353211~~ (silicon anodes).
+

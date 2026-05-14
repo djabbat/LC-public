@@ -227,3 +227,9 @@ class TelomereCounter:
 ## Validation test suite
 
 In `tests/test_telomere.py`, include at minimum: (a) test that `compute_D2` with n=0, t=0 returns 0; (b) test that monotonic increase holds for positive n and t; (c) test that power analysis parameters are correctly used in falsifiability checks. Provide a stub with assertions (e.g., `assert compute_D2(0,0) == 0`).
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

@@ -61,3 +61,9 @@ Epigenetic Drift формализован как **Счётчик #4** (`i=4`).
 ## Limitations
 
 This framework has several limitations that must be acknowledged. First, the quantitative parameters β₄, α₄, and γ₄ are derived from a limited set of published studies (primarily Horvath 2013, Belsky et al. 2022, and Duan et al. 2022) and have not been independently validated across diverse human populations or tissue types. Second, the model assumes linear additivity of time-driven and replication-driven contributions to epigenetic drift, which may not hold in tissues with high turnover rates or under pathological conditions. Third, the coupling term γ₄·I(others) is currently a placeholder; its functional form and magnitude remain unspecified pending empirical data. Fourth, all references to internal datasets (e.g., sobol_epi_drift_2026-04-15.csv) are hypothetical and have not been publicly released or peer-reviewed. Fifth, the framework does not account for stochastic epigenetic changes that may be non-adaptive or neutral, which could confound drift measurements. Finally, the applicability of the model to non-mammalian species or to extreme longevity scenarios (e.g., negligible senescence) has not been tested.
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

@@ -58,3 +58,9 @@
 ### State-of-the-art
 
 Current literature (as of 2025) includes multiple epigenetic clock meta-analyses (e.g., Duan et al. 2022, PMID: 36206857; Kabacik et al. 2022, PMID: 37034474) that provide effect size estimates across tissues and populations. These should be systematically integrated into the evidence base. Contradicting results from studies showing tissue-specific clock decoupling (e.g., Fitzgerald et al. 2021, PMID: 33844651) are acknowledged but not yet quantitatively addressed.
+
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+

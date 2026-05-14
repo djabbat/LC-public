@@ -1,26 +1,28 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at README.ru.md. -->
+
 # LongevityCommon
 
 **An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
 
-LongevityCommon — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
+LongevityCommon is a hypothesis-stage framework, integrating 5 scientific subprojects + a thin social layer:
 
-| Подпроект | Уровень | Что делает |
+| Subproject | Level | Function |
 |-----------|---------|------------|
-| **MCOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
-| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
+| **MCOA** | Theoretical (meta-theory) | Multi-Counter Architecture; aging as a weighted sum of parallel counters |
+| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage in HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
-| **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
+| **BioSense** | Applied | Wearable platform + χ_Ze biomarker |
 | **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
 
 Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
 
-Каноническая статья: `~/Desktop/LongevityCommon.md` (v5.6).
+Canonical article: `~/Desktop/LongevityCommon.md` (v5.6).
 
 ## Status (2026-04-28, v5.6)
 
-⚠ **Hypothesis-stage research platform.** Все эмпирические результаты — exploratory (hypothesis-generating), не confirmatory. Pre-registered тесты ранней univariate χ_Ze formulation на Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Текущая мультимодальная χ_Ze — post-hoc reformulation. AUC и r² values — exploratory с явным p-hacking risk (Ioannidis 2005, PMID 16060722).
+⚠ **Hypothesis-stage research platform.** All empirical results are exploratory (hypothesis-generating), not confirmatory. Pre-registered tests of the early univariate χ_Ze formulation on Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Current multimodal χ_Ze is a post-hoc reformulation. AUC and r² values are exploratory with explicit p-hacking risk (Ioannidis 2005, PMID 16060722).
 
-Ключевые публикации (MCOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
+Key publications (MCOA, Ze, BioSense) are NOT peer-reviewed as of v5.6.
 
 ## Authority order on conflict
 
@@ -28,7 +30,7 @@ Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
 2. `<subproject>/CONCEPT.md` (internal math)
 3. `<subproject>/THEORY.md` (formal derivations)
 4. Article (`~/Desktop/LongevityCommon.md`) — full narrative
-5. Code — следует за CONCEPT соответствующего уровня
+5. Code — follows the CONCEPT of the corresponding level
 
 ## Repository structure
 
@@ -40,7 +42,7 @@ LongevityCommon/
 ├── realtime/ # Phoenix Channels (social layer WS)
 ├── deploy/ # docker-compose-all.yml
 ├── docs/EIC_PartB_2026/ # active grant track
-├── _archive/ # старые версии
+├── _archive/ # old versions
 ├── _audits/ # audit reports
 │
 └── <subprojects>/ # MCOA, CDATA, Ze, BioSense, ...
@@ -53,7 +55,7 @@ cd Ze && ./run.sh # :4000 / :4001
 cd BioSense && ./run.sh # :4100 / :4101
 ```
 
-Social layer (server/web/realtime) — отдельный stack, см. `DESIGN.md §7`.
+Social layer (server/web/realtime) is a separate stack, see `DESIGN.md §7`.
 
 ## Tests
 
@@ -65,8 +67,8 @@ mix test # in any Phoenix subproject
 ## Grant track (active)
 
 **EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
-LongevityCommon umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
-Подробности: `docs/EIC_PartB_2026/`.
+LongevityCommon umbrella as an application for Area #2 (biomarker-based tool, BioSense at the center).
+Details: `docs/EIC_PartB_2026/`.
 
 ## License
 

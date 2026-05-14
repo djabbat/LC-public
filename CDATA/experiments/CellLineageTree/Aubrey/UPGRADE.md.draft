@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 04:38
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LongevityCommon/CDATA/experiments/CellLineageTree/Aubrey`
+- **Текущий score:** 26/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 22 баллов
+- **Cycle:** 2
+
+## In-progress concerns (cycle 2)
+
+1. [PARANOID] **REPLACE FABRICATED BENCH CO-PI WITH REAL COLLABORATOR** — Identify a real experimental cell biologist with: (a) verifiable ORCID with ≥10 publications in cell biology/microscopy; (b) signed Letter of Support from their institution; (c) demonstrated experience with lentiviral constructs,
+2. [PARANOID] **GENERATE MINIMUM PILOT DATA BEFORE RESUBMISSION** — At minimum: (a) demonstrate RITE cassette function in BJ-hTERT cells (transduction efficiency, Cre induction, mCherry→GFP swap >50%) — this can be done with standard epifluorescence microscopy at Ilia State University; (b) run one 48-h
+3. [PARANOID] **FIX BUDGET AND REMOVE FABRICATED QUOTES** — (a) Reconcile the €78,594 vs €97,094 discrepancy; (b) obtain real vendor quotes (not fabricated PDFs) for all equipment items; (c) add indirect costs (20-25%); (d) increase shipping/customs estimate to €5,000-10,000; (e) either reconcile the A
+4. [RED-TEAM] **REPLACE FABRICATED BENCH CO-PI WITH REAL EXPERIMENTAL COLLABORATOR.** Dr. Nino Kapanadze (ORCID 0000-0002-1234-5678) is a placeholder—this ORCID does not exist. Obtain a signed Letter of Support from a verifiable cell biologist with:
+5. [CYNIC] **Generate and include pilot data:** Run 48 h continuous imaging on existing Zeiss IM 35; show stage stability, focus drift, cell viability, and RITE cassette function (mCherry→GFP swap). Validate AI agent on archived mitotic sequences. Submit as supplementary.
+6. [CYNIC] **Secure and submit signed Letter of Support from Dr. Kapanadze + institutional confirmation from Ilia State University.** Clarify in-kind access terms (lab space, biosafety, equipment usage logs).

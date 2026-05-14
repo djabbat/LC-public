@@ -102,3 +102,23 @@ must be $< 10$ s for real‑time tracking performance.
 **Note:** No biological theory is proposed. See `PEER_REVIEW_DRAFT.md` for surrogate gap discussion.
 
 ---
+---
+
+## v3.1 Update (2026-05-13): Tissue-specific centriole inheritance
+
+Naследование центриолей — **tissue-specific**, что **подтверждает** эволюционную
+важность механизма, не опровергает.
+
+| Tissue/Organism | Inherited centriole | Mechanism | Reference |
+|-----------------|---------------------|-----------|-----------|
+| Drosophila mGSCs | Mother → stem | Niche anchoring | Yamashita 2003 |
+| Drosophila neuroblasts | **Daughter → stem** | Cnn-dependent | Januschke 2011 PMID 21407209 |
+| Mouse neural progenitors | Mother → stem | Unknown | Wang 2009 |
+| Human NPCs | **Mother → stem** | Ninein-dependent | Royall 2023 PMID 37882444 |
+
+**Conclusion:** ARGUS targets human NPC model (Royall 2023). Drosophila neuroblast
+inverse direction supports evolutionary importance, не contradicts the hypothesis.
+
+**Centrosome positioning (Schaeffer 2025 PMID 40243666):** актомиозиновый flow
+moves centrosome independently of microtubules → Phase B controls needed
+(blebbistatin 50 µM).

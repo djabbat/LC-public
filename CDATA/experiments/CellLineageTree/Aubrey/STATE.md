@@ -48,6 +48,12 @@ All three must hold for Phase B to start at month 7:
 
 If any one fails, Phase B is delayed by one quarter while contingencies are activated; full abandonment requires concurrence of PI + Geiger.
 
+## What changed 2026-05-13 (E2 IF validation BOM)
+
+- Added detailed IF validation BOM (`E0/E2_IF_Validation_Block.md`) — 12 experiments, $3,284–3,684, replacing the lump-sum €800 antibody line. Covers 5 primary antibodies (Centrin-1 20H5, CEP164, Centrobin, CP110, γ-Tubulin) + 3 secondary (Alexa 488/555/647) + fixation/permeabilization + slides/mounting + optional RPE1 positive control. Mother/daughter asymmetry verification via CEP164 + Centrobin dual stain.
+- `ARGUS-LP_SPECS.md` § 3 consumables table updated (€800 → €3,200 IF line; consumables total €9,995 → €12,395). €400 delta absorbed in institutional overhead per budget note — Phase A total €78,594 unchanged.
+- `E0/PARAMETERS.md` new section "IF validation reagents (E2 block)" — points to canonical BOM in `E2_IF_Validation_Block.md`.
+
 ## Next deliverables (chronological, pre-submission)
 
 1. Geiger amendment-request letter — describe new Phase A architecture (GLA Abastumani, no Ulm subcontract) and obtain confirmation that Phase B €100K subcontract remains in force. Draft at `~/Desktop/NGO/GLA/Impetus_Grants/Geiger_amendment_request_2026-05-12.md`.

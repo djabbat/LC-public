@@ -17,3 +17,8 @@ MCOA реализован как крейт (библиотека) на Rust с 
 ```
 mcoa_reference_impl/
 ├── Cargo.toml # Конфигурация крейта и зависимости
+
+## v3 Update (2026-05-13)
+
+См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+
