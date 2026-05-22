@@ -28,8 +28,8 @@
 - Tkemaladze J. (2026). Old Centrioles Make Old Bodies. *Lifeboat Foundation News*. (featured 2026-05-01)
 
 **Multi-Counter / cross-program theoretical papers (CDATA in context):**
-- Tkemaladze J. (2026). The Multi-Counter Architecture of Organismal Aging (MCOA). *Zenodo* DOI 10.5281/zenodo.20055806. + *eLife Reviewed Preprints* eLife-RP-RA-2026-111885 (in editorial assessment 2026-05).
-- Tkemaladze J. (2026). LongevityCommon. *Longevity Horizon* 2(5). DOI 10.65649/jvgaka20.
+- Tkemaladze J. (2026). The Multi-Counter Architecture of Organismal Aging (MCAOA). *Zenodo* DOI 10.5281/zenodo.20055806. + *eLife Reviewed Preprints* eLife-RP-RA-2026-111885 (in editorial assessment 2026-05).
+- Tkemaladze J. (2026). LC. *Longevity Horizon* 2(5). DOI 10.65649/jvgaka20.
 - Tkemaladze J. (2026). Radical Healthspan Extension. *Longevity Horizon* 2(5). DOI 10.65649/hj0xzx69.
 - Tkemaladze J. (2026). Integrative Approach to Disease Therapy. *Longevity Horizon* 2(5). DOI 10.65649/23rqjk12.
 - Tkemaladze J. (2026). CDATA and Ze Vectors Theory. *Longevity Horizon* 2(4). DOI 10.65649/2y08cj75.
@@ -49,7 +49,7 @@
 
 Impetus targets contrarian, theory-rich, single-PI proposals where the PI has demonstrably *generated* the conceptual framework being tested. Tkemaladze:
 1. Originated the centriole-asymmetry hypothesis of stem cell aging (PMID 36583780, peer-reviewed 2023).
-2. Has published, in 2026 alone, the falsifiability protocol (P11 relapse prediction), the structural evidence (HSC polyglutamylation asymmetry paper), and the multi-program integration (MCOA framework, currently at *eLife*).
-3. Runs an institutional research ecosystem (GLA, two journals, ecosystem-level umbrella project LongevityCommon).
+2. Has published, in 2026 alone, the falsifiability protocol (P11 relapse prediction), the structural evidence (HSC polyglutamylation asymmetry paper), and the multi-program integration (MCAOA framework, currently at *eLife*).
+3. Runs an institutional research ecosystem (GLA, two journals, ecosystem-level umbrella project LC).
 
 The combination — original peer-reviewed seed paper, prolific 2026 expansion, falsifiable predictions, and the experimental design (CellLineageTree pipeline consolidated 2026-05-12 as the **Aubrey** subproject built around the **ARGUS-LP** platform — formerly LiveImagingPipeline + ImagingControl + AnalysisStack) ready to test those predictions in 18 months on a single-PI budget — is exactly the "high-novelty, theory-driven, motivated PI" profile Impetus selects for.

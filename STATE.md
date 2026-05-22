@@ -1,9 +1,9 @@
 <!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: mixed. Original preserved at STATE.x.md. -->
 
-# LongevityCommon · STATE
+# LC · STATE
 
 **Last touched:** 2026-04-28
-**CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LongevityCommon.md` on 2026-04-28)
+**CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LC.md` on 2026-04-28)
 
 ---
 
@@ -11,14 +11,14 @@
 
 - ✅ Previous CONCEPT/THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS archived in `_archive/v_pre_2026-04-28/`
 - ✅ New core .md files regenerated from article v5.6: CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE (this), TODO, README
-- ✅ Article on Desktop as `LongevityCommon.md` (50 KB) + .docx (40 KB)
+- ✅ Article on Desktop as `LC.md` (50 KB) + .docx (40 KB)
 - ✅ Three iteration outputs (v1/v2/v3 articles + peer reviews + audits) saved on Desktop as backup
 
 ## §2. Subproject status snapshot
 
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
-| **MCOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
+| **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
 | **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
@@ -53,20 +53,20 @@ Full list: `OPEN_PROBLEMS.md`.
 
 Per `DESIGN.md §5`:
 
-### §5.1 Server (`~/Desktop/LongevityCommon/server/src/`)
-- [ ] `handlers/biosense.rs` — add header `X-LongevityCommon-Status: hypothesis-stage-exploratory`
+### §5.1 Server (`~/Desktop/LC/server/src/`)
+- [ ] `handlers/biosense.rs` — add header `X-LC-Status: hypothesis-stage-exploratory`
 - [ ] `handlers/dashboard.rs` — strings "biological age" → "exploratory aging activity index (research only)"
 - [ ] `handlers/ze_guide.rs` — system prompt update: explicit "research-grade exploratory metric, not validated medical biomarker; v1 NULL retracted; v2 post-hoc; no medical advice; decline confirmatory clinical claims"
 - [ ] new endpoint `GET /api/disclosures/v5_changes` returning changelog
 - [ ] `migrations/003_health_factors.sql` — add comment "thresholds exploratory, see CONCEPT v5.6 §2"
 
-### §5.2 Web (`~/Desktop/LongevityCommon/web/src/`)
+### §5.2 Web (`~/Desktop/LC/web/src/`)
 - [ ] `pages/Dashboard.tsx` — add banner "⚠ Hypothesis-stage research platform. Metrics are exploratory, not clinical advice."
 - [ ] `pages/Studies.tsx` — each study card: "v1 NULL deprecated/superseded; v2 multimodal post-hoc"
 - [ ] `pages/Profile.tsx` — tooltip on χ_Ze: "exploratory metric; not validated on N≥2000 pre-registered cohort"
 - [ ] `components/feed/PostComposer.tsx` — DOI Crossref check; warn if DOI is Longevity Horizon
 
-### §5.3 Realtime (`~/Desktop/LongevityCommon/realtime/`)
+### §5.3 Realtime (`~/Desktop/LC/realtime/`)
 - [ ] `config/dev.exs` — port 4001 → 4500 (avoid Ze conflict)
 - [ ] BioSense live stream channel — add metadata `{disclosure: "exploratory"}`
 
@@ -78,7 +78,7 @@ Per `DESIGN.md §5`:
 - [ ] `Ze/CONCEPT.md` — pull latest cross-cutting status from umbrella
 - [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
 - [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
-- [ ] `MCOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
+- [ ] `MCAOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
 - [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
 **None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
@@ -86,7 +86,7 @@ Per `DESIGN.md §5`:
 ## §6. Versions
 
 - CONCEPT: v5.6 (this regeneration; supersedes v4.0 in `_archive/v_pre_2026-04-28/CONCEPT.md`)
-- Article: v5.6 + iterations 1-3 (article on Desktop as `LongevityCommon.md`; backups: `LongevityCommon_Article_v3_2026-04-28.md`)
+- Article: v5.6 + iterations 1-3 (article on Desktop as `LC.md`; backups: `LC_Article_v3_2026-04-28.md`)
 - Subproject CONCEPTs: pending cross-check (see §5.5)
 - Social layer code: pending point-edits (see §5.1-§5.4)
 
@@ -94,6 +94,6 @@ Per `DESIGN.md §5`:
 
 To make CONCEPT verifiable later, record source-document md5:
 ```
-md5sum ~/Desktop/LongevityCommon.md
+md5sum ~/Desktop/LC.md
 ```
 [record on next commit]

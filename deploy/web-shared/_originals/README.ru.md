@@ -5,7 +5,7 @@
 
 ## Файлы
 
-- **`eco-inject.js`** — общий sticky header (LongevityCommon brand +
+- **`eco-inject.js`** — общий sticky header (LC brand +
  навигация по экосистеме) + dark/light переключатель + dark theme
  CSS overrides для PKP/OJS, Tailwind, кастомных стилей.
 

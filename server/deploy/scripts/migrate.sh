@@ -6,7 +6,7 @@
 # already-applied migrations are skipped via a sentinel table
 # `_migrations(name TEXT PRIMARY KEY, applied_at TIMESTAMPTZ DEFAULT NOW())`.
 #
-# Per DEPLOY_CONVENTION.md (~/Desktop/LongevityCommon/docs/).
+# Per DEPLOY_CONVENTION.md (~/Desktop/LC/docs/).
 
 set -euo pipefail
 

@@ -1,6 +1,6 @@
 <!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at NEWS.ru.md. -->
 
-# LongevityCommon — News & Science Feed
+# LC — News & Science Feed
 
 **Date of Update:** 2026-04-10 
 **Status:** CORE · do not publish in public git 
@@ -12,7 +12,7 @@
 
 - Update at each session (search for recent articles)
 - Findings are thematically duplicated in KNOWLEDGE.md of the corresponding subproject
-- Format: date · source · thesis · connection to LongevityCommon
+- Format: date · source · thesis · connection to LC
 
 ---
 
@@ -34,8 +34,8 @@
 - 08.04.2026: UNC Chapel Hill + UNC Health launched **SHIRE** (Secure Health Informatics Research Environment) — a cloud platform for responsible AI with real-world clinical data
 - OpenAI and Anthropic announced the possibility of synchronizing personal health data with ChatGPT/Claude — an indicator of growing demand for a "personal medical assistant"
 
-**Connection to LongevityCommon:**
-> LongevityCommon is built on the same concept — the patient as a subject of research, not an object. DiScO and SHIRE are institutional confirmation of the correctness of the vector. Ze·Guide + Lab = implementation of citizen science within the ecosystem.
+**Connection to LC:**
+> LC is built on the same concept — the patient as a subject of research, not an object. DiScO and SHIRE are institutional confirmation of the correctness of the vector. Ze·Guide + Lab = implementation of citizen science within the ecosystem.
 
 ---
 
@@ -52,8 +52,8 @@
 - Debates on "ownership" of health data: neither private nor public model fully solves the problem — the focus shifts to **Data Access Committees** and procedural mechanisms
 - Consensus 2026: transparent universal privacy policies are needed, covering collection, storage, transfer, and ownership of raw data
 
-**Connection to LongevityCommon:**
-> FCLC + 5-level privacy stack directly addresses this issue. Data remains with the user, aggregated cryptographically — not sold. LongevityCommon Pro = a model where the platform earns from people's health, not from their data.
+**Connection to LC:**
+> FCLC + 5-level privacy stack directly addresses this issue. Data remains with the user, aggregated cryptographically — not sold. LC Pro = a model where the platform earns from people's health, not from their data.
 
 ---
 
@@ -156,4 +156,4 @@
 
 ---
 
-*NEWS.md — core file of LongevityCommon | update at each session*
+*NEWS.md — core file of LC | update at each session*

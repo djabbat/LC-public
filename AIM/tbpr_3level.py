@@ -13,8 +13,8 @@ TBPR трёхуровневый цикл.
 
 Usage:
     python3 tbpr_3level.py                          # все проекты, все уровни
-    python3 tbpr_3level.py --project MCOA           # один проект, все уровни
-    python3 tbpr_3level.py --project MCOA --level 1 # только CONCEPT
+    python3 tbpr_3level.py --project MCAOA           # один проект, все уровни
+    python3 tbpr_3level.py --project MCAOA --level 1 # только CONCEPT
 """
 
 import os
@@ -113,7 +113,7 @@ PROJECT_ORDER = [
     ("BioSense", LC_ROOT / "BioSense"),
     ("AIM", LC_ROOT / "AIM"),
     ("Ze", LC_ROOT / "Ze"),
-    ("MCOA", LC_ROOT / "MCOA"),
+    ("MCAOA", LC_ROOT / "MCAOA"),
     ("CDATA", LC_ROOT / "CDATA"),
 ]
 PROJECT_ROOTS = dict(PROJECT_ORDER)

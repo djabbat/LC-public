@@ -1,4 +1,4 @@
-defmodule LongevityCommonRealtimeWeb.StudyChannel do
+defmodule LCRealtimeWeb.StudyChannel do
   use Phoenix.Channel
 
   @impl true

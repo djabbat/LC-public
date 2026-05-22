@@ -1,5 +1,5 @@
 [Unit]
-Description=LongevityCommon Realtime — Phoenix Channels (native)
+Description=LC Realtime — Phoenix Channels (native)
 After=network.target postgresql@16-main.service
 Wants=network.target
 Requires=postgresql@16-main.service

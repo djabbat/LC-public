@@ -32,7 +32,7 @@ async fn main() -> anyhow::Result<()> {
         .layer(TraceLayer::new_for_http());
 
     let addr: SocketAddr = format!("{}:{}", config.app_host, config.app_port).parse()?;
-    tracing::info!("LongevityCommon API listening on {}", addr);
+    tracing::info!("LC API listening on {}", addr);
     tracing::info!("Allowed origins: {:?}", config.allowed_origins);
 
     let listener = tokio::net::TcpListener::bind(addr).await?;

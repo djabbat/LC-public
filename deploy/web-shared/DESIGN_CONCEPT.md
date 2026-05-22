@@ -1,4 +1,4 @@
-# LongevityCommon — Единый Design Concept
+# LC — Единый Design Concept
 
 > Канон стиля, дизайна и расположения для всех страниц всех `*.longevity.ge` (кроме Annals/`/rescience/` и Longevity Horizon/`/longhoriz/`).
 > Применять при добавлении новой страницы или субдомена. **Не дублировать стили локально** — всё тянется через `https://longevity.ge/eco-inject.js?v=NN`.
@@ -10,7 +10,7 @@
 ```
 ┌──────────────────────────────────────────────────┐
 │ .eco-bar-injected │ ← sticky cross-site nav
-│ (LongevityCommon | Home | MCOA | … | Source ☾) │
+│ (LC | Home | MCAOA | … | Source ☾) │
 ├──────────────────────────────────────────────────┤
 │ .hero / .lc-sub-hero │ ← indigo gradient banner
 │ - .hero-pill (зелёная точка + tag) │

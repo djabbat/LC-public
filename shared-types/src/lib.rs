@@ -1,10 +1,10 @@
-//! LongevityCommon shared types.
+//! LC shared types.
 //!
 //! Closes audit P0 #6 (cross-project parameter inconsistency).  Single source
 //! of truth for canonical Ze constants and a parameter registry that every
 //! LC subproject can reference instead of redefining its own.
 //!
-//! Authoritative document: `~/Desktop/LongevityCommon/PARAMETERS.md §1`.
+//! Authoritative document: `~/Desktop/LC/PARAMETERS.md §1`.
 //!
 //! # Quick start
 //!

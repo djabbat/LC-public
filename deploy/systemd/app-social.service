@@ -1,5 +1,5 @@
 [Unit]
-Description=LongevityCommon Social — Rust axum server (native)
+Description=LC Social — Rust axum server (native)
 After=network.target postgresql@16-main.service
 Wants=network.target
 Requires=postgresql@16-main.service

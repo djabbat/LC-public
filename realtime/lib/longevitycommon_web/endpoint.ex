@@ -1,7 +1,7 @@
-defmodule LongevityCommonRealtimeWeb.Endpoint do
+defmodule LCRealtimeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :longevitycommon_realtime
 
-  socket "/socket", LongevityCommonRealtimeWeb.UserSocket,
+  socket "/socket", LCRealtimeWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -16,5 +16,5 @@ defmodule LongevityCommonRealtimeWeb.Endpoint do
 
   plug Plug.MethodOverride
   plug Plug.Head
-  plug LongevityCommonRealtimeWeb.Router
+  plug LCRealtimeWeb.Router
 end

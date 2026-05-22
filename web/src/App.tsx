@@ -48,7 +48,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         zIndex: 100,
       }}>
         <NavLink to="/" style={{ ...navLink, fontWeight: 800, fontSize: 16, color: '#7dd3fc', fontFamily: 'monospace' }}>
-          LongevityCommon
+          LC
         </NavLink>
 
         <NavLink to="/" style={({ isActive }) => ({ ...navLink, ...(isActive ? activeStyle : {}) })}>

@@ -55,7 +55,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 ## Internal Data / Artifacts
 
 - `AUTOMATED_MICROSCOPY_SETUP.md` — full engineering specification (this subproject)
-- `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/` — source material (pre-LongevityCommon integration)
+- `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/` — source material (pre-LC integration)
 - Future: PROMPT.md templates for each Aim
 - Future: Claude Code policy file `microscope-operator.md`
 - Future: bill-of-materials spreadsheet с актуальными 2026 prices
@@ -118,7 +118,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision
 - Related open problems: `OPEN_PROBLEMS.md` §1 AI judgment quality, §2 hardware reliability
 - Parameter provenance: `PARAMETERS.md`
-- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
+- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
 
 ---
 

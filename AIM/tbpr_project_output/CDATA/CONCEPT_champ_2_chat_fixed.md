@@ -2,7 +2,7 @@
 
 ---
 
-# CDATA — Concept v5.4 — Counter #1 (Centriolar) in MCOA
+# CDATA — Concept v5.4 — Counter #1 (Centriolar) in MCAOA
 
 **Status:** Pre-experimental hypothesis framework. The core computational model (Cell-DT v3.0) was falsified by internal cross-validation (ABL-2 paradox). This document presents the falsification as the primary finding, proposes a re-specified model (v4.0) that resolves the paradox mathematically, and outlines an experimental program to distinguish four competing biological hypotheses. The centriolar hypothesis is one of four equally weighted candidates; no preferential treatment is given.
 
@@ -192,7 +192,7 @@ To address overfitting concerns, we derived a minimal model with 7 parameters:
 **Code availability:** The minimal model is implemented in Python and available at:  
 `https://codeocean.com/capsule/1234567` (public, reviewable capsule).  
 The full model (Rust) is archived at:  
-`https://github.com/LongevityCommon/Cell-DT` (public as of 2026-06-01).
+`https://github.com/LC/Cell-DT` (public as of 2026-06-01).
 
 ---
 
@@ -204,8 +204,8 @@ Unchanged. This section provides convergent evidence that centriolar damage corr
 
 ## Reproducibility & Open Science (Corrected)
 
-- **Code:** Cell-DT v3.0 (Rust) and v4.0 minimal model (Python) are archived on CodeOcean (DOI: 10.24433/CO.1234567). GitHub repository: `https://github.com/LongevityCommon/Cell-DT` (public).
-- **Data:** All figures in this document are reproducible from public data (NHANES, Jaiswal 2017, Horvath 2013). R/Python scripts at `https://github.com/LongevityCommon/CDATA_analysis` (public).
+- **Code:** Cell-DT v3.0 (Rust) and v4.0 minimal model (Python) are archived on CodeOcean (DOI: 10.24433/CO.1234567). GitHub repository: `https://github.com/LC/Cell-DT` (public).
+- **Data:** All figures in this document are reproducible from public data (NHANES, Jaiswal 2017, Horvath 2013). R/Python scripts at `https://github.com/LC/CDATA_analysis` (public).
 - **Pre-registration:** The experimental protocol for Test P0 (GT335-STED in HSC) will be pre-registered on OSF (`osf.io/TBD`) before data collection, with planned date 2026-09-01.
 
 ---
@@ -230,9 +230,9 @@ The revised document no longer claims "logical proof" or "model validation." It 
 
 ---
 
-## Appendix A — Integration with MCOA (Unchanged)
+## Appendix A — Integration with MCAOA (Unchanged)
 
-CDATA is Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCOA). This framework is described in `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`. The ABL-2 paradox strengthens the MCOA thesis: no single counter is sufficient; integration is necessary.
+CDATA is Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCAOA). This framework is described in `~/Desktop/LC/MCAOA/CONCEPT.md`. The ABL-2 paradox strengthens the MCAOA thesis: no single counter is sufficient; integration is necessary.
 
 ---
 

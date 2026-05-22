@@ -1,4 +1,4 @@
-# LongevityCommon · OPEN_PROBLEMS
+# LC · OPEN_PROBLEMS
 
 **Status:** Cross-cutting open issues · 2026-04-28 (CONCEPT v5.6)
 **Authority:** Subproject-level open problems remain in `<subproject>/OPEN_PROBLEMS.md`; cross-cutting only here.

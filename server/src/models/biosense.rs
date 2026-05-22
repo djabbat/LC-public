@@ -1,7 +1,7 @@
 /// BioSenseExport — standardized JSON schema for BioSense device/pipeline output.
 ///
 /// This is the canonical format for passing measured χ_Ze values from the
-/// BioSense Python pipeline (or any compatible sensor) into LongevityCommon.
+/// BioSense Python pipeline (or any compatible sensor) into LC.
 ///
 /// Schema version: 1.0
 /// Reference: Tkemaladze J., Ze Vectors Theory, DOI 10.65649/nhjtra67
@@ -159,7 +159,7 @@ pub struct ComputeChiZeResponse {
     /// Always set; clients SHOULD surface this to end users.
     #[serde(default = "default_disclosure")]
     pub disclosure: String,
-    /// LongevityCommon umbrella version this response is aligned to.
+    /// LC umbrella version this response is aligned to.
     #[serde(default = "default_lc_version")]
     pub longevitycommon_version: String,
 }
@@ -171,7 +171,7 @@ pub fn default_disclosure() -> String {
      All AUCs are exploratory hypothesis-generating only (Ioannidis 2005 PMID 16060722). \
      Confirmatory validation requires pre-registered cohort N≥2000. \
      Not medical advice. \
-     See LongevityCommon CONCEPT.md v5.6 for full status."
+     See LC CONCEPT.md v5.6 for full status."
         .to_string()
 }
 

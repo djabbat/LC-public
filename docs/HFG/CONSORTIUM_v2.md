@@ -1,6 +1,6 @@
-# Consortium Agreement for the LongevityCommon Project
+# Consortium Agreement for the LC Project
 
-**Agreement Number:** CA-LongevityCommon-2026-001 
+**Agreement Number:** CA-LC-2026-001 
 **Date of Draft:** [DATE]
 
 ---
@@ -43,7 +43,7 @@ The Parties acknowledge that Ms. Megi Sajaia (Beneficiary 1) and Prof. Otar Chok
 
 ## 2. PURPOSE AND PROJECT DESCRIPTION
 
-**2.1 Project Title:** LongevityCommon – Integrated Longevity Research Platform 
+**2.1 Project Title:** LC – Integrated Longevity Research Platform 
 **2.2 Funding Call:** EIC Pathfinder Open 2026 | Deadline: 12 May 2026 
 **2.3 Project Duration:** 36 months from the Effective Date of the Grant Agreement (GA) 
 **2.4 Objectives:** This Consortium Agreement (CA) establishes the rights and obligations of the Parties regarding the joint implementation of the Project, which aims to [brief description of project goals, e.g., develop an integrated platform for longevity research focusing on biomarker validation and patient engagement]. The CA complements the Horizon Europe Model Grant Agreement (MGA) and shall be interpreted in conformity with it.

@@ -83,7 +83,7 @@ Reviewers специально отметили:
 
 - **Over-claiming в количествах** (ε≤1.0, r>0.85, p<0.01) без preliminary calibration data
 - **Weak dissemination / exploitation strategy** — только "open-source release" не достаточно
-- **Self-citation ≥15%** risk для MCOA Perspective (по рубрике Nature)
+- **Self-citation ≥15%** risk для MCAOA Perspective (по рубрике Nature)
 - **Longevity Horizon / Georgian Scientists** не считаются peer-reviewed (см. `pubmed_authoritative.md`)
 
 ## Рекомендованные действия (prioritized)

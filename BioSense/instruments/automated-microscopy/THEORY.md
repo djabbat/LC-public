@@ -71,13 +71,13 @@ P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action 
 - Cross-lab federated coordination (that's FCLC scope)
 - Therapeutic intervention decisions (outside AI policy)
 
-### 6. Interfaces с другими подпроектами LongevityCommon
+### 6. Interfaces с другими подпроектами LC
 
 | Subproject | Interface |
 |------------|-----------|
 | **CDATA** | Primary user — Phase A experiments run on this platform |
 | **FCLC** | Future: anonymized imaging data contribution to federated learning pool |
-| **MCOA** | Future: multi-counter experiments (Telomere, MitoROS) reuse same infrastructure |
+| **MCAOA** | Future: multi-counter experiments (Telomere, MitoROS) reuse same infrastructure |
 | **BioSense** | Potential: shared signal-processing pipelines (cross-domain aging markers) |
 
 ### 7. Predictions
@@ -95,9 +95,9 @@ Platform is **falsified / not-suitable** если:
 - Contamination rate >10% per experimental run (vs typical 1-3% in standard microscopy)
 - User (Jaba) abandons autonomous mode after 1 month (too stressful, too much supervision needed)
 
-### 9. Связь с MCOA framework
+### 9. Связь с MCAOA framework
 
-AutomatedMicroscopy — **instrumental layer** не theoretical counter. Но сам факт его существования enables MCOA framework operationally: без 24/7 imaging infrastructure невозможно собрать данные для temporal dynamics D_i(n, t) разных counter'ов.
+AutomatedMicroscopy — **instrumental layer** не theoretical counter. Но сам факт его существования enables MCAOA framework operationally: без 24/7 imaging infrastructure невозможно собрать данные для temporal dynamics D_i(n, t) разных counter'ов.
 
-Без AutomatedMicroscopy → MCOA остаётся теоретической абстракцией.
-С AutomatedMicroscopy → MCOA получает эмпирический substrate.
+Без AutomatedMicroscopy → MCAOA остаётся теоретической абстракцией.
+С AutomatedMicroscopy → MCAOA получает эмпирический substrate.

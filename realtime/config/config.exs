@@ -1,13 +1,13 @@
 import Config
 
-config :longevitycommon_realtime, LongevityCommonRealtimeWeb.Endpoint,
+config :longevitycommon_realtime, LCRealtimeWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
-  render_errors: [formats: [json: LongevityCommonRealtimeWeb.ErrorJSON], layout: false],
-  pubsub_server: LongevityCommonRealtime.PubSub,
+  render_errors: [formats: [json: LCRealtimeWeb.ErrorJSON], layout: false],
+  pubsub_server: LCRealtime.PubSub,
   live_view: [signing_salt: "change_me"]
 
-config :longevitycommon_realtime, LongevityCommonRealtime.Repo,
+config :longevitycommon_realtime, LCRealtime.Repo,
   adapter: Ecto.Adapters.Postgres
 
 config :longevitycommon_realtime,

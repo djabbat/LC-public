@@ -9,7 +9,7 @@
 -- the (organism, psyche, consciousness, social) 4-factor model are post-hoc;
 -- weights and thresholds are NOT theory-fixed. Confirmatory validation pending
 -- pre-registered cohort N≥2000. Do NOT use these values for clinical decisions.
--- See ~/Desktop/LongevityCommon/CONCEPT.md §2.
+-- See ~/Desktop/LC/CONCEPT.md §2.
 
 CREATE TABLE health_factors (
     id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -39,9 +39,9 @@ fi
 # 2. Every subproject CLAUDE.md / PARAMETERS.md that mentions $EXPECTED_PYTHON
 #    must ALSO mention $EXPECTED_ARTICLE within ±20 lines.
 status=0
-for f in "$ROOT"/{Ze,BioSense,MCOA,CDATA}/PARAMETERS.md \
-         "$ROOT"/{Ze,BioSense,MCOA,CDATA}/CLAUDE.md \
-         "$ROOT"/{Ze,BioSense,MCOA,CDATA}/CONCEPT.md ; do
+for f in "$ROOT"/{Ze,BioSense,MCAOA,CDATA}/PARAMETERS.md \
+         "$ROOT"/{Ze,BioSense,MCAOA,CDATA}/CLAUDE.md \
+         "$ROOT"/{Ze,BioSense,MCAOA,CDATA}/CONCEPT.md ; do
     [ -f "$f" ] || continue
     if grep -qF "$EXPECTED_PYTHON" "$f"; then
         if ! match_article "$f"; then

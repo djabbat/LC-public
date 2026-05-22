@@ -2,11 +2,11 @@
 
 ## TBPR Структурные рекомендации — 2026-05-13 22:25
 
-- **Проект:** `LongevityCommon/AIM`
+- **Проект:** `LC/AIM`
 - **Текущий score:** 28/55 (REVISE_MAJOR) на L1
 - **Цель:** verdict **ACCEPT** (≥48/55)
 - **Разрыв:** 20 баллов
-- **Cycle dir:** `results/20260513_221810__LongevityCommon_AIM/`
+- **Cycle dir:** `results/20260513_221810__LC_AIM/`
 
 ### 🔴 БЛОКИРУЮЩИЕ
 

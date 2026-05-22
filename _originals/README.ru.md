@@ -1,12 +1,12 @@
-# LongevityCommon
+# LC
 
 **An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
 
-LongevityCommon — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
+LC — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
 
 | Подпроект | Уровень | Что делает |
 |-----------|---------|------------|
-| **MCOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
+| **MCAOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
 | **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
@@ -14,26 +14,26 @@ LongevityCommon — это hypothesis-stage framework, объединяющий 
 
 Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
 
-Каноническая статья: `~/Desktop/LongevityCommon.md` (v5.6).
+Каноническая статья: `~/Desktop/LC.md` (v5.6).
 
 ## Status (2026-04-28, v5.6)
 
 ⚠ **Hypothesis-stage research platform.** Все эмпирические результаты — exploratory (hypothesis-generating), не confirmatory. Pre-registered тесты ранней univariate χ_Ze formulation на Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Текущая мультимодальная χ_Ze — post-hoc reformulation. AUC и r² values — exploratory с явным p-hacking risk (Ioannidis 2005, PMID 16060722).
 
-Ключевые публикации (MCOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
+Ключевые публикации (MCAOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
 
 ## Authority order on conflict
 
-1. `LongevityCommon/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
+1. `LC/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
 2. `<subproject>/CONCEPT.md` (internal math)
 3. `<subproject>/THEORY.md` (formal derivations)
-4. Article (`~/Desktop/LongevityCommon.md`) — full narrative
+4. Article (`~/Desktop/LC.md`) — full narrative
 5. Code — следует за CONCEPT соответствующего уровня
 
 ## Repository structure
 
 ```
-LongevityCommon/
+LC/
 ├── *.md # umbrella core (CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, ...)
 ├── server/ # Rust/axum REST API (social layer)
 ├── web/ # React+TS PWA (social layer UI)
@@ -43,7 +43,7 @@ LongevityCommon/
 ├── _archive/ # старые версии
 ├── _audits/ # audit reports
 │
-└── <subprojects>/ # MCOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/ # MCAOA, CDATA, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)
@@ -65,7 +65,7 @@ mix test # in any Phoenix subproject
 ## Grant track (active)
 
 **EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
-LongevityCommon umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
+LC umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
 Подробности: `docs/EIC_PartB_2026/`.
 
 ## License

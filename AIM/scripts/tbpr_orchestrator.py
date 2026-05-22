@@ -25,7 +25,7 @@ from typing import Optional
 
 import requests
 
-ROOT = Path("/home/oem/Desktop/LongevityCommon")
+ROOT = Path("/home/oem/Desktop/LC")
 AIM = ROOT / "AIM"
 OUT_ROOT = AIM / "tbpr_claude_output"
 LOG_FILE = OUT_ROOT / "orchestrator.log"
@@ -43,7 +43,7 @@ PROJECTS_ORDER = [
     ("BioSense", ROOT / "BioSense"),
     ("AIM", ROOT / "AIM"),
     ("Ze", ROOT / "Ze"),
-    ("MCOA", ROOT / "MCOA"),
+    ("MCAOA", ROOT / "MCAOA"),
     ("CDATA", ROOT / "CDATA"),
 ]
 

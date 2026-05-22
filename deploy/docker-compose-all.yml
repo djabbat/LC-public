@@ -1,4 +1,4 @@
-# LongevityCommon — full-stack docker compose (umbrella CONCEPT v5.6, 2026-04-28)
+# LC — full-stack docker compose (umbrella CONCEPT v5.6, 2026-04-28)
 #
 # Services aligned with current subproject layout:
 #   - Ze:        ze-backend (Rust :4001)        + ze-web (Phoenix :4000)
@@ -9,11 +9,11 @@
 # FCLC is intentionally NOT here — it lives in a separate repo (djabbat/FCLC)
 # and is server-resident at /home/jaba/web/fclc/ via its own docker-compose.
 #
-# Old layout (./FCLC/backend, ./MCOA/backend, etc.) preserved in
+# Old layout (./FCLC/backend, ./MCAOA/backend, etc.) preserved in
 # docker-compose-all.OLD-pre-v5.6.yml for diff history.
 #
 # Usage:
-#   cd ~/Desktop/LongevityCommon
+#   cd ~/Desktop/LC
 #   docker compose -f deploy/docker-compose-all.yml up -d --build
 #
 # Override secrets via .env (DATABASE_URL, SECRET_KEY_BASE, etc.).

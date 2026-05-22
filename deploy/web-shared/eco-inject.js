@@ -25,7 +25,7 @@
   if (t === "dark") document.documentElement.setAttribute("data-theme","dark");
   var links = [
     ["https://longevity.ge","Home","longevity.ge","/"],
-    ["https://mcoa.longevity.ge","MCOA","mcoa.longevity.ge",null],
+    ["https://mcaoa.longevity.ge","MCAOA","mcaoa.longevity.ge",null],
     ["https://cdata.longevity.ge","CDATA","cdata.longevity.ge",null],
     ["https://ze.longevity.ge","Ze","ze.longevity.ge",null],
     ["https://biosense.longevity.ge","BioSense","biosense.longevity.ge",null],
@@ -34,7 +34,7 @@
     ["https://aim.longevity.ge","AIM","aim.longevity.ge",null],
     ["https://longevity.ge/team/","Team","longevity.ge","/team/"],
     ["https://longevity.ge/#donate","Donate",null,null],
-    ["https://github.com/djabbat/LongevityCommon","Source",null,null]
+    ["https://github.com/djabbat/LC","Source",null,null]
   ];
   function isActive(l){
     if (l[2] !== host) return false;
@@ -52,7 +52,7 @@
     return "<a href=\"" + l[0] + "\"" + cls + rel + ">" + l[1] + "</a>";
   }).join("\n");
 
-  var html = "<div class=\"eco-bar-injected\"><div class=\"eco-inner-i\"><span class=\"eco-brand-i\">LongevityCommon</span><nav class=\"eco-nav-i\">" + nav + "<button type=\"button\" class=\"theme-toggle-i\" aria-label=\"Toggle dark mode\">☾</button></nav></div></div>";
+  var html = "<div class=\"eco-bar-injected\"><div class=\"eco-inner-i\"><span class=\"eco-brand-i\">LC</span><nav class=\"eco-nav-i\">" + nav + "<button type=\"button\" class=\"theme-toggle-i\" aria-label=\"Toggle dark mode\">☾</button></nav></div></div>";
 
   var style = document.createElement("style");
   style.textContent = [
@@ -393,7 +393,7 @@
   // <link rel="icon"> is already present in <head>.
   function ensureFavicon(){
     var faviconMap = {
-      "mcoa.longevity.ge":      "\u{1F9EE}",  // abacus — multi-counter
+      "mcaoa.longevity.ge":      "\u{1F9EE}",  // abacus — multi-counter
       "cdata.longevity.ge":     "\u{1F52C}",  // microscope — centriolar damage
       "ze.longevity.ge":        "\u{1F300}",  // cyclone — Ze entropic-geometric
       "biosense.longevity.ge":  "\u{1F4E1}",  // satellite — wearable sensor
@@ -421,7 +421,7 @@
 
   // Project essence injection was removed 2026-05-04 — Phoenix templates now
   // ship the essence block directly (see Ze SimulatorLive, BioSense
-  // SimulatorLive, FCLC PageLive). Static landings (MCOA, CDATA, Hive)
+  // SimulatorLive, FCLC PageLive). Static landings (MCAOA, CDATA, Hive)
   // carry their own essence in-page. Function kept as a no-op for
   // graceful degradation if a stale page references it.
   function injectEssence(){ return; /* superseded by template-level content */
@@ -451,8 +451,8 @@
           "<p><strong>The orchestrator dashboard on this page</strong> shows live federation rounds, ε spent (Renyi-DP accountant), Krum-rejected updates, and the contribution leaderboard. Each participating clinic deploys a local node; raw patient data never leaves the clinic.</p>" +
           "<p><strong>Privacy stack.</strong> Renyi differential privacy (Mironov 2017, ε ≤ 1.0/round, ε_total ≈ 0.43 at σ=1.5, q=0.013, T=5), k-anonymity (k ≥ 7), Krum Byzantine-robust aggregation (tolerates ≤ 25% malicious clients), SecAgg+ secure aggregation (Bonawitz 2017 + Shamir secret sharing). v13.4 PASS milestone reached on all unit tests.</p>" +
           "<p><strong>Threat model (explicit).</strong> Secure ONLY against semi-honest server + Byzantine clients. NOT secure against active server collusion or a malicious server. <strong>GDPR Article 9 blocker</strong> until FCLC v14 (active-adversary migration, planned Q1 2027).</p>" +
-          "<p><strong>Role in the ecosystem.</strong> FCLC is the privacy-preserving infrastructure that lets MCOA counter-weight w_i(tissue) be calibrated across multi-site cohorts without raw data transfer. Without FCLC, MCOA cannot reach the N≥2000 falsification cohort required by Axiom M4.</p>" +
-          "<p><strong>For:</strong> hospital IT · GDPR / DPO officers · clinical AI engineers wanting to participate in MCOA validation · federation researchers studying SecAgg/RDP composition.</p>"
+          "<p><strong>Role in the ecosystem.</strong> FCLC is the privacy-preserving infrastructure that lets MCAOA counter-weight w_i(tissue) be calibrated across multi-site cohorts without raw data transfer. Without FCLC, MCAOA cannot reach the N≥2000 falsification cohort required by Axiom M4.</p>" +
+          "<p><strong>For:</strong> hospital IT · GDPR / DPO officers · clinical AI engineers wanting to participate in MCAOA validation · federation researchers studying SecAgg/RDP composition.</p>"
       }
     };
     var e = essences[host];
@@ -507,10 +507,10 @@
       title: "Federated continual learning for clinics",
       desc: "Privacy-preserving federation over 2 hospital sites. PATE-bounded ε≈0.63 path for cross-cohort training without leaving the node."
     },
-    "mcoa.longevity.ge": {
-      pill: "MCOA",
+    "mcaoa.longevity.ge": {
+      pill: "MCAOA",
       title: "Multi-counter architecture of organismal aging",
-      desc: "Meta-theoretical framework integrating five counters into a single L_tissue function. Mathematical foundation of the LongevityCommon ecosystem."
+      desc: "Meta-theoretical framework integrating five counters into a single L_tissue function. Mathematical foundation of the LC ecosystem."
     },
     "cdata.longevity.ge": {
       pill: "CDATA",
@@ -550,7 +550,7 @@
   }
 
   // Inject a uniform own-header for hosts that don't ship one (home,
-  // mcoa, cdata static landings). Sits directly UNDER lc-sub-hero so
+  // mcaoa, cdata static landings). Sits directly UNDER lc-sub-hero so
   // every subdomain has the same chrome: eco-bar → hero → own-header.
   var INJECTED_NAV = {
     "longevity.ge": [
@@ -561,7 +561,7 @@
       ["/publications/", "Publications"],
       ["/contact/", "Contact"]
     ],
-    "mcoa.longevity.ge": [
+    "mcaoa.longevity.ge": [
       ["/", "Overview"],
       ["#counters", "Counters"],
       ["#l-tissue", "L_tissue"],
@@ -599,7 +599,7 @@
   };
   var INJECTED_BRAND = {
     "longevity.ge": "🌱 GLA",
-    "mcoa.longevity.ge": "🧮 MCOA",
+    "mcaoa.longevity.ge": "🧮 MCAOA",
     "cdata.longevity.ge": "🔬 CDATA",
     "drjaba.com": "🩺 DrJaba",
     "www.drjaba.com": "🩺 DrJaba",

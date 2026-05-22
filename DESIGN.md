@@ -1,4 +1,4 @@
-# LongevityCommon · DESIGN
+# LC · DESIGN
 
 **Status:** Canonical · regenerated 2026-04-28 from CONCEPT v5.6
 **Authority:** Cross-cutting architecture; subproject-specific designs in `<subproject>/DESIGN.md`
@@ -8,7 +8,7 @@
 ## §1. Repository layout
 
 ```
-~/Desktop/LongevityCommon/
+~/Desktop/LC/
 ├── CONCEPT.md · THEORY.md · DESIGN.md (this) · PARAMETERS.md · MAP.md · STATE.md
 ├── EVIDENCE.md · OPEN_PROBLEMS.md · TODO.md · README.md · CLAUDE.md · LICENSE
 ├── _archive/v_pre_2026-04-28/ # архив core .md до 2026-04-28
@@ -21,7 +21,7 @@
 ├── web/ # social-layer React+TS PWA
 ├── realtime/ # social-layer Phoenix Channels
 │
-├── MCOA/ # subproject: theoretical
+├── MCAOA/ # subproject: theoretical
 ├── CDATA/ # subproject: molecular hypothesis
 ├── Ze/ # subproject: math + simulator (regenerated 2026-04-28)
 ├── BioSense/ # subproject: applied + simulator + datasets (regenerated 2026-04-28)
@@ -35,7 +35,7 @@
 
 ## §2. Two-layer design: scientific layer + social layer
 
-LongevityCommon = **(scientific subprojects) + (thin social layer)**.
+LC = **(scientific subprojects) + (thin social layer)**.
 
 ### §2.1 Scientific layer (subprojects)
 
@@ -58,7 +58,7 @@ Cross-subproject communication — **через HTTP API** (federated by design,
 | `realtime/` | Elixir + Phoenix Channels | 4001 (conflict with Ze!) → 4500 | WebSocket: feed updates, live BioSense samples |
 | Postgres | docker | 5432 | основная DB социального слоя (не subproject data) |
 
-⚠ **Port conflict warning:** `realtime/` mix.exs изначально планировался на port 4001 — это конфликтует с `Ze/ze-backend` :4001. Переносим realtime на port **4500** в обновлённой конфигурации (см. `~/Desktop/LongevityCommon/realtime/config/dev.exs` — TODO update).
+⚠ **Port conflict warning:** `realtime/` mix.exs изначально планировался на port 4001 — это конфликтует с `Ze/ze-backend` :4001. Переносим realtime на port **4500** в обновлённой конфигурации (см. `~/Desktop/LC/realtime/config/dev.exs` — TODO update).
 
 ---
 
@@ -106,7 +106,7 @@ Used by: `server/src/handlers/biosense.rs` → `web/src/pages/Dashboard.tsx`
 
 ### §5.1 Server-side (Rust)
 
-- [ ] `src/handlers/biosense.rs` — добавить header в response: `X-LongevityCommon-Status: hypothesis-stage-exploratory`
+- [ ] `src/handlers/biosense.rs` — добавить header в response: `X-LC-Status: hypothesis-stage-exploratory`
 - [ ] `src/handlers/dashboard.rs` — strings про "biological age" → "exploratory aging activity index (research only)"
 - [ ] `src/handlers/ze_guide.rs` — обновить системный prompt для AI: **"χ_Ze is a research-grade exploratory metric, not a validated medical biomarker. Pre-registered tests of v1 yielded NULL results; current v2 is post-hoc. Do not give medical advice. Decline confirmatory clinical claims."**
 - [ ] Добавить новый endpoint `GET /api/disclosures/v5_changes` — возвращает changelog (NULL retraction, M4 update, FCLC threat model fix) — публичная transparency
@@ -148,19 +148,19 @@ Used by: `server/src/handlers/biosense.rs` → `web/src/pages/Dashboard.tsx`
 
 ```bash
 # Subprojects (backends)
-cd ~/Desktop/LongevityCommon/Ze && ./run.sh # :4000/:4001
-cd ~/Desktop/LongevityCommon/BioSense && ./run.sh # :4100/:4101
+cd ~/Desktop/LC/Ze && ./run.sh # :4000/:4001
+cd ~/Desktop/LC/BioSense && ./run.sh # :4100/:4101
 
 # Social layer
-cd ~/Desktop/LongevityCommon/server && cargo run --release # :8080
-cd ~/Desktop/LongevityCommon/web && npm run dev # :5173
-cd ~/Desktop/LongevityCommon/realtime && mix phx.server # :4500 (after fix)
+cd ~/Desktop/LC/server && cargo run --release # :8080
+cd ~/Desktop/LC/web && npm run dev # :5173
+cd ~/Desktop/LC/realtime && mix phx.server # :4500 (after fix)
 ```
 
 ### §7.2 Production
 
 ```bash
-cd ~/Desktop/LongevityCommon/deploy && docker compose -f docker-compose-all.yml up -d
+cd ~/Desktop/LC/deploy && docker compose -f docker-compose-all.yml up -d
 ```
 
 ---

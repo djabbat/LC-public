@@ -1,4 +1,4 @@
-defmodule LongevityCommonRealtimeWeb.ZeClockChannel do
+defmodule LCRealtimeWeb.ZeClockChannel do
   @moduledoc """
   Ze·Clock channel — broadcasts weekly community Ze stats every Monday.
   Clients subscribe to receive:
@@ -7,7 +7,7 @@ defmodule LongevityCommonRealtimeWeb.ZeClockChannel do
     - top intervention correlation
   """
   use Phoenix.Channel
-  alias LongevityCommonRealtime.Repo
+  alias LCRealtime.Repo
   import Ecto.Query
 
   @impl true
