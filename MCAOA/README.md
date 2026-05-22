@@ -6,7 +6,7 @@
 
 **Reference:** Tkemaladze J. (2026) *Multi-Counter Architecture of Organismal Aging*. eLife Reviewed Preprint eLife-RP-RA-2026-111885. DOI: [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
 
-**Source code:** [github.com/djabbat/LC-public](https://github.com/djabbat/LC-public) (monorepo, MCAOA in `LC/MCAOA/`)
+**Source code:** [github.com/djabbat/LC](https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA) (branch `mcaoa-v3.2`, в `MCAOA/`)
 
 ---
 
@@ -157,7 +157,7 @@ MIT — see [LICENSE](LICENSE)
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.20055806},
-  url = {https://github.com/djabbat/LC-public}
+  url = {https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA}
 }
 ```
 
