@@ -119,7 +119,7 @@ Renames during setup phase (do NOT use historical variants):
 
 Molecular and cellular mechanisms of aging-related dysfunction, centriologenesis,
 centrosome biology, regenerative medicine, healthspan-extending therapies. Strong
-overlap with CDATA (Centriolar Damage And) theory umbrella + MCOA (Multi-Counter
+overlap with CDATA (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
 Architecture of Organismal Aging).
 
 ## Twin-journal split (canonical strategy 2026-04-26)
@@ -130,7 +130,7 @@ GLA hosts **two journals**, separated by selectivity vs inclusivity:
 |---|---|---|
 | Selectivity | high (DOAJ-bound, peer review-strict) | broader, inclusive |
 | Reject rate target | ≥40% | ≥10% |
-| Use case | flagship CDATA / MCOA papers | early-career, niche, conference |
+| Use case | flagship CDATA / MCAOA papers | early-career, niche, conference |
 
 **Don't trim Longevity Horizon to be like Annals** — they exist in tension on purpose.
 

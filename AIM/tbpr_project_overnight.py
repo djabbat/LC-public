@@ -8,7 +8,7 @@ TBPR мульти-агентный цикл.
 
 Usage:
     python3 tbpr_project_overnight.py                    # все проекты
-    python3 tbpr_project_overnight.py --project MCOA     # один проект
+    python3 tbpr_project_overnight.py --project MCAOA     # один проект
 """
 
 import os
@@ -54,7 +54,7 @@ AGENTS = [
 # ─── Список проектов ─────────────────────────────────────────────────────────
 PROJECTS = {
     "CDATA": LC_ROOT / "CDATA" / "CONCEPT.md",
-    "MCOA": LC_ROOT / "MCOA" / "CONCEPT.md",
+    "MCAOA": LC_ROOT / "MCAOA" / "CONCEPT.md",
     "Ze": LC_ROOT / "Ze" / "CONCEPT.md",
     "AIM": LC_ROOT / "AIM" / "CONCEPT.md",
     "BioSense": LC_ROOT / "BioSense" / "CONCEPT.md",

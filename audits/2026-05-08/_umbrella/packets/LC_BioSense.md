@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_BioSense
 
-Path: `/home/oem/Desktop/LongevityCommon/BioSense`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/BioSense`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-393M	/home/oem/Desktop/LongevityCommon/BioSense
+393M	/home/oem/Desktop/LC/BioSense
 ```
 **Extensions:** .mat=211, .json=99, .md=11, .png=11, .py=8, .gz=7, .docx=3, .m=3, .sh=2, .zip=2, (noext)=1, .ex=1, .heex=1, .exs=1, .txt=1
 ## Tree (depth=2, max 200 entries)
@@ -582,7 +582,7 @@ _Last updated: 2026-03-28_
 
 ## Ze Theory Constants
 
-> **Canonical convention (2026-05-07):** root `~/Desktop/LongevityCommon/PARAMETERS.md § 1`
+> **Canonical convention (2026-05-07):** root `~/Desktop/LC/PARAMETERS.md § 1`
 > requires Article form (`v*_active = −0.08738`) for cross-subproject
 > APIs. BioSense computes χ_Ze internally in Python form `0.45631`
 > (matches Ze code); converts to Article at API boundary
@@ -1248,7 +1248,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
 license = "MIT"
-description = "BioSense Rust backend — χ_Ze biomarker computation, MCOA bridge, exacerbation risk. Listens on 127.0.0.1:4502 (decided 2026-05-07)."
+description = "BioSense Rust backend — χ_Ze biomarker computation, MCAOA bridge, exacerbation risk. Listens on 127.0.0.1:4502 (decided 2026-05-07)."
 
 [[bin]]
 name = "biosense-backend"
@@ -1294,7 +1294,7 @@ matplotlib>=3.4.0
 //! Port: 127.0.0.1:4502 (decided 2026-05-07; nginx biosense.longevity.ge
 //! already maps /api/ → :4502 and /,/live/ → :4501 biosense-web).
 //!
-//! Reference: ~/Desktop/LongevityCommon/BioSense/CONCEPT.md.
+//! Reference: ~/Desktop/LC/BioSense/CONCEPT.md.
 
 use axum::{
     extract::Json,

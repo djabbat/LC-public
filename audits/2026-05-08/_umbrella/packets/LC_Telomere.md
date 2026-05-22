@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_Telomere
 
-Path: `/home/oem/Desktop/LongevityCommon/Telomere`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/Telomere`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-480K	/home/oem/Desktop/LongevityCommon/Telomere
+480K	/home/oem/Desktop/LC/Telomere
 ```
 **Extensions:** .md=16, .rs=11, .ex=9, .exs=6, .heex=2, .toml=2, .json=1, .lock=1, (noext)=1, .sql=1, .py=1
 ## Tree (depth=2, max 200 entries)
@@ -49,17 +49,17 @@ Path: `/home/oem/Desktop/LongevityCommon/Telomere`  Date: 2026-05-08
 ```md
 # CLAUDE.md — Telomere
 
-**Telomere Shortening** — концептуальный подпроект, формализующий теломерную эрозию как **MCOA Counter #2** (`D₂(n,t)`). Division-dominant, stress-modulated. Concept-stage — нет лабораторного эксперимента под крышей подпроекта; данные приходят из meta-analysis (21 PMID).
+**Telomere Shortening** — концептуальный подпроект, формализующий теломерную эрозию как **MCAOA Counter #2** (`D₂(n,t)`). Division-dominant, stress-modulated. Concept-stage — нет лабораторного эксперимента под крышей подпроекта; данные приходят из meta-analysis (21 PMID).
 
-**Path:** `/home/oem/Desktop/LongevityCommon/Telomere/`
-**Repo:** часть `djabbat/LongevityCommon`.
+**Path:** `/home/oem/Desktop/LC/Telomere/`
+**Repo:** часть `djabbat/LC`.
 
 ---
 
 ## Source of truth
 
 **`Telomere/CONCEPT.md`** — авторитет.
-Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/CLAUDE.md`.
+Parent: `~/Desktop/LC/MCAOA/CONCEPT.md`, `~/Desktop/LC/CLAUDE.md`.
 
 ---
 
@@ -87,32 +87,32 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 ## Правила
 
-1. Все utterances про теломеры в публикациях/грантах должны быть верифицированы против CONCEPT.md (не противоречить axioms M1-M4 родителя MCOA).
+1. Все utterances про теломеры в публикациях/грантах должны быть верифицированы против CONCEPT.md (не противоречить axioms M1-M4 родителя MCAOA).
 2. PubMed verification обязательна (`feedback_verify_references`); DeepSeek НЕ для lit-search.
 3. Bradford-Hill критерии для causal claims (`feedback_bradford_hill_rule`).
 
 ---
 
-## План интеграции в MCOA
+## План интеграции в MCAOA
 
-См. roadmap counter-modules (#5 audit pt). Решение: либо implement Rust kinetics + connect к MCOA orchestrator, либо отметить как future work и заморозить до Phase 2.
+См. roadmap counter-modules (#5 audit pt). Решение: либо implement Rust kinetics + connect к MCAOA orchestrator, либо отметить как future work и заморозить до Phase 2.
 
 ```
 ### `README.md` (3835 chars)
 ```md
-# Telomere Shortening Counter (MCOA #2)
+# Telomere Shortening Counter (MCAOA #2)
 
-**Статус:** Активный подпроект в рамках архитектуры Multi-Counter Organismal Aging (MCOA). Определяет теломерное укорочение как количественный, поддающийся моделированию счётчик клеточного старения с чёткими кинетическими параметрами.
+**Статус:** Активный подпроект в рамках архитектуры Multi-Counter Organismal Aging (MCAOA). Определяет теломерное укорочение как количественный, поддающийся моделированию счётчик клеточного старения с чёткими кинетическими параметрами.
 
 ## Краткое содержание
 
-Этот подпроект формализует процесс укорочения теломер как **Счётчик №2** в общей системе MCOA. В отличие от упрощённого взгляда на теломеры как на простые "часы делений", наша модель описывает их состояние уравнением, которое учитывает как зависимую от делений потерю (энд-репликационная проблема), так и ускоренное укорочение из-за окислительного стресса. Модель интегрирует современные данные о механизмах повреждения теломерной ДНК, роли шаперонинового комплекса (TRiC) и белка RIOK2 в сборке теломеразы, а также ошибочной репарации 8-оксогуанина.
+Этот подпроект формализует процесс укорочения теломер как **Счётчик №2** в общей системе MCAOA. В отличие от упрощённого взгляда на теломеры как на простые "часы делений", наша модель описывает их состояние уравнением, которое учитывает как зависимую от делений потерю (энд-репликационная проблема), так и ускоренное укорочение из-за окислительного стресса. Модель интегрирует современные данные о механизмах повреждения теломерной ДНК, роли шаперонинового комплекса (TRiC) и белка RIOK2 в сборке теломеразы, а также ошибочной репарации 8-оксогуанина.
 
-Ключевой результат — параметрическое кинетическое уравнение для дефицита длины теломер `D₂(n, t)`. Все его параметры (`α₂`, `β₂`, `n₂*`, `τ₂`) имеют эмпирическое обоснование в рецензируемой литературе (21 PMID). Состояние этого счётчика вносит взвешенный вклад в общую "нагрузку старения" ткани `L_tissue` в рамках главного уравнения MCOA.
+Ключевой результат — параметрическое кинетическое уравнение для дефицита длины теломер `D₂(n, t)`. Все его параметры (`α₂`, `β₂`, `n₂*`, `τ₂`) имеют эмпирическое обоснование в рецензируемой литературе (21 PMID). Состояние этого счётчика вносит взвешенный вклад в общую "нагрузку старения" ткани `L_tissue` в рамках главного уравнения MCAOA.
 
 ## Связи с другими файлами
 
-*   **[THEORY.md](./THEORY.md)** — Полная формальная спецификация: аксиомы, вывод основного уравнения, математические предсказания и интерпретация параметров в рамках MCOA.
+*   **[THEORY.md](./THEORY.md)** — Полная формальная спецификация: аксиомы, вывод основного уравнения, математические предсказания и интерпретация параметров в рамках MCAOA.
 *   **[EVIDENCE.md](./EVIDENCE.md)** — Таблицы верифицированных источников (PMID/DOI), подтверждающих каждый параметр и механизм, а также данные, которые модель не объясняет (честное раскрытие).
 *   **[OPEN_PROBLEMS.md](./OPEN_PROBLEMS.md)** — Критические нерешённые вопросы, такие как количественная оценка константы времени `τ₂` и разделение вкладов `α₂` и `β₂` in vivo. Для каждой проблемы приведены тесты на фальсифицируемость с чёткими критериями.
 *   **[PARAMETERS.md](./PARAMETERS.md)** — Сводная таблица всех параметров модели (`α₂`, `β₂`, `n₂*`, `τ₂`, `D₂,₀`, веса `w₂`), их значений, единиц измерения, источников и статуса (измерен/предположение/требует калибровки).
@@ -123,7 +123,7 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 ## Контекст и ограничения
 
-*   **В рамках MCOA:** Теломерный счётчик — один из нескольких (наряду с центриолярным, митохондриальным ROS, эпигенетическим дрейфом). Его вклад `w₂(tissue)` варьируется между тканями и должен определяться калибровкой на данных.
+*   **В рамках MCAOA:** Теломерный счётчик — один из нескольких (наряду с центриолярным, митохондриальным ROS, эпигенетическим дрейфом). Его вклад `w₂(tissue)` варьируется между тканями и должен определяться калибровкой на данных.
 *   **Согласно CORRECTIONS_2026-04-22:** Модель не использует отозванные концепции вроде формулы Health Score или `χ_Ze` в качестве биомаркера. Все утверждения соответствуют обновлённому канону.
 *   **Три аксиомы CDATA:** Если проект рассматривается в контексте CDATA (Cellular Damage & Telomere Attrition), то три его аксиомы (1. Повреждение накапливается, 2. Теломеры — счётчик делений и стресса, 3. Сигнальные пути интегрируют повреждение) считаются ненарушимыми для целей данного подпроекта.
 *   **Язык:** Основное техническое описание — на английском. Пояснительный нарратив и комментарии — на русском.
@@ -134,17 +134,17 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 ```md
 # Telomere Backend
 
-MCOA Counter #2: Telomere Shortening Counter backend service.
+MCAOA Counter #2: Telomere Shortening Counter backend service.
 
 ## Overview
 
-This service implements the Telomere Shortening Counter as defined in the Multi-Counter Architecture of Organismal Aging (MCOA). It provides REST APIs for storing and retrieving telomere measurements, managing kinetic equation parameters, and computing tissue-specific aging loads.
+This service implements the Telomere Shortening Counter as defined in the Multi-Counter Architecture of Organismal Aging (MCAOA). It provides REST APIs for storing and retrieving telomere measurements, managing kinetic equation parameters, and computing tissue-specific aging loads.
 
 ## Features
 
 - **Telomere Measurement CRUD**: Store and retrieve telomere length measurements with associated metadata
 - **Parameter Management**: Manage kinetic equation parameters (D₂,₀, α₂, β₂, n₂*, τ₂) per subject or using defaults
-- **Counter Registry**: MCOA-compliant counter metadata endpoint
+- **Counter Registry**: MCAOA-compliant counter metadata endpoint
 - **Tissue Load Computation**: Compute L_tissue(n,t) = w₂(tissue)·f₂(D₂(n,t)) for tissue aging assessment
 - **Database Migrations**: SQLx-powered PostgreSQL migrations
 - **Comprehensive Error Handling**: Structured error responses with tracing
@@ -164,7 +164,7 @@ This service implements the Telomere Shortening Counter as defined in the Multi-
 
 ### Health & Metadata
 - `GET /health` - Service health check
-- `GET /api/v1/counters` - List all MCOA counters (only Telomere #2)
+- `GET /api/v1/counters` - List all MCAOA counters (only Telomere #2)
 - `GET /api/v1/counters/:id` - Get counter metadata
 
 ### Telomere Measurements
@@ -188,7 +188,7 @@ This service implements the Telomere Shortening Counter as defined in the Multi-
 
 ## Kinetic Equation
 
-The telomere shortening counter follows the MCOA kinetic equation:
+The telomere shortening counter follows the MCAOA kinetic equation:
 
 ```
 D₂(n, t) = D₂,₀ + α₂·(n / n₂*) + β₂·(t / τ₂)
@@ -296,9 +296,9 @@ DATABASE_URL=postgres://cn:cn@localhost/telomere_test cargo test
 - Structured JSON logging via Tracing
 - Request tracing with Tower HTTP
 
-## MCOA Compliance
+## MCAOA Compliance
 
-This service implements Counter #2 according to the MCOA specification:
+This service implements Counter #2 according to the MCAOA specification:
 - Counter registry endpoint with metadata
 - Kinetic equation parameter storage
 - Tissue load computation endpoint
@@ -313,28 +313,28 @@ MIT License - See LICENSE file for details.
 ```md
 # Telomere scripts
 
-Python helpers for calibration + MCOA comparison.
+Python helpers for calibration + MCAOA comparison.
 
 ```
 ### `CONCEPT.md` (24096 chars)
 ```md
-# Telomere Shortening as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCOA): A Formal Kinetic and Integrative Framework
+# Telomere Shortening as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCAOA): A Formal Kinetic and Integrative Framework
 
 > ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 
 ## Abstract
-Telomere erosion represents a canonical, quantifiable mechanism of cellular aging. Within the Multi-Counter Architecture of Organismal Aging (MCOA), it is formalized as Counter #2, a division-dominant yet stress-modulated process whose dynamics can be described by a master kinetic equation. This CONCEPT document provides a rigorous, evidence-based specification for this counter. We derive its central equation, *D₂(n, t)*, parameterizing it exclusively with data from verified meta-analyses of peer-reviewed literature (21 total PMIDs). Each parameter—the division-dependent (α₂) and time-dependent (β₂) erosion rates, the Hayflick limit (n₂*), and the turnover timescale (τ₂)—is grounded in specific experimental observations. We elaborate the modern biological complexity underlying the counter, including the roles of oxidative stress, shelterin, ALT, and non-telomeric TERT functions. Explicit, quantitative falsifiability conditions are defined. We propose methods to quantify this counter's coupling (Γ matrix entries) with other MCOA counters (Centriolar, MitoROS, Epigenetic Drift, Proteostasis) and detail its integration into the MCOA tissue aging load equation, *L_tissue(n,t) = Σ_i w_i(tissue)·f_i(D_i(n,t))*. Open questions and limitations are honestly enumerated, framing a roadmap for experimental validation within the MCOA framework.
+Telomere erosion represents a canonical, quantifiable mechanism of cellular aging. Within the Multi-Counter Architecture of Organismal Aging (MCAOA), it is formalized as Counter #2, a division-dominant yet stress-modulated process whose dynamics can be described by a master kinetic equation. This CONCEPT document provides a rigorous, evidence-based specification for this counter. We derive its central equation, *D₂(n, t)*, parameterizing it exclusively with data from verified meta-analyses of peer-reviewed literature (21 total PMIDs). Each parameter—the division-dependent (α₂) and time-dependent (β₂) erosion rates, the Hayflick limit (n₂*), and the turnover timescale (τ₂)—is grounded in specific experimental observations. We elaborate the modern biological complexity underlying the counter, including the roles of oxidative stress, shelterin, ALT, and non-telomeric TERT functions. Explicit, quantitative falsifiability conditions are defined. We propose methods to quantify this counter's coupling (Γ matrix entries) with other MCAOA counters (Centriolar, MitoROS, Epigenetic Drift, Proteostasis) and detail its integration into the MCAOA tissue aging load equation, *L_tissue(n,t) = Σ_i w_i(tissue)·f_i(D_i(n,t))*. Open questions and limitations are honestly enumerated, framing a roadmap for experimental validation within the MCAOA framework.
 
-## 1. Counter Identity and Integration within MCOA
+## 1. Counter Identity and Integration within MCAOA
 
-**Parent Framework:** The Multi-Counter Architecture of Organismal Aging (MCOA) posits that organismal aging arises from the integrated dysfunction of several discrete, quantifiable, and interacting molecular-physiological processes ("counters").
+**Parent Framework:** The Multi-Counter Architecture of Organismal Aging (MCAOA) posits that organismal aging arises from the integrated dysfunction of several discrete, quantifiable, and interacting molecular-physiological processes ("counters").
 
 **Counter Designation:** #2, the Telomere Shortening Counter.
 
 **Core Proposition:** The progressive loss of telomeric DNA repeats at chromosome ends functions as a mitotic clock and a stress integrator in somatic cells. Its quantitative state, *D₂*, represents a measurable deviation from a youthful homeostatic setpoint, contributing to the aging load of renewable tissues.
 
-**MCOA Integration:** The contribution of telomere shortening to tissue-specific aging is modeled as a weighted term in the MCOA master equation:
+**MCAOA Integration:** The contribution of telomere shortening to tissue-specific aging is modeled as a weighted term in the MCAOA master equation:
 *L_tissue(n,t) = w₂(tissue) · f₂(D₂(n, t)) + Σ_{i≠2} w_i(tissue)·f_i(D_i(n,t))*
 where *L* is the composite aging load, *w₂* is a tissue-specific weighting coefficient (a priori determined), and *f₂* is a scaling function mapping the telomere deficit *D₂* to its functional impact (e.g., senescent cell burden). This formalization positions telomere dynamics as one integrated component in a multi-causal system.
 
@@ -349,12 +349,12 @@ The telomere shortening counter encapsulates a sophisticated biological process 
 
 **Regulation and Homeostasis:**
 *   **Shelterin Complex:** The six-protein shelterin complex (TRF1, TRF2, POT1, TIN2, TPP1, RAP1) caps chromosome ends, preventing them from being recognized as DNA double-strand breaks. Disruption of shelterin (e.g., loss of Ten1/TPP1 ortholog in mice) leads to catastrophic telomere deprotection and shortening, modeling human dyskeratosis congenita (Sanz-Moreno et al. 2025, PMID: 40215293).
-*   **Telomerase and ALT:** The ribonucleoprotein telomerase (TERT + TERC) can add telomeric repeats de novo. Its regulation is complex and compartmentalized; for instance, RIOK2 transcriptionally regulates the TRiC and dyskerin complexes essential for telomerase assembly and stability (Ghosh et al. 2024, PMID: 39164231). In its absence, some cells (e.g., certain cancers) activate the Alternative Lengthening of Telomeres (ALT) pathway, a homology-directed repair mechanism. The MCOA counter primarily models telomerase-negative somatic cell aging.
+*   **Telomerase and ALT:** The ribonucleoprotein telomerase (TERT + TERC) can add telomeric repeats de novo. Its regulation is complex and compartmentalized; for instance, RIOK2 transcriptionally regulates the TRiC and dyskerin complexes essential for telomerase assembly and stability (Ghosh et al. 2024, PMID: 39164231). In its absence, some cells (e.g., certain cancers) activate the Alternative Lengthening of Telomeres (ALT) pathway, a homology-directed repair mechanism. The MCAOA counter primarily models telomerase-negative somatic cell aging.
 *   **Non-Telomeric Functions:** TERT has documented extra-telomeric roles in mitochondrial function, inflammation, and Wnt signaling, which may indirectly influence the β component of the counter by modulating cellular stress responses.
 
 **Triggering Senescence:** Critically short or structurally uncapped telomeres are recognized as persistent DNA damage, activating the ATM/ATR kinases and subsequent p53/p21CIP1 and p16INK4a/pRB tumor suppressor pathways, leading to irreversible cell cycle arrest (senescence) or apoptosis (Zhu et al. 2019, PMID: 30229407; Li et al. 2024, PMID: 38634789). The senescence-associated secretory phenotype (SASP) of these cells then perturbs tissue microenvironment.
 
-**Heterogeneity:** Telomere length is heterogeneous across chromosome arms, cells, and tissues. The MCOA counter *D₂* represents a population or tissue-average metric, with the shortest telomeres being the most biologically relevant for triggering senescence.
+**Heterogeneity:** Telomere length is heterogeneous across chromosome arms, cells, and tissues. The MCAOA counter *D₂* represents a population or tissue-average metric, with the shortest telomeres being the most biologically relevant for triggering senescence.
 
 ## 3. The Kinetic Equation: Formal Specification
 
@@ -379,7 +379,7 @@ The state of Counter #2 is defined by the telomere length deficit, *D₂(n, t)*,
 6.  **t (Chronological Time):** The age of the cell or organism.
 7.  **τ₂ (Telomere Turnover/Timescale Constant):** A time constant representing the period over which stochastic telomere loss and potential very slow, telomerase-independent rearrangement events occur. This parameter sets the timescale for the β₂ term.
     *   **Empirical Constraint:** Not directly measured in meta-analyses. However, data on rapid telomere length changes in extreme environments (e.g., lengthening in spaceflight followed by rapid shortening upon return) suggest a dynamic system with a timescale on the order of weeks to months (Luxton et al. 2021, PMID: 33347069). **Pending Measurement:** *τ₂ requires direct quantification via longitudinal single-cell telomere length tracking in vivo.*
-8.  **γ₂·I(others) (Coupling Term):** A placeholder function representing the directed influence of other MCOA counters on the rate of change of *D₂*. This is explicitly defined by the coupling matrix Γ (see Section 5).
+8.  **γ₂·I(others) (Coupling Term):** A placeholder function representing the directed influence of other MCAOA counters on the rate of change of *D₂*. This is explicitly defined by the coupling matrix Γ (see Section 5).
 
 ## 4. Primary Measurement Modalities
 
@@ -389,26 +389,26 @@ The variable *D₂* must be operationalized through measurable proxies. The choi
 *   **Quantitative PCR (qPCR) T/S Ratio:** A high-throughput method for estimating average relative telomere length in large cohorts. Useful for population studies correlating *D₂* with age and disease (Wang et al. 2012, PMID: 22773427; Pousa et al. 2021, PMID: 34200513).
 *   **Telomere Dysfunction-Induced Foci (TIF) Assay:** Co-localization of DNA damage markers (γH2AX, 53BP1) with telomeric probes. Measures the functional output of the counter (uncapped telomeres) rather than length directly.
 
-## 5. Coupling with Other MCOA Counters (The Γ Matrix)
+## 5. Coupling with Other MCAOA Counters (The Γ Matrix)
 
-A core tenet of MCOA is that counters interact. The influence of Counter *j* on the rate of change of Counter *i* is defined by the coupling coefficient Γ_{i,j}. For Telomere Counter #2, we define candidate couplings and proposed measurement strategies.
+A core tenet of MCAOA is that counters interact. The influence of Counter *j* on the rate of change of Counter *i* is defined by the coupling coefficient Γ_{i,j}. For Telomere Counter #2, we define candidate couplings and proposed measurement strategies.
 
 **Equation 2: Coupled Dynamics**
 *dD₂/dt ∝ α₂·(dn/dt)/n₂* + β₂/τ₂ + Σ_j Γ_{2,j} · g_j(D_j)*
 
 *   **Γ_{2,1} (Centriolar → Telomere):** **Hypothesis:** Centriolar aberrations (Counter #1) disrupt mitotic fidelity, leading to aneuploidy and chromosome mis-segregation, which may involve telomere dysfunction or increased replication stress, potentially accelerating α-type erosion.
-    *   **Measurement Proposal:** Quantify telomere loss per division (α₂) in isogenic cell lines with induced centriolar defects vs. controls. **Status: Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].**
+    *   **Measurement Proposal:** Quantify telomere loss per division (α₂) in isogenic cell lines with induced centriolar defects vs. controls. **Status: Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].**
 *   **Γ_{2,3} (MitoROS → Telomere):** **Strong Evidence > 0.** Mitochondrial ROS (Counter #3) is a primary source of the oxidative damage that drives the β-component of telomere shortening.
     *   **Quantitative Estimate:** The work of De Rosa et al. (2025, PMID: 39837827) provides a mechanistic pathway. Γ_{2,3} can be estimated by measuring the increase in β₂ (bp/time) in cells with chemically or genetically induced mitochondrial ROS overproduction, while controlling for division rate. Supporting evidence links oxidative stress to shortening (Jennings et al. 2000, PMID: 11001793; Medoro et al. 2024, PMID: 37917279).
 *   **Γ_{2,4} (Epigenetic Drift → Telomere):** **Hypothesis:** Epigenetic silencing (Counter #4) of shelterin components (e.g., *POT1*, *TRF2*) or telomerase regulators could exacerbate both α and β erosion. Conversely, telomere shortening alters nuclear architecture and heterochromatin, affecting epigenetic state (Li et al. 2024, PMID: 38634789).
-    *   **Measurement Proposal:** Use epigenetic editing (dCas9-DNMT3a/KRAB) to silence shelterin genes and measure consequent changes in α₂ and β₂. **Status: Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].**
+    *   **Measurement Proposal:** Use epigenetic editing (dCas9-DNMT3a/KRAB) to silence shelterin genes and measure consequent changes in α₂ and β₂. **Status: Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].**
 *   **Γ_{2,5} (Proteostasis → Telomere):** **Hypothesis:** Proteostatic collapse (Counter #5) could impair the function of the shelterin complex or telomere-associated repair factors, leading to telomere deprotection.
     *   **Measurement Proposal:** Induce proteotoxic stress (e.g., with proteasome inhibitors) and measure telomere dysfunction (TIFs) and erosion rates. The role of RIOK2 in regulating telomerase-associated chaperones (TRiC) links proteostasis to telomere maintenance (Ghosh et al. 2024, PMID: 39164231).
 *   **Γ_{j,2} (Telomere → Other Counters):** Telomere-driven senescence via SASP can induce oxidative stress, epigenetic changes, and proteostatic dysfunction in neighboring cells, implying Γ_{3,2}, Γ_{4,2}, Γ_{5,2} > 0.
 
 ## 6. Falsifiability Protocol
 
-For Counter #2 to be valid within MCOA, it must make specific, quantitative predictions that can be empirically falsified.
+For Counter #2 to be valid within MCAOA, it must make specific, quantitative predictions that can be empirically falsified.
 
 **Falsification Condition 1 (Null Hypothesis):**
 *   **Prediction:** In a renewable somatic tissue, the measured parameters α₂ and β₂ must be significantly greater than zero. Tissue-specific weighting *w₂* may be low, but the fundamental kinetic parameters must be positive.
@@ -422,9 +422,9 @@ For Counter #2 to be valid within MCOA, it must make specific, quantitative pred
 *   **Prediction:** Artificially maintaining *D₂* at a low level (via telomerase, gene editing, or other means) in a wild-type somatic cell should extend its replicative lifespan (increase n₂*), delay senescence markers, and maintain function.
 *   **Falsification Observation:** If telomere length maintenance fails to extend replicative capacity or delay senescence in a model where other counters (e.g., MitoROS) are controlled for, the causal role of *D₂* in that cell type is falsified. (Strong evidence supports this prediction; falsification is unlikely but constitutes a critical test) (Li et al. 2024, PMID: 38634789).
 
-**Falsification Condition 4 (MCOA Axiom M3 - A Priori Weighting):**
+**Falsification Condition 4 (MCAOA Axiom M3 - A Priori Weighting):**
 *   **Prediction:** The tissue-specific weight *w₂* must be estimable a priori (e.g., based on intrinsic turnover rate, basal ROS level) and this estimate should correlate with the empirically measured contribution of *D₂* to functional decline.
-*   **Falsification Observation:** If the ex-post optimal fit for *w₂* in predicting tissue aging (e.g., functional decline in myocardial contraction, hepatic detoxification) is uncorrelated with or negatively correlated with its a priori estimate, then *D₂* is not a valid independent counter for that tissue within the MCOA framework.
+*   **Falsification Observation:** If the ex-post optimal fit for *w₂* in predicting tissue aging (e.g., functional decline in myocardial contraction, hepatic detoxification) is uncorrelated with or negatively correlated with its a priori estimate, then *D₂* is not a valid independent counter for that tissue within the MCAOA framework.
 
 ## 7. Open Questions and Limitations
 
@@ -437,9 +437,9 @@ The present formalization acknowledges several unresolved issues that define the
 5.  **The Role of Telomerase in Somatic Maintenance:** Low levels of telomerase activity in some stem cells and induced in stress responses complicate the model. Should a small, regulated telomerase activity be included as a negative term in the *dD₂/dt* equation? This blurs the line between a pure "counter" and an active maintenance system.
 6.  **In Vivo Validation of Couplings:** All proposed Γ couplings are currently hypothetical or based on in vitro evidence. Their quantitative magnitude and significance in vivo, especially in mammal aging, are unknown and require complex multi-parameter interventions.
 
-## 8. Integration with the MCOA Framework: From Cellular Deficit to Tissue Load
+## 8. Integration with the MCAOA Framework: From Cellular Deficit to Tissue Load
 
-The telomere counter transitions from a cellular variable to a tissue-level contributor through the MCOA load equation. The steps are:
+The telomere counter transitions from a cellular variable to a tissue-level contributor through the MCAOA load equation. The steps are:
 
 1.  **Measure *D₂*:** For a tissue sample, determine the distribution of telomere lengths (e.g., via Q-FISH on tissue sections) to calculate an average deficit or, more informatively, the percentage of cells/sub-telomeres below a critical threshold.
 2.  **Apply Scaling Function *f₂*:** Map the measured *D₂* to a functional consequence. For example, *f₂* could be the estimated proportion of senescent cells in the tissue, derived from a calibrated relationship between telomere shortness and senescence probability (e.g., p16INK4a positivity).
@@ -457,7 +457,7 @@ This value is then integrated with contributions from photo-oxidative damage (Mi
 
 ## 9. Conclusion
 
-This document provides a rigorous, evidence-based, and falsifiable specification for Telomere Shortening as Counter #2 within the MCOA. By grounding its kinetic equation in empirical data, explicitly defining its couplings, and stating clear conditions for its refutation, we move beyond a metaphorical "telomere clock" to a quantitative component in an integrative theory of aging. The proposed framework makes testable predictions about tissue-specific aging trajectories and intervention outcomes. Addressing the outlined open questions, particularly the quantitative measurement of Γ couplings in vivo, represents the critical next step in validating the MCOA's integrative power and the specific role of telomere dynamics within it.
+This document provides a rigorous, evidence-based, and falsifiable specification for Telomere Shortening as Counter #2 within the MCAOA. By grounding its kinetic equation in empirical data, explicitly defining its couplings, and stating clear conditions for its refutation, we move beyond a metaphorical "telomere clock" to a quantitative component in an integrative theory of aging. The proposed framework makes testable predictions about tissue-specific aging trajectories and intervention outcomes. Addressing the outlined open questions, particularly the quantitative measurement of Γ couplings in vivo, represents the critical next step in validating the MCAOA's integrative power and the specific role of telomere dynamics within it.
 
 ---
 *All citations are drawn from the provided meta-analysis dossiers containing 21 verified PubMed IDs (PMIDs). No external or fabricated references are used.*
@@ -468,7 +468,7 @@ This document provides a rigorous, evidence-based, and falsifiable specification
 
 All PubMed identifiers in this document were independently verified against the NCBI E-utilities API (esummary endpoint) on 2026-04-21. Each PMID was confirmed to resolve to an existing, title-matched entry. No citation in this document was generated by a language model without subsequent live-database verification.
 
-Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LongevityCommon ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
+Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LC ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
 
 Self-citations follow the `≤15% of total references` rule mandated by Nature Research editorial policy; see ecosystem file `~/CLAUDE.md §Self-Citation Rule`.
 
@@ -479,7 +479,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
 Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
 
@@ -488,11 +488,11 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 ```
 ### `THEORY.md` (9948 chars)
 ```md
-# Formal Theory of the Telomere Shortening Counter (MCOA #2)
+# Formal Theory of the Telomere Shortening Counter (MCAOA #2)
 
-## 1. Аксиоматическая основа в MCOA
+## 1. Аксиоматическая основа в MCAOA
 
-Теломерный счётчик определяется в рамках следующих аксиом Multi-Counter Architecture of Organismal Aging (MCOA):
+Теломерный счётчик определяется в рамках следующих аксиом Multi-Counter Architecture of Organismal Aging (MCAOA):
 
 **Axiom M1 (Дискретность счётчиков):** Старение организма является следствием дисфункции конечного набора дискретных молекулярно-физиологических процессов, каждый из которых может быть количественно охарактеризован переменной состояния `D_i`, представляющей отклонение от ювенильного гомеостатического заданного значения.
 
@@ -516,7 +516,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 *   `D₂,₀`: Исходный дефицит (может быть нулевым или отрицательным, если брать за baseline неонатальную длину). Это параметр инициализации.
 *   Член `α₂ · (n / n₂*)`: Выражает накопление потерь от энд-репликационной проблемы. `α₂` [bp] — средняя потеря теломерных повторов за одно популяционное удвоение (PD) в идеальных условиях. `n` — кумулятивное число PD. `n₂*` — безразмерный масштабирующий коэффициент, приблизительно равный лимиту Хейфлика. Деление `n / n₂*` приводит член к безразмерному виду, сопоставимому по масштабу с временным членом.
 *   Член `β₂ · (t / τ₂)`: Выражает накопление потерь от стресс-зависимой эрозии. `β₂` [bp] — амплитуда потери за характерный временной масштаб. `t` — хронологическое время. `τ₂` [единицы времени] — константа времени, характеризующая период, за который происходит существенная стресс-зависимая потеря (например, из-за накопления и ошибочной репарации 8-oxoG). Деление `t / τ₂` даёт безразмерное "стрессовое время".
-*   Член `γ₂ · I(others)`: Место для функции, описывающей направленное влияние других счётчиков MCOA на скорость изменения `D₂`. Явный вид этой функции определяется матрицей связей Γ (см. раздел 4).
+*   Член `γ₂ · I(others)`: Место для функции, описывающей направленное влияние других счётчиков MCAOA на скорость изменения `D₂`. Явный вид этой функции определяется матрицей связей Γ (см. раздел 4).
 
 ## 3. Интерпретация параметров и биологическая обоснованность
 
@@ -540,7 +540,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 *   **Математические границы:** `τ₂ > 0`. Это наименее охарактеризованный параметр.
 *   **Связь с evidence:** Данные об относительно быстрых изменениях длины теломер у астронавтов (увеличение в невесомости с последующим быстрым уменьшением, PMID: 33347069) указывают на динамику с масштабом времени порядка недель или месяцев, что даёт предварительную оценку для `τ₂`.
 
-## 4. Связи с другими счётчиками MCOA (Матрица Γ)
+## 4. Связи с другими счётчиками MCAOA (Матрица Γ)
 
 Скорость изменения `D₂` может зависеть от состояния других счётчиков. Формально это описывается через коэффициенты связи `Γ_{2,j}` в дифференциальной форме мастер-уравнения.
 
@@ -555,7 +555,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 *   **Γ_{2,4} (Epigenetic Drift → Telomere):** Гипотеза: Эпигенетический дрейф (счётчик #4), в частности, потеря гетерохроматина в теломерных и субтеломерных областях, может делать теломерную ДНК более доступной для повреждений и снижать эффективность репарации. `g_4(D_4)` может быть мерой потери репрессивных гистоновых меток (H3K9me3) в этих областях.
 *   **Γ_{2,5} (Proteostasis → Telomere):** Гипотеза: Нарушение протеостаза (счётчик #5) может снижать стабильность или активность комплексов шелтерина и теломеразы. Например, RIOK2 регулирует сборку теломеразы через комплекс TRiC (шапероним CCT, PMID: 39164231). Дисфункция протеостаза может нарушить этот процесс, снизив способность к поддержанию длины. `g_5(D_5)` может быть мерой эффективности шаперониновой функции.
 
-**Важное замечание:** Согласно **CORRECTIONS_2026-04-22**, коэффициенты `Γ_{i,j}` по умолчанию устанавливаются в 0 (гипотеза независимости). Ненулевые значения должны появляться только в результате пост-фактум статистического анализа данных, отвергающего гипотезу независимости. Недопустимо ссылаться на несуществующий "MCOA Test 2" как на источник априорных значений `γ_i`.
+**Важное замечание:** Согласно **CORRECTIONS_2026-04-22**, коэффициенты `Γ_{i,j}` по умолчанию устанавливаются в 0 (гипотеза независимости). Ненулевые значения должны появляться только в результате пост-фактум статистического анализа данных, отвергающего гипотезу независимости. Недопустимо ссылаться на несуществующий "MCAOA Test 2" как на источник априорных значений `γ_i`.
 
 ## 5. Предсказания модели
 
@@ -582,7 +582,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 | **Stress-Dependent Erosion Amplitude** | `β₂` | 20 — 50 | [bp] | Выведено из: PMID: 30472697 (укорочение в нейронах), PMID: 25612739 (укорочение в лейкоцитах ~30 bp/год) | **Estimated (Poor)** | Амплитуда потери за время `τ₂`. Оценка очень грубая, так как зависит от неизвестного `τ₂`. Фактически, `β₂/τ₂` оценивается в ~20-50 bp/год. |
 | **Telomere Turnover Timescale Constant** | `τ₂` | 0.083 — 0.25 (1-3 месяца) | [yr] | Косвенно по PMID: 33347069 (динамика у астронавтов) | **Hypothesized (Very Poor)** | Критически неопределённый параметр. Гипотеза основана на наблюдаемых изменениях в масштабе недель-месяцев. |
 | **Effective Shortening Rate (Composite, Leukocytes)** | `dD₂/dt` (composite) | -30 ± 10 | [bp / yr] | PMID: 25612739, обзорные данные | **Observed (Composite)** | Измеряемая in vivo скорость. Является суммой: `(α₂ / n₂*) * (dn/dt) + (β₂ / τ₂)`. |
-| **Tissue Weight (e.g., Blood/Leukocytes)** | `w₂(blood)` | 0.15 (предположительно) | dimensionless | Нет прямых данных. Предполагается на основе вклада в старение иммунной системы. | **To Be Calibrated** | Должен определяться путём калибровки модели MCOA на фенотипических данных старения тканей. |
+| **Tissue Weight (e.g., Blood/Leukocytes)** | `w₂(blood)` | 0.15 (предположительно) | dimensionless | Нет прямых данных. Предполагается на основе вклада в старение иммунной системы. | **To Be Calibrated** | Должен определяться путём калибровки модели MCAOA на фенотипических данных старения тканей. |
 | **Tissue Weight (e.g., Fibroblasts/Skin)** | `w₂(skin)` | 0.10 (предположительно) | dimensionless | Нет прямых данных. | **To Be Calibrated** | |
 | **Tissue Weight (e.g., Post-mitotic Neurons)** | `w₂(neuron)` | 0.02 (предположительно) | dimensionless | Нет прямых данных. Ожидается низким, так как сенесценция, вызванная теломерами, маловероятна. | **To Be Calibrated** | |
 | **Coupling Coefficient (MitoROS → Telomere)** | `Γ_{2,3}` | 0 (по умолчанию) | [bp·yr⁻¹·(unit of D₃)⁻¹] | CORRECTIONS_2026-04-22 Canon | **Default (Null Hypothesis)** | По умолчанию предполагается отсутствие связи. Ненулевое значение должно быть получено из статистического анализа данных. |
@@ -594,7 +594,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 *   **Estimated:** Значение выведено из данных с допущениями, имеет значительную неопределённость.
 *   **Hypothesized:** Значение является интуитивной догадкой, основанной на косвенных данных, требует прямой проверки.
 *   **Observed:** Значение является прямым измерением in vivo, но представляет собой сумму нескольких эффектов модели.
-*   **To Be Calibrated:** Значение должно быть подобрано в процессе калибровки полной модели MCOA на экспериментальных данных.
+*   **To Be Calibrated:** Значение должно быть подобрано в процессе калибровки полной модели MCAOA на экспериментальных данных.
 *   **Default (Null Hypothesis):** Значение устанавливается в 0 в соответствии с каноном CORRECTIONS_2026-04-22 до тех пор, пока данные не опровергнут гипотезу независимости.
 *   **To Be Defined:** Концепция необходима, но её конкретная математическая форма ещё не определена.
 ```
@@ -604,7 +604,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 ## 1. Обзор архитектуры
 
-Теломерный счётчик реализован как независимый модуль (класс `TelomereCounter`) в рамках симуляционной платформы MCOA. Его основная задача:
+Теломерный счётчик реализован как независимый модуль (класс `TelomereCounter`) в рамках симуляционной платформы MCAOA. Его основная задача:
 1.  **Обновление состояния:** Рассчитывать текущее значение дефицита `D₂` на основе истории делений `n`, хронологического времени `t` и, в будущем, состояния связанных счётчиков.
 2.  **Расчёт вклада:** Преобразовывать `D₂` в вклад в общую нагрузку старения ткани `L_tissue` согласно функции `f₂` и весу `w₂`.
 3.  **Предоставление интерфейсов:** Для связи с симулятором клеточного цикла (обновление `n`), симулятором окислительного стресса (влияние на `β₂`) и другими модулями.
@@ -612,7 +612,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 ## 2. Файловая структура
 
 ```
-mcga_framework/               # Корень проекта MCOA
+mcga_framework/               # Корень проекта MCAOA
 ├── counters/
 │   ├── __init__.py
 │   ├── base_counter.py      # Абстрактный класс BaseCounter
@@ -835,7 +835,7 @@ ALPHA_DEFAULT
     3.  **`L_tissue(age)` коррелирует ТОЛЬКО с `n_tissue(age)`, даже в постмитотических тканях (`n≈const`):** Невозможно в рамках модели, так как предсказывает неизменную длину. Если длина меняется, это немедленно фальсифицирует модель. Более вероятно, что метод измерения `n` ошибочен. Приоритет: Средний (проверка методологии).
     4.  **Данные не описываются линейной суммой `n` и `age`, а следуют сложной нелинейной траектории:** Указывает на недостаточность модели или на сильные нелинейные связи (Γ матрица). Например, если при старении `dn/dt` само меняется, или `β₂` зависит от `D₂`. Требует усложнения модели. Приоритет: Высокий (развитие теории).
 
-**Приоритет:** Высокий. Критичен для валидации MCOA, так как проверяет саму идею разделения счётчиков по драйверам (деления vs. время).
+**Приоритет:** Высокий. Критичен для валидации MCAOA, так как проверяет саму идею разделения счётчиков по драйверам (деления vs. время).
 
 ## OP-T3: Верификация связи Γ_{2,5} (Протеостаз → Теломеры) через RIOK2-TRiC
 
@@ -851,7 +851,7 @@ ALPHA_DEFAULT
     3.  **Нарушение протеостаза не влияет на скорость укорочения, но резко повышает долю TIF+ клеток:** Указывает, что связь идёт не через скорость эрозии, а через эффективность capping (функция шелтерина). Это потребует переопределения `g_5(D_5)` в матрице Γ как влияющей на порог сенесценции, а не на `dD₂/dt`. Приоритет: Высокий.
     4.  **Никакого эффекта на теломеры не наблюдается:** Фальсифицирует гипотезу о значимой связи протеостаза с теломерным maintenance в данной клеточной системе. Приоритет: Критический (фальсификация связи).
 
-**Приоритет:** Средний. Важно для построения сети связей MCOA, но не является краеугольным камнем самой модели теломер.
+**Приоритет:** Средний. Важно для построения сети связей MCAOA, но не является краеугольным камнем самой модели теломер.
 
 ## OP-T4: Разрешение парадокса стабильности/удлинения теломер у долгоживущих видов
 
@@ -865,9 +865,9 @@ ALPHA_DEFAULT
     1.  **Данные хорошо описываются моделью с ненулевым `η` или пониженным `β₂`:** Подтверждает обобщаемость модели после включения механизмов maintenance. Приоритет: Низкий.
     2.  **Данные показывают периодические или скачкообразные изменения длины, а не тренд:** Указывает на сильную регуляцию или эпизодическую активацию ALT, что не укладывается в непрерывную модель. Требует перехода к модели с дискретными событиями рекомбинации/удлинения. Приоритет: Высокий.
     3.  **Длина теломер положительно коррелирует с возрастом в некоторых тканях:** Радикально противоречит базовой аксиоме о накоплении дефицита. Может указывать на селективное преимущество клеток с длинными теломерами с возрастом или на артефакт измерения. Требует тщательной методологической проверки. Приоритет: Критический.
-    4.  **Нет корреляции между длиной теломер и максимальной продолжительностью жизни вида:** Ставит под вопрос универсальную роль теломер как лимитирующего счётчика старения за пределами конкретных моделей (человек, мышь). Приоритет: Средний (ограничивает область применимости MCOA).
+    4.  **Нет корреляции между длиной теломер и максимальной продолжительностью жизни вида:** Ставит под вопрос универсальную роль теломер как лимитирующего счётчика старения за пределами конкретных моделей (человек, мышь). Приоритет: Средний (ограничивает область применимости MCAOA).
 
-**Приоритет:** Средний. Проблема важна для эволюционной геронтологии и общности MCOA, но не блокирует прогресс в основной человеко-ориентированной модели.
+**Приоритет:** Средний. Проблема важна для эволюционной геронтологии и общности MCAOA, но не блокирует прогресс в основной человеко-ориентированной модели.
 ```
 ### `backend/Cargo.toml` (1252 chars)
 ```toml
@@ -875,8 +875,8 @@ ALPHA_DEFAULT
 name = "telomere_backend"
 version = "0.1.0"
 edition = "2021"
-authors = ["LongevityCommon Team"]
-description = "Backend service for Telomere Shortening Counter (MCOA Counter #2)"
+authors = ["LC Team"]
+description = "Backend service for Telomere Shortening Counter (MCAOA Counter #2)"
 license = "MIT"
 repository = "https://github.com/longevitycommon/telomere"
 
@@ -1081,7 +1081,7 @@ async fn main() -> Result<(), AppError> {
         .json()
         .init();
 
-    info!("Starting Telomere Backend (MCOA Counter #2)");
+    info!("Starting Telomere Backend (MCAOA Counter #2)");
 
     // Load configuration
     let config = Config::load()?;
@@ -1105,7 +1105,7 @@ async fn main() -> Result<(), AppError> {
     let app = Router::new()
         // Health check
         .route("/health", get(routes::health))
-        // Counter registry (MCOA)
+        // Counter registry (MCAOA)
         .route("/api/v1/counters", get(routes::list_counters))
         .route("/api/v1/counters/:id", get(routes::get_counter))
         // Telomere measurements
@@ -1138,9 +1138,9 @@ async fn main() -> Result<(), AppError> {
 ```
 ### code `crates/telomere_counter/src/lib.rs`
 ```
-//! MCOA Counter #2: Telomere shortening
+//! MCAOA Counter #2: Telomere shortening
 //!
-//! Kinetic equation (MCOA-compliant, dimensionless):
+//! Kinetic equation (MCAOA-compliant, dimensionless):
 //!   D_2(n, t) = D_20 + α_2·(n / n_2*) + β_2·(t / τ_2) + γ_2·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

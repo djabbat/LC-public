@@ -39,4 +39,4 @@
    8 пунктов в CONCEPT.md, также в EVIDENCE.md.
 
 6. **Consortium / collaboration plan** — **✓**  
-   Таблица с ролями и статусами (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons
+   Таблица с ролями и статусами (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons

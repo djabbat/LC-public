@@ -15,13 +15,13 @@ Here is the complete Triple-Blind Peer Review for the revised CDATA concept, fea
 | 5 | Experimental Feasibility | 5 | P0 is well-chosen and cost-effective. The timeline is realistic. The decision tree is clear. |
 | 6 | Handling of Falsification | 5 | This is the document's strongest feature. Transforming a model failure into a discovery is rare and commendable. |
 | 7 | Multi-Organism Evidence | 4 | The supporting evidence table is persuasive but remains correlative. I would like to see a stronger statement that this evidence is context-dependent (e.g., cilia-independent centriolar functions in non-ciliated cells). |
-| 8 | Integration with MCOA | 4 | The ABL-2 paradox genuinely strengthens the MCOA framework. However, the appendix is too brief. This should be woven into the main text to show how a single-counter failure informs multi-counter integration. |
+| 8 | Integration with MCAOA | 4 | The ABL-2 paradox genuinely strengthens the MCAOA framework. However, the appendix is too brief. This should be woven into the main text to show how a single-counter failure informs multi-counter integration. |
 | 9 | Limitations Acknowledgment | 5 | Comprehensive. The P0 blocking problem and model overfitting are correctly elevated. |
 | 10 | Open Science Plan | 3 | The "private until submission" clause is a significant weakness. Pre-registration is promised but not yet submitted. For a TBPR, I would require that the code and data for all figures be deposited upon submission of this document, not the final manuscript. |
 | 11 | Overall Impact | 4 | The document is a useful negative result, but its impact hinges entirely on P0. Without that experiment, it remains an elegant but untestable speculation. Priority should be conditional on P0 pre-registration. |
 
 **Summary Comment (Reviewer LV-23):**  
-This is a well-structured hypothesis document that correctly prioritizes its own falsification. The ABL-2 paradox is treated with appropriate seriousness. I support funding for P0, with the condition that the pre-registration and data/code repositories are made public before funding release. The document would benefit from merging H2 and H3 into a single interaction hypothesis and expanding the MCOA integration.
+This is a well-structured hypothesis document that correctly prioritizes its own falsification. The ABL-2 paradox is treated with appropriate seriousness. I support funding for P0, with the condition that the pre-registration and data/code repositories are made public before funding release. The document would benefit from merging H2 and H3 into a single interaction hypothesis and expanding the MCAOA integration.
 
 ---
 

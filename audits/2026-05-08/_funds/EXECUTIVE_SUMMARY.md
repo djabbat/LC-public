@@ -1,4 +1,4 @@
-# EXECUTIVE SUMMARY — Funds-perspective audit LongevityCommon (2026-05-08)
+# EXECUTIVE SUMMARY — Funds-perspective audit LC (2026-05-08)
 
 **Аудитор:** DeepSeek-reasoner (deepseek-v4-reasoner) с verifierами PubMed E-utilities + Crossref + DataCite + arXiv API + Zenodo API
 **Стандарты:** ERC AdG, EIC Pathfinder Challenges 2026, NIH R01, Wellcome Discovery, Impetus
@@ -38,7 +38,7 @@
 | Verdict | Count | Подпроекты |
 |---|---|---|
 | TOXIC_WITHDRAW | 1 | UMBRELLA |
-| REJECT | 8 | AIM, EpigeneticDrift, HAP, MCOA, MitoROS, Proteostasis, Telomere, Ze |
+| REJECT | 8 | AIM, EpigeneticDrift, HAP, MCAOA, MitoROS, Proteostasis, Telomere, Ze |
 | REVISE_MAJOR | 4 | AutomatedMicroscopy, BioSense, CDATA, CytogeneticTree |
 | REVISE_MINOR / FUND_AS_IS | 0 | — |
 
@@ -86,7 +86,7 @@
 
 1. **Удалить 21 fabricated DOI и исправить 19 PMID↔DOI mismatches** во ВСЕХ файлах (см. `refs/REFERENCE_AUDIT_FINAL.md`). Не обращать в reverse через автоматический patcher (он часто меняет один fake на другой fake) — ручная проверка по PubMed для каждого случая.
 2. **Переместить HAP/, Ontogenesis/ в `_archive/`** с пометкой TOXIC. Очистить корневой CLAUDE.md.
-3. **Создать недостающие CLAUDE.md** для подпроектов: MCOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC.
+3. **Создать недостающие CLAUDE.md** для подпроектов: MCAOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC.
 4. **Зарегистрировать на OSF.io** протоколы для BioSense (replication v*_active), CDATA (Sobol S1+S2 на GTEx), Ze (test-retest reliability χ_Ze).
 5. **Развернуть social server (Rust/Axum) и BioSense backend** на сервере — иначе все утверждения о работающей платформе технически некорректны.
 

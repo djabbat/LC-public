@@ -1,6 +1,6 @@
 [Unit]
-Description=LongevityCommon social server (Rust Axum, port 4600)
-Documentation=file:///home/oem/Desktop/LongevityCommon/docs/DEPLOY_CONVENTION.md
+Description=LC social server (Rust Axum, port 4600)
+Documentation=file:///home/oem/Desktop/LC/docs/DEPLOY_CONVENTION.md
 After=network-online.target postgresql.service
 Wants=network-online.target
 

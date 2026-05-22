@@ -1,4 +1,4 @@
-defmodule LongevityCommonRealtimeWeb.FeedChannel do
+defmodule LCRealtimeWeb.FeedChannel do
   use Phoenix.Channel
 
   alias Phoenix.PubSub
@@ -6,7 +6,7 @@ defmodule LongevityCommonRealtimeWeb.FeedChannel do
   @impl true
   def join("feed:public", _params, socket) do
     # Subscribe to feed updates published by Rust API via pg_notify
-    PubSub.subscribe(LongevityCommonRealtime.PubSub, "feed:public")
+    PubSub.subscribe(LCRealtime.PubSub, "feed:public")
     {:ok, socket}
   end
 

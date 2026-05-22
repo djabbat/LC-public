@@ -38,7 +38,7 @@
    Явные разделы в CONCEPT.md и EVIDENCE.md. Перечислены 6–8 ограничений.
 
 6. **Consortium / collaboration plan** → ✓  
-   Таблица партнёров (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Дополнительно в DESIGN.md.
+   Таблица партнёров (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Дополнительно в DESIGN.md.
 
 7. **Reference reality + match** → ✗  
    Реальные ссылки (Burger, Boiko, Bran, Stringer, Hayflick, Wolff, Delgehyr, Schindelin, OpenFlexure) соответствуют утверждениям. **Однако** в EVIDENCE.md и CONCEPT.md присутствуют **placeholders** с `[Author(s) TBD]` и `DOI TBD` — это не реальные ссылки. Нарушение требования «реальность + соответствие» для каждой цитаты.

@@ -153,7 +153,7 @@ defmodule BiosenseWebWeb.SimulatorLive do
         <p>
           <strong>For:</strong> wearable-device engineers · sleep scientists ·
           exacerbation-prediction clinicians · AoU / UK Biobank reusers · participants in
-          <a href="https://mcoa.longevity.ge">MCOA</a> counter-weight calibration.
+          <a href="https://mcoa.longevity.ge">MCAOA</a> counter-weight calibration.
         </p>
       </div>
     </details>

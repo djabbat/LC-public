@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon (lead) | Project coordination, AI development, data analysis | Active |\n| TBD (academic lab) | Independent validation, biological assays | TBD |\n| TBD (hardware partner) | Stage manufacturing, camera integration | TBD |\n| TBD (software partner) | AI agent development, UI/UX | TBD |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC (lead) | Project coordination, AI development, data analysis | Active |\n| TBD (academic lab) | Independent validation, biological assays | TBD |\n| TBD (hardware partner) | Stage manufacturing, camera integration | TBD |\n| TBD (software partner) | AI agent development, UI/UX | TBD |"
   },
   {
     "file": "/EVIDENCE.md",

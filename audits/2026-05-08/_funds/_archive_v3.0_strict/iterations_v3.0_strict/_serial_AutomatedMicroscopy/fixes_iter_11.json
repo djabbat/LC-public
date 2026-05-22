@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Lead, coordination, funding | Confirmed |\n| University of Bristol | Biological validation, assay development | TBD |\n| Zeiss | Microscope hardware support, optics consultation | TBD |\n| FLIR (Teledyne) | Camera integration, SDK support | TBD |\n| ThorLabs | LED illuminator, optical components | TBD |\n| OpenTrons | Liquid handling automation (future integration) | TBD |\n\nAdditional partners may be added as the project progresses."
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, coordination, funding | Confirmed |\n| University of Bristol | Biological validation, assay development | TBD |\n| Zeiss | Microscope hardware support, optics consultation | TBD |\n| FLIR (Teledyne) | Camera integration, SDK support | TBD |\n| ThorLabs | LED illuminator, optical components | TBD |\n| OpenTrons | Liquid handling automation (future integration) | TBD |\n\nAdditional partners may be added as the project progresses."
   },
   {
     "file": "CONCEPT.md",

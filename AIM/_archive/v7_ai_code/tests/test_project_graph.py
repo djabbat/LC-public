@@ -79,12 +79,12 @@ def test_goal_creates_soft_edge(isolated):
     write_proj(isolated, "P", """
         name: P
         goals:
-          - "Integrate with MCOA framework"
+          - "Integrate with MCAOA framework"
     """)
-    write_proj(isolated, "MCOA", "name: MCOA\n")
+    write_proj(isolated, "MCAOA", "name: MCAOA\n")
     from agents.project_graph import build
     g = build()
-    assert any(e.dst == "MCOA" and e.kind == "goal" for e in g.edges)
+    assert any(e.dst == "MCAOA" and e.kind == "goal" for e in g.edges)
 
 
 def test_note_creates_soft_edge(isolated):

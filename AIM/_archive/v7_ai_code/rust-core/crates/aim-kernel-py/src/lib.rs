@@ -466,7 +466,7 @@ fn log_decision(
         .unwrap_or_else(|_| {
             let home = std::env::var("HOME").unwrap_or_default();
             std::path::PathBuf::from(home)
-                .join("Desktop/LongevityCommon/AIM/Patients")
+                .join("Desktop/LC/AIM/Patients")
         });
     core::log_decision(
         &db,
@@ -633,7 +633,7 @@ fn decide(
         .unwrap_or_else(|_| {
             let home = std::env::var("HOME").unwrap_or_default();
             std::path::PathBuf::from(home)
-                .join("Desktop/LongevityCommon/AIM/Patients")
+                .join("Desktop/LC/AIM/Patients")
         });
     // Best-effort logging — failures log to stderr but don't fail decide()
     if let Err(e) = core::log_decision(

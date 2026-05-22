@@ -44,7 +44,7 @@ pub fn resolve_relative(p: PathBuf) -> PathBuf {
     }
     let home = std::env::var("HOME").unwrap_or_default();
     PathBuf::from(home)
-        .join("Desktop/LongevityCommon/AIM")
+        .join("Desktop/LC/AIM")
         .join(&p)
 }
 

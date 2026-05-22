@@ -1,4 +1,4 @@
-# Correction Candidates — LongevityCommon
+# Correction Candidates — LC
 Generated: 2026-04-19T16:31:17.369969
 Total candidates: **746** (LOW_SCORE mismatches)
 

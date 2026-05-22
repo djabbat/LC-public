@@ -1,7 +1,7 @@
-# LongevityCommon · EVIDENCE
+# LC · EVIDENCE
 
 **Status:** Empirical & theoretical support inventory · 2026-04-28 (CONCEPT v5.6)
-**Source:** Article `~/Desktop/LongevityCommon.md` v5.6 References + per-subproject EVIDENCE.md.
+**Source:** Article `~/Desktop/LC.md` v5.6 References + per-subproject EVIDENCE.md.
 
 ---
 
@@ -76,7 +76,7 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 | χ_Ze correlates with PhenoAge r=0.67 | ⚠ Exploratory (post-hoc, not pre-registered) | — | Bonferroni / replication required |
 | AUC=0.81 accelerated aging detection | ⚠ Exploratory | — | winner's curse risk; pre-reg N≥2000 required |
 | CDATA causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
-| MCOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
+| MCAOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
 
 ## §5. What is deliberately NOT cited
 

@@ -2,7 +2,7 @@
 name = "lc-shared-types"
 version = "0.1.0"
 edition = "2021"
-description = "LongevityCommon shared types — canonical Ze constants, parameter registry, SI units, JSON Schema for PARAMETERS.md."
+description = "LC shared types — canonical Ze constants, parameter registry, SI units, JSON Schema for PARAMETERS.md."
 license = "MIT OR Apache-2.0"
 
 [dependencies]

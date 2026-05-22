@@ -9,7 +9,7 @@
 - **Evidence:** 3 – большинство эмпирических результатов exploratory, pre-registered тесты v1 дали NULL; pilot подтверждают v*, но на малых N.
 - **Falsifiability:** 5 – чётко заданы числовые пороги для M4, CDATA, Ze, FLC; N≥2000, α=0.001, partial r²<0.05.
 - **Deliverables:** 4 – 5 подпроектов в разной степени готовности; социальный слой описан; EIC заявка в работе; отсутствует CI для полного стека.
-- **Novelty:** 4 – оригинальное сочетание MCOA, Ze ansatz с квантовыми аналогиями, BioSense on-device biomarker.
+- **Novelty:** 4 – оригинальное сочетание MCAOA, Ze ansatz с квантовыми аналогиями, BioSense on-device biomarker.
 - **Risk:** 3 – высокие риски (гипотезный статус, отсутствие подписанных LoI, single-point-of-failure Lezhava, GDPR блокер FCLC), но адекватно идентифицированы и митигированы.
 
 ## Checklist (✓/✗ each + explanation)

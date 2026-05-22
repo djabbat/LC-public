@@ -29,7 +29,7 @@ generalist = "http://127.0.0.1:8774"
 [security]
 require_auth   = false      # AIM_REQUIRE_AUTH=1 in prod
 cors_origin    = "http://127.0.0.1:4002"
-sandbox_root   = ""         # empty → $HOME/Desktop/LongevityCommon/AIM/Patients
+sandbox_root   = ""         # empty → $HOME/Desktop/LC/AIM/Patients
 sandbox_extensions = ["md", "txt", "json", "csv", "yml", "yaml", "py", "rs", "ex", "exs", "heex", "toml", "html", "log"]
 
 [llm]

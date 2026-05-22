@@ -612,7 +612,7 @@ mod tests {
         let (_d, t, _c) = fresh();
         t.upsert("A", Some("a@x.com"), None, Some("FCLC"), None).unwrap();
         t.upsert("B", Some("b@x.com"), None, Some("FCLC,Ze"), None).unwrap();
-        t.upsert("C", Some("c@x.com"), None, Some("MCOA"), None).unwrap();
+        t.upsert("C", Some("c@x.com"), None, Some("MCAOA"), None).unwrap();
         let v = t.by_project("FCLC").unwrap();
         let names: Vec<&str> = v.iter().map(|c| c.name.as_str()).collect();
         assert_eq!(names, vec!["A", "B"]);

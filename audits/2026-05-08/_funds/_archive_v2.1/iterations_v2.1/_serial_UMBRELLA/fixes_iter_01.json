@@ -15,7 +15,7 @@
     "file": "UMBRELLA/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "1. All empirical results are exploratory and may reflect p-hacking (Ioannidis 2005).\n2. Pilot sample sizes are small (N≤2222) and underpowered for confirmatory inference.\n3. Key publications (MCOA, Ze, BioSense) are not peer-reviewed.\n4. The CDATA counter is inconclusive.\n5. FCLC is semi-honest only, not yet GDPR-compliant for medical data.\n6. No prospective validation cohort exists.\n"
+    "body": "1. All empirical results are exploratory and may reflect p-hacking (Ioannidis 2005).\n2. Pilot sample sizes are small (N≤2222) and underpowered for confirmatory inference.\n3. Key publications (MCAOA, Ze, BioSense) are not peer-reviewed.\n4. The CDATA counter is inconclusive.\n5. FCLC is semi-honest only, not yet GDPR-compliant for medical data.\n6. No prospective validation cohort exists.\n"
   },
   {
     "file": "UMBRELLA/THEORY.md",

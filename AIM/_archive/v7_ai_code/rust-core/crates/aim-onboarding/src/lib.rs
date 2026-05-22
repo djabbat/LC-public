@@ -2,7 +2,7 @@
 //! proposals via per-template question scripts.
 //!
 //! Closes the "empty scaffold + AI fills later" gap identified in
-//! `~/Desktop/LongevityCommon/AIM/docs/AIM_FS/ONBOARDING.md`.
+//! `~/Desktop/LC/AIM/docs/AIM_FS/ONBOARDING.md`.
 //!
 //! # Quickstart
 //!

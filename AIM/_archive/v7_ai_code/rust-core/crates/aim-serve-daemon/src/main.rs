@@ -207,14 +207,14 @@ fn locate_binary(name: &str) -> Option<PathBuf> {
 fn workspace_target_release(name: &str) -> PathBuf {
     let home = std::env::var("HOME").unwrap_or_default();
     PathBuf::from(home)
-        .join("Desktop/LongevityCommon/AIM/rust-core/target/release")
+        .join("Desktop/LC/AIM/rust-core/target/release")
         .join(name)
 }
 
 fn workspace_target_debug(name: &str) -> PathBuf {
     let home = std::env::var("HOME").unwrap_or_default();
     PathBuf::from(home)
-        .join("Desktop/LongevityCommon/AIM/rust-core/target/debug")
+        .join("Desktop/LC/AIM/rust-core/target/debug")
         .join(name)
 }
 

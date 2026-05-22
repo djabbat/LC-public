@@ -1,7 +1,7 @@
 [Unit]
 Description=AIM Hive Queen — Axum HTTP aggregator (port 8090)
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/AI/HIVE_ARCHITECTURE.md
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
+Documentation=file:///home/oem/Desktop/LC/AIM/AI/HIVE_ARCHITECTURE.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
 After=network-online.target
 Wants=network-online.target
 

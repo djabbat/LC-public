@@ -31,7 +31,7 @@
    В CONCEPT.md раздел Limitations из 8 пунктов. В EVIDENCE.md есть другой список Limitations & Known Biases. Наличие раздела — да, но см. пункт 9.
 
 6. **✓ Consortium / collaboration plan**  
-   В CONCEPT.md таблица партнёров (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусом. В DESIGN.md упомянуты James Smith, Lena Zhang. План есть.
+   В CONCEPT.md таблица партнёров (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусом. В DESIGN.md упомянуты James Smith, Lena Zhang. План есть.
 
 7. **✓ Reference reality + match**  
    Аудит всех 9 ссылок из EVIDENCE.md: каждая ведёт на реальную публикацию (PubMed/Crossref/arXiv) и содержание соответствует утверждению. См. таблицу ниже. Score 5.

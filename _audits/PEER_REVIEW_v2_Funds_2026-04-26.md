@@ -6,19 +6,19 @@
 (Wellcome Leap, ARPA-H, EIC Pathfinder Open 2027, Gates Foundation,
 Schmidt Sciences, NIH R01, Impetus Longevity)
 **Объект:** CommonHealth umbrella + 7 подпроектов
-(MCOA, FCLC, Ze, CDATA, BioSense, Ontogenesis, HAP)
+(MCAOA, FCLC, Ze, CDATA, BioSense, Ontogenesis, HAP)
 **Принципалы:** PI Jaba Tkemaladze (independent researcher, Грузия);
 host org — Georgia Longevity Alliance NGO, рег. №404506520
 **Источники:**
-- `/home/oem/Desktop/LongevityCommon/CONCEPT.md` (v5.1)
+- `/home/oem/Desktop/LC/CONCEPT.md` (v5.1)
 - CONCEPT/EVIDENCE/THEORY/PARAMETERS/STATE.md всех 7 подпроектов
 - Wave 1 reviews: `_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`,
  `_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
 - Wave 1 corrections log: `_audits/COMMIT_LOG_FINAL_2026-04-26.md`
 
-**Методика:** Wave 1 уже выявил citation fabrications (MCOA 9/9, Ze 1, BioSense 4,
+**Методика:** Wave 1 уже выявил citation fabrications (MCAOA 9/9, Ze 1, BioSense 4,
 Ontogenesis 6+1 flagged, HAP 10/10) и структурные противоречия (CDATA Sobol,
-Ze Tsirelson, MCOA M3, FCLC ε=10). Применённые исправления зафиксированы
+Ze Tsirelson, MCAOA M3, FCLC ε=10). Применённые исправления зафиксированы
 в COMMIT_LOG_FINAL. Текущая рецензия оценивает экосистему ПОСЛЕ Wave 1
 коррекций с точки зрения серьёзного фонда — не журнала. Фокус: translational
 potential, budget realism, team capacity, IP/licensing, open science,
@@ -42,13 +42,13 @@ capacity-building, sequencing strategy.
 | NIH R01 | REJECT | US PI mandatory; нет preliminary data; нет NIH grant history у PI. |
 | Impetus Longevity | N/A | Umbrella не является testable intervention или biomarker validation. Не подходит по scope. |
 
-## MCOA
+## MCAOA
 
 | Фонд | Вердикт | Обоснование |
 |------|---------|-------------|
 | Wellcome Leap | REJECT | Мета-теория без количественных предсказаний; после 9/9 fabrications любая заявка будет воспринята как недобросовестная. |
 | ARPA-H | REJECT | Нет технологического прототипа; философская рамка не соответствует health breakthrough. |
-| EIC Pathfinder Open 2027 | REJECT | Теория не фальсифицируема (противоречие M3: w_i = Placeholder). Wave 1 показал, что MCOA не готова к peer review. |
+| EIC Pathfinder Open 2027 | REJECT | Теория не фальсифицируема (противоречие M3: w_i = Placeholder). Wave 1 показал, что MCAOA не готова к peer review. |
 | Gates Foundation | REJECT | Scope не пересекается с глобальным здоровьем. |
 | Schmidt Sciences | COND | Теоретически, если переформулировать как AI-driven модель старения (параметризация w_i). Но fabrications уничтожают доверие; нужен полный рестарт. COND только после independent replication. |
 | NIH R01 | REJECT | Нет предварительных данных; R01 требует сильные preliminary results. |
@@ -139,7 +139,7 @@ capacity-building, sequencing strategy.
 
 Однако эти сильные стороны перевешиваются слабостями: нет консорциума, нет signed LoIs, PI не аффилирован с university, и fabrications в подпроектах уничтожают доверие к umbrella.
 
-## MCOA
+## MCAOA
 1. **Публикация в Nature Aging (перспектива)** — Tkemaladze подал Perspective, что показывает попытку диалога с мейнстримом. Для Impetus или Schmidt это могло бы быть сильным сигналом, если бы не fabrications.
 2. **Multi-Counter Architecture** — визуально простая метафора (multiple “clocks”). Потенциально может быть переосмыслена как AI ensemble model.
 3. **Наличие математической формулировки (w_i)** — хотя w_i — Placeholder, сама идея параметризации может быть развита.
@@ -188,7 +188,7 @@ capacity-building, sequencing strategy.
 5. **Нет formal consortium agreement** — для Wellcome Leap и ARPA-H обязательны. 
 6. **Risk register fabrications** — любой фонд запросит due diligence; факт массовых fabrications в Wave 1 должен быть раскрыт, что уничтожит заявку.
 
-## MCOA
+## MCAOA
 1. **9/9 PMID fabricated** — после исправлений остаются вопросы к integrity. 
 2. **w_i = Placeholder** — теория нефальсифицируема. 
 3. **Нет pre-registered predictions**. 
@@ -240,12 +240,12 @@ capacity-building, sequencing strategy.
 
 | # | Риск | Вероятность | Влияние (impact) | Mitigation (существующее / планируемое) | Residual risk |
 |---|------|-------------|------------------|-----------------------------------------|---------------|
-| R1 | Massive citation fabrication: после Wave 1 коррекций остаются неверифицированные ссылки; Smith J. 2025 не подтверждён, Sun 2016 удалён, полный reverse-verification всех 24+ ссылок не проведён | Medium (высокая, т.к. fabrication была массовой и системной) | Critical — потеря доверия фонда, ретракция публикации, репутационный ущерб, невозможность подачи в тир-1 фонды | Частичная замена PMID в MCOA, FCLC, CDATA, BioSense; НЕТ полного librarian-level аудита; НЕТ плана верификации оставшихся ссылок | High |
+| R1 | Massive citation fabrication: после Wave 1 коррекций остаются неверифицированные ссылки; Smith J. 2025 не подтверждён, Sun 2016 удалён, полный reverse-verification всех 24+ ссылок не проведён | Medium (высокая, т.к. fabrication была массовой и системной) | Critical — потеря доверия фонда, ретракция публикации, репутационный ущерб, невозможность подачи в тир-1 фонды | Частичная замена PMID в MCAOA, FCLC, CDATA, BioSense; НЕТ полного librarian-level аудита; НЕТ плана верификации оставшихся ссылок | High |
 | R2 | Single-PI dependency (Tkemaladze — единственный PI, bus factor = 1) | High (нет co-PI, нет заместителя, все архитектурные решения принимает один человек) | High — при недееспособности PI проект останавливается; ни один фонд не одобрит single-PI без succession plan | Нет co-PI; нет documented design decisions; документация в стадии формирования | High |
 | R3 | Геополитический риск Грузия: близость к RU, нестабильность, ограничение сотрудничества с EU партнёрами | Medium (текущая ситуация стабильна, но риски санкций, логистики, ограничения виз) | Medium — возможные задержки, сложности с привлечением EU partners, отказ страховых покрытий | Юридическая регистрация NGO в Грузии, но нет геополитического хеджирования (резервная юрисдикция) | Medium–High |
 | R4 | NGO host (Georgia Longevity Alliance) не имеет опыта управления грантами >€500K (заявка на €3M); нет CFO, нет грант-менеджера | High (отсутствие инфраструктуры, бухгалтерии, compliance) | Critical — фонды требуют auditable financial management; отсутствие грантового опыта = immediate rejection в EIC, Wellcome, Gates | Tkemaladze указывает опыт управления бюджетом кафедры ($200K/yr); нет hiring plan для CFO/grant manager | High |
 | R5 | PhD pipeline: указан 1 PhD candidate (Lezhava) для capacity-building claim; недостаточно для масштаба заявки | High (для capacity-building нужна критическая масса студентов, минимум 3–4) | Medium — фонды (Wellcome, Gates) ожидают pipeline минимум 3–5 PhD; иначе claim выглядит натянутым | Планируется привлечение студентов Javakheti University (Akhaltsikhe), но нет подтверждённых commitments | Medium |
-| R6 | Theoretical incoherence: MCOA M3 + CDATA Sobol + Ze Tsirelson — разрозненные модели без единой формальной теории | Medium (комбинация математически несовместима: M3 — детерминированная, CDATA — статистическая, Ze — квантовая) | High — рецензенты укажут на отсутствие концептуальной связности; снижение научной убедительности | Нет unified framework; ссылки на “deep learning meets quantum biology” не подкреплены публикациями | High |
+| R6 | Theoretical incoherence: MCAOA M3 + CDATA Sobol + Ze Tsirelson — разрозненные модели без единой формальной теории | Medium (комбинация математически несовместима: M3 — детерминированная, CDATA — статистическая, Ze — квантовая) | High — рецензенты укажут на отсутствие концептуальной связности; снижение научной убедительности | Нет unified framework; ссылки на “deep learning meets quantum biology” не подкреплены публикациями | High |
 | R7 | Privacy/regulatory risk: FCLC ε=10 не соответствует ISO/IEC 27559; не проведён GDPR clearance для обработки данных из ЕС | Medium (заявка предполагает международные данные, ε=10 слишком слабый для медицинских данных) | Critical — нарушение GDPR/ISO блокирует использование в клинических исследованиях; европейские партнёры не смогут участвовать | ε снижен с 100 до 10, но формального аудита не было; нет DPA/DPO; нет data processing agreement | High |
 | R8 | Technology debt: FCLC stub PATE; w_i Placeholder (не обучены веса) | High (прототип не реализует ключевой модуль) | Medium — без работающего PATE система не обеспечивает privacy guarantee, демо нерепрезентативно | Обещано завершить к Q4 2026; но нет roadmap и выделенного инженера | Medium |
 | R9 | Reputational risk: Tkemaladze 149 публикаций, но ~10 в PubMed; высокий процент в нерецензируемых источниках | Medium (часть публикаций – тезисы, локальные журналы) | High — фонды проверяют publication track record; несоответствие заявленного объёма и индексируемого качества | Ссылки на PubMed постепенно добавляются; но legacy остаётся; необходима объяснительная записка | Medium |
@@ -297,14 +297,14 @@ capacity-building, sequencing strategy.
 
 ### §3d. Citation integrity post-corrections
 
-После Wave 1 коррекций часть fabrication исправлена. В MCOA 9/9 PMID заменены на реальные PubMed-записи (Hernandez-Segura 28844647, Schaum 32669715, Balaban 15734681, Mathieson 29449567, Enge 28965763, Parrinello 12855956, Janke 32107477; Sun 2016 удалён). В PARAMETERS α_Tel скорректирован: битый PMID 2038241 заменён на 2342578 (Harley 1990) и 1631178 (Allsopp 1992). В Ze удалён фальшивый arXiv 2501.12345 (Kerenidis). В CDATA Goetz & Anderson 2010 DOI 10.1038/nature08117 заменён на 10.1038/nrg2774 (PMID 20395968). В BioSense 4 PMID исправлены (Voytek 26424877, Iyengar 8967405, Kleiger 3812275, Task Force 8598068). В Ontogenesis удалён гипотетический DOI 10.1016/j.dcn.2021.100971.
+После Wave 1 коррекций часть fabrication исправлена. В MCAOA 9/9 PMID заменены на реальные PubMed-записи (Hernandez-Segura 28844647, Schaum 32669715, Balaban 15734681, Mathieson 29449567, Enge 28965763, Parrinello 12855956, Janke 32107477; Sun 2016 удалён). В PARAMETERS α_Tel скорректирован: битый PMID 2038241 заменён на 2342578 (Harley 1990) и 1631178 (Allsopp 1992). В Ze удалён фальшивый arXiv 2501.12345 (Kerenidis). В CDATA Goetz & Anderson 2010 DOI 10.1038/nature08117 заменён на 10.1038/nrg2774 (PMID 20395968). В BioSense 4 PMID исправлены (Voytek 26424877, Iyengar 8967405, Kleiger 3812275, Task Force 8598068). В Ontogenesis удалён гипотетический DOI 10.1016/j.dcn.2021.100971.
 
 Однако в Ontogenesis остаётся ссылка «Smith J. 2025» — не верифицированный источник; по состоянию на 26.04.2026 такая публикация не обнаружена ни в PubMed, ни в arXiv, ни в репозиториях bioRxiv/medRxiv. Это означает, что раздел Ontogenesis по-прежнему содержит подозрение на fabrication. Для фондов это критично: если разумное сомнение остаётся хотя бы в одной цитате, весь проект получает ярлык «integrity risk».
 
 Компонент HAP остаётся в stub state: 10/10 fabrication по-прежнему не исправлены, единственная цитата (Tkemaladze в Longevity Horizon) не индексируется. HAP является одним из ключевых блоков системы (Hormonal Aging Profile). Невозможно рекомендовать проект с непроверяемой ссылочной базой в важном компоненте.
 
 **Итог:** 
-- **Acceptable but flagged** — MCOA, FCLC, CDATA, BioSense (коррекции проведены, но полный аудит не завершён). 
+- **Acceptable but flagged** — MCAOA, FCLC, CDATA, BioSense (коррекции проведены, но полный аудит не завершён). 
 - **Unacceptable** — Ontogenesis (Smith J. 2025) и HAP (stub with fabrications). 
 
 Любой программный офицер фонда запросит full reverse-verification всех 24+ ссылок до серьёзного рассмотрения. Это работа librarian-level (~40 часов), которая не выполнена. Рекомендуется незамедлительно поручить её независимому библиографу (например, через университетскую библиотеку). До получения заключения citation integrity остаётся под сомнением.
@@ -318,13 +318,13 @@ capacity-building, sequencing strategy.
 - ✅ **Public repository с LICENSE** (например, Apache 2.0) для всего кода, включая fclc-core. 
 - ✅ **Risk register с разделом "Integrity & fabrication mitigation"** — описать audit процедуры. 
 
-## MCOA (для Schmidt Sciences – условно)
+## MCAOA (для Schmidt Sciences – условно)
 - ❌ **Полный рестарт теории** — заменить w_i на вычислимые параметры. 
 - ❌ **Pre-register 3 checkable predictions** (например, на основе epigenetic datasets). 
-- ✅ **Independent replication MCOA без участия Tkemaladze**. 
+- ✅ **Independent replication MCAOA без участия Tkemaladze**. 
 - ❌ **Поиск external collaborator (UCSD/Stanford)** для со-PI позиции. 
 
-Но реалистично: MCOA не готов к подаче ни в один фонд в 2026–2027.
+Но реалистично: MCAOA не готов к подаче ни в один фонд в 2026–2027.
 
 ## FCLC (для EIC/Gates/Wellcome)
 - **Для EIC**: 
@@ -397,7 +397,7 @@ capacity-building, sequencing strategy.
 ## **Никогда не подавать** 
 - **Ze, Ontogenesis, HAP** — без полной реабилитации (годы). 
 - **BioSense** — без положительного контролируемого испытания. 
-- **MCOA** — без independent replication. 
+- **MCAOA** — без independent replication. 
 
 ## Общее резюме
 Рекомендуется сфокусироваться на **FCLC→EIC** как основном треке 2027. CDATA→Impetus как быстрый тест. Остальные подпроекты не готовы к подаче в 2026–2028. CommonHealth umbrella может войти как overhead в EIC, но не самостоятельная заявка.
@@ -414,7 +414,7 @@ capacity-building, sequencing strategy.
 2. **NGO capacity** — нанят грант-менеджер с опытом работы с грантами >€1M, утверждён финансовый план, подготовлена проектная заявка с аудированной отчётностью. 
 3. **PI diversification** — назначен co-PI из Javakheti University или зарубежного партнёра, задокументированы полномочия и succession plan. 
 4. **IP/licensing** — все репозитории получили LICENSE файлы, проведён trademark search, решён вопрос с DeepSeek (DPA или замена на локальную LLM). 
-5. **Теоретическая согласованность** — опубликован pre-print (arXiv или рецензируемый журнал), демонстрирующий формальную связь между MCOA M3, CDATA Sobol и Ze Tsirelson; разослан коллегам для external review. 
+5. **Теоретическая согласованность** — опубликован pre-print (arXiv или рецензируемый журнал), демонстрирующий формальную связь между MCAOA M3, CDATA Sobol и Ze Tsirelson; разослан коллегам для external review. 
 
 После выполнения этих критериев рекомендация может быть повышена до **WATCH** (возможность подачи в EIC Pathfinder при условии подтверждения Associated Country статуса Грузии) или **INVEST** (для конкретного подпроекта, например, FCLC prototype). 
 

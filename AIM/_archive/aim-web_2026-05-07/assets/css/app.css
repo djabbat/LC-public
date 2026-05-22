@@ -104,7 +104,7 @@
 
 /* This file is for your main application CSS */
 
-/* AIM HiveLive — minimal layout matching the rest of LongevityCommon */
+/* AIM HiveLive — minimal layout matching the rest of LC */
 .container { max-width: 1100px; margin: 0 auto; padding: 24px; font-family: -apple-system, system-ui, sans-serif; }
 .hdr h1 { margin: 0 0 6px; font-size: 28px; }
 .hdr .lead { margin: 0 0 18px; color: #52525b; }

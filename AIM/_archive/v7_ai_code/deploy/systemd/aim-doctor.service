@@ -6,16 +6,16 @@ Wants=aim-llm.service aim-medkb.service
 [Service]
 Type=simple
 User=oem
-WorkingDirectory=/home/oem/Desktop/LongevityCommon/AIM/rust-core
+WorkingDirectory=/home/oem/Desktop/LC/AIM/rust-core
 EnvironmentFile=-/home/oem/.aim_env
 Environment="RUST_LOG=info"
 Environment="AIM_ENV=prod"
-ExecStart=/home/oem/Desktop/LongevityCommon/AIM/rust-core/target/release/aim-doctor
+ExecStart=/home/oem/Desktop/LC/AIM/rust-core/target/release/aim-doctor
 Restart=always
 RestartSec=3
 NoNewPrivileges=true
 ProtectSystem=strict
-ReadWritePaths=/home/oem/Desktop/LongevityCommon/AIM
+ReadWritePaths=/home/oem/Desktop/LC/AIM
 PrivateTmp=true
 
 [Install]

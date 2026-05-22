@@ -33,6 +33,6 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---|---|---|\n| LongevityCommon (lead) | Project coordination, AI integration, data analysis | Confirmed |\n| CDATA team (internal) | Primary user, biological validation | Confirmed |\n| OpenFlexure community | Stage design, calibration protocols | Advisory |\n| FLIR / Teledyne | Camera specification, technical support | Contacted |\n| ThorLabs | LED fluorescence illuminator supply | Vendor |\n| University of Cambridge (Biophysics) | Independent audit of AI decision logs | Pending MOU |"
+    "body": "| Partner | Role | Status |\n|---|---|---|\n| LC (lead) | Project coordination, AI integration, data analysis | Confirmed |\n| CDATA team (internal) | Primary user, biological validation | Confirmed |\n| OpenFlexure community | Stage design, calibration protocols | Advisory |\n| FLIR / Teledyne | Camera specification, technical support | Contacted |\n| ThorLabs | LED fluorescence illuminator supply | Vendor |\n| University of Cambridge (Biophysics) | Independent audit of AI decision logs | Pending MOU |"
   }
 ]

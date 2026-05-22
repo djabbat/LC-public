@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_FCLC
 
-Path: `/home/oem/Desktop/LongevityCommon/FCLC`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/FCLC`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-48K	/home/oem/Desktop/LongevityCommon/FCLC
+48K	/home/oem/Desktop/LC/FCLC
 ```
 **Extensions:** .ex=1, .css=1
 ## Tree (depth=2, max 200 entries)

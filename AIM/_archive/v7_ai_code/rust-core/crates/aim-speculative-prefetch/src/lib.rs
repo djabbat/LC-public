@@ -36,8 +36,8 @@ static DOI_RE: Lazy<Regex> = Lazy::new(|| {
 });
 
 const PROJECTS: &[&str] = &[
-    "FCLC", "MCOA", "Ze", "BioSense", "CDATA", "AIM",
-    "Annals", "PhD", "Books", "GLA", "LongevityCommon",
+    "FCLC", "MCAOA", "Ze", "BioSense", "CDATA", "AIM",
+    "Annals", "PhD", "Books", "GLA", "LC",
 ];
 
 const MAX_PATH_PREDICTIONS: usize = 3;

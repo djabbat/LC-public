@@ -53,7 +53,7 @@ pub struct ToolSpec {
 impl LabRunnerConfig {
     /// Build a default Claude-Code-headless lab runner config for an
     /// experiment that lives at `<project_root>` (e.g.
-    /// `/home/oem/Desktop/LongevityCommon/AutomatedMicroscopy`).
+    /// `/home/oem/Desktop/LC/AutomatedMicroscopy`).
     pub fn claude_code_default(name: &str, project_root: &Path) -> Self {
         Self {
             name: name.to_string(),
@@ -161,7 +161,7 @@ mod tests {
     fn to_toml_roundtrip() {
         let cfg = LabRunnerConfig::claude_code_default(
             "AutomatedMicroscopy",
-            Path::new("/home/oem/Desktop/LongevityCommon/AutomatedMicroscopy"),
+            Path::new("/home/oem/Desktop/LC/AutomatedMicroscopy"),
         );
         let s = cfg.to_toml();
         assert!(s.contains("[server]"));

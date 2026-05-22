@@ -27,6 +27,6 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject (list to be finalized):\n- **Lead institution:** LongevityCommon (infrastructure development and coordination)\n- **Hardware partner:** TBD (Zeiss IM 35 retrofit specialist or open-source hardware community)\n- **AI/software partner:** TBD (Claude Code integration and audit trail system)\n- **Validation partner:** TBD (independent lab for CDATA Phase A validation experiments)\n- **Funding agency:** TBD"
+    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject (list to be finalized):\n- **Lead institution:** LC (infrastructure development and coordination)\n- **Hardware partner:** TBD (Zeiss IM 35 retrofit specialist or open-source hardware community)\n- **AI/software partner:** TBD (Claude Code integration and audit trail system)\n- **Validation partner:** TBD (independent lab for CDATA Phase A validation experiments)\n- **Funding agency:** TBD"
   }
 ]

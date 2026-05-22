@@ -1,6 +1,6 @@
 //! AIM_FS — three-tier filesystem layer for AIM.
 //!
-//! See `~/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md` for the design.
+//! See `~/Desktop/LC/AIM/docs/AIM_FS/SPEC.md` for the design.
 //!
 //! Tier 1: user profile (AIM-curated, approval queue gates writes).
 //! Tier 2: user-defined projects (scaffold from CONCEPT, 11-file core).

@@ -34,7 +34,7 @@
    ✓ Явный раздел в CONCEPT.md и EVIDENCE.md (8+ пунктов).
 
 6. **Consortium / collaboration plan**  
-   ✓ Таблица с партнёрами, ролями и статусами (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). У некоторых статус TBD, но план есть.
+   ✓ Таблица с партнёрами, ролями и статусами (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). У некоторых статус TBD, но план есть.
 
 7. **Reference reality + match**  
    ✗ **Проблемы:**  

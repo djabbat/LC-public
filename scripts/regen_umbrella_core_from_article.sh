@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # regen_umbrella_core_from_article.sh — helper for regenerating umbrella core
-# .md files from the canonical article ~/Desktop/LongevityCommon.md.
+# .md files from the canonical article ~/Desktop/LC.md.
 #
 # This script DOES NOT auto-rewrite the .md files (that requires LLM judgment).
 # It DOES:
@@ -20,7 +20,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-ARTICLE="${HOME}/Desktop/LongevityCommon.md"
+ARTICLE="${HOME}/Desktop/LC.md"
 DATE_TAG="$(date +%Y-%m-%d)"
 ARCHIVE_DIR="${ROOT}/_archive/v_pre_${DATE_TAG}"
 
@@ -101,8 +101,8 @@ The following files need to be regenerated from the article. Use Claude Code
 with this prompt template:
 
 ────────────────────────────────────────────────────────────────────────────
-Read ~/Desktop/LongevityCommon.md (canonical article, md5=${NEW_MD5}).
-Regenerate the umbrella core .md files at ~/Desktop/LongevityCommon/:
+Read ~/Desktop/LC.md (canonical article, md5=${NEW_MD5}).
+Regenerate the umbrella core .md files at ~/Desktop/LC/:
 
   1. CONCEPT.md      — cross-cutting status, 5 components, falsifiability,
                        threat model. Pin article_md5: ${NEW_MD5} in §10.

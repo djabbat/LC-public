@@ -58,22 +58,22 @@ Host: `server`  Path: `/home/jaba/web/aim`  Date: 2026-05-08
 /home/jaba/web/aim/realtime/mix.exs
 /home/jaba/web/aim/realtime/config
 /home/jaba/web/aim/realtime/lib
-/home/jaba/web/aim/MCOA
-/home/jaba/web/aim/MCOA/Cargo.toml
-/home/jaba/web/aim/MCOA/Cargo.lock
-/home/jaba/web/aim/MCOA/crates
-/home/jaba/web/aim/MCOA/frontend
-/home/jaba/web/aim/MCOA/results
-/home/jaba/web/aim/MCOA/OPEN_PROBLEMS.md
-/home/jaba/web/aim/MCOA/EVIDENCE.md
-/home/jaba/web/aim/MCOA/README.md
-/home/jaba/web/aim/MCOA/DESIGN.md
-/home/jaba/web/aim/MCOA/LICENSE
-/home/jaba/web/aim/MCOA/scripts
-/home/jaba/web/aim/MCOA/THEORY.md
-/home/jaba/web/aim/MCOA/STATE.md
-/home/jaba/web/aim/MCOA/backend
-/home/jaba/web/aim/MCOA/docs
+/home/jaba/web/aim/MCAOA
+/home/jaba/web/aim/MCAOA/Cargo.toml
+/home/jaba/web/aim/MCAOA/Cargo.lock
+/home/jaba/web/aim/MCAOA/crates
+/home/jaba/web/aim/MCAOA/frontend
+/home/jaba/web/aim/MCAOA/results
+/home/jaba/web/aim/MCAOA/OPEN_PROBLEMS.md
+/home/jaba/web/aim/MCAOA/EVIDENCE.md
+/home/jaba/web/aim/MCAOA/README.md
+/home/jaba/web/aim/MCAOA/DESIGN.md
+/home/jaba/web/aim/MCAOA/LICENSE
+/home/jaba/web/aim/MCAOA/scripts
+/home/jaba/web/aim/MCAOA/THEORY.md
+/home/jaba/web/aim/MCAOA/STATE.md
+/home/jaba/web/aim/MCAOA/backend
+/home/jaba/web/aim/MCAOA/docs
 /home/jaba/web/aim/_audits
 /home/jaba/web/aim/_audits/COMMIT_LOG_2026-04-26.md
 /home/jaba/web/aim/_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md
@@ -216,20 +216,20 @@ Host: `server`  Path: `/home/jaba/web/aim`  Date: 2026-05-08
 ./Proteostasis/crates/proteostasis_counter/Cargo.toml
 ./Proteostasis/backend/Cargo.toml
 ./server/Cargo.toml
-./MCOA/Cargo.toml
-./MCOA/crates/mcoa_api/Cargo.toml
+./MCAOA/Cargo.toml
+./MCAOA/crates/mcoa_api/Cargo.toml
 ---elixir---
 ./Proteostasis/frontend/mix.exs
 ./Proteostasis/frontend/proteostasis_web/mix.exs
 ./realtime/mix.exs
-./MCOA/frontend/mix.exs
+./MCAOA/frontend/mix.exs
 ./EpigeneticDrift/frontend/epigenetic_web/mix.exs
 ---go---
 ---php---
 ---python---
 ./Proteostasis/scripts/calibrate.py
-./MCOA/scripts/compare_mcoa_cdata.py
-./MCOA/scripts/compare_all.py
+./MCAOA/scripts/compare_mcoa_cdata.py
+./MCAOA/scripts/compare_all.py
 ./EpigeneticDrift/scripts/calibrate.py
 ./BioSense/src/ze_alpha_peak.py
 ./BioSense/src/ze_dortmund_pipeline.py
@@ -243,15 +243,15 @@ Host: `server`  Path: `/home/jaba/web/aim`  Date: 2026-05-08
 ```
 ### `README.md` (head 200 lines)
 ```
-# LongevityCommon
+# LC
 
 **An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
 
-LongevityCommon — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
+LC — это hypothesis-stage framework, объединяющий 5 научных подпроектов + тонкий социальный слой:
 
 | Подпроект | Уровень | Что делает |
 |-----------|---------|------------|
-| **MCOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
+| **MCAOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
 | **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
@@ -259,26 +259,26 @@ LongevityCommon — это hypothesis-stage framework, объединяющий 
 
 Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
 
-Каноническая статья: `~/Desktop/LongevityCommon.md` (v5.6).
+Каноническая статья: `~/Desktop/LC.md` (v5.6).
 
 ## Status (2026-04-28, v5.6)
 
 ⚠ **Hypothesis-stage research platform.** Все эмпирические результаты — exploratory (hypothesis-generating), не confirmatory. Pre-registered тесты ранней univariate χ_Ze formulation на Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Текущая мультимодальная χ_Ze — post-hoc reformulation. AUC и r² values — exploratory с явным p-hacking risk (Ioannidis 2005, PMID 16060722).
 
-Ключевые публикации (MCOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
+Ключевые публикации (MCAOA, Ze, BioSense) — НЕ peer-reviewed на момент v5.6.
 
 ## Authority order on conflict
 
-1. `LongevityCommon/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
+1. `LC/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
 2. `<subproject>/CONCEPT.md` (internal math)
 3. `<subproject>/THEORY.md` (formal derivations)
-4. Article (`~/Desktop/LongevityCommon.md`) — full narrative
+4. Article (`~/Desktop/LC.md`) — full narrative
 5. Code — следует за CONCEPT соответствующего уровня
 
 ## Repository structure
 
 ```
-LongevityCommon/
+LC/
 ├── *.md                         # umbrella core (CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, ...)
 ├── server/                      # Rust/axum REST API (social layer)
 ├── web/                         # React+TS PWA (social layer UI)
@@ -288,7 +288,7 @@ LongevityCommon/
 ├── _archive/                    # старые версии
 ├── _audits/                     # audit reports
 │
-└── <subprojects>/               # MCOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/               # MCAOA, CDATA, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)
@@ -310,7 +310,7 @@ mix test                   # in any Phoenix subproject
 ## Grant track (active)
 
 **EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
-LongevityCommon umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
+LC umbrella как заявка по Area #2 (biomarker-based tool, BioSense — центр).
 Подробности: `docs/EIC_PartB_2026/`.
 
 ## License
@@ -325,7 +325,7 @@ Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 ```
 ### `THEORY.md` (head 200 lines)
 ```
-# LongevityCommon · THEORY (umbrella view)
+# LC · THEORY (umbrella view)
 
 **Status:** Canonical · regenerated 2026-04-28 from CONCEPT v5.6 + article §3-§4
 **Authority:** Cross-cutting math summary; полные derivations — в `<subproject>/THEORY.md`
@@ -336,9 +336,9 @@ Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 
 | Symbol | Meaning | Defined in |
 |--------|---------|------------|
-| `L_tissue(n,t)` | Tissue-level aging burden, MCOA aggregator | `MCOA/THEORY.md` |
-| `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCOA/THEORY.md` |
-| `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCOA/THEORY.md` |
+| `L_tissue(n,t)` | Tissue-level aging burden, MCAOA aggregator | `MCAOA/THEORY.md` |
+| `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCAOA/THEORY.md` |
+| `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCAOA/THEORY.md` |
 | `D(t)` | Centriolar damage (CDATA hypothetical counter) | `CDATA/THEORY.md` |
 | `I(Z)` | Impedance / KL-divergence between actual and modeled state | `Ze/THEORY.md` |
 | `τ_Ze` | Proper-time budget | `Ze/THEORY.md` |
@@ -353,7 +353,7 @@ Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 ## §2. Cross-level connections
 
 ```
-MCOA            L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
+MCAOA            L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
                                     ↑
                                  один из Dᵢ — CDATA (hypothetical)
 
@@ -400,11 +400,11 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
 | `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
 | Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
-| CDATA "Counter #1 in MCOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
+| CDATA "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
 
 ## §5. Falsifiability (operational)
 
-- **MCOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
+- **MCAOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
 - **CDATA**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
 - **Ze fixed point v***: falsified if swept-v* search на All-of-Us N≥500 показывает `v*_optimal` за пределами `[0.32, 0.58]` (sensitivity range для `k_λ ∈ [0.5, 2.0]`). **Test status:** done на N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent с theory.
 - **FCLC**: falsified as GDPR-compliant infrastructure if active server attack succeeds. Текущий статус: semi-honest secure only; известный блокер; v14 planned Q1 2027.
@@ -414,16 +414,16 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 - Все 6 канонических Ze quantities → `Ze/biosense-simulator/` (Rust)
 - Все 5 канонических BioSense computations → `BioSense/biosense-simulator/` (Rust)
 - FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
-- MCOA aggregator → `MCOA/CellDT_v4/` (planned, не реализован полностью)
+- MCAOA aggregator → `MCAOA/CellDT_v4/` (planned, не реализован полностью)
 - CDATA bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
 
 ```
 ### `STATE.md` (head 200 lines)
 ```
-# LongevityCommon · STATE
+# LC · STATE
 
 **Last touched:** 2026-04-28
-**CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LongevityCommon.md` on 2026-04-28)
+**CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LC.md` on 2026-04-28)
 
 ---
 
@@ -431,14 +431,14 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 
 - ✅ Прошлый CONCEPT/THEORY/DESIGN/EVIDENCE/OPEN_PROBLEMS архивированы в `_archive/v_pre_2026-04-28/`
 - ✅ Регенерированы новые core .md из article v5.6: CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE (this), TODO, README
-- ✅ Article на Desktop как `LongevityCommon.md` (50 KB) + .docx (40 KB)
+- ✅ Article на Desktop как `LC.md` (50 KB) + .docx (40 KB)
 - ✅ Three iteration outputs (v1/v2/v3 articles + peer reviews + audits) сохранены на Desktop как backup
 
 ## §2. Subproject status snapshot
 
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
-| **MCOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
+| **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
 | **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
@@ -473,20 +473,20 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 
 Per `DESIGN.md §5`:
 
-### §5.1 Server (`~/Desktop/LongevityCommon/server/src/`)
-- [ ] `handlers/biosense.rs` — add header `X-LongevityCommon-Status: hypothesis-stage-exploratory`
+### §5.1 Server (`~/Desktop/LC/server/src/`)
+- [ ] `handlers/biosense.rs` — add header `X-LC-Status: hypothesis-stage-exploratory`
 - [ ] `handlers/dashboard.rs` — strings "biological age" → "exploratory aging activity index (research only)"
 - [ ] `handlers/ze_guide.rs` — system prompt update: explicit "research-grade exploratory metric, not validated medical biomarker; v1 NULL retracted; v2 post-hoc; no medical advice; decline confirmatory clinical claims"
 - [ ] new endpoint `GET /api/disclosures/v5_changes` returning changelog
 - [ ] `migrations/003_health_factors.sql` — add comment "thresholds exploratory, see CONCEPT v5.6 §2"
 
-### §5.2 Web (`~/Desktop/LongevityCommon/web/src/`)
+### §5.2 Web (`~/Desktop/LC/web/src/`)
 - [ ] `pages/Dashboard.tsx` — add banner "⚠ Hypothesis-stage research platform. Metrics are exploratory, not clinical advice."
 - [ ] `pages/Studies.tsx` — each study card: "v1 NULL deprecated/superseded; v2 multimodal post-hoc"
 - [ ] `pages/Profile.tsx` — tooltip on χ_Ze: "exploratory metric; not validated on N≥2000 pre-registered cohort"
 - [ ] `components/feed/PostComposer.tsx` — DOI Crossref check; warn if DOI is Longevity Horizon
 
-### §5.3 Realtime (`~/Desktop/LongevityCommon/realtime/`)
+### §5.3 Realtime (`~/Desktop/LC/realtime/`)
 - [ ] `config/dev.exs` — port 4001 → 4500 (avoid Ze conflict)
 - [ ] BioSense live stream channel — add metadata `{disclosure: "exploratory"}`
 
@@ -498,7 +498,7 @@ Per `DESIGN.md §5`:
 - [ ] `Ze/CONCEPT.md` — pull latest cross-cutting status from umbrella
 - [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
 - [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
-- [ ] `MCOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
+- [ ] `MCAOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
 - [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
 **None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
@@ -506,7 +506,7 @@ Per `DESIGN.md §5`:
 ## §6. Versions
 
 - CONCEPT: v5.6 (this regeneration; supersedes v4.0 in `_archive/v_pre_2026-04-28/CONCEPT.md`)
-- Article: v5.6 + iterations 1-3 (article on Desktop as `LongevityCommon.md`; backups: `LongevityCommon_Article_v3_2026-04-28.md`)
+- Article: v5.6 + iterations 1-3 (article on Desktop as `LC.md`; backups: `LC_Article_v3_2026-04-28.md`)
 - Subproject CONCEPTs: pending cross-check (see §5.5)
 - Social layer code: pending point-edits (see §5.1-§5.4)
 
@@ -514,14 +514,14 @@ Per `DESIGN.md §5`:
 
 To make CONCEPT verifiable later, record source-document md5:
 ```
-md5sum ~/Desktop/LongevityCommon.md
+md5sum ~/Desktop/LC.md
 ```
 [record on next commit]
 
 ```
 ### `DESIGN.md` (head 200 lines)
 ```
-# LongevityCommon · DESIGN
+# LC · DESIGN
 
 **Status:** Canonical · regenerated 2026-04-28 from CONCEPT v5.6
 **Authority:** Cross-cutting architecture; subproject-specific designs in `<subproject>/DESIGN.md`
@@ -531,7 +531,7 @@ md5sum ~/Desktop/LongevityCommon.md
 ## §1. Repository layout
 
 ```
-~/Desktop/LongevityCommon/
+~/Desktop/LC/
 ├── CONCEPT.md · THEORY.md · DESIGN.md (this) · PARAMETERS.md · MAP.md · STATE.md
 ├── EVIDENCE.md · OPEN_PROBLEMS.md · TODO.md · README.md · CLAUDE.md · LICENSE
 ├── _archive/v_pre_2026-04-28/    # архив core .md до 2026-04-28
@@ -544,7 +544,7 @@ md5sum ~/Desktop/LongevityCommon.md
 ├── web/                           # social-layer React+TS PWA
 ├── realtime/                      # social-layer Phoenix Channels
 │
-├── MCOA/                          # subproject: theoretical
+├── MCAOA/                          # subproject: theoretical
 ├── CDATA/                         # subproject: molecular hypothesis
 ├── Ze/                            # subproject: math + simulator (regenerated 2026-04-28)
 ├── BioSense/                      # subproject: applied + simulator + datasets (regenerated 2026-04-28)
@@ -558,7 +558,7 @@ md5sum ~/Desktop/LongevityCommon.md
 
 ## §2. Two-layer design: scientific layer + social layer
 
-LongevityCommon = **(scientific subprojects) + (thin social layer)**.
+LC = **(scientific subprojects) + (thin social layer)**.
 
 ### §2.1 Scientific layer (subprojects)
 
@@ -581,7 +581,7 @@ Cross-subproject communication — **через HTTP API** (federated by design,
 | `realtime/` | Elixir + Phoenix Channels | 4001 (conflict with Ze!) → 4500 | WebSocket: feed updates, live BioSense samples |
 | Postgres | docker | 5432 | основная DB социального слоя (не subproject data) |
 
-⚠ **Port conflict warning:** `realtime/` mix.exs изначально планировался на port 4001 — это конфликтует с `Ze/ze-backend` :4001. Переносим realtime на port **4500** в обновлённой конфигурации (см. `~/Desktop/LongevityCommon/realtime/config/dev.exs` — TODO update).
+⚠ **Port conflict warning:** `realtime/` mix.exs изначально планировался на port 4001 — это конфликтует с `Ze/ze-backend` :4001. Переносим realtime на port **4500** в обновлённой конфигурации (см. `~/Desktop/LC/realtime/config/dev.exs` — TODO update).
 
 ---
 
@@ -629,7 +629,7 @@ Used by: `server/src/handlers/biosense.rs` → `web/src/pages/Dashboard.tsx`
 
 ### §5.1 Server-side (Rust)
 
-- [ ] `src/handlers/biosense.rs` — добавить header в response: `X-LongevityCommon-Status: hypothesis-stage-exploratory`
+- [ ] `src/handlers/biosense.rs` — добавить header в response: `X-LC-Status: hypothesis-stage-exploratory`
 - [ ] `src/handlers/dashboard.rs` — strings про "biological age" → "exploratory aging activity index (research only)"
 - [ ] `src/handlers/ze_guide.rs` — обновить системный prompt для AI: **"χ_Ze is a research-grade exploratory metric, not a validated medical biomarker. Pre-registered tests of v1 yielded NULL results; current v2 is post-hoc. Do not give medical advice. Decline confirmatory clinical claims."**
 - [ ] Добавить новый endpoint `GET /api/disclosures/v5_changes` — возвращает changelog (NULL retraction, M4 update, FCLC threat model fix) — публичная transparency
@@ -671,19 +671,19 @@ Used by: `server/src/handlers/biosense.rs` → `web/src/pages/Dashboard.tsx`
 
 ```bash
 # Subprojects (backends)
-cd ~/Desktop/LongevityCommon/Ze && ./run.sh         # :4000/:4001
-cd ~/Desktop/LongevityCommon/BioSense && ./run.sh   # :4100/:4101
+cd ~/Desktop/LC/Ze && ./run.sh         # :4000/:4001
+cd ~/Desktop/LC/BioSense && ./run.sh   # :4100/:4101
 
 # Social layer
-cd ~/Desktop/LongevityCommon/server && cargo run --release  # :8080
-cd ~/Desktop/LongevityCommon/web && npm run dev             # :5173
-cd ~/Desktop/LongevityCommon/realtime && mix phx.server     # :4500 (after fix)
+cd ~/Desktop/LC/server && cargo run --release  # :8080
+cd ~/Desktop/LC/web && npm run dev             # :5173
+cd ~/Desktop/LC/realtime && mix phx.server     # :4500 (after fix)
 ```
 
 ### §7.2 Production
 
 ```bash
-cd ~/Desktop/LongevityCommon/deploy && docker compose -f docker-compose-all.yml up -d
+cd ~/Desktop/LC/deploy && docker compose -f docker-compose-all.yml up -d
 ```
 
 ---
@@ -701,10 +701,10 @@ cd ~/Desktop/LongevityCommon/deploy && docker compose -f docker-compose-all.yml 
 ```
 ### `EVIDENCE.md` (head 200 lines)
 ```
-# LongevityCommon · EVIDENCE
+# LC · EVIDENCE
 
 **Status:** Empirical & theoretical support inventory · 2026-04-28 (CONCEPT v5.6)
-**Source:** Article `~/Desktop/LongevityCommon.md` v5.6 References + per-subproject EVIDENCE.md.
+**Source:** Article `~/Desktop/LC.md` v5.6 References + per-subproject EVIDENCE.md.
 
 ---
 
@@ -779,7 +779,7 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 | χ_Ze correlates with PhenoAge r=0.67 | ⚠ Exploratory (post-hoc, not pre-registered) | — | Bonferroni / replication required |
 | AUC=0.81 accelerated aging detection | ⚠ Exploratory | — | winner's curse risk; pre-reg N≥2000 required |
 | CDATA causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
-| MCOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
+| MCAOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
 
 ## §5. What is deliberately NOT cited
 
@@ -802,7 +802,7 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 ```
 ### `OPEN_PROBLEMS.md` (head 200 lines)
 ```
-# LongevityCommon · OPEN_PROBLEMS
+# LC · OPEN_PROBLEMS
 
 **Status:** Cross-cutting open issues · 2026-04-28 (CONCEPT v5.6)
 **Authority:** Subproject-level open problems remain in `<subproject>/OPEN_PROBLEMS.md`; cross-cutting only here.

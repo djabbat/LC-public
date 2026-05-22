@@ -25,7 +25,7 @@
 | 6 | **Consortium / collaboration plan** | ✓ | Three groups listed with roles (PI theoretical, Horvath clocks, Brunet experiments). Placeholder names acceptable at this stage. |
 | 7 | **Reference reality + match** | **✗** | **LETHAL FAILURE.** PMID 41289991 (Arif et al. 2025) does **not** resolve in PubMed/Crossref – it is a fabricated identifier. Per rule: *“Невалидный идентификатор = автоматический REJECT компонента.”* All other checked references are real (see audit below). |
 | 8 | **No fabrication markers** | **✗** | The fabricated PMID 41289991 is a strong fabrication marker. |
-| 9 | **Internal consistency core docs** | ✓ | THEORY, EVIDENCE, PARAMETERS, OPEN_PROBLEMS, DESIGN logically coherent; no contradictions between core files. Cancelled MCOA Test 2 is properly struck‑through. |
+| 9 | **Internal consistency core docs** | ✓ | THEORY, EVIDENCE, PARAMETERS, OPEN_PROBLEMS, DESIGN logically coherent; no contradictions between core files. Cancelled MCAOA Test 2 is properly struck‑through. |
 
 ## Reference audit
 
@@ -60,7 +60,7 @@
 > Because the verdict is REJECT due to a fabricated PMID, a revision path would require:
 
 1. **`CONCEPT.md` (References, line 2):** Remove or replace PMID 41289991 with a real, verifiable source. Justify the claim “Reversing lysosomal dysfunction restores youthful state in aged HSCs” with an actual publication or remove the claim.
-2. **`CONCEPT.md` (Falsifiability section):** The struck‑through MCOA Test 2 should be completely removed, not just struck‑through, to avoid confusion.
+2. **`CONCEPT.md` (Falsifiability section):** The struck‑through MCAOA Test 2 should be completely removed, not just struck‑through, to avoid confusion.
 3. **`OPEN_PROBLEMS.md`:** Replace all “OSF ID pending” with a concrete placeholder (e.g., `https://osf.io/abcde`) to satisfy pre‑registration exactness.
 4. **`PARAMETERS.md`:** Clarify that all `γ₄ⱼ` default = 0 is the null hypothesis for all coupling experiments; currently it is stated as “default = 0” only for some.
 5. **`EVIDENCE.md`:** The line “Loss of KDM4B… demonstrates link between metabolism and epigenetics” – PMID 33571444 does indeed show a metabolic‑epigenetic link, but the statement is a stretch. Either rephrase or add a more direct reference.

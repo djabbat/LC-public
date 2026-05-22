@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_Proteostasis
 
-Path: `/home/oem/Desktop/LongevityCommon/Proteostasis`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/Proteostasis`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-460K	/home/oem/Desktop/LongevityCommon/Proteostasis
+460K	/home/oem/Desktop/LC/Proteostasis
 ```
 **Extensions:** .md=17, .rs=11, .ex=9, .exs=6, .heex=2, .toml=2, .json=1, .lock=1, (noext)=1, .example=1, .sql=1, .py=1
 ## Tree (depth=2, max 200 entries)
@@ -50,17 +50,17 @@ Path: `/home/oem/Desktop/LongevityCommon/Proteostasis`  Date: 2026-05-08
 ```md
 # CLAUDE.md — Proteostasis
 
-**Proteostasis Collapse** — формализован как **MCOA Counter #5** (`D₅(n,t)`). Mixed kinetics — replicative + chronological. Concept-stage; особо релевантен post-mitotic tissues (brain, muscle).
+**Proteostasis Collapse** — формализован как **MCAOA Counter #5** (`D₅(n,t)`). Mixed kinetics — replicative + chronological. Concept-stage; особо релевантен post-mitotic tissues (brain, muscle).
 
-**Path:** `/home/oem/Desktop/LongevityCommon/Proteostasis/`
-**Repo:** часть `djabbat/LongevityCommon`.
+**Path:** `/home/oem/Desktop/LC/Proteostasis/`
+**Repo:** часть `djabbat/LC`.
 
 ---
 
 ## Source of truth
 
 **`Proteostasis/CONCEPT.md`** — авторитет.
-Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/CLAUDE.md`.
+Parent: `~/Desktop/LC/MCAOA/CONCEPT.md`, `~/Desktop/LC/CLAUDE.md`.
 
 ---
 
@@ -83,7 +83,7 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 ## Tissue specificity
 
-Особо важен для post-mitotic тканей (мозг, мышцы). Tissue weight `w₅(brain)`, `w₅(muscle)` >> `w₅(blood)`. Это отражено в master equation `L_tissue(n,t) = Σᵢ wᵢ(tissue) · fᵢ(Dᵢ)` (см. MCOA M2 axiom).
+Особо важен для post-mitotic тканей (мозг, мышцы). Tissue weight `w₅(brain)`, `w₅(muscle)` >> `w₅(blood)`. Это отражено в master equation `L_tissue(n,t) = Σᵢ wᵢ(tissue) · fᵢ(Dᵢ)` (см. MCAOA M2 axiom).
 
 ---
 
@@ -95,16 +95,16 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 ---
 
-## План интеграции в MCOA
+## План интеграции в MCAOA
 
 См. counter-modules roadmap (#5 audit pt). Разные tissue weights делают Proteostasis особенно важным для brain/muscle компонент EIC заявки.
 
 ```
 ### `README.md` (3886 chars)
 ```md
-# Протеостаз: Коллапс протеостаза как счётчик №5 в архитектуре MCOA
+# Протеостаз: Коллапс протеостаза как счётчик №5 в архитектуре MCAOA
 
-**Протеостаз** — это подпроект в рамках общей архитектуры LongevityCommon, формализующий коллапс белкового гомеостаза (протеостаза) как измеримый и количественный процесс старения. В рамках мета-теоретической Multi-Counter Architecture of Aging (MCOA) этот коллапс определён как **Счётчик №5**.
+**Протеостаз** — это подпроект в рамках общей архитектуры LC, формализующий коллапс белкового гомеостаза (протеостаза) как измеримый и количественный процесс старения. В рамках мета-теоретической Multi-Counter Architecture of Aging (MCAOA) этот коллапс определён как **Счётчик №5**.
 
 ## Краткое содержание
 
@@ -112,11 +112,11 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 Данный проект не просто констатирует этот факт, а предлагает его **формальную количественную модель**. Мы определяем метрику повреждения *D₅(n, t)*, которая растёт в зависимости от количества клеточных делений (*n*) и хронологического времени (*t*). Каждый параметр модели (например, критическое число делений *n₅** или постоянная времени агрегации *τ₅*) имеет чёткое биологическое обоснование и привязку к данным из рецензируемых исследований.
 
-Цель — интегрировать этот счётчик в общую систему MCOA, где он взаимодействует с другими счётчиками (митохондриальная дисфункция, эпигенетический дрейф и др.) через матрицу связей **Γ**. Это превращает изучение протеостаза из качественного наблюдения в расчётный, проверяемый и фальсифицируемый компонент единой теории старения организма.
+Цель — интегрировать этот счётчик в общую систему MCAOA, где он взаимодействует с другими счётчиками (митохондриальная дисфункция, эпигенетический дрейф и др.) через матрицу связей **Γ**. Это превращает изучение протеостаза из качественного наблюдения в расчётный, проверяемый и фальсифицируемый компонент единой теории старения организма.
 
 ## Ключевые аспекты проекта
 
-*   **Формальная теория:** В [THEORY.md](THEORY.md) представлена аксиоматика, кинетическое уравнение счётчика и его связь с MCOA.
+*   **Формальная теория:** В [THEORY.md](THEORY.md) представлена аксиоматика, кинетическое уравнение счётчика и его связь с MCAOA.
 *   **Доказательная база:** Файл [EVIDENCE.md](EVIDENCE.md) содержит таблицы проверенных ссылок (PMID/DOI) на исследования, подтверждающие или опровергающие каждый элемент модели.
 *   **Открытые проблемы:** [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md) описывает ключевые нерешённые вопросы, приоритеты и конкретные фальсификационные тесты для модели.
 *   **Количественные параметры:** [PARAMETERS.md](PARAMETERS.md) — это сводная таблица всех параметров модели, их значений, единиц измерения и источников.
@@ -125,9 +125,9 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 *   **Журнал изменений:** [JOURNAL.md](JOURNAL.md) — хронологическая запись всех значимых решений и обновлений.
 *   **Дорожная карта:** [ROADMAP.md](ROADMAP.md) определяет этапы будущего развития, приоритеты и зависимости.
 
-## Связь с другими компонентами LongevityCommon
+## Связь с другими компонентами LC
 
-Протеостаз является одним из **девяти основных счётчиков** в рамках MCOA. Его состояние влияет на общую метрику повреждения тканей *L_tissue(n, t)*. Модель напрямую связана с проектами:
+Протеостаз является одним из **девяти основных счётчиков** в рамках MCAOA. Его состояние влияет на общую метрику повреждения тканей *L_tissue(n, t)*. Модель напрямую связана с проектами:
 *   **CDATA (Cellular Damage Theory of Aging):** Коллапс протеостаза является одним из основных источников клеточного повреждения (*D_CELL*) в теории CDATA.
 *   **FCLC (Functional Capacity & LifeCourse):** Снижение протеостатического резерва является драйвером потери функциональной ёмкости в постмитотических тканях (мозг, мышцы).
 
@@ -144,7 +144,7 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 ```md
 # Proteostasis Backend
 
-Backend service for Proteostasis Counter #5 in the Multi-Counter Architecture of Aging (MCOA).
+Backend service for Proteostasis Counter #5 in the Multi-Counter Architecture of Aging (MCAOA).
 
 ## Features
 
@@ -248,7 +248,7 @@ Tissue weights:
 ```md
 # Proteostasis scripts
 
-Python helpers for calibration + MCOA comparison.
+Python helpers for calibration + MCAOA comparison.
 
 ```
 ### `CONCEPT.md` (20392 chars)
@@ -259,16 +259,16 @@ Python helpers for calibration + MCOA comparison.
 
 
 ## Abstract
-The collapse of protein homeostasis (proteostasis) is a hallmark of aging, characterized by the declining capacity of chaperone, ubiquitin-proteasome, and autophagic systems, leading to the accumulation of misfolded and aggregation-prone proteins. This manuscript formalizes **Proteostasis Collapse** as **Counter #5** within the Multi-Counter Architecture of Organismal Aging (MCOA), a meta-theoretical framework that quantifies distinct, measurable processes contributing to aging. We present a kinetic equation for the proteostatic damage load, *D₅(n, t)*, which integrates replicative history (*n*-linked) and chronological time (*t*-linked) components, reflecting cell-type-specific biology. Each parameter is grounded in evidence from a meta-analysis of peer-reviewed literature, citing specific studies on protein aggregation and proteostasis network decline. The model is explicitly falsifiable through defined quantitative thresholds and is designed to couple with other MCOA counters (e.g., mitochondrial dysfunction, epigenetic drift) via a coupling matrix Γ, with entries either quantified from existing data or marked for empirical measurement. This formalization aims to transition the study of proteostasis in aging from a qualitative hallmark to a quantitative, testable, and integrable component within a unified theory of organismal aging.
+The collapse of protein homeostasis (proteostasis) is a hallmark of aging, characterized by the declining capacity of chaperone, ubiquitin-proteasome, and autophagic systems, leading to the accumulation of misfolded and aggregation-prone proteins. This manuscript formalizes **Proteostasis Collapse** as **Counter #5** within the Multi-Counter Architecture of Organismal Aging (MCAOA), a meta-theoretical framework that quantifies distinct, measurable processes contributing to aging. We present a kinetic equation for the proteostatic damage load, *D₅(n, t)*, which integrates replicative history (*n*-linked) and chronological time (*t*-linked) components, reflecting cell-type-specific biology. Each parameter is grounded in evidence from a meta-analysis of peer-reviewed literature, citing specific studies on protein aggregation and proteostasis network decline. The model is explicitly falsifiable through defined quantitative thresholds and is designed to couple with other MCAOA counters (e.g., mitochondrial dysfunction, epigenetic drift) via a coupling matrix Γ, with entries either quantified from existing data or marked for empirical measurement. This formalization aims to transition the study of proteostasis in aging from a qualitative hallmark to a quantitative, testable, and integrable component within a unified theory of organismal aging.
 
 ## 1. Introduction
 Aging is driven by the progressive accumulation of cellular and molecular damage. Among the proposed hallmarks of aging, the loss of proteostasis—the cellular network responsible for protein synthesis, folding, trafficking, and degradation—is a central player (Klaips 2018, PMID: 29127110). The proteostasis network (PN), comprising molecular chaperones, the ubiquitin-proteasome system (UPS), and autophagy pathways, maintains proteome integrity. With age, the capacity of this network declines, permitting the accumulation of misfolded, damaged, and aggregation-prone proteins (Kaushik 2021, PMID: 34563704). This collapse is particularly consequential in post-mitotic tissues like the brain and muscle, where it is directly implicated in neurodegenerative diseases (e.g., Alzheimer's, Parkinson's) and sarcopenia (Ma 2025, PMID: 39973488; Wang 2023, PMID: 37111020).
 
-Despite consensus on its importance, proteostasis collapse has resisted quantitative formalization as a *driver* of aging, often being described as a correlative hallmark or a downstream consequence of other processes. The Multi-Counter Architecture of Aging (MCOA) addresses this by proposing that organismal aging can be decomposed into a limited set of discrete, quantifiable processes ("counters"), each with its own kinetic trajectory and tissue-specific weight. Here, we define **Proteostasis Collapse** as **MCOA Counter #5**. We derive its governing equation from biological first principles, anchor every parameter in peer-reviewed evidence, specify its falsification criteria, and outline its integrative coupling with other aging processes. This work aims to provide a rigorous, testable scaffold for modeling proteostatic decline as a fundamental contributor to the aging phenotype.
+Despite consensus on its importance, proteostasis collapse has resisted quantitative formalization as a *driver* of aging, often being described as a correlative hallmark or a downstream consequence of other processes. The Multi-Counter Architecture of Aging (MCAOA) addresses this by proposing that organismal aging can be decomposed into a limited set of discrete, quantifiable processes ("counters"), each with its own kinetic trajectory and tissue-specific weight. Here, we define **Proteostasis Collapse** as **MCAOA Counter #5**. We derive its governing equation from biological first principles, anchor every parameter in peer-reviewed evidence, specify its falsification criteria, and outline its integrative coupling with other aging processes. This work aims to provide a rigorous, testable scaffold for modeling proteostatic decline as a fundamental contributor to the aging phenotype.
 
 ## 2. The Kinetic Model of Proteostasis Collapse (Counter #5)
 
-Within the MCOA framework, the state of each counter is represented by a damage metric, *Dᵢ*. For proteostasis collapse (i=5), *D₅* represents the normalized proteostatic burden: the effective load of misfolded/aggregated proteins relative to the cell's capacity to manage them.
+Within the MCAOA framework, the state of each counter is represented by a damage metric, *Dᵢ*. For proteostasis collapse (i=5), *D₅* represents the normalized proteostatic burden: the effective load of misfolded/aggregated proteins relative to the cell's capacity to manage them.
 
 ### 2.1. Governing Equation
 The damage accrual for Counter #5 is modeled by a mixed kinetic equation:
@@ -284,7 +284,7 @@ Where:
 *   *β₅*: Damage increment per normalized time unit (dimensionless coefficient).
 *   *t*: Chronological time (e.g., in days).
 *   *τ₅*: Characteristic time constant for the dominant aggregating species (e.g., protein half-life or aggregation time scale).
-*   *γ₅ · I(other counters)*: Coupling term representing the influence of other MCOA counters on *D₅* (detailed in Section 5).
+*   *γ₅ · I(other counters)*: Coupling term representing the influence of other MCAOA counters on *D₅* (detailed in Section 5).
 
 ### 2.2. Biological Rationale and Parameter Definitions
 
@@ -329,26 +329,26 @@ Quantifying *D₅* requires assaying both the load of damaged proteins and the f
 
 ## 4. Falsifiability and Experimental Validation
 
-For Counter #5 to be a valid component of MCOA, it must satisfy the framework's falsifiability axioms. We propose the following concrete, quantitative falsification conditions:
+For Counter #5 to be a valid component of MCAOA, it must satisfy the framework's falsifiability axioms. We propose the following concrete, quantitative falsification conditions:
 
 *   **Null Condition**: If, across a minimum of three distinct tissues (e.g., brain, skeletal muscle, liver), longitudinal measurement shows the fitted parameters *α₅ ≤ 0* **and** *β₅ ≤ 0* with statistical significance (p < 0.01, adjusted for multiple comparisons), then Counter #5 is falsified as a driver of aging. It would indicate proteostatic damage does not increase with divisions or time in vivo.
 *   **Non-Monotonicity Condition**: If *D₅(n, t)* exhibits a consistent, significant non-monotonic decrease with age or divisions in healthy, unstressed wild-type organisms (e.g., a sharp drop in aggregate burden in old age), the kinetic model is invalid. This would suggest active, net clearance mechanisms dominate late in life, contrary to the collapse hypothesis.
-*   **Dominance Test (MCOA Test 1)**: In a tissue predicted a priori to be dominated by proteostasis collapse (e.g., substantia nigra neurons), an intervention that specifically reduces *D₅* (e.g., chaperone induction) must produce a disproportionate extension of healthspan/function compared to interventions targeting other counters. Failure to do so challenges the counter's proposed dominance in that tissue.
-*   **Coupling Independence (MCOA Axiom M3)**: The coupling strengths *γ₅* must be measurable independently of the global aging phenotype. If the best-fit values for *γ₅* (e.g., from multi-counter modeling) change significantly when fitted to *post-hoc* optimized tissue weights *w_tissue* versus *a-priori* biologically defined weights, the counter's independence is violated.
+*   **Dominance Test (MCAOA Test 1)**: In a tissue predicted a priori to be dominated by proteostasis collapse (e.g., substantia nigra neurons), an intervention that specifically reduces *D₅* (e.g., chaperone induction) must produce a disproportionate extension of healthspan/function compared to interventions targeting other counters. Failure to do so challenges the counter's proposed dominance in that tissue.
+*   **Coupling Independence (MCAOA Axiom M3)**: The coupling strengths *γ₅* must be measurable independently of the global aging phenotype. If the best-fit values for *γ₅* (e.g., from multi-counter modeling) change significantly when fitted to *post-hoc* optimized tissue weights *w_tissue* versus *a-priori* biologically defined weights, the counter's independence is violated.
 
-## 5. Coupling with Other MCOA Counters (Γ Matrix)
+## 5. Coupling with Other MCAOA Counters (Γ Matrix)
 
 No aging process operates in isolation. The coupling term *γ₅ · I(other counters)* represents the influence of other counters on proteostasis collapse. Entries in the coupling matrix Γ₅ⱼ are proposed based on mechanistic links found in the literature.
 
-*   **Γ₅₁ (Centriolar → Proteostasis)**: **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** A plausible link exists through disrupted protein trafficking and secretion, but no direct evidence from the provided PMIDs quantifies this.
-*   **Γ₅₂ (Telomere → Proteostasis)**: **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Telomere dysfunction-induced senescence is associated with a profound secretory phenotype and altered protein expression, which could stress the PN. Quantitative coupling strength is not established in the provided sources.
+*   **Γ₅₁ (Centriolar → Proteostasis)**: **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** A plausible link exists through disrupted protein trafficking and secretion, but no direct evidence from the provided PMIDs quantifies this.
+*   **Γ₅₂ (Telomere → Proteostasis)**: **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Telomere dysfunction-induced senescence is associated with a profound secretory phenotype and altered protein expression, which could stress the PN. Quantitative coupling strength is not established in the provided sources.
 *   **Γ₅₃ (Mitochondrial ROS/Dysfunction → Proteostasis)**: **Likely > 0**. Mitochondrial dysfunction increases oxidative stress, which directly damages proteins (carbonylation, cross-linking) and impairs the function of PN components like the proteasome. Chronic exposure to the mitochondrial toxin vanadium promotes aggregation of α-synuclein, tau, and Aβ (Folarin 2025, PMID: 40377064). This provides direct, causal evidence for a positive coupling. The magnitude *γ₅₃* needs quantification via co-measurement of mitochondrial and proteostatic parameters.
 *   **Γ₅₄ (Epigenetic Drift → Proteostasis)**: **Likely > 0**. Epigenetic changes regulate the expression of PN components. For instance, histone lactylation modulates aging-related pathways, and its decline is linked to senescence in muscle (Meng 2025, PMID: 40388671). Epigenetic silencing of chaperone or autophagy genes could directly drive proteostasis collapse. The work by Diekman & Loeser (2024, PMID: 38049031) also positions loss of proteostasis as a downstream consequence of broader aging processes, potentially initiated by epigenetic change. **Coupling strength *γ₅₄* requires quantitative measurement.**
 *   **Γ₅₅ (Autocatalysis)**: **> 0**. Aggregates themselves can disrupt proteostasis by sequestering chaperones, clogging the proteasome, and impairing autophagy (a process termed "proteostatic stress"). This positive feedback is a core feature of the collapse. For example, α-synuclein oligomers are directly toxic and can inhibit CMA (Wong 2017, PMID: 28170377). This self-amplifying loop is intrinsic to the *D₅* equation's kinetics.
 
-## 6. Integration within the MCOA Framework
+## 6. Integration within the MCAOA Framework
 
-Counter #5 is designed to be integrated into the overarching MCOA framework. The organismal (or tissue) aging state *L* at time *t* is modeled as a weighted sum of counter-specific damage functions:
+Counter #5 is designed to be integrated into the overarching MCAOA framework. The organismal (or tissue) aging state *L* at time *t* is modeled as a weighted sum of counter-specific damage functions:
 
 ***L_tissue(n, t) = Σ_i w_i(tissue) · f_i(D_i(n, t))***
 
@@ -370,7 +370,7 @@ This formalization highlights critical unknowns that must be addressed to refine
 
 ## 8. Conclusion
 
-We have presented a rigorous, evidence-based formalization of proteostasis collapse as MCOA Counter #5. By deriving a kinetic equation with parameters anchored in the peer-reviewed literature on protein aggregation and proteostasis network decline, we move beyond qualitative description to a quantifiable model. This model explicitly accounts for cell-type-specific biology (proliferative vs. post-mitotic), incorporates falsifiable predictions, and is designed for integration within a broader multi-counter theory of aging. The proposed couplings with mitochondrial dysfunction and epigenetic drift, supported by mechanistic evidence, underscore the interconnected nature of aging damage. Addressing the outlined open questions through targeted experiments will be essential to validate, refine, and ultimately exploit this model to develop strategies for mitigating one of the fundamental drivers of age-related functional decline.
+We have presented a rigorous, evidence-based formalization of proteostasis collapse as MCAOA Counter #5. By deriving a kinetic equation with parameters anchored in the peer-reviewed literature on protein aggregation and proteostasis network decline, we move beyond qualitative description to a quantifiable model. This model explicitly accounts for cell-type-specific biology (proliferative vs. post-mitotic), incorporates falsifiable predictions, and is designed for integration within a broader multi-counter theory of aging. The proposed couplings with mitochondrial dysfunction and epigenetic drift, supported by mechanistic evidence, underscore the interconnected nature of aging damage. Addressing the outlined open questions through targeted experiments will be essential to validate, refine, and ultimately exploit this model to develop strategies for mitigating one of the fundamental drivers of age-related functional decline.
 
 ## References
 All references are cited in the text using the format (Author Year, PMID: XXXXX). The following is the consolidated list of PMIDs from the provided meta-analyses that form the exclusive evidence base for this CONCEPT:
@@ -382,7 +382,7 @@ All references are cited in the text using the format (Author Year, PMID: XXXXX)
 
 All PubMed identifiers in this document were independently verified against the NCBI E-utilities API (esummary endpoint) on 2026-04-21. Each PMID was confirmed to resolve to an existing, title-matched entry. No citation in this document was generated by a language model without subsequent live-database verification.
 
-Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LongevityCommon ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
+Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LC ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
 
 Self-citations follow the `≤15% of total references` rule mandated by Nature Research editorial policy; see ecosystem file `~/CLAUDE.md §Self-Citation Rule`.
 
@@ -393,7 +393,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
 Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
 
@@ -402,11 +402,11 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 ```
 ### `THEORY.md` (7054 chars)
 ```md
-# Формальная теория коллапса протеостаза (MCOA Counter #5)
+# Формальная теория коллапса протеостаза (MCAOA Counter #5)
 
 ## 1. Аксиоматика базиса
 
-Теория коллапса протеостаза как счётчика старения строится на следующих аксиомах, согласованных с общей мета-теорией MCOA (Multi-Counter Architecture of Aging):
+Теория коллапса протеостаза как счётчика старения строится на следующих аксиомах, согласованных с общей мета-теорией MCAOA (Multi-Counter Architecture of Aging):
 
 **Аксиома P1 (Существование счётчика):** Существует дискретный, измеримый процесс старения, обозначенный как «коллапс протеостаза» (Counter #5), который характеризуется прогрессирующей потерей способности клетки поддерживать гомеостаз протеома.
 
@@ -414,7 +414,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 **Аксиома P3 (Двойственная природа повреждения):** Накопление повреждения *D₅* происходит по двум основным, не исключающим друг друга, путям: (1) связанному с репликативной историей клетки (*n*-linked) и (2) связанному с хронологическим временем (*t*-linked). Их относительный вклад определяется типом ткани и клетки.
 
-**Аксиома P4 (Взаимодействие со средой MCOA):** Скорость изменения *D₅* может зависеть от состояния других счётчиков MCOA (например, митохондриальной дисфункции, эпигенетического дрейфа) через формальную матрицу связей **Γ**.
+**Аксиома P4 (Взаимодействие со средой MCAOA):** Скорость изменения *D₅* может зависеть от состояния других счётчиков MCAOA (например, митохондриальной дисфункции, эпигенетического дрейфа) через формальную матрицу связей **Γ**.
 
 ## 2. Кинетическая модель счётчика
 
@@ -454,12 +454,12 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 1.  **Прогноз тканевой специфичности:** В тканях с высоким клеточным оборотом (кожа, кишечник) преобладает *n*-linked член (*α₅ >> β₅*). В поствитальных тканях (мозг, сердце) преобладает *t*-linked член (*β₅ >> α₅*).
 2.  **Прогноз нелинейности:** После превышения порога *n₅** (или эквивалентного временного порога *τ₅*) скорость накопления *D₅* должна резко возрасти из-за выхода PN из-под контроля и запуска положительных петель обратной связи (например, агрегация → подавление протеасомы → больше агрегации).
-3.  **Прогноз эффективности интервенций:** Целевые интервенции, которые снижают *D₅* (индукторы шаперонов, активаторы аутофагии, антисмысловые олигонуклеотиды против агрегирующих белков), должны приводить к наибольшему продлению здоровья в тканях, где протеостаз является доминирующим лимитирующим счётчиком (прогноз для «MCOA Test 1»).
+3.  **Прогноз эффективности интервенций:** Целевые интервенции, которые снижают *D₅* (индукторы шаперонов, активаторы аутофагии, антисмысловые олигонуклеотиды против агрегирующих белков), должны приводить к наибольшему продлению здоровья в тканях, где протеостаз является доминирующим лимитирующим счётчиком (прогноз для «MCAOA Test 1»).
 4.  **Прогноз мультиморбидности:** Высокий уровень *D₅* в одной системе (например, центральная нервная система) будет статистически предсказывать его повышение в других системах (периферические нервы, мышцы) из-за общих системных факторов и молекулярных связей (например, прионоподобное распространение).
 
-## 5. Интеграция в MCOA и CDATA
+## 5. Интеграция в MCAOA и CDATA
 
-В рамках MCOA вклад коллапса протеостаза в общее повреждение ткани *L_tissue* определяется как:
+В рамках MCAOA вклад коллапса протеостаза в общее повреждение ткани *L_tissue* определяется как:
 *L_tissue(n, t) = ... + w₅(tissue) · f₅(D₅(n, t)) + ...*
 где *w₅(tissue)* — тканеспецифичный вес счётчика #5, а *f₅* — функция, отображающая повреждение *D₅* на вклад в фенотип старения (например, сигмоида).
 
@@ -491,8 +491,8 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 | **Коэффициент связи с Counter #4 (Внеклет. матрикс)** | *γ₅₄* | Влияние нарушений ECM (*D₄*) на *D₅*. | Нарушение механической передачи сигналов, влияющих на синтез шаперонов. | 0.0 | Безразмерное | Default | Связь менее очевидна. По умолчанию 0. |
 | **Коэффициент связи с Counter #6 (Воспаление)** | *γ₅₆* | Влияние хронического воспаления (*D₆*) на *D₅*. | Воспалительные цитокины могут подавлять аутофагию. | 0.1 - 0.3 (предположительно >0) | Безразмерное | Hypothesis / To Be Measured | Воспаление — известный подавитель аутофагии. Значение требует оценки. |
 | **Коэффициент самосвязи (положит. обрат. связь)** | *γ₅₅* | Влияние текущего уровня *D₅* на его собственную скорость накопления. | Агрегаты подавляют протеасому и аутофагию, создавая петлю. | 0.05 - 0.20 (предположительно >0) | Безразмерное | Hypothesis / To Be Measured | Ключевой элемент нелинейности и коллапса. Требует экспериментальной проверки на динамических моделях. |
-| **Вес в MCOA для ткани "Мозг"** | *w₅(brain)* | Вклад Counter #5 в общее повреждение *L_tissue* для мозга. | Относительная важность коллапса протеостаза в старении мозга. | 0.3 - 0.5 (высокий) | Безразмерное, сумма по всем wᵢ = 1 | To Be Measured | Должен быть определён через калибровку моделей на данных о старении мозга (например, когнитивный спад vs. биомаркеры). |
-| **Вес в MCOA для ткани "Мышца"** | *w₅(muscle)* | Вклад Counter #5 в *L_tissue* для скелетных мышц. | Относительная важность коллапса протеостаза в саркопении. | 0.2 - 0.4 (умеренный) | Безразмерное, сумма по всем wᵢ = 1 | To Be Measured | Должен быть определён через калибровку на данных о мышечной силе и биомаркерах. |
+| **Вес в MCAOA для ткани "Мозг"** | *w₅(brain)* | Вклад Counter #5 в общее повреждение *L_tissue* для мозга. | Относительная важность коллапса протеостаза в старении мозга. | 0.3 - 0.5 (высокий) | Безразмерное, сумма по всем wᵢ = 1 | To Be Measured | Должен быть определён через калибровку моделей на данных о старении мозга (например, когнитивный спад vs. биомаркеры). |
+| **Вес в MCAOA для ткани "Мышца"** | *w₅(muscle)* | Вклад Counter #5 в *L_tissue* для скелетных мышц. | Относительная важность коллапса протеостаза в саркопении. | 0.2 - 0.4 (умеренный) | Безразмерное, сумма по всем wᵢ = 1 | To Be Measured | Должен быть определён через калибровку на данных о мышечной силе и биомаркерах. |
 
 ---
 *Примечание: Все значения, кроме помеченных как "Default", являются ориентировочными и подлежат пересмотру в ходе выполнения фальсификационных тестов из OPEN_PROBLEMS.md. Процедура калибровки описана в DESIGN.md.*
@@ -503,7 +503,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 ## 1. Обзор архитектуры
 
-Модель Proteostasis реализована как **Python-пакет `proteostasis`**, который является подмодулем общей вычислительной платформы MCOA. Архитектура следует принципам **модульности, проверяемости и воспроизводимости**. Модель отделена от данных, а все параметры вынесены в конфигурационные файлы.
+Модель Proteostasis реализована как **Python-пакет `proteostasis`**, который является подмодулем общей вычислительной платформы MCAOA. Архитектура следует принципам **модульности, проверяемости и воспроизводимости**. Модель отделена от данных, а все параметры вынесены в конфигурационные файлы.
 
 ## 2. Структура каталогов
 
@@ -544,7 +544,7 @@ proteostasis/
 ```python
 class ProteostasisCounter:
     """
-    Модель MCOA Counter #5 (Collapse of Proteostasis).
+    Модель MCAOA Counter #5 (Collapse of Proteostasis).
     """
 
     def __init__(self, params: Union[dict, str, Path]):
@@ -648,24 +648,24 @@ def calculate_gamma_from_data(df: pd.DataFrame, counter_cols: list) -> np.ndarra
 ## 4. Контракты данных
 
 *   **Входные данные для калибровки:** Файлы CSV должны содержать как минимум колонки `n` (число делений), `t` (время в годах), `D5_measured` (измеренное значение прокси для *D₅*). Опционально: `D1`, `D2`, ... (повреждения других счётчиков).
-*   **Выходные данные модели:** Модель возвращает скаляр или массив `D5`. Для интеграции в MCOA, вызывающий код использует тканеспецифичный вес `w₅` из общего конфигурационного файла MCOA.
+*   **Выходные данные модели:** Модель возвращает скаляр или массив `D5`. Для интеграции в MCAOA, вызывающий код использует тканеспецифичный вес `w₅` из общего конфигурационного файла MCAOA.
 *   **Файлы параметров:** Используется формат YAML для удобочитаемости. Обязательные секции: `base_parameters`, `tissue_specific` (словарь по тканям), `coupling`.
 
-## 5. Интеграция с MCOA Core
+## 5. Интеграция с MCAOA Core
 
-Пакет `proteostasis` регистрируется в основном реестре MCOA. Вызов для интеграции:
+Пакет `proteostasis` регистрируется в основном реестре MCAOA. Вызов для интеграции:
 
 ```python
 from mcoa.core import MCOA_Model
 from proteostasis import ProteostasisCounter
 
-# Загрузка общей конфигурации MCOA
+# Загрузка общей конфигурации MCAOA
 config = load_mcoa_config('mcoa_config.yaml')
 
 # Создание экземпляра счётчика #5 с его параметрами
 proteostasis_counter = ProteostasisCounter(config['counters']['5']['params'])
 
-# Регистрация в модели MCOA
+# Регистрация в модели MCAOA
 mcoa_model = MCOA_Model()
 mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['brain']['w5'])
 ```
@@ -756,9 +756,9 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
 
 **Приоритет:** Высокий. Без оценок *n₅** и *τ₅* модель остаётся качественной.
 
-## P2: Доминирование протеостаза как лимитирующего фактора (MCOA Test 1 для Counter #5)
+## P2: Доминирование протеостаза как лимитирующего фактора (MCAOA Test 1 для Counter #5)
 
-**Проблема:** Теория предсказывает, что в некоторых тканях (например, в нейронах чёрной субстанции, двигательных нейронах) коллапс протеостаза является **доминирующим счётчиком**, то есть его повреждение вносит основной вклад в потерю функции. Это прямое следствие MCOA Axiom M2 (Tissue-Specific Weight). Эмпирического подтверждения этого для конкретных тканей человека нет.
+**Проблема:** Теория предсказывает, что в некоторых тканях (например, в нейронах чёрной субстанции, двигательных нейронах) коллапс протеостаза является **доминирующим счётчиком**, то есть его повреждение вносит основной вклад в потерю функции. Это прямое следствие MCAOA Axiom M2 (Tissue-Specific Weight). Эмпирического подтверждения этого для конкретных тканей человека нет.
 
 **Контекст:** Успех интервенций, нацеленных на PN (например, активаторы CMA, антисмысловые олигонуклеотиды к тау), должен быть максимальным именно в таких «доминирующих» тканях по сравнению с интервенциями, нацеленными на другие счётчики.
 
@@ -771,7 +771,7 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
     *   **C (Частичное опровержение):** Интервенция II работает лучше, чем I. Это указывает, что в данной ткани доминирует другой счётчик.
     *   **D (Опровержение):** Никакая интервенция не улучшает (a) значимо, несмотря на изменение биомаркеров. Это ставит под вопрос саму связь между снижением *D₅* и улучшением функции в старости в данной ткани.
 
-**Приоритет:** Высокий. Критичен для валидации MCOA в целом.
+**Приоритет:** Высокий. Критичен для валидации MCAOA в целом.
 
 ## P3: Измерение и валидация ненулевых коэффициентов связи *γ₅ⱼ*
 
@@ -786,9 +786,9 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
     *   **A (Подтверждение):** Обнаружены статистически значимые предсказанные связи. Оценены γ₅ⱼ.
     *   **B (Ослабление):** Обнаружены только слабые корреляции, но причинность не устанавливается. Связи могут быть опосредованы общим конфаундером (хронологическим возрастом).
     *   **C (Частичное опровержение):** Обнаружены сильные связи, но противоположного знака (например, высокий *D₅* ассоциирован с *омоложением* эпигенетических часов). Это противоречит теории.
-    *   **D (Опровержение):** Никаких устойчивых связей между прокси-метриками счётчиков не обнаружено. Это поддерживает гипотезу независимости (γ₅ⱼ = 0) и упрощает модель, но делает MCOA менее интегрированной.
+    *   **D (Опровержение):** Никаких устойчивых связей между прокси-метриками счётчиков не обнаружено. Это поддерживает гипотезу независимости (γ₅ⱼ = 0) и упрощает модель, но делает MCAOA менее интегрированной.
 
-**Приоритет:** Средний. Критичен для построения целостной модели MCOA.
+**Приоритет:** Средний. Критичен для построения целостной модели MCAOA.
 
 ## P4: Выбор и стандартизация комплексной метрики *D₅* in vivo у человека
 
@@ -820,10 +820,10 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
 
 1.  **Запрет самоцитирования:** Запрещено ссылаться на работы Tkemaladze, Chichinadze, Longevity Horizon, Biogerontology Research Foundation как на доказательную базу для параметров, прогнозов или валидации модели. Эти имена могут упоминаться только в историческом или административном контексте (например, "проект был инициирован..."), но не для поддержки научных утверждений.
 2.  **Следование CORRECTIONS_2026-04-22:** Все утверждения должны быть сверены с каноном CORRECTIONS. В частности:
-    *   **Health Score:** Не упоминать старую формулу Health Score. Если нужен аналог, говорить о "тканевом повреждении *L_tissue* из MCOA".
-    *   **χ_Ze:** Не упоминать χ_Ze как валидированный клинический биомаркер. Разрешено упоминание только как исследовательского индекса MCOA Counter "S" — системной синхронизации через плазму/SASP (см. `Ze/CONCEPT.md §4`, переработан 2026-04-23). Прежняя формулировка «Ze Vector Theory» отозвана.
-    *   **MCOA Test 2 и γ_i:** Никогда не утверждать, что "MCOA Test 2 является источником значений γ_i". γ_i по умолчанию равны 0. Ненулевые значения могут быть получены только из post-hoc статистического анализа данных.
-    *   **Структура EIC:** При упоминании структуры гранта использовать только новую структуру EIC Part B v3 (WP1 MCOA, WP2 CDATA Experimental, WP3 CDATA Computational, WP4 FCLC).
+    *   **Health Score:** Не упоминать старую формулу Health Score. Если нужен аналог, говорить о "тканевом повреждении *L_tissue* из MCAOA".
+    *   **χ_Ze:** Не упоминать χ_Ze как валидированный клинический биомаркер. Разрешено упоминание только как исследовательского индекса MCAOA Counter "S" — системной синхронизации через плазму/SASP (см. `Ze/CONCEPT.md §4`, переработан 2026-04-23). Прежняя формулировка «Ze Vector Theory» отозвана.
+    *   **MCAOA Test 2 и γ_i:** Никогда не утверждать, что "MCAOA Test 2 является источником значений γ_i". γ_i по умолчанию равны 0. Ненулевые значения могут быть получены только из post-hoc статистического анализа данных.
+    *   **Структура EIC:** При упоминании структуры гранта использовать только новую структуру EIC Part B v3 (WP1 MCAOA, WP2 CDATA Experimental, WP3 CDATA Computational, WP4 FCLC).
 3.  **Язык:** Для повествовательных, объяснительных разделов использовать **русский язык**. Технические термины, названия белков, генов, методов, а также блоки кода и математические формулы должны быть на **английском**. Ссылки (PMID, DOI) и цитаты из статей — на языке оригинала (обычно англ.).
 4.  **Запрет заглушек:** Запрещено оставлять в окончательном выводе метки-заглушки типа `TODO`, `[ВСТАВИТЬ]`, `...`. Если информация неизвестна, следует либо явно указать "данный параметр требует экспериментального измерения", либо опустить утверждение.
 5.  **Приоритет исходных файлов:** При конфликте информации, полученной агентом из внешних источников, и информации в файлах проекта (README.md, THEORY.md, EVIDENCE.md, CORRECTIONS_2026-04-22.md), приоритет имеют файлы проекта. В случае сомнений — запросить уточнение у пользователя.
@@ -845,8 +845,8 @@ mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['b
 name = "proteostasis_backend"
 version = "0.1.0"
 edition = "2021"
-authors = ["LongevityCommon Team"]
-description = "Backend for Proteostasis Counter #5 in MCOA framework"
+authors = ["LC Team"]
+description = "Backend for Proteostasis Counter #5 in MCAOA framework"
 license = "MIT"
 repository = "https://github.com/longevitycommon/proteostasis"
 
@@ -1129,9 +1129,9 @@ async fn shutdown_signal() {
 ```
 ### code `crates/proteostasis_counter/src/lib.rs`
 ```
-//! MCOA Counter #5: Proteostasis collapse
+//! MCAOA Counter #5: Proteostasis collapse
 //!
-//! Kinetic equation (MCOA-compliant, dimensionless):
+//! Kinetic equation (MCAOA-compliant, dimensionless):
 //!   D_5(n, t) = D_50 + α_5·(n / n_5*) + β_5·(t / τ_5) + γ_5·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

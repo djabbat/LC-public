@@ -6,7 +6,7 @@ Wants=aim-llm.service aim-doctor.service
 [Service]
 Type=simple
 User=oem
-WorkingDirectory=/home/oem/Desktop/LongevityCommon/AIM/phoenix-umbrella
+WorkingDirectory=/home/oem/Desktop/LC/AIM/phoenix-umbrella
 EnvironmentFile=-/home/oem/.aim_env
 Environment="MIX_ENV=prod"
 Environment="PHX_HOST=127.0.0.1"
@@ -16,7 +16,7 @@ Restart=always
 RestartSec=5
 NoNewPrivileges=true
 ProtectSystem=strict
-ReadWritePaths=/home/oem/Desktop/LongevityCommon/AIM
+ReadWritePaths=/home/oem/Desktop/LC/AIM
 PrivateTmp=true
 
 [Install]

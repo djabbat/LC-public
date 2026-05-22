@@ -33,7 +33,7 @@ GRAPH_PATH  = Path.home() / ".claude" / "memory_index" / "graphrag.gpickle"
 _ENTITY_RE = re.compile(
     r"\b("
     r"[A-ZА-ЯҚӘҒҰҺ][a-zа-яёқәғұһ]{2,}(?:[-\s][A-ZА-ЯҚӘҒҰҺ][a-zа-яёқәғұһ]{2,}){0,3}"  # PascalCase / Capitalised phrases
-    r"|[A-ZА-Я]{3,}"   # acronyms (CDATA, MCOA, FCLC, GLA, …)
+    r"|[A-ZА-Я]{3,}"   # acronyms (CDATA, MCAOA, FCLC, GLA, …)
     r")\b"
 )
 # Stopwords that pass the regex but aren't entities

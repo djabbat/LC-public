@@ -46,7 +46,7 @@ fi
 # ── source ───────────────────────────────────────────────────────────────
 SRC="${SRC:-$PWD}"
 if [[ ! -f "$SRC/AIM/rust-core/Cargo.toml" ]]; then
-  err "run from a LongevityCommon checkout (need AIM/rust-core/Cargo.toml at \$SRC)"
+  err "run from a LC checkout (need AIM/rust-core/Cargo.toml at \$SRC)"
   exit 1
 fi
 

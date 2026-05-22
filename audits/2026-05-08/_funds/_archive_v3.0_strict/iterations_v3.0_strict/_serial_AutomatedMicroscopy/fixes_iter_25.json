@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "- **LongevityCommon:** Infrastructure and coordination.\n- **CDATA Phase A:** First user and validation partner.\n- **TBD (placeholder):** Additional partners for replication and extension studies."
+    "body": "- **LC:** Infrastructure and coordination.\n- **CDATA Phase A:** First user and validation partner.\n- **TBD (placeholder):** Additional partners for replication and extension studies."
   },
   {
     "file": "/CONCEPT.md",

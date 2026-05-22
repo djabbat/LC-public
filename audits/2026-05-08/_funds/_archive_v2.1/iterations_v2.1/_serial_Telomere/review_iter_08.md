@@ -47,7 +47,7 @@
    Впишите в README.md после "Связи с другими файлами":  
    `**Consortium Plan (placeholder):**  
    - Telomere biology & Q-FISH measurements: Prof. [Name], Department of [X], University [Y] (letter of intent pending).  
-   - Computational modeling & MCOA integration: [Your lab/group].  
+   - Computational modeling & MCAOA integration: [Your lab/group].  
    - In vivo validation (mouse models): Dr. [Name], Institute [Z] (confirmed interest, 2026-04-22).`
 
 3. **file:PARAMETERS.md — Добавить количественную неопределённость для коэффициентов связи Γ**  
@@ -69,28 +69,28 @@
 
 
 === Telomere/CONCEPT.md ===
-# Telomere Shortening as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCOA): A Formal Kinetic and Integrative Framework
+# Telomere Shortening as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCAOA): A Formal Kinetic and Integrative Framework
 
 > ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 
 ## Abstract
-Telomere erosion represents a canonical, quantifiable mechanism of cellular aging. Within the Multi-Counter Architecture of Organismal Aging (MCOA), it is formalized as Counter #2, a division-dominant yet stress-modulated process whose dynamics can be described by a master kinetic equation. This CONCEPT document provides a rigorous, evidence-based specification for this counter. We derive its central equation, *D₂(n, t)*, parameterizing it exclusively with data from verified meta-analyses of peer-reviewed literature (21 total PMIDs). Each parameter—the division-dependent (α₂) and time-dependent (β₂) erosion rates, the Hayflick limit (n₂*), and the turnover timescale (τ₂)—is grounded in specific experimental observations. We elaborate the modern biological complexity underlying the counter, including the roles of oxidative stress, shelterin, ALT, and non-telomeric TERT functions. Explicit, quantitative falsifiability conditions are defined. We propose methods to quantify this counter's coupling (Γ matrix entries) with other MCOA counters (Centriolar, MitoROS, Epigenetic Drift, Proteostasis) and detail its integration into the MCOA tissue aging load equation, *L_tissue(n,t) = Σ_i w_i(tissue)·f_i(D_i(n,t))*. Open questions and limitations are honestly enumerated, framing a roadmap for experimental validation within the MCOA framework.
+Telomere erosion represents a canonical, quantifiable mechanism of cellular aging. Within the Multi-Counter Architecture of Organismal Aging (MCAOA), it is formalized as Counter #2, a division-dominant yet stress-modulated process whose dynamics can be described by a master kinetic equation. This CONCEPT document provides a rigorous, evidence-based specification for this counter. We derive its central equation, *D₂(n, t)*, parameterizing it exclusively with data from verified meta-analyses of peer-reviewed literature (21 total PMIDs). Each parameter—the division-dependent (α₂) and time-dependent (β₂) erosion rates, the Hayflick limit (n₂*), and the turnover timescale (τ₂)—is grounded in specific experimental observations. We elaborate the modern biological complexity underlying the counter, including the roles of oxidative stress, shelterin, ALT, and non-telomeric TERT functions. Explicit, quantitative falsifiability conditions are defined. We propose methods to quantify this counter's coupling (Γ matrix entries) with other MCAOA counters (Centriolar, MitoROS, Epigenetic Drift, Proteostasis) and detail its integration into the MCAOA tissue aging load equation, *L_tissue(n,t) = Σ_i w_i(tissue)·f_i(D_i(n,t))*. Open questions and limitations are honestly enumerated, framing a roadmap for experimental validation within the MCAOA framework.
 
-## 1. Counter Identity and Integration within MCOA
+## 1. Counter Identity and Integration within MCAOA
 
 
 **Clarification:** The variable D₂ is defined as a tissue-average or population-average measure of telomere length deviation. The current model does not explicitly account for the distribution of telomere lengths within a cell population; this limitation is addressed in OP-T1.
 
 
 
-**Parent Framework:** The Multi-Counter Architecture of Organismal Aging (MCOA) posits that organismal aging arises from the integrated dysfunction of several discrete, quantifiable, and interacting molecular-physiological processes ("counters").
+**Parent Framework:** The Multi-Counter Architecture of Organismal Aging (MCAOA) posits that organismal aging arises from the integrated dysfunction of several discrete, quantifiable, and interacting molecular-physiological processes ("counters").
 
 **Counter Designation:** #2, the Telomere Shortening Counter.
 
 **Core Proposition:** The progressive loss of telomeric DNA repeats at chromosome ends functions as a mitotic clock and a stress integrator in somatic cells. Its quantitative state, *D₂*, represents a measurable deviation from a youthful homeostatic setpoint, contributing to the aging load of renewable tissues.
 
-**MCOA Integration:** The contribution of telomere shortening to tissue-specific aging is modeled as a weighted term in the MCOA master equation:
+**MCAOA Integration:** The contribution of telomere shortening to tissue-specific aging is modeled as a weighted term in the MCAOA master equation:
 *L_tissue(n,t) = w₂(tissue) · f₂(D₂(n, t)) + Σ_{i≠2} w_i(tissue)·f_i(D_i(n,t))*
 where *L* is the composite aging load, *w₂* is a tissue-specific weighting coefficient (a priori determined), and *f₂* is a scaling function mapping the telomere deficit *D₂* to its functional impact (e.g., senescent cell burden). This formalization positions telomere dynamics as one integrated component in a multi-causal system.
 
@@ -105,12 +105,12 @@ The telomere shortening counter encapsulates a sophisticated biological process 
 
 **Regulation and Homeostasis:**
 * **Shelterin Complex:** The six-protein shelterin complex (TRF1, TRF2, POT1, TIN2, TPP1, RAP1) caps chromosome ends, preventing them from being recognized as DNA double-strand breaks. Disruption of shelterin (e.g., loss of Ten1/TPP1 ortholog in mice) leads to catastrophic telomere deprotection and shortening, modeling human dyskeratosis congenita (Sanz-Moreno et al. 2025, PMID: 40215293).
-* **Telomerase and ALT:** The ribonucleoprotein telomerase (TERT + TERC) can add telomeric repeats de novo. Its regulation is complex and compartmentalized; for instance, RIOK2 transcriptionally regulates the TRiC and dyskerin complexes essential for telomerase assembly and stability (Ghosh et al. 2024, PMID: 39164231). In its absence, some cells (e.g., certain cancers) activate the Alternative Lengthening of Telomeres (ALT) pathway, a homology-directed repair mechanism. The MCOA counter primarily models telomerase-negative somatic cell aging.
+* **Telomerase and ALT:** The ribonucleoprotein telomerase (TERT + TERC) can add telomeric repeats de novo. Its regulation is complex and compartmentalized; for instance, RIOK2 transcriptionally regulates the TRiC and dyskerin complexes essential for telomerase assembly and stability (Ghosh et al. 2024, PMID: 39164231). In its absence, some cells (e.g., certain cancers) activate the Alternative Lengthening of Telomeres (ALT) pathway, a homology-directed repair mechanism. The MCAOA counter primarily models telomerase-negative somatic cell aging.
 * **Non-Telomeric Functions:** TERT has documented extra-telomeric roles in mitochondrial function, inflammation, and Wnt signaling, which may indirectly influence the β component of the counter by modulating cellular stress responses.
 
 **Triggering Senescence:** Critically short or structurally uncapped telomeres are recognized as persistent DNA damage, activating the ATM/ATR kinases and subsequent p53/p21CIP1 and p16INK4a/pRB tumor suppressor pathways, leading to irreversible cell cycle arrest (senescence) or apoptosis (Zhu et al. 2019, PMID: 30229407; Li et al. 2024, PMID: 38634789). The senescence-associated secretory phenotype (SASP) of these cells then perturbs tissue microenvironment.
 
-**Heterogeneity:** Telomere length is heterogeneous across chromosome arms, cells, and tissues. The MCOA counter *D₂* represents a population or tissue-average metric, with the shortest telomeres being the most biologically relevant for triggering senescence.
+**Heterogeneity:** Telomere length is heterogeneous across chromosome arms, cells, and tissues. The MCAOA counter *D₂* represents a population or tissue-average metric, with the shortest telomeres being the most biologically relevant for triggering senescence.
 
 ## 3. The Kinetic Equation: Formal Specification
 

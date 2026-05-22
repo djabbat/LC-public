@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_AIM
 
-Path: `/home/oem/Desktop/LongevityCommon/AIM`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/AIM`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-7,8G	/home/oem/Desktop/LongevityCommon/AIM
+7,8G	/home/oem/Desktop/LC/AIM
 ```
 **Extensions:** .py=333, .rs=322, .md=316, .toml=206, .ex=89, .exs=50, .txt=36, .sh=31, .service=20, .log=20, (noext)=16, .jpeg=16, .js=14, .png=14, .yaml=11
 ## Tree (depth=2, max 200 entries)
@@ -425,7 +425,7 @@ AIM работает в двух режимах через `AIM_ROLE`:
 
 **Project:** AI (AIM/AI)
 **Status:** v0.1.0 — bootstrap (2026-05-03)
-**Location:** `~/Desktop/LongevityCommon/AIM/AI/`
+**Location:** `~/Desktop/LC/AIM/AI/`
 **Parent project:** AIM (operational AI runtime)
 
 ## Цель
@@ -498,12 +498,12 @@ agents/  ↛  AI/  (НИКОГДА — AI is opt-in experimentation)
 ## Запуск
 
 ```bash
-cd ~/Desktop/LongevityCommon/AIM
+cd ~/Desktop/LC/AIM
 # Тесты подпроекта (через корневой pytest):
-~/Desktop/LongevityCommon/AIM/venv/bin/python -m pytest AI/tests/ -q
+~/Desktop/LC/AIM/venv/bin/python -m pytest AI/tests/ -q
 
 # Конкретный модуль:
-~/Desktop/LongevityCommon/AIM/venv/bin/python -m AI.ai.eval_synthesiser
+~/Desktop/LC/AIM/venv/bin/python -m AI.ai.eval_synthesiser
 
 # CLI-связки через aim_cli:
 aim diag --doctor          # smoke-test wiring (DR2)
@@ -562,7 +562,7 @@ DB1 dashboard reads everything; DR2 doctor smoke-tests wiring.
 ## Связь с canonical AIM ROADMAP
 
 Этот подпроект является преемником S6/S7-волн из roadmap
-`~/Desktop/LongevityCommon/AIM/ROADMAP_SURPASS_ClaudeCode_2026-05-02.md`.
+`~/Desktop/LC/AIM/ROADMAP_SURPASS_ClaudeCode_2026-05-02.md`.
 S6 был отложен до тех пор, пока eval baseline не накопится; AI/ — место
 где S6+ будет жить когда время придёт.
 
@@ -1626,9 +1626,9 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 
 Следить за этими только если конкретный partner / event активирует:
 
-- **CDATA / Impetus Round 4** — следить за `~/Desktop/LongevityCommon/CDATA/TODO.md`.
+- **CDATA / Impetus Round 4** — следить за `~/Desktop/LC/CDATA/TODO.md`.
 - **EIC Pathfinder Challenges 2026** (deadline **2026-10-28**) — следить за
-  `~/Desktop/LongevityCommon/CLAUDE.md`.
+  `~/Desktop/LC/CLAUDE.md`.
 - **PhD applications** — следить за memory `project_phd_*` и `STRATEGY.md`
   partner проекта (не AIM).
 
@@ -1655,7 +1655,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 3. [OCR / PDF — библиотеки](#3-ocr-и-pdf)
 4. [Лабораторные референсы](#4-лабораторные-референсы)
 5. [Многоязычие — 9 языков](#5-многоязычие)
-6. [Связь с CDATA / HAP / MCOA](#6-научная-база-из-экосистемы)
+6. [Связь с CDATA / HAP / MCAOA](#6-научная-база-из-экосистемы)
 7. [Регуляция / privacy](#7-регуляция-и-privacy)
 
 ---
@@ -1727,7 +1727,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 |--------|-------------|
 | **CDATA** | биологический возраст → health-span предсказания |
 | **HAP** (Hepato-Affective Primacy) | связь печени и настроения → скрининг депрессии через LFT |
-| **MCOA** | 5 параллельных счётчиков повреждений → multi-system health dashboard |
+| **MCAOA** | 5 параллельных счётчиков повреждений → multi-system health dashboard |
 | **Ze Theory** | нейрофизика сознания → BioSense-χ_Ze для скрининга когнитивного возраста |
 | **BioSense** | EEG-измерение χ_Ze → интеграция в AIM после валидации |
 | **FCLC** | федеративное обучение → будущий канал для анонимных моделей |
@@ -1822,7 +1822,7 @@ critical-path open question:
 
 ## Связь с экосистемой
 
-AIM — standalone, но опирается на научные результаты CDATA/HAP/MCOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
+AIM — standalone, но опирается на научные результаты CDATA/HAP/MCAOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
 
 ---
 
@@ -1877,13 +1877,13 @@ AIM — standalone, но опирается на научные результа
 
 | Проект | Путь | Роль |
 |--------|------|------|
-| CommonHealth | `~/Desktop/LongevityCommon/` | Umbrella (EIC Pathfinder) |
-| CDATA | `~/Desktop/LongevityCommon/CDATA/` | Биологический возраст |
-| HAP | `~/Desktop/LongevityCommon/HAP/` | Гепато-аффективная теория |
-| MCOA | `~/Desktop/LongevityCommon/MCOA/` | Мульти-счётчиковая архитектура |
-| Ze | `~/Desktop/LongevityCommon/Ze/` | Нейрофизика сознания |
-| BioSense | `~/Desktop/LongevityCommon/BioSense/` | EEG χ_Ze |
-| FCLC | `~/Desktop/LongevityCommon/FCLC/` | Federated learning |
+| CommonHealth | `~/Desktop/LC/` | Umbrella (EIC Pathfinder) |
+| CDATA | `~/Desktop/LC/CDATA/` | Биологический возраст |
+| HAP | `~/Desktop/LC/HAP/` | Гепато-аффективная теория |
+| MCAOA | `~/Desktop/LC/MCAOA/` | Мульти-счётчиковая архитектура |
+| Ze | `~/Desktop/LC/Ze/` | Нейрофизика сознания |
+| BioSense | `~/Desktop/LC/BioSense/` | EEG χ_Ze |
+| FCLC | `~/Desktop/LC/FCLC/` | Federated learning |
 | Regenesis | `~/Desktop/Regenesis/` | Фитотерапевтические протоколы |
 | kSystem | `~/Desktop/kSystem/` | 8-язычный лексикон |
 | DrJaba | `~/Desktop/DrJaba/` | Сайт клиники |
@@ -1892,7 +1892,7 @@ AIM — standalone, но опирается на научные результа
 ## Grants / funding
 
 - EIC Pathfinder 2026: https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en
-- Дедлайн подачи: **2026-05-12** (see `~/Desktop/LongevityCommon/EIC/`)
+- Дедлайн подачи: **2026-05-12** (see `~/Desktop/LC/EIC/`)
 
 ## Научные базы
 

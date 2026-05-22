@@ -1,6 +1,6 @@
 [Unit]
 Description=AIM Hive Queen — nightly SQLite backup (P1.5 hardening 2026-05-07)
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
 After=aim-hive-queen.service
 
 [Service]

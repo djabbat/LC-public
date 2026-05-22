@@ -545,7 +545,7 @@ defmodule AimWeb.AboutLive do
         <p>
           AIM is released under a permissive open-source license
           (see <code>LICENSE</code> in the source tree). Source:
-          <code>~/Desktop/LongevityCommon/AIM/</code>.
+          <code>~/Desktop/LC/AIM/</code>.
           Lead maintainer: Jaba Tkemaladze
           (<a href="mailto:djabbat@gmail.com">djabbat@gmail.com</a>).
           Brand portal: <a href="https://longevity.ge">longevity.ge</a>.

@@ -33,6 +33,6 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| Ilya Zheleznov | Experimental design, RITE construct development | Confirmed |\n| LongevityCommon | Coordination, funding, data management | Confirmed |\n| Microscopy core facility (TBD) | Live-cell imaging support | To be identified by 2026-09-01 via LongevityCommon network |\n| Bioinformatics collaborator (TBD) | DAG reconstruction algorithm | To be identified by 2026-09-01 via LongevityCommon network |\n| Cell line provider (TBD) | RPE-1 cells with inducible RITE system | To be identified by 2026-09-01 via LongevityCommon network |\n| Statistical consultant (TBD) | Power analysis, pre-registration | To be identified by 2026-09-01 via LongevityCommon network |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| Ilya Zheleznov | Experimental design, RITE construct development | Confirmed |\n| LC | Coordination, funding, data management | Confirmed |\n| Microscopy core facility (TBD) | Live-cell imaging support | To be identified by 2026-09-01 via LC network |\n| Bioinformatics collaborator (TBD) | DAG reconstruction algorithm | To be identified by 2026-09-01 via LC network |\n| Cell line provider (TBD) | RPE-1 cells with inducible RITE system | To be identified by 2026-09-01 via LC network |\n| Statistical consultant (TBD) | Power analysis, pre-registration | To be identified by 2026-09-01 via LC network |"
   }
 ]

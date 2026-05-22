@@ -73,7 +73,7 @@ impl Clock for FixedClock {
 // ── project detection ──────────────────────────────────────────────────────
 
 pub const PROJECT_NAMES: &[&str] = &[
-    "LongevityCommon", "FCLC", "MCOA", "Ze",
+    "LC", "FCLC", "MCAOA", "Ze",
     "BioSense", "CDATA", "AIM", "Annals",
     "PhD", "Books", "GLA",
 ];
@@ -270,7 +270,7 @@ mod tests {
     fn detect_projects_case_insensitive() {
         let v = detect_projects("работал над FClC и mcoa");
         assert!(v.contains(&"FCLC"));
-        assert!(v.contains(&"MCOA"));
+        assert!(v.contains(&"MCAOA"));
     }
 
     #[test]

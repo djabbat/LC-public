@@ -31,7 +31,7 @@
    В CONCEPT.md явный раздел из 8 пунктов; в EVIDENCE.md дополнительно — без приукрашиваний.
 
 6. **Consortium / collaboration plan** — ✓  
-   Таблица партнёров (LongevityCommon, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Некоторые TBD, но план есть.
+   Таблица партнёров (LC, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Некоторые TBD, но план есть.
 
 7. **Reference reality + match** — ✗ (частично)  
    - Большинство DOI/PMID (OpenFlexure, Hayflick, CellPose, ImageJ, GT335, Ninein, Burger, Boiko, Bran) — реальны и соответствуют тексту.  

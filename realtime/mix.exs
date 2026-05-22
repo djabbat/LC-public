@@ -1,4 +1,4 @@
-defmodule LongevityCommonRealtime.MixProject do
+defmodule LCRealtime.MixProject do
   use Mix.Project
 
   def project do
@@ -15,7 +15,7 @@ defmodule LongevityCommonRealtime.MixProject do
 
   def application do
     [
-      mod: {LongevityCommonRealtime.Application, []},
+      mod: {LCRealtime.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

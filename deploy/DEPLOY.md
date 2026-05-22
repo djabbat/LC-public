@@ -1,4 +1,4 @@
-# LongevityCommon — server deployment guide (Option C)
+# LC — server deployment guide (Option C)
 
 **Target:** Full umbrella deployment on `app.longevity.ge` server (alongside existing `fclc.longevity.ge`).
 **Subdomains:** `app.longevity.ge`, `ze.longevity.ge`, `biosense.longevity.ge`.
@@ -98,7 +98,7 @@ rsync -avz --delete \
  --exclude='node_modules/' \
  --exclude='priv/static/' \
  --exclude='.git/' \
- LongevityCommon/ server:/home/jaba/web/longevitycommon/
+ LC/ server:/home/jaba/web/longevitycommon/
 ```
 
 ### C.2 — Build images on server
@@ -174,13 +174,13 @@ Add cross-project footer to each Phoenix:
 Footer template (Phoenix HEEX):
 ```heex
 <footer class="footer">
- <div>Part of the LongevityCommon ecosystem ·
+ <div>Part of the LC ecosystem ·
  <a href="https://app.longevity.ge">Home</a> ·
  <a href="https://ze.longevity.ge">Ze Simulator</a> ·
  <a href="https://biosense.longevity.ge">BioSense</a> ·
  <a href="https://fclc.longevity.ge">FCLC</a> ·
  <a href="https://longevity.ge/rescience/">Annals of Rejuvenation Science</a> ·
- <a href="https://github.com/djabbat/LongevityCommon" rel="noopener">Source</a>
+ <a href="https://github.com/djabbat/LC" rel="noopener">Source</a>
  </div>
 </footer>
 ```

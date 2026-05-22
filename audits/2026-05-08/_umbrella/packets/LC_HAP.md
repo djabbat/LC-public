@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_HAP
 
-Path: `/home/oem/Desktop/LongevityCommon/HAP`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/HAP`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-104K	/home/oem/Desktop/LongevityCommon/HAP
+104K	/home/oem/Desktop/LC/HAP
 ```
 **Extensions:** .md=10, .docx=1
 ## Tree (depth=2, max 200 entries)

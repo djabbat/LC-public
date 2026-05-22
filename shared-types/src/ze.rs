@@ -1,4 +1,4 @@
-//! Canonical Ze theory constants.  Authoritative source: `~/Desktop/LongevityCommon/PARAMETERS.md §1`.
+//! Canonical Ze theory constants.  Authoritative source: `~/Desktop/LC/PARAMETERS.md §1`.
 //!
 //! Two coexistent conventions exist:
 //!

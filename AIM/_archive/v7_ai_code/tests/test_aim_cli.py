@@ -87,12 +87,12 @@ def test_recall_json_mode(isolated, capsys, monkeypatch):
 
 def test_project_list(isolated, capsys):
     (isolated / "projects" / "FCLC.yaml").write_text("name: FCLC\n")
-    (isolated / "projects" / "MCOA.yaml").write_text("name: MCOA\n")
+    (isolated / "projects" / "MCAOA.yaml").write_text("name: MCAOA\n")
     from aim_cli import main
     rc = main(["project", "list"])
     out = capsys.readouterr().out
     assert rc == 0
-    assert "FCLC" in out and "MCOA" in out
+    assert "FCLC" in out and "MCAOA" in out
 
 
 def test_project_archive_then_unarchive(isolated, capsys):

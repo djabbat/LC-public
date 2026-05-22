@@ -13,7 +13,7 @@
 //! Port: 127.0.0.1:4502 (decided 2026-05-07; nginx biosense.longevity.ge
 //! already maps /api/ → :4502 and /,/live/ → :4501 biosense-web).
 //!
-//! Reference: ~/Desktop/LongevityCommon/BioSense/CONCEPT.md.
+//! Reference: ~/Desktop/LC/BioSense/CONCEPT.md.
 
 use axum::{
     extract::Json,

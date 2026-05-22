@@ -10,7 +10,7 @@
 #     (PWA-style: just title bar + content, no URL bar / tabs).
 #   * Firefox fallback uses --new-window when Chrome unavailable.
 set -uo pipefail
-REPO_ROOT="/home/oem/Desktop/LongevityCommon/AIM"
+REPO_ROOT="/home/oem/Desktop/LC/AIM"
 PHOENIX="$REPO_ROOT/phoenix-umbrella"
 PORT="${AIM_LOCAL_PORT:-4000}"
 CHAT_URL="http://127.0.0.1:${PORT}/chat"

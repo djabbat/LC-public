@@ -350,7 +350,7 @@ mod tests {
 
     #[test]
     fn detect_refs_finds_known_capitalised_words() {
-        let k = known(&["FCLC", "MCOA", "CDATA"]);
+        let k = known(&["FCLC", "MCAOA", "CDATA"]);
         assert_eq!(detect_refs("blocked on FCLC and CDATA", &k), vec!["FCLC", "CDATA"]);
     }
 

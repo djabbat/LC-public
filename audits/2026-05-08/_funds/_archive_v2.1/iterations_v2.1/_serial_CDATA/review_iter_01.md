@@ -59,4 +59,4 @@
 
 ## PACKET
 - **Fund as is, with minor stylistic improvements listed above.**  
-- **Рекомендуется** добавить явный план по верификации CHIP-связи (MCOA Test 2) и конкретные сроки для UK Biobank продольного анализа.
+- **Рекомендуется** добавить явный план по верификации CHIP-связи (MCAOA Test 2) и конкретные сроки для UK Biobank продольного анализа.

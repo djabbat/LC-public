@@ -31,7 +31,7 @@
    Явный раздел в CONCEPT.md (8 пунктов) и в EVIDENCE.md. Честно перечислены ограничения.
 
 6. **Consortium / collaboration plan** ✓  
-   Таблица партнёров с ролями (LongevityCommon, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Placeholders допустимы, статусы отмечены.
+   Таблица партнёров с ролями (LC, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Placeholders допустимы, статусы отмечены.
 
 7. **Reference reality + match** ✓  
    Все ссылки в EVIDENCE.md проверены: DOI/PMID реальны (PubMed, Crossref), содержание соответствует утверждениям в тексте. Подробности в таблице ниже.

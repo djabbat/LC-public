@@ -9,7 +9,7 @@
 //!
 //! ```yaml
 //! name:        FCLC
-//! canonical:   /home/oem/Desktop/LongevityCommon/FCLC
+//! canonical:   /home/oem/Desktop/LC/FCLC
 //! phase:       SUBMITTED            # DRAFT|REVIEW|SUBMITTED|ACCEPTED|PUBLISHED
 //! goals:
 //!   - Get EIC Pathfinder Challenges 2026 funded (€3M, 36 mo)

@@ -39,7 +39,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / Partners",
-    "body": "- Yale University (Centriole biology, polyGlu imaging) — contact: TBD\n- Stanford University (HSC lineage tracing, single-cell analysis) — contact: TBD\n- Max Planck Institute for Biology of Ageing (C. elegans validation) — contact: TBD\n- University of Cambridge (Computational modeling, MCOA integration) — contact: TBD\n- LongevityCommon (Meta-theory coordination, data sharing platform) — contact: TBD"
+    "body": "- Yale University (Centriole biology, polyGlu imaging) — contact: TBD\n- Stanford University (HSC lineage tracing, single-cell analysis) — contact: TBD\n- Max Planck Institute for Biology of Ageing (C. elegans validation) — contact: TBD\n- University of Cambridge (Computational modeling, MCAOA integration) — contact: TBD\n- LC (Meta-theory coordination, data sharing platform) — contact: TBD"
   },
   {
     "file": "ROADMAP.md",

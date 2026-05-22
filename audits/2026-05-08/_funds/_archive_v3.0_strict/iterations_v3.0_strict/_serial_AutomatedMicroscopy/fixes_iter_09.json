@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon Lab | Lead, experimental design, data analysis | Active |\n| OpenFlexure Community | Hardware design consultation | TBD |\n| FLIR/ Teledyne | Camera technical support | TBD |\n| ThorLabs | Illuminator supply | TBD |\n| Zeiss | Microscope maintenance | TBD |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC Lab | Lead, experimental design, data analysis | Active |\n| OpenFlexure Community | Hardware design consultation | TBD |\n| FLIR/ Teledyne | Camera technical support | TBD |\n| ThorLabs | Illuminator supply | TBD |\n| Zeiss | Microscope maintenance | TBD |"
   },
   {
     "file": "/CONCEPT.md",

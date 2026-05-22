@@ -14,7 +14,7 @@
   {
     "file": "CONCEPT.md",
     "action": "insert_after_line",
-    "line_anchor": "## 1. Counter Identity and Integration within MCOA",
+    "line_anchor": "## 1. Counter Identity and Integration within MCAOA",
     "body": "\n**Clarification:** The variable D₂ is defined as a tissue-average or population-average measure of telomere length deviation. The current model does not explicitly account for the distribution of telomere lengths within a cell population; this limitation is addressed in OP-T1.\n"
   },
   {

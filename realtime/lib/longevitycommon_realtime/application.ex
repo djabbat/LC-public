@@ -1,24 +1,24 @@
-defmodule LongevityCommonRealtime.Application do
+defmodule LCRealtime.Application do
   use Application
 
   @impl true
   def start(_type, _args) do
     children = [
-      LongevityCommonRealtime.Repo,
-      {Phoenix.PubSub, name: LongevityCommonRealtime.PubSub},
-      LongevityCommonRealtimeWeb.Endpoint,
+      LCRealtime.Repo,
+      {Phoenix.PubSub, name: LCRealtime.PubSub},
+      LCRealtimeWeb.Endpoint,
       # Phase 4.5 (2026-05-08): postgres LISTEN/NOTIFY bridge from
       # Rust social-server (writes pg_notify) → Phoenix Channel.
-      LongevityCommonRealtime.FeedNotifier,
+      LCRealtime.FeedNotifier,
     ]
 
-    opts = [strategy: :one_for_one, name: LongevityCommonRealtime.Supervisor]
+    opts = [strategy: :one_for_one, name: LCRealtime.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   @impl true
   def config_change(changed, _new, removed) do
-    LongevityCommonRealtimeWeb.Endpoint.config_change(changed, removed)
+    LCRealtimeWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

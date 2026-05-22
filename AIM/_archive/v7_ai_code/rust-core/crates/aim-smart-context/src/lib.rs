@@ -352,7 +352,7 @@ mod tests {
 
     #[test]
     fn task_tokens_lowercase_minlength_3() {
-        let t = task_tokens("Compare CDATA and MCOA papers in 2026");
+        let t = task_tokens("Compare CDATA and MCAOA papers in 2026");
         assert!(t.contains("compare"));
         assert!(t.contains("cdata"));
         assert!(t.contains("mcoa"));

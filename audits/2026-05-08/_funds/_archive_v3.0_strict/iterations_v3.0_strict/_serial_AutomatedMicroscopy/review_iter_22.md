@@ -34,7 +34,7 @@
    Два явных раздела "Limitations" в CONCEPT.md, перечислены конкретные ограничения.
 
 6. **✓ Consortium / collaboration plan**  
-   Таблица партнёров (LongevityCommon, Univ. Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Дополнительно в DESIGN.md ещё список. План есть.
+   Таблица партнёров (LC, Univ. Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с ролями и статусами. Дополнительно в DESIGN.md ещё список. План есть.
 
 7. **✗ Reference reality + match**  
    В разделе "Evidence base & meta-analysis" CONCEPT.md присутствуют фабрикационные маркеры: `[Author(s), Year, Journal, DOI TBD]` — невалидный идентификатор. Другие ссылки (Burger, Boiko, Bran) имеют DOI, но их соответствие утверждениям не проверено нами. Наличие невалидного DOI/PMID = автоматический REJECT по условию.

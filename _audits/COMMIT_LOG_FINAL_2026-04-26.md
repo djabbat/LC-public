@@ -3,14 +3,14 @@
 ## Summary
 
 3 Wave 1 agents completed:
-- ✅ aec7a74d (CommonHealth top + MCOA + Ze) → `_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`
+- ✅ aec7a74d (CommonHealth top + MCAOA + Ze) → `_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`
 - ✅ ab87c710 (CommonHealth empirical FCLC+CDATA+BioSense+Ontogenesis+HAP) → `_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
 - ✅ a9e4f36e (PhD audit refresh) → `/home/oem/Desktop/PhD/docs/PEER_REVIEW_v2_PhD_2026-04-26.md`
 
 ## Critical Findings
 
-### MCOA — research misconduct level fabrications
-**9/9 PMIDs in MCOA EVIDENCE.md and PARAMETERS.md were FABRICATED** (AI-generated citation pattern: real PMIDs assigned to wrong papers). Pattern of disqualifying-grade integrity violation.
+### MCAOA — research misconduct level fabrications
+**9/9 PMIDs in MCAOA EVIDENCE.md and PARAMETERS.md were FABRICATED** (AI-generated citation pattern: real PMIDs assigned to wrong papers). Pattern of disqualifying-grade integrity violation.
 
 ### Ze Theory — 1 fabricated arXiv
 arXiv:2501.12345 attributed to "Kerenidis & Cherrat 2025 quantum agents" was actually Malhotra & Ito doubly librating Plutinos (астрофизика).
@@ -38,7 +38,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 
 ## Applied Corrections (autonomous, between Wave 1 and Wave 2)
 
-### MCOA/EVIDENCE.md
+### MCAOA/EVIDENCE.md
 - PMID 29227991 → 28844647 (Hernandez-Segura senescence)
 - PMID 29643502 → 32669715 (Schaum tissue aging)
 - PMID 16909132 → 15734681 (Balaban mitochondria)
@@ -49,7 +49,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 - PMID 31844045 → 32107477 (Janke & Magiera tubulin code)
 - LOO-CV "MSE = -0.093" flagged as mathematically impossible
 
-### MCOA/PARAMETERS.md
+### MCAOA/PARAMETERS.md
 - α_Tel PMID 2038241 → 2342578 + 1631178 (Harley 1990 + Allsopp 1992)
 - Telomere×MitoROS PMID 12612578 → 12855956
 - EpiDrift×MitoROS PMID 26833090 → suggested 30982602 (Schultz & Sinclair NAD+)
@@ -88,7 +88,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 - **HAP rebuild** — stub state cannot be auto-fixed; full literature search needed.
 - **Ontogenesis rebuild** — quarantine sustained; full re-verification needed.
 - **CDATA Sobol paradox** — structural issue, requires counter-factual analysis + reformulation (already partially in CDATA_REFORMULATION).
-- **MCOA Aksioma M3 a-priori weights** — all w_i still placeholder; needs RNA-seq-based prediction protocol.
+- **MCAOA Aksioma M3 a-priori weights** — all w_i still placeholder; needs RNA-seq-based prediction protocol.
 - **FCLC PATE prototype + ε≤1.0 + EU LoIs** — structural deliverables, not citation fixes.
 
 ---
@@ -115,8 +115,8 @@ Reviewers see **already-corrected** documents (Wave 1 fixes applied), so Wave 2 
 
 ### LICENSE files created (EIC mandate compliance)
 10 MIT LICENSE files created в:
-- /home/oem/Desktop/LongevityCommon/LICENSE
-- /home/oem/Desktop/LongevityCommon/{MCOA,FCLC,Ze,CDATA,BioSense,Ontogenesis,HAP}/LICENSE
+- /home/oem/Desktop/LC/LICENSE
+- /home/oem/Desktop/LC/{MCAOA,FCLC,Ze,CDATA,BioSense,Ontogenesis,HAP}/LICENSE
 - /home/oem/Desktop/E0/LICENSE
 - /home/oem/Desktop/PhD/LICENSE
 
@@ -124,7 +124,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 
 ### Pending (cannot apply autonomously — strategic/structural decisions)
 
-1. **Trademark conflict «CommonHealth» vs Common Health Inc (US)** — requires renaming or trademark search/clearance. User decision needed (suggested alternatives: «CommonHealth Georgia», «GLA-Health», «LongevityCommon», «MetaHealth Georgia», «AnnalsHealth»).
+1. **Trademark conflict «CommonHealth» vs Common Health Inc (US)** — requires renaming or trademark search/clearance. User decision needed (suggested alternatives: «CommonHealth Georgia», «GLA-Health», «LC», «MetaHealth Georgia», «AnnalsHealth»).
 2. **Co-PI commitment letter** — depends on Илья (соглашение к субботе 2026-05-02).
 3. **NGO grant manager hire** — for €3M EIC-tier fund management (Georgia Longevity Alliance currently без dedicated grants office).
 4. **DPA (Data Processing Agreement)** templates для Wellcome/EIC compliance.
@@ -132,7 +132,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 6. **Citation validation signed PI statement** для Wellcome 2025 fraud-detection pilot.
 7. **HAP and Ontogenesis full literature rebuild** — fabrication-flagged subprojects need ground-up verification.
 8. **CDATA Sobol-paradox resolution** — counter-factual analysis with only-centriolar features.
-9. **MCOA априорные w_i weights** — RNA-seq based prediction on Tabula Muris/Sapiens.
+9. **MCAOA априорные w_i weights** — RNA-seq based prediction on Tabula Muris/Sapiens.
 10. **FCLC PATE prototype implementation** — currently stub.
 
 ---
@@ -140,9 +140,9 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 ## Strategic Decisions — Round 1 (2026-04-26 evening, post-Wave-2)
 
 ### Decision #1 — Trademark Conflict ✅ RESOLVED
-**Choice:** Option C — **LongevityCommon** (focus on longevity domain)
+**Choice:** Option C — **LC** (focus on longevity domain)
 **Applied:** 161 brand replacements in 79 .md files (context-aware, paths preserved)
-**Pending:** Directory `/home/oem/Desktop/LongevityCommon/` оставлена для backwards compat; full directory rename — отдельная structural decision (low priority, файловые ссылки в этой сессии не сломаны)
+**Pending:** Directory `/home/oem/Desktop/LC/` оставлена для backwards compat; full directory rename — отдельная structural decision (low priority, файловые ссылки в этой сессии не сломаны)
 
 ### Decision #2 — Co-PI Letter ✅ RESOLVED (wait)
 **Choice:** Option A — wait для встречи 2026-05-02 в 15:00 Tbilisi с Илья
@@ -170,7 +170,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 **Choice:** Counter-factual analysis (script `cdata_ablation_sobol.py` уже существует) + reframe Counter #1 как "structural age-tracker" (не "dominant determinant").
 **Status:** Script paused (overnight rename + FCLC priority took precedence). SALib installed. To resume — run `python3 scripts/cdata_ablation_sobol.py` после FCLC deployment complete.
 
-### Decision #5 — MCOA Априорные w_i ✅ RESOLVED (F)
+### Decision #5 — MCAOA Априорные w_i ✅ RESOLVED (F)
 **Choice:** Hybrid pilot — Tabula Muris/Sapiens ridge prediction для 3 best-characterized counters (CDATA centriolar, telomere, mitoROS) перед Impetus LOI; остальные 3 (epigenetic_drift, proteostasis, autophagy/mitophagy) explicitly помечены как «to-be-derived in Phase II».
 **Implementation plan:**
 1. Download Tabula Muris/Sapiens RNA-seq counts data
@@ -185,7 +185,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 
 ### Decision #6 — FCLC PATE Implementation ✅ RESOLVED (D)
 **Choice:** RDP composition (1 неделя) + PATE classic (2-3 нед). Total ~4 недели Rust work, $0.
-**Where:** Локальная разработка на Desktop в `/home/oem/Desktop/LongevityCommon/FCLC/fclc-core/src/dp/` и `pate/`. Server только для staging/integration tests + production deployment.
+**Where:** Локальная разработка на Desktop в `/home/oem/Desktop/LC/FCLC/fclc-core/src/dp/` и `pate/`. Server только для staging/integration tests + production deployment.
 **Trigger:** после FCLC server deployment complete + Impetus LOI draft started (~2026-Q3).
 **Target metric:** ε ~1.0-2.0 после RDP + PATE classic (vs current ε=10).
 
@@ -218,11 +218,11 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 
 | # | Decision | Choice | Status |
 |---|---|---|---|
-| 1 | Trademark | LongevityCommon (option C) | ✅ Applied (161 brand replacements + directory + GitHub repos + 408 path refs) |
+| 1 | Trademark | LC (option C) | ✅ Applied (161 brand replacements + directory + GitHub repos + 408 path refs) |
 | 2 | Co-PI letter | Wait Saturday 2026-05-02 (option A) | ✅ No proactive action |
 | 3 | NGO grants office | Phased: self → uni/Lifeboat (option G) | ✅ Documented |
 | 4 | CDATA Sobol counter-factual | Counter-factual + structural reframe (option F) | 🟡 Script ready, pending execution |
-| 5 | MCOA априорные w_i | Hybrid pilot Tabula Muris ridge (option F) | 🟡 Pending implementation |
+| 5 | MCAOA априорные w_i | Hybrid pilot Tabula Muris ridge (option F) | 🟡 Pending implementation |
 | 6 | FCLC PATE | RDP + PATE classic local dev (option D) | 🟡 Pending implementation |
 | 7 | HAP + Ontogenesis | Punt + demote to conceptual (option G) | 🟡 Pending demote disclaimer |
 | 8 | 5 PhD PMID misattributions | Subagent fix (option B) | 🟡 Agent running |

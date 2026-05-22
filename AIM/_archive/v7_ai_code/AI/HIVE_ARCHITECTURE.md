@@ -170,7 +170,7 @@ Central aggregator (single-node, может быть VPS или Anthropic cloud 
 
 ## Что НЕ делать
 
-- **Не трогать LongevityCommon ecosystem** — AIM/AI инфраструктура отдельная. Hive architecture не изменяет project ownership / FCLC / MCOA / etc.
+- **Не трогать LC ecosystem** — AIM/AI инфраструктура отдельная. Hive architecture не изменяет project ownership / FCLC / MCAOA / etc.
 - **Не сделать queen mandatory** — worker должен полностью функционировать офлайн.
 - **Не делать queen single point of failure** — multiple queens возможны (federated, не centralized).
 - **Не сливать сырые user data** — only aggregate / hashed / anonymized.

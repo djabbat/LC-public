@@ -34,7 +34,7 @@
    Есть явные разделы в CONCEPT и EVIDENCE, перечислены 8+ ограничений.
 
 6. **Consortium / collaboration plan** — ✓  
-   Таблица с 5+ партнёрами (LongevityCommon, Univ. Bristol, Zeiss, FLIR, ThorLabs, OpenTrons), роли и статус указаны.
+   Таблица с 5+ партнёрами (LC, Univ. Bristol, Zeiss, FLIR, ThorLabs, OpenTrons), роли и статус указаны.
 
 7. **Reference reality + match** — **✗**  
    В EVIDENCE.md часть ссылок имеет реальные DOI/PMID (Burger, Boiko, Bran, Stringer, Wolff и др.) и соответствует тексту. Однако:  

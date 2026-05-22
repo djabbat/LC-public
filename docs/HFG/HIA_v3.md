@@ -1,6 +1,6 @@
 # Host Institution Agreement (HIA)
 
-**EIC Pathfinder Open 2026 — LongevityCommon**
+**EIC Pathfinder Open 2026 — LC**
 Integrated Longevity Research Platform
 Version 3.0 | 17 April 2026
 
@@ -41,7 +41,7 @@ Status: no liquidation, reorganization, insolvency, liens, or tax encumbrances r
 
 ### 1.3 The Project
 
-**Project acronym:** LongevityCommon
+**Project acronym:** LC
 **Project full title:** Integrated Longevity Research Platform
 **Funding instrument:** EIC Pathfinder Open 2026 (Call identifier: HORIZON-EIC-2026-PATHFINDEROPEN-01)
 **Budget (requested):** up to €3,000,000
@@ -160,7 +160,7 @@ Place: Tbilisi, Georgia
 
 _____________________________________
 **Dr. Jaba Tkemaladze, MD**
-Principal Investigator, LongevityCommon Project
+Principal Investigator, LC Project
 Editor-in-Chief, *Annals of Rejuvenation Science* (e-ISSN 3088-439X)
 Date: ______________
 Place: Tbilisi, Georgia
@@ -174,7 +174,7 @@ Place: Tbilisi, Georgia
 - **Annex C.** Public Registry extract, not older than 3 months (current: B25144411 dated 16 October 2025)
 - **Annex D.** Tax identification documentation
 - **Annex E.** Audited financial statements, years 2022, 2023, 2024
-- **Annex F.** Board resolution authorizing participation in the LongevityCommon Project
+- **Annex F.** Board resolution authorizing participation in the LC Project
 - **Annex G.** Conflict of Interest Declaration v3 (separate document, executed in parallel)
 
 ---

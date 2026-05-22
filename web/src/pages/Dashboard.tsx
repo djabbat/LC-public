@@ -46,7 +46,7 @@ export function Dashboard() {
         biomarkers. Pre-registered tests of v1 χ_Ze yielded NULL results
         (deprecated/superseded). Current v2 multimodal is post-hoc.
         Confirmatory validation pending pre-registered N≥2000 cohort. Not
-        medical advice. See LongevityCommon CONCEPT v5.6.
+        medical advice. See LC CONCEPT v5.6.
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
         <div>

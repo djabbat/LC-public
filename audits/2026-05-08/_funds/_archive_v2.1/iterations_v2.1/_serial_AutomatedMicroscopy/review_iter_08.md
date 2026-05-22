@@ -55,7 +55,7 @@
    - **OpenTrons — "exploratory discussion"**, не партнёр.
    - **Нет MOU или commitment letter** ни от кого, кроме Zeiss (donor).
    - **Отсутствует план cross-lab validation** — указано "repeat at partner site", но не назван конкретный партнёр.
-   - **Статус "Active" только у LongevityCommon** — consortium не сформирован.
+   - **Статус "Active" только у LC** — consortium не сформирован.
 
 7. **Reference reality + match — ✗ (КРИТИЧЕСКИЙ)**
    Проведена верификация всех ссылок. Результаты см. в таблице ниже. **Две ссылки имеют проблемы.**

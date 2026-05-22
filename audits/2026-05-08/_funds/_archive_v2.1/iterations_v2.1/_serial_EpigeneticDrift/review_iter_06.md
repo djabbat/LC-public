@@ -4,7 +4,7 @@
 **REVISE_MAJOR**
 
 ## Scores (1-5)
-- Premise: 5 — убедительная концептуализация Epigenetic Drift как количественного счётчика в MCOA.
+- Premise: 5 — убедительная концептуализация Epigenetic Drift как количественного счётчика в MCAOA.
 - Method: 4 — формальное уравнение, параметры и кинетика обоснованы; не хватает плана пре-регистрации.
 - Evidence: 5 — качественный мета-анализ, все ссылки проверены, внутренние данные и честное освещение контрпримеров.
 - Falsifiability: 5 — чёткие численные пороги, тесты с количественными критериями, матрица рисков.
@@ -14,7 +14,7 @@
 
 ## Checklist (✓/✗ each + explanation)
 
-1. ✗ **Pre-registration plan** — Отсутствует. Нет placeholder OSF идентификатора и запланированной даты пре-регистрации. В проекте упоминаются «MCOA Tests», но не как pre-registration. **Это критическое нарушение.**  
+1. ✗ **Pre-registration plan** — Отсутствует. Нет placeholder OSF идентификатора и запланированной даты пре-регистрации. В проекте упоминаются «MCAOA Tests», но не как pre-registration. **Это критическое нарушение.**  
    *Требование:* указать OSF (или аналог) и дату регистрации.
 
 2. ✓ **Operationalised falsifiability** — Выполнено. Numeric thresholds для p, effect size, power приведены в CONCEPT.md (p<0.05, d≥0.3, power 80% и т.д.) и в OPEN_PROBLEMS.md.
@@ -59,7 +59,7 @@
 # EpigeneticDrift
 
 === EpigeneticDrift/CONCEPT.md ===
-# Epigenetic Drift as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCOA): Counter #4
+# Epigenetic Drift as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCAOA): Counter #4
 
 > ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
@@ -82,15 +82,15 @@ Letters of intent will be obtained prior to funding. The consortium will meet bi
 
 ## Abstract
 
-The erosion of epigenetic information is a hallmark of aging, observable as predictable drift in DNA methylation patterns and chromatin states. Within the Multi-Counter Architecture of Organismal Aging (MCOA), this process is formalized as a discrete, quantifiable "counter" (Counter #4: Epigenetic Drift). This conceptual paper provides the formal kinetic and biological definition of this counter. We propose a time-dominant equation, *D₄(n, t) = D₄,₀ + β₄·(t / τ₄) + α₄·(n / n₄\*) + γ₄ · I(others)*, where *D₄* represents the epigenetic drift state, parameterized by a baseline (*D₄,₀*), a time-driven linear coefficient (*β₄*), a replication-associated coefficient (*α₄*), and a coupling term to other aging processes (*γ₄*). Each parameter is grounded in empirical evidence from peer-reviewed meta-analyses of epigenetic clocks (e.g., Horvath, GrimAge, DunedinPACE) and stem cell aging. We detail its primary measurement via DNA methylation arrays and chromatin accessibility assays, its proposed bidirectional couplings with other MCOA counters (Centriolar, Telomere, MitoROS, Proteostasis), and explicit, quantitative falsifiability conditions. Finally, we position Epigenetic Drift within the integrative MCOA framework, where tissue-specific aging is modeled as a weighted sum of counter states, and outline critical open questions regarding causality, mechanistic drivers, and the universality of epigenetic aging signals.
+The erosion of epigenetic information is a hallmark of aging, observable as predictable drift in DNA methylation patterns and chromatin states. Within the Multi-Counter Architecture of Organismal Aging (MCAOA), this process is formalized as a discrete, quantifiable "counter" (Counter #4: Epigenetic Drift). This conceptual paper provides the formal kinetic and biological definition of this counter. We propose a time-dominant equation, *D₄(n, t) = D₄,₀ + β₄·(t / τ₄) + α₄·(n / n₄\*) + γ₄ · I(others)*, where *D₄* represents the epigenetic drift state, parameterized by a baseline (*D₄,₀*), a time-driven linear coefficient (*β₄*), a replication-associated coefficient (*α₄*), and a coupling term to other aging processes (*γ₄*). Each parameter is grounded in empirical evidence from peer-reviewed meta-analyses of epigenetic clocks (e.g., Horvath, GrimAge, DunedinPACE) and stem cell aging. We detail its primary measurement via DNA methylation arrays and chromatin accessibility assays, its proposed bidirectional couplings with other MCAOA counters (Centriolar, Telomere, MitoROS, Proteostasis), and explicit, quantitative falsifiability conditions. Finally, we position Epigenetic Drift within the integrative MCAOA framework, where tissue-specific aging is modeled as a weighted sum of counter states, and outline critical open questions regarding causality, mechanistic drivers, and the universality of epigenetic aging signals.
 
 ## 1. Introduction: Epigenetic Information Loss as a Core Aging Process
 
 Aging is characterized by a progressive loss of physiological integrity, driven by the accumulation of diverse forms of molecular damage and deregulation. Among the twelve proposed hallmarks of aging, "epigenetic alterations" stand out due to their upstream position in regulating gene expression programs and their established quantifiability (Horvath and Raj 2018, PMID: 29643443). Epigenetic drift refers to the cumulative, often stochastic, changes in epigenetic marks—including DNA methylation, histone modifications, and chromatin accessibility—that deviate from the youthful, tissue-specific epigenetic landscape. This drift is not random noise; it forms highly predictable patterns that can be used to estimate chronological and biological age with remarkable accuracy using epigenetic "clocks" (Horvath 2013, PMID: 24138928; Belsky et al. 2022, PMID: 35029144; Duan et al. 2022, PMID: 36206857).
 
-The Multi-Counter Architecture of Organismal Aging (MCOA) is a meta-theoretical framework that models organismal aging as the integrated output of several discrete, semi-autonomous, and quantifiable degenerative processes termed "counters." Each counter tracks the accumulation of a specific type of molecular or cellular dysfunction (e.g., telomere shortening, mitochondrial ROS burden). The integrative tissue age *L_tissue(n,t)* is calculated as a weighted sum of the normalized states of all counters.
+The Multi-Counter Architecture of Organismal Aging (MCAOA) is a meta-theoretical framework that models organismal aging as the integrated output of several discrete, semi-autonomous, and quantifiable degenerative processes termed "counters." Each counter tracks the accumulation of a specific type of molecular or cellular dysfunction (e.g., telomere shortening, mitochondrial ROS burden). The integrative tissue age *L_tissue(n,t)* is calculated as a weighted sum of the normalized states of all counters.
 
-This document provides the formal conceptual definition, kinetic model, and validation criteria for **MCOA Counter #4: Epigenetic Drift**. We move beyond describing epigenetic drift as merely a biomarker and instead formalize it as a dynamic, quantifiable aging process with its own kinetics, drivers, and interactions. We ground every aspect of this model in the current evidence base, citing only from two pre-conducted meta-analyses encompassing 24 peer-reviewed publications.
+This document provides the formal conceptual definition, kinetic model, and validation criteria for **MCAOA Counter #4: Epigenetic Drift**. We move beyond describing epigenetic drift as merely a biomarker and instead formalize it as a dynamic, quantifiable aging process with its own kinetics, drivers, and interactions. We ground every aspect of this model in the current evidence base, citing only from two pre-conducted meta-analyses encompassing 24 peer-reviewed publications.
 
 ## 2. Counter Identity and Biological Foundations
 

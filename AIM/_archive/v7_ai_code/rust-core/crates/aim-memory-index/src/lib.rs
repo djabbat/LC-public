@@ -78,9 +78,9 @@ pub const CORE_MD_NAMES: &[&str] = &[
 
 /// Project subtree names walked when `index_desktop` is true.
 pub const DESKTOP_PROJECT_NAMES: &[&str] = &[
-    "LongevityCommon",
+    "LC",
     "FCLC",
-    "MCOA",
+    "MCAOA",
     "Ze",
     "BioSense",
     "CDATA",

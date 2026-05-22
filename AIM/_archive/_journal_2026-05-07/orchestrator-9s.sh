@@ -23,7 +23,7 @@
 #   tail -f ~/.cache/aim/orchestrator.log
 set -euo pipefail
 
-REPO="$HOME/Desktop/LongevityCommon/AIM"
+REPO="$HOME/Desktop/LC/AIM"
 JOURNAL="$REPO/_journal"
 LOG="$HOME/.cache/aim/orchestrator.log"
 STOP_FILE="/tmp/STOP_AIM_ORCHESTRATOR"

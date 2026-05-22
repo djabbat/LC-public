@@ -1,6 +1,6 @@
 //! Path sandbox for fs tools.
 //!
-//! AIM_GENERALIST_ROOT (default: $HOME/Desktop/LongevityCommon/AIM/Patients)
+//! AIM_GENERALIST_ROOT (default: $HOME/Desktop/LC/AIM/Patients)
 //! is the only directory read_file/write_file may touch.
 //! AIM_GENERALIST_ALLOW_EXT — comma list of allowed extensions
 //! (default: md,txt,json,csv,yml,yaml,py,rs,ex,exs,heex).
@@ -12,7 +12,7 @@ pub fn root() -> PathBuf {
         return PathBuf::from(v);
     }
     let home = std::env::var("HOME").unwrap_or_else(|_| "/home/oem".into());
-    PathBuf::from(format!("{home}/Desktop/LongevityCommon/AIM/Patients"))
+    PathBuf::from(format!("{home}/Desktop/LC/AIM/Patients"))
 }
 
 fn allowed_extensions() -> Vec<String> {

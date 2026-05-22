@@ -33,7 +33,7 @@
     "file": "/home/user/project/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners are involved in the AutomatedMicroscopy subproject:\n| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Lead coordination, funding | Confirmed |\n| University of Bristol | Biological validation (CDATA) | Confirmed |\n| Zeiss (industrial) | Microscope support, optics consultation | Letter of intent |\n| FLIR (industrial) | Camera specification, SDK support | Letter of intent |\n| ThorLabs (industrial) | LED illuminator supply | Confirmed |\n| OpenTrons (industrial) | Liquid handling integration (future) | Exploratory |\n| TBD (independent lab) | Independent replication | Under negotiation |"
+    "body": "The following partners are involved in the AutomatedMicroscopy subproject:\n| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead coordination, funding | Confirmed |\n| University of Bristol | Biological validation (CDATA) | Confirmed |\n| Zeiss (industrial) | Microscope support, optics consultation | Letter of intent |\n| FLIR (industrial) | Camera specification, SDK support | Letter of intent |\n| ThorLabs (industrial) | LED illuminator supply | Confirmed |\n| OpenTrons (industrial) | Liquid handling integration (future) | Exploratory |\n| TBD (independent lab) | Independent replication | Under negotiation |"
   },
   {
     "file": "/home/user/project/EVIDENCE.md",

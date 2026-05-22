@@ -196,7 +196,7 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | DOI | `10.1016/j.cell.2014.03.003` | [link](https://doi.org/10.1016/j.cell.2014.03.003) | CONCEPT.md:381 | 1. Anderson, D.J. & Adolphs, R. (2014). A framework for studying emotions across species. *Cell* 157 | ☐ | ☐ | ☐ |
 
-### MCOA (15 уникальных, всего вхождений 20)
+### MCAOA (15 уникальных, всего вхождений 20)
 
 | # | Тип | Идентификатор | URL | File:Line | Контекст | Real? | Match? | Action |
 |---|---|---|---|---|---|---|---|---|
@@ -224,9 +224,9 @@
 | 2 | PMID | `37196864` | [link](https://pubmed.ncbi.nlm.nih.gov/37196864/) | CONCEPT.md:106 | The quest to understand aging has identified several conserved cellular and molecular hallmarks, inc | ☐ | ☐ | ☐ |
 | 3 | PMID | `19732859` | [link](https://pubmed.ncbi.nlm.nih.gov/19732859/) | CONCEPT.md:106 | The quest to understand aging has identified several conserved cellular and molecular hallmarks, inc | ☐ | ☐ | ☐ |
 | 4 | PMID | `37172915` | [link](https://pubmed.ncbi.nlm.nih.gov/37172915/) | CONCEPT.md:106 | The quest to understand aging has identified several conserved cellular and molecular hallmarks, inc | ☐ | ☐ | ☐ |
-| 5 | PMID | `40183670` | [link](https://pubmed.ncbi.nlm.nih.gov/40183670/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCOA Counter #3. We move b | ☐ | ☐ | ☐ |
-| 6 | PMID | `36442091` | [link](https://pubmed.ncbi.nlm.nih.gov/36442091/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCOA Counter #3. We move b | ☐ | ☐ | ☐ |
-| 7 | PMID | `39179117` | [link](https://pubmed.ncbi.nlm.nih.gov/39179117/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCOA Counter #3. We move b | ☐ | ☐ | ☐ |
+| 5 | PMID | `40183670` | [link](https://pubmed.ncbi.nlm.nih.gov/40183670/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCAOA Counter #3. We move b | ☐ | ☐ | ☐ |
+| 6 | PMID | `36442091` | [link](https://pubmed.ncbi.nlm.nih.gov/36442091/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCAOA Counter #3. We move b | ☐ | ☐ | ☐ |
+| 7 | PMID | `39179117` | [link](https://pubmed.ncbi.nlm.nih.gov/39179117/) | CONCEPT.md:110 | This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCAOA Counter #3. We move b | ☐ | ☐ | ☐ |
 | 8 | PMID | `1485738` | [link](https://pubmed.ncbi.nlm.nih.gov/1485738/) | CONCEPT.md:136 | The damage variable \( D_3 \) integrates two major components: 1) Oxidative lesions to mtDNA (like 8 | ☐ | ☐ | ☐ |
 | 9 | PMID | `25149213` | [link](https://pubmed.ncbi.nlm.nih.gov/25149213/) | CONCEPT.md:136 | The damage variable \( D_3 \) integrates two major components: 1) Oxidative lesions to mtDNA (like 8 | ☐ | ☐ | ☐ |
 | 10 | PMID | `40239706` | [link](https://pubmed.ncbi.nlm.nih.gov/40239706/) | CONCEPT.md:139 | In mitotically active tissues (e.g., intestinal crypts, hematopoietic stem cells), mtDNA replication | ☐ | ☐ | ☐ |
@@ -235,11 +235,11 @@
 | 13 | PMID | `40579478` | [link](https://pubmed.ncbi.nlm.nih.gov/40579478/) | CONCEPT.md:142 | This is the dominant term for most tissues. Time-dependent accumulation of mtDNA deletions and point | ☐ | ☐ | ☐ |
 | 14 | PMID | `17090418` | [link](https://pubmed.ncbi.nlm.nih.gov/17090418/) | CONCEPT.md:142 | This is the dominant term for most tissues. Time-dependent accumulation of mtDNA deletions and point | ☐ | ☐ | ☐ |
 | 15 | PMID | `30089816` | [link](https://pubmed.ncbi.nlm.nih.gov/30089816/) | CONCEPT.md:149 | 1. **mtDNA Heteroplasmy:** Digital droplet PCR (ddPCR) or deep sequencing for specific point mutatio | ☐ | ☐ | ☐ |
-| 16 | PMID | `38724734` | [link](https://pubmed.ncbi.nlm.nih.gov/38724734/) | CONCEPT.md:240 | The MCOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA  | ☐ | ☐ | ☐ |
-| 17 | PMID | `39684855` | [link](https://pubmed.ncbi.nlm.nih.gov/39684855/) | CONCEPT.md:240 | The MCOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA  | ☐ | ☐ | ☐ |
+| 16 | PMID | `38724734` | [link](https://pubmed.ncbi.nlm.nih.gov/38724734/) | CONCEPT.md:240 | The MCAOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA  | ☐ | ☐ | ☐ |
+| 17 | PMID | `39684855` | [link](https://pubmed.ncbi.nlm.nih.gov/39684855/) | CONCEPT.md:240 | The MCAOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA  | ☐ | ☐ | ☐ |
 | 18 | PMID | `39173633` | [link](https://pubmed.ncbi.nlm.nih.gov/39173633/) | CONCEPT.md:270 | * **Γ₃,₄ (Epigenetic Drift → Mito):** **Quantitative link proposed.** Hahn et al. (2024, PMID: 39173 | ☐ | ☐ | ☐ |
-| 19 | PMID | `39343182` | [link](https://pubmed.ncbi.nlm.nih.gov/39343182/) | CONCEPT.md:271 | * **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS  | ☐ | ☐ | ☐ |
-| 20 | PMID | `40461459` | [link](https://pubmed.ncbi.nlm.nih.gov/40461459/) | CONCEPT.md:271 | * **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS  | ☐ | ☐ | ☐ |
+| 19 | PMID | `39343182` | [link](https://pubmed.ncbi.nlm.nih.gov/39343182/) | CONCEPT.md:271 | * **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS  | ☐ | ☐ | ☐ |
+| 20 | PMID | `40461459` | [link](https://pubmed.ncbi.nlm.nih.gov/40461459/) | CONCEPT.md:271 | * **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS  | ☐ | ☐ | ☐ |
 | 21 | PMID | `39019845` | [link](https://pubmed.ncbi.nlm.nih.gov/39019845/) | CONCEPT.md:327 | The function \( f_3 \) is a non-linear mapping from damage \( D_3 \) to functional loss. It is expec | ☐ | ☐ | ☐ |
 | 22 | PMID | `40500258` | [link](https://pubmed.ncbi.nlm.nih.gov/40500258/) | CONCEPT.md:327 | The function \( f_3 \) is a non-linear mapping from damage \( D_3 \) to functional loss. It is expec | ☐ | ☐ | ☐ |
 | 23 | PMID | `39933528` | [link](https://pubmed.ncbi.nlm.nih.gov/39933528/) | CONCEPT.md:346 | 1. Cefis M, et al. (2025). Impact of physical activity on physical function, mitochondrial energetic | ☐ | ☐ | ☐ |

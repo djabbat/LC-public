@@ -38,7 +38,7 @@
 Явный раздел в CONCEPT.md (8 пунктов), дублирован в EVIDENCE.md. Честное перечисление.
 
 ### 6. Consortium / collaboration plan — ✓
-Таблица партнёров с ролями и статусами (LongevityCommon, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Формально достаточно.
+Таблица партнёров с ролями и статусами (LC, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Формально достаточно.
 
 ### 7. Reference reality + match — ✓
 Все 10 проверенных ссылок (DOI/PMID) реальны и соответствуют утверждениям. См. таблицу ниже.

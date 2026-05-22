@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_MitoROS
 
-Path: `/home/oem/Desktop/LongevityCommon/MitoROS`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/MitoROS`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-480K	/home/oem/Desktop/LongevityCommon/MitoROS
+480K	/home/oem/Desktop/LC/MitoROS
 ```
 **Extensions:** .md=17, .rs=11, .ex=9, .exs=6, .heex=2, .toml=2, .json=1, .lock=1, (noext)=1, .example=1, .sql=1, .py=1
 ## Tree (depth=2, max 200 entries)
@@ -50,17 +50,17 @@ Path: `/home/oem/Desktop/LongevityCommon/MitoROS`  Date: 2026-05-08
 ```md
 # CLAUDE.md — MitoROS
 
-**Mitochondrial ROS and mtDNA Damage** — формализован как **MCOA Counter #3** (`D₃(n,t)`). Концептуальный подпроект; параметры из meta-analysis (24 PMID). Concept-stage.
+**Mitochondrial ROS and mtDNA Damage** — формализован как **MCAOA Counter #3** (`D₃(n,t)`). Концептуальный подпроект; параметры из meta-analysis (24 PMID). Concept-stage.
 
-**Path:** `/home/oem/Desktop/LongevityCommon/MitoROS/`
-**Repo:** часть `djabbat/LongevityCommon`.
+**Path:** `/home/oem/Desktop/LC/MitoROS/`
+**Repo:** часть `djabbat/LC`.
 
 ---
 
 ## Source of truth
 
 **`MitoROS/CONCEPT.md`** — авторитет.
-Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/CLAUDE.md`.
+Parent: `~/Desktop/LC/MCAOA/CONCEPT.md`, `~/Desktop/LC/CLAUDE.md`.
 
 ---
 
@@ -71,7 +71,7 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 - Покрытые механизмы: mtROS как сигнальные молекулы (не только damage), heteroplasmy clonal expansion, tissue-specific phenotypes
 - Falsifiability conditions явно прописаны
 
-⚠ См. родительский MCOA/CLAUDE.md про numbering conflict — Counter #2 одновременно используется CDATA и Telomere.
+⚠ См. родительский MCAOA/CLAUDE.md про numbering conflict — Counter #2 одновременно используется CDATA и Telomere.
 
 ---
 
@@ -90,26 +90,26 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 
 ---
 
-## План интеграции в MCOA
+## План интеграции в MCAOA
 
 См. counter-modules roadmap (#5 audit pt).
 
 ```
 ### `README.md` (4003 chars)
 ```md
-# MitoROS: Митохондриальные ROS и повреждение мтДНК как счётчик #3 в архитектуре множественных счётчиков старения (MCOA)
+# MitoROS: Митохондриальные ROS и повреждение мтДНК как счётчик #3 в архитектуре множественных счётчиков старения (MCAOA)
 
-**MitoROS** — это подпроект в рамках экосистемы LongevityCommon, формализующий накопление повреждений митохондриальной ДНК (мтДНК) и продукции активных форм кислорода (АФК) как дискретного, измеримого «счётчика» старения в рамках формальной теории MCOA (Multi-Counter Architecture of Aging).
+**MitoROS** — это подпроект в рамках экосистемы LC, формализующий накопление повреждений митохондриальной ДНК (мтДНК) и продукции активных форм кислорода (АФК) как дискретного, измеримого «счётчика» старения в рамках формальной теории MCAOA (Multi-Counter Architecture of Aging).
 
 ## Краткое содержание
 
-Старение — это процесс накопления различных типов молекулярных повреждений. Хотя роль митохондриальной дисфункции хорошо известна, её точный количественный вклад в траекторию старения остаётся предметом дискуссий. Данный проект представляет **MitoROS Counter #3** — математическую формализацию, которая описывает кинетику накопления повреждений мтДНК (гетероплазмия, делеции, окислительные повреждения) как функцию числа клеточных делений (n) и хронологического времени (t). Этот счётчик интегрирован в основное уравнение MCOA, что позволяет оценивать его тканеспецифичный вклад в общий фенотип старения.
+Старение — это процесс накопления различных типов молекулярных повреждений. Хотя роль митохондриальной дисфункции хорошо известна, её точный количественный вклад в траекторию старения остаётся предметом дискуссий. Данный проект представляет **MitoROS Counter #3** — математическую формализацию, которая описывает кинетику накопления повреждений мтДНК (гетероплазмия, делеции, окислительные повреждения) как функцию числа клеточных делений (n) и хронологического времени (t). Этот счётчик интегрирован в основное уравнение MCAOA, что позволяет оценивать его тканеспецифичный вклад в общий фенотип старения.
 
 Основная гипотеза: накопление соматических мутаций мтДНК и нарушение редокс-сигналинга являются одним из фундаментальных, измеримых драйверов старения, чей вклад варьирует между тканями (например, высокий вклад в постмитотические нейроны и миоциты, низкий — в быстро обновляющийся эпителий).
 
 ## Ключевые компоненты проекта
 
-*   **Формальная теория (`THEORY.md`):** Аксиомы, определения, кинетическое уравнение Counter #3 \( D_3(n, t) \) и его интеграция в мастер-уравнение MCOA.
+*   **Формальная теория (`THEORY.md`):** Аксиомы, определения, кинетическое уравнение Counter #3 \( D_3(n, t) \) и его интеграция в мастер-уравнение MCAOA.
 *   **Эмпирическая база (`EVIDENCE.md`):** Таблицы проверенных ссылок (PMID/DOI) на исследования, подтверждающие и опровергающие основные положения. Включает данные мета-анализа 24 исследований.
 *   **Открытые проблемы (`OPEN_PROBLEMS.md`):** Чётко сформулированные научные вопросы и дизайн фальсифицирующих экспериментов с приоритетами (P0-P2).
 *   **Количественные параметры (`PARAMETERS.md`):** Таблица параметров модели (\( \alpha_3, \beta_3, \tau_3, n_3^* \)) с указанием происхождения, единиц измерения и статуса (измерен/оценен/гипотетичен).
@@ -118,9 +118,9 @@ Parent: `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`, `~/Desktop/LongevityCommon/
 *   **Журнал изменений (`JOURNAL.md`):** Хронологическая запись всех значимых решений, обновлений и их обоснований.
 *   **План развития (`ROADMAP.md`):** Этапы будущей работы, приоритеты и зависимости.
 
-## Связь с общей теорией MCOA
+## Связь с общей теорией MCAOA
 
-MitoROS Counter #3 является неотъемлемой частью MCOA. Его уравнение:
+MitoROS Counter #3 является неотъемлемой частью MCAOA. Его уравнение:
 \[
 D_3(n, t) = D_{3,0} + \alpha_3 \cdot \left( \frac{n}{n_3^*} \right) + \beta_3 \cdot \left( \frac{t}{\tau_3} \right) + \sum_{j \neq 3} \Gamma_{3,j} \cdot g(D_j)
 \]
@@ -135,7 +135,7 @@ L_{tissue}(n,t) = \sum_{i} w_i(tissue) \cdot f_i(D_i(n,t))
 Данный проект строго следует **канону CORRECTIONS_2026-04-22**:
 1.  **Не использует отозванную формулу Health Score.**
 2.  **Не ссылается на χ_Ze как на валидированный клинический биомаркер.**
-3.  **Не утверждает, что параметры связи γ_i измерены в MCOA Test 2.** По умолчанию γ_i = 0 (гипотеза независимости).
+3.  **Не утверждает, что параметры связи γ_i измерены в MCAOA Test 2.** По умолчанию γ_i = 0 (гипотеза независимости).
 4.  **Избегает самоцитирования (Tkemaladze, Chichinadze, Longevity Horizon).**
 
 Основной язык описания — русский, технические термины приводятся на английском.
@@ -145,7 +145,7 @@ L_{tissue}(n,t) = \sum_{i} w_i(tissue) \cdot f_i(D_i(n,t))
 Этот проект служит:
 1.  **Теоретической основой** для формулировки точных, проверяемых гипотез о роли митохондрий в старении.
 2.  **Инструментом планирования экспериментов** по количественной оценке накопления повреждений мтДНК в разных тканях и условиях.
-3.  **Модулем** для интеграции в более крупные вычислительные модели старения в рамках экосистемы LongevityCommon.
+3.  **Модулем** для интеграции в более крупные вычислительные модели старения в рамках экосистемы LC.
 
 Для погружения в детали начните с `THEORY.md` и `EVIDENCE.md`.
 ```
@@ -157,13 +157,13 @@ Mitochondrial ROS and mtDNA Damage as Counter #3 in the Multi-Counter Architectu
 
 ## Overview
 
-This backend implements the MitoROS (Counter #3) subproject for LongevityCommon. It provides REST API endpoints for managing and computing mitochondrial damage accumulation according to the MCOA framework.
+This backend implements the MitoROS (Counter #3) subproject for LC. It provides REST API endpoints for managing and computing mitochondrial damage accumulation according to the MCAOA framework.
 
 ## Features
 
 - **Counter #3 Data Management**: Store and retrieve time-series data for mitochondrial damage (D3)
 - **Parameter Management**: CRUD operations for MitoROS model parameters (α3, β3, τ3, n3*, etc.)
-- **Tissue Registry**: Manage biological tissues with MCOA weights
+- **Tissue Registry**: Manage biological tissues with MCAOA weights
 - **D3 Computation**: Compute D3(n,t) using the kinetic equation with default γ3=0
 - **Database Migrations**: PostgreSQL with automatic schema management
 
@@ -195,7 +195,7 @@ This backend implements the MitoROS (Counter #3) subproject for LongevityCommon.
 
 ## Canonical Rules
 
-According to LongevityCommon CORRECTIONS_2026-04-22:
+According to LC CORRECTIONS_2026-04-22:
 
 1. **γ3 = 0 by default**: Interaction coefficients are set to 0 as the null hypothesis
 2. **No Health Score aggregation**: Removed from all scaffold counters
@@ -236,7 +236,7 @@ According to LongevityCommon CORRECTIONS_2026-04-22:
 - `name`: Tissue name (unique)
 - `mitotic_index`: Proportion of dividing cells (0-1)
 - `metabolic_rate`: Relative metabolic rate
-- `weight_w3`: MCOA weight for Counter #3
+- `weight_w3`: MCAOA weight for Counter #3
 
 ### Counter3Parameters
 - `tissue_id`: Foreign key to tissues
@@ -297,7 +297,7 @@ docker run -p 3006:3006 --env-file .env mitoros-backend
 ```md
 # MitoROS scripts
 
-Python helpers for calibration + MCOA comparison.
+Python helpers for calibration + MCAOA comparison.
 
 ```
 ### `CONCEPT.md` (29234 chars)
@@ -312,23 +312,23 @@ Python helpers for calibration + MCOA comparison.
 **Date:** April 2026
 
 ## Abstract
-Aging is characterized by the progressive accumulation of molecular and cellular damage. While mitochondrial dysfunction, reactive oxygen species (ROS) production, and somatic mitochondrial DNA (mtDNA) mutations are established hallmarks, their precise quantitative contribution to the aging trajectory remains contested. This work formalizes "Mitochondrial ROS and mtDNA Damage" as Counter #3 within the Multi-Counter Architecture of Aging (MCOA), a theoretical framework that models organismal aging as the sum of tissue-specific, weighted functions of discrete, measurable damage counters. We present a kinetic equation for this counter, \( D_3(n, t) \), parameterized from contemporary meta-analyses of 24 peer-reviewed studies. The equation incorporates damage accrual from both cellular divisions (n) and time (t), modulated by tissue-specific constants (\( \alpha_3, \beta_3, \tau_3 \)) and interaction terms (\( \gamma_3 \)) with other aging processes. Crucially, we ground each parameter in specific experimental evidence, detailing the biological complexity of mtDNA heteroplasmy, clonal expansion, and ROS signaling. The model generates falsifiable, quantitative predictions for damage accumulation in mitotic and post-mitotic tissues. Furthermore, we delineate proposed coupling mechanisms (\(\Gamma\) matrix) with other MCOA counters (centriolar, telomere, epigenetic drift, proteostasis) and integrate Counter #3 explicitly into the MCOA master equation. This formalization transforms a well-described biological phenomenon into a testable, quantitative component of a unified theory of aging, highlighting critical open questions and setting a roadmap for empirical validation.
+Aging is characterized by the progressive accumulation of molecular and cellular damage. While mitochondrial dysfunction, reactive oxygen species (ROS) production, and somatic mitochondrial DNA (mtDNA) mutations are established hallmarks, their precise quantitative contribution to the aging trajectory remains contested. This work formalizes "Mitochondrial ROS and mtDNA Damage" as Counter #3 within the Multi-Counter Architecture of Aging (MCAOA), a theoretical framework that models organismal aging as the sum of tissue-specific, weighted functions of discrete, measurable damage counters. We present a kinetic equation for this counter, \( D_3(n, t) \), parameterized from contemporary meta-analyses of 24 peer-reviewed studies. The equation incorporates damage accrual from both cellular divisions (n) and time (t), modulated by tissue-specific constants (\( \alpha_3, \beta_3, \tau_3 \)) and interaction terms (\( \gamma_3 \)) with other aging processes. Crucially, we ground each parameter in specific experimental evidence, detailing the biological complexity of mtDNA heteroplasmy, clonal expansion, and ROS signaling. The model generates falsifiable, quantitative predictions for damage accumulation in mitotic and post-mitotic tissues. Furthermore, we delineate proposed coupling mechanisms (\(\Gamma\) matrix) with other MCAOA counters (centriolar, telomere, epigenetic drift, proteostasis) and integrate Counter #3 explicitly into the MCAOA master equation. This formalization transforms a well-described biological phenomenon into a testable, quantitative component of a unified theory of aging, highlighting critical open questions and setting a roadmap for empirical validation.
 
 ## 1. Introduction
 
 The quest to understand aging has identified several conserved cellular and molecular hallmarks, including genomic instability, telomere attrition, epigenetic alterations, and mitochondrial dysfunction (López-Otín et al., 2013). Among these, the mitochondrial free radical theory of aging has been particularly influential, though its simplistic formulation has required significant revision (Guo et al., 2023, PMID: 37196864). Contemporary research recognizes mitochondrial reactive oxygen species (mtROS) not merely as stochastic damaging agents but as key signaling molecules and that somatic mtDNA mutations undergo clonal expansion, creating focal bioenergetic deficits in aging tissues (Khrapko & Vijg, 2009; Picca et al., 2023, PMID: 37172915).
 
-Despite this rich biological understanding, a persistent gap exists between qualitative mechanism and quantitative, predictive theory. Most models are either purely descriptive or focus on a single pathway without specifying its weighted contribution to the organismal aging phenotype across different tissues. The Multi-Counter Architecture of Aging (MCOA) addresses this gap by proposing that aging in a given tissue can be expressed as a weighted sum of independent but interacting damage counters: \( L_{tissue}(n,t) = \sum_i w_i(tissue) \cdot f_i(D_i(n,t)) \). Each counter \( D_i \) represents a quantifiable form of molecular damage, with a kinetics defined by cell division count (n) and time (t), and a tissue-specific weighting factor \( w_i \).
+Despite this rich biological understanding, a persistent gap exists between qualitative mechanism and quantitative, predictive theory. Most models are either purely descriptive or focus on a single pathway without specifying its weighted contribution to the organismal aging phenotype across different tissues. The Multi-Counter Architecture of Aging (MCAOA) addresses this gap by proposing that aging in a given tissue can be expressed as a weighted sum of independent but interacting damage counters: \( L_{tissue}(n,t) = \sum_i w_i(tissue) \cdot f_i(D_i(n,t)) \). Each counter \( D_i \) represents a quantifiable form of molecular damage, with a kinetics defined by cell division count (n) and time (t), and a tissue-specific weighting factor \( w_i \).
 
-This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCOA Counter #3. We move beyond a narrative review to present a concrete kinetic model, parameterized from the current evidence base. We address key modern complexities: the role of mtROS in signaling and senescence-associated secretory phenotype (SASP) induction (Koloko Ngassie et al., 2025, PMID: 40183670), the stochastic and selective dynamics of mtDNA heteroplasmy and clonal expansion (Insalata et al., 2022, PMID: 36442091), and the critical tissue-specific differences in mitochondrial aging phenotypes (Madreiter-Sokolowski et al., 2024, PMID: 39179117). The model is designed to be falsifiable, its parameters are linked to specific experimental measurements, and its integration with other aging processes is explicitly outlined.
+This paper defines and formalizes "Mitochondrial ROS and mtDNA Damage" as MCAOA Counter #3. We move beyond a narrative review to present a concrete kinetic model, parameterized from the current evidence base. We address key modern complexities: the role of mtROS in signaling and senescence-associated secretory phenotype (SASP) induction (Koloko Ngassie et al., 2025, PMID: 40183670), the stochastic and selective dynamics of mtDNA heteroplasmy and clonal expansion (Insalata et al., 2022, PMID: 36442091), and the critical tissue-specific differences in mitochondrial aging phenotypes (Madreiter-Sokolowski et al., 2024, PMID: 39179117). The model is designed to be falsifiable, its parameters are linked to specific experimental measurements, and its integration with other aging processes is explicitly outlined.
 
-## 2. Model and Methods: Defining MCOA Counter #3
+## 2. Model and Methods: Defining MCAOA Counter #3
 
-### 2.1 The MCOA Framework Primer
-The MCOA framework posits that aging at the tissue level is a function of the accumulation of several distinct, measurable types of molecular damage. Each damage type is a "counter," \( D_i \), which increments according to its own kinetics. The overall "aging state" \( L \) is a non-linear function of these counters, weighted by tissue-specific coefficients \( w_i \). A core axiom (M3) is that the weights \( w_i \) are determined *a priori* based on tissue biology (e.g., mitotic index, metabolic rate) and cannot be adjusted post-hoc to fit data, ensuring predictive rigor and falsifiability.
+### 2.1 The MCAOA Framework Primer
+The MCAOA framework posits that aging at the tissue level is a function of the accumulation of several distinct, measurable types of molecular damage. Each damage type is a "counter," \( D_i \), which increments according to its own kinetics. The overall "aging state" \( L \) is a non-linear function of these counters, weighted by tissue-specific coefficients \( w_i \). A core axiom (M3) is that the weights \( w_i \) are determined *a priori* based on tissue biology (e.g., mitotic index, metabolic rate) and cannot be adjusted post-hoc to fit data, ensuring predictive rigor and falsifiability.
 
 ### 2.2 Kinetic Equation for Counter #3
-For Counter #3, the damage state \( D_3 \) is defined as a composite metric reflecting the burden of mtDNA lesions (e.g., 8-oxo-dG levels) and the heteroplasmy level of pathogenic mtDNA mutations. Its fundamental kinetic equation in the MCOA form is:
+For Counter #3, the damage state \( D_3 \) is defined as a composite metric reflecting the burden of mtDNA lesions (e.g., 8-oxo-dG levels) and the heteroplasmy level of pathogenic mtDNA mutations. Its fundamental kinetic equation in the MCAOA form is:
 \[
 D_3(n, t) = D_{3,0} + \alpha_3 \cdot \left( \frac{n}{n_3^*} \right) + \beta_3 \cdot \left( \frac{t}{\tau_3} \right) + \gamma_3 \cdot I(\text{other counters})
 \]
@@ -340,7 +340,7 @@ Where:
 *   \( n_3^* \): Critical number of divisions to reach a defined heteroplasmy threshold in mitotic lineages.
 *   \( \beta_3 \): Coefficient for time-dependent damage accrual.
 *   \( \tau_3 \): Characteristic time constant for damage accumulation/turnover in post-mitotic cells.
-*   \( \gamma_3 \cdot I(\text{other counters}) \): A term capturing damage input from other MCOA counters (detailed in Section 4).
+*   \( \gamma_3 \cdot I(\text{other counters}) \): A term capturing damage input from other MCAOA counters (detailed in Section 4).
 
 ### 2.3 Biological Justification and Parameter Estimation from Evidence
 Each parameter is grounded in specific findings from the provided meta-analyses.
@@ -355,7 +355,7 @@ In mitotically active tissues (e.g., intestinal crypts, hematopoietic stem cells
 This is the dominant term for most tissues. Time-dependent accumulation of mtDNA deletions and point mutations is well-documented. Somatic mtDNA deletions clonally expand in human and rodent muscle fibers with age, creating mosaic OXPHOS deficiency (Lakshmanan et al., 2018, PMID: 30043489). Age-dependent accumulation of mtDNA tRNA mutations is also observed in mouse kidneys (Zhang et al., 2025, PMID: 40579478). The time constant \( \tau_3 \) represents the timescale for significant damage accumulation and is influenced by the balance between damage induction (ROS flux) and clearance (mitophagy, turnover). Studies on hyperoxia-induced senescence show mitochondrial ROS production driving damage within days to weeks, informing estimates for \( \tau_3 \) in stress conditions (Koloko Ngassie et al., 2025, PMID: 40183670). The work of Wiesner et al. (2006, PMID: 17090418) emphasizes that the aging process is governed by the kinetics of mtDNA damage and repair, directly justifying the \( t/\tau_3 \) formulation.
 
 **Parameter \( \gamma_3 \): Interaction Term**
-This term is a placeholder for damage input from other counters, quantified by coupling coefficients \( \Gamma_{3,j} \). Its biological basis is discussed in Section 4 (Coupling with Other MCOA Counters).
+This term is a placeholder for damage input from other counters, quantified by coupling coefficients \( \Gamma_{3,j} \). Its biological basis is discussed in Section 4 (Coupling with Other MCAOA Counters).
 
 ### 2.4 Primary Measurement Modalities
 To quantify \( D_3 \) in experimental or clinical settings, we specify orthogonal methods:
@@ -365,16 +365,16 @@ To quantify \( D_3 \) in experimental or clinical settings, we specify orthogona
 4.  **Imaging:** Cytochrome c oxidase (COX) / succinate dehydrogenase (SDH) histochemistry to visualize focal OXPHOS deficiency resulting from clonal expansion (Lakshmanan et al., 2018, PMID: 30043489).
 
 ### 2.5 Falsifiability Protocol
-A core tenet of MCOA is that each counter must be individually falsifiable. For Counter #3, we establish the following quantitative conditions for falsification:
+A core tenet of MCAOA is that each counter must be individually falsifiable. For Counter #3, we establish the following quantitative conditions for falsification:
 
 1.  **Null Condition (Primary Falsification):** If, in carefully controlled longitudinal studies of aging post-mitotic tissues (e.g., skeletal muscle, brain), the increase in a well-defined measure of \( D_3 \) (e.g., heteroplasmy of a common deletion above a technical noise floor of 0.1%) with chronological age is not statistically significant (\( \beta_3 \leq 0 \)), the counter is falsified as a driver of aging in that tissue. Evidence from human muscle suggests this is unlikely (Lakshmanan et al., 2018, PMID: 30043489).
 2.  **Non-Monotonic Condition:** The trajectory of \( D_3(t) \) in a homogeneous cell population under constant conditions must be monotonic non-decreasing. A significant, reproducible decrease not attributable to measurement error or an experimental intervention (e.g., mitophagy induction) would indicate a fundamental flaw in the model's representation of damage kinetics.
 3.  **Threshold Irrelevance Condition:** If experimentally inducing heteroplasmy to levels predicted by the model to be pathogenic (e.g., >60% for a large deletion in myocytes) does not produce the predicted functional deficit (e.g., reduced OCR, fiber atrophy), the link between the measured \( D_3 \) variable and its functional consequence is broken, requiring a redefinition of \( D_3 \).
-4.  **MCOA Axiom Violation (Dimensionality Test):** If the tissue-specific weighting factor \( w_3 \), set *a priori* based on mitochondrial content and metabolic rate, shows no correlation with the empirical contribution of \( D_3 \) to an aging phenotype across tissues, Axiom M3 is violated. This would not falsify the biology of mitochondrial damage but would falsify its role as an independently weighted counter within the MCOA framework.
+4.  **MCAOA Axiom Violation (Dimensionality Test):** If the tissue-specific weighting factor \( w_3 \), set *a priori* based on mitochondrial content and metabolic rate, shows no correlation with the empirical contribution of \( D_3 \) to an aging phenotype across tissues, Axiom M3 is violated. This would not falsify the biology of mitochondrial damage but would falsify its role as an independently weighted counter within the MCAOA framework.
 
 ## 3. Results: Theoretical Exposition and Predictions
 
-Given the conceptual nature of this work, the "results" are theoretical expositions derived from integrating the evidence base into the MCOA formalism.
+Given the conceptual nature of this work, the "results" are theoretical expositions derived from integrating the evidence base into the MCAOA formalism.
 
 ### 3.1 Predicted Tissue-Specific Trajectories of D₃(t)
 The model predicts distinct kinetic profiles for \( D_3(t) \) across tissues:
@@ -385,17 +385,17 @@ The model predicts distinct kinetic profiles for \( D_3(t) \) across tissues:
 The model's behavior is most sensitive to \( \beta_3 \) and \( \tau_3 \) for organismal aging. A 50% increase in \( \beta_3 \) (simulating higher oxidative stress) would lead to a proportional left-shift in the age-of-onset for mitochondrial dysfunction phenotypes. Conversely, a 50% increase in \( \tau_3 \) (simulating enhanced repair/turnover) would delay the phenotype. The parameter \( n_3^* \) is critical for understanding the risk of clonal expansion-driven diseases; a lower \( n_3^* \) implies fewer divisions are needed to reach a pathogenic threshold, increasing risk in renewing tissues.
 
 ### 3.3 Explanation of Divergent Findings Across Models
-The MCOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA deletions are not a major driver in *C. elegans* aging (Lakshmanan et al., 2018, PMID: 30043489) can be interpreted as the tissue-specific weight \( w_3 \) for this counter being very low in nematode somatic cells, possibly due to differences in mtDNA topology, ROS metabolism, or lifespan scaling. The model does not require all counters to be active in all species. Furthermore, the dual role of PARP1 inhibition—promoting senescence after acute damage but potentially being detrimental in chronic settings (Nehme et al., 2024, PMID: 38724734; Kobayashi et al., 2024, PMID: 39684855)—can be modeled as a time- and context-dependent modulation of the \( \gamma_3 \) coupling coefficient between nuclear DNA damage repair (a separate counter) and \( D_3 \).
+The MCAOA formalism helps reconcile seemingly conflicting data. For instance, the finding that mtDNA deletions are not a major driver in *C. elegans* aging (Lakshmanan et al., 2018, PMID: 30043489) can be interpreted as the tissue-specific weight \( w_3 \) for this counter being very low in nematode somatic cells, possibly due to differences in mtDNA topology, ROS metabolism, or lifespan scaling. The model does not require all counters to be active in all species. Furthermore, the dual role of PARP1 inhibition—promoting senescence after acute damage but potentially being detrimental in chronic settings (Nehme et al., 2024, PMID: 38724734; Kobayashi et al., 2024, PMID: 39684855)—can be modeled as a time- and context-dependent modulation of the \( \gamma_3 \) coupling coefficient between nuclear DNA damage repair (a separate counter) and \( D_3 \).
 
 ## 4. Discussion
 
-### 4.1 Coupling with Other MCOA Counters (The Γ Matrix)
-A central innovation of MCOA is the explicit quantification of interactions between damage processes. The interaction term \( \gamma_3 \cdot I(\text{other counters}) \) in the \( D_3 \) equation can be expanded as \( \sum_{j \neq 3} \Gamma_{3,j} \cdot D_j \), where \( \Gamma_{3,j} \) are coupling coefficients. We hypothesize the following couplings for Counter #3, based on evidence from the meta-analyses:
+### 4.1 Coupling with Other MCAOA Counters (The Γ Matrix)
+A central innovation of MCAOA is the explicit quantification of interactions between damage processes. The interaction term \( \gamma_3 \cdot I(\text{other counters}) \) in the \( D_3 \) equation can be expanded as \( \sum_{j \neq 3} \Gamma_{3,j} \cdot D_j \), where \( \Gamma_{3,j} \) are coupling coefficients. We hypothesize the following couplings for Counter #3, based on evidence from the meta-analyses:
 
-*   **Γ₃,₁ (Centriolar → Mito):** **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** A potential link exists through impaired mitophagy, which requires microtubule-based transport and may be disrupted by centriolar dysfunction. No direct evidence from the provided dossier supports a quantified link.
-*   **Γ₃,₂ (Telomere → Mito):** **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Telomere dysfunction activates p53, which can repress PGC-1α, a master regulator of mitochondrial biogenesis. This could increase \( \beta_3 \) by reducing mitochondrial quality control. This established pathway requires quantitative measurement of the coupling strength.
+*   **Γ₃,₁ (Centriolar → Mito):** **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** A potential link exists through impaired mitophagy, which requires microtubule-based transport and may be disrupted by centriolar dysfunction. No direct evidence from the provided dossier supports a quantified link.
+*   **Γ₃,₂ (Telomere → Mito):** **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Telomere dysfunction activates p53, which can repress PGC-1α, a master regulator of mitochondrial biogenesis. This could increase \( \beta_3 \) by reducing mitochondrial quality control. This established pathway requires quantitative measurement of the coupling strength.
 *   **Γ₃,₄ (Epigenetic Drift → Mito):** **Quantitative link proposed.** Hahn et al. (2024, PMID: 39173633) provide direct evidence that misregulation of mitochondrial DNA methylation (6mA) promotes the propagation of mutant mtDNA and aging in *C. elegans*. This suggests \( \Gamma_{3,4} > 0 \), where epigenetic drift in the nucleus or mitochondrion directly increases the rate of clonal expansion. The magnitude could be estimated from the reported increase in mutant mtDNA propagation upon 6mA misregulation.
-*   **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Multiple links exist. 1) **MAMs:** Dysfunctional mitochondria-associated ER membranes (MAMs) disrupt calcium homeostasis and ER stress, impacting both organelles (Xian et al., 2024, PMID: 39343182). This suggests a bidirectional coupling where proteostatic ER stress (\( D_5 \)) can increase mtROS (\( \Gamma_{3,5} > 0 \)). 2) **Quality Control:** Failure of the mitochondrial unfolded protein response (UPRᵐᵗ) or proteasome activity impairs clearance of oxidized mitochondrial proteins, exacerbating dysfunction. 3) **Redox Control:** ROMO1 protects the mitochondrial cysteinome from oxidation, a key proteostatic mechanism (Xu et al., 2025, PMID: 40461459). Its overexpression is protective, implying that collapse in this system (\( D_5 \uparrow \)) would increase \( D_3 \).
+*   **Γ₃,₅ (Proteostasis → Mito):** **Measurement pending ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3].** Multiple links exist. 1) **MAMs:** Dysfunctional mitochondria-associated ER membranes (MAMs) disrupt calcium homeostasis and ER stress, impacting both organelles (Xian et al., 2024, PMID: 39343182). This suggests a bidirectional coupling where proteostatic ER stress (\( D_5 \)) can increase mtROS (\( \Gamma_{3,5} > 0 \)). 2) **Quality Control:** Failure of the mitochondrial unfolded protein response (UPRᵐᵗ) or proteasome activity impairs clearance of oxidized mitochondrial proteins, exacerbating dysfunction. 3) **Redox Control:** ROMO1 protects the mitochondrial cysteinome from oxidation, a key proteostatic mechanism (Xu et al., 2025, PMID: 40461459). Its overexpression is protective, implying that collapse in this system (\( D_5 \uparrow \)) would increase \( D_3 \).
 
 ### 4.2 Comparison with Existing Models
 Our model advances beyond earlier qualitative or single-pathway models by:
@@ -412,9 +412,9 @@ It differs from computational network models by its focus on a small number of m
 3.  **Parameter Uncertainty:** While evidence-based, the exact numerical values for \( \alpha_3, \beta_3, \tau_3 \) across human tissues require consolidation from large-scale, longitudinal datasets.
 4.  **Initiation of Clonal Expansion:** The model describes the expansion phase but does not yet formally incorporate the stochastic initiation event, a key gap discussed below.
 
-## 5. Integration with the MCOA Framework
+## 5. Integration with the MCAOA Framework
 
-Counter #3 is a fundamental component of the MCOA master equation for a tissue's aging state:
+Counter #3 is a fundamental component of the MCAOA master equation for a tissue's aging state:
 \[
 L_{tissue}(n,t) = w_1 f_1(D_1) + w_2 f_2(D_2) + w_3 f_3(D_3) + w_4 f_4(D_4) + w_5 f_5(D_5)
 \]
@@ -433,11 +433,11 @@ The formalization of Counter #3 highlights several critical unknowns that must b
 2.  **Precise Tissue-Specific Thresholds:** While thresholds like >60% for common deletions are cited, precise quantitative data linking specific heteroplasmy levels of specific mutations (e.g., tRNA mutations) to specific functional declines (OCR, contractile force) in specific human tissues are lacking.
 3.  **Quantifying the Signaling vs. Damaging Role of mtROS:** What fraction of \( D_3 \)'s impact on \( L \) is due to direct macromolecular damage versus the activation of deleterious signaling pathways (e.g., NF-κB, cGAS-STING)? This affects the shape of \( f_3 \).
 4.  **Impact of Intercellular Mitophagy and mtDNA Transfer:** Can the spread of damage be mitigated or exacerbated by intercellular mitochondrial quality control mechanisms? This represents a higher-order interaction not yet captured in the single-cell focused equation.
-5.  **Calibration of Coupling Coefficients (Γ):** The proposed couplings (Section 4.1) require direct experimental measurement. ~~MCOA Test 2~~ [отозвано — see CORRECTIONS §1.3] is designed for this purpose: by perturbing one counter (e.g., inducing epigenetic drift) and measuring the response in \( D_3 \), \( \Gamma_{3,4} \) can be quantified.
+5.  **Calibration of Coupling Coefficients (Γ):** The proposed couplings (Section 4.1) require direct experimental measurement. ~~MCAOA Test 2~~ [отозвано — see CORRECTIONS §1.3] is designed for this purpose: by perturbing one counter (e.g., inducing epigenetic drift) and measuring the response in \( D_3 \), \( \Gamma_{3,4} \) can be quantified.
 
 ## 7. Conclusion
 
-We have formally defined Mitochondrial ROS and mtDNA Damage as Counter #3 within the MCOA framework. The model synthesizes contemporary evidence on heteroplasmy, clonal expansion, and ROS signaling into a testable kinetic equation with parameters explicitly linked to the experimental literature. By specifying falsification conditions, proposing quantitative couplings with other aging processes, and integrating into a unified equation for tissue aging, this work transforms a well-studied biological phenomenon into a rigorous, quantifiable component of a broader theory. The proposed model provides a scaffold for designing critical experiments to measure its parameters, test its predictions, and ultimately evaluate its contribution to the mosaic of organismal aging.
+We have formally defined Mitochondrial ROS and mtDNA Damage as Counter #3 within the MCAOA framework. The model synthesizes contemporary evidence on heteroplasmy, clonal expansion, and ROS signaling into a testable kinetic equation with parameters explicitly linked to the experimental literature. By specifying falsification conditions, proposing quantitative couplings with other aging processes, and integrating into a unified equation for tissue aging, this work transforms a well-studied biological phenomenon into a rigorous, quantifiable component of a broader theory. The proposed model provides a scaffold for designing critical experiments to measure its parameters, test its predictions, and ultimately evaluate its contribution to the mosaic of organismal aging.
 
 ## 8. References
 (All references are from the provided meta-analysis dossiers)
@@ -473,7 +473,7 @@ We have formally defined Mitochondrial ROS and mtDNA Damage as Counter #3 within
 
 All PubMed identifiers in this document were independently verified against the NCBI E-utilities API (esummary endpoint) on 2026-04-21. Each PMID was confirmed to resolve to an existing, title-matched entry. No citation in this document was generated by a language model without subsequent live-database verification.
 
-Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LongevityCommon ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
+Verification script reproducible at `/tmp/ref_verify_v2.py` (shared across LC ecosystem audit 2026-04-21). Any dispute over a specific PMID can be resolved by re-running the verifier.
 
 Self-citations follow the `≤15% of total references` rule mandated by Nature Research editorial policy; see ecosystem file `~/CLAUDE.md §Self-Citation Rule`.
 
@@ -484,7 +484,7 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
 Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
 
@@ -495,9 +495,9 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 ```md
 # Теоретические основы MitoROS Counter #3
 
-## 1. Обзор и место в MCOA
+## 1. Обзор и место в MCAOA
 
-MitoROS формализует митохондриальные повреждения как **Counter #3** в архитектуре MCOA. MCOA постулирует, что старение на тканевом уровне есть сумма взвешенных функций от независимых, но потенциально связанных «счётчиков» повреждений \( D_i \). Каждый счётчик представляет собой количественную меру специфического молекулярного или клеточного дефекта.
+MitoROS формализует митохондриальные повреждения как **Counter #3** в архитектуре MCAOA. MCAOA постулирует, что старение на тканевом уровне есть сумма взвешенных функций от независимых, но потенциально связанных «счётчиков» повреждений \( D_i \). Каждый счётчик представляет собой количественную меру специфического молекулярного или клеточного дефекта.
 
 Counter #3 \( D_3 \) фокусируется на двух взаимосвязанных процессах:
 1.  **Накопление соматических мутаций мтДНК** (гетероплазмия, крупные делеции, точковые мутации), ведущих к клановой экспансии и очаговой дыхательной недостаточности.
@@ -545,7 +545,7 @@ D_3(n, t) = D_{3,0} + \alpha_3 \cdot \left( \frac{n}{n_3^*} \right) + \beta_3 \c
     *   \( \Gamma_{3,j} \) — коэффициент связи от счётчика \( j \) к счётчику \( D_3 \). **Согласно канону CORRECTIONS, по умолчанию \( \Gamma_{3,j} = 0 \)**. Ненулевые значения могут быть установлены только на основе статистического анализа данных, отвергающего гипотезу независимости.
     *   \( g_j \) — функция, преобразующая уровень повреждения \( D_j \) в «сигнал», влияющий на \( D_3 \) (например, окислительный стресс от воспаления).
 
-## 4. Интеграция в мастер-уравнение MCOA
+## 4. Интеграция в мастер-уравнение MCAOA
 
 Вклад Counter #3 в общий фенотип старения ткани описывается тканеспецифичной функцией вклада \( f_3 \), которая преобразует уровень повреждения \( D_3 \) в «пункты старения». Простейшая форма — линейная: \( f_3(D_3) = D_3 \). Более реалистичная — сигмоидальная, отражающая пороговый эффект:
 \[
@@ -553,7 +553,7 @@ f_3(D_3) = \frac{1}{1 + \exp(-k_3 \cdot (D_3 - D_3^{threshold}))}
 \]
 где \( D_3^{threshold} \) — порог, после которого дисфункция становится значимой, а \( k_3 \) — крутизна перехода.
 
-Мастер-уравнение MCOA для ткани:
+Мастер-уравнение MCAOA для ткани:
 \[
 L_{tissue}(n,t) = w_1 \cdot f_1(D_1) + w_2 \cdot f_2(D_2) + w_3(tissue) \cdot f_3(D_3) + \dots
 \]
@@ -567,7 +567,7 @@ L_{tissue}(n,t) = w_1 \cdot f_1(D_1) + w_2 \cdot f_2(D_2) + w_3(tissue) \cdot f_
 2.  **Предсказание P3.2 (Различие между тканями):** Значения параметров \( \beta_3 \) и \( \tau_3 \) будут значимо различаться между тканями с разным уровнем окислительного метаболизма и антиоксидантной защиты. Например, \( \tau_3 \) для сердечной мышцы будет меньше, чем для печени, из-за более высокого потребления кислорода.
 3.  **Предсказание P3.3 (Эффект ограничения калорий):** Хроническое ограничение калорий (CR) увеличит \( \tau_3 \) (замедлит накопление повреждений) во всех тканях за счёт снижения генерации мтАФК и усиления митофагии.
 4.  **Предсказание P3.4 (Корреляция с функцией):** В пределах одной ткани у особей одного хронологического возраста будет наблюдаться сильная отрицательная корреляция между комплексными функциональными показателями (например, максимальная потребность в кислороде VO2max для мышц, скорость нервной проводимости) и величиной \( D_3 \), измеренной в биопсии.
-5.  **Предсказание P3.5 (Независимость от других счётчиков):** При строгом контроле условий, изменение \( D_3 \) в краткосрочных экспериментах (например, окислительный стресс) не приведёт к значимому немедленному изменению других счётчиков MCOA (например, длины теломер \( D_2 \), эпигенетических часов \( D_4 \)), если связь \( \Gamma_{3,j} \) не доказана. Это прямое следствие гипотезы независимости по умолчанию.
+5.  **Предсказание P3.5 (Независимость от других счётчиков):** При строгом контроле условий, изменение \( D_3 \) в краткосрочных экспериментах (например, окислительный стресс) не приведёт к значимому немедленному изменению других счётчиков MCAOA (например, длины теломер \( D_2 \), эпигенетических часов \( D_4 \)), если связь \( \Gamma_{3,j} \) не доказана. Это прямое следствие гипотезы независимости по умолчанию.
 ```
 ### `PARAMETERS.md` (4603 chars)
 ```md
@@ -598,10 +598,10 @@ L_{tissue}(n,t) = w_1 \cdot f_1(D_1) + w_2 \cdot f_2(D_2) + w_3(tissue) \cdot f_
 
 ## 1. Обзор
 
-Проект MitoROS реализует вычислительную модель Counter #3 в рамках экосистемы LongevityCommon. Кодовая база предназначена для:
+Проект MitoROS реализует вычислительную модель Counter #3 в рамках экосистемы LC. Кодовая база предназначена для:
 1.  **Симуляции** траекторий накопления повреждений \( D_3(n, t) \) по заданным параметрам.
 2.  **Анализа экспериментальных данных** (уровни гетероплазмии, 8-oxo-dG) для оценки параметров модели.
-3.  **Интеграции** с другими счётчиками MCOA через определённые API.
+3.  **Интеграции** с другими счётчиками MCAOA через определённые API.
 
 ## 2. Дерево файлов
 
@@ -659,7 +659,7 @@ MitoROS/
 ```python
 class MitoROSCounter:
     """
-    Реализация MCOA Counter #3.
+    Реализация MCAOA Counter #3.
     """
     def __init__(self, params: Dict[str, float], tissue_type: str = "generic"):
         """
@@ -742,24 +742,24 @@ def f3_contribution(D3: float, params: Dict) -> float:
         raise ValueError(f"Unknown contribution function: {f_type}")
 ```
 
-### 3.3. API для интеграции с MCOA Core
+### 3.3. API для интеграции с MCAOA Core
 
-MCOA Core (отдельный проект) будет обращаться к MitoROS через следующий интерфейс:
+MCAOA Core (отдельный проект) будет обращаться к MitoROS через следующий интерфейс:
 
 ```python
-# Примерный вызов из MCOA Core
+# Примерный вызов из MCAOA Core
 from MitoROS.src.core.counter import MitoROSCounter
 
 # Инициализация счётчика для конкретной ткани
 mito_params = load_params("config/muscle_params.yaml")
 counter_3 = MitoROSCounter(mito_params, tissue_type="skeletal_muscle")
 
-# В цикле симуляции MCOA:
+# В цикле симуляции MCAOA:
 for step in simulation_steps:
-    # MCOA Core вычисляет delta_n и delta_t для ткани
+    # MCAOA Core вычисляет delta_n и delta_t для ткани
     D3_value = counter_3.step(delta_n=current_delta_n, delta_t=current_delta_t)
     contribution_3 = counter_3.get_contribution()
-    # MCOA Core суммирует contribution_3 с вкладами других счётчиков
+    # MCAOA Core суммирует contribution_3 с вкладами других счётчиков
 ```
 
 ## 4. Конфигурация
@@ -893,12 +893,12 @@ tissue_profiles:
 
 **Приоритет:** P1. Важно для калибровки модели и долгосрочных предсказаний.
 
-## Проблема P2-1: Связь с другими счётчиками MCOA (Величина \( \Gamma_{3,j} \))
+## Проблема P2-1: Связь с другими счётчиками MCAOA (Величина \( \Gamma_{3,j} \))
 
 **Описание:** Согласно канону, по умолчанию \( \Gamma_{3,j} = 0 \). Однако биология предполагает возможные связи (например, окислительный стресс от воспаления (Counter ?) может повреждать мтДНК). Требуется экспериментальная проверка наличия и силы этих связей.
 
 **Фальсифицирующий тест:**
-*   **Подготовка:** Взять клеточную линию или первичные клетки. Индуцировать повышение другого счётчика MCOA (например, вызвать теломерную дисфункцию (Counter #2) с помощью доминантно-негативного TRF2, или вызвать эпигенетическое репрограммирование (Counter #4) с помощью низких доз OSKM).
+*   **Подготовка:** Взять клеточную линию или первичные клетки. Индуцировать повышение другого счётчика MCAOA (например, вызвать теломерную дисфункцию (Counter #2) с помощью доминантно-негативного TRF2, или вызвать эпигенетическое репрограммирование (Counter #4) с помощью низких доз OSKM).
 *   **Измерения:** Отслеживать динамику \( D_3 \) до и после вмешательства, параллельно контролируя целевой счётчик \( D_j \).
 *   **Прогноз модели (по умолчанию, \( \Gamma = 0 \)):** Изменение \( D_j \) не приведёт к значимому изменению скорости накопления \( D_3 \) по сравнению с контрольной группой.
 *   **Четыре возможных исхода:**
@@ -919,8 +919,8 @@ tissue_profiles:
 
 1.  **Следование канону CORRECTIONS_2026-04-22:**
     *   **Запрещено** использовать или ссылаться на отозванную формулу Health Score.
-    *   **Запрещено** ссылаться на χ_Ze как на валидированный клинический биомаркер. Разрешено упоминание только как исследовательского индекса MCOA Counter "S" — системной синхронизации через плазму/SASP (см. `Ze/CONCEPT.md §4`, переработан 2026-04-23). Прежняя формулировка «Ze Vector Theory» отозвана.
-    *   **Запрещено** утверждать, что параметры связи \( \gamma_i \) или \( \Gamma_{i,j} \) измерены или могут быть измерены в «MCOA Test 2». По умолчанию они равны 0. Ненулевые значения могут появиться только из post-hoc статистического анализа.
+    *   **Запрещено** ссылаться на χ_Ze как на валидированный клинический биомаркер. Разрешено упоминание только как исследовательского индекса MCAOA Counter "S" — системной синхронизации через плазму/SASP (см. `Ze/CONCEPT.md §4`, переработан 2026-04-23). Прежняя формулировка «Ze Vector Theory» отозвана.
+    *   **Запрещено** утверждать, что параметры связи \( \gamma_i \) или \( \Gamma_{i,j} \) измерены или могут быть измерены в «MCAOA Test 2». По умолчанию они равны 0. Ненулевые значения могут появиться только из post-hoc статистического анализа.
     *   **Запрещено** самоцитирование работ Tkemaladze, Chichinadze, Longevity Horizon.
 2.  **Язык:**
     *   Основной язык документации — **русский**.
@@ -1231,9 +1231,9 @@ async fn shutdown_signal() {
 ```
 ### code `crates/mito_ros_counter/src/lib.rs`
 ```
-//! MCOA Counter #3: Mitochondrial ROS / mtDNA
+//! MCAOA Counter #3: Mitochondrial ROS / mtDNA
 //!
-//! Kinetic equation (MCOA-compliant, dimensionless):
+//! Kinetic equation (MCAOA-compliant, dimensionless):
 //!   D_3(n, t) = D_30 + α_3·(n / n_3*) + β_3·(t / τ_3) + γ_3·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

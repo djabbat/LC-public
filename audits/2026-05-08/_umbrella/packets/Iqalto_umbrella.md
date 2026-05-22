@@ -1077,7 +1077,7 @@ Aqtivirebuli/
 
 #### → CommonHealth (центральный хаб)
 - **Стратегия:** Korkoti — «traditional precision nutrition» + ORGANISM фактор 4-факторной модели здоровья
-- **EIC Pathfinder Open (12 мая 2026):** Aqtivirebuli включён как клинический use case WP4 (FL demo на anemia cohort). Зафиксировано в `~/Desktop/LongevityCommon/STRATEGY.md` Блок 6
+- **EIC Pathfinder Open (12 мая 2026):** Aqtivirebuli включён как клинический use case WP4 (FL demo на anemia cohort). Зафиксировано в `~/Desktop/LC/STRATEGY.md` Блок 6
 - **Roll:** Через FCLC track 1 (главная заявка); Aqtivirebuli — supplementary clinical demo
 - **Дедлайн внутренний:** Фаза 1 завершена ДО 2026-05-01 для убедительности EIC подачи
 
@@ -1790,9 +1790,9 @@ _Обновлено: 2026-04-17_
 - [ ] Указать в Part B §4 Impact: anemia пациенты как cohort для клин. демо (N≥50, 8 недель), Шашвиашвили — клин. узел
 - [ ] Запустить Фазу 1 ДО 2026-08-31 (валидация для убедительности подачи)
 
-### 🔴 P0 — Параллельные гранты с deadline ДО 28 Oct 2026 (EIC слот занят LongevityCommon umbrella) — VERIFIED 2026-05-02
+### 🔴 P0 — Параллельные гранты с deadline ДО 28 Oct 2026 (EIC слот занят LC umbrella) — VERIFIED 2026-05-02
 
-**Контекст:** EIC Pathfinder Challenges 2026 — это umbrella LongevityCommon (WP1 FCLC + WP2 Ze + WP3 CDATA + WP4 BioSense + WP5 Aqtivirebuli). Для подпроекта Aqtivirebuli нужен **отдельный** funding-трек с дедлайном ДО 2026-10-28. Заявитель: **NGO Georgia Longevity Alliance #404506520**.
+**Контекст:** EIC Pathfinder Challenges 2026 — это umbrella LC (WP1 FCLC + WP2 Ze + WP3 CDATA + WP4 BioSense + WP5 Aqtivirebuli). Для подпроекта Aqtivirebuli нужен **отдельный** funding-трек с дедлайном ДО 2026-10-28. Заявитель: **NGO Georgia Longevity Alliance #404506520**.
 
 **Slow Food статус (verified):** Presidia требует local Convivium → в Грузии нет → НЕ ИДЁМ. Ark of Taste — это каталог, не грант. ✅ Подать nomination Korkoti параллельно (ноль денег, но статус + PR).
 
@@ -2689,7 +2689,7 @@ _Обновлено: 2026-04-17_
 | Продажа korkoti через клинику | ecommerce module Phoenix | ⏸ Future |
 | Назначение korkoti в карточках пациентов | LiveView | ❌ Создать |
 
-### → CommonHealth (~/Desktop/LongevityCommon/)
+### → CommonHealth (~/Desktop/LC/)
 
 | Связь | Где | Статус |
 |-------|-----|--------|

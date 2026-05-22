@@ -1,4 +1,4 @@
-# FINAL CYCLE REPORT — LongevityCommon Peer-Review Loop (2026-05-08)
+# FINAL CYCLE REPORT — LC Peer-Review Loop (2026-05-08)
 
 **Loop strategy:** serial — каждый компонент через inner loop {review → text-level fixes → re-review} до ACCEPT (FUND_AS_IS / REVISE_MINOR) или плато (6 итераций без улучшения score).
 
@@ -23,7 +23,7 @@
 | CytogeneticTree | REVISE_MAJOR | 14 | ⚠️ PLATEAU |
 | EpigeneticDrift | FUND_AS_IS | 1 | ✅ ACCEPT |
 | HAP | REVISE_MINOR | 5 | ✅ ACCEPT |
-| MCOA | FUND_AS_IS | 3 | ✅ ACCEPT |
+| MCAOA | FUND_AS_IS | 3 | ✅ ACCEPT |
 | MitoROS | REVISE_MAJOR | 10 | ⚠️ PLATEAU |
 | Proteostasis | FUND_AS_IS | 1 | ✅ ACCEPT |
 | Telomere | FUND_AS_IS | 1 | ✅ ACCEPT |

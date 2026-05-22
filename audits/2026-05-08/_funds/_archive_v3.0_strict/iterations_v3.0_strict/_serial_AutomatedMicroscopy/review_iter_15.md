@@ -34,7 +34,7 @@
 Явный раздел с 8–12 ограничениями (DIY precision, calibration drift, phototoxicity, AI hallucination, отсутствие жидкостного манипулятора и т.д.). Выполнено.
 
 **6. Consortium / collaboration plan** — ✓  
-Таблица партнёров с ролями и статусами (LongevityCommon, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). В DESIGN.md перечислены потенциальные партнёры. Выполнено.
+Таблица партнёров с ролями и статусами (LC, University of Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). В DESIGN.md перечислены потенциальные партнёры. Выполнено.
 
 **7. Reference reality + match** — ✓  
 Проверены все 10 DOI/PMID в EVIDENCE.md:

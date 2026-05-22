@@ -14,7 +14,7 @@
 set -euo pipefail
 
 DEPLOY_DIR="${DEPLOY_DIR:-$HOME/hive_queen}"
-REPO_DIR="${REPO_DIR:-$HOME/LongevityCommon}"   # cloned djabbat/LongevityCommon
+REPO_DIR="${REPO_DIR:-$HOME/LC}"   # cloned djabbat/LC
 ADMIN_TOKEN="${AIM_HIVE_ADMIN_TOKEN:-}"
 
 echo "→ deploy dir: $DEPLOY_DIR"
@@ -22,8 +22,8 @@ echo "→ repo dir:   $REPO_DIR (must contain AIM/AI/queen_deploy/)"
 
 if [[ ! -d "$REPO_DIR/AIM/AI/queen_deploy" ]]; then
   echo "ERROR: $REPO_DIR/AIM/AI/queen_deploy not found."
-  echo "Clone djabbat/LongevityCommon into \$REPO_DIR first:"
-  echo "    git clone git@github.com:djabbat/LongevityCommon.git ~/LongevityCommon"
+  echo "Clone djabbat/LC into \$REPO_DIR first:"
+  echo "    git clone git@github.com:djabbat/LC.git ~/LC"
   exit 2
 fi
 
@@ -109,7 +109,7 @@ To trigger distill manually:
 
 UPGRADES (after future git pulls):
 
-  cd ~/LongevityCommon && git pull
+  cd ~/LC && git pull
   ~/hive_queen/venv/bin/pip install --upgrade fastapi uvicorn httpx
   sudo systemctl restart aim-hive-queen
 

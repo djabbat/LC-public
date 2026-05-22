@@ -119,7 +119,7 @@ file_targets:
       - [ ] Заполнить THEORY.md
       - [ ] Уточнить PARAMETERS.md (если есть параметры)
       - [ ] Добавить EVIDENCE
-      - [ ] Связать с MCOA / CDATA если применимо
+      - [ ] Связать с MCAOA / CDATA если применимо
 
   - path: UPGRADE.md
     template: "# Upgrade plan\n\n_Будет заполнено по мере развития проекта._\n"

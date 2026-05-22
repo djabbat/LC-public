@@ -21,7 +21,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Risk matrix",
-    "body": "| # | Risk | Probability | Impact | Mitigation |\n|---|------|-------------|--------|------------|\n| 1 | AI model drift over long experiments | Medium | High | Weekly validation against held-out human-annotated dataset; automatic retraining trigger if concordance < 0.75 |\n| 2 | Environmental chamber failure (temp/CO₂) | Low | Critical | Dual redundant sensors; UPS backup; remote alarm via WireGuard VPN; manual intervention protocol |\n| 3 | Stage motor failure or drift | Low | High | Daily calibration check; spare stepper motor on hand; emergency manual stage control |\n| 4 | Contamination (fungal/bacterial) | Medium | High | Sterile technique during media changes; UV sterilization cycle between runs; contamination monitoring via brightfield |\n| 5 | Data loss (NAS failure) | Low | Critical | RAID 1 NAS + daily off-site backup to LongevityCommon cloud; journaled file system |\n| 6 | Camera sensor degradation | Low | Medium | Annual flat-field calibration; spare camera available; replacement budget $1,500"
+    "body": "| # | Risk | Probability | Impact | Mitigation |\n|---|------|-------------|--------|------------|\n| 1 | AI model drift over long experiments | Medium | High | Weekly validation against held-out human-annotated dataset; automatic retraining trigger if concordance < 0.75 |\n| 2 | Environmental chamber failure (temp/CO₂) | Low | Critical | Dual redundant sensors; UPS backup; remote alarm via WireGuard VPN; manual intervention protocol |\n| 3 | Stage motor failure or drift | Low | High | Daily calibration check; spare stepper motor on hand; emergency manual stage control |\n| 4 | Contamination (fungal/bacterial) | Medium | High | Sterile technique during media changes; UV sterilization cycle between runs; contamination monitoring via brightfield |\n| 5 | Data loss (NAS failure) | Low | Critical | RAID 1 NAS + daily off-site backup to LC cloud; journaled file system |\n| 6 | Camera sensor degradation | Low | Medium | Annual flat-field calibration; spare camera available; replacement budget $1,500"
   },
   {
     "file": "CONCEPT.md",
@@ -33,6 +33,6 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Lead, funding, data infrastructure | Confirmed |\n| University of Bristol | Biological validation, cell culture | Confirmed |\n| Zeiss (microscopy division) | Technical advisory, spare parts | TBD |\n| FLIR (camera division) | Camera calibration support | TBD |\n| ThorLabs | LED illuminator supply | Confirmed |\n| OpenTrons | Liquid handling integration (future) | Exploratory |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, funding, data infrastructure | Confirmed |\n| University of Bristol | Biological validation, cell culture | Confirmed |\n| Zeiss (microscopy division) | Technical advisory, spare parts | TBD |\n| FLIR (camera division) | Camera calibration support | TBD |\n| ThorLabs | LED illuminator supply | Confirmed |\n| OpenTrons | Liquid handling integration (future) | Exploratory |"
   }
 ]

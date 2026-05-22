@@ -158,7 +158,7 @@ mod tests {
     fn fixture() -> StaticSources {
         StaticSources {
             subcommands: vec!["chat".into(), "brief".into(), "project".into(), "routine".into()],
-            projects: vec!["AIM".into(), "CDATA".into(), "MCOA".into()],
+            projects: vec!["AIM".into(), "CDATA".into(), "MCAOA".into()],
             routines: vec!["morning_brief".into(), "nightly_compact".into()],
         }
     }

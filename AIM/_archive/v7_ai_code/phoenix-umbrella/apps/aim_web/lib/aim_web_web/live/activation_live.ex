@@ -25,7 +25,7 @@ defmodule AimWeb.ActivationLive do
 
   # ── data ───────────────────────────────────────────────────────────────
 
-  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
 
   defp pam_bin do
     [

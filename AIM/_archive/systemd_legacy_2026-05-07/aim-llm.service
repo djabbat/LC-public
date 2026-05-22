@@ -1,16 +1,16 @@
 [Unit]
 Description=AIM LLM Router (DeepSeek/Groq/Anthropic/Gemini/Ollama) — Phase 5 (2026-05-07)
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/PHASE_5_DESIGN.md
+Documentation=file:///home/oem/Desktop/LC/AIM/PHASE_5_DESIGN.md
 After=network-online.target ollama.service
 Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/oem/Desktop/LongevityCommon/AIM
+WorkingDirectory=/home/oem/Desktop/LC/AIM
 EnvironmentFile=/home/oem/.aim_env
 Environment="AIM_LLM_PORT=8770"
 Environment="RUST_LOG=info"
-ExecStart=/home/oem/Desktop/LongevityCommon/AIM/rust-core/target/release/aim-llm
+ExecStart=/home/oem/Desktop/LC/AIM/rust-core/target/release/aim-llm
 Restart=on-failure
 RestartSec=2
 TimeoutStopSec=10

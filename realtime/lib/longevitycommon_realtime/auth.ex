@@ -1,4 +1,4 @@
-defmodule LongevityCommonRealtime.Auth do
+defmodule LCRealtime.Auth do
   @moduledoc """
   JWT verification — validates tokens issued by Rust/Axum server.
   Both services share the same JWT_SECRET.

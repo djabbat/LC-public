@@ -18,7 +18,7 @@ defmodule AimWeb.PatientWorkspaceRealTest do
   end
 
   defp real_patient_present? do
-    aim_root = System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+    aim_root = System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
     File.exists?(Path.join([aim_root, "Patients", @real_patient, "MEMORY.md"]))
   end
 

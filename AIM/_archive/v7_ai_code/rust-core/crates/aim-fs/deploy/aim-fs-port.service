@@ -1,7 +1,7 @@
 [Unit]
 Description=AIM_FS Rust JSON Port (consumed by Phoenix AimMemory.FS.Port)
 After=network.target
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/AIM_FS/SPEC.md
 
 # NOTE: usually NOT enabled as a separate service. The Phoenix application
 # spawns the binary as an Erlang Port and owns its lifecycle. This unit is

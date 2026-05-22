@@ -16,7 +16,7 @@
 //!   weekly:    [telegram, email, stdout]
 //! include:
 //!   sections:  [hot_milestones, overdue_followups, ...]
-//!   projects:  ["FCLC", "MCOA"]
+//!   projects:  ["FCLC", "MCAOA"]
 //! exclude:
 //!   projects:  []
 //! digest:
@@ -313,7 +313,7 @@ channels:
             &path,
             r#"include:
   sections: [deadlines, kpis]
-  projects: [FCLC, MCOA]
+  projects: [FCLC, MCAOA]
 exclude:
   projects: [HAP]
 digest:
@@ -323,7 +323,7 @@ digest:
         .unwrap();
         let p = load(&path);
         assert_eq!(p.include_sections, vec!["deadlines", "kpis"]);
-        assert_eq!(p.include_projects, vec!["FCLC", "MCOA"]);
+        assert_eq!(p.include_projects, vec!["FCLC", "MCAOA"]);
         assert_eq!(p.exclude_projects, vec!["HAP"]);
         assert_eq!(p.digest_window_days, 14);
     }
@@ -331,9 +331,9 @@ digest:
     #[test]
     fn project_visible_with_include_whitelist() {
         let mut p = Preferences::default();
-        p.include_projects = vec!["FCLC".into(), "MCOA".into()];
+        p.include_projects = vec!["FCLC".into(), "MCAOA".into()];
         assert!(p.project_visible("FCLC"));
-        assert!(p.project_visible("MCOA"));
+        assert!(p.project_visible("MCAOA"));
         assert!(!p.project_visible("Other"));
     }
 

@@ -18,7 +18,7 @@
 
 ## ЗАДАЧА
 
-Провести строжайший и сверхглубокий peer-review проекта LongevityCommon: сначала каждого подпроекта по отдельности, затем зонтичной системы в целом. Работать в цикле {review → исправления → re-review} до вердикта **FUND_AS_IS** или **REVISE_MINOR** (safety-cap 50 итераций на компонент). После peer-review автономно принимать все рекомендации и применять правки. Решения принимать смело и самостоятельно.
+Провести строжайший и сверхглубокий peer-review проекта LC: сначала каждого подпроекта по отдельности, затем зонтичной системы в целом. Работать в цикле {review → исправления → re-review} до вердикта **FUND_AS_IS** или **REVISE_MINOR** (safety-cap 50 итераций на компонент). После peer-review автономно принимать все рекомендации и применять правки. Решения принимать смело и самостоятельно.
 
 **Сверх-задача:** усилить доказательную базу и углубить методологию. Провести широчайший и глубочайший поиск по всем научным базам (PubMed, Crossref, arXiv, bioRxiv, Cochrane Library) с целью подтвердить написанное. Сделать анализ и мета-анализ существующей литературы.
 
@@ -156,7 +156,7 @@ Placeholder list потенциальных партнёров с указани
 | Plateau guard | ❌ отключён (до v2.0 был 6 итераций) |
 | Safety cap | 50 итераций на компонент |
 | UNKNOWN verdict | auto-retry той же итерации |
-| Порядок | AutomatedMicroscopy → AIM → CytogeneticTree → BioSense → Telomere → MitoROS → EpigeneticDrift → Proteostasis → CDATA → MCOA → Ze → HAP → UMBRELLA |
+| Порядок | AutomatedMicroscopy → AIM → CytogeneticTree → BioSense → Telomere → MitoROS → EpigeneticDrift → Proteostasis → CDATA → MCAOA → Ze → HAP → UMBRELLA |
 
 Watcher (`/tmp/audit_funds_overnight.sh`) циклит проходы 1 → 2 → 3 → ... до `touch /tmp/STOP_AUDIT_FUNDS`.
 

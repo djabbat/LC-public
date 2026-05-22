@@ -1,9 +1,9 @@
-# AutomatedMicroscopy — LongevityCommon subproject
+# AutomatedMicroscopy — LC subproject
 
 **Purpose:** Low-cost ($4,500) AI-operated time-lapse microscopy platform для round-the-clock live-cell imaging, enabling single-PI labs to conduct industrial-grade imaging experiments without human shift overhead.
 
-**Parent ecosystem:** LongevityCommon (longevity research ecosystem)
-**Flagship role:** Experimental infrastructure for CDATA Phase A (Impetus Grant 2026-04-25) + future MCOA Counter validation experiments
+**Parent ecosystem:** LC (longevity research ecosystem)
+**Flagship role:** Experimental infrastructure for CDATA Phase A (Impetus Grant 2026-04-25) + future MCAOA Counter validation experiments
 
 **Status:** Engineering design complete (2026-04-21). Bill-of-materials ready. Assembly expected Months 1-2 of Phase A Impetus grant (if funded).
 
@@ -22,20 +22,20 @@
 - **Changelog / decisions:** see `JOURNAL.md`
 - **Future roadmap:** see `ROADMAP.md`
 
-## Контекст в экосистеме LongevityCommon
+## Контекст в экосистеме LC
 
 AutomatedMicroscopy — **инфраструктурный слой** для experimental подпроектов (CDATA, Telomere, MitoROS, EpigeneticDrift, Proteostasis), которые требуют длительного live-cell imaging.
 
 Сравнение с другими подпроектами:
 - **CDATA, Telomere, etc.** — scientific hypotheses / damage counters
 - **FCLC** — federated data sharing infrastructure
-- **MCOA** — theoretical framework
+- **MCAOA** — theoretical framework
 - **AutomatedMicroscopy (this)** — experimental infrastructure for data collection
 
 ## Ссылки
 
-- Parent: `~/Desktop/LongevityCommon/CONCEPT.md`
-- Related grant: `~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/`
+- Parent: `~/Desktop/LC/CONCEPT.md`
+- Related grant: `~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/`
 - External source: `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/`
 
 ## License

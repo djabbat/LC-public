@@ -34,7 +34,7 @@
    Явные разделы в CONCEPT.md (8 пунктов) и EVIDENCE.md. Перечислены DIY precision, drift, phototoxicity, AI hallucination и др.
 
 6. **Consortium / collaboration plan** – ✓ (условно)  
-   Список партнёров с ролями (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Статусы многих “TBD (placeholder)”, но план существует.
+   Список партнёров с ролями (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Статусы многих “TBD (placeholder)”, но план существует.
 
 7. **Reference reality + match** – ✗  
    Все ссылки в EVIDENCE.md (OpenFlexure, Hayflick, CellPose, ImageJ, GT335, Ninein, Burger, Boiko, Bran) реальны и соответствуют тексту.  

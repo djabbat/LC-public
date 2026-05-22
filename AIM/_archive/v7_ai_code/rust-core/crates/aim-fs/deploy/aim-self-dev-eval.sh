@@ -75,8 +75,8 @@ report() {
 }
 
 # Check 1: cargo tests on aim-fs (cheap if release artifacts exist).
-if command -v cargo >/dev/null && [ -d "${AIM_RUST_CORE:-$HOME/Desktop/LongevityCommon/AIM/rust-core}" ]; then
-    cd "${AIM_RUST_CORE:-$HOME/Desktop/LongevityCommon/AIM/rust-core}"
+if command -v cargo >/dev/null && [ -d "${AIM_RUST_CORE:-$HOME/Desktop/LC/AIM/rust-core}" ]; then
+    cd "${AIM_RUST_CORE:-$HOME/Desktop/LC/AIM/rust-core}"
     if ! cargo test -p aim-fs --lib --quiet 2>/dev/null; then
         emit_proposal \
             "aim-fs unit tests failing" \

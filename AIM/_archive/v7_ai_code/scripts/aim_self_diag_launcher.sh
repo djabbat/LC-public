@@ -4,7 +4,7 @@
 
 set -e
 
-AIM_DIR="$HOME/Desktop/LongevityCommon/AIM"
+AIM_DIR="$HOME/Desktop/LC/AIM"
 PY="$AIM_DIR/venv/bin/python"
 RUN_SCRIPT="$AIM_DIR/AI_run_self_diag.py"
 ARTIFACTS_DIR="$AIM_DIR/AI/artifacts"

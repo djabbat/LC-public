@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Infrastructure host, project coordination | Confirmed |\n| University of Bristol | Academic supervision, ethics, validation | Confirmed |\n| Zeiss (via IM 35 donation) | Microscope donor, technical support | In negotiation |\n| FLIR (Teledyne) | Camera supplier (Blackfly S) | In negotiation |\n| ThorLabs | LED illuminator supplier | In negotiation |\n| OpenTrons | Potential automation partner for media changes | Placeholder — TBD |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Infrastructure host, project coordination | Confirmed |\n| University of Bristol | Academic supervision, ethics, validation | Confirmed |\n| Zeiss (via IM 35 donation) | Microscope donor, technical support | In negotiation |\n| FLIR (Teledyne) | Camera supplier (Blackfly S) | In negotiation |\n| ThorLabs | LED illuminator supplier | In negotiation |\n| OpenTrons | Potential automation partner for media changes | Placeholder — TBD |"
   },
   {
     "file": "CONCEPT.md",

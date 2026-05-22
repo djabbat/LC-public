@@ -56,11 +56,11 @@
       "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/GLA_umbrella.check.v3.md",
       "accepted": true
     },
-    "LongevityCommon_root": {
-      "slug": "LongevityCommon_root",
-      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/LongevityCommon_root.review.md",
-      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/LongevityCommon_root.plan.v1.md",
-      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/LongevityCommon_root.check.v1.md",
+    "LC_root": {
+      "slug": "LC_root",
+      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/LC_root.review.md",
+      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/LC_root.plan.v1.md",
+      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/LC_root.check.v1.md",
       "accepted": true
     },
     "LC_BioSense": {

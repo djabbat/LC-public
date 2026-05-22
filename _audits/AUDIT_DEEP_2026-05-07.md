@@ -1,4 +1,4 @@
-# Deep audit LongevityCommon — 2026-05-07
+# Deep audit LC — 2026-05-07
 
 **Method:** DeepSeek-V4-flash via `llm.ask_long` (per CLAUDE.md root rule «всё через DeepSeek»). Context bundle: 185,249 chars.
 
@@ -24,8 +24,8 @@
 
 3. **Неопределённый статус counter-модулей (Telomere, MitoROS, EpigeneticDrift, Proteostasis).**
  - **Файлы:** `Telomere/CONCEPT.md`, `MitoROS/CONCEPT.md`, `EpigeneticDrift/CONCEPT.md`, `Proteostasis/CONCEPT.md`, корневой `MAP.md` (помечены как «concept-stage»).
- - **Проблема:** Эти подпроекты имеют полноценные CONCEPT.md, но не входят в основные 5 компонент экосистемы и не имеют плана интеграции в EIC заявку или MCOA. Они создают иллюзию масштаба без реальной координации.
- - **Исправление:** Определить судьбу каждого модуля: либо перевести в официaльные счетчики MCOA с дорожной картой, либо переместить в `_archive/` с пометкой future work.
+ - **Проблема:** Эти подпроекты имеют полноценные CONCEPT.md, но не входят в основные 5 компонент экосистемы и не имеют плана интеграции в EIC заявку или MCAOA. Они создают иллюзию масштаба без реальной координации.
+ - **Исправление:** Определить судьбу каждого модуля: либо перевести в официaльные счетчики MCAOA с дорожной картой, либо переместить в `_archive/` с пометкой future work.
 
 4. **Конфликт версионности: корневой CONCEPT.md (v5.6) утверждает одно, а некоторые подпроекты используют старую терминологию («DERIVE» вместо «POSTULATE»).**
  - **Файлы:** `Ze/CONCEPT.md` (проверить «POSTULATED ansatz»; по данным корневого CONCEPT.md, Ze ansatz — постулирован, но Ze/CONCEPT.md может содержать более старые формулировки), `BioSense/CONCEPT.md` (может не содержать «hypothesis-stage exploratory» в заголовке).
@@ -41,8 +41,8 @@
 
 6. **Использование старого имени «CommonHealth» в Ze/CLAUDE.md.**
  - **Файлы:** `Ze/CLAUDE.md` (первая строка: «Ze является подпроектом CommonHealth Ecosystem»).
- - **Проблема:** Проект переименован в LongevityCommon, но Ze/CLAUDE.md ссылается на старое имя.
- - **Исправление:** Заменить «CommonHealth» на «LongevityCommon».
+ - **Проблема:** Проект переименован в LC, но Ze/CLAUDE.md ссылается на старое имя.
+ - **Исправление:** Заменить «CommonHealth» на «LC».
 
 ---
 
@@ -50,10 +50,10 @@
 
 ### P0 (блокирующие)
 
-1. **Отсутствие CLAUDE.md в ключевых подпроектах MCOA и CDATA.**
- - **Файлы:** `MCOA/` (нет `MCOA/CLAUDE.md`), `CDATA/` (нет `CDATA/CLAUDE.md`).
- - **Проблема:** Согласно корневому `CLAUDE.md`, каждый подпроект должен иметь CLAUDE.md. MCOA и CDATA — центральные компоненты экосистемы, без CLAUDE.md их internal rules не определны.
- - **Исправление:** Создать `MCOA/CLAUDE.md` и `CDATA/CLAUDE.md` с указанием sources of truth, правилами разработки и связями с экосистемой.
+1. **Отсутствие CLAUDE.md в ключевых подпроектах MCAOA и CDATA.**
+ - **Файлы:** `MCAOA/` (нет `MCAOA/CLAUDE.md`), `CDATA/` (нет `CDATA/CLAUDE.md`).
+ - **Проблема:** Согласно корневому `CLAUDE.md`, каждый подпроект должен иметь CLAUDE.md. MCAOA и CDATA — центральные компоненты экосистемы, без CLAUDE.md их internal rules не определны.
+ - **Исправление:** Создать `MCAOA/CLAUDE.md` и `CDATA/CLAUDE.md` с указанием sources of truth, правилами разработки и связями с экосистемой.
 
 2. **Отсутствие CONCEPT.md в Ontogenesis.**
  - **Файлы:** `Ontogenesis/` (пустая структура — только data/, scripts/, target).
@@ -68,14 +68,14 @@
  - **Исправление:** Создать CLAUDE.md для каждого из перечисленных подпроектов, хотя бы минимальные (5-10 строк).
 
 4. **Неполный набор core .md в FCLC на локальной машине.**
- - **Файлы:** `~/Desktop/LongevityCommon/FCLC/` (содержит только `.git`, `fclc-web`, `target`; нет CLAUDE.md, CONCEPT.md и др.).
+ - **Файлы:** `~/Desktop/LC/FCLC/` (содержит только `.git`, `fclc-web`, `target`; нет CLAUDE.md, CONCEPT.md и др.).
  - **Проблема:** FCLC объявлен отдельным проектом (server-resident), но локальная копия пуста — это затрудняет локальный аудит и тестирование.
  - **Исправление:** Склонировать `djabbat/FCLC` в `FCLC/` или добавить symlink на серверную версию.
 
 ### P2 (косметические)
 
 5. **Наличие файла `CORRECTIONS_2026-04-22.md`, на который ссылаются многие CONCEPT.md, но он не включён в контекст и, возможно, неполон.**
- - **Файлы:** `_archive/audits/CORRECTIONS_2026-04-22.md` (упоминается в CLAUDE.md, CONCEPT.md MCOA, CDATA и др.).
+ - **Файлы:** `_archive/audits/CORRECTIONS_2026-04-22.md` (упоминается в CLAUDE.md, CONCEPT.md MCAOA, CDATA и др.).
  - **Проблема:** Файл не виден в текущем bundle — невозможно проверить, все ли исправления учтены.
  - **Исправление:** Для аудита запросить содержимое этого файла.
 
@@ -90,10 +90,10 @@
 
 ### P0 (блокирующие)
 
-1. **CDATA — статус inconclusive, но в MAP.md и MCOA он представлен как Counter #1.**
- - **Файлы:** `CDATA/CONCEPT.md` («С2 подтверждена» — противоречит «inconclusive» в корневом CONCEPT.md), `MCOA/CONCEPT.md` (§3.1 говорит о CDATA как о Counter #1), `MAP.md` (§2 — CDATA status inconclusive, но MCOA ссылается на него как на счётчик).
- - **Проблема:** Корневой CONCEPT.md v5.6 объявляет CDATA inconclusive (Sobol p=0.12), но в MCOA/CONCEPT.md написано «Counter #1 (Centriolar)» без оговорки о неопределённости. Это создаёт ложное впечатление подтверждённости.
- - **Исправление:** MCOA/CONCEPT.md должен явно указывать «Counter #1 candidate (status inconclusive)» с ссылкой на CDATA OPEN_PROBLEMS.
+1. **CDATA — статус inconclusive, но в MAP.md и MCAOA он представлен как Counter #1.**
+ - **Файлы:** `CDATA/CONCEPT.md` («С2 подтверждена» — противоречит «inconclusive» в корневом CONCEPT.md), `MCAOA/CONCEPT.md` (§3.1 говорит о CDATA как о Counter #1), `MAP.md` (§2 — CDATA status inconclusive, но MCAOA ссылается на него как на счётчик).
+ - **Проблема:** Корневой CONCEPT.md v5.6 объявляет CDATA inconclusive (Sobol p=0.12), но в MCAOA/CONCEPT.md написано «Counter #1 (Centriolar)» без оговорки о неопределённости. Это создаёт ложное впечатление подтверждённости.
+ - **Исправление:** MCAOA/CONCEPT.md должен явно указывать «Counter #1 candidate (status inconclusive)» с ссылкой на CDATA OPEN_PROBLEMS.
 
 2. **Отсутствие реализованных API-ручек между подпроектами (оркестрация не работает).**
  - **Файлы:** `MAP.md §3` (матрица API), серверные листинги (нет social server, нет BioSense backend на :4101).
@@ -105,7 +105,7 @@
 3. **HAP/CLAUDE.md ссылается на «CommonHealth CLAUDE.md» как на родительский проект — при том, что HAP объявлен TOXIC.**
  - **Файлы:** `HAP/CLAUDE.md` («CommonHealth CLAUDE.md: `~/Desktop/CommonHealth/CLAUDE.md`»).
  - **Проблема:** Несмотря на токсичность, HAP/CLAUDE.md указывает на несуществующий (или старый) родительский проект. Это может ввести в заблуждение при случайном чтении.
- - **Исправление:** Заменить ссылку на `~/Desktop/LongevityCommon/CLAUDE.md` и добавить пометку «TOXIC — не часть активной экосистемы».
+ - **Исправление:** Заменить ссылку на `~/Desktop/LC/CLAUDE.md` и добавить пометку «TOXIC — не часть активной экосистемы».
 
 4. **CytogeneticTree/CONCEPT.md §2.2 заявляет будущую связь с FCLC, но FCLC v14 (malicious-secure) запланирован только на Q1 2027.**
  - **Файлы:** `CytogeneticTree/CONCEPT.md` («Future: Cytogenetic Tree data could feed FCLC aging biomarker training»).
@@ -132,18 +132,18 @@
 
 2. **Social layer (server/web/realtime) не развёрнут на сервере — центральная платформа отсутствует.**
  - **Файлы:** `DESIGN.md §2.2`, `STATE.md §4` (social server/ web/ realtime — not started), серверные сервисы (нет соответствующих unit-файлов).
- - **Проблема:** Социальный слой — ключевое отличие LongevityCommon от набора независимых инструментов. Без него пользователь не может зарегистрироваться, увидеть χ_Ze, получить Ze·Guide, участвовать в исследованиях. Весь UX — vapour.
+ - **Проблема:** Социальный слой — ключевое отличие LC от набора независимых инструментов. Без него пользователь не может зарегистрироваться, увидеть χ_Ze, получить Ze·Guide, участвовать в исследованиях. Весь UX — vapour.
  - **Исправление:** Запустить server (Rust/Axum), web (React) и realtime (Elixir/Phoenix) на сервере, настроить nginx для app.longevity.ge.
 
 ### P1 (важные)
 
-3. **MCOA не имеет веб-присутствия, хотя nginx конфиг mcoa.longevity.ge существует.**
- - **Файлы:** Сервер: `mcoa.longevity.ge.conf`, но нет активного сервиса (ни backend, ни frontend). Локально: MCOA имеет Rust-бэкенд, но не развёрнут.
- - **Проблема:** MCOA заявлен как мета-теоретический фундамент, но его визуализация (например, демонстрация M4 фальсифицируемости) не доступна в вебе.
- - **Исправление:** Развернуть MCOA frontend (React) или хотя бы статическую страницу с описанием.
+3. **MCAOA не имеет веб-присутствия, хотя nginx конфиг mcoa.longevity.ge существует.**
+ - **Файлы:** Сервер: `mcoa.longevity.ge.conf`, но нет активного сервиса (ни backend, ни frontend). Локально: MCAOA имеет Rust-бэкенд, но не развёрнут.
+ - **Проблема:** MCAOA заявлен как мета-теоретический фундамент, но его визуализация (например, демонстрация M4 фальсифицируемости) не доступна в вебе.
+ - **Исправление:** Развернуть MCAOA frontend (React) или хотя бы статическую страницу с описанием.
 
 4. **CDATA не имеет работающего веб-интерфейса, но nginx конфиг cdata.longevity.ge существует.**
- - **Аналогично MCOA.**
+ - **Аналогично MCAOA.**
  - **Исправление:** Или развернуть CDATA frontend, или удалить nginx конфиг.
 
 5. **Журналы Longevity Horizon и Annals of Rejuvenation Science не видны как директории на сервере (longhoriz/rescience).**
@@ -169,11 +169,11 @@
 
 2. **Провести одномоментную чистку TOXIC подпроектов (HAP, Ontogenesis).** Или удалить их из корня репозитория (перенести в `_archive/`), или явно маркировать как historical и заблокировать их использование в любых грантовых документах. Это устранит стратегическое противоречие.
 
-3. **Создать недостающие CLAUDE.md для MCOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC (серверная копия).** Это повысит структурную целостность и позволит ассистенту корректно работать с каждым подпроектом.
+3. **Создать недостающие CLAUDE.md для MCAOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC (серверная копия).** Это повысит структурную целостность и позволит ассистенту корректно работать с каждым подпроектом.
 
 4. **Запустить BioSense backend на сервере и интегрировать его с biosense-web.** Без этого χ_Ze остаётся теорией без реализации, что делает невозможным демонстрацию биомаркера для гранта.
 
-5. **Разработать план интеграции counter-модулей (Telomere, MitoROS, EpigeneticDrift, Proteostasis) в MCOA.** Определить, какие из них станут официальными счётчиками, а какие будут отложены. Это укрепит аргументацию мульти-счётчиковой архитектуры в EIC заявке.
+5. **Разработать план интеграции counter-модулей (Telomere, MitoROS, EpigeneticDrift, Proteostasis) в MCAOA.** Определить, какие из них станут официальными счётчиками, а какие будут отложены. Это укрепит аргументацию мульти-счётчиковой архитектуры в EIC заявке.
 
 6. **Провести аудит серверных nginx конфигов:** удалить или активировать конфиги для mcoa.longevity.ge и cdata.longevity.ge, чтобы веб-присутствие соответствовало заявленному.
 

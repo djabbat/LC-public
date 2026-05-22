@@ -205,7 +205,7 @@ def build_executive_header() -> str:
 **Метод:**
 1. Inventory: 49 проектов (38 локальных + 11 на сервере)
 2. Per-project audit packet: размер, дерево (depth=2), детект стека, дамп core-файлов (CONCEPT/THEORY/CLAUDE/README/MAP/PARAMETERS/UPGRADE/STATE/TODO + Cargo.toml/mix.exs/package.json), entry-point код, гистограмма кода по расширениям
-3. Peer review через **DeepSeek-reasoner** (~/Desktop/LongevityCommon/AIM/llm.py не использовался напрямую — сделан минимальный клиент `ds_review.py` для надёжности; ключ читается из `~/.aim_env`)
+3. Peer review через **DeepSeek-reasoner** (~/Desktop/LC/AIM/llm.py не использовался напрямую — сделан минимальный клиент `ds_review.py` для надёжности; ключ читается из `~/.aim_env`)
 4. Improvement plan через DeepSeek-reasoner с инструкцией про P0/P1/P2 + правило Rust+Phoenix
 5. Check цикл: peer review проверяет план → если NEEDS_REVISION, план переписывается с учётом REMAINING_GAPS → повтор до ACCEPT (max 3 раунда)
 6. Cross-project synthesis: одно крупное ревью по всему bundle отзывов → системные паттерны
@@ -225,7 +225,7 @@ def build_executive_header() -> str:
 3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
-6. **Несогласованность параметров между подпроектами LongevityCommon** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
+6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
 7. **Документация-без-кода как доминирующий паттерн** — усилия уходят в CONCEPT/THEORY/KNOWLEDGE, но MVP не доводится до запуска.
 8. **Нарушение правила "no Docker"** — Dockerfile найден в LC_AIM, что противоречит `feedback_no_docker`.
 9. **Server-side legacy** — drjaba/longevity/books на чистом PHP, что противоречит правилу стека (исключение для legacy не задокументировано).

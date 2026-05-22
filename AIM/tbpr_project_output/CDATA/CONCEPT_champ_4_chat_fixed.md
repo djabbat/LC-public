@@ -2,7 +2,7 @@
 
 ---
 
-# CDATA — Concept v5.4 — Counter #1 (Centriolar) in MCOA
+# CDATA — Concept v5.4 — Counter #1 (Centriolar) in MCAOA
 
 **Status:** Pre-experimental hypothesis framework. The model's core computational prediction (centriolar damage as dominant driver of organismal aging biomarkers) was **falsified** by internal cross-validation (ABL-2 paradox). This is presented as the primary finding, not a limitation. The document is restructured as a hypothesis framework for experimental resolution of the paradox.
 
@@ -197,8 +197,8 @@ Unchanged. This section provides convergent evidence that centriolar damage corr
 
 ## Reproducibility & Open Science (Corrected)
 
-- **Code:** Cell-DT v3.0 is archived on Zenodo (DOI: 10.5281/zenodo.1234567). Link: `https://github.com/LongevityCommon/Cell-DT` (public as of 2026-05-16).
-- **Data:** All figures in this document are reproducible from public data (NHANES, Jaiswal 2017, Horvath 2013). R/Python scripts at `https://github.com/LongevityCommon/CDATA_analysis` (public as of 2026-05-16).
+- **Code:** Cell-DT v3.0 is archived on Zenodo (DOI: 10.5281/zenodo.1234567). Link: `https://github.com/LC/Cell-DT` (public as of 2026-05-16).
+- **Data:** All figures in this document are reproducible from public data (NHANES, Jaiswal 2017, Horvath 2013). R/Python scripts at `https://github.com/LC/CDATA_analysis` (public as of 2026-05-16).
 - **Pre-registration:** The experimental protocol for Test P0 (GT335-STED in HSC) is pre-registered on OSF (`osf.io/abc123`), registered 2026-05-16, with planned data collection start 2026-09-01.
 
 ---
@@ -224,9 +224,9 @@ The revised document no longer claims "logical proof" or "model validation." It 
 
 ---
 
-## Appendix A — Integration with MCOA (Expanded)
+## Appendix A — Integration with MCAOA (Expanded)
 
-CDATA is Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCOA). This framework is described in `~/Desktop/LongevityCommon/MCOA/CONCEPT.md`. The ABL-2 paradox strengthens the MCOA thesis: no single counter is sufficient; integration is necessary. Specifically, the ABL-2 paradox demonstrates that even a well-motivated single-counter hypothesis can be indistinguishable from another counter (epigenetic drift) when tested against aggregate data. This reinforces the MCOA requirement for multi-counter experimental designs (e.g., dual manipulation of centriolar and epigenetic machinery) to resolve causal relationships. The MCOA framework predicts that the true aging trajectory is a non-linear function of multiple counters, and that the apparent dominance of any single counter is a function of the measurement scale and model specification. The experimental program described here is designed to test this prediction directly.
+CDATA is Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCAOA). This framework is described in `~/Desktop/LC/MCAOA/CONCEPT.md`. The ABL-2 paradox strengthens the MCAOA thesis: no single counter is sufficient; integration is necessary. Specifically, the ABL-2 paradox demonstrates that even a well-motivated single-counter hypothesis can be indistinguishable from another counter (epigenetic drift) when tested against aggregate data. This reinforces the MCAOA requirement for multi-counter experimental designs (e.g., dual manipulation of centriolar and epigenetic machinery) to resolve causal relationships. The MCAOA framework predicts that the true aging trajectory is a non-linear function of multiple counters, and that the apparent dominance of any single counter is a function of the measurement scale and model specification. The experimental program described here is designed to test this prediction directly.
 
 ---
 

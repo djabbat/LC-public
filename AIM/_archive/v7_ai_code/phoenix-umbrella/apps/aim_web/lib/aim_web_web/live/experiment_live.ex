@@ -31,7 +31,7 @@ defmodule AimWeb.ExperimentLive do
     |> assign(:last_refresh, DateTime.utc_now())
   end
 
-  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
 
   defp experiment_owner_bin do
     [

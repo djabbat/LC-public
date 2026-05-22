@@ -89,7 +89,7 @@ def test_list_filters_by_status(isolated):
 def test_list_filters_by_project(isolated):
     from agents.feature_flags import add, list_flags
     add("a", project="FCLC")
-    add("b", project="MCOA")
+    add("b", project="MCAOA")
     fclc = [f.id for f in list_flags(project="FCLC")]
     assert fclc == ["a"]
 

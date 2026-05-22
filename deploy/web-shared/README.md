@@ -7,7 +7,7 @@ included by the OJS theme on ALL longevity.ge subdomains.
 
 ## Files
 
-- **`eco-inject.js`** — common sticky header (LongevityCommon brand +
+- **`eco-inject.js`** — common sticky header (LC brand +
  ecosystem navigation) + dark/light toggle + dark theme
  CSS overrides for PKP/OJS, Tailwind, custom styles.
 

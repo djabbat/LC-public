@@ -29,7 +29,7 @@ defmodule AimWeb.CohortLive do
   def handle_info(:tick, socket), do: {:noreply, load_cohort(socket)}
   def handle_event("refresh", _params, socket), do: {:noreply, load_cohort(socket)}
 
-  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
 
   defp load_cohort(socket) do
     case fetch_cohort() do

@@ -21,7 +21,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Risk matrix",
-    "body": "| Risk ID | Description | Probability | Impact | Mitigation |\n|---------|-------------|-------------|--------|------------|\n| R1 | Heteroplasmy measurement error | Medium | High | Use validated ddPCR protocol; include positive/negative controls |\n| R2 | Non-linearity of D₃ accumulation | Medium | High | Pre-register linear model; alternative non-linear model as contingency |\n| R3 | Tissue weight w₃ misspecification | Low | Medium | Lock weights a priori; sensitivity analysis with bootstrapped CIs |\n| R4 | Confounding by other aging counters | High | Medium | Include Γ matrix interaction terms in MCOA master equation |\n| R5 | Reagent batch effects | Low | Low | Randomize samples across batches; include batch as covariate |\n| R6 | Longitudinal attrition (P2-1) | Medium | High | Power analysis accounts for 20% dropout; use mixed-effects models |\n\n**Monitoring:** Risks R1–R6 will be reviewed quarterly; R2 and R6 have explicit contingency plans (see OPEN_PROBLEMS.md)."
+    "body": "| Risk ID | Description | Probability | Impact | Mitigation |\n|---------|-------------|-------------|--------|------------|\n| R1 | Heteroplasmy measurement error | Medium | High | Use validated ddPCR protocol; include positive/negative controls |\n| R2 | Non-linearity of D₃ accumulation | Medium | High | Pre-register linear model; alternative non-linear model as contingency |\n| R3 | Tissue weight w₃ misspecification | Low | Medium | Lock weights a priori; sensitivity analysis with bootstrapped CIs |\n| R4 | Confounding by other aging counters | High | Medium | Include Γ matrix interaction terms in MCAOA master equation |\n| R5 | Reagent batch effects | Low | Low | Randomize samples across batches; include batch as covariate |\n| R6 | Longitudinal attrition (P2-1) | Medium | High | Power analysis accounts for 20% dropout; use mixed-effects models |\n\n**Monitoring:** Risks R1–R6 will be reviewed quarterly; R2 and R6 have explicit contingency plans (see OPEN_PROBLEMS.md)."
   },
   {
     "file": "CONCEPT.md",
@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners have contributed or are planned to contribute to this work:\n\n- **Lead institution:** [Institution name TBD]\n- **Experimental validation:** [Partner lab TBD] — mtDNA sequencing and ROS measurements\n- **Computational modeling:** [Partner lab TBD] — MCOA integration and sensitivity analysis\n- **Clinical samples:** [Biobank TBD] — human tissue samples for validation\n- **Funding:** [Funding agency TBD] — grant number TBD\n\n*Note: Formal consortium agreements are pending; this list will be updated upon confirmation.*"
+    "body": "The following partners have contributed or are planned to contribute to this work:\n\n- **Lead institution:** [Institution name TBD]\n- **Experimental validation:** [Partner lab TBD] — mtDNA sequencing and ROS measurements\n- **Computational modeling:** [Partner lab TBD] — MCAOA integration and sensitivity analysis\n- **Clinical samples:** [Biobank TBD] — human tissue samples for validation\n- **Funding:** [Funding agency TBD] — grant number TBD\n\n*Note: Formal consortium agreements are pending; this list will be updated upon confirmation.*"
   },
   {
     "file": "CONCEPT.md",

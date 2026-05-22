@@ -27,7 +27,7 @@ log = logging.getLogger("ai.self_diagnostic")
 
 
 def project_root() -> Path:
-    """`~/Desktop/LongevityCommon/AIM/` — the parent of AI/."""
+    """`~/Desktop/LC/AIM/` — the parent of AI/."""
     return Path(__file__).resolve().parent.parent.parent
 
 

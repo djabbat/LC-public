@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject:\n- **James Smith** (Lead Engineer, University of Bristol) — Role: Hardware design and integration. Status: Confirmed.\n- **Lena Zhang** (AI/ML Specialist, independent) — Role: Prompt engineering and AI supervision pipeline. Status: Contact initiated.\n- **OpenFlexure** — Role: Low-cost microscope stage design reference. Status: TBD (partnership agreement pending).\n- **Micro-Manager** — Role: Open-source microscopy software integration. Status: TBD.\n- **University of Bristol** — Role: Institutional host and lab space. Status: Confirmed.\n- **LongevityCommon** — Role: Infrastructure and coordination. Status: Confirmed.\n- **Additional partners:** TBD (to be identified as project progresses)."
+    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject:\n- **James Smith** (Lead Engineer, University of Bristol) — Role: Hardware design and integration. Status: Confirmed.\n- **Lena Zhang** (AI/ML Specialist, independent) — Role: Prompt engineering and AI supervision pipeline. Status: Contact initiated.\n- **OpenFlexure** — Role: Low-cost microscope stage design reference. Status: TBD (partnership agreement pending).\n- **Micro-Manager** — Role: Open-source microscopy software integration. Status: TBD.\n- **University of Bristol** — Role: Institutional host and lab space. Status: Confirmed.\n- **LC** — Role: Infrastructure and coordination. Status: Confirmed.\n- **Additional partners:** TBD (to be identified as project progresses)."
   },
   {
     "file": "/EVIDENCE.md",

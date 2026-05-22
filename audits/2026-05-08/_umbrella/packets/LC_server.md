@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_server
 
-Path: `/home/oem/Desktop/LongevityCommon/server`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/server`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-704K	/home/oem/Desktop/LongevityCommon/server
+704K	/home/oem/Desktop/LC/server
 ```
 **Extensions:** .json=61, .rs=36, .sql=4, .sh=2, .toml=1, (noext)=1, .lock=1, .md=1, .example=1, .service=1
 ## Tree (depth=2, max 200 entries)
@@ -48,7 +48,7 @@ name = "longevitycommon-server"
 version = "0.1.0"
 edition = "2021"
 authors = ["Jaba Tkemaladze"]
-description = "LongevityCommon REST API — longevity social network backend"
+description = "LC REST API — longevity social network backend"
 
 [lib]
 name = "longevitycommon_server"
@@ -173,7 +173,7 @@ async fn main() -> anyhow::Result<()> {
         .layer(TraceLayer::new_for_http());
 
     let addr: SocketAddr = format!("{}:{}", config.app_host, config.app_port).parse()?;
-    tracing::info!("LongevityCommon API listening on {}", addr);
+    tracing::info!("LC API listening on {}", addr);
     tracing::info!("Allowed origins: {:?}", config.allowed_origins);
 
     let listener = tokio::net::TcpListener::bind(addr).await?;

@@ -1,7 +1,7 @@
 # Triple-Blind Peer Review (TBPR) — CDATA v5.4
 
 **Project:** CDATA (Centriolar Division-counting Aging Theory)  
-**Document:** Concept v5.4 — Counter #1 in MCOA  
+**Document:** Concept v5.4 — Counter #1 in MCAOA  
 **Date:** 2026-05-16  
 **Review Type:** Triple-Blind (Reviewers, Authors, and Editors are mutually anonymized)
 
@@ -54,7 +54,7 @@
 | 4 | 5 | Excellent handling of the paradox. The decision tree is clear and actionable. This is the best part of the document. |
 | 5 | 4 | P0 is feasible, but the timeline (8 weeks) is optimistic. Sorting HSCs, H2B-GFP dilution, and STED imaging requires careful scheduling. |
 | 6 | 5 | Perfect – all code, data, and preregistration are public. |
-| 7 | 4 | Good integration with MCOA and aging clocks. However, more discussion of why other ¬R mechanisms were excluded would strengthen the argument. |
+| 7 | 4 | Good integration with MCAOA and aging clocks. However, more discussion of why other ¬R mechanisms were excluded would strengthen the argument. |
 | 8 | 4 | If the experiments distinguish H1–H3, the impact could be high regardless of outcome. |
 | 9 | 5 | The falsification approach is rigorous, especially the contingency plan for null P0. |
 | 10 | 4 | Limitations are well-covered, though the post-mitotic aging gap is concerning. |
@@ -73,7 +73,7 @@
 | 4 | 5 | The handling of the ABL-2 paradox is exemplary. Many projects would have buried the negative result. Here it is front and center. |
 | 5 | 4 | P0 is doable, but the cost estimate may be too low. Recommend adding a 20% contingency. The power analysis is sound. |
 | 6 | 5 | Outstanding: preregistration, public repositories, all reproducibility measures taken. |
-| 7 | 4 | Good integration with MCOA. The table of multi-organism evidence is useful. |
+| 7 | 4 | Good integration with MCAOA. The table of multi-organism evidence is useful. |
 | 8 | 5 | The project has high potential: even a null result (H3) would redirect the field. |
 | 9 | 5 | The decision tree makes the project fully falsifiable. |
 | 10 | 5 | Limitations are dealt with honestly. The post-mitotic aging gap is acknowledged and left as an open question. |

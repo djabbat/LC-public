@@ -3,7 +3,7 @@ name = "longevitycommon-server"
 version = "0.1.0"
 edition = "2021"
 authors = ["Jaba Tkemaladze"]
-description = "LongevityCommon REST API — longevity social network backend"
+description = "LC REST API — longevity social network backend"
 
 [lib]
 name = "longevitycommon_server"

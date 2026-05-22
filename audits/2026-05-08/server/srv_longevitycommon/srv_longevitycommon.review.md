@@ -12,7 +12,7 @@
 | **Structure / Modularity** | 3 | Subproject-границы определены, но TOXIC-проекты (HAP, Ontogenesis) не удалены, нарушая модульность. Внутри одного репозитория смешаны Rust, Python, Elixir, Node — это затрудняет независимую разработку. |
 | **Systematicity (cross-file consistency)** | 2 | Core-файлы (CONCEPT, DESIGN, STATE) согласованы между собой, но код социального слоя не отражает обещанные изменения (см. STATE.md §5). Port conflict упомянут в DESIGN.md, но не исправлен. Subproject CONCEPTs не обновлены. |
 | **Core-files vs code alignment** | 2 | Множество action-пунктов из STATE.md не выполнены (disclosure headers, banner, tooltips, endpoint). Стек реально использует Python, хотя заявлен «Rust+Phoenix only». |
-| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
+| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCAOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
 | **Modernity of stack** | 4 | Rust/axum, Elixir/Phoenix, React+TypeScript — современные технологии. Python используется для ML-скриптов, что допустимо, но нарушает правило моностека. |
 | **Quality of processes / connections** | 2 | Отсутствует CI для umbrella-стека, нет интеграционных тестов, нет mock для внешних API. Port conflict не разрешён. Subproject CONCEPTs не синхронизированы. Процесс регенерации core .md не автоматизирован. |
 
@@ -23,7 +23,7 @@
 1. **Нарушение стека (Python)**  
    - `BioSense/src/ze_alpha_peak.py`, `eeg_ze_processor.py` и др. — 7 Python-файлов, критических для биомаркерного пайплайна.  
    - `AIM/` — полноценный Python-сервис (telegram_bot.py, llm.py, medical_system.py).  
-   - `Proteostasis/scripts/calibrate.py`, `MCOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
+   - `Proteostasis/scripts/calibrate.py`, `MCAOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
    - В code histogram `py 359` — нарушение «Rust+Phoenix only» даже для научного слоя.
 
 2. **Port conflict realtime ↔ Ze (4001) не исправлен**  
@@ -55,7 +55,7 @@
    - `THEORY.md §1` отмечает две конвенции (Python ∈ [0,1], Article ∈ [-1,+1]). Это потенциальный источник багов при интеграции.
 
 4. **Отсутствует лицензия в подпроектах**  
-   - Например, `AIM/`, `MCOA/` не имеют собственного LICENSE, хотя umbrella имеет MIT. Для публичных repo это требуется.
+   - Например, `AIM/`, `MCAOA/` не имеют собственного LICENSE, хотя umbrella имеет MIT. Для публичных repo это требуется.
 
 5. **Нестандартное расположение `AIM/`**  
    - AIM — отдельный Python-сервис с собственным Dockerfile и docker-compose.yml. Его логика пересекается с социальным слоем, но нет чёткой границы в DESIGN.md.

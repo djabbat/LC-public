@@ -4,7 +4,7 @@
 # активирует venv, запускает REPL.
 set -u
 
-AIM_ROOT="/home/oem/Desktop/LongevityCommon/AIM"
+AIM_ROOT="/home/oem/Desktop/LC/AIM"
 
 if [ -f "$HOME/.aim_env" ]; then
     set -a

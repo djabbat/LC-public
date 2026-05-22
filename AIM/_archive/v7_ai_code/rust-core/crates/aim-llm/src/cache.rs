@@ -19,7 +19,7 @@ impl PromptCache {
         }
         let path = std::env::var("AIM_DB_PATH").unwrap_or_else(|_| {
             let home = std::env::var("HOME").unwrap_or_else(|_| "/home/oem".into());
-            format!("{home}/Desktop/LongevityCommon/AIM/aim.db")
+            format!("{home}/Desktop/LC/AIM/aim.db")
         });
         match Connection::open(&path) {
             Ok(conn) => {

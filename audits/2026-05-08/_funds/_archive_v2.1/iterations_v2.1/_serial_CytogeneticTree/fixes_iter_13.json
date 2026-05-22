@@ -33,6 +33,6 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Role | Name/Institution | Status |\n|-----|------------------|--------|\n| Principal Investigator | Ilya Zheleznov (LongevityCommon) | Confirmed |\n| RITE construct design | TBD | Recruitment in progress |\n| Cell culture & imaging | TBD | Recruitment in progress |\n| Algorithm development | TBD | Recruitment in progress |\n| Statistical analysis | TBD | Recruitment in progress |\n| Ethics & regulatory | TBD | To be assigned |\n\n**Recruitment plan:** Target to fill all TBD roles by 2026-09-01. Priority: RITE construct designer (critical path). Backup: If no suitable candidate found, outsource to commercial CRO (budget contingency)."
+    "body": "| Role | Name/Institution | Status |\n|-----|------------------|--------|\n| Principal Investigator | Ilya Zheleznov (LC) | Confirmed |\n| RITE construct design | TBD | Recruitment in progress |\n| Cell culture & imaging | TBD | Recruitment in progress |\n| Algorithm development | TBD | Recruitment in progress |\n| Statistical analysis | TBD | Recruitment in progress |\n| Ethics & regulatory | TBD | To be assigned |\n\n**Recruitment plan:** Target to fill all TBD roles by 2026-09-01. Priority: RITE construct designer (critical path). Backup: If no suitable candidate found, outsource to commercial CRO (budget contingency)."
   }
 ]

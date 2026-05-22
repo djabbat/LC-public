@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_Ze
 
-Path: `/home/oem/Desktop/LongevityCommon/Ze`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/Ze`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-68M	/home/oem/Desktop/LongevityCommon/Ze
+68M	/home/oem/Desktop/LC/Ze
 ```
 **Extensions:** .docx=69, .md=29, .ex=23, .exs=12, .py=9, .rs=7, .png=4, .heex=4, (noext)=3, .js=3, .toml=3, .pdf=2, .sh=2, .lock=1, .pot=1
 ## Tree (depth=2, max 200 entries)
@@ -110,12 +110,12 @@ Path: `/home/oem/Desktop/LongevityCommon/Ze`  Date: 2026-05-08
 
 ## Ecosystem Context
 
-**Ze является подпроектом LongevityCommon Ecosystem.** (Project renamed from "CommonHealth" 2026-04; entry updated 2026-05-07.)
-**Parent:** `~/Desktop/LongevityCommon/` — центральная платформа экосистемы долголетия
-**Location:** `~/Desktop/LongevityCommon/Ze/`
-**Git:** `djabbat/LongevityCommon` (private monorepo) / `djabbat/LongevityCommon-public`
+**Ze является подпроектом LC Ecosystem.** (Project renamed from "CommonHealth" 2026-04; entry updated 2026-05-07.)
+**Parent:** `~/Desktop/LC/` — центральная платформа экосистемы долголетия
+**Location:** `~/Desktop/LC/Ze/`
+**Git:** `djabbat/LC` (private monorepo) / `djabbat/LC-public`
 
-**Role:** Ze — теоретическая основа измерений. Определяет ЧТО измерять (χ_Ze). BioSense реализует физическое измерение. LongevityCommon (social layer, planned) использует результат в Ze·Profile (компонент "организм" в 4-факторной модели здоровья).
+**Role:** Ze — теоретическая основа измерений. Определяет ЧТО измерять (χ_Ze). BioSense реализует физическое измерение. LC (social layer, planned) использует результат в Ze·Profile (компонент "организм" в 4-факторной модели здоровья).
 
 **Ключевые публикации:**
 - Ze Theory as Interpretive Framework. DOI: 10.65649/a874t352
@@ -1054,7 +1054,7 @@ Key numerical constants and formulas of the Ze framework.
 
 ## Core Constants
 
-> **Convention note (2026-05-07):** root `~/Desktop/LongevityCommon/PARAMETERS.md § 1`
+> **Convention note (2026-05-07):** root `~/Desktop/LC/PARAMETERS.md § 1`
 > defines **Article form** as canonical for cross-subproject API and
 > manuscripts (`v*_active = −0.08738`). Values below are stated in
 > **Python (internal) form** `[0, 1]` because Ze theorem proofs and

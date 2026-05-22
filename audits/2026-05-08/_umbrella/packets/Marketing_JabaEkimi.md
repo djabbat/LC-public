@@ -150,7 +150,7 @@ Path: `/home/oem/Desktop/Marketing/JabaEkimi`  Date: 2026-05-08
 - **drjaba.com** — конечная воронка (консультации, клиника).
 - **GLA / Annals of Rejuvenation Science** — источник тем для видео (свежие публикации journal).
 - **Книга Ze** — продукт для продажи через канал (4-step NO-ISBN план уже зафиксирован).
-- **LongevityCommon NEWS.md** — источник новостных тем для Shorts.
+- **LC NEWS.md** — источник новостных тем для Shorts.
 
 ## Точка пересмотра
 

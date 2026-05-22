@@ -28,7 +28,7 @@
 ### Narrative
 
 **Strengths:**  
-The concept is admirably clear about its non‑biological commissioning purpose. The explicit separation between “what is validated” and “what is not” is a strong sign of methodological rigor. Safety infrastructure (interlock, enclosure, goggles, UPS) is well considered. The linkage to the broader ecosystem (PhD, CDATA, MCOA) is transparent and appropriate.  
+The concept is admirably clear about its non‑biological commissioning purpose. The explicit separation between “what is validated” and “what is not” is a strong sign of methodological rigor. Safety infrastructure (interlock, enclosure, goggles, UPS) is well considered. The linkage to the broader ecosystem (PhD, CDATA, MCAOA) is transparent and appropriate.  
 
 **Weaknesses:**  
 - **Hardware feasibility (score 3):** The LGY40‑C motorized stage stacked on a vintage Zeiss IM 35 is a hack that introduces multiple sources of mechanical backlash and drift. No vibration isolation is mentioned beyond “квартирный стол” (apartment table). For a 6‑month stability test, this is a serious risk. An optical table or at least a heavy granite slab should be mandatory.  

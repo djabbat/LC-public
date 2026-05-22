@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "- **Lead PI:** TBD (LongevityCommon)\n- **Engineering partner:** TBD (open-source hardware community)\n- **Validation lab:** TBD (independent biology lab for replication)\n- **Software development:** TBD (Claude Code agent integration)\n- **Funding source:** TBD (grant or institutional support)"
+    "body": "- **Lead PI:** TBD (LC)\n- **Engineering partner:** TBD (open-source hardware community)\n- **Validation lab:** TBD (independent biology lab for replication)\n- **Software development:** TBD (Claude Code agent integration)\n- **Funding source:** TBD (grant or institutional support)"
   },
   {
     "file": "/CONCEPT.md",

@@ -1,4 +1,4 @@
-//! ze_verify reads ~/Desktop/LongevityCommon/Ze/{CONCEPT,KNOWLEDGE,PARAMETERS,MAP}.md.
+//! ze_verify reads ~/Desktop/LC/Ze/{CONCEPT,KNOWLEDGE,PARAMETERS,MAP}.md.
 //! These tests exercise both the "match" and "no-match" paths against the
 //! current state of the user's filesystem (running locally).
 

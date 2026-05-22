@@ -39,7 +39,7 @@ export function Studies() {
         multimodal version is a post-hoc reformulation, not yet validated
         on a pre-registered N≥2000 cohort. All studies listed here are
         hypothesis-generating; results are not clinical advice. See
-        LongevityCommon CONCEPT v5.6.
+        LC CONCEPT v5.6.
       </div>
 
       {isLoading ? (

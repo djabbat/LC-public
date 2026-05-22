@@ -31,7 +31,7 @@ defmodule AimWeb.HealthLive do
 
   # ── probes ─────────────────────────────────────────────────────────────
 
-  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
 
   defp probe(socket) do
     cornerstone_bins = [

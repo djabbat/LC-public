@@ -48,7 +48,7 @@ CORE_MD_NAMES = (
     "MEMORY.md", "README.md",
 )
 DESKTOP_PROJECT_GLOB = (
-    "LongevityCommon/**/", "FCLC/**/", "MCOA/**/", "Ze/**/",
+    "LC/**/", "FCLC/**/", "MCAOA/**/", "Ze/**/",
     "BioSense/**/", "CDATA/**/", "AIM/**/", "Annals/**/",
     "PhD/**/", "Books/**/", "GLA/**/",
 )

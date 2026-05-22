@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_web
 
-Path: `/home/oem/Desktop/LongevityCommon/web`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/web`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-1,3M	/home/oem/Desktop/LongevityCommon/web
+1,3M	/home/oem/Desktop/LC/web
 ```
 **Extensions:** .tsx=14, .ts=7, .json=4, (noext)=2, .html=1, .md=1, .sh=1, .svg=1, .mjs=1
 ## Tree (depth=2, max 200 entries)

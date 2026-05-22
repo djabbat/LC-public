@@ -36,7 +36,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-AIM_ROOT = Path("/home/oem/Desktop/LongevityCommon/AIM")
+AIM_ROOT = Path("/home/oem/Desktop/LC/AIM")
 sys.path.insert(0, str(AIM_ROOT))
 
 

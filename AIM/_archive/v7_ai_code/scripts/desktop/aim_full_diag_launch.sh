@@ -11,7 +11,7 @@
 #   • exit code 0 = нет P0 findings, система здорова
 #   • exit code 1 = есть P0 (см. terminal output + report.md)
 set -uo pipefail
-REPO_ROOT="/home/oem/Desktop/LongevityCommon/AIM"
+REPO_ROOT="/home/oem/Desktop/LC/AIM"
 VENV_PY="$REPO_ROOT/venv/bin/python"
 [ -x "$VENV_PY" ] || VENV_PY="$(/usr/bin/which python3)"
 SCRIPT="$REPO_ROOT/scripts/aim_full_diagnostic.py"

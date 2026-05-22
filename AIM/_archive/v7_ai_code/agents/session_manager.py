@@ -80,7 +80,7 @@ def on_turn_end(session_id: int, role: str, content: str,
 
 
 _PROJECT_NAMES = (
-    "LongevityCommon", "FCLC", "MCOA", "Ze",
+    "LC", "FCLC", "MCAOA", "Ze",
     "BioSense", "CDATA", "AIM", "Annals",
     "PhD", "Books", "GLA",
 )

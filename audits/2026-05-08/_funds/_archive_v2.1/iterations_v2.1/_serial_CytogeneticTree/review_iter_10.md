@@ -38,8 +38,8 @@
 
 **Version:** v1.0 (initial scaffolding)
 **Date:** 2026-04-21
-**Status:** 🟡 Active (new LongevityCommon subproject)
-**Parent umbrella:** `~/Desktop/LongevityCommon/` (coordinator of CDATA, FCLC, Ze, BioSense, MCOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
+**Status:** 🟡 Active (new LC subproject)
+**Parent umbrella:** `~/Desktop/LC/` (coordinator of CDATA, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
 
 ---
 

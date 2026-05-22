@@ -27,7 +27,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners are involved or planned:\n\n| Partner | Role | Status |\n|---------|------|--------|\n| TBD (centriole biology expert) | RITE construct design and validation | Contact initiated |\n| TBD (imaging facility) | Long-term live-cell microscopy | Letter of support pending |\n| TBD (computational biology) | Lineage reconstruction algorithm | To be recruited |\n| TBD (statistics) | Power analysis and data analysis | Consulted (placeholder) |\n| LongevityCommon consortium | Coordination, funding, data sharing | Confirmed |\n\nLetters of support are pending for all TBD partners. A full consortium agreement will be drafted upon funding."
+    "body": "The following partners are involved or planned:\n\n| Partner | Role | Status |\n|---------|------|--------|\n| TBD (centriole biology expert) | RITE construct design and validation | Contact initiated |\n| TBD (imaging facility) | Long-term live-cell microscopy | Letter of support pending |\n| TBD (computational biology) | Lineage reconstruction algorithm | To be recruited |\n| TBD (statistics) | Power analysis and data analysis | Consulted (placeholder) |\n| LC consortium | Coordination, funding, data sharing | Confirmed |\n\nLetters of support are pending for all TBD partners. A full consortium agreement will be drafted upon funding."
   },
   {
     "file": "KNOWLEDGE.md",

@@ -34,7 +34,7 @@
    Отдельный раздел с 8 пунктами в CONCEPT.md и дополнительный в EVIDENCE.md. Перечислены: DIY precision, drift, phototoxicity, AI hallucination, отсутствие liquid handling, sample stability, отсутствие precedents, single platform. Без приукрашиваний.
 
 6. **Consortium / collaboration plan** ✓  
-   Таблица партнёров с ролями и статусом: LongevityCommon (lead), Univ. of Bristol (chamber), Zeiss (donor), FLIR, ThorLabs, OpenTrons. Есть также упоминание James Smith (Cambridge), Lena Zhang (MPI), OpenFlexure. Достаточно для proposal.
+   Таблица партнёров с ролями и статусом: LC (lead), Univ. of Bristol (chamber), Zeiss (donor), FLIR, ThorLabs, OpenTrons. Есть также упоминание James Smith (Cambridge), Lena Zhang (MPI), OpenFlexure. Достаточно для proposal.
 
 7. **Reference reality + match** ✓  
    Все 12 научных ссылок имеют реальные PMID/DOI, которые разрешаются (проверено по PubMed/Crossref). Каждая ссылка соответствует утверждению в тексте (e.g., GT335 antibody действительно распознаёт polyglutamylated tubulin; OpenFlexure статья описывает Arduino XY stage). Manufacturer specs без DOI, но реальны. Подробная таблица ниже.

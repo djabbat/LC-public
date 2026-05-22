@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""validate/counter_numbering.py — проверяет согласованность номеров счётчиков MCOA.
+"""validate/counter_numbering.py — проверяет согласованность номеров счётчиков MCAOA.
 
 Читает registry.json, затем CONCEPT.md каждого counter-проекта и сверяет,
 что номер счётчика везде один и тот же.
@@ -53,7 +53,7 @@ def main():
     warnings = 0
 
     print("=" * 60)
-    print("Валидация: номера счётчиков MCOA")
+    print("Валидация: номера счётчиков MCAOA")
     print("=" * 60)
 
     for key, proj in reg["projects"].items():

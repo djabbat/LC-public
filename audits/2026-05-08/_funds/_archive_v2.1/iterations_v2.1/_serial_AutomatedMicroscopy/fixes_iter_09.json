@@ -33,6 +33,6 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject:\n\n- **Lead institution:** LongevityCommon (infrastructure development and coordination)\n- **Hardware development:** TBD (DIY community contributors, open-source hardware group)\n- **AI/software development:** TBD (Claude Code integration, audit trail system)\n- **Biological validation:** CDATA Phase A team (first user, MCOA Counter validation)\n- **Funding:** TBD (grant applications in preparation)\n- **Advisory board:** TBD (experts in automated microscopy, aging biology, AI safety)\n\n**Note:** Formal consortium agreements and partner commitments are pending. This list will be updated as collaborations are finalized."
+    "body": "The following partners and collaborators are involved in the AutomatedMicroscopy subproject:\n\n- **Lead institution:** LC (infrastructure development and coordination)\n- **Hardware development:** TBD (DIY community contributors, open-source hardware group)\n- **AI/software development:** TBD (Claude Code integration, audit trail system)\n- **Biological validation:** CDATA Phase A team (first user, MCAOA Counter validation)\n- **Funding:** TBD (grant applications in preparation)\n- **Advisory board:** TBD (experts in automated microscopy, aging biology, AI safety)\n\n**Note:** Formal consortium agreements and partner commitments are pending. This list will be updated as collaborations are finalized."
   }
 ]

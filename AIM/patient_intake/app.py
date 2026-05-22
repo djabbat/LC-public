@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """patient_intake/app.py — Flask UI для приёма пациента (история болезни).
 
-Интегративная медицина LongevityCommon.
+Интегративная медицина LC.
 Запуск: python3 app.py
 Открыть в браузере: http://localhost:5050
 """
@@ -118,7 +118,7 @@ INDEX_HTML = """<!DOCTYPE html>
 <div class="topbar">
   <div class="dot"></div>
   <h1>AIM · Приём пациента</h1>
-  <span style="margin-left:auto;font-size:12px;opacity:.7">Интегративная медицина · LongevityCommon</span>
+  <span style="margin-left:auto;font-size:12px;opacity:.7">Интегративная медицина · LC</span>
 </div>
 <div class="container">
   <div class="card">
@@ -190,7 +190,7 @@ INDEX_HTML = """<!DOCTYPE html>
     <h2>📝 Заключение врача</h2>
     <div class="row">
       <div class="field" style="grid-column:1/-1"><label>Диагноз (рабочий)</label><textarea id="diagnosis" placeholder="Основной, сопутствующие..."></textarea></div>
-      <div class="field" style="grid-column:1/-1"><label>MCOA-профиль (оценка счётчиков)</label><textarea id="mcoa_profile" placeholder="C#1 Центриолярный: ?&#10;C#2 Теломерный: ?&#10;C#3 Митохондриальный: ?&#10;C#4 Эпигенетический: ?&#10;C#5 Протеостаз: ?"></textarea></div>
+      <div class="field" style="grid-column:1/-1"><label>MCAOA-профиль (оценка счётчиков)</label><textarea id="mcoa_profile" placeholder="C#1 Центриолярный: ?&#10;C#2 Теломерный: ?&#10;C#3 Митохондриальный: ?&#10;C#4 Эпигенетический: ?&#10;C#5 Протеостаз: ?"></textarea></div>
       <div class="field" style="grid-column:1/-1"><label>Рекомендации</label><textarea id="recommendations" placeholder="Назначения, направления, контроль..."></textarea></div>
       <div class="field" style="grid-column:1/-1"><label>Заметки</label><textarea id="notes"></textarea></div>
     </div>

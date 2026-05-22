@@ -8,7 +8,7 @@
 [01:41:22]   packet local Iqalto_Aqtivirebuli
 [01:41:22]   packet local Iqalto_simulator
 [01:41:22]   packet local Iqalto_iqalto-core
-[01:41:22]   packet local LongevityCommon_root
+[01:41:22]   packet local LC_root
 [01:41:28]   packet local LC_AIM
 [01:41:33]   packet local LC_BioSense
 [01:41:33]   packet local LC_CDATA
@@ -74,7 +74,7 @@
 [01:51:48]   check Iqalto_umbrella v1
 [01:52:08]   plan Iqalto_simulator
 [01:52:09]   DONE Iqalto_umbrella: accepted=True
-[01:52:09]   review LongevityCommon_root
+[01:52:09]   review LC_root
 [01:52:11]   plan Iqalto_Aqtivirebuli
 [01:52:25]   plan Iqalto_iqalto-core
 [01:52:45]   check GLA_umbrella v2
@@ -88,17 +88,17 @@
 [01:53:13]   refine plan GLA_umbrella -> v3
 [01:53:16]   review LC_CDATA
 [01:53:16]   DONE Iqalto_Aqtivirebuli: accepted=True
-[01:53:19]   plan LongevityCommon_root
+[01:53:19]   plan LC_root
 [01:53:58]   check GLA_umbrella v3
 [01:53:59]   plan LC_AIM
 [01:54:01]   plan LC_BioSense
 [01:54:14]   plan LC_CDATA
-[01:54:19]   check LongevityCommon_root v1
+[01:54:19]   check LC_root v1
 [01:54:32]   DONE GLA_umbrella: accepted=True
 [01:54:32]   review LC_CytogeneticTree
 [01:54:41]   check LC_AIM v1
 [01:54:43]   check LC_BioSense v1
-[01:54:46]   DONE LongevityCommon_root: accepted=True
+[01:54:46]   DONE LC_root: accepted=True
 [01:54:46]   review LC_EpigeneticDrift
 [01:54:48]   check LC_CDATA v1
 [01:54:57]   review LC_FCLC

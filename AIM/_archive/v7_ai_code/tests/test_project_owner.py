@@ -29,8 +29,8 @@ def test_list_projects_empty(projects_dir):
 
 def test_list_projects_returns_stem_names(projects_dir):
     write_yaml(projects_dir, "FCLC", "name: FCLC")
-    write_yaml(projects_dir, "MCOA", "name: MCOA")
-    assert po.list_projects() == ["FCLC", "MCOA"]
+    write_yaml(projects_dir, "MCAOA", "name: MCAOA")
+    assert po.list_projects() == ["FCLC", "MCAOA"]
 
 
 def test_load_missing_project_raises(projects_dir):

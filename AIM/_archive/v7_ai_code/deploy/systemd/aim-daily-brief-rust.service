@@ -1,14 +1,14 @@
 [Unit]
 Description=AIM daily project brief — pure-Rust path (no Python)
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/AUDIT_PROJECT_MANAGER_2026-05-06.md
+Documentation=file:///home/oem/Desktop/LC/AIM/AUDIT_PROJECT_MANAGER_2026-05-06.md
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
 EnvironmentFile=-%h/.aim_env
-WorkingDirectory=%h/Desktop/LongevityCommon/AIM
-ExecStart=%h/Desktop/LongevityCommon/AIM/rust-core/target/release/aim-daily-brief --telegram
+WorkingDirectory=%h/Desktop/LC/AIM
+ExecStart=%h/Desktop/LC/AIM/rust-core/target/release/aim-daily-brief --telegram
 StandardOutput=journal
 StandardError=journal
 

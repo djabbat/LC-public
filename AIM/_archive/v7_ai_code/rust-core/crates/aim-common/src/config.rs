@@ -77,7 +77,7 @@ impl AimConfig {
         v.push(PathBuf::from("../aim.toml"));
         v.push(PathBuf::from("../../aim.toml"));
         if let Ok(home) = std::env::var("HOME") {
-            v.push(PathBuf::from(format!("{home}/Desktop/LongevityCommon/AIM/aim.toml")));
+            v.push(PathBuf::from(format!("{home}/Desktop/LC/AIM/aim.toml")));
         }
         v
     }

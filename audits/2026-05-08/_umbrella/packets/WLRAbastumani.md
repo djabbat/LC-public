@@ -620,7 +620,7 @@ Guest portal in 6 UN languages + Georgian. Same T[lang][key] architecture.
 - [ ] KNOWLEDGE.md §6 содержит упрощённую таблицу тарифов, не совпадающую с §10 CONCEPT.md / PARAMETERS.md (6 программ). Привести к единому виду.
 - [ ] CONCEPT §11 дорожная карта (Фаза 1/2/3/4) не имеет календарных дат — добавить target-даты при активации инвестора.
 - [ ] UPGRADE.md (3 proposal, все [ ] proposed с 2026-03-29) — нужен peer-review proposals и approve/reject по правилу feedback_upgrade_peer_review_first.
-- [ ] MCOA-приложение (добавлено 2026-04-21 в CONCEPT.md) не упомянуто в README.md / MAP.md / KNOWLEDGE.md — синхронизировать.
+- [ ] MCAOA-приложение (добавлено 2026-04-21 в CONCEPT.md) не упомянуто в README.md / MAP.md / KNOWLEDGE.md — синхронизировать.
 - [x] Typo fix: Materials/аბასththumani → Materials/აბასთუმანი (MAP.md + CLAUDE.md исправлены 2026-04-21).
 
 **Core 10-file schema:** полный (CONCEPT, README, CLAUDE, TODO, PARAMETERS, MAP, MEMORY, LINKS, KNOWLEDGE, UPGRADE) — missing: none.

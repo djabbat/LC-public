@@ -1,6 +1,6 @@
 [Unit]
 Description=AIM self-dev eval harness (one-shot)
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/AIM_FS/SPEC.md
 After=network.target
 
 [Service]

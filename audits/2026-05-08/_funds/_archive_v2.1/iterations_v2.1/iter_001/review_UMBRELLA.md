@@ -33,15 +33,15 @@ EIC Pathfinder требует ≥1 EU-MS + ≥2 разных MS/AC — ноль 
 
 ## Top 5 text-level fixes (что можно исправить редактированием core docs)
 
-1. **`LongevityCommon/CONCEPT.md: §4`** — Удалить строку "WHO recognized aging as a disease". ICD-11 MG2A "ageing-associated decline in intrinsic capacity" — это не disease, а risk factor. Overclaim — убивает доверие. Заменить на: "WHO classifies age-related decline in intrinsic capacity (MG2A) as a health condition, but not aging as a disease; our framework treats aging as a syndrome of chronic processes."
+1. **`LC/CONCEPT.md: §4`** — Удалить строку "WHO recognized aging as a disease". ICD-11 MG2A "ageing-associated decline in intrinsic capacity" — это не disease, а risk factor. Overclaim — убивает доверие. Заменить на: "WHO classifies age-related decline in intrinsic capacity (MG2A) as a health condition, but not aging as a disease; our framework treats aging as a syndrome of chronic processes."
 
-2. **`LongevityCommon/CONCEPT.md: §3`** — Переместить CDATA и Ze из основного списка 5 компонентов в "supporting hypotheses" с явным указанием "not validated": статус inconclusive для CDATA, ansatz для Ze. Оставить только 3 pillar: MCOA (theoretical framework), BioSense (applied platform), FCLC (infrastructure).
+2. **`LC/CONCEPT.md: §3`** — Переместить CDATA и Ze из основного списка 5 компонентов в "supporting hypotheses" с явным указанием "not validated": статус inconclusive для CDATA, ansatz для Ze. Оставить только 3 pillar: MCAOA (theoretical framework), BioSense (applied platform), FCLC (infrastructure).
 
-3. **`LongevityCommon/THEORY.md: §4`** — Текущая таблица "Old vs New framing" не меняет факта, что эти утверждения — speculation. Убрать полностью. Вместо этого добавить: "All mathematical claims in this document are speculative (ansatz) until empirical validation on pre-registered cohort N≥2000. See `EVIDENCE.md` for status of each claim."
+3. **`LC/THEORY.md: §4`** — Текущая таблица "Old vs New framing" не меняет факта, что эти утверждения — speculation. Убрать полностью. Вместо этого добавить: "All mathematical claims in this document are speculative (ansatz) until empirical validation on pre-registered cohort N≥2000. See `EVIDENCE.md` for status of each claim."
 
-4. **`LongevityCommon/EVIDENCE.md: §4`** — Строка "`v* = 0.45631` empirical (BioSense)" помечена как "Pilot (All-of-Us N=500, 95% CI 0.443-0.459)" — это не подтверждение, а ещё один пост-хок. Поменять статус с "Confirmed" на "Exploratory (post-hoc, single dataset; replication on independent pre-registered cohort N≥500 required)".
+4. **`LC/EVIDENCE.md: §4`** — Строка "`v* = 0.45631` empirical (BioSense)" помечена как "Pilot (All-of-Us N=500, 95% CI 0.443-0.459)" — это не подтверждение, а ещё один пост-хок. Поменять статус с "Confirmed" на "Exploratory (post-hoc, single dataset; replication on independent pre-registered cohort N≥500 required)".
 
-5. **`LongevityCommon/OPEN_PROBLEMS.md: §2.3, §2.5, §3.1, §4.1`** — Каждый из этих пунктов должен быть переведён из "open" в "P0 blocker" с указанием конкретных сроков и ресурсов:
+5. **`LC/OPEN_PROBLEMS.md: §2.3, §2.5, §3.1, §4.1`** — Каждый из этих пунктов должен быть переведён из "open" в "P0 blocker" с указанием конкретных сроков и ресурсов:
    - §2.3 Реализация EEGLAB/EDF парсера — оценить стоимость (человеко-часы) и альтернативы (shell out to MNE).
    - §2.5 Port conflict — немедленно исправить в actual config; это не open, а баг.
    - §3.1 CI — добавить как обязательный пункт в roadmap: Q3 2026.

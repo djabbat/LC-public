@@ -122,7 +122,7 @@ defmodule AimWeb.PatientWorkspaceLive do
   defp aim_root,
     do:
       System.get_env("AIM_ROOT") ||
-        "/home/oem/Desktop/LongevityCommon/AIM"
+        "/home/oem/Desktop/LC/AIM"
 
   defp workspace_bin do
     [

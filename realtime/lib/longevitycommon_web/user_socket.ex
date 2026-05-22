@@ -1,13 +1,13 @@
-defmodule LongevityCommonRealtimeWeb.UserSocket do
+defmodule LCRealtimeWeb.UserSocket do
   use Phoenix.Socket
 
-  channel "feed:*",   LongevityCommonRealtimeWeb.FeedChannel
-  channel "ze_clock", LongevityCommonRealtimeWeb.ZeClockChannel
-  channel "study:*",  LongevityCommonRealtimeWeb.StudyChannel
+  channel "feed:*",   LCRealtimeWeb.FeedChannel
+  channel "ze_clock", LCRealtimeWeb.ZeClockChannel
+  channel "study:*",  LCRealtimeWeb.StudyChannel
 
   @impl true
   def connect(%{"token" => token}, socket, _connect_info) do
-    case LongevityCommonRealtime.Auth.verify_token(token) do
+    case LCRealtime.Auth.verify_token(token) do
       {:ok, user_id} ->
         {:ok, assign(socket, :user_id, user_id)}
       {:error, _} ->

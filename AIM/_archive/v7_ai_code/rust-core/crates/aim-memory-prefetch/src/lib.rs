@@ -386,8 +386,8 @@ mod tests {
 
     #[test]
     fn extract_entities_acronyms() {
-        let ents = extract_entities("MCOA and CDATA report", 5);
-        assert!(ents.iter().any(|e| e == "MCOA"));
+        let ents = extract_entities("MCAOA and CDATA report", 5);
+        assert!(ents.iter().any(|e| e == "MCAOA"));
         assert!(ents.iter().any(|e| e == "CDATA"));
     }
 

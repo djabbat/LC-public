@@ -1,6 +1,6 @@
 [Unit]
 Description=AIM_FS nightly export + git commit
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/AIM_FS/SPEC.md
 After=network.target
 
 [Service]

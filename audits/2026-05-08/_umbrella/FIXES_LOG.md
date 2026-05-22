@@ -11,20 +11,20 @@
 - **Не выполнено:** `git rm --cached` уже-закоммиченных бинарников. Потребует `git filter-repo` для очистки истории — destructive, требует явного user-OK.
 
 ### LC_MCOA: новый .gitignore создан
-- Закрывает ту же P0 #4 для MCOA (раньше .gitignore отсутствовал → любой бинарник коммитился)
+- Закрывает ту же P0 #4 для MCAOA (раньше .gitignore отсутствовал → любой бинарник коммитился)
 - Включает rust target/, _build/, .docx/.pdf/.pptx/.xlsx, OS файлы
 
 
-### Path inconsistency: `~/Desktop/AIM/llm.py` → `~/Desktop/LongevityCommon/AIM/llm.py`
+### Path inconsistency: `~/Desktop/AIM/llm.py` → `~/Desktop/LC/AIM/llm.py`
 Fixed in 6 files (CLAUDE.md / MAP.md / PARAMETERS.md / KNOWLEDGE.md / START.md):
 - `~/Desktop/Claude/protocols/START.md`
 - `~/Desktop/PhD/CLAUDE.md`
 - `~/Desktop/PhD/E0/MAP.md`
 - `~/Desktop/PhD/PARAMETERS.md`
 - `~/Desktop/PhD/E0/KNOWLEDGE.md`
-- `~/Desktop/LongevityCommon/Ze/CLAUDE.md`
+- `~/Desktop/LC/Ze/CLAUDE.md`
 
-AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а не в `~/Desktop/AIM/` — последняя директория не существует. Также основной проектный CLAUDE.md `/home/oem/CLAUDE.md` тоже содержит `~/Desktop/AIM/llm.py`, но он имитирует пользовательскую директиву и его обновление выходит за рамки одного auto-fix без спросить пользователя.
+AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/Desktop/AIM/` — последняя директория не существует. Также основной проектный CLAUDE.md `/home/oem/CLAUDE.md` тоже содержит `~/Desktop/AIM/llm.py`, но он имитирует пользовательскую директиву и его обновление выходит за рамки одного auto-fix без спросить пользователя.
 
 ---
 
@@ -35,7 +35,7 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 - Очистка истории — destructive (rewrites SHA, force-push нужен)
 - **Action:** user должен явно одобрить (`git filter-repo --invert-paths --path "Ze/Materials/*.docx"`)
 
-### 🟡 Shared types crate для LongevityCommon ансамбля
+### 🟡 Shared types crate для LC ансамбля
 - Audit P0 #6: `v*`, `α`, `β`, `τ` в PARAMETERS.md разных подпроектов не унифицированы
 - Решение: создать `rust-core/crates/lc-shared-types` (SI-units, parameter registry, JSON schema для PARAMETERS.md)
 - **Effort:** ~2-3 дня; стоит делать как отдельную задачу с ревью
@@ -51,12 +51,12 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 - **Effort:** ~half-day
 
 ### 🟡 /home/oem/CLAUDE.md — обновить путь llm.py
-- Файл содержит `Точка входа: ~/Desktop/AIM/llm.py` (стало `~/Desktop/LongevityCommon/AIM/llm.py`)
+- Файл содержит `Точка входа: ~/Desktop/AIM/llm.py` (стало `~/Desktop/LC/AIM/llm.py`)
 - Но файл — это директива пользователя; auto-fix не делаю без явного `/`-команды
 - **Action:** показать diff, дождаться согласия
 
 ### 🟡 Migration legacy → AIM_FS layout
-- Существующие `~/Desktop/LongevityCommon/AIM/USER/`, `Patients/`, `AI/` нужно мигрировать в `<aim_root>/users/<uuid>/{profile,projects,patients}`
+- Существующие `~/Desktop/LC/AIM/USER/`, `Patients/`, `AI/` нужно мигрировать в `<aim_root>/users/<uuid>/{profile,projects,patients}`
 - SPEC §10.3 описывает план (читать mtime → `created_at`, `source = "imported"`)
 - **Effort:** ~1 день; нужен migration script `aim-fs migrate <legacy_root>`
 
@@ -67,14 +67,14 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 
 ### ✅ AIM rust-core CI workflow создан
 - `.github/workflows/aim-rust-ci.yml` — fmt + clippy + test для aim-fs + smoke-test для CLI binary
-- Закрывает audit P0 #5 для AIM (umbrella-ci уже покрывает Ze/CDATA/MCOA/BioSense)
+- Закрывает audit P0 #5 для AIM (umbrella-ci уже покрывает Ze/CDATA/MCAOA/BioSense)
 
 ### ✅ lc-shared-types Rust crate
-- `~/Desktop/LongevityCommon/shared-types/` — единый источник Ze-констант + ParameterRegistry
+- `~/Desktop/LC/shared-types/` — единый источник Ze-констант + ParameterRegistry
 - 8/8 unit tests + 1 doc-test pass
 - `lc_shared_types::ze::V_STAR_ACTIVE_ARTICLE` (-0.08738) и `V_STAR_ACTIVE_PYTHON` (0.45631) с автоматической conversion + Sobol S1 + drift detection
 - Закрывает audit P0 #6 (cross-project parameter inconsistency) — каждое subprojects's PARAMETERS.md теперь может ссылаться на единый источник истины
-- **Next step:** добавить `lc-shared-types = { path = "../shared-types" }` в Cargo.toml-ы LC subprojects (CDATA/MCOA/server) и заменить hardcoded литералы
+- **Next step:** добавить `lc-shared-types = { path = "../shared-types" }` в Cargo.toml-ы LC subprojects (CDATA/MCAOA/server) и заменить hardcoded литералы
 
 ### ✅ aim-fs-migrate binary + Claude memory migration
 - `aim-fs-migrate --aim-root <path> --tenant-id <uuid> --claude-memory <dir> --legacy-aim <dir> [--dry-run]`
@@ -103,7 +103,7 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 ### ℹ BioSense README ↔ CONCEPT — drift не обнаружен
 - README говорит про χ_Ze, статус EEG validated, ссылается на root PARAMETERS.md
 - CONCEPT v3.0 говорит то же самое + расширенные детали
-- v* canonical convention (Article -0.08738 / Python 0.45631) единая в обоих файлах + в `~/Desktop/LongevityCommon/PARAMETERS.md §1`
+- v* canonical convention (Article -0.08738 / Python 0.45631) единая в обоих файлах + в `~/Desktop/LC/PARAMETERS.md §1`
 - Без правок
 
 
@@ -112,11 +112,11 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 ## Round 3 (2026-05-08, продолжение по «sdelat»)
 
 ### ✅ /home/oem/CLAUDE.md llm.py path исправлен
-- `~/Desktop/AIM/llm.py` → `~/Desktop/LongevityCommon/AIM/llm.py`
+- `~/Desktop/AIM/llm.py` → `~/Desktop/LC/AIM/llm.py`
 - Закрывает последний out-of-band reference на несуществующий путь
 
 ### ✅ lc-shared-types подключен к LC subprojects
-- `MCOA/Cargo.toml` — добавлено в `[workspace.dependencies]`
+- `MCAOA/Cargo.toml` — добавлено в `[workspace.dependencies]`
 - `server/Cargo.toml` — добавлено в `[dependencies]`
 - `CDATA/Cargo.toml` — создан `[workspace.dependencies]` с lc-shared-types
 - Smoke check: `cargo check` для server + CDATA — pass (warnings only)
@@ -132,7 +132,7 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
 - `--invert-paths --path-glob '*.docx' --path-glob '*.pdf'` применён к bare clone
 - Результат: 472 MB → 399 MB (15 % экономия)
 - 2 commit'а дропнуто (empty после фильтра)
-- Working tree `~/Desktop/LongevityCommon` **не тронут**, force-push **не выполнен**
+- Working tree `~/Desktop/LC` **не тронут**, force-push **не выполнен**
 - HOW_TO_APPLY.md лежит в `/tmp/lc_filter_repo_workspace/HOW_TO_APPLY.md`
 - **DECISION POINT для user:**
   - применить filter (force-push на `main`) — следовать инструкциям HOW_TO_APPLY.md
@@ -149,7 +149,7 @@ AIM на самом деле живёт в `~/Desktop/LongevityCommon/AIM/`, а 
   - `const V_STAR_ACTIVE_PY: f64 = 0.45631;` → `lc_shared_types::ze::V_STAR_ACTIVE_PYTHON`
   - `const V_STAR_ACTIVE_ARTICLE: f64 = -0.08738;` → `lc_shared_types::ze::V_STAR_ACTIVE_ARTICLE`
 - `cargo check` pass (single dead_code warning unrelated)
-- `BioSense/CLAUDE.md` — стало `~/Desktop/LongevityCommon/AIM/llm.py`
+- `BioSense/CLAUDE.md` — стало `~/Desktop/LC/AIM/llm.py`
 - Закрывает audit P0 #6 (cross-project parameter inconsistency) end-to-end
 
 ### ✅ AimMemory.FS.Port подключён к Phoenix supervisor
@@ -243,7 +243,7 @@ Smoke tests:
 - Поддерживает `--no-build`, `--uninstall`
 - Не запущен автоматически: install.sh требует sudo и модифицирует /usr/local/bin → ждёт user команды
 
-### ✅ MCOA / CDATA / server source — сканирование
+### ✅ MCAOA / CDATA / server source — сканирование
 - Подробный re-grep на `const|let|fn` в Rust-source: **в коде нет литералов** `0.45631` / `-0.08738`
 - Все matches в audit ранее были внутри LLM-prompt strings (server/src/services/ai_guide.rs, disclosures.rs) — НЕ заменяются (это документация для LLM)
 - Только BioSense/backend/src/main.rs имел true const declarations — заменены в Round 4
@@ -442,7 +442,7 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 ## Round 10 (2026-05-08, "vse" — commit + deploy + Phase B spec)
 
 ### ✅ Git commits — locally, NOT pushed
-- **LongevityCommon** monorepo: commit `bba5ed9` — "feat(AIM_FS): three-tier filesystem + onboarding + Phoenix integration"
+- **LC** monorepo: commit `bba5ed9` — "feat(AIM_FS): three-tier filesystem + onboarding + Phoenix integration"
   - 79 файлов changed (40+ новых, 31 modified, 2 deleted)
   - Полный список изменений в commit message
 - **~/Desktop/Claude** repo: commit `06dad8f` — "docs(session): record overnight AIM_FS work + fix llm.py path in START.md"
@@ -456,7 +456,7 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 ### 🟡 Local sudo install — blocked
 - `install.sh` требует sudo (для копирования в `/usr/local/bin` и `/opt/aim/templates`)
 - `sudo -n true` → "a password is required"
-- **Action для user:** `cd ~/Desktop/LongevityCommon/AIM/rust-core/crates/aim-fs/deploy && bash install.sh --no-build` (release уже собран)
+- **Action для user:** `cd ~/Desktop/LC/AIM/rust-core/crates/aim-fs/deploy && bash install.sh --no-build` (release уже собран)
 
 ### ✅ Server-side AIM_FS deployment
 - rsync `crates/aim-fs/`, `crates/aim-onboarding/`, `shared-types/` → server
@@ -502,7 +502,7 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 | Generalist tools | +4 AIM_FS bridges |
 | Templates onboarding | 3 (research_project, patient, self_dev_proposal) |
 | Tests pass | 53 unit + 2 doc |
-| Git commits | 2 (LongevityCommon + Claude); pushes — manual |
+| Git commits | 2 (LC + Claude); pushes — manual |
 | Server deployment | ✅ verified via ssh ping smoke |
 | sudo install | 🟡 blocked (waiting for user `bash install.sh`) |
 
@@ -783,7 +783,7 @@ Smoke tests:
 ### ✅ Round 11-14 committed (commit 3751f19)
 - 25 файлов, 79 added lines
 - Полный список: aim-fs-distribute, aim-fs-export, aim-fs-cli, aim-fs-http, /fs dashboard, profile, search, projects/:slug, patients, disputes, entity/:id, daily backup timer, property tests
-- На LongevityCommon main (не pushed)
+- На LC main (не pushed)
 
 ### ✅ Round 15 committed (commit 16d57ff)
 - 8 файлов, 493 added lines: replay/stats LiveViews + conflict auto-suggest + FTS5 OR
@@ -848,7 +848,7 @@ Smoke tests:
 | **REST endpoints** | 12 (документированы OpenAPI 3.0.3) |
 | **Phoenix LiveViews** | 11 |
 | **CI workflows** | 2 jobs added (cargo test + bench-style smoke) |
-| **Git history аудита** | LongevityCommon: 2 commits this overnight; aim_fs_export: 2 commits seeded |
+| **Git history аудита** | LC: 2 commits this overnight; aim_fs_export: 2 commits seeded |
 | **Tests** | 21 unit + 8 property + ... still all pass |
 
 
@@ -915,7 +915,7 @@ Smoke tests:
 | **Events log** | **744** events recorded |
 | **FTS5 index** | sync'd (372 in DB = 372 in fts) |
 | **Tests** | 21 unit + 8 property × 256 + 9 onboarding + 8 shared-types + 15 daily-brief + 5 phoenix smoke = 66+2 doc, all pass |
-| **Git commits this overnight** | **6** (LongevityCommon: bba5ed9, 3751f19, 16d57ff, e162c80, 4dba8f6 + Claude/SESSION_STATE: 06dad8f) |
+| **Git commits this overnight** | **6** (LC: bba5ed9, 3751f19, 16d57ff, e162c80, 4dba8f6 + Claude/SESSION_STATE: 06dad8f) |
 | **Markdown export** | 1090 files, 2 git commits in ~/aim_fs_export/.git |
 | **Roadmap docs** | SPEC v11, ONBOARDING, PHASE_B_ENCRYPTION, HUB_MODE, openapi.yaml, README |
 | **Audit findings closed** | All P0 items addressed (some prepared for user-OK like git filter-repo) |
@@ -931,7 +931,7 @@ L1 sharded · L2 graph · L3 versions · L4 FTS5 BM25 · L5 inbox · L6 cascade 
 ### ✅ Round 18 — stabilize (commit 4dba8f6 → pushed)
 - Approved 11 pending entities (8 lessons + 3 dogfood)
 - Rejected 5 dup-detection test entities  
-- Pushed 5 LongevityCommon commits + 1 Claude commit to origin
+- Pushed 5 LC commits + 1 Claude commit to origin
 - 0 pending, 0 disputes (clean state)
 
 ### ✅ Round 19 — Patient PII migration + Phase B.0.5 encryption (commit d44d358 → pushed)
@@ -991,7 +991,7 @@ L1 sharded · L2 graph · L3 versions · L4 FTS5 BM25 · L5 inbox · L6 cascade 
 | **Production entities** | **380** (+8 от patient migration) |
 | **Events log** | 760+ |
 | **Tests** | 21 unit (aim-fs) + 8 property × 256 + 6 unit (aim-fs-crypto) + 9 onboarding + 8 shared-types + 15 daily-brief + 5 phoenix smoke = **72 + 2 doc** |
-| **Git commits this overnight** | **9** (LongevityCommon: 7, Claude: 1, plus + 1 commit on push) |
+| **Git commits this overnight** | **9** (LC: 7, Claude: 1, plus + 1 commit on push) |
 | **Git pushed** | ✅ all 6 LC commits + Claude on origin |
 | **Roadmap docs** | SPEC v11, ONBOARDING, PHASE_B_ENCRYPTION, HUB_MODE, DOCTOR_INTEGRATION, openapi.yaml, README |
 

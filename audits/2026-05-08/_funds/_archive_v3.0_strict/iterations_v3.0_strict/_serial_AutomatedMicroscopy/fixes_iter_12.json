@@ -27,7 +27,7 @@
     "file": "/CONCEPT.md",
     "action": "replace_text",
     "find": "## Consortium / collaboration plan",
-    "replace": "## Consortium / collaboration plan\n\n| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Lead, funding, coordination | Confirmed |\n| University of Bristol | Biological validation, CDATA expertise | Confirmed |\n| Zeiss | Hardware support, microscope donation | In negotiation |\n| FLIR | Camera technical support | Confirmed |\n| ThorLabs | LED illuminator discount | Confirmed |\n| OpenTrons | Liquid handling automation (future) | In discussion |\n| TBD (additional partner) | AI/ML expertise | To be identified |\n| TBD (additional partner) | Data management | To be identified |"
+    "replace": "## Consortium / collaboration plan\n\n| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, funding, coordination | Confirmed |\n| University of Bristol | Biological validation, CDATA expertise | Confirmed |\n| Zeiss | Hardware support, microscope donation | In negotiation |\n| FLIR | Camera technical support | Confirmed |\n| ThorLabs | LED illuminator discount | Confirmed |\n| OpenTrons | Liquid handling automation (future) | In discussion |\n| TBD (additional partner) | AI/ML expertise | To be identified |\n| TBD (additional partner) | Data management | To be identified |"
   },
   {
     "file": "/CONCEPT.md",

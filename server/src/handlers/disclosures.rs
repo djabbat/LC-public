@@ -2,9 +2,9 @@
 ///
 /// Public, no-auth endpoint returning the full v5 (2026-04-28) change-set:
 /// what was retracted, what was added as honest-disclosure, what is
-/// hypothesis-stage, and where the upstream LongevityCommon CONCEPT lives.
+/// hypothesis-stage, and where the upstream LC CONCEPT lives.
 ///
-/// Mirrors umbrella `~/Desktop/LongevityCommon/CONCEPT.md` v5.6 §2 + STATE.md §5.
+/// Mirrors umbrella `~/Desktop/LC/CONCEPT.md` v5.6 §2 + STATE.md §5.
 /// Clients SHOULD surface the `summary` and `headline_blockers` fields prominently.
 use axum::Json;
 use serde::Serialize;
@@ -27,7 +27,7 @@ pub async fn get_v5_changes() -> Json<V5Disclosures> {
         longevitycommon_version: "v5.6",
         effective_date: "2026-04-28",
         status: "hypothesis-stage research framework; not a validated medical product",
-        summary: "LongevityCommon is a hypothesis-stage integrative ecosystem. \
+        summary: "LC is a hypothesis-stage integrative ecosystem. \
                   All χ_Ze values, AUC scores, and aging-activity estimates surfaced by this API \
                   are exploratory (hypothesis-generating), NOT confirmatory. Pre-registered tests \
                   of an earlier univariate χ_Ze formulation gave NULL results (deprecated/superseded). \
@@ -54,15 +54,15 @@ pub async fn get_v5_changes() -> Json<V5Disclosures> {
             "Ze Theory bridge to biological aging: POSTULATED, not derived; underlying Burgholzer/Pearson results apply to PHYSICAL clocks only",
             "Bridge to CDATA (5 free parameters on N=196): underpowered (39 obs/param < Harrell 10/param); moved to Supplementary",
             "FCLC v13.4 PASS milestone is semi-honest-only secure; NOT secure against active server collusion or malicious server; GDPR Article 9 blocker until FCLC v14 (planned Q1 2027)",
-            "MCOA submitted to Nature Aging (NATAGING-P13741) but NOT peer-reviewed at the time of this disclosure",
+            "MCAOA submitted to Nature Aging (NATAGING-P13741) but NOT peer-reviewed at the time of this disclosure",
         ],
         headline_blockers: vec![
             "Confirmatory validation: pending pre-registered N≥2000 cohort (UK Biobank wearable subset / All-of-Us / Aqtivirebuli pilot)",
             "EIC Pathfinder Challenges 2026: 0 signed EU LoIs as of 2026-04-21 (Geiger Ulm confirmed 2026-04-23 = 1; Janke Curie pending; Miguel Angel González Ballester UPF in active discussion)",
             "FCLC v14 malicious-secure migration: planned Q1 2027",
-            "Nature Aging review of MCOA: pending decision",
+            "Nature Aging review of MCAOA: pending decision",
         ],
-        authority: "LongevityCommon CONCEPT.md > <subproject>/CONCEPT.md > <subproject>/THEORY.md > simulator code",
-        upstream_concept_path: "~/Desktop/LongevityCommon/CONCEPT.md (umbrella v5.6, 2026-04-28)",
+        authority: "LC CONCEPT.md > <subproject>/CONCEPT.md > <subproject>/THEORY.md > simulator code",
+        upstream_concept_path: "~/Desktop/LC/CONCEPT.md (umbrella v5.6, 2026-04-28)",
     })
 }

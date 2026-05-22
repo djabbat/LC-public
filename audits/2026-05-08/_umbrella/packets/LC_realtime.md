@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_realtime
 
-Path: `/home/oem/Desktop/LongevityCommon/realtime`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/realtime`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-116K	/home/oem/Desktop/LongevityCommon/realtime
+116K	/home/oem/Desktop/LC/realtime
 ```
 **Extensions:** .ex=11, .exs=5, (noext)=1, .sh=1, .service=1
 ## Tree (depth=2, max 200 entries)
@@ -29,7 +29,7 @@ Path: `/home/oem/Desktop/LongevityCommon/realtime`  Date: 2026-05-08
 
 ### `mix.exs` (1081 chars)
 ```exs
-defmodule LongevityCommonRealtime.MixProject do
+defmodule LCRealtime.MixProject do
   use Mix.Project
 
   def project do
@@ -46,7 +46,7 @@ defmodule LongevityCommonRealtime.MixProject do
 
   def application do
     [
-      mod: {LongevityCommonRealtime.Application, []},
+      mod: {LCRealtime.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -101,27 +101,27 @@ CMD ["bin/longevitycommon_realtime", "start"]
 ```
 ### code `lib/longevitycommon_realtime/application.ex`
 ```
-defmodule LongevityCommonRealtime.Application do
+defmodule LCRealtime.Application do
   use Application
 
   @impl true
   def start(_type, _args) do
     children = [
-      LongevityCommonRealtime.Repo,
-      {Phoenix.PubSub, name: LongevityCommonRealtime.PubSub},
-      LongevityCommonRealtimeWeb.Endpoint,
+      LCRealtime.Repo,
+      {Phoenix.PubSub, name: LCRealtime.PubSub},
+      LCRealtimeWeb.Endpoint,
       # Phase 4.5 (2026-05-08): postgres LISTEN/NOTIFY bridge from
       # Rust social-server (writes pg_notify) → Phoenix Channel.
-      LongevityCommonRealtime.FeedNotifier,
+      LCRealtime.FeedNotifier,
     ]
 
-    opts = [strategy: :one_for_one, name: LongevityCommonRealtime.Supervisor]
+    opts = [strategy: :one_for_one, name: LCRealtime.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   @impl true
   def config_change(changed, _new, removed) do
-    LongevityCommonRealtimeWeb.Endpoint.config_change(changed, removed)
+    LCRealtimeWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
@@ -129,14 +129,14 @@ end
 ```
 ### code `lib/longevitycommon_web/router.ex`
 ```
-defmodule LongevityCommonRealtimeWeb.Router do
+defmodule LCRealtimeWeb.Router do
   use Phoenix.Router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", LongevityCommonRealtimeWeb do
+  scope "/", LCRealtimeWeb do
     pipe_through :api
     get "/health", HealthController, :index
   end
@@ -145,10 +145,10 @@ end
 ```
 ### code `lib/longevitycommon_web/endpoint.ex`
 ```
-defmodule LongevityCommonRealtimeWeb.Endpoint do
+defmodule LCRealtimeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :longevitycommon_realtime
 
-  socket "/socket", LongevityCommonRealtimeWeb.UserSocket,
+  socket "/socket", LCRealtimeWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -163,7 +163,7 @@ defmodule LongevityCommonRealtimeWeb.Endpoint do
 
   plug Plug.MethodOverride
   plug Plug.Head
-  plug LongevityCommonRealtimeWeb.Router
+  plug LCRealtimeWeb.Router
 end
 
 ```

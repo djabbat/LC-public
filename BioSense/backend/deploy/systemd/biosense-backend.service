@@ -1,7 +1,7 @@
 [Unit]
 Description=BioSense backend — χ_Ze biomarker computation (Rust, port 4502)
 Documentation=file:///home/jaba/web/longevitycommon/BioSense/CONCEPT.md
-Documentation=file:///home/oem/Desktop/LongevityCommon/docs/DEPLOY_CONVENTION.md
+Documentation=file:///home/oem/Desktop/LC/docs/DEPLOY_CONVENTION.md
 After=network-online.target
 Wants=network-online.target
 

@@ -16,7 +16,7 @@
 //!   ~/.claude/projects/-home-oem/memory/*.md
 //!   ~/Desktop/Claude/*.md      (excluding archive)
 //!   ~/Desktop/Claude/{protocols,workflows,writing,audits}/*.md
-//!   ~/Desktop/LongevityCommon/<sub>/{CLAUDE,MEMORY}.md
+//!   ~/Desktop/LC/<sub>/{CLAUDE,MEMORY}.md
 //!   /home/oem/CLAUDE.md
 //!
 //! Usage:
@@ -72,7 +72,7 @@ Optional:
 Default sources (each existing path used):
   ~/.claude/projects/-home-oem/memory/
   ~/Desktop/Claude/        (root + protocols/ workflows/ writing/ audits/)
-  ~/Desktop/LongevityCommon/<sub>/{CLAUDE,MEMORY}.md
+  ~/Desktop/LC/<sub>/{CLAUDE,MEMORY}.md
   /home/oem/CLAUDE.md
 ";
 
@@ -145,7 +145,7 @@ fn run() -> anyhow::Result<()> {
     }
 
     // Special: per-subproject CLAUDE.md / MEMORY.md.
-    let lc_root = home().map(|h| h.join("Desktop/LongevityCommon"));
+    let lc_root = home().map(|h| h.join("Desktop/LC"));
     if let Some(lc) = lc_root {
         if lc.is_dir() {
             println!("\n=== per-subproject CLAUDE/MEMORY ===");
@@ -554,7 +554,7 @@ fn classify_schema(
 
 const KNOWN_PROJECTS: &[(&str, &[&str])] = &[
     ("LC_CDATA", &["LC_CDATA", "CDATA", "centriolar damage"]),
-    ("LC_MCOA", &["LC_MCOA", "MCOA", "Multi-Counter Architecture"]),
+    ("LC_MCOA", &["LC_MCOA", "MCAOA", "Multi-Counter Architecture"]),
     ("LC_BioSense", &["LC_BioSense", "BioSense"]),
     ("LC_FCLC", &["LC_FCLC", "FCLC", "Federated Clinical Longevity"]),
     ("LC_Ze", &["LC_Ze ", "Ze Theory", "Ze theory", "v*_active"]),
@@ -567,7 +567,7 @@ const KNOWN_PROJECTS: &[(&str, &[&str])] = &[
     ("LC_Ontogenesis", &["LC_Ontogenesis", "Ontogenesis"]),
     ("LC_CytogeneticTree", &["LC_CytogeneticTree", "CytogeneticTree"]),
     ("LC_AutomatedMicroscopy", &["LC_AutomatedMicroscopy", "AutomatedMicroscopy"]),
-    ("LC_MCOA_Ze", &["MCOA + Ze"]),
+    ("LC_MCOA_Ze", &["MCAOA + Ze"]),
     ("PhD", &["PhD/", "PhD UNED", "PhD UJ", "PhD UNISA", "PhD OUC"]),
     ("Marketing_JabaEkimi", &["JabaEkimi", "DrJaba"]),
     ("Marketing_Books", &["Marketing/Books"]),

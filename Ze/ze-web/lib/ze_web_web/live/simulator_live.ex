@@ -172,7 +172,7 @@ defmodule ZeWebWeb.SimulatorLive do
         <p>
           <strong>For:</strong> theorists · physicists checking the CHSH/LGI/QFI derivation ·
           readers cross-validating the v* fixed point · ecosystem partners linking Ze to
-          <a href="https://mcoa.longevity.ge">MCOA</a> counters.
+          <a href="https://mcoa.longevity.ge">MCAOA</a> counters.
         </p>
       </div>
     </details>

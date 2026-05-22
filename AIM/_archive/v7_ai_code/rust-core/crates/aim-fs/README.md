@@ -3,7 +3,7 @@
 Rust crate + CLI Port + onboarding bridge for the AIM agent.
 
 Implements **AIM_FS Spec v11** (ACCEPT'ed via 11 cycles of DeepSeek
-peer-review — see `~/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md`).
+peer-review — see `~/Desktop/LC/AIM/docs/AIM_FS/SPEC.md`).
 
 ## Three tiers
 
@@ -105,7 +105,7 @@ $ printf '{"op":"ping"}\n' | aim-fs
 $ aim-fs-migrate --aim-root ~/.aim_fs \
  --tenant-id $(uuidgen) \
  --claude-memory ~/.claude/projects/<proj>/memory \
- --legacy-aim ~/Desktop/LongevityCommon/AIM
+ --legacy-aim ~/Desktop/LC/AIM
 ```
 
 ## Approval policy
@@ -184,7 +184,7 @@ Templates ship in `/opt/aim/templates`:
 | `patient.yaml` | patient folder + identity.toml + ANAMNESIS.md + consent.json + first visit |
 | `self_dev_proposal.yaml`| AIM self-dev proposal markdown + `proposal_v1` entity |
 
-See `~/Desktop/LongevityCommon/AIM/docs/AIM_FS/ONBOARDING.md` for the
+See `~/Desktop/LC/AIM/docs/AIM_FS/ONBOARDING.md` for the
 question/template contract.
 
 ## Why "better than Claude memory"

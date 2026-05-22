@@ -1,7 +1,7 @@
 [Unit]
 Description=AIM_FS daily backup (snapshot + tar + sha256)
 After=network.target
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/AIM_FS/SPEC.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/AIM_FS/SPEC.md
 
 [Service]
 Type=oneshot

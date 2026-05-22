@@ -126,7 +126,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Связь с auto-memory
 
 - `project_cdata_copi_candidates` — Impetus Phase A co-PI candidates
-- `feedback_mcoa_cdata_comparison` — MCOA vs CDATA (связь с PhD)
+- `feedback_mcoa_cdata_comparison` — MCAOA vs CDATA (связь с PhD)
 - `pubmed_authoritative` — 10 PMIDs authoritative
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
 
@@ -141,9 +141,9 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Связь с другими проектами
 
 - `PhD` — диссертация, не Experiment 0 scope
-- `LongevityCommon/CDATA` — theoretical basis
-- `LongevityCommon/AutomatedMicroscopy` — параллельный AI-microscopy проект
-- `LongevityCommon/MCOA` — meta-framework, Counter integration
+- `LC/CDATA` — theoretical basis
+- `LC/AutomatedMicroscopy` — параллельный AI-microscopy проект
+- `LC/MCAOA` — meta-framework, Counter integration
 - Impetus LOI / EIC Pathfinder — grants, не Experiment 0 scope
 
 ## Git / sync
@@ -343,9 +343,9 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Связь с экосистемой
 
 - **PhD** (`~/Desktop/PhD/`) — диссертация CDATA. Experiment 0 — не часть диссертации (dissertation = critical commentary по 10 PMID, не экспериментальная).
-- **LongevityCommon/CDATA** (`~/Desktop/LongevityCommon/CDATA/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
-- **LongevityCommon/AutomatedMicroscopy** — параллельный проект про AI-microscopy. Experiment 0 — конкретный commissioning этого направления.
-- **LongevityCommon/MCOA** — meta-framework. Experiment 0 — отладка агента для будущих MCOA-экспериментов.
+- **LC/CDATA** (`~/Desktop/LC/CDATA/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
+- **LC/AutomatedMicroscopy** — параллельный проект про AI-microscopy. Experiment 0 — конкретный commissioning этого направления.
+- **LC/MCAOA** — meta-framework. Experiment 0 — отладка агента для будущих MCAOA-экспериментов.
 
 ## Переход в Experiment A
 
@@ -418,9 +418,9 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 
 | Внешний ресурс | Связь |
 |---|---|
-| `~/Desktop/LongevityCommon/CDATA/` | Научная основа (CDATA theory) |
-| `~/Desktop/LongevityCommon/AutomatedMicroscopy/` | Параллельный project про AI microscopy |
-| `~/Desktop/LongevityCommon/MCOA/` | Meta-framework, Counter frameworks |
+| `~/Desktop/LC/CDATA/` | Научная основа (CDATA theory) |
+| `~/Desktop/LC/AutomatedMicroscopy/` | Параллельный project про AI microscopy |
+| `~/Desktop/LC/MCAOA/` | Meta-framework, Counter frameworks |
 | `~/Desktop/AIM/llm.py` | LLM router (DeepSeek primary) для Claude agent |
 | `~/.aim_env` | DEEPSEEK_API_KEY |
 | `~/Desktop/PhD/docs/` | Gitignored переписка, не для этого проекта |
@@ -428,7 +428,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Что НЕ в E0 (external dependencies)
 
 - **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CDATA/` (NOT here, отдельный grant submission)
-- **MCOA submission** → `~/Documents/Submissions/2026-04-25_NatureAging_MCOA/`
+- **MCAOA submission** → `~/Documents/Submissions/2026-04-25_NatureAging_MCOA/`
 - **PhD dissertation** → `~/Desktop/PhD/dissertation/`
 
 ## Git tracking
@@ -883,7 +883,7 @@ Source: `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`. Verificat
 ### Feedback (правила работы в проекте)
 
 - `feedback_bradford_hill_rule.md` — Bradford Hill criteria для causality claims
-- `feedback_mcoa_cdata_comparison.md` — MCOA vs CDATA comparison methodology
+- `feedback_mcoa_cdata_comparison.md` — MCAOA vs CDATA comparison methodology
 - `feedback_deepseek_primary.md` — DeepSeek как primary LLM
 - `feedback_verify_references.md` — правило проверки reference перед claim
 

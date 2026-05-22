@@ -111,7 +111,7 @@ fn resolve_relative(p: std::path::PathBuf) -> std::path::PathBuf {
     }
     let home = std::env::var("HOME").unwrap_or_default();
     std::path::PathBuf::from(home)
-        .join("Desktop/LongevityCommon/AIM")
+        .join("Desktop/LC/AIM")
         .join(&p)
 }
 

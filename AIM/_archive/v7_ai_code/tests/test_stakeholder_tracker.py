@@ -133,9 +133,9 @@ def test_silent_for_days(isolated_db):
 
 def test_by_project_filter(isolated_db):
     isolated_db.upsert("Alice", email="alice@example.com", project="FCLC")
-    isolated_db.upsert("Bob", email="bob@example.com", project="MCOA")
+    isolated_db.upsert("Bob", email="bob@example.com", project="MCAOA")
     fclc = [c.name for c in isolated_db.by_project("FCLC")]
-    mcoa = [c.name for c in isolated_db.by_project("MCOA")]
+    mcoa = [c.name for c in isolated_db.by_project("MCAOA")]
     assert fclc == ["Alice"]
     assert mcoa == ["Bob"]
 

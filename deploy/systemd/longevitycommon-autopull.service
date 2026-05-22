@@ -1,6 +1,6 @@
 [Unit]
-Description=LongevityCommon — git pull --ff-only on /home/jaba/web/longevitycommon and trigger restarts on new commits
-Documentation=file:///home/oem/Desktop/LongevityCommon/docs/DEPLOY_CONVENTION.md
+Description=LC — git pull --ff-only on /home/jaba/web/longevitycommon and trigger restarts on new commits
+Documentation=file:///home/oem/Desktop/LC/docs/DEPLOY_CONVENTION.md
 After=network-online.target
 
 [Service]

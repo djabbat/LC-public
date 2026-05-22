@@ -17,7 +17,7 @@
 | ✅ CytogeneticTree | 14 | 14 | 0 | 0 | 100% |
 | ✅ EpigeneticDrift | 24 | 24 | 0 | 0 | 100% |
 | ✅ HAP | 1 | 1 | 0 | 0 | 100% |
-| ✅ MCOA | 15 | 15 | 0 | 0 | 100% |
+| ✅ MCAOA | 15 | 15 | 0 | 0 | 100% |
 | ✅ MitoROS | 27 | 27 | 0 | 0 | 100% |
 | ✅ Proteostasis | 22 | 22 | 0 | 0 | 100% |
 | ✅ Telomere | 21 | 21 | 0 | 0 | 100% |
@@ -193,7 +193,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | DOI | [10.1016/j.cell.2014.03.003](https://doi.org/10.1016/j.cell.2014.03.003) | ✅ OK | Anderson 2014 Cell \| A Framework for Studying Emotions across Species | CONCEPT.md:381; PARAMETERS.md:77 | ☐ | ☐ |
 
-## MCOA  (15: ✅15  🚨0  ⚠️0)
+## MCAOA  (15: ✅15  🚨0  ⚠️0)
 
 | # | Тип | Идентификатор | Real? | Источник / Inf | Occurrences | Match? | Action |
 |---|---|---|---|---|---|---|---|

@@ -140,7 +140,7 @@ pub struct ZeVerifySymbol;
 fn ze_concept_paths() -> Vec<std::path::PathBuf> {
     let mut v: Vec<std::path::PathBuf> = Vec::new();
     let home = std::env::var("HOME").unwrap_or_else(|_| "/home/oem".into());
-    let base = format!("{home}/Desktop/LongevityCommon/Ze");
+    let base = format!("{home}/Desktop/LC/Ze");
     for p in &["CONCEPT.md", "KNOWLEDGE.md", "PARAMETERS.md", "MAP.md"] {
         v.push(format!("{base}/{p}").into());
     }

@@ -18,7 +18,7 @@
 //!     so migrations are idempotent and replayable.
 //!
 //! Usage:
-//!     aim-fs-migrate --aim-root ~/.aim_fs --tenant-id <uuid> --legacy-aim ~/Desktop/LongevityCommon/AIM
+//!     aim-fs-migrate --aim-root ~/.aim_fs --tenant-id <uuid> --legacy-aim ~/Desktop/LC/AIM
 //!
 //! Flags:
 //!     --dry-run         : print plan, don't touch DB.

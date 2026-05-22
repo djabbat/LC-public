@@ -543,7 +543,7 @@ html[data-theme="dark"] .btn-primary { background: #88a8ff !important; color: #0
 html[data-theme="dark"] .btn-outline { border-color: #88a8ff !important; color: #88a8ff !important; }
 html[data-theme="dark"] .person-initials[style*="background-image"] { color: transparent !important; }
 
-/* ── LongevityCommon eco-bar (unified header from homepage) ── */
+/* ── LC eco-bar (unified header from homepage) ── */
 :root {
   --c-text: #0f172a;
   --c-text-soft: #475569;

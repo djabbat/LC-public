@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 11:40
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LC/CDATA/experiments/MitoROS`
+- **Текущий score:** 36/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 12 баллов
+- **Cycle:** 7
+
+## In-progress concerns (cycle 7)
+
+1. [PARANOID] **Replace all placeholder PI information with real data** — Provide actual PI name, ORCID, verified h-index, real senior-author publications with valid PMIDs, and real previous grants. This is the single most critical fix.
+2. [PARANOID] **Remove all `[TODO]` and `TBD` markers** — Replace with concrete values or remove the claims entirely. Specifically: consortium partners (with LoI status), budget totals, timeline, pre-registration ID (use real OSF link or state "pre-registration pending").
+3. [PARANOID] **Add preliminary data or downgrade the proposal scope** — Either include actual pilot data (even N=5 per condition) or explicitly state that this is a theoretical framework proposal (not NIH R01). If preliminary data cannot be provided, the proposal should be reclassified as a theory dev
+4. [CYNIC] **Replace equipment purchases with core facility usage fees** — provide institutional rate sheets, justify why shared access is insufficient, or revise budget to per-sample costs for ddPCR and Seahorse.
+5. [CYNIC] **Specify all deliverables as concrete artifacts** — e.g., "ddPCR protocol v1.0 published on GitHub", "D₃ calculator web app", "OSF dataset with metadata schema", "pre-registration document v1.0".
+6. [CYNIC] **Add partnership validation and timeline realism** — list LoI status for each partner, include joint publications if any, and revise timeline to reflect hiring lag (3–6 months), ethics approval (2–4 months), and equipment lead time (8–12 weeks). ```

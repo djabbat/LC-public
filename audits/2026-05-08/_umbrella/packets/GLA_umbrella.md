@@ -192,7 +192,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 
 | Charter objective | Current manifestation (2026) |
 |---|---|
-| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CDATA, MCOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Aqtivirebuli/Korkoti. |
+| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CDATA, MCAOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Aqtivirebuli/Korkoti. |
 | **1.8.2** Engaging people in life-extension activities | Public outreach via longevity.ge; collaboration with sister NGO Sulkalmakhi for local workshops; open-access publishing. |
 | **1.8.3** Helping people with employment in line with their interests | Not yet operationalised as a standalone programme — to be developed in Pillar 2.4 (community & networking). |
 | **1.8.4** Searching and establishing contacts with other longevity organisations in Georgia and abroad | ILA node; co-PI links with Ulm, Curie, UPF, COSIC/KU Leuven, BioViva; EIC consortium building. |
@@ -226,7 +226,7 @@ All auxiliary economic activity (Art. 1.9) shall serve this mission; profit dist
 
 The theory-and-evidence portfolio is organised into **three pillars** so that every active subproject can be traced to a methodological role:
 
-- **TF — Theoretical Foundation.** Core hypotheses and conceptual frameworks. Lead artefact: **Centriolar Damage Theory (CDATA)** + its umbrella **MCOA** (Multi-Counter Architecture of Organismal Aging, submitted to eLife since 2026-04-30).
+- **TF — Theoretical Foundation.** Core hypotheses and conceptual frameworks. Lead artefact: **Centriolar Damage Theory (CDATA)** + its umbrella **MCAOA** (Multi-Counter Architecture of Organismal Aging, submitted to eLife since 2026-04-30).
 - **ISE — In-Silico Experimentation.** Computational simulation, modelling, and theoretical validation. Lead artefacts: **Ze Theory** (predictive coding model), **CDATA Rust simulator**, **Ontogenesis simulator**, **HAP** computational pipeline.
 - **IR — In-Real (empirical) Research.** Wet-lab and field-data validation. Lead artefacts: **BioSense** (federated clinical learning), **FCLC** (consortium proposal, server-resident), **Aqtivirebuli-Korkoti** (heritage-anchored nutrition, PNAS 2026 anchor).
 
@@ -309,7 +309,7 @@ Art. 1.9 permits auxiliary entrepreneurial activity provided:
 | 2027 | DOAJ submission (Annals) | Q1 2027 |
 | 2027 | Impetus grant submission (if eligible) | Deadlines as per Impetus |
 | 2027 | Employment-help programme launched (Art. 1.8.3 pilot) | Q3 2027 |
-| 2027 | Number of active research subprojects (CDATA, MCOA, FCLC, etc.) | ≥ 4 with public outputs |
+| 2027 | Number of active research subprojects (CDATA, MCAOA, FCLC, etc.) | ≥ 4 with public outputs |
 | 2028 | Horizon Europe proposal (Cluster 1) | Submitted (if call opens) |
 | 2028 | Annals IF tracking (first partial year) | Indexed in at least 1 major database |
 | 2029 | Board mid-term check | Compliance audit of governance |
@@ -385,7 +385,7 @@ Renames during setup phase (do NOT use historical variants):
 
 Molecular and cellular mechanisms of aging-related dysfunction, centriologenesis,
 centrosome biology, regenerative medicine, healthspan-extending therapies. Strong
-overlap with CDATA (Centriolar Damage And) theory umbrella + MCOA (Multi-Counter
+overlap with CDATA (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
 Architecture of Organismal Aging).
 
 ## Twin-journal split (canonical strategy 2026-04-26)
@@ -396,7 +396,7 @@ GLA hosts **two journals**, separated by selectivity vs inclusivity:
 |---|---|---|
 | Selectivity | high (DOAJ-bound, peer review-strict) | broader, inclusive |
 | Reject rate target | ≥40% | ≥10% |
-| Use case | flagship CDATA / MCOA papers | early-career, niche, conference |
+| Use case | flagship CDATA / MCAOA papers | early-career, niche, conference |
 
 **Don't trim Longevity Horizon to be like Annals** — they exist in tension on purpose.
 
@@ -506,7 +506,7 @@ Annals/
 - **Lead:** Jaba Tkemaladze
 - **Description:** Core theoretical framework for centriolar involvement in aging
 
-#### MCOA (Mitochondrial-Centriolar Organelle Axis)
+#### MCAOA (Mitochondrial-Centriolar Organelle Axis)
 - **Status:** UNDER REVIEW
 - **Submission:** eLife (2026-04-30)
 - **Lead:** Jaba Tkemaladze
@@ -736,7 +736,7 @@ Annals/
 - [ ] **3.1** Bring DOAJ application docs to Q1-2027-ready state (Annals of Rejuvenation Science — e-ISSN 3088-439X; editorial policies, peer review workflow, copyright license must be finalised)
 - [ ] **3.2** Confirm 5th Editorial Board member for Annals (4/5 confirmed; gap blocks first issue publication)
 - [ ] **3.3** Publish Annals first issue by Q4 2026 (Art. 1.8.1 — advancement of rejuvenation science; milestone for EIC credibility)
-- [ ] **3.4** Archive all research subproject charters (CDATA, MCOA, FCLC, BioSense, Ze, Aqtivirebuli) in GLA docs/ folder (current status: scattered across server; no central repository)
+- [ ] **3.4** Archive all research subproject charters (CDATA, MCAOA, FCLC, BioSense, Ze, Aqtivirebuli) in GLA docs/ folder (current status: scattered across server; no central repository)
 
 ## Priority 4 — Institutional Documentation & Transparency
 
@@ -770,7 +770,7 @@ Annals/
 | # | Task | Deadline | Owner | Status |
 |---|---|---|---|---|
 | 1.1 | **SRNSFG AR-2026 grant inquiry follow-up** — Confirm receipt of duplicate sent to rustaveli.org.ge on 2026-05-03. If no reply by 2026-05-07, call SRNSFG (contact from AR-2026 call docs). | 2026-05-07 | Chairman | IN PROGRESS |
-| 1.2 | **MCOA review tracking** — Check eLife submission portal (submitted 2026-04-30). Log any reviewer assignments or editorial decisions. | 2026-05-05 | Chairman | PENDING |
+| 1.2 | **MCAOA review tracking** — Check eLife submission portal (submitted 2026-04-30). Log any reviewer assignments or editorial decisions. | 2026-05-05 | Chairman | PENDING |
 | 1.3 | **Annals Editorial Board — confirm 5th member** — Contact candidate (list from ecosystem: Dr. Geiger, Ulm? or alternative). Send formal invitation letter with GLA letterhead. | 2026-05-09 | Chairman | PENDING |
 | 1.4 | **NAPR address correction — initial research** — Review B18008130 termination reason. Prepare draft application for address change (47 Javakhishvili St. as legal address). | 2026-05-09 | Chairman | PENDING |
 
@@ -794,7 +794,7 @@ Annals/
 | 3.1 | **EIC Pathfinder — draft proposal outline** — Create skeleton: objectives, methodology, consortium roles, budget (€4M ceiling, TRL3-4). Assign writing leads. | 2026-05-21 | Chairman | PENDING |
 | 3.2 | **Annals Editorial Board — 5th member confirmed** — If invitation accepted, add to editorial board list. If declined, contact backup candidate. | 2026-05-21 | Chairman | PENDING |
 | 3.3 | **NAPR address correction — file application** — Submit new data-change registration (B18008130 was terminated; new application needed). Use charter address (47 Javakhishvili). | 2026-05-21 | Chairman | PENDING |
-| 3.4 | **MCOA review — first check** — Re-check eLife portal. If no update, log as "under review, no news." | 2026-05-19 | Chairman | PENDING |
+| 3.4 | **MCAOA review — first check** — Re-check eLife portal. If no update, log as "under review, no news." | 2026-05-19 | Chairman | PENDING |
 
 ---
 
@@ -816,7 +816,7 @@ Annals/
 | 5.1 | **EIC Pathfinder — consortium gap analysis** — Identify missing expertise (e.g., regulatory, ethics, clinical trial design). Begin outreach to fill gaps. | 2026-06-04 | Chairman | PENDING |
 | 5.2 | **SRNSFG AR-2026 — decision tracking** — If grant inquiry positive, prepare full application. If negative, log reason and pivot to Impetus or other. | 2026-06-04 | Chairman | PENDING |
 | 5.3 | **Board meeting — Q2 2026 report (early)** — Prepare draft quarterly report for Board review. | 2026-06-06 | Chairman | PENDING |
-| 5.4 | **MCOA review — second check** — Re-check eLife portal. If reviewer comments received, begin response. | 2026-06-03 | Chairman | PENDING |
+| 5.4 | **MCAOA review — second check** — Re-check eLife portal. If reviewer comments received, begin response. | 2026-06-03 | Chairman | PENDING |
 
 ---
 
@@ -847,7 +847,7 @@ Annals/
 | # | Task | Deadline | Owner | Status |
 |---|---|---|---|---|
 | 8.1 | **EIC Pathfinder — proposal v2 (incorporate feedback)** — Revise based on co-PI comments. | 2026-06-25 | Chairman | PENDING |
-| 8.2 | **MCOA review — response preparation** — If reviewer comments received, draft response. If still under review, log. | 2026-06-24 | Chairman | PENDING |
+| 8.2 | **MCAOA review — response preparation** — If reviewer comments received, draft response. If still under review, log. | 2026-06-24 | Chairman | PENDING |
 | 8.3 | **Employment-help programme (Art. 1.8.3) — initial concept** — Draft concept note: mentorship for Georgian scientists in longevity. Target launch Q3 2027. | 2026-06-25 | Chairman | PENDING |
 | 8.4 | **Sister NGO Sulkalmakhi — MoU draft** — Prepare MoU defining boundary rules (Section 8 of CONCEPT). | 2026-06-27 | Chairman | PENDING |
 
@@ -871,7 +871,7 @@ Annals/
 | 10.1 | **EIC Pathfinder — proposal v3 (pre-submission polish)** — Final review by all co-PIs. Language check, formatting. | 2026-07-09 | Chairman | PENDING |
 | 10.2 | **NAPR address correction — confirm completion** — Verify NAPR record updated. If not, escalate. | 2026-07-09 | Chairman | PENDING |
 | 10.3 | **Board meeting — Q3 2026 report (early)** — Prepare draft quarterly report. | 2026-07-11 | Chairman | PENDING |
-| 10.4 | **MCOA review — third check** — Re-check eLife portal. If accepted, prepare press release. If rejected, plan resubmission. | 2026-07-08 | Chairman | PENDING |
+| 10.4 | **MCAOA review — third check** — Re-check eLife portal. If accepted, prepare press release. If rejected, plan resubmission. | 2026-07-08 | Chairman | PENDING |
 
 ---
 
@@ -1060,7 +1060,7 @@ Annals/
 | Framework | Status | Public output |
 |---|---|---|
 | Centriolar Damage Theory (CDATA) | Active — core theory | Papers in preparation |
-| MCOA (Mitochondrial-Centric Organismal Aging) | Submitted to eLife (2026-04-30) | Under review |
+| MCAOA (Mitochondrial-Centric Organismal Aging) | Submitted to eLife (2026-04-30) | Under review |
 | FCLC (Focal Centriolar Lesion Cascade) | Consortium proposal | Server-resident |
 | BioSense | Active | Internal |
 | Ze Theory | Active | Internal |
@@ -1084,7 +1084,7 @@ Annals/
 
 - **No charter restriction** on theoretical research.
 - **Animal/human subjects:** GLA does not currently conduct animal or human trials. If future research involves such, must obtain ethics approval from Georgian National Bioethics Committee.
-- **Data sharing:** MCOA submission to eLife requires data availability statement — ensure compliance.
+- **Data sharing:** MCAOA submission to eLife requires data availability statement — ensure compliance.
 
 ---
 
@@ -1120,7 +1120,7 @@ Annals/
 - **Organizational-development CONCEPT v2.0 issued** — Supersedes legacy CONCEPT.md. Includes governance roadmap, KPIs 2026–2031, risk register, 12-month operational plan, sister-NGO boundary rules. Source: `CONCEPT.md`.
 
 ### 2026-04-30
-- **MCOA submitted to eLife** — Manuscript under review since 2026-04-30. Source: ecosystem context.
+- **MCAOA submitted to eLife** — Manuscript under review since 2026-04-30. Source: ecosystem context.
 
 ### 2026-04-28
 - **17 outreach invitations sent** — To potential Editorial Board members, co-PIs, and collaborators for Annals of Rejuvenation Science and EIC Pathfinder consortium. Source: ecosystem context.

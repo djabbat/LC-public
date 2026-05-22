@@ -1,4 +1,4 @@
-# LongevityCommon · TODO
+# LC · TODO
 
 **Last updated:** 2026-04-28 (CONCEPT v5.6)
 
@@ -12,7 +12,7 @@
 - [x] EVIDENCE.md (verified PMID/DOI/arXiv only)
 - [x] OPEN_PROBLEMS.md (cross-cutting open issues)
 - [x] STATE.md, TODO.md (this), README.md
-- [ ] Pin `md5sum ~/Desktop/LongevityCommon.md` in CONCEPT.md §10 (after first commit)
+- [ ] Pin `md5sum ~/Desktop/LC.md` in CONCEPT.md §10 (after first commit)
 
 ---
 
@@ -21,7 +21,7 @@
 - [ ] Read `Ze/CONCEPT.md` — patch any "DERIVE" → "POSTULATE" if present
 - [ ] Read `BioSense/CONCEPT.md` — ensure "hypothesis-stage exploratory" prominent in §1; weights post-hoc disclosed
 - [ ] Read `FCLC/CONCEPT.md` — threat model uniformly "semi-honest server only; not active"
-- [ ] Read `MCOA/CONCEPT.md` — add M4 operational threshold (N≥2000, α=0.001, partial r²<0.05)
+- [ ] Read `MCAOA/CONCEPT.md` — add M4 operational threshold (N≥2000, α=0.001, partial r²<0.05)
 - [ ] Read `CDATA/CONCEPT.md` — status "inconclusive (Sobol p=0.12)" added
 - [ ] (none of these block runtime; documentation alignment only)
 

@@ -3,11 +3,11 @@
 ## P0 — Блокеры (fail без этого)
 
 ### 1. Удалить Python-стек из основного репозитория (кроме AIM)
-**Что:** Выделить все Python-пайплайны (BioSense EEG, Proteostasis calibrate, MCOA scripts, EpigeneticDrift) в отдельные микросервисы с HTTP API. Rust-код вызывает их только через REST. Сами Python-файлы удалить из корневого дерева.
+**Что:** Выделить все Python-пайплайны (BioSense EEG, Proteostasis calibrate, MCAOA scripts, EpigeneticDrift) в отдельные микросервисы с HTTP API. Rust-код вызывает их только через REST. Сами Python-файлы удалить из корневого дерева.
 **Файлы:**  
 - `BioSense/src/ze_alpha_peak.py`, `eeg_ze_processor.py`, `ze_batch_pipeline.py`, … (все 7) → перенести в `BioSense/eeg-service/main.py` + новый Dockerfile  
 - `Proteostasis/scripts/calibrate.py` → перенести в `Proteostasis/calibrate-service/`  
-- `MCOA/scripts/compare_mcoa_cdata.py` → в `MCOA/analysis-service/`  
+- `MCAOA/scripts/compare_mcoa_cdata.py` → в `MCAOA/analysis-service/`  
 - `EpigeneticDrift/scripts/calibrate.py` → в `EpigeneticDrift/calibrate-service/`  
 - `server/Cargo.toml` — удалить зависимость от Python subprocess (если есть)  
 - `server/src/handlers/biosense.rs` — заменить прямой вызов на HTTP-запрос к eeg-service  
@@ -27,7 +27,7 @@
 ### 3. Выполнить все disclosure-изменения после CONCEPT v5.6 (18 пунктов из STATE.md §5)
 **Что:** Реализовать каждый пункт из списка STATE.md §5.1–5.4 в коде социального слоя.
 **Файлы:**  
-- `server/src/handlers/biosense.rs` — добавить header `X-LongevityCommon-Status: hypothesis-stage-exploratory`  
+- `server/src/handlers/biosense.rs` — добавить header `X-LC-Status: hypothesis-stage-exploratory`  
 - `server/src/handlers/dashboard.rs` — заменить "biological age" → "exploratory aging activity index (research only)"  
 - `server/src/handlers/ze_guide.rs` — обновить system prompt (буквально из DESIGN.md §5.1)  
 - `server/src/migrations/003_health_factors.sql` — добавить комментарий "thresholds exploratory, see CONCEPT v5.6 §2"  
@@ -46,7 +46,7 @@
 - `Ze/CONCEPT.md` — заменить "derived" → "postulated ansatz" для `dτ/dt`  
 - `BioSense/CONCEPT.md` — добавить "hypothesis-stage", "post-hoc multimodal", убрать "validated"  
 - `FCLC/CONCEPT.md` — уточнить threat model "semi-honest only; not active server collusion"  
-- `MCOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
+- `MCAOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
 - `CDATA/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
 **Файлы:** Указанные 5 файлов.  
 **Трудоёмкость:** M (1 день на аудит + правки)  
@@ -82,7 +82,7 @@
 
 ### 1. Автоматизировать регенерацию core .md
 **Что:** Реализовать скрипт `scripts/regen_umbrella_core_from_article.sh`, который:  
-- вычисляет md5 от `~/Desktop/LongevityCommon.md`  
+- вычисляет md5 от `~/Desktop/LC.md`  
 - сравнивает с текущим md5 в `CONCEPT.md` (поле article_md5)  
 - при несовпадении архивирует старые core-файлы и перегенерирует новые из article  
 **Файлы:** `scripts/regen_umbrella_core_from_article.sh` (новый), `CONCEPT.md` (добавить/обновить поле `article_md5`).  
@@ -100,7 +100,7 @@
 **Риск:** Low (аккуратно проверить математику)
 
 ### 3. Добавить лицензии во все подпроекты
-**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
+**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
 **Файлы:** по одному LICENSE на каждый подпроект.  
 **Трудоёмкость:** S (15 мин)  
 **Риск:** Low
@@ -133,7 +133,7 @@
 **Риск:** Low (если данные нужны в репозитории)
 
 ### 3. CI-проверка синхронизации core-файлов
-**Что:** В GitHub action добавить шаг, который сравнивает md5 `~/Desktop/LongevityCommon.md` (или его копию в репо) с полем `article_md5` в `CONCEPT.md`. При несовпадении — warning.  
+**Что:** В GitHub action добавить шаг, который сравнивает md5 `~/Desktop/LC.md` (или его копию в репо) с полем `article_md5` в `CONCEPT.md`. При несовпадении — warning.  
 **Файлы:** `.github/workflows/ci.yml` (добавить шаг).  
 **Трудоёмкость:** S (1 час)
 

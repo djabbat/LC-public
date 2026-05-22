@@ -484,7 +484,7 @@ MINOR_REVISION
 | Core‑files vs code alignment | 1 | Нет кода — не с чем сверять. |
 | Stack‑rule compliance (Rust+Phoenix only) | 1 | Стек заявлен как Arduino, Python (pymmcore-plus), Claude Code. Ни Rust, ни Phoenix не упоминаются. Правило нарушено полностью. |
 | Modernity of stack | 2 | Использование LLM для управления оборудованием — современно, но Hardware‑компоненты (Arduino, NEMA‑17) — уровень 2010‑х. |
-| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCOA декларирована, но не спроектирована. |
+| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCAOA декларирована, но не спроектирована. |
 
 ---
 
@@ -848,7 +848,7 @@ MAJOR_REVISION
    * **Последствие**: невозможность развернуть единое приложение; путаница в том, какой сервер является целевым. Требуется **объединение** в один backend-сервис с использованием `mcoa_core` как библиотеки и выносом работы с БД в отдельный слой.
 
 2. **Противоречие между документацией и кодом**  
-   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
+   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCAOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
    * `DESIGN.md` описывает crates `mcoa_interfaces` и `mcoa_tools`, которых нет в `crates/` ни в `Cargo.toml`.  
    * **Последствие**: LLM-агенты, руководствующиеся CLAUDE.md, будут генерировать некорректные решения. Документация не синхрон
 

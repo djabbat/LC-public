@@ -20,8 +20,8 @@ import os, sys, json, time, traceback
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Подключаем llm.py из ~/Desktop/LongevityCommon/AIM
-ROOT_AIM = Path.home() / "Desktop" / "LongevityCommon" / "AIM"
+# Подключаем llm.py из ~/Desktop/LC/AIM
+ROOT_AIM = Path.home() / "Desktop" / "LC" / "AIM"
 sys.path.insert(0, str(ROOT_AIM))
 os.chdir(ROOT_AIM)  # llm.py делает relative imports из agents/
 

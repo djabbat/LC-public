@@ -250,7 +250,7 @@ def _ze_verify_output(output: str) -> _VerifyReport:
         return _VerifyReport(total=0, ok=0, bad=[])
 
     aim_root = Path(__file__).resolve().parent.parent  # …/AIM
-    bases = [aim_root, aim_root.parent]  # AIM/ and LongevityCommon/
+    bases = [aim_root, aim_root.parent]  # AIM/ and LC/
 
     bad: list[str] = []
     ok = 0

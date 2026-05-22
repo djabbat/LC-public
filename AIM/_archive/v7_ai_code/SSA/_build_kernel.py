@@ -26,7 +26,7 @@ import os, sys, time, traceback
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-ROOT_AIM = Path.home() / "Desktop" / "LongevityCommon" / "AIM"
+ROOT_AIM = Path.home() / "Desktop" / "LC" / "AIM"
 sys.path.insert(0, str(ROOT_AIM))
 os.chdir(ROOT_AIM)
 from llm import ask_deep  # noqa: E402

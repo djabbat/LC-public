@@ -34,7 +34,7 @@
    Есть отдельный раздел в CONCEPT.md (8 пунктов) и в EVIDENCE.md. Выполнено.
 
 6. **✓ Consortium / collaboration plan**  
-   Таблица партнёров с ролями и статусами (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Status частично "placeholder" или "TBD", но это допустимо на этой стадии.
+   Таблица партнёров с ролями и статусами (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons). Status частично "placeholder" или "TBD", но это допустимо на этой стадии.
 
 7. **✓ Reference reality + match**  
    Все DOI/PMID проверены: реальны и соответствуют тексту. Ни одной фальшивой ссылки. Счёт RefIntegrity 5.

@@ -5,7 +5,7 @@
 **Метод:**
 1. Inventory: 49 проектов (38 локальных + 11 на сервере)
 2. Per-project audit packet: размер, дерево (depth=2), детект стека, дамп core-файлов (CONCEPT/THEORY/CLAUDE/README/MAP/PARAMETERS/UPGRADE/STATE/TODO + Cargo.toml/mix.exs/package.json), entry-point код, гистограмма кода по расширениям
-3. Peer review через **DeepSeek-reasoner** (~/Desktop/LongevityCommon/AIM/llm.py не использовался напрямую — сделан минимальный клиент `ds_review.py` для надёжности; ключ читается из `~/.aim_env`)
+3. Peer review через **DeepSeek-reasoner** (~/Desktop/LC/AIM/llm.py не использовался напрямую — сделан минимальный клиент `ds_review.py` для надёжности; ключ читается из `~/.aim_env`)
 4. Improvement plan через DeepSeek-reasoner с инструкцией про P0/P1/P2 + правило Rust+Phoenix
 5. Check цикл: peer review проверяет план → если NEEDS_REVISION, план переписывается с учётом REMAINING_GAPS → повтор до ACCEPT (max 3 раунда)
 6. Cross-project synthesis: одно крупное ревью по всему bundle отзывов → системные паттерны
@@ -25,7 +25,7 @@
 3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
-6. **Несогласованность параметров между подпроектами LongevityCommon** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
+6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
 7. **Документация-без-кода как доминирующий паттерн** — усилия уходят в CONCEPT/THEORY/KNOWLEDGE, но MVP не доводится до запуска.
 8. **Нарушение правила "no Docker"** — Dockerfile найден в LC_AIM, что противоречит `feedback_no_docker`.
 9. **Server-side legacy** — drjaba/longevity/books на чистом PHP, что противоречит правилу стека (исключение для legacy не задокументировано).
@@ -45,7 +45,7 @@
 | 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
-| 9 | `LongevityCommon_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
+| 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
 | 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
@@ -215,7 +215,7 @@
 3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
-6. **Несогласованность параметров между подпроектами LongevityCommon** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
+6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
 7. **Документация-без-кода как доминирующий паттерн** — усилия уходят в CONCEPT/THEORY/KNOWLEDGE, но MVP не доводится до запуска.
 8. **Нарушение правила "no Docker"** — Dockerfile найден в LC_AIM, что противоречит `feedback_no_docker`.
 9. **Server-side legacy** — drjaba/longevity/books на чистом PHP, что противоречит правилу стека (исключение для legacy не задокументировано).
@@ -235,7 +235,7 @@
 | 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
-| 9 | `LongevityCommon_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
+| 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
 | 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
@@ -405,7 +405,7 @@
 3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
-6. **Несогласованность параметров между подпроектами LongevityCommon** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
+6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
 7. **Документация-без-кода как доминирующий паттерн** — усилия уходят в CONCEPT/THEORY/KNOWLEDGE, но MVP не доводится до запуска.
 8. **Нарушение правила "no Docker"** — Dockerfile найден в LC_AIM, что противоречит `feedback_no_docker`.
 9. **Server-side legacy** — drjaba/longevity/books на чистом PHP, что противоречит правилу стека (исключение для legacy не задокументировано).
@@ -425,7 +425,7 @@
 | 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
-| 9 | `LongevityCommon_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
+| 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
 | 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
@@ -2223,7 +2223,7 @@ ACCEPT
 | Core‑files vs code alignment | 1 | Нет кода — не с чем сверять. |
 | Stack‑rule compliance (Rust+Phoenix only) | 1 | Стек заявлен как Arduino, Python (pymmcore-plus), Claude Code. Ни Rust, ни Phoenix не упоминаются. Правило нарушено полностью. |
 | Modernity of stack | 2 | Использование LLM для управления оборудованием — современно, но Hardware‑компоненты (Arduino, NEMA‑17) — уровень 2010‑х. |
-| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCOA декларирована, но не спроектирована. |
+| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCAOA декларирована, но не спроектирована. |
 
 ---
 
@@ -2281,7 +2281,7 @@ ACCEPT
 - **Честная оценка рисков**  
   `EVIDENCE.md` включает раздел «Cautionary evidence» с перечислением ограничений DIY‑степперов, фотобличинга и AI‑галлюцинаций. Это повышает доверие.  
 - **Продуманная экосистемная интеграция**  
-  Указаны интерфейсы с CDATA, FCLC, MCOA — хотя пока только декларативно, это хороший задел.
+  Указаны интерфейсы с CDATA, FCLC, MCAOA — хотя пока только декларативно, это хороший задел.
 
 ---
 
@@ -2305,7 +2305,7 @@ ACCEPT
 | **P0.1** | Создать **Rust-демон управления микроскопом** (serial-интерфейс к Arduino, захват камеры FLIR через Spinnaker Rust bindings или Micro-Manager HTTP API, команды через Phoenix PubSub). Заменить архитектуру «Arduino + Python + Claude Code» на Rust+Phoenix. | `src/main.rs`, `src/arduino.rs`, `src/camera.rs`, `src/pubsub.rs`, `Cargo.toml`, `config/` | L (~2–3 нед.) | Высокий (отсутствие готовых Rust-драйверов для FLIR; альтернатива — Micro-Manager с Python через FFI, что нарушает правило стека) |
 | **P0.2** | Заполнить **стабы** `AGENTS.md`, `DESIGN.md`, `OPEN_PROBLEMS.md`, `PARAMETERS.md` реальным содержимым — убрать «будет регенерировано DeepSeek». | `AGENTS.md`, `DESIGN.md`, `OPEN_PROBLEMS.md`, `PARAMETERS.md` | S (~2 ч.) | Низкий |
 | **P0.3** | Устранить **cross-file противоречие**: `CLAUDE.md` называет `AGENTS.md` авторитетным, но он пуст. Либо наполнить `AGENTS.md`, либо изменить `CLAUDE.md`. | `CLAUDE.md`, `AGENTS.md` | S (~1 ч.) | Низкий |
-| **P0.4** | Заменить **абсолютные пути `~/Desktop/...`** на относительные/переменные `$HOME/LongevityCommon` во всех .md-файлах. | `CLAUDE.md`, `README.md`, `CONCEPT.md`, `EVIDENCE.md`, `THEORY.md` | S (~1 ч.) | Низкий |
+| **P0.4** | Заменить **абсолютные пути `~/Desktop/...`** на относительные/переменные `$HOME/LC` во всех .md-файлах. | `CLAUDE.md`, `README.md`, `CONCEPT.md`, `EVIDENCE.md`, `THEORY.md` | S (~1 ч.) | Низкий |
 
 ### P1 — Важно
 
@@ -2758,7 +2758,7 @@ ACCEPT
 ## STRENGTHES
 
 - **Глубокая концептуальная проработка.**  
-  Научная мотивация, гипотезы, связь с CDATA/MCOA, фазирование эксперимента – всё изложено ясно, с верифицированными PMID.
+  Научная мотивация, гипотезы, связь с CDATA/MCAOA, фазирование эксперимента – всё изложено ясно, с верифицированными PMID.
 - **Модульная структура.**  
   12 субпроектов с единой организацией позволяют легко масштабировать и заменять компоненты.
 - **Согласованность документации.**  
@@ -3573,7 +3573,7 @@ ACCEPT
    * **Последствие**: невозможность развернуть единое приложение; путаница в том, какой сервер является целевым. Требуется **объединение** в один backend-сервис с использованием `mcoa_core` как библиотеки и выносом работы с БД в отдельный слой.
 
 2. **Противоречие между документацией и кодом**  
-   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
+   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCAOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
    * `DESIGN.md` описывает crates `mcoa_interfaces` и `mcoa_tools`, которых нет в `crates/` ни в `Cargo.toml`.  
    * **Последствие**: LLM-агенты, руководствующиеся CLAUDE.md, будут генерировать некорректные решения. Документация не синхронизирована с кодом.
 
@@ -3764,7 +3764,7 @@ None
    `CONCEPT.md` утверждает, что все PMID верифицированы, но в коде нет автоматической проверки — только ручное утверждение. Для научного проекта требуется скрипт или CI-шаг.  
    *Путь: CONCEPT.md (PMID verification status)*
 
-4. **Ошибка в `CLAUDE.md`**: «Couplings (Γ matrix) к Counter #2 (Centriolar/Telomere*)» — номер 2 занят одновременно Centriolar и Telomere, что противоречит MCOA.  
+4. **Ошибка в `CLAUDE.md`**: «Couplings (Γ matrix) к Counter #2 (Centriolar/Telomere*)» — номер 2 занят одновременно Centriolar и Telomere, что противоречит MCAOA.  
    *Путь: CLAUDE.md*
 
 5. **Backend использует `sqlx::migrate!()` макрос, но миграции не показаны**  
@@ -4256,7 +4256,7 @@ ACCEPT
 
 14. **Добавить скрипт/CI-шаг проверки CORRECTIONS**  
     Написать простой Python/Rust скрипт, который проверяет:  
-    - Все `.md` не содержат упоминаний `Health Score`, `χ_Ze`, `MCOA Test 2` (по AGENTS.md).  
+    - Все `.md` не содержат упоминаний `Health Score`, `χ_Ze`, `MCAOA Test 2` (по AGENTS.md).  
     - В коде `gamma` по умолчанию равен 0.0.  
     **Файлы:** `scripts/check_corrections.py`, `.github/workflows/ci.yml` (добавить шаг).  
     **Трудоёмкость:** S (2–3 часа).
@@ -4343,7 +4343,7 @@ ACCEPT
    `frontend/mix.exs` не содержит HTTP-клиента (кроме `req` как зависимости, но он не используется в показанном коде). Маршруты `DetailLive` предполагают LiveView, но данные, вероятно, должны приходить из backend. Связь отсутствует.
 
 6. **Конфликт нумерации Counter #2 с CDATA не разрешён**  
-   Упоминается в `CLAUDE.md` как P0 finding. Это блокирует интеграцию в MCOA.
+   Упоминается в `CLAUDE.md` как P0 finding. Это блокирует интеграцию в MCAOA.
 
 ---
 
@@ -4386,7 +4386,7 @@ ACCEPT
    Нет тестов, нет линтеров, нет проверки согласованности параметров. Это позволяет ошибкам оставаться незамеченными.
 
 4. **Недостаток системного проектирования**  
-   Архитектура была спущена сверху (MCOA), но детали реализации (как связать crate, backend, frontend) не проработаны. Зависимости между модулями не специфицированы.
+   Архитектура была спущена сверху (MCAOA), но детали реализации (как связать crate, backend, frontend) не проработаны. Зависимости между модулями не специфицированы.
 
 ---
 
@@ -4444,7 +4444,7 @@ ACCEPT
 
 **P0.6 – Разрешить конфликт нумерации Counter #2 с CDATA**  
 Трудоёмкость: **S**  
-Риск: Блокирует интеграцию в MCOA.  
+Риск: Блокирует интеграцию в MCAOA.  
 - Согласовать с user/командой: либо переименовать Telomere в `#2a` или другой номер, либо изменить CDATA.  
 - Обновить `CLAUDE.md` и `CONCEPT.md` после решения.  
 Затронутые файлы: `CLAUDE.md`, `CONCEPT.md`, `backend/src/routes.rs` (список counters).
@@ -4517,7 +4517,7 @@ ACCEPT
 
 ## NOTES
 - План содержит чёткие приоритеты (P0–P2) с оценкой трудоёмкости и риска, что упрощает реализацию.
-- Рекомендуется начать с P0.6 (разрешение конфликта нумерации) как внешнего блокера для интеграции в MCOA.
+- Рекомендуется начать с P0.6 (разрешение конфликта нумерации) как внешнего блокера для интеграции в MCAOA.
 - После выполнения всех P0 проект сможет перейти к P1 и P2, которые повысят качество кода и поддержку.
 
 
@@ -4563,7 +4563,7 @@ ACCEPT
 
 ## MINOR ISSUES
 
-1. **Параметры v* не согласованы** – В `PARAMETERS.md` указано `v*_active ≈ 0.456`, в `CONCEPT.md` `v*_active ≈ 0.456` (Python форма), а root `PARAMETERS.md` (LongevityCommon) использует Article form `v*_active = −0.08738`. Конверсия не верифицирована.  
+1. **Параметры v* не согласованы** – В `PARAMETERS.md` указано `v*_active ≈ 0.456`, в `CONCEPT.md` `v*_active ≈ 0.456` (Python форма), а root `PARAMETERS.md` (LC) использует Article form `v*_active = −0.08738`. Конверсия не верифицирована.  
    _Файлы: `PARAMETERS.md:33`, `Poincare/PARAMETERS.md:23`_
 
 2. **TODO.md перегружен (15.9K символов)** – Содержит не только дорожную карту, но и wishlist по финансам, криптографии, геномике, телекоммуникациям – не имеет отношения к текущему проекту.  
@@ -4901,11 +4901,11 @@ ACCEPT
    *Impact*: весь проект необходимо переписать или предоставить Rust-модуль, взаимодействующий с Phoenix через каналы.
 
 2. **CORS `origin: "*"` в production**  
-   `LongevityCommonRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
+   `LCRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
    *Impact*: уязвимость для CSRF‑ и data‑exfiltration‑атак; недопустимо для продакшена.
 
 3. **Отсутствие реализации ключевого компонента `FeedNotifier`**  
-   В `application.ex` добавлен `LongevityCommonRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
+   В `application.ex` добавлен `LCRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
    *Impact*: невозможно оценить корректность обмена сообщениями через pg_notify, надёжность подписки, обработку переподключения.
 
 4. **Нет конфигурации окружения (`runtime.exs`)**  
@@ -4969,7 +4969,7 @@ ACCEPT
 **Effort:** S | **Risk:** Medium — misconfiguration can block legitimate clients.
 
 ### 3. Implement FeedNotifier with proper pg_notify handling
-**Action:** Write `LongevityCommonRealtime.FeedNotifier` (GenServer) that subscribes to the `social_feeds` channel via Postgrex `pg_notify`, handles disconnects with exponential backoff, and broadcasts events via `Phoenix.PubSub`. Add to supervision tree.  
+**Action:** Write `LCRealtime.FeedNotifier` (GenServer) that subscribes to the `social_feeds` channel via Postgrex `pg_notify`, handles disconnects with exponential backoff, and broadcasts events via `Phoenix.PubSub`. Add to supervision tree.  
 **Files:** `lib/longevitycommon_realtime/feed_notifier.ex`, `lib/longevitycommon_realtime/application.ex`  
 **Effort:** M | **Risk:** High — without this, real-time feed delivery is broken.
 
@@ -5001,7 +5001,7 @@ ACCEPT
 **Effort:** M | **Risk:** Medium — missing tests allow regressions.
 
 ### 9. Implement UserSocket and channel routes
-**Action:** Write `LongevityCommonRealtimeWeb.UserSocket` with `connect/2` (JWT verification) and `id/1`. Define channel topics (e.g. `feed:*`). Add socket mount in `endpoint.ex` (already exists if file present, otherwise ensure).  
+**Action:** Write `LCRealtimeWeb.UserSocket` with `connect/2` (JWT verification) and `id/1`. Define channel topics (e.g. `feed:*`). Add socket mount in `endpoint.ex` (already exists if file present, otherwise ensure).  
 **Files:** `lib/longevitycommon_web/user_socket.ex`, `lib/longevitycommon_web/router.ex` (add `channel` routes)  
 **Effort:** M | **Risk:** Medium — without socket, client cannot receive real-time updates.
 
@@ -5323,7 +5323,7 @@ ACCEPT
 
 ---
 
-## LongevityCommon_root
+## LC_root
 
 ### Peer review (v1)
 
@@ -5396,7 +5396,7 @@ ACCEPT
 ## STRENGTHS
 
 - **Научная глубина.**  
-  MCOA, Ze Theory, BioSense χ_Ze — формальные математические конструкции с фальсифицируемыми гипотезами. Это выделяет проект как серьёзную научную платформу, а не очередной коммерческий wellness-инструмент.
+  MCAOA, Ze Theory, BioSense χ_Ze — формальные математические конструкции с фальсифицируемыми гипотезами. Это выделяет проект как серьёзную научную платформу, а не очередной коммерческий wellness-инструмент.
 
 - **Использование современного стека.**  
   Rust (Axum, sqlx, workspaces) и Elixir/Phoenix LiveView — сильный выбор для серверной нагрузки и реального времени. Наличие Rust-крейтов для kernel Asimov, PAM-13, disagreement показывает ориентацию на производительность.
@@ -5428,9 +5428,9 @@ ACCEPT
   При 476 .rs файлах общее количество unit-тестов невелико (в среднем 10-20 на крейт). Интеграционные тесты отсутствуют. Тесты не запускаются как часть сборки (в Cargo.toml не указан `[profile.test]` coverage).
 
 
-### Improvement plan (LongevityCommon_root.plan.v1.md)
+### Improvement plan (LC_root.plan.v1.md)
 
-# План улучшений для LongevityCommon
+# План улучшений для LC
 
 ## P0 — Блокеры
 
@@ -5624,8 +5624,8 @@ ACCEPT
 
 ### P2.2: Улучшить комментарии в Rust коде
 
-**Действие:** Добавить doc-comments к основным публичным функциям, особенно в `cell_dt_cli`, `MCOA`  
-**Файлы:** `CDATA/crates/cell_dt_cli/src/main.rs`, `MCOA/crates/mcoa_core/src/lib.rs`
+**Действие:** Добавить doc-comments к основным публичным функциям, особенно в `cell_dt_cli`, `MCAOA`  
+**Файлы:** `CDATA/crates/cell_dt_cli/src/main.rs`, `MCAOA/crates/mcoa_core/src/lib.rs`
 
 ### P2.3: Использовать clap derive для всех CLI бинарей
 
@@ -5640,10 +5640,10 @@ ACCEPT
 ### P2.5: Устранить дублирование описаний между umbrella CONCEPT.md и subproject CONCEPT.md
 
 **Действие:** В subproject CONCEPT.md заменить секции, повторяющие umbrella, на ссылки вида `см. umbrella CONCEPT.md §3`  
-**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CDATA/CONCEPT.md`, `MCOA/CONCEPT.md`
+**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CDATA/CONCEPT.md`, `MCAOA/CONCEPT.md`
 
 
-### Final check (LongevityCommon_root.check.v1.md) — accepted=True
+### Final check (LC_root.check.v1.md) — accepted=True
 
 ## VERDICT
 ACCEPT
@@ -5872,7 +5872,7 @@ MINOR_REVISION
 ## MINOR ISSUES
 1. Отсутствует описание папки `docs/` в таблице README (пустая или gitignored).  
 2. Не указана лицензия на документы (например, CC‑BY‑NC).  
-3. В CONCEPT.md дана ссылка на `LongevityCommon NEWS.md`, но не указан путь к этому файлу в экосистеме (подпроект? внешний?).  
+3. В CONCEPT.md дана ссылка на `LC NEWS.md`, но не указан путь к этому файлу в экосистеме (подпроект? внешний?).  
 4. Язык контента на YouTube — грузинский, русский, английский, а документация только русская. Это допустимо, но в `README.md` стоило бы явно указать, что «документация проекта ведётся на русском».  
 5. Скрипт `md_to_docx.py` нигде не документирован (зависимости, версия Pandoc?).  
 
@@ -5943,8 +5943,8 @@ MINOR_REVISION
    Файлы: `README.md`.  
    Трудоёмкость: **S** · Риск: **low**.
 
-9. **Уточнить путь к LongevityCommon NEWS.md**  
-   В CONCEPT.md заменить `LongevityCommon NEWS.md` на полный путь относительно корня экосистемы, например `../LongevityCommon/NEWS.md`.  
+9. **Уточнить путь к LC NEWS.md**  
+   В CONCEPT.md заменить `LC NEWS.md` на полный путь относительно корня экосистемы, например `../LC/NEWS.md`.  
    Файлы: `CONCEPT.md`.  
    Трудоёмкость: **S** · Риск: **low**.
 
@@ -7417,7 +7417,7 @@ ACCEPT
 | **Architecture** | 1 | Отсутствует: нет модульной структуры, нет слоёв, нет контрактов между компонентами. «Архитектура» ограничена иерархией Markdown-файлов. |
 | **Optimality** | 2 | Концепция бизнеса проработана, но техническая реализация нулевая. Нет оценки производительности, масштабирования, безопасности. |
 | **Structure / Modularity** | 2 | Каталоги осмысленны (Recepturae, Tabulae, Materials), но внутри — плоская коллекция файлов без единой схемы именования или связей. |
-| **Systematicity (cross-file consistency)** | 2 | Имеются задокументированные расхождения цен (были, исправлены), отсутствует синхронизация MCOA во всех core-файлах, нет единого реестра сущностей. |
+| **Systematicity (cross-file consistency)** | 2 | Имеются задокументированные расхождения цен (были, исправлены), отсутствует синхронизация MCAOA во всех core-файлах, нет единого реестра сущностей. |
 | **Core-files vs code alignment** | 1 | Три скрипта Python (генерация презентаций) не интегрированы с core-файлами. Нет кода, реализующего описанные в CONCEPT.md алгоритмы (LongevityProgram, AestheticDentistry). |
 | **Stack-rule compliance (Rust+Phoenix only)** | 1 | Стек — Python + Markdown + PDF. Требование Rust/Phoenix полностью нарушено. |
 | **Modernity of stack** | 1 | Python 3 для генерации слайдов — допустимо, но отсутствуют контейнеризация, CI/CD, тестирование, статический анализ. Стек не соответствует 2026 году. |
@@ -7434,7 +7434,7 @@ ACCEPT
    Проект не содержит ни одного развёртываемого сервиса, API, базы данных или интерфейса. Представленный код (`make_presentation*.py`) — это изолированные генераторы слайдов, не связанные с core-файлами. CONCEPT.md содержит псевдокод на Python (классы `LongevityProgram`, `AestheticDentistry`), но никакой реальной реализации нет.
 
 3. **Несогласованность core-файлов**  
-   MCOA-приложение (добавлено в CONCEPT.md 2026-04-21) не упомянуто ни в README.md, ни в MAP.md, ни в KNOWLEDGE.md. Это нарушает принцип единого источника истины.
+   MCAOA-приложение (добавлено в CONCEPT.md 2026-04-21) не упомянуто ни в README.md, ни в MAP.md, ни в KNOWLEDGE.md. Это нарушает принцип единого источника истины.
 
 4. **Отсутствие дорожной карты с датами**  
    CONCEPT.md §11 содержит фазы (1–4), но ни одна не имеет целевой даты. Проект находится в статусе «ждёт инвестора» с неопределёнными сроками, что делает невозможным планирование разработки.
@@ -7652,12 +7652,12 @@ ACCEPT
 ACCEPT
 
 ## REMAINING_GAPS
-Незначительный: синхронизация упоминания MCOA-приложения в `README.md`, `MAP.md`, `KNOWLEDGE.md` не выделена явно в задачах плана. P1.3 («Синхронизация core-файлов») предписывает общую проверку на устаревшие данные, что *де-факто* покроет этот пункт, но для гарантии отсутствия пропуска стоило бы добавить конкретную проверку MCOA. В остальном все критические замечания из `TODO.md` (ценовое расхождение, даты дорожной карты, рецензия UPGRADE, архитектура, бинарники, Python‑скрипты, CI/CD, тесты, единый реестр, THEORY.md) имеют прямые или косвенные пункты в плане (P0.1–P0.5, P1.1–P1.4, P2.1, P2.3).
+Незначительный: синхронизация упоминания MCAOA-приложения в `README.md`, `MAP.md`, `KNOWLEDGE.md` не выделена явно в задачах плана. P1.3 («Синхронизация core-файлов») предписывает общую проверку на устаревшие данные, что *де-факто* покроет этот пункт, но для гарантии отсутствия пропуска стоило бы добавить конкретную проверку MCAOA. В остальном все критические замечания из `TODO.md` (ценовое расхождение, даты дорожной карты, рецензия UPGRADE, архитектура, бинарники, Python‑скрипты, CI/CD, тесты, единый реестр, THEORY.md) имеют прямые или косвенные пункты в плане (P0.1–P0.5, P1.1–P1.4, P2.1, P2.3).
 
 ## NOTES
 - План хорошо стратифицирован: P0 блокеры действительно устраняют инженерные «разрывы» (отсутствие стека, неструктурированные данные, бинарный мусор, несовместимые скрипты), а P2 опциональные улучшения не являются критическими.
 - Единственный риск – найм Rust/Elixir‑разработчиков, без которого P0.1, P0.3, P0.5, P1.5 нереализуемы. План это честно отмечает.  
-- Для полноты можно добавить в P1.3 явный чек‑лист: «проверить MCOA в MAP/README/KNOWLEDGE, обновить ссылки». Однако это не меняет вердикта.
+- Для полноты можно добавить в P1.3 явный чек‑лист: «проверить MCAOA в MAP/README/KNOWLEDGE, обновить ссылки». Однако это не меняет вердикта.
 
 
 ---
@@ -7681,7 +7681,7 @@ ACCEPT
 | **Optimality** | 3 | Репозиторий 969 МБ (вероятно, включает сырые данные/артефакты). Отсутствие Git LFS или `.gitignore` для тяжёлых файлов. |
 | **Structure / Modularity** | 4 | Хорошая модульность: каждый подпроект автономен, есть umbrella-документы. Однако некоторые модули (HAP, Ontogenesis) объявлены «TOXIC» и не удалены — загрязняют структуру. |
 | **Systematicity (cross-file consistency)** | 2 | Множество несоответствий: realtime-config не обновлён (порт 4001), TODO в DESIGN.md не выполнены, subproject CONCEPT.md не синхронизированы с umbrella v5.6. |
-| **Core-files vs code alignment** | 2 | Код отстаёт от документации: в STATE.md перечислены правки для server/web/realtime, но нет признаков, что они внесены (отсутствие заголовков `X-LongevityCommon-Status`, баннеров, изменённых системных промптов). |
+| **Core-files vs code alignment** | 2 | Код отстаёт от документации: в STATE.md перечислены правки для server/web/realtime, но нет признаков, что они внесены (отсутствие заголовков `X-LC-Status`, баннеров, изменённых системных промптов). |
 | **Stack-rule compliance (Rust+Phoenix only)** | 3 | Формально правило нарушено — есть значительный объём Python (344 строки), TypeScript (53+14), Node. Это допустимо для экспериментальных скриптов, но заявленное «только Rust+Phoenix» не выполняется. |
 | **Modernity of stack** | 5 | Rust + Elixir/Phoenix + React+TS + Vite + PostgreSQL — современный и производительный набор. |
 | **Quality of processes / connections** | 2 | Отсутствует umbrella-CI, нет mock-сервисов для интеграционных тестов, регенерация core-документов ручная, портовые конфликты не устранены. |
@@ -7691,12 +7691,12 @@ ACCEPT
 ## CRITICAL ISSUES
 
 1. **Репозиторий 969 МБ (вероятно, содержит датасеты/артефакты)**  
-   – `BioSense/data/`, `BioSense/results/`, `MCOA/results/` не должны быть в Git.  
+   – `BioSense/data/`, `BioSense/results/`, `MCAOA/results/` не должны быть в Git.  
    – **Действие:** добавить `.gitignore` для `.set`, `.edf`, `.json` результатов; перенести данные в Git LFS или внешнее хранилище.  
    – Без этого репозиторий не клонируется эффективно, нарушены принципы воспроизводимости.
 
 2. **Невыполненные критические изменения из DESIGN.md §5 и STATE.md §5**  
-   – В server/handlers/biosense.rs не добавлен заголовок `X-LongevityCommon-Status`.  
+   – В server/handlers/biosense.rs не добавлен заголовок `X-LC-Status`.  
    – В web/src/pages/Dashboard.tsx нет баннера «Hypothesis-stage…».  
    – В realtime/config/dev.exs порт всё ещё 4001 (конфликт с Ze).  
    – **Действие:** внести все перечисленные правки (10+ пунктов) и закоммитить.
@@ -7732,7 +7732,7 @@ ACCEPT
 
 - **Гистограмма кода показывает 0 строк Go** – вероятно, остаток от предыдущего стека; стоит очистить `./go` если не используется.
 
-- **Отсутствие лицензии в подпроектах** – umbrella LICENSE указана только в корне MCOA; остальные подпроекты не имеют собственного LICENSE (возможно, подразумевается umbrella, но неявно).
+- **Отсутствие лицензии в подпроектах** – umbrella LICENSE указана только в корне MCAOA; остальные подпроекты не имеют собственного LICENSE (возможно, подразумевается umbrella, но неявно).
 
 ---
 
@@ -7772,15 +7772,15 @@ ACCEPT
 ### P0 — Blockers (необходимо исправить перед любым релизом)
 
 1. **Убрать тяжёлые артефакты из Git**  
-   - Добавить `.gitignore`: `BioSense/data/`, `BioSense/results/`, `MCOA/results/`, `**/*.set`, `**/*.edf`, `**/results/`  
+   - Добавить `.gitignore`: `BioSense/data/`, `BioSense/results/`, `MCAOA/results/`, `**/*.set`, `**/*.edf`, `**/results/`  
    - Перенести существующие тяжёлые файлы в Git LFS или внешнее хранилище (ссылки в документации)  
    - **Трудоёмкость:** S (создать `.gitignore` + migrate)  
    - **Риск:** низкий (файлы не являются исходным кодом; копию можно сохранить локально)  
-   - **Затрагиваемые файлы:** `.gitignore` (создать/дополнить), `BioSense/.gitignore`, `MCOA/.gitignore`
+   - **Затрагиваемые файлы:** `.gitignore` (создать/дополнить), `BioSense/.gitignore`, `MCAOA/.gitignore`
 
 2. **Выполнить все пункты DESIGN.md §5 и STATE.md §5 (10+ правок по disclosure и порту)**  
    - **server:**  
-     - `src/handlers/biosense.rs` — добавить header `X-LongevityCommon-Status: hypothesis-stage-exploratory`  
+     - `src/handlers/biosense.rs` — добавить header `X-LC-Status: hypothesis-stage-exploratory`  
      - `src/handlers/dashboard.rs` — заменить "biological age" → "exploratory aging activity index (research only)"  
      - `src/handlers/ze_guide.rs` — обновить system prompt (disclaimer per DESIGN.md)  
      - `src/handlers/disclosures.rs` — новый endpoint `GET /api/disclosures/v5_changes`  
@@ -7814,7 +7814,7 @@ ACCEPT
    - **Затрагиваемые файлы:** `realtime/config/dev.exs`, `deploy/docker-compose-all.yml`
 
 5. **Синхронизировать subproject CONCEPT.md с umbrella v5.6**  
-   - Для каждого подпроекта (Ze, BioSense, FCLC, MCOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
    - Проверить и исправить:  
      * "DERIVE" → "POSTULATED ansatz" (Ze)  
      * "validated" → "exploratory / hypothesis-stage" (BioSense)  
@@ -7835,7 +7835,7 @@ ACCEPT
 
 7. **Очистить избыточные файлы в подпроектах**  
    - Удалить пустые/устаревшие `AGENTS.md`, `JOURNAL.md`, `ROADMAP.md` или заменить ссылками на umbrella-документы  
-   - Проверить каждый подпроект (Ze, BioSense, MCOA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Проверить каждый подпроект (Ze, BioSense, MCAOA, EpigeneticDrift, MitoROS, Proteostasis)  
    - **Затрагиваемые файлы:** `*/AGENTS.md`, `*/JOURNAL.md`, `*/ROADMAP.md` (удалить или обновить)
 
 8. **Перенести `_audits/` в отдельный репозиторий или заархивировать**  
@@ -7844,12 +7844,12 @@ ACCEPT
    - **Затрагиваемые файлы:** `_audits/*` (переместить), `README.md`
 
 9. **Добавить LICENSE в каждый подпроект**  
-   - Скопировать `LICENSE` (MIT из корня MCOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
+   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
    - Или добавить README с указанием umbrella license  
    - **Затрагиваемые файлы:** `Ze/LICENSE`, `BioSense/LICENSE`, … (создать)
 
 10. **Создать скрипт регенерации core-документов**  
-    - `scripts/regen_umbrella_core_from_article.sh` – парсит `~/Desktop/LongevityCommon.md` и генерирует CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE  
+    - `scripts/regen_umbrella_core_from_article.sh` – парсит `~/Desktop/LC.md` и генерирует CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE  
     - Задокументировать в `OPEN_PROBLEMS.md` (закрыть §3.2)  
     - **Затрагиваемые файлы:** `scripts/regen_umbrella_core_from_article.sh` (создать), `OPEN_PROBLEMS.md`
 
@@ -7858,9 +7858,9 @@ ACCEPT
 ### P2 — Nice‑to‑have (улучшения UX и инфраструктуры)
 
 11. **Заменить Python-скрипты (не legacy) на Rust или явно исключить из rule**  
-    - В `Proteostasis/scripts/`, `MCOA/scripts/`, `EpigeneticDrift/scripts/` – если они используются, переписать на Rust или перенести в `_legacy/`  
+    - В `Proteostasis/scripts/`, `MCAOA/scripts/`, `EpigeneticDrift/scripts/` – если они используются, переписать на Rust или перенести в `_legacy/`  
     - Для BioSense/src (EEG pipelines) – оставить, т.к. это исследовательские скрипты, но пометить `# LEGACY` в начале файла  
-    - **Затрагиваемые файлы:** `Proteostasis/scripts/calibrate.py`, `MCOA/scripts/*.py`, `EpigeneticDrift/scripts/calibrate.py`, `BioSense/src/*.py`
+    - **Затрагиваемые файлы:** `Proteostasis/scripts/calibrate.py`, `MCAOA/scripts/*.py`, `EpigeneticDrift/scripts/calibrate.py`, `BioSense/src/*.py`
 
 12. **Добавить Git LHS track для больших файлов**  
     - `.gitattributes`: `*.set filter=lfs diff=lfs merge=lfs -text`, `*.edf`, `*.json` (кроме config)  
@@ -7871,7 +7871,7 @@ ACCEPT
     - **Затрагиваемые файлы:** `README.md`
 
 14. **Написать unit-тесты для disclosure‑пунктов (P0.2)**  
-    - Например, тест на `server` проверяет, что в ответе `/dashboard` или `/chi_ze` есть header `X-LongevityCommon-Status`  
+    - Например, тест на `server` проверяет, что в ответе `/dashboard` или `/chi_ze` есть header `X-LC-Status`  
     - **Затрагиваемые файлы:** `server/tests/disclosure_test.rs` (создать)
 
 15. **Удалить пустые Go-директории**  
@@ -9075,7 +9075,7 @@ ACCEPT
 | **Structure / Modularity** | 3 | Subproject-границы определены, но TOXIC-проекты (HAP, Ontogenesis) не удалены, нарушая модульность. Внутри одного репозитория смешаны Rust, Python, Elixir, Node — это затрудняет независимую разработку. |
 | **Systematicity (cross-file consistency)** | 2 | Core-файлы (CONCEPT, DESIGN, STATE) согласованы между собой, но код социального слоя не отражает обещанные изменения (см. STATE.md §5). Port conflict упомянут в DESIGN.md, но не исправлен. Subproject CONCEPTs не обновлены. |
 | **Core-files vs code alignment** | 2 | Множество action-пунктов из STATE.md не выполнены (disclosure headers, banner, tooltips, endpoint). Стек реально использует Python, хотя заявлен «Rust+Phoenix only». |
-| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
+| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCAOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
 | **Modernity of stack** | 4 | Rust/axum, Elixir/Phoenix, React+TypeScript — современные технологии. Python используется для ML-скриптов, что допустимо, но нарушает правило моностека. |
 | **Quality of processes / connections** | 2 | Отсутствует CI для umbrella-стека, нет интеграционных тестов, нет mock для внешних API. Port conflict не разрешён. Subproject CONCEPTs не синхронизированы. Процесс регенерации core .md не автоматизирован. |
 
@@ -9086,7 +9086,7 @@ ACCEPT
 1. **Нарушение стека (Python)**  
    - `BioSense/src/ze_alpha_peak.py`, `eeg_ze_processor.py` и др. — 7 Python-файлов, критических для биомаркерного пайплайна.  
    - `AIM/` — полноценный Python-сервис (telegram_bot.py, llm.py, medical_system.py).  
-   - `Proteostasis/scripts/calibrate.py`, `MCOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
+   - `Proteostasis/scripts/calibrate.py`, `MCAOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
    - В code histogram `py 359` — нарушение «Rust+Phoenix only» даже для научного слоя.
 
 2. **Port conflict realtime ↔ Ze (4001) не исправлен**  
@@ -9118,7 +9118,7 @@ ACCEPT
    - `THEORY.md §1` отмечает две конвенции (Python ∈ [0,1], Article ∈ [-1,+1]). Это потенциальный источник багов при интеграции.
 
 4. **Отсутствует лицензия в подпроектах**  
-   - Например, `AIM/`, `MCOA/` не имеют собственного LICENSE, хотя umbrella имеет MIT. Для публичных repo это требуется.
+   - Например, `AIM/`, `MCAOA/` не имеют собственного LICENSE, хотя umbrella имеет MIT. Для публичных repo это требуется.
 
 5. **Нестандартное расположение `AIM/`**  
    - AIM — отдельный Python-сервис с собственным Dockerfile и docker-compose.yml. Его логика пересекается с социальным слоем, но нет чёткой границы в DESIGN.md.
@@ -9155,11 +9155,11 @@ ACCEPT
 ## P0 — Блокеры (fail без этого)
 
 ### 1. Удалить Python-стек из основного репозитория (кроме AIM)
-**Что:** Выделить все Python-пайплайны (BioSense EEG, Proteostasis calibrate, MCOA scripts, EpigeneticDrift) в отдельные микросервисы с HTTP API. Rust-код вызывает их только через REST. Сами Python-файлы удалить из корневого дерева.
+**Что:** Выделить все Python-пайплайны (BioSense EEG, Proteostasis calibrate, MCAOA scripts, EpigeneticDrift) в отдельные микросервисы с HTTP API. Rust-код вызывает их только через REST. Сами Python-файлы удалить из корневого дерева.
 **Файлы:**  
 - `BioSense/src/ze_alpha_peak.py`, `eeg_ze_processor.py`, `ze_batch_pipeline.py`, … (все 7) → перенести в `BioSense/eeg-service/main.py` + новый Dockerfile  
 - `Proteostasis/scripts/calibrate.py` → перенести в `Proteostasis/calibrate-service/`  
-- `MCOA/scripts/compare_mcoa_cdata.py` → в `MCOA/analysis-service/`  
+- `MCAOA/scripts/compare_mcoa_cdata.py` → в `MCAOA/analysis-service/`  
 - `EpigeneticDrift/scripts/calibrate.py` → в `EpigeneticDrift/calibrate-service/`  
 - `server/Cargo.toml` — удалить зависимость от Python subprocess (если есть)  
 - `server/src/handlers/biosense.rs` — заменить прямой вызов на HTTP-запрос к eeg-service  
@@ -9179,7 +9179,7 @@ ACCEPT
 ### 3. Выполнить все disclosure-изменения после CONCEPT v5.6 (18 пунктов из STATE.md §5)
 **Что:** Реализовать каждый пункт из списка STATE.md §5.1–5.4 в коде социального слоя.
 **Файлы:**  
-- `server/src/handlers/biosense.rs` — добавить header `X-LongevityCommon-Status: hypothesis-stage-exploratory`  
+- `server/src/handlers/biosense.rs` — добавить header `X-LC-Status: hypothesis-stage-exploratory`  
 - `server/src/handlers/dashboard.rs` — заменить "biological age" → "exploratory aging activity index (research only)"  
 - `server/src/handlers/ze_guide.rs` — обновить system prompt (буквально из DESIGN.md §5.1)  
 - `server/src/migrations/003_health_factors.sql` — добавить комментарий "thresholds exploratory, see CONCEPT v5.6 §2"  
@@ -9198,7 +9198,7 @@ ACCEPT
 - `Ze/CONCEPT.md` — заменить "derived" → "postulated ansatz" для `dτ/dt`  
 - `BioSense/CONCEPT.md` — добавить "hypothesis-stage", "post-hoc multimodal", убрать "validated"  
 - `FCLC/CONCEPT.md` — уточнить threat model "semi-honest only; not active server collusion"  
-- `MCOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
+- `MCAOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
 - `CDATA/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
 **Файлы:** Указанные 5 файлов.  
 **Трудоёмкость:** M (1 день на аудит + правки)  
@@ -9234,7 +9234,7 @@ ACCEPT
 
 ### 1. Автоматизировать регенерацию core .md
 **Что:** Реализовать скрипт `scripts/regen_umbrella_core_from_article.sh`, который:  
-- вычисляет md5 от `~/Desktop/LongevityCommon.md`  
+- вычисляет md5 от `~/Desktop/LC.md`  
 - сравнивает с текущим md5 в `CONCEPT.md` (поле article_md5)  
 - при несовпадении архивирует старые core-файлы и перегенерирует новые из article  
 **Файлы:** `scripts/regen_umbrella_core_from_article.sh` (новый), `CONCEPT.md` (добавить/обновить поле `article_md5`).  
@@ -9252,7 +9252,7 @@ ACCEPT
 **Риск:** Low (аккуратно проверить математику)
 
 ### 3. Добавить лицензии во все подпроекты
-**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
+**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
 **Файлы:** по одному LICENSE на каждый подпроект.  
 **Трудоёмкость:** S (15 мин)  
 **Риск:** Low
@@ -9285,7 +9285,7 @@ ACCEPT
 **Риск:** Low (если данные нужны в репозитории)
 
 ### 3. CI-проверка синхронизации core-файлов
-**Что:** В GitHub action добавить шаг, который сравнивает md5 `~/Desktop/LongevityCommon.md` (или его копию в репо) с полем `article_md5` в `CONCEPT.md`. При несовпадении — warning.  
+**Что:** В GitHub action добавить шаг, который сравнивает md5 `~/Desktop/LC.md` (или его копию в репо) с полем `article_md5` в `CONCEPT.md`. При несовпадении — warning.  
 **Файлы:** `.github/workflows/ci.yml` (добавить шаг).  
 **Трудоёмкость:** S (1 час)
 

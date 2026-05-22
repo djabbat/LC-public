@@ -32,9 +32,9 @@ queen_deploy/
 
 ```bash
 # On the server, as user jaba:
-git clone git@github.com:djabbat/LongevityCommon.git ~/LongevityCommon
-chmod +x ~/LongevityCommon/AIM/AI/queen_deploy/scripts/*.sh
-~/LongevityCommon/AIM/AI/queen_deploy/scripts/deploy.sh
+git clone git@github.com:djabbat/LC.git ~/LC
+chmod +x ~/LC/AIM/AI/queen_deploy/scripts/*.sh
+~/LC/AIM/AI/queen_deploy/scripts/deploy.sh
 sudo certbot --nginx -d hive.longevity.ge
 
 # verify
@@ -75,7 +75,7 @@ python -c "from AI.ai.hive_telemetry import contribute; print(contribute)"
 ```bash
 # On server:
 mkdir -p ~/hive_queen/scripts
-ln -sfn ~/LongevityCommon/AIM/AI/queen_deploy/scripts/distill_cron.sh \
+ln -sfn ~/LC/AIM/AI/queen_deploy/scripts/distill_cron.sh \
  ~/hive_queen/scripts/distill_cron.sh
 crontab -e
 # Add:
@@ -106,7 +106,7 @@ sudo systemctl status aim-hive-queen
 sudo journalctl -u aim-hive-queen -f
 
 # Restart after code change
-cd ~/LongevityCommon && git pull
+cd ~/LC && git pull
 sudo systemctl restart aim-hive-queen
 
 # Manual distill

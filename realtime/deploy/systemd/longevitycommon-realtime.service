@@ -1,6 +1,6 @@
 [Unit]
-Description=LongevityCommon realtime (Phoenix Channels, port 4500)
-Documentation=file:///home/oem/Desktop/LongevityCommon/docs/DEPLOY_CONVENTION.md
+Description=LC realtime (Phoenix Channels, port 4500)
+Documentation=file:///home/oem/Desktop/LC/docs/DEPLOY_CONVENTION.md
 After=network-online.target postgresql.service longevitycommon-server.service
 Wants=network-online.target
 

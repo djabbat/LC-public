@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "- **Lead institution:** LongevityCommon (infrastructure subproject)\n- **Collaborators:** TBD (to be identified for specific use cases, e.g., CDATA, Telomere, MitoROS, EpigeneticDrift, Proteostasis subprojects)\n- **Hardware partners:** TBD (potential suppliers for Zeiss IM 35 retrofit components, FLIR cameras, ThorLabs LEDs)\n- **Software partners:** TBD (potential contributors to Claude Code agent integration or open-source microscopy software)\n- **Funding:** TBD (to be secured through grants or institutional support)"
+    "body": "- **Lead institution:** LC (infrastructure subproject)\n- **Collaborators:** TBD (to be identified for specific use cases, e.g., CDATA, Telomere, MitoROS, EpigeneticDrift, Proteostasis subprojects)\n- **Hardware partners:** TBD (potential suppliers for Zeiss IM 35 retrofit components, FLIR cameras, ThorLabs LEDs)\n- **Software partners:** TBD (potential contributors to Claude Code agent integration or open-source microscopy software)\n- **Funding:** TBD (to be secured through grants or institutional support)"
   },
   {
     "file": "CONCEPT.md",

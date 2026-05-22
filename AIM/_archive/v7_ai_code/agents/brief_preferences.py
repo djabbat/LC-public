@@ -15,7 +15,7 @@ Schema:
     include:
       sections: [hot_milestones, overdue_followups, awaiting_reply,
                  deadlines, kpis, phase_actions]
-      projects: ["FCLC", "MCOA"]   # whitelist; null/empty = all
+      projects: ["FCLC", "MCAOA"]   # whitelist; null/empty = all
     exclude:
       projects: []                 # explicit hide
     digest:

@@ -13,7 +13,7 @@
 **Effort:** S | **Risk:** Medium — misconfiguration can block legitimate clients.
 
 ### 3. Implement FeedNotifier with proper pg_notify handling
-**Action:** Write `LongevityCommonRealtime.FeedNotifier` (GenServer) that subscribes to the `social_feeds` channel via Postgrex `pg_notify`, handles disconnects with exponential backoff, and broadcasts events via `Phoenix.PubSub`. Add to supervision tree.  
+**Action:** Write `LCRealtime.FeedNotifier` (GenServer) that subscribes to the `social_feeds` channel via Postgrex `pg_notify`, handles disconnects with exponential backoff, and broadcasts events via `Phoenix.PubSub`. Add to supervision tree.  
 **Files:** `lib/longevitycommon_realtime/feed_notifier.ex`, `lib/longevitycommon_realtime/application.ex`  
 **Effort:** M | **Risk:** High — without this, real-time feed delivery is broken.
 
@@ -45,7 +45,7 @@
 **Effort:** M | **Risk:** Medium — missing tests allow regressions.
 
 ### 9. Implement UserSocket and channel routes
-**Action:** Write `LongevityCommonRealtimeWeb.UserSocket` with `connect/2` (JWT verification) and `id/1`. Define channel topics (e.g. `feed:*`). Add socket mount in `endpoint.ex` (already exists if file present, otherwise ensure).  
+**Action:** Write `LCRealtimeWeb.UserSocket` with `connect/2` (JWT verification) and `id/1`. Define channel topics (e.g. `feed:*`). Add socket mount in `endpoint.ex` (already exists if file present, otherwise ensure).  
 **Files:** `lib/longevitycommon_web/user_socket.ex`, `lib/longevitycommon_web/router.ex` (add `channel` routes)  
 **Effort:** M | **Risk:** Medium — without socket, client cannot receive real-time updates.
 

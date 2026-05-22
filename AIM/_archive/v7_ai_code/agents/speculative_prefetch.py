@@ -7,7 +7,7 @@ returned instantly; otherwise the cached result is discarded.
 
 Heuristics anticipate, in priority order:
   1. read_file  — every absolute path mentioned in the latest user/tool turn
-  2. memory_recall — every project name mentioned (FCLC, MCOA, Ze, …)
+  2. memory_recall — every project name mentioned (FCLC, MCAOA, Ze, …)
   3. verify_pmid / verify_doi — every PMID / DOI pattern in the text
 
 Usage:
@@ -30,8 +30,8 @@ log = logging.getLogger("aim.prefetch")
 _PATH_RE = re.compile(r"(?<![\w/])(/(?:home|tmp|var|etc|Users)/[^\s'\"`)\]]+)")
 _PMID_RE = re.compile(r"\bPMID[:\s]*(\d{4,9})\b", re.IGNORECASE)
 _DOI_RE  = re.compile(r"\b(10\.\d{4,9}/[^\s\)\]\}\,;]+)", re.IGNORECASE)
-_PROJECTS = ("FCLC", "MCOA", "Ze", "BioSense", "CDATA", "AIM",
-             "Annals", "PhD", "Books", "GLA", "LongevityCommon")
+_PROJECTS = ("FCLC", "MCAOA", "Ze", "BioSense", "CDATA", "AIM",
+             "Annals", "PhD", "Books", "GLA", "LC")
 
 
 class Prefetcher:

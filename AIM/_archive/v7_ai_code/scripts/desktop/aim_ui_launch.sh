@@ -5,7 +5,7 @@
 #   - else if localhost:4000 already up → open in browser
 #   - else `mix phx.server` in foreground in new gnome-terminal, then open browser
 set -uo pipefail
-REPO_ROOT="/home/oem/Desktop/LongevityCommon/AIM"
+REPO_ROOT="/home/oem/Desktop/LC/AIM"
 PHOENIX="$REPO_ROOT/phoenix-umbrella"
 PORT="${AIM_UI_PORT:-4000}"
 PROD_URL="https://aim.longevity.ge/"

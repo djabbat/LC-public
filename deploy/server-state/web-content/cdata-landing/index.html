@@ -51,7 +51,7 @@
 <div class="lead">Centriolar Damage Accumulation Theory of Aging — open, falsifiable hypothesis that progressive polyglutamylation of the asymmetrically inherited mother centriole in adult stem cells acts as a cumulative damage sensor and primary aging driver.</div>
 <div class="badges">
   <span class="badge">status: INCONCLUSIVE</span>
-  <span class="badge blue">Counter #1 candidate (MCOA)</span>
+  <span class="badge blue">Counter #1 candidate (MCAOA)</span>
   <span class="badge amber">Cell-DT v4.0 pending</span>
   <span class="badge green">Geiger LoS €100K signed</span>
 </div>
@@ -92,8 +92,8 @@
   <p>Each tissue has 10⁵–10⁹ stem cells, each with its own asymmetrically inherited mother centriole. The CDATA claim is statistical: <em>on average</em> across this population, polyglutamylation rises with chronological time, and this rise correlates with stem-cell exhaustion phenotypes. Single-cell heterogeneity is allowed and predicted.</p>
 </div>
 
-<h2 id="equation">Counter equation (within MCOA framework)</h2>
-<p>CDATA is registered as a candidate <em>Counter</em> in the <a href="https://mcoa.longevity.ge">MCOA</a> framework with the following damage-accumulation equation:</p>
+<h2 id="equation">Counter equation (within MCAOA framework)</h2>
+<p>CDATA is registered as a candidate <em>Counter</em> in the <a href="https://mcaoa.longevity.ge">MCAOA</a> framework with the following damage-accumulation equation:</p>
 <div class="formula center">D_centriole(n, t) = D_centriole,0 + α₂·(n/n₂*) + β₂·(t/τ₂) + γ₂·I(others)</div>
 <p>where α₂ is division-linked (each division stages the mother for further glutamylation), β₂ is time-linked (slow basal accumulation in quiescent cells), and γ₂ couples to other counters — most importantly mitochondrial ROS, which oxidises tubulin and accelerates polyglutamylation.</p>
 <p>The candidate kinetic regime is <strong>α-dominated</strong>: division events drive damage accumulation more strongly than the passage of chronological time. This is testable by comparing high-turnover (intestinal crypt) vs. low-turnover (cortical neuron) tissue trajectories in BioSense χ_Ze data.</p>
@@ -124,7 +124,7 @@
 </div>
 <div class="panel">
   <h3>FP-B4 — Hayflick saturation of polyglutamylation</h3>
-  <p><strong>Venue:</strong> serial passage of human MSCs to the Hayflick limit, polyglutamylation read-out per passage. <strong>Prediction:</strong> polyglutamylation rises monotonically and saturates near the Hayflick limit (D_centriole → 1). The saturation point and shape define the f(D) curve in the MCOA equation. <strong>Falsified if</strong> the curve is non-monotonic or fails to saturate.</p>
+  <p><strong>Venue:</strong> serial passage of human MSCs to the Hayflick limit, polyglutamylation read-out per passage. <strong>Prediction:</strong> polyglutamylation rises monotonically and saturates near the Hayflick limit (D_centriole → 1). The saturation point and shape define the f(D) curve in the MCAOA equation. <strong>Falsified if</strong> the curve is non-monotonic or fails to saturate.</p>
 </div>
 <div class="panel">
   <h3>FP-B5 — α dominance over β</h3>
@@ -135,7 +135,7 @@
 <div class="disclosure">
 🔴 <strong>CDATA is INCONCLUSIVE.</strong> Preliminary Sobol global sensitivity analysis on synthetic Cell-DT v3 data showed an <em>apparent</em> paradox (R²<sub>no_α</sub> = 0.833 &gt; full R² = 0.778, suggesting α may be unnecessary), but the difference is <strong>not statistically significant after nested cross-validation</strong> (p = 0.12 after Holm correction). Full S1+S2+ST decomposition with nested CV on real GTEx N = 948 is <strong>deferred to Cell-DT v4.0</strong> (planned, not started). Until v4.0 closes the question, CDATA remains an open, falsifiable hypothesis — neither confirmed nor refuted.
 </div>
-<p>This status is recorded in the canonical <a href="https://github.com/djabbat/LongevityCommon">LongevityCommon</a> CONCEPT v5.6 and in the upstream <a href="https://mcoa.longevity.ge">MCOA</a> counter table. We do not present CDATA as an established mechanism in any grant proposal, publication, or public communication.</p>
+<p>This status is recorded in the canonical <a href="https://github.com/djabbat/LC">LC</a> CONCEPT v5.6 and in the upstream <a href="https://mcaoa.longevity.ge">MCAOA</a> counter table. We do not present CDATA as an established mechanism in any grant proposal, publication, or public communication.</p>
 
 <h2 id="e0">E0 — the experimental rig that tests CDATA</h2>
 <div class="panel">
@@ -165,7 +165,7 @@
 </div>
 <div class="panel">
   <h3>What if asymmetric inheritance turns out to be tissue-specific or species-specific?</h3>
-  <p>That would narrow CDATA's scope, not falsify the framework. CDATA is registered in MCOA as a candidate counter <em>where</em> asymmetric inheritance is documented; in tissues with symmetric inheritance, the predicted weight w_centriole(tissue) would be near zero. FP-B5 (α dominance over β) is the actual falsification anchor — if division rate doesn't drive damage, CDATA fails everywhere.</p>
+  <p>That would narrow CDATA's scope, not falsify the framework. CDATA is registered in MCAOA as a candidate counter <em>where</em> asymmetric inheritance is documented; in tissues with symmetric inheritance, the predicted weight w_centriole(tissue) would be near zero. FP-B5 (α dominance over β) is the actual falsification anchor — if division rate doesn't drive damage, CDATA fails everywhere.</p>
 </div>
 <div class="panel">
   <h3>How does CDATA interact with other counters?</h3>
@@ -178,11 +178,11 @@
 
 <h2>See also</h2>
 <p>
-<a href="https://longevity.ge">LongevityCommon root</a> ·
-<a href="https://mcoa.longevity.ge">MCOA — meta-framework</a> ·
+<a href="https://longevity.ge">LC root</a> ·
+<a href="https://mcaoa.longevity.ge">MCAOA — meta-framework</a> ·
 <a href="https://github.com/djabbat/PhD/tree/main/E0">E0 — experimental rig (Kaede ablation)</a> ·
 <a href="https://hive.longevity.ge">Hive — federated AIM agents</a> ·
-<a href="https://github.com/djabbat/LongevityCommon">Source</a>
+<a href="https://github.com/djabbat/LC">Source</a>
 </p>
 </div>
 <div class="footer">© 2026 Tkemaladze J. · Georgia Longevity Alliance · CONCEPT v5.6 · Tkemaladze 2023, <a href="https://pubmed.ncbi.nlm.nih.gov/36583780">PMID 36583780</a></div>

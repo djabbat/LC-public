@@ -25,11 +25,11 @@
    *Impact*: весь проект необходимо переписать или предоставить Rust-модуль, взаимодействующий с Phoenix через каналы.
 
 2. **CORS `origin: "*"` в production**  
-   `LongevityCommonRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
+   `LCRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
    *Impact*: уязвимость для CSRF‑ и data‑exfiltration‑атак; недопустимо для продакшена.
 
 3. **Отсутствие реализации ключевого компонента `FeedNotifier`**  
-   В `application.ex` добавлен `LongevityCommonRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
+   В `application.ex` добавлен `LCRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
    *Impact*: невозможно оценить корректность обмена сообщениями через pg_notify, надёжность подписки, обработку переподключения.
 
 4. **Нет конфигурации окружения (`runtime.exs`)**  

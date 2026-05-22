@@ -247,7 +247,7 @@ defmodule AimWeb.AdminLive do
     end
   end
 
-  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LongevityCommon/AIM"
+  defp aim_root, do: System.get_env("AIM_ROOT") || "/home/oem/Desktop/LC/AIM"
 
   defp status_dot(true), do: "🟢"
   defp status_dot(false), do: "🔴"

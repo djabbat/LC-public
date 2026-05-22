@@ -24,7 +24,7 @@
 //!     aim-fs-migrate-patient \
 //!         --aim-root ~/.aim_fs \
 //!         --tenant-id djabbat \
-//!         --legacy-patients ~/Desktop/LongevityCommon/AIM/Patients \
+//!         --legacy-patients ~/Desktop/LC/AIM/Patients \
 //!         --accept-pii [--dry-run]
 
 use aim_fs::{AimFs, ApprovalPolicy, NewEntity, Source};

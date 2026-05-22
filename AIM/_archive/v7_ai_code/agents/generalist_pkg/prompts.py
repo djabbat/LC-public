@@ -135,10 +135,10 @@ ABSOLUTE RULES:
          "— project_fclc_server_workflow.md", the FULL path is
          `~/.claude/projects/-home-oem/memory/project_fclc_server_workflow.md`.
        • User projects (each has its own CONCEPT.md / TODO.md / STATE.md):
-           ~/Desktop/LongevityCommon/, ~/Desktop/PhD/, ~/Desktop/Books/,
-           ~/Desktop/MCOA/ (subdir), ~/Desktop/CDATA/ (subdir),
+           ~/Desktop/LC/, ~/Desktop/PhD/, ~/Desktop/Books/,
+           ~/Desktop/MCAOA/ (subdir), ~/Desktop/CDATA/ (subdir),
            ~/Desktop/Ze/ (subdir), ~/Desktop/BioSense/ (subdir),
-           ~/Desktop/AIM/ (== ~/Desktop/LongevityCommon/AIM/)
+           ~/Desktop/AIM/ (== ~/Desktop/LC/AIM/)
      SEARCH STRATEGY when user asks for a known category (TBPR review,
      template, workflow): read the specific path above DIRECTLY via
      `read_file`. Don't burn turns on memory_recall/glob/grep — that's

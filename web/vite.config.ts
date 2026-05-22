@@ -8,8 +8,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'LongevityCommon',
-        short_name: 'LongevityCommon',
+        name: 'LC',
+        short_name: 'LC',
         description: 'Social network for longevity — your biological age is your profile',
         theme_color: '#0f172a',
         background_color: '#0f172a',

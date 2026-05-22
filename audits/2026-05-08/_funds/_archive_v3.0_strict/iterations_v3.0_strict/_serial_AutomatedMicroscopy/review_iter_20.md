@@ -44,7 +44,7 @@ OSF ID: `osf.io/TBD` (или `osf.io/automicroscopy_cdata`), planned date: 2026-
 
 ### 6. Consortium / collaboration plan
 **✓**  
-В CONCEPT.md таблица партнёров (LongevityCommon, U Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с указанием ролей. Дополнительно в DESIGN.md — James Smith (UZH), Lena Zhang (EMBL), OpenFlexure, Micro-Manager. Статусы частично «TBD» или «pending», но план есть.
+В CONCEPT.md таблица партнёров (LC, U Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) с указанием ролей. Дополнительно в DESIGN.md — James Smith (UZH), Lena Zhang (EMBL), OpenFlexure, Micro-Manager. Статусы частично «TBD» или «pending», но план есть.
 
 ### 7. Reference reality + match
 **✓**  

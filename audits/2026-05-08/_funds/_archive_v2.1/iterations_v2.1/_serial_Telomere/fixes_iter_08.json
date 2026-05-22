@@ -9,7 +9,7 @@
     "file": "README.md",
     "action": "insert_after_line",
     "line_anchor": "Связи с другими файлами",
-    "body": "\n**Consortium Plan (placeholder):**\n- Telomere biology & Q-FISH measurements: Prof. [Name], Department of [X], University [Y] (letter of intent pending).\n- Computational modeling & MCOA integration: [Your lab/group].\n- In vivo validation (mouse models): Dr. [Name], Institute [Z] (confirmed interest, 2026-04-22)."
+    "body": "\n**Consortium Plan (placeholder):**\n- Telomere biology & Q-FISH measurements: Prof. [Name], Department of [X], University [Y] (letter of intent pending).\n- Computational modeling & MCAOA integration: [Your lab/group].\n- In vivo validation (mouse models): Dr. [Name], Institute [Z] (confirmed interest, 2026-04-22)."
   },
   {
     "file": "PARAMETERS.md",

@@ -1,6 +1,6 @@
 [Unit]
 Description=AIM Hive Queen (user-mode) — local hub for AIM-instances
-Documentation=file:///home/oem/Desktop/LongevityCommon/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
+Documentation=file:///home/oem/Desktop/LC/AIM/docs/operational/HIVE_QUEEN_DEPLOY.md
 After=network-online.target
 Wants=network-online.target
 
@@ -16,7 +16,7 @@ EnvironmentFile=-%h/.config/aim/hive_queen.env
 #   AIM_HIVE_WORKER_TOKENS=<sha256>  newline/comma-list (P1.7)
 #   AIM_HIVE_QUEEN_DB=%h/.local/share/aim/hive_queen/queen.sqlite
 #   RUST_LOG=info
-ExecStart=%h/Desktop/LongevityCommon/AIM/rust-core/target/release/aim-hive-queen
+ExecStart=%h/Desktop/LC/AIM/rust-core/target/release/aim-hive-queen
 Restart=on-failure
 RestartSec=5
 StandardOutput=journal

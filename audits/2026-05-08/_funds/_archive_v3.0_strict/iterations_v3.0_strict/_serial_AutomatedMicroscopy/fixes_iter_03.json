@@ -33,7 +33,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Framework coordination, funding | Active |\n| CDATA team | First user, validation experiments | Active |\n| OpenFlexure community | Hardware design, open-source support | Consulted |\n| University microscopy core facility | Independent validation site | TBD (contact: TBD) |\n| AI safety consultant | Audit of bounded autonomy policy | TBD |\n| Electronics workshop | PCB design, assembly | Confirmed |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Framework coordination, funding | Active |\n| CDATA team | First user, validation experiments | Active |\n| OpenFlexure community | Hardware design, open-source support | Consulted |\n| University microscopy core facility | Independent validation site | TBD (contact: TBD) |\n| AI safety consultant | Audit of bounded autonomy policy | TBD |\n| Electronics workshop | PCB design, assembly | Confirmed |"
   },
   {
     "file": "/CONCEPT.md",

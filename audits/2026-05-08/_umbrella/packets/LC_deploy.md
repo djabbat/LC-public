@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_deploy
 
-Path: `/home/oem/Desktop/LongevityCommon/deploy`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/deploy`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-1,4M	/home/oem/Desktop/LongevityCommon/deploy
+1,4M	/home/oem/Desktop/LC/deploy
 ```
 **Extensions:** .conf=15, .html=13, .service=8, .jpg=7, .md=5, .template=3, .yml=2, .js=2, .sh=2, .css=1, .png=1, .timer=1
 ## Tree (depth=2, max 200 entries)
@@ -57,7 +57,7 @@ Path: `/home/oem/Desktop/LongevityCommon/deploy`  Date: 2026-05-08
 
 ## Файлы
 
-- **`eco-inject.js`** — общий sticky header (LongevityCommon brand +
+- **`eco-inject.js`** — общий sticky header (LC brand +
   навигация по экосистеме) + dark/light переключатель + dark theme
   CSS overrides для PKP/OJS, Tailwind, кастомных стилей.
 

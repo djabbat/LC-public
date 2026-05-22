@@ -26,9 +26,9 @@ _HERE = Path(__file__).resolve().parent
 
 # Возможные расположения providers.py
 _PATHS = [
-    _HERE / "Services/tbpr/scripts",          # LongevityCommon/Services/...
+    _HERE / "Services/tbpr/scripts",          # LC/Services/...
     Path.home() / "Desktop/Services/tbpr/scripts",  # ~/Desktop/Services/...
-    _HERE / "AIM",                                    # LongevityCommon/AIM
+    _HERE / "AIM",                                    # LC/AIM
     _HERE,
 ]
 

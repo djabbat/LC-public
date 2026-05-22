@@ -2,19 +2,19 @@
   "meta": {
     "version": "8.0.0",
     "generated": "2026-05-09",
-    "description": "Canonical project registry of LongevityCommon ecosystem — single source of truth"
+    "description": "Canonical project registry of LC ecosystem — single source of truth"
   },
   "projects": {
     "mcoa": {
-      "name": "MCOA — Multi-Counter Architecture of Organismal Aging",
-      "path": "../MCOA/",
+      "name": "MCAOA — Multi-Counter Architecture of Organismal Aging (Phase III)",
+      "path": "../MCAOA/",
       "layer": "theoretical",
       "role": "meta_theory",
       "counter": null,
-      "status": "submitted",
-      "status_detail": "Submitted to Nature Aging (NATAGING-P13741), not peer-reviewed",
-      "version": "1.0",
-      "date": "2026-04-21",
+      "status": "concept_corrected",
+      "status_detail": "Phase III v2.0 corrected concept (2026-05-15): all PMIDs verified, power calc added, 6 arms design",
+      "version": "2.0",
+      "date": "2026-05-15",
       "dependencies": [],
       "dependents": ["cdata", "telomere", "mitoros", "epigenetic_drift", "proteostasis"],
       "key_params": {

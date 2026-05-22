@@ -3,15 +3,15 @@
 ### P0 — Blockers (необходимо исправить перед любым релизом)
 
 1. **Убрать тяжёлые артефакты из Git**  
-   - Добавить `.gitignore`: `BioSense/data/`, `BioSense/results/`, `MCOA/results/`, `**/*.set`, `**/*.edf`, `**/results/`  
+   - Добавить `.gitignore`: `BioSense/data/`, `BioSense/results/`, `MCAOA/results/`, `**/*.set`, `**/*.edf`, `**/results/`  
    - Перенести существующие тяжёлые файлы в Git LFS или внешнее хранилище (ссылки в документации)  
    - **Трудоёмкость:** S (создать `.gitignore` + migrate)  
    - **Риск:** низкий (файлы не являются исходным кодом; копию можно сохранить локально)  
-   - **Затрагиваемые файлы:** `.gitignore` (создать/дополнить), `BioSense/.gitignore`, `MCOA/.gitignore`
+   - **Затрагиваемые файлы:** `.gitignore` (создать/дополнить), `BioSense/.gitignore`, `MCAOA/.gitignore`
 
 2. **Выполнить все пункты DESIGN.md §5 и STATE.md §5 (10+ правок по disclosure и порту)**  
    - **server:**  
-     - `src/handlers/biosense.rs` — добавить header `X-LongevityCommon-Status: hypothesis-stage-exploratory`  
+     - `src/handlers/biosense.rs` — добавить header `X-LC-Status: hypothesis-stage-exploratory`  
      - `src/handlers/dashboard.rs` — заменить "biological age" → "exploratory aging activity index (research only)"  
      - `src/handlers/ze_guide.rs` — обновить system prompt (disclaimer per DESIGN.md)  
      - `src/handlers/disclosures.rs` — новый endpoint `GET /api/disclosures/v5_changes`  
@@ -45,7 +45,7 @@
    - **Затрагиваемые файлы:** `realtime/config/dev.exs`, `deploy/docker-compose-all.yml`
 
 5. **Синхронизировать subproject CONCEPT.md с umbrella v5.6**  
-   - Для каждого подпроекта (Ze, BioSense, FCLC, MCOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
    - Проверить и исправить:  
      * "DERIVE" → "POSTULATED ansatz" (Ze)  
      * "validated" → "exploratory / hypothesis-stage" (BioSense)  
@@ -66,7 +66,7 @@
 
 7. **Очистить избыточные файлы в подпроектах**  
    - Удалить пустые/устаревшие `AGENTS.md`, `JOURNAL.md`, `ROADMAP.md` или заменить ссылками на umbrella-документы  
-   - Проверить каждый подпроект (Ze, BioSense, MCOA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Проверить каждый подпроект (Ze, BioSense, MCAOA, EpigeneticDrift, MitoROS, Proteostasis)  
    - **Затрагиваемые файлы:** `*/AGENTS.md`, `*/JOURNAL.md`, `*/ROADMAP.md` (удалить или обновить)
 
 8. **Перенести `_audits/` в отдельный репозиторий или заархивировать**  
@@ -75,12 +75,12 @@
    - **Затрагиваемые файлы:** `_audits/*` (переместить), `README.md`
 
 9. **Добавить LICENSE в каждый подпроект**  
-   - Скопировать `LICENSE` (MIT из корня MCOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
+   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
    - Или добавить README с указанием umbrella license  
    - **Затрагиваемые файлы:** `Ze/LICENSE`, `BioSense/LICENSE`, … (создать)
 
 10. **Создать скрипт регенерации core-документов**  
-    - `scripts/regen_umbrella_core_from_article.sh` – парсит `~/Desktop/LongevityCommon.md` и генерирует CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE  
+    - `scripts/regen_umbrella_core_from_article.sh` – парсит `~/Desktop/LC.md` и генерирует CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, EVIDENCE, OPEN_PROBLEMS, STATE  
     - Задокументировать в `OPEN_PROBLEMS.md` (закрыть §3.2)  
     - **Затрагиваемые файлы:** `scripts/regen_umbrella_core_from_article.sh` (создать), `OPEN_PROBLEMS.md`
 
@@ -89,9 +89,9 @@
 ### P2 — Nice‑to‑have (улучшения UX и инфраструктуры)
 
 11. **Заменить Python-скрипты (не legacy) на Rust или явно исключить из rule**  
-    - В `Proteostasis/scripts/`, `MCOA/scripts/`, `EpigeneticDrift/scripts/` – если они используются, переписать на Rust или перенести в `_legacy/`  
+    - В `Proteostasis/scripts/`, `MCAOA/scripts/`, `EpigeneticDrift/scripts/` – если они используются, переписать на Rust или перенести в `_legacy/`  
     - Для BioSense/src (EEG pipelines) – оставить, т.к. это исследовательские скрипты, но пометить `# LEGACY` в начале файла  
-    - **Затрагиваемые файлы:** `Proteostasis/scripts/calibrate.py`, `MCOA/scripts/*.py`, `EpigeneticDrift/scripts/calibrate.py`, `BioSense/src/*.py`
+    - **Затрагиваемые файлы:** `Proteostasis/scripts/calibrate.py`, `MCAOA/scripts/*.py`, `EpigeneticDrift/scripts/calibrate.py`, `BioSense/src/*.py`
 
 12. **Добавить Git LHS track для больших файлов**  
     - `.gitattributes`: `*.set filter=lfs diff=lfs merge=lfs -text`, `*.edf`, `*.json` (кроме config)  
@@ -102,7 +102,7 @@
     - **Затрагиваемые файлы:** `README.md`
 
 14. **Написать unit-тесты для disclosure‑пунктов (P0.2)**  
-    - Например, тест на `server` проверяет, что в ответе `/dashboard` или `/chi_ze` есть header `X-LongevityCommon-Status`  
+    - Например, тест на `server` проверяет, что в ответе `/dashboard` или `/chi_ze` есть header `X-LC-Status`  
     - **Затрагиваемые файлы:** `server/tests/disclosure_test.rs` (создать)
 
 15. **Удалить пустые Go-директории**  

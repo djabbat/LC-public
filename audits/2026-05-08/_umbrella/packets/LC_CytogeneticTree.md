@@ -1,10 +1,10 @@
 # AUDIT PACKET — LC_CytogeneticTree
 
-Path: `/home/oem/Desktop/LongevityCommon/CytogeneticTree`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/CytogeneticTree`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-372K	/home/oem/Desktop/LongevityCommon/CytogeneticTree
+372K	/home/oem/Desktop/LC/CytogeneticTree
 ```
 **Extensions:** .md=70
 ## Tree (depth=2, max 200 entries)
@@ -103,9 +103,9 @@ Path: `/home/oem/Desktop/LongevityCommon/CytogeneticTree`  Date: 2026-05-08
 ## Sources of truth
 
 1. `CONCEPT.md` (this subproject)
-2. `~/Desktop/LongevityCommon/CONCEPT.md` (umbrella)
-3. `~/Desktop/LongevityCommon/CDATA/CONCEPT.md` (parent theory)
-4. `~/Desktop/LongevityCommon/MCOA/` (parent theoretical framework)
+2. `~/Desktop/LC/CONCEPT.md` (umbrella)
+3. `~/Desktop/LC/CDATA/CONCEPT.md` (parent theory)
+4. `~/Desktop/LC/MCAOA/` (parent theoretical framework)
 5. Global `~/CLAUDE.md`
 
 ## Rules
@@ -118,7 +118,7 @@ Path: `/home/oem/Desktop/LongevityCommon/CytogeneticTree`  Date: 2026-05-08
 
 ## Git
 
-- Tracked under `djabbat/LongevityCommon` (public view, core .md gitignored) AND `djabbat/LongevityCommon-private` (full content).
+- Tracked under `djabbat/LC` (public view, core .md gitignored) AND `djabbat/LC-private` (full content).
 - Large binary outputs (sample images, DAG visualizations >1 MB) → `docs/figures/` with Git LFS if needed, or excluded via .gitignore.
 
 ## Naming
@@ -145,7 +145,7 @@ Applicable from master list in `~/CLAUDE.md` (≤15% of references). Most releva
 ```md
 # CytogeneticTree
 
-**Cytogenetic Tree of Differentiation** — a LongevityCommon subproject to reconstruct the complete genealogical tree of cellular differentiation, from zygote to terminally-differentiated cells, by tracking centriole age across every asymmetric division.
+**Cytogenetic Tree of Differentiation** — a LC subproject to reconstruct the complete genealogical tree of cellular differentiation, from zygote to terminally-differentiated cells, by tracking centriole age across every asymmetric division.
 
 ## Why
 
@@ -201,7 +201,7 @@ CytogeneticTree/
 - **PI:** Dr. Jaba Tkemaladze, MD — jaba@longevity.ge, ORCID 0000-0001-8651-7243
 - **Host:** Georgia Longevity Alliance / კავშირი დღეგრძელობა (NGO #404506520, founded 2016-01-12)
 - **Funding context:** Longevity Impetus Grants LOI 2026-04-25 (Phase A MVCT demonstration)
-- **Parent:** `~/Desktop/LongevityCommon/`
+- **Parent:** `~/Desktop/LC/`
 
 ```
 ### `ImageAnalysis/README.md` (1404 chars)
@@ -296,8 +296,8 @@ MIT (orchestration code); CC-BY 4.0 (PROMPT.md + policies).
 
 **Version:** v1.0 (initial scaffolding)
 **Date:** 2026-04-21
-**Status:** 🟡 Active (new LongevityCommon subproject)
-**Parent umbrella:** `~/Desktop/LongevityCommon/` (coordinator of CDATA, FCLC, Ze, BioSense, MCOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
+**Status:** 🟡 Active (new LC subproject)
+**Parent umbrella:** `~/Desktop/LC/` (coordinator of CDATA, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
 
 ---
 
@@ -325,11 +325,11 @@ Such a tree would reveal:
 
 ## §2 Scientific Framing
 
-### 2.1 Position within the LongevityCommon ecosystem
+### 2.1 Position within the LC ecosystem
 
 | Subproject | Role vs Cytogenetic Tree |
 |------------|---------------------------|
-| **MCOA** (parent theoretical framework) | Cytogenetic Tree instantiates MCOA Counter #1 (centriolar) at single-cell resolution across lineage |
+| **MCAOA** (parent theoretical framework) | Cytogenetic Tree instantiates MCAOA Counter #1 (centriolar) at single-cell resolution across lineage |
 | **CDATA** (centriolar damage theory) | Cytogenetic Tree is the **empirical test bed** for CDATA — if tree shows old-centriole-lineages arrest, CDATA validated |
 | **AutomatedMicroscopy** | Physical hardware platform; Cytogenetic Tree is the experimental + analytical layer on top |
 | **Ze / BioSense** | Orthogonal biomarker work at organism level; Cytogenetic Tree operates at single-cell level |
@@ -462,7 +462,7 @@ Across replicate embryos / tissue systems, the cytogenetic tree has conserved st
 ## §8 Integrations Required
 
 - **CDATA** — theoretical model must be updated to include lineage-level predictions
-- **MCOA** — Counter #1 (centriolar) formalism needs per-lineage version
+- **MCAOA** — Counter #1 (centriolar) formalism needs per-lineage version
 - **Impetus grant** — Phase A provides the first MVCT data
 - **Ilia Zheleznov HSC simulator** — parallel simulation of expected Tree topology
 - **AIM** — not directly (this is research, not clinical)
@@ -480,7 +480,7 @@ Across replicate embryos / tissue systems, the cytogenetic tree has conserved st
 
 ---
 
-*Generated 2026-04-21. Part of LongevityCommon ecosystem. Connected to MCOA (theoretical), CDATA (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*
+*Generated 2026-04-21. Part of LC ecosystem. Connected to MCAOA (theoretical), CDATA (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*
 
 ```
 ### `ImageAnalysis/CONCEPT.md` (5206 chars)
@@ -697,12 +697,12 @@ LentiviralTools  FluorescentCameras     LaserAblation_405
  10. Output: Cytogenetic Tree visualization + dataset + manuscript
 ```
 
-## Integrations with LongevityCommon ecosystem
+## Integrations with LC ecosystem
 
 ```
   CytogeneticTree  ──┬──→  CDATA (theoretical validation data)
                      │
-                     ├──→  MCOA (Counter #1 lineage-level instance)
+                     ├──→  MCAOA (Counter #1 lineage-level instance)
                      │
                      ├──→  AutomatedMicroscopy (shared hardware platform)
                      │
@@ -992,7 +992,7 @@ Initial scaffolding:
 - [ ] Cross-species Cytogenetic Tree comparison (mammals + fish + amphibian)
 - [ ] Platform release for other labs (Addgene plasmids, Micro-Manager plugin, DAG-reconstruction library)
 - [ ] Clinical translation: human PSC-derived organoid Cytogenetic Trees for disease modeling
-- [ ] Integration with MCOA full multi-counter framework for per-lineage aging prediction
+- [ ] Integration with MCAOA full multi-counter framework for per-lineage aging prediction
 
 ---
 
@@ -1470,7 +1470,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 ### 2026-04-21
 
-- Subproject created (CytogeneticTree) as new LongevityCommon subproject per Jaba's request.
+- Subproject created (CytogeneticTree) as new LC subproject per Jaba's request.
 - Umbrella CONCEPT + 10 core files scaffolded (this set).
 - 12 technology sub-subprojects scaffolded via parallel agent (CONCEPT + 5-file core each).
 - Literature landscape agent (parallel) gathering KNOWLEDGE.md — PubMed + bioRxiv + arXiv + Google Scholar. **Search starts AFTER scaffolding completes** (per Jaba's explicit instruction).
@@ -1487,9 +1487,9 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 ## Things to remember across sessions
 
-- Always check `CONCEPT.md` is in sync with `CDATA/CONCEPT.md` + `MCOA/` claims. If CDATA updates its theory, CytogeneticTree predictions might need update.
+- Always check `CONCEPT.md` is in sync with `CDATA/CONCEPT.md` + `MCAOA/` claims. If CDATA updates its theory, CytogeneticTree predictions might need update.
 - Keep clear separation: Impetus = funded Phase A (MVCT fibroblasts, binary Go/No-Go). Cytogenetic Tree = 3-phase multi-year programme.
-- `~/Desktop/LongevityCommon/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
+- `~/Desktop/LC/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
 
 ## Related memory files
 
@@ -1497,27 +1497,27 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 - `feedback_deepseek_no_citations` — enforce for all KNOWLEDGE.md entries
 - `feedback_verify_references` — verify every PMID before commit
 - `feedback_cdata_docs_sync` — when editing CDATA, check if CytogeneticTree docs need update (and vice versa)
-- `project_mcoa_nature_correspondence` — MCOA manuscript at Nature Aging; CytogeneticTree is the empirical counterpart
+- `project_mcoa_nature_correspondence` — MCAOA manuscript at Nature Aging; CytogeneticTree is the empirical counterpart
 
 ```
 ### `LINKS.md` (2994 chars)
 ```md
 # LINKS — CytogeneticTree
 
-## Internal (within LongevityCommon ecosystem)
+## Internal (within LC ecosystem)
 
-- Umbrella: `~/Desktop/LongevityCommon/CONCEPT.md`
-- Parent theory (mechanism): `~/Desktop/LongevityCommon/CDATA/`
-- Parent theoretical framework: `~/Desktop/LongevityCommon/MCOA/` (under Nature Aging review, NATAGING-P13741)
-- Shared hardware platform: `~/Desktop/LongevityCommon/AutomatedMicroscopy/`
-- Orthogonal biomarker work: `~/Desktop/LongevityCommon/Ze/` + `~/Desktop/LongevityCommon/BioSense/`
-- Funding context: `~/Documents/Grants/LongevityCommon/CDATA/docs/IMPETUS_2026-04-25/`
+- Umbrella: `~/Desktop/LC/CONCEPT.md`
+- Parent theory (mechanism): `~/Desktop/LC/CDATA/`
+- Parent theoretical framework: `~/Desktop/LC/MCAOA/` (under Nature Aging review, NATAGING-P13741)
+- Shared hardware platform: `~/Desktop/LC/AutomatedMicroscopy/`
+- Orthogonal biomarker work: `~/Desktop/LC/Ze/` + `~/Desktop/LC/BioSense/`
+- Funding context: `~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/`
 - Peer collaborator simulator: `~/Documents/Meetings/Ilia_Zheleznov_2026-04-25/MEETING_KIT.md` (external code: https://github.com/zhelilyan-create/hematopoiesis-simulator)
 
 ## Git
 
-- Public view: `djabbat/LongevityCommon` (partial — core .md gitignored)
-- Private full: `djabbat/LongevityCommon-private` (full content incl. CytogeneticTree)
+- Public view: `djabbat/LC` (partial — core .md gitignored)
+- Private full: `djabbat/LC-private` (full content incl. CytogeneticTree)
 - Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CDATA-private` mirrors hardware dependencies)
 
 ## External resources

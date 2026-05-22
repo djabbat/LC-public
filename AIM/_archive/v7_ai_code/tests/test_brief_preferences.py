@@ -86,14 +86,14 @@ def test_loads_include_exclude(isolated):
     write_prefs(isolated, """
         include:
           sections: [hot_milestones, deadlines]
-          projects: [FCLC, MCOA]
+          projects: [FCLC, MCAOA]
         exclude:
           projects: [Ze]
     """)
     from agents.brief_preferences import load
     p = load()
     assert p.include_sections == ["hot_milestones", "deadlines"]
-    assert p.include_projects == ["FCLC", "MCOA"]
+    assert p.include_projects == ["FCLC", "MCAOA"]
     assert p.exclude_projects == ["Ze"]
 
 
@@ -124,7 +124,7 @@ def test_project_visible_whitelist(isolated):
     from agents.brief_preferences import Preferences
     p = Preferences(include_projects=["FCLC"])
     assert p.project_visible("FCLC")
-    assert not p.project_visible("MCOA")
+    assert not p.project_visible("MCAOA")
 
 
 def test_project_visible_blacklist_overrides_whitelist(isolated):

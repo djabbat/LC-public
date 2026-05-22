@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
 license = "MIT"
-description = "BioSense Rust backend — χ_Ze biomarker computation, MCOA bridge, exacerbation risk. Listens on 127.0.0.1:4502 (decided 2026-05-07)."
+description = "BioSense Rust backend — χ_Ze biomarker computation, MCAOA bridge, exacerbation risk. Listens on 127.0.0.1:4502 (decided 2026-05-07)."
 
 [[bin]]
 name = "biosense-backend"

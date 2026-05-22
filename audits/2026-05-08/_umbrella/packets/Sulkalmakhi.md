@@ -291,7 +291,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | **Eko‑banaki‑otskhe proposal** | `projects/eko‑banaki‑otskhe/` |
 | **Chedva‑saxelosno proposal** | `projects/chedva‑saxelosno/` |
 | **Legacy CONCEPT.md (now superseded)** | `_archive/CONCEPT_legacy.md` |
-| **Sister NGO GLA ecosystem note** | `../../LongevityCommon/README.md` (or local `ecosystem/` file) |
+| **Sister NGO GLA ecosystem note** | `../../LC/README.md` (or local `ecosystem/` file) |
 
 *All charter article numbers cited above refer to the official 2024 charter.*
 ```
@@ -424,7 +424,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 - CONCEPT.md (this document): `CONCEPT.md`
 - Eko-banaki-otskhe proposal: `projects/eko-banaki-otskhe/`
 - Chedva-saxelosno proposal: `projects/chedva-saxelosno/`
-- Sister NGO GLA: `../../LongevityCommon/` (separate entity)
+- Sister NGO GLA: `../../LC/` (separate entity)
 ```
 ### `PARAMETERS.md` (2883 chars)
 ```md
@@ -832,7 +832,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 - **Private foundations:** Caucasus Environmental NGO Network (CENN), Eurasia Partnership Foundation, local businesses.
 
 ### 5.4 Sister NGO note
-Sulkalmakhi is the **sister NGO** of Georgia Longevity Alliance (GLA, reg. №404506520). GLA is science-facing (longevity, MCOA, FCLC, EIC Pathfinder). Sulkalmakhi handles local/cultural projects. **Charters, banking, members, and operations are kept fully separate.** Cross-coordination only via written agreement.
+Sulkalmakhi is the **sister NGO** of Georgia Longevity Alliance (GLA, reg. №404506520). GLA is science-facing (longevity, MCAOA, FCLC, EIC Pathfinder). Sulkalmakhi handles local/cultural projects. **Charters, banking, members, and operations are kept fully separate.** Cross-coordination only via written agreement.
 
 ---
 

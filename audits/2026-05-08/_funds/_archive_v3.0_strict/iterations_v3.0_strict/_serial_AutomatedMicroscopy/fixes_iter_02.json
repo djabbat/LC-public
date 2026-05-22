@@ -27,7 +27,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon | Lead, coordination, funding | Confirmed |\n| University of Bristol | Biological validation, cell culture | Confirmed |\n| Zeiss | Microscope donation (IM 35) | Confirmed |\n| FLIR | Camera (Blackfly S) | Confirmed |\n| ThorLabs | LED illuminators | Confirmed |\n| OpenTrons | Liquid handling (future) | TBD |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, coordination, funding | Confirmed |\n| University of Bristol | Biological validation, cell culture | Confirmed |\n| Zeiss | Microscope donation (IM 35) | Confirmed |\n| FLIR | Camera (Blackfly S) | Confirmed |\n| ThorLabs | LED illuminators | Confirmed |\n| OpenTrons | Liquid handling (future) | TBD |"
   },
   {
     "file": "/EVIDENCE.md",

@@ -2,7 +2,7 @@
 # deploy.sh — install/refresh biosense-backend on the server.
 # Idempotent: build → install systemd unit → enable → smoke.
 #
-# Per DEPLOY_CONVENTION.md (~/Desktop/LongevityCommon/docs/).
+# Per DEPLOY_CONVENTION.md (~/Desktop/LC/docs/).
 
 set -euo pipefail
 

@@ -110,7 +110,7 @@ AIM — Adaptive Intelligence for Medicine
 ========================================
 Version: $VERSION
 Platform: $plat
-Source:   https://github.com/djabbat/LongevityCommon-public
+Source:   https://github.com/djabbat/LC-public
 
 Quick start
 -----------

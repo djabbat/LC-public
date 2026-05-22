@@ -9,7 +9,7 @@ TBPR Project Overnight Cycle v2 — с перебором моделей по к
 
 Usage:
     python3 tbpr_project_overnight_v2.py                    # все проекты
-    python3 tbpr_project_overnight_v2.py --project MCOA    # один проект
+    python3 tbpr_project_overnight_v2.py --project MCAOA    # один проект
 """
 
 import os, sys, re, json, logging, argparse, subprocess, shlex
@@ -41,8 +41,8 @@ log = logging.getLogger("tbpr_project_v2")
 PROJECTS = {
     "CDATA": {"concept": LC_ROOT / "CDATA" / "CONCEPT.md",
               "tbpr_dir": LC_ROOT / "CDATA" / "docs" / "tbpr"},
-    "MCOA": {"concept": LC_ROOT / "MCOA" / "CONCEPT.md",
-             "tbpr_dir": LC_ROOT / "MCOA" / "docs" / "tbpr"},
+    "MCAOA": {"concept": LC_ROOT / "MCAOA" / "CONCEPT.md",
+             "tbpr_dir": LC_ROOT / "MCAOA" / "docs" / "tbpr"},
     "Ze": {"concept": LC_ROOT / "Ze" / "CONCEPT.md",
            "tbpr_dir": LC_ROOT / "Ze" / "docs" / "tbpr"},
     "AIM": {"concept": LC_ROOT / "AIM" / "CONCEPT.md",
@@ -575,7 +575,7 @@ def run_project_cycle(project_name: str, project_info: dict, router: ModelRouter
 def main():
     parser = argparse.ArgumentParser(description="TBPR Project v2 — с перебором моделей")
     parser.add_argument("--project", type=str, default="",
-                        help="Project name (CDATA, MCOA, Ze, AIM, BioSense)")
+                        help="Project name (CDATA, MCAOA, Ze, AIM, BioSense)")
     parser.add_argument("--target", type=int, default=TARGET_SCORE)
     parser.add_argument("--champion-cycles", type=int, default=CHAMPION_CYCLES)
     parser.add_argument("--attempts", type=int, default=ATTEMPTS_PER_MODEL)

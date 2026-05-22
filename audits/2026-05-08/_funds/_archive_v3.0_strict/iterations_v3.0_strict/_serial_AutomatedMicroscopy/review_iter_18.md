@@ -38,7 +38,7 @@
    Отдельный раздел Limitations в CONCEPT.md (8 пунктов), также в EVIDENCE.md. Присутствует.
 
 6. **Consortium / collaboration plan** ✓  
-   Таблица с партнёрами (LongevityCommon, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) + роли + статусы. Есть placeholder TBD для недостающих. OK.
+   Таблица с партнёрами (LC, Bristol, Zeiss, FLIR, ThorLabs, OpenTrons) + роли + статусы. Есть placeholder TBD для недостающих. OK.
 
 7. **Reference reality + match** ✗  
    В EVIDENCE.md перечислены реальные DOI/PMID (OpenFlexure 10.1063/1.4941068, Hayflick PMID 14315085, CellPose 10.1038/s41592-020-01018-x, ImageJ 10.1038/nmeth.2019, GT335 PMID 1385210, Ninein 10.1242/jcs.02302, Burger 10.1038/s41586-020-2442-2, Boiko 10.1038/s41586-023-06792-0, Bran 10.1038/s42256-024-00832-8). Эти реальны и соответствуют утверждениям.  

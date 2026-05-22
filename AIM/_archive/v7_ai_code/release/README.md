@@ -64,7 +64,7 @@ gh release create v$(cat release/VERSION) \
 ```
 
 After release, the OS-detection block on hive.longevity.ge points
-users to `https://github.com/djabbat/LongevityCommon-public` for
+users to `https://github.com/djabbat/LC-public` for
 source clone or to the GitHub Releases page for direct download.
 
 ## Versioning

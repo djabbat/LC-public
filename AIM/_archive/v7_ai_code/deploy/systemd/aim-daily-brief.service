@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 EnvironmentFile=-%h/.aim_env
-WorkingDirectory=%h/Desktop/LongevityCommon/AIM
-ExecStart=%h/Desktop/LongevityCommon/AIM/venv/bin/python -m scripts.daily_brief
+WorkingDirectory=%h/Desktop/LC/AIM
+ExecStart=%h/Desktop/LC/AIM/venv/bin/python -m scripts.daily_brief
 StandardOutput=journal
 StandardError=journal

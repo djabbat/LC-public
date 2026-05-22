@@ -2,7 +2,7 @@
 
 **Дата:** 2026-04-26
 **Trigger:** Wave 1 peer review v2 (CommonHealth Empirical, agent ab87c710)
-**Source:** `/home/oem/Desktop/LongevityCommon/_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
+**Source:** `/home/oem/Desktop/LC/_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
 **Mode:** Overnight autonomous corrections (between Wave 1 and Wave 2)
 
 ---
@@ -41,7 +41,7 @@ S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигене�
 - Reformulation core CDATA hypothesis
 - Возможно reset gипотезы
 
-Уже adressed в `~/Desktop/LongevityCommon/CDATA/docs/CDATA_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
+Уже adressed в `~/Desktop/LC/CDATA/docs/CDATA_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
 
 ### HAP — stub state, требует rebuild
 
@@ -68,4 +68,4 @@ S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигене�
 ✅ **Citation integrity issues fixed:** 4 BioSense PMIDs, 1 CDATA DOI, 2 Ontogenesis fabrications flagged/removed.
 ⏸ **Structural issues queued для Wave 2:** CDATA Sobol-paradox, HAP stub, Ontogenesis pending rebuild, FCLC PATE/audit.
 
-Wave 2 (fund-perspective review) запустится автоматически после получения 2 оставшихся Wave 1 agents (CommonHealth Top+MCOA+Ze, PhD), применения их corrections, и затем launch Wave 2 agents на исправленной версии.
+Wave 2 (fund-perspective review) запустится автоматически после получения 2 оставшихся Wave 1 agents (CommonHealth Top+MCAOA+Ze, PhD), применения их corrections, и затем launch Wave 2 agents на исправленной версии.

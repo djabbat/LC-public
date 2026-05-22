@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LongevityCommon (lead) | Project coordination, AI development, data analysis | Active |\n| TBD (academic collaborator) | Biological validation, cell culture | TBD |\n| TBD (hardware supplier) | Stage, camera, LED components | TBD |\n| TBD (software consultant) | Claude Code integration, prompt engineering | TBD |\n| TBD (statistical consultant) | Sample size calculation, SAP | TBD |\n\nNote: Specific partner names and affiliations are placeholders. Formal agreements will be established before data collection."
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC (lead) | Project coordination, AI development, data analysis | Active |\n| TBD (academic collaborator) | Biological validation, cell culture | TBD |\n| TBD (hardware supplier) | Stage, camera, LED components | TBD |\n| TBD (software consultant) | Claude Code integration, prompt engineering | TBD |\n| TBD (statistical consultant) | Sample size calculation, SAP | TBD |\n\nNote: Specific partner names and affiliations are placeholders. Formal agreements will be established before data collection."
   },
   {
     "file": "CONCEPT.md",

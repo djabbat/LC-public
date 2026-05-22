@@ -16,7 +16,7 @@
 | Core‑files vs code alignment | 1 | Нет кода — не с чем сверять. |
 | Stack‑rule compliance (Rust+Phoenix only) | 1 | Стек заявлен как Arduino, Python (pymmcore-plus), Claude Code. Ни Rust, ни Phoenix не упоминаются. Правило нарушено полностью. |
 | Modernity of stack | 2 | Использование LLM для управления оборудованием — современно, но Hardware‑компоненты (Arduino, NEMA‑17) — уровень 2010‑х. |
-| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCOA декларирована, но не спроектирована. |
+| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCAOA декларирована, но не спроектирована. |
 
 ---
 
@@ -74,7 +74,7 @@
 - **Честная оценка рисков**  
   `EVIDENCE.md` включает раздел «Cautionary evidence» с перечислением ограничений DIY‑степперов, фотобличинга и AI‑галлюцинаций. Это повышает доверие.  
 - **Продуманная экосистемная интеграция**  
-  Указаны интерфейсы с CDATA, FCLC, MCOA — хотя пока только декларативно, это хороший задел.
+  Указаны интерфейсы с CDATA, FCLC, MCAOA — хотя пока только декларативно, это хороший задел.
 
 ---
 

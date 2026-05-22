@@ -33,7 +33,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "The following collaborators have agreed in principle to contribute to this project (roles and contributions are placeholders pending final agreements):\n- **Lab A** (mtDNA sequencing, single-cell analysis) — Lead on P0-1 and P0-2 experiments.\n- **Lab B** (ROS measurement, Seahorse analysis) — Lead on P1-1 and validation of w₃ weights.\n- **Lab C** (Mouse models, longitudinal studies) — Lead on P2-1.\n- **Lab D** (Bioinformatics, statistical modeling) — Lead on data analysis and model fitting.\n- **Clinical collaborator** (Human tissue samples) — Provide biopsy samples for validation in human tissues.\n- **External advisor** (Aging theory) — Consult on MCOA integration and falsification criteria.\nContact details and formal agreements will be added upon finalization."
+    "body": "The following collaborators have agreed in principle to contribute to this project (roles and contributions are placeholders pending final agreements):\n- **Lab A** (mtDNA sequencing, single-cell analysis) — Lead on P0-1 and P0-2 experiments.\n- **Lab B** (ROS measurement, Seahorse analysis) — Lead on P1-1 and validation of w₃ weights.\n- **Lab C** (Mouse models, longitudinal studies) — Lead on P2-1.\n- **Lab D** (Bioinformatics, statistical modeling) — Lead on data analysis and model fitting.\n- **Clinical collaborator** (Human tissue samples) — Provide biopsy samples for validation in human tissues.\n- **External advisor** (Aging theory) — Consult on MCAOA integration and falsification criteria.\nContact details and formal agreements will be added upon finalization."
   },
   {
     "file": "OPEN_PROBLEMS.md",

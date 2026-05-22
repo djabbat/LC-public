@@ -480,7 +480,7 @@ MINOR_REVISION
 | Core‑files vs code alignment | 1 | Нет кода — не с чем сверять. |
 | Stack‑rule compliance (Rust+Phoenix only) | 1 | Стек заявлен как Arduino, Python (pymmcore-plus), Claude Code. Ни Rust, ни Phoenix не упоминаются. Правило нарушено полностью. |
 | Modernity of stack | 2 | Использование LLM для управления оборудованием — современно, но Hardware‑компоненты (Arduino, NEMA‑17) — уровень 2010‑х. |
-| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCOA декларирована, но не спроектирована. |
+| Quality of processes / connections | 1 | Нет CI/CD, тестов (кроме ручных smoke checks), отсутствует описание pipeline для обработки изображений. Связь с FCLC / MCAOA декларирована, но не спроектирована. |
 
 ---
 
@@ -844,7 +844,7 @@ MAJOR_REVISION
    * **Последствие**: невозможность развернуть единое приложение; путаница в том, какой сервер является целевым. Требуется **объединение** в один backend-сервис с использованием `mcoa_core` как библиотеки и выносом работы с БД в отдельный слой.
 
 2. **Противоречие между документацией и кодом**  
-   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
+   * `CLAUDE.md` (строка «Frontend: React/TypeScript (`MCAOA/frontend/`)») → фактически frontend на Phoenix/Elixir (подтверждается `frontend/mix.exs` и `frontend/README.md`).  
    * `DESIGN.md` описывает crates `mcoa_interfaces` и `mcoa_tools`, которых нет в `crates/` ни в `Cargo.toml`.  
    * **Последствие**: LLM-агенты, руководствующиеся CLAUDE.md, будут генерировать некорректные решения. Документация не синхрон
 
@@ -1116,11 +1116,11 @@ MAJOR_REVISION
    *Impact*: весь проект необходимо переписать или предоставить Rust-модуль, взаимодействующий с Phoenix через каналы.
 
 2. **CORS `origin: "*"` в production**  
-   `LongevityCommonRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
+   `LCRealtimeWeb.Endpoint` (строка `plug CORSPlug, origin: "*"`) разрешает запросы с любого домена.  
    *Impact*: уязвимость для CSRF‑ и data‑exfiltration‑атак; недопустимо для продакшена.
 
 3. **Отсутствие реализации ключевого компонента `FeedNotifier`**  
-   В `application.ex` добавлен `LongevityCommonRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
+   В `application.ex` добавлен `LCRealtime.FeedNotifier` (комментарий о bridge от Rust), но сам файл не входит в аудит-пакет.  
    *Impact*: невозможно оценить корректность обмена сообщениями через pg_notify, надёжность подписки, обработку переподключения.
 
 4. **Нет конфигурации окружения (`runtime.exs`)**  
@@ -1250,7 +1250,7 @@ MAJOR_REVISION
 1. **[Redundant script]** Скрипт `gen-icons.mjs` вызывает сомнения: PWA-плагин `vite-plugin-pwa` может генерировать иконки самостоятельно при правильной конфигурации. Если иконки уже лежат в `public/`, скрипт избыточен.  
    → *Путь*: `package.json` scripts, `scripts/gen-icons
 
-## LongevityCommon_root
+## LC_root
 ## VERDICT
 **REJECT** — проект находится в состоянии неструктурированного черновика: кодовая база раздута дублированием, подпроекты концептуально не завершены, архитектурные правила нарушаются, документация избыточна и внутренне противоречива. Требуется фундаментальная перестройка (архитектурный рефакторинг, удаление мёртвого груза, внедрение CI и тестовой инфраструктуры) прежде чем можно будет говорить о приемлемом качестве.
 
@@ -1350,7 +1350,7 @@ MINOR_REVISION
 ## MINOR ISSUES
 1. Отсутствует описание папки `docs/` в таблице README (пустая или gitignored).  
 2. Не указана лицензия на документы (например, CC‑BY‑NC).  
-3. В CONCEPT.md дана ссылка на `LongevityCommon NEWS.md`, но не указан путь к этому файлу в экосистеме (подпроект? внешний?).  
+3. В CONCEPT.md дана ссылка на `LC NEWS.md`, но не указан путь к этому файлу в экосистеме (подпроект? внешний?).  
 4. Язык контента на YouTube — грузинский, русский, английский, а документация только русская. Это допустимо, но в `README.md` стоило бы явно указать, что «документация проекта ведётся на русском».  
 5. Скрипт `md_to_docx.py` нигде не документирован (зависимости, версия Pandoc?).  
 
@@ -1783,7 +1783,7 @@ MINOR_REVISION
 | **Architecture** | 1 | Отсутствует: нет модульной структуры, нет слоёв, нет контрактов между компонентами. «Архитектура» ограничена иерархией Markdown-файлов. |
 | **Optimality** | 2 | Концепция бизнеса проработана, но техническая реализация нулевая. Нет оценки производительности, масштабирования, безопасности. |
 | **Structure / Modularity** | 2 | Каталоги осмысленны (Recepturae, Tabulae, Materials), но внутри — плоская коллекция файлов без единой схемы именования или связей. |
-| **Systematicity (cross-file consistency)** | 2 | Имеются задокументированные расхождения цен (были, исправлены), отсутствует синхронизация MCOA во всех core-файлах, нет единого реестра сущностей. |
+| **Systematicity (cross-file consistency)** | 2 | Имеются задокументированные расхождения цен (были, исправлены), отсутствует синхронизация MCAOA во всех core-файлах, нет единого реестра сущностей. |
 | **Core-files vs code alignment** | 1 | Три скрипта Python (генерация презентаций) не интегрированы с core-файлами. Нет кода, реализующего описанные в CONCEPT.md алгоритмы (LongevityProgram, AestheticDentistry). |
 | **Stack-rule compliance (Rust+Phoenix only)** | 1 | Стек — Python + Markdown + PDF. Требование Rust/Phoenix полностью нарушено. |
 | **Modernity of stack** | 1 | Python 3 для генерации слайдов — допустимо, но отсутствуют контейнеризация, CI/CD, тестирование, статический анализ. Стек не соответствует 2026 году. |
@@ -1800,7 +1800,7 @@ MINOR_REVISION
    Проект не содержит ни одного развёртываемого сервиса, API, базы данных или интерфейса. Представленный код (`make_presentation*.py`) — это изолированные генераторы слайдов, не связанные с core-файлами. CONCEPT.md содержит псевдокод на Python (классы `LongevityProgram`, `AestheticDentistry`), но никакой реальной реализации нет.
 
 3. **Несогласованность core-файлов**  
-   MCOA-приложение (добавлено в CONCEPT.md 2026-04-21) не упомянуто ни в README.md, ни в MAP.md, ни в KNOWLEDGE.md. Это нарушает принцип единого источника истины.
+   MCAOA-приложение (добавлено в CONCEPT.md 2026-04-21) не упомянуто ни в README.md, ни в MAP.md, ни в KNOWLEDGE.md. Это нарушает принцип единого источника истины.
 
 4. **Отсутствие дорожной карты с датами**  
    CONCEPT.md §11 содержит фазы (1–4), но ни одна не имеет целевой даты. Проект находится в статусе «ждёт инвестора» с неопределёнными сроками, что делает невозможным планирование разработки.
@@ -1834,7 +1834,7 @@ MINOR_REVISION
 | **Optimality** | 3 | Репозиторий 969 МБ (вероятно, включает сырые данные/артефакты). Отсутствие Git LFS или `.gitignore` для тяжёлых файлов. |
 | **Structure / Modularity** | 4 | Хорошая модульность: каждый подпроект автономен, есть umbrella-документы. Однако некоторые модули (HAP, Ontogenesis) объявлены «TOXIC» и не удалены — загрязняют структуру. |
 | **Systematicity (cross-file consistency)** | 2 | Множество несоответствий: realtime-config не обновлён (порт 4001), TODO в DESIGN.md не выполнены, subproject CONCEPT.md не синхронизированы с umbrella v5.6. |
-| **Core-files vs code alignment** | 2 | Код отстаёт от документации: в STATE.md перечислены правки для server/web/realtime, но нет признаков, что они внесены (отсутствие заголовков `X-LongevityCommon-Status`, баннеров, изменённых системных промптов). |
+| **Core-files vs code alignment** | 2 | Код отстаёт от документации: в STATE.md перечислены правки для server/web/realtime, но нет признаков, что они внесены (отсутствие заголовков `X-LC-Status`, баннеров, изменённых системных промптов). |
 | **Stack-rule compliance (Rust+Phoenix only)** | 3 | Формально правило нарушено — есть значительный объём Python (344 строки), TypeScript (53+14), Node. Это допустимо для экспериментальных скриптов, но заявленное «только Rust+Phoenix» не выполняется. |
 | **Modernity of stack** | 5 | Rust + Elixir/Phoenix + React+TS + Vite + PostgreSQL — современный и производительный набор. |
 | **Quality of processes / connections** | 2 | Отсутствует umbrella-CI, нет mock-сервисов для интеграционных тестов, регенерация core-документов ручная, портовые конфликты не устранены. |
@@ -1844,12 +1844,12 @@ MINOR_REVISION
 ## CRITICAL ISSUES
 
 1. **Репозиторий 969 МБ (вероятно, содержит датасеты/артефакты)**  
-   – `BioSense/data/`, `BioSense/results/`, `MCOA/results/` не должны быть в Git.  
+   – `BioSense/data/`, `BioSense/results/`, `MCAOA/results/` не должны быть в Git.  
    – **Действие:** добавить `.gitignore` для `.set`, `.edf`, `.json` результатов; перенести данные в Git LFS или внешнее хранилище.  
    – Без этого репозиторий не клонируется эффективно, нарушены принципы воспроизводимости.
 
 2. **Невыполненные критические изменения из DESIGN.md §5 и STATE.md §5**  
-   – В server/handlers/biosense.rs не добавлен заголовок `X-LongevityCommon-Status`.  
+   – В server/handlers/biosense.rs не добавлен заголовок `X-LC-Status`.  
    – В web/src/pages/Dashboard.tsx нет баннера «Hypothesis-stage…».  
    – В realtime/config/dev.exs порт всё ещё 4001 (конфликт с Ze).  
    – **Действие:** внести все перечисленные правки (10+ пунктов) и закоммитить.
@@ -2183,7 +2183,7 @@ MINOR_REVISION
 | **Structure / Modularity** | 3 | Subproject-границы определены, но TOXIC-проекты (HAP, Ontogenesis) не удалены, нарушая модульность. Внутри одного репозитория смешаны Rust, Python, Elixir, Node — это затрудняет независимую разработку. |
 | **Systematicity (cross-file consistency)** | 2 | Core-файлы (CONCEPT, DESIGN, STATE) согласованы между собой, но код социального слоя не отражает обещанные изменения (см. STATE.md §5). Port conflict упомянут в DESIGN.md, но не исправлен. Subproject CONCEPTs не обновлены. |
 | **Core-files vs code alignment** | 2 | Множество action-пунктов из STATE.md не выполнены (disclosure headers, banner, tooltips, endpoint). Стек реально использует Python, хотя заявлен «Rust+Phoenix only». |
-| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
+| **Stack-rule compliance (Rust+Phoenix only)** | 1 | Серьёзное нарушение: **359 Python-файлов** (BioSense/src, Proteostasis/scripts, AIM, Ze/scripts, EpigeneticDrift/scripts, MCAOA/scripts). Кроме того, присутствует Node (web/), который не относится к Phoenix. |
 | **Modernity of stack** | 4 | Rust/axum, Elixir/Phoenix, React+TypeScript — современные технологии. Python используется для ML-скриптов, что допустимо, но нарушает правило моностека. |
 | **Quality of processes / connections** | 2 | Отсутствует CI для umbrella-стека, нет интеграционных тестов, нет mock для внешних API. Port conflict не разрешён. Subproject CONCEPTs не синхронизированы. Процесс регенерации core .md не автоматизирован. |
 
@@ -2194,7 +2194,7 @@ MINOR_REVISION
 1. **Нарушение стека (Python)**  
    - `BioSense/src/ze_alpha_peak.py`, `eeg_ze_processor.py` и др. — 7 Python-файлов, критических для биомаркерного пайплайна.  
    - `AIM/` — полноценный Python-сервис (telegram_bot.py, llm.py, medical_system.py).  
-   - `Proteostasis/scripts/calibrate.py`, `MCOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
+   - `Proteostasis/scripts/calibrate.py`, `MCAOA/scripts/compare_mcoa_cdata.py`, `EpigeneticDrift/scripts/calibrate.py` — калибровочные скрипты на Python.  
    - В code histogram `py 359` — нарушение «Rust+Phoenix only» даже для научного слоя.
 
 2. **Port conflict realtime ↔ Ze (4001) не исправлен**  

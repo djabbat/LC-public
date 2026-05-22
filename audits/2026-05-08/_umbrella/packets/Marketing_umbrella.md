@@ -281,7 +281,7 @@ Marketing/
 ## What this umbrella does NOT cover
 
 - **Clinic website (drjaba.com)** — server-side, repo `djabbat/DrJaba` on jaba@server. Separate project.
-- **Longevity scientific publishing** — uses GLA NGO entity, lives in `~/Desktop/GLA/` and `~/Desktop/LongevityCommon/`.
+- **Longevity scientific publishing** — uses GLA NGO entity, lives in `~/Desktop/GLA/` and `~/Desktop/LC/`.
 - **Local civic / cultural projects** — uses Sulkalmakhi NGO, lives in `~/Desktop/Sulkalmakhi/`.
 
 ## Cross-project notes
@@ -404,7 +404,7 @@ All under Tkemaladze personal entity (drjaba.com / Longevity Clinic Inc. / Strip
 - **drjaba.com** — конечная воронка (консультации, клиника).
 - **GLA / Annals of Rejuvenation Science** — источник тем для видео (свежие публикации journal).
 - **Книга Ze** — продукт для продажи через канал (4-step NO-ISBN план уже зафиксирован).
-- **LongevityCommon NEWS.md** — источник новостных тем для Shorts.
+- **LC NEWS.md** — источник новостных тем для Shorts.
 
 ## Точка пересмотра
 
@@ -557,10 +557,10 @@ Lead magnet "30-biomarker checklist" — общая точка для всех 3
 
 | Соседний проект | Связь |
 |---|---|
-| `~/Desktop/PhD/` | Ze Theory — это Ze (LongevityCommon), не PhD. Books не пересекается с PhD напрямую |
-| `~/Desktop/LongevityCommon/Ze/` | Ze Theory v10 — текст книги растёт оттуда; обновления Ze ⇒ ревизия книги |
+| `~/Desktop/PhD/` | Ze Theory — это Ze (LC), не PhD. Books не пересекается с PhD напрямую |
+| `~/Desktop/LC/Ze/` | Ze Theory v10 — текст книги растёт оттуда; обновления Ze ⇒ ревизия книги |
 | `~/Desktop/GLA/` | Annals/Longevity Horizon — научное publishing, **другая воронка** (academic). Не путать с commercial Books |
-| `~/Desktop/LongevityCommon/AIM/` | AIM `/chat` — может быть consult-funnel endpoint |
+| `~/Desktop/LC/AIM/` | AIM `/chat` — может быть consult-funnel endpoint |
 | Server `djabbat/DrJaba` (drjaba.com) | Site, на который воронка ведёт. Изменения в site — там, не здесь |
 | Server `space.drjaba.com` | Уже-wired Stripe — Books Step 2 берёт checkout оттуда |
 | Server `books.drjaba.com` | Static landing для Books — синхронизация с этим umbrella |
@@ -1189,7 +1189,7 @@ NPLG (Грузинская национальная библиотека) отк
 | GLA (academic publishing, separate funnel) | `~/Desktop/GLA/` |
 | Annals of Rejuvenation Science | https://longevity.ge/ars/ |
 | Longevity Horizon journal | https://longevity.ge/longhoriz/ |
-| Ze project (source for Ze Theory) | `~/Desktop/LongevityCommon/Ze/` |
+| Ze project (source for Ze Theory) | `~/Desktop/LC/Ze/` |
 | AIM (potential consult endpoint) | https://aim.longevity.ge |
 
 ## Git
