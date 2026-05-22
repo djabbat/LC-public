@@ -186,5 +186,5 @@ CONCEPT.md replaced with MCAOA Phase III v2.0 corrected concept.
 
 ---
 
-**Source code:** [github.com/djabbat/LC-public](https://github.com/djabbat/LC-public) (MCAOA in `LC/MCAOA/`)  
+**Source code:** [github.com/djabbat/LC](https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA) (branch `mcaoa-v3.2`, в `MCAOA/`)  
 **Preprint:** DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
