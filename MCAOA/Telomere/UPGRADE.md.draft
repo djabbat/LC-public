@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 11:43
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LC/CDATA/experiments/Telomere`
+- **Текущий score:** 36/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 12 баллов
+- **Cycle:** 7
+
+## In-progress concerns (cycle 7)
+
+1. [PARANOID] **Complete PI information section** — Provide name, ORCID, verified h-index, 5-10 senior-author publications with real PMIDs, and previous grant history. This is the single most critical fix.
+2. [PARANOID] **Correct the PMID count** — Change "21 total PMIDs" to "18 total PMIDs" (or add 3 more citations to reach 21). Remove or explain the retracted claims (Γ_{2,1} and Γ_{2,4}) — either delete them entirely or provide the CORRECTIONS file and update the document accordingly.
+3. [PARANOID] **Add budget and consortium sections** — Even for a CONCEPT document, include:
+4. [PARANOID] Estimated personnel costs (PostDoc: €60K/yr EU or $80K US; PhD: €30-40K)
+5. [PARANOID] Equipment needs (qPCR machine ~$30K, Q-FISH microscope ~$100K, sequencer ~$300K if needed)
+6. [PARANOID] Overhead (20-25% indirect)

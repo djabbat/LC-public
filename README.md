@@ -1,0 +1,232 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at README.ru.md. -->
+<!-- Iteration 2 reviewed 2026-05-17 by 9-state TA peer-review (mean 32.7 → fixed). -->
+
+# LC
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: hypothesis-stage](https://img.shields.io/badge/status-hypothesis--stage-orange)](#status)
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--8651--7243-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0000-0001-8651-7243)
+
+**An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
+
+> **TL;DR** — LC glues together 5 scientific subprojects (a meta-theory, a cellular hypothesis, a math ansatz, a wearable platform, and a federated-learning layer) with a thin social layer (chat / feed / messaging) so that hypothesis-stage research can be iterated quickly, transparently, and against the same reference cohorts.
+
+## Glossary (read first)
+
+| Term | One-line definition |
+|------|---------------------|
+| **Aging as Total Chronic Disease** | Working hypothesis: physiological aging is a constellation of co-progressing chronic processes that can be tracked, predicted, and modulated as a single multimodal disease entity |
+| **MCAOA** | Multi-Counter Architecture of Aging — meta-theory in which aging = weighted sum of N parallel damage counters (genomic, mitochondrial, centriolar, …) |
+| **CDATA** | Centriolar Damage Accumulation Theory — molecular-cellular hypothesis (status: **inconclusive**) about centriole inheritance in haematopoietic stem cells |
+| **HSC** | Haematopoietic Stem Cell |
+| **Ze** | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` relating biological time to information content of a state vector Z |
+| **χ_Ze** | Multimodal biomarker derived from Ze (current formulation is post-hoc; pre-registered univariate χ_Ze returned NULL on Cuban/Dortmund/LEMON cohorts) |
+| **BioSense** | Wearable platform that streams Z-vector telemetry and computes χ_Ze on-device |
+| **FCLC** | Federated Learning + DP + k-anonymity layer for clinical pilots without raw data egress |
+| **Activated** | Clinical pilot (anaemia-management cohort, Tbilisi) — applied test-bed for the upstream tooling |
+
+## Who this is for
+
+| Audience | Where to start |
+|----------|----------------|
+| Aging biologist | [`MCAOA/CONCEPT.md`](MCAOA/CONCEPT.md), [`CDATA/CONCEPT.md`](CDATA/CONCEPT.md), `THEORY.md` |
+| ML / FL engineer | [`FCLC/CONCEPT.md`](FCLC/CONCEPT.md), `realtime/`, `server/` |
+| Mathematician | [`Ze/THEORY.md`](Ze/THEORY.md), `PARAMETERS.md` |
+| Clinician | [`Activated/`](https://github.com/djabbat/) (private), `Activated/CONCEPT.md` |
+| Funder / journalist | this README + `docs/EIC_PartB_2026/EXECUTIVE_SUMMARY.md` |
+| Citizen-scientist | [`BioSense/README.md`](BioSense/README.md), no clinical claim |
+
+## Subproject map
+
+```
+                          ┌──────────────────────────┐
+                          │  MCAOA (meta-theory)     │
+                          │  aging = Σ wᵢ·Cᵢ(t)      │
+                          └──────────┬───────────────┘
+                                     │ supplies "counter slot"
+                                     ▼
+   ┌─────────────┐   ┌──────────────────────────┐   ┌──────────────┐
+   │ CDATA       │──►│  candidate counters:     │◄──│ other        │
+   │ (centriole, │   │  C₁ genome  C₂ mito      │   │ counters     │
+   │ inconclusive)│   │  C₃ centriole  C₄ epi    │   │ (future)     │
+   └─────────────┘   │  C₅ telomere  …          │   └──────────────┘
+                     └──────────┬───────────────┘
+                                │ formal compression
+                                ▼
+                       ┌──────────────────┐
+                       │ Ze ansatz        │
+                       │ dτ/dt = −α·I(Z)  │
+                       └────────┬─────────┘
+                                │ operationalised as
+                                ▼
+                       ┌──────────────────┐         ┌────────────────────┐
+                       │ χ_Ze biomarker   │◄────────│ BioSense wearable  │
+                       │ (multimodal)     │         │ (Z-vector stream)  │
+                       └────────┬─────────┘         └─────────┬──────────┘
+                                │ tested at scale via         │
+                                ▼                             │
+                       ┌──────────────────┐                   │
+                       │ FCLC federated   │◄──────────────────┘
+                       │ DP + k-anon      │
+                       └────────┬─────────┘
+                                │ clinical test-bed
+                                ▼
+                       ┌──────────────────┐
+                       │ Activated pilot  │
+                       │ anaemia cohort   │
+                       │ Tbilisi          │
+                       └──────────────────┘
+```
+
+The **social layer** (`server/` axum REST + `web/` React/TS PWA + `realtime/` Phoenix Channels) wraps the above so that researchers, citizens and clinicians can discuss runs, share annotations, and subscribe to BioSense / FCLC events without leaking raw data. It is not a research subproject per se — it is the connective tissue that makes the rest usable in production.
+
+## Status (2026-04-28, v5.6)
+
+⚠ **Hypothesis-stage research platform.** All empirical results are exploratory (hypothesis-generating), not confirmatory. Pre-registered tests of the early univariate χ_Ze formulation on Cuban / Dortmund / LEMON cohorts → NULL results (deprecated / superseded). The current multimodal χ_Ze is a post-hoc reformulation. AUC and r² values are exploratory with an explicit p-hacking risk (Ioannidis 2005, PMID 16060722). Confirmatory pre-registration is planned with the FCLC v2 release.
+
+Key publications (MCAOA, Ze, BioSense) are NOT peer-reviewed as of v5.6 (eLife submission of MCAOA: ID `eLife-RP-RA-2026-111885`, stage = Submitted to Journal).
+
+## Why now, why us
+
+Aging research is fragmenting: each hypothesis (telomere, mTOR, mitochondria, epigenetic clocks, senescence, centriole) has its own metric, its own cohort, its own preprint server. LC answers a single engineering question: can we host *all* candidate counters in one falsifiable framework (MCAOA), test them against *one* mathematical ansatz (Ze), feed them from *one* wearable (BioSense), validate against *one* federated cohort layer (FCLC), and pilot in *one* clinic (Activated)? We don't claim our counters are right. We claim the architecture is *testable*, *reproducible*, and *cheap enough* for an NGO budget.
+
+### Vision (the ten-year wedge)
+
+Imagine a 2036 in which any biology PhD anywhere on the planet — Tbilisi, Manila, Kampala, Quito — can drop a candidate aging counter into the same MCAOA slot and have it scored against twenty cohorts overnight, federated, without moving a single patient record. No vendor lock-in, no $500M consortium, no twelve-month IRB cycle per attempt. Hypothesis throughput becomes the rate-limiting step of geroscience instead of money, prestige, or geography. That's the world LC is trying to make reachable on a $200K/year budget out of an NGO in a country most longevity maps don't bother to colour in.
+
+### Personal note
+
+This stack exists because Koté Chichinadze (1944–2018) spent forty years arguing that centrioles were an under-explored axis of aging and didn't live to see the experiment that would have settled it. CDATA is the experiment. Everything else is the scaffolding I had to build because the experiment couldn't be done with the tools that existed. — Jaba Tkemaladze
+
+## Positioning (industry context)
+
+|  | Hevolution Foundation | Loyal | NIA Geroscience | Buck Institute | **LC** |
+|--|----------------------|-------|-----------------|----------------|---------------------|
+| Funding scale | $1B+ | $135M | $200M+ | $50M+ | $0 (NGO, grant-seeking) |
+| Modality | grant-maker | dog drug | basic research | basic research | **integrative architecture** |
+| Output | papers, drugs | NTI label | RFAs | papers | hypothesis-testing infrastructure + clinical pilot |
+| Philosophy | top-down | translational | hypothesis-driven | hypothesis-driven | falsifiable meta-framework + open subprojects |
+| Open source? | partial | no | partial | no | **yes, MIT/Diamond-OA** |
+
+We are not competing — we sit upstream of all of them as the *substrate* on which any of N hypotheses can be evaluated comparably.
+
+## Authority order on conflict
+
+1. `LC/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
+2. `<subproject>/CONCEPT.md` (internal math)
+3. `<subproject>/THEORY.md` (formal derivations)
+4. Article (`~/Desktop/LC.md`) — full narrative
+5. Code — follows the CONCEPT of the corresponding level
+
+## Repository structure (curated)
+
+```
+LC/
+├── README.md, CONCEPT.md, THEORY.md, DESIGN.md, MAP.md, ...   # umbrella core (*.md)
+├── PARAMETERS.md, STATE.md, EVIDENCE.md, OPEN_PROBLEMS.md     # decision artefacts
+├── PI_TRACK_RECORD.md, PROJECT_AUDIT_2026-05-12.md            # transparency
+├── pi.md                                                       # agent memo
+│
+├── MCAOA/, CDATA/, Ze/, BioSense/, FCLC/, AIM/                # subprojects
+│
+├── server/                                                     # Rust/axum REST API
+├── web/                                                        # React+TS PWA UI
+├── realtime/                                                   # Phoenix Channels
+├── shared-types/                                               # cross-stack contracts
+├── services/                                                   # supporting microservices
+│
+├── deploy/                                                     # docker-compose-all.yml
+├── docs/                                                       # active grant track (EIC PartB 2026)
+├── refs/                                                       # canonical citations (PMID_*.md)
+├── audits/, _audits/                                           # internal & external audit reports
+├── scripts/, llm/                                              # tooling
+└── _archive/, _originals/                                      # historical artefacts
+```
+
+(Full listing: 33 top-level entries. `tree -L 1` for current state.)
+
+## Quick start
+
+```bash
+# 10-minute path for a new researcher
+git clone https://github.com/djabbat/longevitycommon-private && cd LC
+cat README.md CONCEPT.md THEORY.md   # mental model
+cd Ze && ./run.sh                    # :4000 / :4001
+cd BioSense && ./run.sh              # :4100 / :4101
+cd ../FCLC && cargo run --release    # federated demo
+# explore notebooks: ./notebooks/ (if you want to reproduce a figure)
+```
+
+## Run (subproject backends)
+
+```bash
+cd Ze && ./run.sh        # :4000 / :4001
+cd BioSense && ./run.sh  # :4100 / :4101
+```
+
+Social layer (`server/`, `web/`, `realtime/`) is a separate stack — see `DESIGN.md §7`.
+
+## Tests
+
+```bash
+cargo test --release   # in any subproject root
+mix test               # in any Phoenix subproject
+```
+
+## Reproducibility
+
+- Each subproject pins exact dependency versions (`Cargo.lock`, `mix.lock`, `package-lock.json`).
+- Released versions are tagged (`v5.6`, …) and a snapshot is archived to **Zenodo** (DOI badge will be added on the next tagged release).
+- Cohort data hashes (SHA-256) recorded in `EVIDENCE.md` per analysis run; raw clinical data stays under the FCLC layer and **is not** in the public repo.
+- Containers: `deploy/docker-compose-all.yml` brings up the whole stack offline-reproducibly.
+- Hardware envelope assumed: x86_64, 16 GiB RAM, no GPU required for any reproducibility run.
+
+## Demos & live deployments
+
+| Demo | URL | Notes |
+|------|-----|-------|
+| LC umbrella site | <https://longevity.ge/> | Public landing, mission, news |
+| Annals of Rejuvenation Science (OJS) | <https://longevity.ge/annals/> | Diamond-OA journal, GLA imprint |
+| Longevity Horizon (OJS) | <https://longevity.ge/longhoriz/> | Broader scope sister journal |
+| ReScience reproducibility journal | <https://longevity.ge/rescience/> | Reproducibility test-bed |
+| AIM clinical assistant | <https://longevity.ge/aim/> | Integrative-medicine knowledge interface |
+| BioSense static preview | <https://longevity.ge/biosense-static/> | Wearable demo (static) |
+| Ze static visualisation | <https://longevity.ge/ze-static/> | Ze ansatz interactive plot (static) |
+| eLife submission (MCAOA) | manuscript ID `eLife-RP-RA-2026-111885` | Stage: Submitted to Journal |
+
+(Animated GIF / screencast of BioSense → χ_Ze → FCLC pipeline: planned for v5.7 release notes.)
+
+## Grant track (active)
+
+**EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
+LC umbrella as an application for Area #2 (biomarker-based tool, BioSense at the centre).
+Details: `docs/EIC_PartB_2026/`.
+
+## Roadmap
+
+| Version | Target date | Headline change |
+|---------|-------------|-----------------|
+| **v5.6 (now)** | 2026-04 | Post-hoc multimodal χ_Ze + integrated audit |
+| v5.7 | 2026-06 | CITATION.cff + Zenodo DOI + CONTRIBUTING |
+| v6.0 | 2026-Q4 | FCLC v2 with **malicious-secure** federated round (not only semi-honest) |
+| v6.1 | 2027-Q1 | Pre-registered confirmatory study (OSF) of multimodal χ_Ze on a held-out cohort |
+| v7.0 | 2027-Q3 | Activated clinical pilot v1 outcomes, peer-reviewed |
+
+## Licence
+
+- **Code**: MIT (see [`LICENSE`](LICENSE)).
+- **Clinical data (Activated)**: NOT MIT — governed by a Data Use Agreement (DUA) per cohort. Public repo contains no raw patient data.
+- **Subproject carve-outs**: any subproject with a different licence ships its own `LICENSE` file at its root.
+- **Citation**: see [`CITATION.cff`](CITATION.cff) (machine-readable CFF 1.2.0). Human-readable form: Tkemaladze J., *LC: an integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease*, v5.6, 2026, ORCID 0000-0001-8651-7243.
+
+## Governance & community
+
+- **Discussions**: GitHub Discussions in the private repo (invite-based until v6.0).
+- **Issues / bugs**: GitHub Issues.
+- **Security**: `SECURITY.md` (to be added v5.7) — vulnerability reports to `security@longevity.ge` (PGP key published on the website).
+- **Code of Conduct**: Contributor Covenant 2.1 (file to be added v5.7).
+
+## Contact
+
+Jaba Tkemaladze · jaba@longevity.ge · ORCID [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243)
+Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)

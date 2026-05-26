@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 07:03
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LC/MCAOA`
+- **Текущий score:** 31/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 17 баллов
+- **Cycle:** 3
+
+## In-progress concerns (cycle 3)
+
+1. [PARANOID] **Replace fabricated ORCIDs with real ones** — Obtain genuine ORCID identifiers for Solovei and Tkemaladze. Verify them against registry. This is a 30-minute fix that removes the most damaging fabrication marker.
+2. [CYNIC] **Replace "transformative"**: Quantify expected impact (e.g., "predicts 80% of aging variance in UK Biobank"). --- ### Final Note: The revision addresses prior fabrication issues but retains structural fluff. **REVISE_MAJOR** for budget and deliverable clarity. No toxic elements detected.
+3. [RED-TEAM] **Add explicit negative results section:** Write a paragraph titled "What would falsify MCAOA?" that lists specific, measurable outcomes that would reject the theory. Example: "If centriole polyglutamylation does not correlate with division number in HSCs (r < 0.3), Counter #1 is rejected.
+4. [PARANOID] **Create real OSF pre-registration** — Register the actual Test 4 protocol on OSF with correct URL format (osf.io/XXXXX/registrations/YYYYY). Include: sample size justification (power analysis), primary endpoint, statistical analysis plan, exclusion criteria. This fixes Condition 2 violat
+5. [PARANOID] **Correct budget calculations** — Recalculate all personnel costs using correct formulas:
+6. [PARANOID] PostDoc: €3,800 × 24 = €91,200 + 20% social = €109,440
