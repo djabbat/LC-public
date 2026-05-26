@@ -1,0 +1,32 @@
+[Unit]
+Description=BioSense backend — χ_Ze biomarker computation (Rust, port 4502)
+Documentation=file:///home/jaba/web/longevitycommon/BioSense/CONCEPT.md
+Documentation=file:///home/oem/Desktop/LC/docs/DEPLOY_CONVENTION.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Adjust User= for your server account (default jaba on longevity.ge)
+User=jaba
+Group=jaba
+WorkingDirectory=/home/jaba/web/longevitycommon/BioSense/backend
+EnvironmentFile=-/etc/aim/biosense_backend.env
+# Required env in /etc/aim/biosense_backend.env:
+#   PORT=4502                          bind port (decided 2026-05-07)
+#   HOST=127.0.0.1                     loopback only (nginx proxies)
+#   RUST_LOG=info
+ExecStartPre=/bin/bash -lc 'cd /home/jaba/web/longevitycommon && git pull --ff-only || true'
+ExecStart=/home/jaba/web/longevitycommon/BioSense/backend/target/release/biosense-backend
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

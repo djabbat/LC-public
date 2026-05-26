@@ -1,0 +1,44 @@
+[Unit]
+Description=LC Realtime — Phoenix Channels (native)
+After=network.target postgresql@16-main.service
+Wants=network.target
+Requires=postgresql@16-main.service
+
+[Service]
+Type=exec
+User=jaba
+Group=jaba
+WorkingDirectory=/opt/app-realtime
+
+# Pin to host loopback port that nginx already proxies (4500).
+Environment="PORT=4500"
+Environment="PHX_HOST=app.longevity.ge"
+Environment="PHX_SERVER=true"
+Environment="LANG=en_US.UTF-8"
+Environment="LC_ALL=en_US.UTF-8"
+Environment="LONGEVITYCOMMON_VERSION=v5.6"
+Environment="RELEASE_COOKIE=app-realtime-prod-cookie"
+
+# Database — uses native postgresql@16-main; see deploy/scripts/init-app-db.sql
+# for one-time database/role creation. Password lives in /etc/app-realtime/.env
+# (mode 0600), loaded via EnvironmentFile below.
+EnvironmentFile=/etc/app-realtime/.env
+
+# Pin Erlang distribution port (defence-in-depth; UFW also denies external)
+Environment="ERL_FLAGS=-kernel inet_dist_listen_min 9301 -kernel inet_dist_listen_max 9301"
+
+ExecStart=/opt/app-realtime/bin/longevitycommon_realtime start
+ExecStop=/opt/app-realtime/bin/longevitycommon_realtime stop
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+# Hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/opt/app-realtime/tmp /tmp
+
+[Install]
+WantedBy=multi-user.target
