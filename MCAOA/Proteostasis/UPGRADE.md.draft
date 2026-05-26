@@ -1,0 +1,18 @@
+# TBPR UPGRADE.md (DRAFT) — 2026-05-14 11:35
+
+_Auto-обновляется каждый cycle. Финальный UPGRADE.md → BEST update only._
+
+- **Project:** `LC/CDATA/experiments/Proteostasis`
+- **Текущий score:** 35/55 (REVISE_MAJOR)
+- **Цель:** verdict ACCEPT (≥48/55)
+- **Разрыв:** 13 баллов
+- **Cycle:** 6
+
+## In-progress concerns (cycle 6)
+
+1. [PARANOID] **Replace all placeholders with real values or explicit TBD markers** — Currently, the document mixes claims of evidence-grounded parameters with admissions that all values are placeholders. Either: (a) provide literature-derived estimates with confidence intervals, or (b) explicitly stat
+2. [CYNIC] **Execution risk**: No empirical calibration + placeholder budgets + missing PI bio = **high probability of failure**.
+3. [CYNIC] **Partnership risk**: "Expressed interest" ≠ LoI. No evidence of collaboration readiness.
+4. [PARANOID] **Provide complete PI information** — Name, institution, h-index, senior-author publications (with PMIDs), previous grants, and trajectory. This is the single most critical fix for credibility.
+5. [PARANOID] **Submit a realistic budget** — Include personnel (PostDoc €60K/yr EU or $80K US; PhD €30-40K), equipment (microscope ~$100K, sequencer ~$300K if needed), animal costs (64 mice × ~$50-100 each), supplies, and 20-25% indirect costs. Justify per WP.
+6. [CYNIC] **Add PI bio + field-normalized metrics**:
