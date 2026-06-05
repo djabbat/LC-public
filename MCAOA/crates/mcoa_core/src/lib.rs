@@ -6,7 +6,7 @@
 //!   M3 — a-priori tissue weighting
 //!   M4 — falsifiability first-class
 //!
-//! Reference: Tkemaladze (2026) "The Multi-Counter Architecture of Organismal Aging",
+//! Reference: Tqemaladze (2026) "The Multi-Counter Architecture of Organismal Aging",
 //! Nature Aging Perspective submission, 2026-04-25.
 
 use serde::{Deserialize, Serialize};

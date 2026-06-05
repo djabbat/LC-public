@@ -1,0 +1,55 @@
+# BioSense — Parameters
+
+## General Parameters
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| version | 1.2.3 | Current version of the BioSense project |
+| status | in development | Current project status |
+| startDate | after completion of prerequisite tasks | Project development start date |
+| endDate | next phase | Planned project completion date |
+| budget | 1,500,000 RUB | Total project budget |
+
+## Goals & Tasks
+| Goal / Task | Priority | Deadline | Description |
+|-------------|----------|----------|-------------|
+| Develop core biosensor data processing pipeline | P0 | after completion of prerequisite tasks | Implement real-time data ingestion and analysis for biosensor signals |
+| Achieve 99.9% server uptime | P0 | after previous milestone | Deploy redundant infrastructure and monitoring to meet SLA |
+| Integrate OAuth 2.0 with external health platforms | P1 | after completion of prerequisite tasks | Enable secure single sign-on for partner APIs |
+| Optimize database queries for sub-200ms response time | P1 | next phase | Refactor PostgreSQL queries and add indexing |
+| Complete frontend dashboard for real-time visualization | P2 | next phase | Build React-based dashboard with live charts and alerts |
+| Conduct security audit and penetration testing | P2 | next phase | Third-party audit to validate AES-256 encryption and firewall rules |
+| Expand team with 2 additional backend developers | P2 | next phase | Hire and onboard new developers to accelerate feature delivery |
+
+## Technical Parameters
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| backend | Node.js | Backend framework used |
+| frontend | React | Frontend framework used |
+| database | PostgreSQL | Database management system |
+| server | Ubuntu 20.04 | Server operating system |
+| ram | 16 GB | Server RAM capacity |
+| cpu | Intel Core i7 | Server processor model |
+
+## Security Parameters
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| auth | OAuth 2.0 | Authentication protocol |
+| encryption | AES-256 | Data encryption algorithm |
+| firewall | iptables | Firewall used for server protection |
+| backup | daily | Frequency of data backups |
+
+## Performance Parameters
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| responseTime | 200 ms | Maximum server response time |
+| throughput | 1000 req/s | Maximum server throughput |
+| uptime | 99.9% | Minimum server availability |
+| errorRate | 1% | Maximum server error rate |
+
+## Team Parameters
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| teamLead | Ivanov Ivan Ivanovich | Project manager |
+| backendDev | 2 people | Number of backend developers |
+| frontendDev | 1 person | Number of frontend developers |
+| qaEngineer | 1 person | Number of quality assurance engineers |

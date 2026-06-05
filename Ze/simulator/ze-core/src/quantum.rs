@@ -18,7 +18,7 @@
 //! - Uniform:   q_i = 1/d (maximum ignorance)
 //! - Anti-Born: q_i proportional to (1-p_i)/(d-1) (worst case)
 //!
-//! Reference: Tkemaladze (2026) Ze Vector Theory §5
+//! Reference: Tqemaladze (2026) Ze Vector Theory §5
 
 use rand::SeedableRng;
 use rand_distr::{Distribution, WeightedIndex};

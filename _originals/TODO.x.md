@@ -77,5 +77,5 @@
 - HAP / Ontogenesis — toxic; restoration requires complete EVIDENCE rebuild from verified PubMed
 - Plotly upgrade for web charts
 - Public deployment of subproject backends (TLS, auth, rate limiting)
-- Hevolution NIA — requires Independent Asst/Assoc Prof appointment (Tkemaladze не подходит)
+- Hevolution NIA — requires Independent Asst/Assoc Prof appointment (Tqemaladze не подходит)
 - Stipendium Hungaricum — call November 2026

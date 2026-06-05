@@ -1,6 +1,6 @@
 # PI Track Record — MCAOA Project
 
-**Name:** Jaba Tkemaladze, MD
+**Name:** Jaba Tqemaladze, MD
 **Affiliation:** Georgia Longevity Alliance (GLA), Tbilisi, Georgia
 **Role:** Principal Investigator, MCAOA framework architect
 
@@ -9,12 +9,12 @@ Theoretical and computational biology of aging: multi-counter damage accumulatio
 
 ## Key publications (2021–2026)
 
-1. **Tkemaladze J.** Centriolar polyglutamylation as a structural counter of cellular aging: the CDATA model. *Longevity Horizon*. 2025;3(1):1-24.
-2. **Tkemaladze J.** Multi-Counter Architecture of Organismal Aging (MCAOA): a falsifiable framework. *Longevity Horizon*. 2025;3(2):25-58.
-3. **Tkemaladze J., Chichinadze K.** Allostatic self-organisation and the Ze stream theory of biological time. *Longevity Horizon*. 2025;3(3):59-88.
-4. **Tkemaladze J.** The centriole as a cellular hourglass: CDATA v2 and the tubulin code. *Longevity Horizon*. 2026;4(1):1-30.
-5. **Tkemaladze J.** Damage Shadow hypothesis: epigenetic rejuvenation without functional restoration (systematic review and meta-analysis, PROSPERO CRD42026218473). *Longevity Horizon*. 2026;4(2):31-60.
-6. **Tkemaladze J., Chichinadze K.** Stem-cell-centric multi-counter theory of organismal aging. *Longevity Horizon*. 2026;4(3):61-90.
+1. **Tqemaladze J.** Centriolar polyglutamylation as a structural counter of cellular aging: the CDATA model. *Longevity Horizon*. 2025;3(1):1-24.
+2. **Tqemaladze J.** Multi-Counter Architecture of Organismal Aging (MCAOA): a falsifiable framework. *Longevity Horizon*. 2025;3(2):25-58.
+3. **Tqemaladze J., Chichinadze K.** Allostatic self-organisation and the Ze stream theory of biological time. *Longevity Horizon*. 2025;3(3):59-88.
+4. **Tqemaladze J.** The centriole as a cellular hourglass: CDATA v2 and the tubulin code. *Longevity Horizon*. 2026;4(1):1-30.
+5. **Tqemaladze J.** Damage Shadow hypothesis: epigenetic rejuvenation without functional restoration (systematic review and meta-analysis, PROSPERO CRD42026218473). *Longevity Horizon*. 2026;4(2):31-60.
+6. **Tqemaladze J., Chichinadze K.** Stem-cell-centric multi-counter theory of organismal aging. *Longevity Horizon*. 2026;4(3):61-90.
 
 ## Preprints and submissions
 - **MCAOA Phase III Concept v2.0** — corrected version (2026-05-15), all PMIDs verified, power calculation added, 6 arms design.

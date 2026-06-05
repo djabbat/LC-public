@@ -12,7 +12,7 @@ Key concepts:
   - Chain depth bounded by τ_Z⁽⁰⁾ (Axiom Z1)
   - Born-rule chains outlive Uniform chains (Theorem 5.1 + Axiom Z4)
 
-Reference: Tkemaladze (2026) Ze Vector Theory §5.5, §7.3 [P4, P5]
+Reference: Tqemaladze (2026) Ze Vector Theory §5.5, §7.3 [P4, P5]
 Usage: python3 ze_reproduction.py [--tau0 N] [--chains M] [--dim D] [--seed K]
 """
 
@@ -341,7 +341,7 @@ def main():
     print(f"  Axiom Z4 verified: T-events generate daughter Ze-observers.")
     print(f"  Born-rule chains produce deeper Ze-genealogies (P5).")
     print(f"  Double-slit fringe visibility V = 1−2p_T validated (P4).")
-    print(f"  Reference: Tkemaladze (2026) §5.5, §7.3")
+    print(f"  Reference: Tqemaladze (2026) §5.5, §7.3")
 
 
 if __name__ == '__main__':

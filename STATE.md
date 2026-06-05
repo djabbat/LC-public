@@ -8,10 +8,26 @@
 - **Jaba Tqemaladze, MD** — начал PhD программу в **UNED Madrid** осенью 2026
 - Заявка UNED создана (Nº 712356513), оплачена 32€, PDF отправлены
 
-**Last touched:** 2026-04-28
+**Last touched:** 2026-06-02
 **CONCEPT version:** v5.6 (regenerated from article `~/Desktop/LC.md` on 2026-04-28)
 
 ---
+
+## §0. New contact — Family Offices via Vortex Capital Learn (2026-06-02)
+
+- **Roberts Reizins**, Vortex Capital Learn (roberts.c@vortexcapitallearn.com) — бутиковый инвестбанк
+- Представляют Family Offices, заинтересованные в Longevity Clinic, Inc, Georgia
+- Jaba ответил, предложил время на 9–11 June GMT+4
+- Roberts подтвердил, запросил introductory meeting
+- **Status:** ✅ Письмо отправлено Roberts (Reizins). Вторник 9 июня 15:00 GMT+4. IM приложен.
+
+### 🔥 Новый контекст (2026-06-02, разговор с Джабой):
+- **Клиника выбрала место** — напротив флагманской гостиницы **Paragraph Hotel** на курорте **Абастумани**
+- Абастумани — лучший горный курорт Грузии (уровня Давоса, Швейцария)
+- Идут переговоры по покупке земли
+- Курорт начнёт принимать мировую элиту через ~2 года (€500M+ development)
+- **Вторник 9 июня 15:00 GMT+4** — подтверждённая встреча с Roberts (Vortex Capital)
+- Investment Memorandum обновлён (добавлен Abastumani контекст)
 
 ## §1. What was done in this iteration (2026-04-28)
 
@@ -30,6 +46,7 @@
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
 | **Activated** | clinical pilot ready (Shashviashvili) | (extern) |
+| **AIM** | ✅ **Декомпозирован 2026-06-02** — компоненты распределены по проектам | removed |
 | HAP / Ontogenesis | TOXIC — not in v5.6 ecosystem | halted 2026-04-21 |
 
 ## §3. Open blockers

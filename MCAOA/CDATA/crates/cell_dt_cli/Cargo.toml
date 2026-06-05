@@ -2,7 +2,7 @@
 name = "cell_dt_cli"
 version = "0.1.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
+authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
 description = "MCAOA Counter #1 (CDATA, Centriolar polyglutamylation) — thin CLI wrapper for comparison harness"
 license = "MIT"
 

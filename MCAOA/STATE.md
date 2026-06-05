@@ -35,13 +35,9 @@ Arm F: Counter #6 (Dicer/Piwi KD)  → piRNA-mediated
 
 ## Active TODOs
 
-- [ ] Await Nature Aging editorial decision (manuscript #1)
+- [x] **Biogerontology (Springer)** — подано 2026-06-03, прошло technical check
+- [ ] Await editorial decision (Biogerontology)
 - [ ] Prepare response to reviewer comments (if any)
-- [x] eLife reconsideration — отправлено 2026-05-20
-- [x] eLife — отказ 2026-05-21 (Dr Peter Rodgers: «better suited to a specialist journal»)
-- [x] F1000Research submission — подано 2026-05-22, статья #183257
-- [ ] Suggest reviewers for F1000Research (через My Account → Submissions)
-- [ ] Await editorial checks (2-3 рабочих дня)
 - [ ] Sobol ABL-2 paradox for Counter #1 — close in coordination with CDATA L1
 - [ ] Tissue-specific weights calibration against real data HSC/skin/neural
 - [ ] **Stem-Cell-Centric extension:** final TBPR reconciliation, verify VEXAS PMID, JAK/NLRP3 therapeutic refs, formalize D_pi (piRNA counter) kinetics for §4.1 THEORY.md

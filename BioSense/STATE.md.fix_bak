@@ -1,0 +1,64 @@
+# BioSense — State
+
+**Date:** after completion of prerequisite tasks  
+**Version:** 0.1.0  
+**Status:** 🟡 In Development
+
+## Goals & Tasks
+
+**Primary Goal:** Develop a biological data monitoring and analysis system for medical research, enabling real-time anomaly detection and predictive insights.
+
+**Key Objectives (with priorities and deadlines):**
+
+| Objective | Priority | Deadline |
+|-----------|----------|----------|
+| Design and implement data ingestion pipeline (supports HL7 FHIR, CSV, JSON) | P0 | after completion of prerequisite tasks |
+| Build core ML models for anomaly detection (vital signs, lab results) | P1 | after completion of prerequisite tasks |
+| Develop user dashboard (real-time visualization, alerts) | P2 | after completion of prerequisite tasks |
+| Integrate with hospital EMR systems (pilot) | P1 | after completion of prerequisite tasks |
+| Conduct clinical validation study with 100+ patients | P2 | after completion of prerequisite tasks |
+| Achieve HIPAA/GDPR compliance certification | P0 | after completion of prerequisite tasks |
+
+## Current Phase
+
+- Project initialization: defining architecture, assembling team, and setting up development infrastructure.
+- Core documentation (README, LICENSE, STATE) completed. Concept document in progress.
+
+## Project Schedule & Next Steps
+
+**Overall Timeline:** after completion of prerequisite tasks to after completion of prerequisite tasks
+
+**Key Milestones:**
+
+| Milestone | Date | Priority |
+|-----------|------|----------|
+| Complete project concept and plan (CONCEPT.md) | after completion of prerequisite tasks | P0 |
+| Finalize task list and roadmap (TODO.md) | after completion of prerequisite tasks | P1 |
+| Set up project structure (code, docs, version control) | after completion of prerequisite tasks | P1 |
+| Begin core functionality development | after completion of prerequisite tasks | P0 |
+| Complete data ingestion pipeline | after completion of prerequisite tasks | P0 |
+| First ML model prototype ready | after completion of prerequisite tasks | P1 |
+| System testing and debugging | after completion of prerequisite tasks – after completion of prerequisite tasks | P1 |
+| Pilot deployment in partner clinic | after completion of prerequisite tasks | P1 |
+| Compliance audit and certification | after completion of prerequisite tasks | P0 |
+| Post-launch monitoring and maintenance | after completion of prerequisite tasks – after completion of prerequisite tasks | P2 |
+
+## Blockers
+
+- Need additional computational resources for training deep learning models (GPU cluster).
+- Awaiting approval from medical ethics committee for data usage.
+- Dependency on third-party EMR API documentation (expected by after completion of prerequisite tasks).
+
+## Metrics
+
+- **Core files completed:** 3/10 (README.md, LICENSE, STATE.md)
+- **MBPR Score:** 42 (based on scalability, maintainability, extensibility, reusability)
+- **Test coverage:** 0% (target: 80% by after completion of prerequisite tasks)
+- **API endpoints defined:** 0/15
+- **Data sources integrated:** 0/3 (planned: HL7 FHIR, CSV, JSON)
+
+## Project Team
+
+- **Project Lead:** Ivanov Ivan Ivanovich
+- **Developers:** Petrov Petr Petrovich, Sidorova Sidor Sidorovna
+- **Medical Expert:** Doctor of Medical Sciences, Professor Sergeev Sergey Sergeevich

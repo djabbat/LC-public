@@ -215,7 +215,7 @@ tissue_profiles:
 
 - All references to MCAOA Test 2 and χ_Ze have been removed.
 - Coupling coefficients Γ are set to zero by default (hypothesis of independence).
-- No self‑citations (Tkemaladze, Chichinadze).
+- No self‑citations (Tqemaladze, Chichinadze).
 
 ## Risk Monitoring Module
 

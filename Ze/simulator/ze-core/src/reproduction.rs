@@ -12,7 +12,7 @@
 ///   Key distinction:  V_ze < V_qm for 0 < p_T < 1 (Ze predicts LESS visibility than QM).
 ///   Falsifiability:   precise single-photon experiments could distinguish these curves.
 ///
-/// Reference: Tkemaladze (2026) Ze Vector Theory §7
+/// Reference: Tqemaladze (2026) Ze Vector Theory §7
 
 use rand::{Rng, SeedableRng};
 use rand_distr::{Distribution, WeightedIndex};

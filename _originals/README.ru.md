@@ -74,5 +74,5 @@ MIT (see LICENSE).
 
 ## Contact
 
-Jaba Tkemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
+Jaba Tqemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
 Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)

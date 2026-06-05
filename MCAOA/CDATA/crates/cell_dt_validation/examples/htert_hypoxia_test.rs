@@ -20,7 +20,7 @@
 //!
 //! References:
 //! - Peters-Hall et al. (2020) FASEB J DOI: 10.1096/fj.201902376R
-//! - Tkemaladze J. (2026) "Centriolar Damage Accumulation Drives Replicative Senescence"
+//! - Tqemaladze J. (2026) "Centriolar Damage Accumulation Drives Replicative Senescence"
 //!
 //! Usage:
 //!   cargo run --example htert_hypoxia_test --release

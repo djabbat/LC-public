@@ -141,7 +141,7 @@ export function ZeShareCard({ profile }: Props) {
 
         {/* Footer */}
         <div style={{ marginTop: 24, paddingTop: 16, borderTop: '1px solid #1e293b', fontSize: 10, color: '#334155' }}>
-          longevitycommon.app · Ze Theory by J. Tkemaladze · For scientific use only
+          longevitycommon.app · Ze Theory by J. Tqemaladze · For scientific use only
         </div>
       </div>
 
