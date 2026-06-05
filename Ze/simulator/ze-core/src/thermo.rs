@@ -9,7 +9,7 @@
 ///
 /// T-event rule: |v_new − v_pred| / σ > θ_Z  →  τ_Z decrements.
 ///
-/// Reference: Tkemaladze (2026) Ze Vector Theory §3, §4
+/// Reference: Tqemaladze (2026) Ze Vector Theory §3, §4
 
 use rand::SeedableRng;
 use rand_distr::{Distribution, Normal};

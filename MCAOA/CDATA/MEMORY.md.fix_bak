@@ -1,0 +1,11 @@
+# CDATA — Memory
+
+## History of Decisions
+
+### upon project initialization — Project Initialization
+- **Decision:** CDATA project created
+- **Rationale:** Need for structuring and centralizing data
+
+### after previous milestone — Technology Stack Selection
+- **Decision:** Python + SQLite + Markdown
+- **Rationale:** Lightweight, portable, easy

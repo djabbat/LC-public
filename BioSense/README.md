@@ -2,7 +2,7 @@
 
 **Multisensor wearable platform for Ze-based biomarker analysis: EEG · HRV · Olfaction**
 
-BioSense applies Ze Theory (Tkemaladze) to three biosignal channels for aging biomarker detection
+BioSense applies Ze Theory (Tqemaladze) to three biosignal channels for aging biomarker detection
 and clinical diagnostics. The EEG module is validated across 4 public datasets (N up to 196,
 lifespan ages 5–97). HRV and olfaction modules are in development.
 
@@ -109,9 +109,9 @@ BioSense/
 
 ## Citation
 
-Tkemaladze, J. (2026). *Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
+Tqemaladze, J. (2026). *Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
 Experimental EEG validation across the human lifespan.* [Manuscript under review]
 
 Also cite:
-- PMID 36583780 — Tkemaladze J. *Mol Biol Reports* 2023
+- PMID 36583780 — Tqemaladze J. *Mol Biol Reports* 2023
 - PMID 20480236 — Lezhava T. et al. *Biogerontology* 2011

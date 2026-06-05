@@ -18,7 +18,7 @@
 /// - Somatic differentiated cells: both clocks active; whichever reaches
 ///   threshold first triggers p16/p21 pathway and permanent cell cycle arrest.
 ///
-/// Reference: Tkemaladze & Chichinadze (2005) proposed centrosome-driven
+/// Reference: Tqemaladze & Chichinadze (2005) proposed centrosome-driven
 /// replicative aging. CDATA v3.5 formalises the dual-clock model.
 use serde::{Deserialize, Serialize};
 

@@ -6,7 +6,7 @@ Computes Ze velocity (v), Ze cheating index (χ_Ze), and Ze proper time (τ)
 from EEG recordings. Tests the Ze aging hypothesis:
     χ_Ze(young) > χ_Ze(old)
 
-Two validated methods (see Tkemaladze 2026, Sec. 3.3):
+Two validated methods (see Tqemaladze 2026, Sec. 3.3):
   • Proxy method:       α-peak frequency → v_peak = 2·f_peak/f_s → χ_Ze
   • Narrowband Ze:      bandpass 8–12 Hz → median binarization → v → χ_Ze
 
@@ -15,7 +15,7 @@ Usage:
     python3 eeg_ze_processor.py --file recording.edf --age 35 --label "Subject_01"
     python3 eeg_ze_processor.py --batch data/ --resample 128 --out results/
 
-Theory (Tkemaladze, Ze System as Observer):
+Theory (Tqemaladze, Ze System as Observer):
     Binary sequence {x_k}: x_k = 1 if sample > median, else 0
     N_S = number of switches (x_k ≠ x_{k-1})
     Ze velocity:       v = N_S / (N - 1)                     range [0, 1]
@@ -43,7 +43,7 @@ logger = logging.getLogger(__name__)
 # ─── Ze constants ─────────────────────────────────────────────────────────────
 
 V_STAR = 0.45631
-# Upper bound for living systems (empirical, Tkemaladze 2024; not used in main
+# Upper bound for living systems (empirical, Tqemaladze 2024; not used in main
 # calculations — retained for reference and visualization only).
 CHI_MAX_LIVING = 0.839
 ALPHA = 1.0   # normalization constant for τ (adjustable)

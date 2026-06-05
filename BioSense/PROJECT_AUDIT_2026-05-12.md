@@ -12,7 +12,7 @@ Parent files copied into `docs/related/`: **7**.
 |------|--------------|------|---------|---------------|
 | 14315085 | HAYFLICK L | 1965 | Exp Cell Res | THE LIMITED IN VITRO LIFETIME OF HUMAN DIPLOID CELL STRAINS. |
 | 1385210 | Christensen S | 1992 | FEBS Lett | Bovine alpha 2-antiplasmin. N-terminal and reactive site sequence. |
-| 36583780 | Tkemaladze J | 2023 | Mol Biol Rep | Reduction, proliferation, and differentiation defects of stem cells over time: a |
+| 36583780 | Tqemaladze J | 2023 | Mol Biol Rep | Reduction, proliferation, and differentiation defects of stem cells over time: a |
 | 20480236 | Lezhava T | 2011 | Biogerontology | Gerontology research in Georgia. |
 
 ## Next steps (per `~/Desktop/Claude/PROJECT_STRUCTURE_RULE.md`)

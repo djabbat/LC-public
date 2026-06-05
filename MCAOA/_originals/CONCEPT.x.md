@@ -4,7 +4,7 @@
 
 
 **Project:** MCAOA (Multi-Counter Architecture of Organismal Aging)
-**Author:** Jaba Tkemaladze, MD | Georgia Longevity Alliance
+**Author:** Jaba Tqemaladze, MD | Georgia Longevity Alliance
 **Version:** 1.0 (extension addenda 2026-05-10 — см. §11)
 **Date:** 2026-04-21 (last modified 2026-05-10)
 **Status:** CONCEPT APPROVED — initial implementation in progress
@@ -185,7 +185,7 @@ MCAOA является **WP1 MCAOA Framework** в текущей заявке EI
 
 ## Consortium / partners
 
-**Lead institution:** Georgia Longevity Alliance (Jaba Tkemaladze, MD) — theoretical framework, coordination, dissemination.
+**Lead institution:** Georgia Longevity Alliance (Jaba Tqemaladze, MD) — theoretical framework, coordination, dissemination.
 
 **Proposed partners (letters of intent pending):**
 - Cell biology lab (human iPSC and organoid expertise) — experimental validation of Test 4 (Division vs Time) in human cell lines.
@@ -280,7 +280,7 @@ Contingency: 7-10% (NOT 15%+)
 ### 2. PI identification — REAL person, не TODO
 
 Replace `[TODO: PI name]` everywhere с:
-- Lead PI: Jaba Tkemaladze, MD (GLA, Founder)
+- Lead PI: Jaba Tqemaladze, MD (GLA, Founder)
 - ORCID: 0000-0001-8651-7243 (canonical)
 - h-index: 4 (Scopus) — acknowledge modesty, leverage senior co-PI strategy
 - 5 senior-author publications с verified PMIDs (per `feedback_pmid_verify_always`)
@@ -354,7 +354,7 @@ Before data collection:
 
 | Поле | Значение |
 |------|----------|
-| **Имя** | Jaba Tkemaladze, MD |
+| **Имя** | Jaba Tqemaladze, MD |
 | **ORCID** | [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243) (canonical) |
 | **Affiliation** | Georgia Longevity Alliance (GLA), Founder & Scientific Lead |
 | **Organization** | Georgia Longevity Alliance (Registration №404506520) |

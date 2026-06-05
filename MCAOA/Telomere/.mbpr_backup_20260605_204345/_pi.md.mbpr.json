@@ -1,0 +1,19 @@
+{
+  "score": 65,
+  "verdict": "Adequate but incomplete",
+  "strengths": [
+    "Clear iron rule emphasizing memory before action",
+    "Well-defined structure with key files and connections",
+    "Explicit PR rule for reviewer rotation"
+  ],
+  "weaknesses": [
+    "Goals table is truncated, missing tasks and deadlines",
+    "Lacks detailed description of the pipeline or workflow",
+    "No mention of validation or quality control specifics"
+  ],
+  "top_fixes": [
+    "Complete the goals table with all tasks, deadlines, and statuses",
+    "Add a brief overview of the telomere length estimation method",
+    "Include links to relevant reference datasets or documentation"
+  ]
+}

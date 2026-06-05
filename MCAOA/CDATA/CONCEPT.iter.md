@@ -2,7 +2,7 @@
 
 ## Parent Theory
 
-**CDATA is one of the tracks of MCAOA** — Multi-Counter Architecture of Organismal Aging (Tkemaladze J., 2026, *Nature Aging* submission). MCAOA = flagship meta‑theory of the LC ecosystem; organismal aging is formalized as a weighted sum of parallel damage‑accumulation counters D_i, each with its own division‑dependent (α_i) and time‑dependent (β_i) kinetics.
+**CDATA is one of the tracks of MCAOA** — Multi-Counter Architecture of Organismal Aging (Tqemaladze J., 2026, *Nature Aging* submission). MCAOA = flagship meta‑theory of the LC ecosystem; organismal aging is formalized as a weighted sum of parallel damage‑accumulation counters D_i, each with its own division‑dependent (α_i) and time‑dependent (β_i) kinetics.
 
 **CDATA = MCAOA Counter #1 (Centriolar):** accumulation of polyGlu PTM on the mother centriole → D_centriole(n, t) = D_centriole,0 + α₁·(n/n₁*) + β₁·(t/τ₁) + γ₁·I(others).
 
@@ -84,7 +84,7 @@ After 7 rounds of rigorous peer review, the concept has achieved:
 
 ---
 
-## Advances beyond Tkemaladze 2023
+## Advances beyond Tqemaladze 2023
 
 Same table as v5.2 (unchanged). See v5.2 document for details.
 

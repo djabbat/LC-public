@@ -208,7 +208,7 @@ impl eframe::App for CdataApp {
                     ui.add_space(8.0);
                     ui.separator();
                     ui.label(RichText::new("PMID 36583780").small().weak());
-                    ui.label(RichText::new("Tkemaladze J., 2023").small().weak());
+                    ui.label(RichText::new("Tqemaladze J., 2023").small().weak());
                 });
             });
 

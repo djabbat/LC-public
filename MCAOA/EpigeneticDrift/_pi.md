@@ -1,42 +1,42 @@
 # pi — LC/MCAOA/EpigeneticDrift
 
-> ## 🔴 ЖЕЛЕЗНОЕ ПРАВИЛО: ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
-> 
-> **Перед любым действием (чтение файла, запуск команды, конвертация, ответ пользователю) — ОБЯЗАТЕЛЬНО прочитать:**
-> 1. `_pi.md` — этот файл (правила, структура, команды)
-> 2. `MAP.md` — карта проекта
-> 3. `MEMORY.md` — история решений, запреты, токены
-> 
-> Нарушение → игнорирование памяти → потеря контекста → ошибки.
-> 
+> ## 🔴 IRON RULE: MEMORY BEFORE ACTION
+>
+> **Before any action (reading a file, running a command, converting, responding to the user) — you MUST read:**
+> 1. `_pi.md` — this file (rules, structure, commands)
+> 2. `MAP.md` — project map
+> 3. `MEMORY.md` — decision history, prohibitions, tokens
+>
+> Violation → memory ignored → context lost → errors.
+>
 > ---
-> 
-> **ПРАВИЛО PR:**
-> 1. Жанр ревью — **project** (не manuscript, не article).
-> 2. Каждый проект требует **нового состава рецензентов** при каждом цикле peer review. Reviewer пул ротируется принудительно.
-> 3. Состав рецензентов определяется **исходя из CONCEPT.md** проекта — темы, дисциплин, методов, упомянутых экспертов. Рецензенты подбираются под конкретный CONCEPT, не по шаблону.
+>
+> **PEER REVIEW RULE:**
+> 1. Review genre — **project** (not manuscript, not article).
+> 2. Each project requires a **new set of reviewers** for each peer review cycle. Reviewer pool is forcibly rotated.
+> 3. Reviewer composition is determined **based on the project's CONCEPT.md** — topic, disciplines, methods, mentioned experts. Reviewers are selected for the specific CONCEPT, not by template.
 
+**Parent:** LC/MCAOA  
+**CONCEPT.md:** CONCEPT.md  
+**Created:** after project initiation
 
-**Parent:** LC/MCAOA
-**CONCEPT.md:** CONCEPT.md
-**Created:** 2026-05-17
+## Description
+EpigeneticDrift investigates age-related changes in DNA methylation patterns across tissues. The project aims to identify consistent epigenetic drift markers, model their progression, and validate findings using public datasets (e.g., GEO, ENCODE). Initial focus is on human blood and brain tissue.
 
-## Описание
-(no description available)
+## Key Files
+- `CONCEPT.md` — main concept document
+- `STATE.md` — current project status
+- `TODO.md` — task list (see also Goals & Tasks below)
+- `MAP.md` — project map and connections
+- `MEMORY.md` — key decisions and prohibitions
 
-## Ключевые файлы
-- CONCEPT.md — основной документ
-- STATE.md — статус
-- TODO.md — задачи
+## Connections
+- Parent project: LC/MCAOA
+- Related projects: LC/MCAOA/AgingClock, LC/MCAOA/EpigeneticRegulation
+- External resources: GEO (GSE sets), ENCODE, Roadmap Epigenomics
 
-## Связи
-- Родительский проект: LC/MCAOA
+## Goals & Tasks
 
-## 🔄 ПАМЯТЬ МЕЖДУ СЕССИЯМИ
-
-Перед любым действием — сначала прочитать:
-1. `MAP.md` — карта проекта, связи, инструменты
-2. `MEMORY.md` — ключевые решения, запреты
-3. `_pi.md` — этот файл
-
-Если файлов нет — создать.
+### P0 — Critical (must be completed after previous milestone)
+- [ ] **Define core epigenetic drift markers** — identify top 50 CpG sites consistently associated with age across at least 3 independent blood datasets. (P0, due after project initiation)
+- [

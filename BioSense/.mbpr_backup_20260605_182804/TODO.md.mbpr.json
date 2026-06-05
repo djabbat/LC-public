@@ -1,0 +1,21 @@
+{
+  "score": 60,
+  "verdict": "Needs improvement",
+  "strengths": [
+    "Clear priority levels (P0, P1, P2)",
+    "Hierarchical structure with goals and tasks",
+    "Deadlines are specified for each item"
+  ],
+  "weaknesses": [
+    "Incomplete task at the end (cut off)",
+    "No assignees or responsible persons",
+    "No progress indicators beyond empty checkboxes",
+    "Dependencies are vague (e.g., 'after previous milestone')",
+    "Lacks measurable criteria for completion"
+  ],
+  "top_fixes": [
+    "Complete the truncated task: 'Set up API for wearable device integration'",
+    "Add assignees to each task for accountability",
+    "Include progress tracking (e.g., percentage or status labels)"
+  ]
+}

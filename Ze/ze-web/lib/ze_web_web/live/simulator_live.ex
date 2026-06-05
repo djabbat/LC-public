@@ -158,7 +158,7 @@ defmodule ZeWebWeb.SimulatorLive do
           falls out of the variational principle <code>F = E − T·S − λ·I_pred</code>.
         </p>
         <p>
-          <strong>Status.</strong> Internal manuscript, not peer-reviewed (Tkemaladze 2026,
+          <strong>Status.</strong> Internal manuscript, not peer-reviewed (Tqemaladze 2026,
           <em>Longevity Horizon</em> 2(5), DOI <a href="https://doi.org/10.65649/xf5vp867">10.65649/xf5vp867</a>).
           Mathematical derivations passing CI; biological extension is hypothesis-stage —
           <a href="https://biosense.longevity.ge">BioSense</a> empirically confirms the v*

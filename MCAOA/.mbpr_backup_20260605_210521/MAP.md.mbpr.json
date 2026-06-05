@@ -1,0 +1,22 @@
+{
+  "score": 80,
+  "verdict": "Minor Revisions",
+  "strengths": [
+    "Clear structure and organization",
+    "Presence of required sections",
+    "Use of markdown formatting for readability"
+  ],
+  "weaknesses": [
+    "Lack of specific details and numbers",
+    "Empty sections (e.g. Зависимости, Выходы)",
+    "Limited content in some sections"
+  ],
+  "top_fixes": [
+    "Add specific details and numbers to the Структура section",
+    "Fill in the Зависимости and Выходы sections with relevant information",
+    "Expand on the content in the MAP.md file to provide more clarity"
+  ],
+  "blocking_issues": [
+    "Insufficient information to fully understand the project scope"
+  ]
+}

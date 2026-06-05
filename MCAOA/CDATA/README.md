@@ -17,7 +17,7 @@ CDATA provides a mechanistic explanation for stem cell aging that is independent
 
 ## Key References (Verifiable)
 
-- Tkemaladze J. (2023). Centriolar damage accumulation theory of aging. *J. Theor. Biol.*, 563, 111456. DOI: 10.1016/j.jtbi.2023.111456  
+- Tqemaladze J. (2023). Centriolar damage accumulation theory of aging. *J. Theor. Biol.*, 563, 111456. DOI: 10.1016/j.jtbi.2023.111456  
 - Royall L. et al. (2023). Asymmetric inheritance of mother centrosome. *eLife*, 12, e83997. PMID 37184769  
 - Bobinnec Y. et al. (1998). Glutamylation of centriole. *J. Cell Biol.*, 143(6), 1575‑1589. PMID 9576819  
 - Kaur R. et al. (2023). Proteomic landscape of PTMs in human fibroblasts. *Nat. Commun.*, 14, 4567. PMID 37478901  

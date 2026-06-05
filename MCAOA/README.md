@@ -4,7 +4,7 @@
 [![Rust](https://img.shields.io/badge/Rust-1.85+-blue.svg)](https://www.rust-lang.org)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20055806.svg)](https://doi.org/10.5281/zenodo.20055806)
 
-**Reference:** Tkemaladze J. (2026) *Multi-Counter Architecture of Organismal Aging*. Submitted to eLife (ID eLife-RP-RA-2026-111885). Not published as Reviewed Preprint (no Reviewing Editor available). Appeal pending. Preprint on Zenodo: DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
+**Reference:** Tqemaladze J. (2026) *Multi-Counter Architecture of Organismal Aging*. Submitted to eLife (ID eLife-RP-RA-2026-111885). Not published as Reviewed Preprint (no Reviewing Editor available). Appeal pending. Preprint on Zenodo: DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
 
 **Source code:** [github.com/djabbat/LC](https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA) (branch `mcaoa-v3.2`, в `MCAOA/`)
 
@@ -152,7 +152,7 @@ MIT — see [LICENSE](LICENSE)
 
 ```bibtex
 @software{mcoa_simulator,
-  author = {Tkemaladze, Jaba},
+  author = {Tqemaladze, Jaba},
   title = {MCAOA Simulator — Multi-Counter Architecture of Organismal Aging},
   year = {2026},
   publisher = {Zenodo},
@@ -163,7 +163,7 @@ MIT — see [LICENSE](LICENSE)
 
 ## Contact
 
-Dr. Jaba Tkemaladze, MD  
+Dr. Jaba Tqemaladze, MD  
 President, Georgia Longevity Alliance  
 Email: jaba@longevity.ge  
 ORCID: [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243)
