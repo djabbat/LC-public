@@ -92,7 +92,7 @@ Path: `/home/oem/Desktop/Sulkalmakhi`  Date: 2026-05-08
 - `projects/chedva-saxelosno/` — Mamne the Goldsmith metalwork workshop.
 
 ### 10. Contact
-- Director: Jaba Tkemaladze, +995 555 185 161, djabbat@gmail.com.
+- Director: Jaba Tqemaladze, +995 555 185 161, djabbat@gmail.com.
 - Address: Abastumani, Rustaveli St. #46, apt. 1, Georgia.
 ```
 ### `CONCEPT.md` (12278 chars)
@@ -111,8 +111,8 @@ Path: `/home/oem/Desktop/Sulkalmakhi`  Date: 2026-05-08
 | Georgian legal name | **სულკალმახი** (Latin: **SULKALMAKHI**) |
 | Identification number | **422766563** |
 | Legal address | Abastumani, Rustaveli St. #46, apt. 1, Adigeni municipality, Samtskhe-Javakheti, Georgia |
-| Director (sole representative) | **Jaba Tkemaladze** (PIN 01025011707) – single-signature authority |
-| Founders | Jaba Tkemaladze, Ramazi Korshia |
+| Director (sole representative) | **Jaba Tqemaladze** (PIN 01025011707) – single-signature authority |
+| Founders | Jaba Tqemaladze, Ramazi Korshia |
 | Supreme governing body | General Assembly of members (წევრთა საერთო კრება) |
 | Executive body | Board (გამგეობა) |
 | Registration date | **23/09/2024** (NAPR application B24116273) |
@@ -307,7 +307,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 ### 1.1 Supreme Body: General Assembly (GA)
 - **Composition:** All members (Art. 2.1)
-- **Current members:** Jaba Tkemaladze, Ramazi Korshia (founders; additional members <TBD>)
+- **Current members:** Jaba Tqemaladze, Ramazi Korshia (founders; additional members <TBD>)
 - **Competences:** Charter amendments, Board election, reorganisation/liquidation (Art. 2.12)
 
 ### 1.2 Executive Body: Board (გამგეობა)
@@ -317,7 +317,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 - **Competences:** Property decisions, membership decisions, Director election (Art. 4.6)
 
 ### 1.3 Sole Representative: Director
-- **Director:** Jaba Tkemaladze (PIN 01025011707)
+- **Director:** Jaba Tqemaladze (PIN 01025011707)
 - **Authority:** Single-signature representation (Art. 5.4)
 - **Term:** 2024-09-23 → 2027-09-23 (auto-extends if not replaced; Art. 5.2)
 - **Powers:** Sign deals, hire staff, sue/be sued (Art. 5.6)
@@ -339,7 +339,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | **Duration** | 5 months |
 | **Location** | Abastumani, River Otskhe (5 km stretch) |
 | **Target groups** | Local residents, visitors, schoolchildren, youth |
-| **Lead** | Director (Jaba Tkemaladze) |
+| **Lead** | Director (Jaba Tqemaladze) |
 | **Next step** | Secure funding; apply to Georgian Ministry of Culture/Sports regional programme (Jul 2026) |
 
 ### 2.2 Chedva-Saxelosno (Mamne the Goldsmith – Iconography Metalwork Workshop)
@@ -350,7 +350,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | **Budget** | 4,420 GEL (initial equipment + materials) |
 | **Location** | Atskuri community centre (saxelos centri) |
 | **Target groups** | Youth, adults, craft enthusiasts |
-| **Lead** | Director (Jaba Tkemaladze) |
+| **Lead** | Director (Jaba Tqemaladze) |
 | **Next step** | Procure equipment (Nov 2026); start classes (Mar 2027) |
 
 ---
@@ -371,7 +371,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | Person | Role in Sulkalmakhi | Charter basis | Key responsibilities |
 |---|---|---|---|
-| **Jaba Tkemaladze** | Director (sole representative) | Art. 5.1–5.11 | Day-to-day management, project oversight, external representation, annual report |
+| **Jaba Tqemaladze** | Director (sole representative) | Art. 5.1–5.11 | Day-to-day management, project oversight, external representation, annual report |
 | **Ramazi Korshia** | Founder; potential Board member | Art. 1 (founder), Art. 4 (Board) | Governance oversight, project advisory (if elected to Board) |
 | **Board (to be elected)** | Executive body | Art. 4 | Strategic decisions, property/asset management, Director election |
 | **General Assembly** | Supreme body | Art. 2 | Charter amendments, Board election, reorganisation/liquidation |
@@ -411,7 +411,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | Person | Role | Contact |
 |---|---|---|
-| Jaba Tkemaladze | Director | djabbat@gmail.com, +995 555 185 161 |
+| Jaba Tqemaladze | Director | djabbat@gmail.com, +995 555 185 161 |
 | Ramazi Korshia | Founder | <TBD> |
 | Adigeni Municipality | Partner | <TBD> |
 | Atskuri Educational Centre | Partner | <TBD> |
@@ -495,7 +495,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
   *Rationale:* Georgian NCJPs must file annual financial reports. Deadline typically 31 March of following year. 2025 report due by 31 March 2026 – check if filed; if not, file immediately.
 
 - [ ] **☐ Audit boundary with sister NGO Georgia Longevity Alliance (GLA)**  
-  *Rationale:* Charters, banking, members, operations must be fully separate. Confirm no shared bank accounts, no overlapping board members (except Jaba Tkemaladze as Director of both – document this as permitted dual role). Written cooperation agreement required for any joint activity.
+  *Rationale:* Charters, banking, members, operations must be fully separate. Confirm no shared bank accounts, no overlapping board members (except Jaba Tqemaladze as Director of both – document this as permitted dual role). Written cooperation agreement required for any joint activity.
 
 ---
 
@@ -580,7 +580,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 ```md
 # Sulkalmakhi — Operational TODO (2026-05-03 → 2026-08-01)
 
-**Owner:** Jaba Tkemaladze (Director) unless delegated.  
+**Owner:** Jaba Tqemaladze (Director) unless delegated.  
 **Status:** ▢ Not started | ◐ In progress | ✓ Complete | ✗ Blocked
 
 ---
@@ -589,9 +589,9 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 1 | Adopt this CONCEPT v2.0; replace legacy CONCEPT.md in repo | 2026-05-05 | Tkemaladze | ▢ | Commit to GitHub; inform Board members |
-| 2 | Verify last Board meeting date (Art. 4.2 – quarterly minimum) | 2026-05-07 | Tkemaladze | ▢ | If >3mo since last meeting, schedule Q2 Board meeting urgently |
-| 3 | Contact Atskuri educational centre director – request cooperation letter | 2026-05-09 | Tkemaladze | ▢ | Draft letter in Georgian; specify workshop space, schedule, liability |
+| 1 | Adopt this CONCEPT v2.0; replace legacy CONCEPT.md in repo | 2026-05-05 | Tqemaladze | ▢ | Commit to GitHub; inform Board members |
+| 2 | Verify last Board meeting date (Art. 4.2 – quarterly minimum) | 2026-05-07 | Tqemaladze | ▢ | If >3mo since last meeting, schedule Q2 Board meeting urgently |
+| 3 | Contact Atskuri educational centre director – request cooperation letter | 2026-05-09 | Tqemaladze | ▢ | Draft letter in Georgian; specify workshop space, schedule, liability |
 
 ---
 
@@ -599,8 +599,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 4 | Refresh BOM pricing for chedva-saxelosno (4420 GEL quote is from older source) | 2026-05-14 | Tkemaladze | ▢ | Visit local hardware/art supply stores in Adigeni or Akhaltsikhe; get 2026 prices for all 18 line items |
-| 5 | Contact Adigeni mayor's office – request support letter for eko-banaki-otskhe | 2026-05-16 | Tkemaladze | ▢ | Prepare 1-page project summary in Georgian; attach proposal draft |
+| 4 | Refresh BOM pricing for chedva-saxelosno (4420 GEL quote is from older source) | 2026-05-14 | Tqemaladze | ▢ | Visit local hardware/art supply stores in Adigeni or Akhaltsikhe; get 2026 prices for all 18 line items |
+| 5 | Contact Adigeni mayor's office – request support letter for eko-banaki-otskhe | 2026-05-16 | Tqemaladze | ▢ | Prepare 1-page project summary in Georgian; attach proposal draft |
 
 ---
 
@@ -608,8 +608,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 6 | Identify potential funder for eko-banaki proposal (deadline TBD) | 2026-05-21 | Tkemaladze | ▢ | Check: Georgian Ministry of Culture/Sports regional grants; EU-funded local programmes; UNDP Georgia small grants |
-| 7 | Draft Q2 Board meeting agenda (if needed per #2) | 2026-05-23 | Tkemaladze | ▢ | Include: project updates, budget review, workshop BOM approval |
+| 6 | Identify potential funder for eko-banaki proposal (deadline TBD) | 2026-05-21 | Tqemaladze | ▢ | Check: Georgian Ministry of Culture/Sports regional grants; EU-funded local programmes; UNDP Georgia small grants |
+| 7 | Draft Q2 Board meeting agenda (if needed per #2) | 2026-05-23 | Tqemaladze | ▢ | Include: project updates, budget review, workshop BOM approval |
 
 ---
 
@@ -618,7 +618,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
 | 8 | Hold Q2 Board meeting (if not held in past 3 months) | 2026-05-28 | Board Chair | ▢ | Notice ≥8 days in advance (Art. 4.2); quorum >½ Board members |
-| 9 | Finalise eko-banaki proposal with updated budget | 2026-05-30 | Tkemaladze | ▢ | Incorporate any feedback from mayor's office; attach support letters if received |
+| 9 | Finalise eko-banaki proposal with updated budget | 2026-05-30 | Tqemaladze | ▢ | Incorporate any feedback from mayor's office; attach support letters if received |
 
 ---
 
@@ -626,8 +626,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 10 | Submit eko-banaki proposal to identified funder | 2026-06-05 | Tkemaladze | ▢ | Ensure all required attachments (charter, registration extract, budget, support letters) |
-| 11 | Follow up on Atskuri cooperation letter (if not received) | 2026-06-06 | Tkemaladze | ▢ | Phone call or in-person visit |
+| 10 | Submit eko-banaki proposal to identified funder | 2026-06-05 | Tqemaladze | ▢ | Ensure all required attachments (charter, registration extract, budget, support letters) |
+| 11 | Follow up on Atskuri cooperation letter (if not received) | 2026-06-06 | Tqemaladze | ▢ | Phone call or in-person visit |
 
 ---
 
@@ -635,8 +635,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 12 | Compile updated BOM for chedva-saxelosno with 2026 prices | 2026-06-11 | Tkemaladze | ▢ | Compare with original 4420 GEL; note any price changes |
-| 13 | Draft workshop instructor agreement (if external instructor needed) | 2026-06-13 | Tkemaladze | ▢ | Include scope, hours, compensation, liability |
+| 12 | Compile updated BOM for chedva-saxelosno with 2026 prices | 2026-06-11 | Tqemaladze | ▢ | Compare with original 4420 GEL; note any price changes |
+| 13 | Draft workshop instructor agreement (if external instructor needed) | 2026-06-13 | Tqemaladze | ▢ | Include scope, hours, compensation, liability |
 
 ---
 
@@ -644,8 +644,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 14 | Secure Atskuri cooperation letter (signed) | 2026-06-18 | Tkemaladze | ▢ | File in `projects/chedva-saxelosno/` |
-| 15 | Secure Adigeni mayor's office support letter (signed) | 2026-06-20 | Tkemaladze | ▢ | File in `projects/eko-banaki-otskhe/` |
+| 14 | Secure Atskuri cooperation letter (signed) | 2026-06-18 | Tqemaladze | ▢ | File in `projects/chedva-saxelosno/` |
+| 15 | Secure Adigeni mayor's office support letter (signed) | 2026-06-20 | Tqemaladze | ▢ | File in `projects/eko-banaki-otskhe/` |
 
 ---
 
@@ -653,8 +653,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 16 | Begin procurement of chedva-saxelosno equipment (if budget approved) | 2026-06-25 | Tkemaladze | ▢ | Purchase orders; keep invoices for NAPR reporting |
-| 17 | Prepare eko-banaki camp logistics plan (dates, staff, materials) | 2026-06-27 | Tkemaladze | ▢ | Target: August 2026 camp; identify ≥20 participants |
+| 16 | Begin procurement of chedva-saxelosno equipment (if budget approved) | 2026-06-25 | Tqemaladze | ▢ | Purchase orders; keep invoices for NAPR reporting |
+| 17 | Prepare eko-banaki camp logistics plan (dates, staff, materials) | 2026-06-27 | Tqemaladze | ▢ | Target: August 2026 camp; identify ≥20 participants |
 
 ---
 
@@ -662,8 +662,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 18 | Recruit eco-camp volunteers (local youth, specialists) | 2026-07-02 | Tkemaladze | ▢ | Contact schools, community centres, medical/art professionals |
-| 19 | Verify NAPR filing deadlines for 2025 annual report (if applicable) | 2026-07-04 | Tkemaladze | ▢ | Deadline 31 March 2026 for 2025 report – check if filed; if not, file ASAP |
+| 18 | Recruit eco-camp volunteers (local youth, specialists) | 2026-07-02 | Tqemaladze | ▢ | Contact schools, community centres, medical/art professionals |
+| 19 | Verify NAPR filing deadlines for 2025 annual report (if applicable) | 2026-07-04 | Tqemaladze | ▢ | Deadline 31 March 2026 for 2025 report – check if filed; if not, file ASAP |
 
 ---
 
@@ -671,8 +671,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 20 | Finalise camp programme (schedule, activities, safety plan) | 2026-07-09 | Tkemaladze | ▢ | Include eco-education, creative workshops, river cleanup |
-| 21 | Order camp materials (gloves, bags, first aid, educational supplies) | 2026-07-11 | Tkemaladze | ▢ | Budget ≤ $2,000 from eko-banaki funds (if grant received) or from reserves |
+| 20 | Finalise camp programme (schedule, activities, safety plan) | 2026-07-09 | Tqemaladze | ▢ | Include eco-education, creative workshops, river cleanup |
+| 21 | Order camp materials (gloves, bags, first aid, educational supplies) | 2026-07-11 | Tqemaladze | ▢ | Budget ≤ $2,000 from eko-banaki funds (if grant received) or from reserves |
 
 ---
 
@@ -681,7 +681,7 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
 | 22 | Hold Q3 Board meeting (if Q2 was held in May) | 2026-07-16 | Board Chair | ▢ | Review camp readiness, workshop progress, financial status |
-| 23 | Confirm camp participants (≥20) and send invitations | 2026-07-18 | Tkemaladze | ▢ | Use school lists, community noticeboards, social media |
+| 23 | Confirm camp participants (≥20) and send invitations | 2026-07-18 | Tqemaladze | ▢ | Use school lists, community noticeboards, social media |
 
 ---
 
@@ -689,8 +689,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 24 | Conduct pre-camp site inspection (Otskhe river 5 km stretch) | 2026-07-23 | Tkemaladze | ▢ | Identify hazards, access points, cleanup zones |
-| 25 | Finalise all camp logistics (transport, food, accommodation if needed) | 2026-07-25 | Tkemaladze | ▢ | Confirm with suppliers and volunteers |
+| 24 | Conduct pre-camp site inspection (Otskhe river 5 km stretch) | 2026-07-23 | Tqemaladze | ▢ | Identify hazards, access points, cleanup zones |
+| 25 | Finalise all camp logistics (transport, food, accommodation if needed) | 2026-07-25 | Tqemaladze | ▢ | Confirm with suppliers and volunteers |
 
 ---
 
@@ -698,8 +698,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 
 | # | Task | Deadline | Owner | Status | Notes |
 |---|------|----------|-------|--------|-------|
-| 26 | Run eco-camp (target: ≥20 participants, 5 days) | 2026-07-26 → 2026-07-30 | Tkemaladze | ▢ | Document with photos, attendance, feedback forms |
-| 27 | Prepare camp report (summary, outcomes, financials) | 2026-08-01 | Tkemaladze | ▢ | File in `projects/eko-banaki-otskhe/` |
+| 26 | Run eco-camp (target: ≥20 participants, 5 days) | 2026-07-26 → 2026-07-30 | Tqemaladze | ▢ | Document with photos, attendance, feedback forms |
+| 27 | Prepare camp report (summary, outcomes, financials) | 2026-08-01 | Tqemaladze | ▢ | File in `projects/eko-banaki-otskhe/` |
 
 ---
 
@@ -733,8 +733,8 @@ If the board or GA later decides to expand into these areas, a charter amendment
 | Georgian legal name | **სულკალმახი** (Latin: **SULKALMAKHI**) |
 | Identification number | **422766563** |
 | Legal address | Abastumani, Rustaveli St. #46, apt. 1, Adigeni municipality, Samtskhe-Javakheti, Georgia |
-| Director (sole representative) | **Jaba Tkemaladze** (PIN 01025011707) – single-signature authority |
-| Founders | Jaba Tkemaladze, Ramazi Korshia |
+| Director (sole representative) | **Jaba Tqemaladze** (PIN 01025011707) – single-signature authority |
+| Founders | Jaba Tqemaladze, Ramazi Korshia |
 | Supreme governing body | General Assembly of members (წევრთა საერთო კრება) |
 | Executive body | Board (გამგეობა) |
 | Registration date | **23/09/2024** (NAPR application B24116273) |
@@ -909,8 +909,8 @@ Sulkalmakhi is the **sister NGO** of Georgia Longevity Alliance (GLA, reg. №40
 - **Identification number:** 422766563.
 - **Legal form:** Non-commercial legal person (NCJP/NPLE) under Georgian Civil Code.
 - **Legal address:** Abastumani, Rustaveli St. #46, apt. 1, Adigeni municipality, Samtskhe-Javakheti.
-- **Director (sole representative):** Jaba Tkemaladze (PIN 01025011707) — single-signature authority, term ≤3 years (auto-extends if not replaced).
-- **Founders:** Jaba Tkemaladze, Ramazi Korshia.
+- **Director (sole representative):** Jaba Tqemaladze (PIN 01025011707) — single-signature authority, term ≤3 years (auto-extends if not replaced).
+- **Founders:** Jaba Tqemaladze, Ramazi Korshia.
 - **Governance:** General Assembly (supreme body, ≥1/year) + Board (executive body, ≥1/3 months).
 
 ## 2024-09-13 — NAPR application filed

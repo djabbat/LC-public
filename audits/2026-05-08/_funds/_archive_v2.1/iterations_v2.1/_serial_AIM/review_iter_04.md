@@ -36,7 +36,7 @@
    **Критическое нарушение.** Несколько ключевых ссылок не имеют реального идентификатора:  
    - Tao et al. (2026) *Nature Medicine* – «pre-print; DOI TBD»  
    - Blumenthal-Lee (2024) *JAMA* – «pre-print; DOI TBD»  
-   - Tkemaladze J. (2026) *Longevity Horizon* – «DOI TBD»  
+   - Tqemaladze J. (2026) *Longevity Horizon* – «DOI TBD»  
    - Hibbard et al. (2009) *PAM scoring & MCID* – proprietary manual, без DOI/PMID.  
    Кроме того, для Hibbard 2004 в разных местах указаны два разных PMID: 15333167 (корректный) и 15527447 (на самом деле Hibbard 2005 – несоответствие утверждению). Таким образом, условие не выполнено.
 
@@ -59,7 +59,7 @@
 | 3 | Hibbard JH et al. (2009). PAM scoring & MCID. Insignia Health technical manual. | Нет DOI/PMID (proprietary) | Нет (не публичная запись) | Используется для обоснования MCID=5.4. Непроверяемая ссылка. | [REF_VERIFY:proprietary] – не принимается как научная ссылка. |
 | 4 | Tao W. et al. (2026). Co-design of medical AI improves patient activation: RCT of 2069 patients. *Nature Medicine*. | DOI TBD (pre-print) | Нет | Утверждается, что это подтверждение L2. Нет публичной записи. | REJECT (нереальная ссылка) |
 | 5 | Blumenthal D., Lee J. (2024). Four-zone framework for human-AI clinical collaboration. *JAMA*. | DOI TBD (pre-print) | Нет | Утверждается как основа 4-zone HCI. Нет публичной записи. | REJECT (нереальная ссылка) |
-| 6 | Tkemaladze J. (2026). Patient as a Project. *Longevity Horizon* 2(5). | DOI TBD | Нет | Является cornerstone framework для всей AIM. Не опубликована. | REJECT (нереальная ссылка) |
+| 6 | Tqemaladze J. (2026). Patient as a Project. *Longevity Horizon* 2(5). | DOI TBD | Нет | Является cornerstone framework для всей AIM. Не опубликована. | REJECT (нереальная ссылка) |
 | 7 | Hibbard 2004 (в другом месте с PMID 15527447) | PMID 15527447 | Да (но это 2005, а не 2004) | Не соответствует – указан 2004 год, но PMID ведёт на 2005. | [REF_VERIFY:15527447] – несоответствие тексту. |
 
 **Итог:** 3 ссылки полностью нереальны (TBD), 2 ссылки имеют несоответствие утверждению, 1 ссылка непроверяема (proprietary). Reference Integrity score = 1.

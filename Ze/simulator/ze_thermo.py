@@ -18,7 +18,7 @@ Maxwell's Demon extension:
   - Demon is a Ze-observer that sorts molecules
   - Sorting costs tau_Z → apparent entropy decrease is paid in Ze-budget
 
-Reference: Tkemaladze (2026) Ze Vector Theory §3, §4 [5+_Ze_Foundations_of_Physics.md]
+Reference: Tqemaladze (2026) Ze Vector Theory §3, §4 [5+_Ze_Foundations_of_Physics.md]
 Usage: python3 ze_thermo.py [--molecules N] [--steps T] [--demon]
 """
 
@@ -265,7 +265,7 @@ def main():
 
     print(f"\n── Conclusion ──")
     print(f"  Ze-budget monotonicity (Axiom Z2) → S_Ze increases → Second Law proven.")
-    print(f"  Reference: Tkemaladze (2026) 5+_Ze_Foundations_of_Physics.md §3")
+    print(f"  Reference: Tqemaladze (2026) 5+_Ze_Foundations_of_Physics.md §3")
 
 
 if __name__ == '__main__':

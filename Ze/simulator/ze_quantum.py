@@ -19,7 +19,7 @@ Verified by simulation:
   τ_Z depletion rate:  Born ≪ Uniform < Anti-Born
   → Born rule is the unique strategy minimising τ_Z loss.
 
-Reference: Tkemaladze (2026) Ze Vector Theory §5 [5+_Ze_Foundations_of_Physics.md]
+Reference: Tqemaladze (2026) Ze Vector Theory §5 [5+_Ze_Foundations_of_Physics.md]
 Usage: python3 ze_quantum.py [--dim D] [--steps T] [--states S] [--seed K]
 """
 
@@ -355,7 +355,7 @@ def main():
     print(f"  Born rule = unique Ze-optimal probability assignment.")
     print(f"  Assigning q_i = |⟨e_i|ψ⟩|² minimises τ_Z depletion (Theorem 5.1).")
     print(f"  Any deviation from Born probabilities accelerates Ze-budget loss.")
-    print(f"  Reference: Tkemaladze (2026) 5+_Ze_Foundations_of_Physics.md §5")
+    print(f"  Reference: Tqemaladze (2026) 5+_Ze_Foundations_of_Physics.md §5")
 
 
 if __name__ == '__main__':

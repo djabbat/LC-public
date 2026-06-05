@@ -1,6 +1,6 @@
 # StatisticalAnalysis
 
-This directory contains the statistical core for the **CytogeneticTree** project led by Dr. Jaba Tkemaladze.
+This directory contains the statistical core for the **CytogeneticTree** project led by Dr. Jaba Tqemaladze.
 
 ## Overview
 We develop and apply statistical models to analyze the retention of the maternal centriole during cellular differentiation. The goal is to quantify how centriole "age" correlates with cell fate, providing quantitative parameters to help reconstruct lineage trees.

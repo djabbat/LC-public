@@ -1,0 +1,16 @@
+# pi — BioSense
+
+> ## 🔴 HARD RULE: MEMORY BEFORE ACTION
+> 
+> **Before any action (reading a file, running a command, converting, responding to user) — ALWAYS read:**
+> 1. `_pi.md` — this file (rules, structure, commands)
+> 2. `MAP.md` — project map (if exists)
+> 3. `MEMORY.md` — decision history, prohibitions, tokens (if exists)
+> 
+> Violation → ignoring memory → loss of context → errors.
+> 
+> ---
+
+**Parent:** LC  
+**CONCEPT.md:** CONCEPT.md (if exists)  
+**Created:** upon project

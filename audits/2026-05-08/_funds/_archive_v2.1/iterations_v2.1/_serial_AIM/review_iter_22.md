@@ -38,4 +38,4 @@
 | 3 | Hibbard JH et al. (2009) PAM scoring & MCID, Insignia Health technical manual | Нет DOI/PMID | Нет идентификатора | Утверждается MCID=5.4. Прямая проверка невозможна. | ✗ – отсутствие идентификатора |
 | 4 | Tao W. et al. (2026) Co-design of medical AI… *Nature Medicine*, n=2069 RCT | Нет DOI/PMID (указан “pre-print; DOI TBD”) | Не верифицируется | Используется в cornerstone как подтверждение co-design > fine-tuning. Без идентификатора проверить нельзя. | ✗ – отсутствие идентификатора |
 | 5 | Blumenthal D., Lee J. (2024) Four-zone framework… *JAMA* | Нет DOI/PMID (указан “pre-print; DOI TBD”) | Не верифицируется | Утверждение про 4-zone HCI. | ✗ – отсутствие идентификатора |
-| 6 | Tkemaladze J. (2026) Patient as a Project, *Longevity Horizon* 2(5) | Нет DOI/PMID (указа
+| 6 | Tqemaladze J. (2026) Patient as a Project, *Longevity Horizon* 2(5) | Нет DOI/PMID (указа

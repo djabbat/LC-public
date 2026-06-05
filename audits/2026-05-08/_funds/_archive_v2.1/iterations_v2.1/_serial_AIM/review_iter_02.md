@@ -44,7 +44,7 @@
 7. **Reference reality + match** ✗  
    **Критическая ошибка:**  
    - В CONCEPT.md раздел Sample size calculation ссылается на «Hibbard 2004 (PMID 15527447)». Статья Hibbard et al. 2004 *Health Serv Res* 39(4 Pt 1):1005–26 имеет PMID **15333167**, а не 15527447. PMID 15527447 принадлежит статье Hibbard et al. 2005 *Health Serv Res* 40(6 Pt 1):1918–30. Это **несоответствие года и PMID** — ссылка нереальна в данном контексте.  
-   - Ссылка Tkemaladze (2026) *Longevity Horizon* 2(5) указана как pre-print с «DOI TBD» — не проверяется, но требует заполнения.  
+   - Ссылка Tqemaladze (2026) *Longevity Horizon* 2(5) указана как pre-print с «DOI TBD» — не проверяется, но требует заполнения.  
    - Ссылки Tao et al. (2026) *Nature Medicine* и Blumenthal–Lee (2024) *JAMA* указаны как pre-prints; их реальность устанавливается после публикации.  
    - Остальные ссылки (Hibbard 2005, 2009) — реальны, но 2009 manual — проприетарный, без PMID/DOI.  
    **Общий вердикт:** наличие неверного PMID для Hibbard 2004 является автоматическим REJECT компонента.
@@ -67,7 +67,7 @@
 | 1 | Hibbard JH et al. (2004) *Health Serv Res* 39(4 Pt 1):1005–26. | **PMID: 15527447** (указан в CONCEPT.md) | **НЕТ** (PMID 15527447 — статья 2005 года; правильный PMID для 2004 — 15333167) | Нет (год не соответствует PMID) | **REJECT** |
 | 2 | Hibbard JH et al. (2005) *Health Serv Res* 40(6 Pt 1):1918–30. | **PMID: 15527447** (правильный для этой статьи) | Да | Да | OK |
 | 3 | Hibbard JH et al. (2009) PAM scoring & MCID. Insignia Health manual. | Нет PMID/DOI (proprietary) | Да (существует как продукт) | Да | Accept (manuals допускаются) |
-| 4 | Tkemaladze J. (2026) *Longevity Horizon* 2(5). | DOI TBD (pre-print) | Неизвестно (pre-print) | N/A | Placeholder (требуется заполнение) |
+| 4 | Tqemaladze J. (2026) *Longevity Horizon* 2(5). | DOI TBD (pre-print) | Неизвестно (pre-print) | N/A | Placeholder (требуется заполнение) |
 | 5 | Tao W. et al. (2026) *Nature Medicine* RCT n=2069. | DOI TBD (pre-print) | Неизвестно | N/A | Placeholder |
 | 6 | Blumenthal D., Lee J. (2024) *JAMA* 4-zone framework. | DOI TBD (pre-print) | Неизвестно | N/A | Placeholder |
 | 7 | Hibbard JH et al. (2004) — в THEORY.md §8. | **PMID: 15333167** (правильный) | Да | Да | OK |

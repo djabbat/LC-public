@@ -36,7 +36,7 @@ Data format:
 Output:
     bootstrap_vstar_results.json
 
-Author: Ze Vectors Theory / Tkemaladze 2026
+Author: Ze Vectors Theory / Tqemaladze 2026
 BUG-v9-3: Added per-dataset mode, permutation test, Cochran Q guard.
 """
 

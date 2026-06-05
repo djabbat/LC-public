@@ -191,7 +191,7 @@ Execute before responding to any user task:
 
 ## Rule 3: Project context (anchors)
 
-- **Author:** Dr. Jaba Tkemaladze, MD — integrative medicine specialist, author of *"Медицина Поколений"*.
+- **Author:** Dr. Jaba Tqemaladze, MD — integrative medicine specialist, author of *"Медицина Поколений"*.
 - **Goal:** $3,000,000 for a centriole-replacement (CDATA) laboratory.
 - **Primary theory:** CDATA — see `THEORY.md`.
 - **Launch:** 2026-09-27 on drjaba.com.
@@ -318,7 +318,7 @@ Authoritative list: `STATE.md §What NOT to do`. Summary:
 
 | Год | Журнал | Статья |
 |---|---|---|
-| 2005 | Advances in Gerontology | Tkemaladze & Chichinadze — первая публикация о роли центриолей |
+| 2005 | Advances in Gerontology | Tqemaladze & Chichinadze — первая публикация о роли центриолей |
 | 2023 | Molecular Biology Reports, Springer · [PubMed PMID: 36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?* |
 | 2025 | Annals of Rejuvenation Science, 1(1) · DOI: 10.65649/yx9sn772 | *Old Centrioles Make Old Bodies* — полная теория CDATA |
 
@@ -706,7 +706,7 @@ DrJaba использует модель двойного дохода для ф
 
 **CDATA — Centriolar Damage Accumulation Theory of Aging.**
 
-Proposed by Dr. Jaba Tkemaladze, MD. First peer-reviewed formulation: Mol Biol Rep 2023 (Springer, PMID: 36583780). Full theory: Annals of Rejuvenation Science 2025, DOI: 10.65649/yx9sn772 (not PubMed-indexed).
+Proposed by Dr. Jaba Tqemaladze, MD. First peer-reviewed formulation: Mol Biol Rep 2023 (Springer, PMID: 36583780). Full theory: Annals of Rejuvenation Science 2025, DOI: 10.65649/yx9sn772 (not PubMed-indexed).
 
 ---
 
@@ -798,7 +798,7 @@ Traceability from external canon (books / articles) to in-repo artifacts.
 | "მედიცინა თაობების" | KA | `priv/books/taobata_medicina.pdf` |
 | "Ұрпақтар медицинасы" | KZ | `priv/books/urpaktar_medicinasy.pdf` |
 | CDATA theory explanation | Book chapters on CDATA mechanism | System prompt `:chat` in `lib/drjaba/knowledge_base.ex` |
-| Dr. Tkemaladze nutrition protocol | Book chapters on diet / PNIE | System prompt `:nutrition` in `lib/drjaba/knowledge_base.ex` |
+| Dr. Tqemaladze nutrition protocol | Book chapters on diet / PNIE | System prompt `:nutrition` in `lib/drjaba/knowledge_base.ex` |
 | Experimental longevity interventions (NAD+, senolytics, rapamycin) | Book chapters on rejuvenation | System prompt `:experiments` in `lib/drjaba/knowledge_base.ex` |
 | Landing page CDATA infographic | Simplified mechanism schema (7 languages) | `priv/landing.html` |
 | Layperson explanation (EN, for press / investors) | One-page summary | `docs/lay-summary.md` |
@@ -830,7 +830,7 @@ Traceability from external canon (books / articles) to in-repo artifacts.
 | `deepseek_retry_attempts` | 3 | `DrJaba.Claude` | Exponential backoff: 1s, 3s, 8s |
 | `ets_cache_ttl_seconds` | 86,400 (24h) | `DrJaba.Claude` | ETS cache for single-turn queries |
 | `system_prompt_mode_chat` | `:chat` | `DrJaba.KnowledgeBase` | CDATA theory explanations |
-| `system_prompt_mode_nutrition` | `:nutrition` | `DrJaba.KnowledgeBase` | Dr. Tkemaladze's food protocol |
+| `system_prompt_mode_nutrition` | `:nutrition` | `DrJaba.KnowledgeBase` | Dr. Tqemaladze's food protocol |
 | `system_prompt_mode_experiments` | `:experiments` | `DrJaba.KnowledgeBase` | Longevity interventions |
 
 ---
@@ -1314,7 +1314,7 @@ drjaba/
 
 ## 3. Workflow: book → code
 
-How canonical knowledge from Dr. Tkemaladze's books reaches users.
+How canonical knowledge from Dr. Tqemaladze's books reaches users.
 
 ```
 Books (priv/books/*.pdf, 4 languages)
@@ -1396,8 +1396,8 @@ ChatLive  ──► 3 free messages (anonymous session)
 
 | Year | Journal / Venue | Identifier | PubMed | Title |
 |------|-----------------|-----------|--------|-------|
-| 2005 | Advances in Gerontology | — | — | Tkemaladze & Chichinadze — first publication on centriole role in aging |
-| 2011 | Biogerontology | **PMID: 20480236** | yes | Lezhava T. et al. (incl. Tkemaladze) |
+| 2005 | Advances in Gerontology | — | — | Tqemaladze & Chichinadze — first publication on centriole role in aging |
+| 2011 | Biogerontology | **PMID: 20480236** | yes | Lezhava T. et al. (incl. Tqemaladze) |
 | 2023 | Molecular Biology Reports (Springer) | **PMID: 36583780** | **yes (peer-reviewed, PubMed-indexed)** | *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?* |
 | 2025 | Annals of Rejuvenation Science, 1(1) | **DOI: 10.65649/yx9sn772** | **no — NOT PubMed-indexed** | *Old Centrioles Make Old Bodies* — full CDATA theory |
 
@@ -1498,7 +1498,7 @@ Where scientific references are baked into the application.
 |----------|-----|
 | Production site (launch 2026-09-27) | https://drjaba.com |
 | GitHub repo (private) | https://github.com/djabbat/DrJaba |
-| LinkedIn (Dr. Jaba Tkemaladze) | https://www.linkedin.com/in/jaba-tkemaladze |
+| LinkedIn (Dr. Jaba Tqemaladze) | https://www.linkedin.com/in/jaba-tkemaladze |
 | Twitter/X | https://twitter.com/drjaba |
 | The Peter Attia Drive podcast | https://peterattiamd.com/podcast/ |
 | Lifespan podcast (Sinclair) | https://lifespanbook.com/podcast/ |
@@ -1524,7 +1524,7 @@ Where scientific references are baked into the application.
 
 - **PubMed ID format:** `PMID: NNNNNNNN` (8 digits, no URL required inline; URL form `https://pubmed.ncbi.nlm.nih.gov/NNNNNNNN/`).
 - **DOI format:** `10.XXXXX/YYYYY`; URL form `https://doi.org/10.XXXXX/YYYYY`.
-- **Attribution:** Dr. Jaba Tkemaladze, MD — Free University of Tbilisi (affiliation for ResearchGate / outreach).
+- **Attribution:** Dr. Jaba Tqemaladze, MD — Free University of Tbilisi (affiliation for ResearchGate / outreach).
 - **Copyright / OA:** Mol Biol Rep 2023 is Springer "green OA" — Accepted Manuscript may be self-archived on ResearchGate. Annals 2025 is OA by publication.
 
 ```

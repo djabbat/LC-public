@@ -1,0 +1,54 @@
+# Telomere — Memory
+
+## Project Overview
+Telomere is a structured project aimed at organizing and managing long-term goals, tasks, and decisions. The project focuses on clarity, prioritization, and timely execution.
+
+## Goals & Tasks
+### Strategic Objectives (current and next phase)
+- **P0** – Establish core project framework and documentation after previous milestone.
+- **P0** – Implement initial task tracking and decision logging system after previous milestone.
+- **P1** – Develop automated reporting and status updates after previous milestone.
+- **P1** – Integrate external collaboration tools after previous milestone.
+- **P2** – Expand to multi-project support after previous milestone.
+- **P2** – Conduct user feedback and iteration after previous milestone.
+
+### Task Breakdown with Deadlines
+| Priority | Task | Deadline | Status |
+|----------|------|----------|--------|
+| P0 | Create project charter and memory structure | after completion of prerequisite tasks | Completed |
+| P0 | Define decision log template | after completion of prerequisite tasks | Completed |
+| P1 | Build task priority matrix | after completion of prerequisite tasks | In Progress |
+| P1 | Set up automated reminders | after completion of prerequisite tasks | Planned |
+| P2 | Research collaboration APIs | after completion of prerequisite tasks | Planned |
+| P2 | Design multi-project dashboard | after completion of prerequisite tasks | Backlog |
+
+## History of Decisions
+### after completion of prerequisite tasks — Project Initialization
+- **Decision:** Created the Telomere project.
+- **Rationale:** Need for structured organization and long-term memory.
+- **Status:** Completed
+
+### after completion of prerequisite tasks — Priority System Adoption
+- **Decision:** Adopted P0/P1/P2 priority levels.
+- **Rationale:** To clearly distinguish critical, important, and nice-to-have tasks.
+- **Status:** Completed
+
+### after completion of prerequisite tasks — Deadline Standardization
+- **Decision:** All tasks must have explicit deadlines.
+- **Rationale:** Improve accountability and timeline tracking.
+- **Status:** Active
+
+## Active Tasks
+- [P1] Build task priority matrix – due after completion of prerequisite tasks
+- [P1] Set up automated reminders – due after completion of prerequisite tasks
+- [P2] Research collaboration APIs – due after completion of prerequisite tasks
+
+## Completed Tasks
+- [P0] Create project charter and memory structure – after completion of prerequisite tasks
+- [P0] Define decision log template – after completion of prerequisite tasks
+- [P0] Initialize project repository – after completion of prerequisite tasks
+
+## Notes
+- All decisions are logged with date, rationale, and status.
+- Priorities are reviewed quarterly.
+- Deadlines are subject to adjustment based on project velocity.

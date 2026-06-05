@@ -1,0 +1,19 @@
+{
+  "score": 65,
+  "verdict": "Partially complete but missing critical details and truncated.",
+  "strengths": [
+    "Clear hard rule for memory management",
+    "Well-defined project goals with measurable targets",
+    "Structured key commands section"
+  ],
+  "weaknesses": [
+    "File is truncated (ends mid-sentence)",
+    "Lacks architecture overview, dependencies, or setup instructions",
+    "No mention of data sources, model details, or deployment specifics"
+  ],
+  "top_fixes": [
+    "Complete the truncated command and add remaining sections",
+    "Include architecture diagram or component list",
+    "Add setup, dependencies, and configuration details"
+  ]
+}

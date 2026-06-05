@@ -6,7 +6,7 @@
 - Adaptive feedback for time-lapse: Wait et al. 2014 *BMC Bioinformatics* [PMID: 25494991]
 - Cell segmentation (Cellpose): Stringer et al. 2021 *Nat Methods* [PMID: 33288961]
 - Yeast replicative aging and asymmetric damage: Lindstrom et al. 2022 *Aging Cell* [PMID: 35218397]
-- Centriole age and lifespan correlation: Tkemaladze 2023 [PMID: 36583780]
+- Centriole age and lifespan correlation: Tqemaladze 2023 [PMID: 36583780]
 - Open-source microscopy ecosystem: Pinkard et al. 2021 *Nat Methods* [PMID: 34711972]
 - Fiji/ImageJ platform: Schindelin et al. 2012 *Nat Methods* [PMID: 22743772]
 - SPB inheritance and lifespan: Horigome et al. 2018 *PLOS Genet* [PMID: 29813063]

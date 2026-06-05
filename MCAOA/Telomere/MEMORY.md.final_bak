@@ -1,0 +1,76 @@
+# Telomere — Memory
+
+## Project Overview
+Telomere is a structured project aimed at organizing and managing long-term goals, tasks, and decisions. The project focuses on clarity, prioritization, and timely execution.
+
+## Goals & Tasks
+### Strategic Objectives (current and next phase)
+- **P0** – Establish core project framework and documentation after Milestone 1 completion. Owner: Project Manager
+- **P0** – Implement initial task tracking and decision logging system after Milestone 1 completion. Owner: Lead Developer
+- **P1** – Develop automated reporting and status updates after Milestone 2 completion. Owner: Lead Developer
+- **P1** – Integrate external collaboration tools after Milestone 2 completion. Owner: DevOps Engineer
+- **P2** – Expand to multi-project support after Milestone 3 completion. Owner: Product Manager
+- **P2** – Conduct user feedback and iteration after Milestone 3 completion. Owner: UX Researcher
+
+### Task Breakdown with Deadlines
+| Priority | Task | Deadline | Owner | Status | Progress |
+|----------|------|----------|-------|--------|----------|
+| P0 | Create project charter and memory structure | 2025-01-15 | Project Manager | Completed | 100% |
+| P0 | Define decision log template | 2025-01-20 | Lead Developer | Completed | 100% |
+| P1 | Build task priority matrix | after Task A (charter) completion | Lead Developer | In Progress | 60% |
+| P1 | Set up automated reminders | after Task B (decision log) completion | DevOps Engineer | Planned | 0% |
+| P2 | Research collaboration APIs | after Task C (priority matrix) completion | Backend Developer | Planned | 0% |
+| P2 | Design multi-project dashboard | after Task D (API research) completion | Frontend Developer | Backlog | 0% |
+
+## Dependencies
+- Task "Build task priority matrix" depends on "Create project charter and memory structure" (completed).
+- Task "Set up automated reminders" depends on "Define decision log template" (completed).
+- Task "Research collaboration APIs" depends on "Build task priority matrix" (in progress).
+- Task "Design multi-project dashboard" depends on "Research collaboration APIs" (planned).
+
+## Exits
+- **Exit criteria for Phase 1:** All P0 tasks completed, decision log template approved, project charter signed off.
+- **Exit criteria for Phase 2:** Priority matrix finalized, automated reminders operational, at least one external tool integrated.
+- **Exit criteria for Phase 3:** Multi-project dashboard prototype delivered, user feedback collected and analyzed.
+
+## History of Decisions
+### 2025-01-10 — Project Initialization
+- **Decision:** Created the Telomere project.
+- **Rationale:** Need for structured organization and long-term memory.
+- **Status:** Completed
+
+### 2025-01-12 — Priority System Adoption
+- **Decision:** Adopted P0/P1/P2 priority levels.
+- **Rationale:** To clearly distinguish critical, important, and nice-to-have tasks.
+- **Status:** Completed
+
+### 2025-01-15 — Deadline Standardization
+- **Decision:** All tasks must have explicit deadlines.
+- **Rationale:** Improve accountability and timeline tracking.
+- **Status:** Active
+
+### 2025-02-01 — Tool Selection for Automation
+- **Decision:** Use GitHub Actions for automated reminders and reporting.
+- **Rationale:** Already in use, minimal learning curve.
+- **Status:** Active
+
+### 2025-02-10 — Collaboration API Shortlist
+- **Decision:** Evaluate Slack, Trello, and Notion APIs for integration.
+- **Rationale:** Most commonly used by the team.
+- **Status:** Pending
+
+## Active Tasks
+- [P1] Build task priority matrix – due after Task A (charter) completion – Owner: Lead Developer – Progress: 60%
+- [P1] Set up automated reminders – due after Task B (decision log) completion – Owner: DevOps Engineer – Progress: 0%
+- [P2] Research collaboration APIs – due after Task C (priority matrix) completion – Owner: Backend Developer – Progress: 0%
+
+## Completed Tasks
+- [P0] Create project charter and memory structure – completed 2025-01-15 – Owner: Project Manager
+- [P0] Define decision log template – completed 2025-01-20 – Owner: Lead Developer
+- [P0] Initialize project repository – completed 2025-01-12 – Owner: DevOps Engineer
+
+## Notes
+- All decisions are logged with date, rationale, and status.
+- Priorities are reviewed quarterly.
+- Deadlines are subject to adjustment based on project velocity.
+- Progress is tracked weekly; metrics include completion percentage and milestone adherence.

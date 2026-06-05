@@ -273,7 +273,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 - WP2 Ze (€0.5M, 12 mo) — biomarker
 - WP3 CDATA (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
 - WP4 BioSense (€0.6M, 18 mo) — wearable hardware
-- WP5 Aqtivirebuli/Korkoti (€0.5M, 12 mo) — clinical pilot anaemia
+- WP5 Activatus/Korkoti (€0.5M, 12 mo) — clinical pilot anaemia
 - **Total: €3.0M, 36 mo** (revisable up to €4M ceiling)
 - **Host:** NGO Georgia Longevity Alliance (reg. №404506520)
 
@@ -288,7 +288,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 2. CDATA ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
 3. HAP/Ontogenesis fabricated PMIDs — already halted; rebuilt before any inclusion in proposal
 
-**Concept Note preprint:** Tkemaladze, J. (2026) "LongevityHealth", Zenodo v3, DOI 10.5281/zenodo.19849384 (28 April 2026; supersedes earlier "LC" preprint 19546679).
+**Concept Note preprint:** Tqemaladze, J. (2026) "LongevityHealth", Zenodo v3, DOI 10.5281/zenodo.19849384 (28 April 2026; supersedes earlier "LC" preprint 19546679).
 
 *Deep audit file (still relevant):* `~/Desktop/LC/FCLC/DEEP_AUDIT_2026-04-21.md`
 *Variant C decision record:* `~/Desktop/LC/_archive/EIC_CONSORTIUM_STRUCTURE_2026-04-21.md`
@@ -499,7 +499,7 @@ MIT (see LICENSE).
 
 ## Contact
 
-Jaba Tkemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
+Jaba Tqemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
 Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 
 ```
@@ -508,8 +508,8 @@ Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 # LC · CONCEPT
 
 **Status:** Canonical · regenerated 2026-04-28 from `~/Desktop/LC.md` (article v5.6)
-**Author:** Jaba Tkemaladze · ORCID 0000-0002-3826-7982
-**Citation source (article):** Tkemaladze, J. (2026). LC: An Integrative Ecosystem for Biomarker-Guided Interventions in Aging as Total Chronic Disease. *Longevity Horizon*, 2(5). [in submission, v5.6]
+**Author:** Jaba Tqemaladze · ORCID 0000-0002-3826-7982
+**Citation source (article):** Tqemaladze, J. (2026). LC: An Integrative Ecosystem for Biomarker-Guided Interventions in Aging as Total Chronic Disease. *Longevity Horizon*, 2(5). [in submission, v5.6]
 **Authority:** This `CONCEPT.md` overrides all subproject `CONCEPT.md` on cross-cutting questions; subproject `CONCEPT.md` retains authority on its internal mathematics.
 
 ---
@@ -1053,8 +1053,8 @@ cd ~/Desktop/LC/deploy && docker compose -f docker-compose-all.yml up -d
 | Proteomic Aging Clock | Argentieri et al. 2024 | PMID **39117878** ✅ |
 | Free-energy principle | Friston 2010 *Nat Rev Neurosci* 11 | PMID **20068583** ✅ |
 | Predictive information (binary Markov) | Bialek/Nemenman/Tishby 2001 *Neural Computation* 13 | DOI 10.1162/089976601753195969 ✅ |
-| CDATA original (Tkemaladze 2023) | Tkemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
-| Tkemaladze 2005 early centriole work | *Cell Biol Int* 29 | PMID **15886028** ✅ |
+| CDATA original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
+| Tqemaladze 2005 early centriole work | *Cell Biol Int* 29 | PMID **15886028** ✅ |
 | ATF5-centriole link | Madarampalli 2015 *Cell* 162 | PMID **26213385** ✅ |
 | Ioannidis on false-positive findings | Ioannidis JPA 2005 *PLOS Med* | PMID **16060722** ✅ |
 | Burgholzer information-entropy equality | Burgholzer 2015 | arXiv **1502.00214** ✅ |
@@ -1080,15 +1080,15 @@ These references were referenced in earlier drafts but **could not be verified**
 | ~~Schultz & Sinclair 2019 PMID 30982602 (NAD+/sirtuin)~~ | **Miscitation** — PMID 30982602 = Kucab 2019 environmental signatures, NOT Schultz/Sinclair |
 | ~~Rando, Brunet & Goodell 2025 *Cell Stem Cell*~~ | Not found in PubMed (possibly in press; pending verifiable DOI) |
 | ~~Kiely 2026 *Phys Rev A* 113(2)~~ | Not found at given parameters; pending DOI |
-| ~~Tkemaladze 2024 Editorial PMID 38510429~~ | Removed to bring self-citation < 10% |
+| ~~Tqemaladze 2024 Editorial PMID 38510429~~ | Removed to bring self-citation < 10% |
 
 ## §3. Self-citations (after v3 cleanup)
 
-After v3 removal of Editorial, total references: **36** (peer-reviewed external) + **5** Tkemaladze peer-reviewed = **41 total**, of which 5 self-citations = **5.6%** ≤ 10% rule.
+After v3 removal of Editorial, total references: **36** (peer-reviewed external) + **5** Tqemaladze peer-reviewed = **41 total**, of which 5 self-citations = **5.6%** ≤ 10% rule.
 
-Tkemaladze peer-reviewed self-citations retained:
-- Tkemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work
-- Tkemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship
+Tqemaladze peer-reviewed self-citations retained:
+- Tqemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work
+- Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship
 - 3 others from `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`
 
 Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer-reviewed; moved to Supplementary as "internal manuscript sources".
@@ -1110,10 +1110,10 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 
 ## §5. What is deliberately NOT cited
 
-- **Anything from Longevity Horizon as peer-reviewed**. Tkemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CDATA bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
+- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CDATA bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
 - **HAP** (any reference) — failed PMID audit.
 - **Ontogenesis** (any reference) — failed PMID audit.
-- **Self-citations counted as peer-reviewed** — only the 5 PubMed-indexed Tkemaladze entries.
+- **Self-citations counted as peer-reviewed** — only the 5 PubMed-indexed Tqemaladze entries.
 
 ## §6. Update procedure
 

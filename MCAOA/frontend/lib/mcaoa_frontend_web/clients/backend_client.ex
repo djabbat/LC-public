@@ -169,7 +169,7 @@ defmodule MCAOAFrontend.BackendClient do
         beta: 0.005,
         reference_divisions: 65,
         reference_time: 15_768_000,
-        reference_source: "Tkemaladze 2023 (PMID 36583780)",
+        reference_source: "Tqemaladze 2023 (PMID 36583780)",
         critical_threshold: 0.80,
         validation_status: "provisional",
         status: "active",

@@ -25,7 +25,7 @@
 1. **Систематическое нарушение правила стека**  
    - Требование «Rust + Phoenix only» проигнорировано в большинстве проектов:  
      - `Claude_service` — ни одного .rs/.ex файла.  
-     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Aqtivirebuli` — только Markdown/PDF.  
+     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Activatus` — только Markdown/PDF.  
      - `LC_AutomatedMicroscopy` — Arduino, Python, без Rust.  
      - `LC_HAP` — Python/R.  
      - `LC_FCLC` — один .ex файл без Rust.  
@@ -34,7 +34,7 @@
    - **Корень**: правило не было воспринято как обязательное; проекты создавались в отрыве от общего технического задания.
 
 2. **Отсутствие исполняемого кода**  
-   - Более половины проектов (Claude_service, GLA_*, Iqalto_Aqtivirebuli, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
+   - Более половины проектов (Claude_service, GLA_*, Iqalto_Activatus, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  

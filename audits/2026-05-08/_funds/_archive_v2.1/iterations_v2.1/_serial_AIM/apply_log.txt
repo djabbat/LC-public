@@ -41,7 +41,7 @@ SKIP exists: CONCEPT.md :: ## Consortium / partners
 REPLACED: CONCEPT.md :: osf.io/TBD
 REPLACED: CONCEPT.md :: Tao et al., Nat Med 2026
 REPLACED: CONCEPT.md :: Blumenthal-Lee — automation bias mitigat
-REPLACED: CONCEPT.md :: Tkemaladze J. (2026) "Patient as a Proje
+REPLACED: CONCEPT.md :: Tqemaladze J. (2026) "Patient as a Proje
 
 ## iter 7
 INSERTED: CONCEPT.md after `## 0. Cornerstone (2026-05-07)`

@@ -27,7 +27,7 @@ REVIEWER_SYS = """Ты — staff distributed-systems architect + senior product 
 строгий технический дизайн как peer reviewer, готовый зарезать слабый submission.
 
 КОНТЕКСТ И ОГРАНИЧЕНИЯ ОЦЕНКИ:
-- Это MVP для одного доктора (Jaba Tkemaladze) на одной машине (single-tenant
+- Это MVP для одного доктора (Jaba Tqemaladze) на одной машине (single-tenant
   на старте; multi-tenant — Phase B roadmap).
 - Целевая нагрузка MVP: ≤ 10 concurrent operations (одновременно открытые вкладки
   у одного пользователя), ≤ 10⁴ записей.

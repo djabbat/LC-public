@@ -4,7 +4,7 @@
 ///   bio_age = chrono_age * (1 - D_norm * K)
 /// K currently a research-mode heuristic; pre-registered empirical tests on Cuban EEG, Dortmund Vital, and MPI-LEMON returned NULL results (Ze EVIDENCE.md 2026-04-22). χ_Ze is NOT a validated clinical biomarker — any "R²=0.84 on Cuban+Dortmund" claim from prior drafts is retracted (synthetic-data artefact per CORRECTIONS_2026-04-22).
 ///
-/// Reference: Tkemaladze J., CDATA series, Ze Vectors Theory
+/// Reference: Tqemaladze J., CDATA series, Ze Vectors Theory
 
 use crate::models::ze_profile::{
     ZeSample, ZeProfile, ZeTrend, ZeTrendPoint,

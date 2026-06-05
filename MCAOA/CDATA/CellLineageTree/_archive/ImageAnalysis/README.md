@@ -2,7 +2,7 @@
 
 **Part of the CytogeneticTree Project**
 
-This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tkemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
+This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tqemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
 
 ## What This Subproject Does
 We provide automated, reproducible workflows to quantify key centriole biomarkers from microscopy images:

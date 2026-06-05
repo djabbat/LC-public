@@ -186,11 +186,11 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 
 Применяется правило global CLAUDE.md. Релевантные для Diets работы автора:
 
-- Tkemaladze & Samanishvili (2024). *Mineral ice cream improves recovery of muscle functions after exercise.* Georgian Scientists, 6(2), 36–50. DOI: 10.52340/gs.2024.06.02.04
-- Tkemaladze (2023). *Cross-senolytic effects of dasatinib and quercetin in humans.* Georgian Scientists, 5(3), 138–152.
-- Tkemaladze & Apkhazava (2019). *Dasatinib and quercetin: short-term simultaneous administration improves physical capacity in human.* J Biomedical Sci.
+- Tqemaladze & Samanishvili (2024). *Mineral ice cream improves recovery of muscle functions after exercise.* Georgian Scientists, 6(2), 36–50. DOI: 10.52340/gs.2024.06.02.04
+- Tqemaladze (2023). *Cross-senolytic effects of dasatinib and quercetin in humans.* Georgian Scientists, 5(3), 138–152.
+- Tqemaladze & Apkhazava (2019). *Dasatinib and quercetin: short-term simultaneous administration improves physical capacity in human.* J Biomedical Sci.
 - Jaba (2022). *Dasatinib and quercetin: short-term simultaneous administration yields senolytic effect in humans.*
-- Tkemaladze (2024). *Editorial: Molecular mechanism of ageing and therapeutic advances through targeting glycative and oxidative stress.* Front. Pharmacol. PMID: 38510429
+- Tqemaladze (2024). *Editorial: Molecular mechanism of ageing and therapeutic advances through targeting glycative and oxidative stress.* Front. Pharmacol. PMID: 38510429
 
 Использовать ≤15% от общего числа ссылок, контекстно-релевантно.
 
@@ -209,7 +209,7 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 
 ## Кто редактирует
 
-- **Автор:** Jaba Tkemaladze (MD)
+- **Автор:** Jaba Tqemaladze (MD)
 - **Медицинский рецензент EN:** TBD (искать nutrition/GI)
 - **Переводчик EN:** Adilet
 - **Claude:** скрипты, аудит согласованности
@@ -281,7 +281,7 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 
 ## Кто редактирует
 
-- **Автор:** Jaba Tkemaladze
+- **Автор:** Jaba Tqemaladze
 - **Переводчик EN:** Adilet (нужны простые памятки)
 - **Рецензенты:** TBD (искать историков-кавказоведов и картвелологов)
 - **Claude:** скрипты, аудит, согласованность файлов
@@ -344,7 +344,7 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 
 ## Кто редактирует
 
-- **Автор:** Jaba Tkemaladze (MD, jaba@longevity.ge)
+- **Автор:** Jaba Tqemaladze (MD, jaba@longevity.ge)
 - **Переводчик EN:** Adilet (интерпретатор, не учёный — писать памятки на простом английском)
 - **Claude:** технические операции, аудит согласованности файлов, скрипты
 
@@ -353,7 +353,7 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 ```md
 # Books
 
-Монорепозиторий книжных проектов Jaba Tkemaladze.
+Монорепозиторий книжных проектов Jaba Tqemaladze.
 
 | Проект | Жанр | Статус |
 |--------|------|--------|
@@ -378,7 +378,7 @@ Path: `/home/oem/Desktop/Marketing/Books`  Date: 2026-05-08
 
 ## О книге
 
-**«Diets»** — книга Jaba Tkemaladze по клинической диетологии, сочетающая классическую советскую школу (11 диетических столов Певзнера) с современной интегративной нутрициологией. 46 клинических случаев, расширенная продуктовая база, методологический раздел и рецепты.
+**«Diets»** — книга Jaba Tqemaladze по клинической диетологии, сочетающая классическую советскую школу (11 диетических столов Певзнера) с современной интегративной нутрициологией. 46 клинических случаев, расширенная продуктовая база, методологический раздел и рецепты.
 
 ## Языки
 
@@ -434,7 +434,7 @@ Diets/
 
 ## Контакт
 
-Автор: Jaba Tkemaladze (MD) — jaba@longevity.ge.
+Автор: Jaba Tqemaladze (MD) — jaba@longevity.ge.
 
 ## Лицензия
 
@@ -453,7 +453,7 @@ Diets/
 
 ## О книге
 
-**«Kartvely»** — книга Jaba Tkemaladze об истории картвельских народов и Кавказа. Охватывает период от этногенеза до новейшего времени, с особым вниманием к языковым связям картвельских языков, древним контактам с цивилизациями Ближнего Востока и месту Грузии в глобальной истории.
+**«Kartvely»** — книга Jaba Tqemaladze об истории картвельских народов и Кавказа. Охватывает период от этногенеза до новейшего времени, с особым вниманием к языковым связям картвельских языков, древним контактам с цивилизациями Ближнего Востока и месту Грузии в глобальной истории.
 
 ## Языки
 
@@ -496,7 +496,7 @@ Kartvely/
 
 ## Контакт
 
-Автор: Jaba Tkemaladze (MD) — jaba@longevity.ge.
+Автор: Jaba Tqemaladze (MD) — jaba@longevity.ge.
 
 ## Лицензия
 
@@ -515,7 +515,7 @@ Kartvely/
 
 ## О проекте
 
-«24 Жизни» — спекулятивный роман Jaba Tkemaladze о мире, где смерть не окончательна: личность можно восстановить из «Архива души», но каждая смерть-реконструкция стирает эмоциональные воспоминания. 24 героя = 24 конфигурации одного сознания в системе из трёх осей (отношение к себе / к другим / к среде).
+«24 Жизни» — спекулятивный роман Jaba Tqemaladze о мире, где смерть не окончательна: личность можно восстановить из «Архива души», но каждая смерть-реконструкция стирает эмоциональные воспоминания. 24 героя = 24 конфигурации одного сознания в системе из трёх осей (отношение к себе / к другим / к среде).
 
 **Главный вопрос:** если у тебя есть 24 попытки быть собой — кем ты станешь в последней?
 
@@ -548,7 +548,7 @@ Kartvely/
 
 ## Как помочь
 
-Проект ведётся Jaba Tkemaladze. Редакторская помощь по русскому, английскому и грузинскому приветствуется. Контакт: jaba@longevity.ge.
+Проект ведётся Jaba Tqemaladze. Редакторская помощь по русскому, английскому и грузинскому приветствуется. Контакт: jaba@longevity.ge.
 
 ## Лицензия
 
@@ -559,7 +559,7 @@ Kartvely/
 ```md
 # Books — Книжные проекты
 
-Монорепозиторий всех книжных проектов Jaba Tkemaladze.
+Монорепозиторий всех книжных проектов Jaba Tqemaladze.
 
 ## Проекты
 
@@ -594,7 +594,7 @@ Kartvely/
 
 ## 2. Автор
 
-Jaba Tkemaladze (MD, jaba@longevity.ge).
+Jaba Tqemaladze (MD, jaba@longevity.ge).
 
 ## 3. Scope
 
@@ -680,7 +680,7 @@ Jaba Tkemaladze (MD, jaba@longevity.ge).
 
 ## 2. Автор
 
-Jaba Tkemaladze (MD, jaba@longevity.ge).
+Jaba Tqemaladze (MD, jaba@longevity.ge).
 
 ## 3. Scope
 
@@ -724,7 +724,7 @@ Jaba Tkemaladze (MD, jaba@longevity.ge).
 
 ## 8. Самоцитирование
 
-Не применимо в прямом виде — книга не научная статья. Но если автор ссылается на собственные работы по картвельской лингвистике (например, Tkemaladze 2026 «The Phaistos Disc And The Kartvelian Hypothesis», DOI 10.65649/0rs6tc34), это делается в библиографии в обычном порядке.
+Не применимо в прямом виде — книга не научная статья. Но если автор ссылается на собственные работы по картвельской лингвистике (например, Tqemaladze 2026 «The Phaistos Disc And The Kartvelian Hypothesis», DOI 10.65649/0rs6tc34), это делается в библиографии в обычном порядке.
 
 ## 9. Ограничения
 
@@ -1255,7 +1255,7 @@ v5 + Methodology_chapter_v1 (2026-04-20) + PMID_audit (2026-04-21)
 | Название | «Diets» / «Диетология» / «დიეტოლოგია» |
 | Ранее | «Dietebi» |
 | Жанр | Клиническое руководство по диетологии + нутрициологии |
-| Автор | Jaba Tkemaladze (MD) |
+| Автор | Jaba Tqemaladze (MD) |
 | Языки | RU (оригинал), EN, KA |
 | Версия | v5 (финальная на 2026-04-21) |
 | Статус | 🟡 Активен — финальные .docx готовы, Methodology v1 добавлена, PMID audit пройден |
@@ -1343,7 +1343,7 @@ v5 + Methodology_chapter_v1 (2026-04-20) + PMID_audit (2026-04-21)
 |---|---|
 | Название | «Kartvely» / «Картвелы» / «ქართველი» |
 | Жанр | Популярная история с академической библиографией |
-| Автор | Jaba Tkemaladze |
+| Автор | Jaba Tqemaladze |
 | Языки | RU (оригинал) / EN / KA |
 | Статус | 🟡 Активен — финальные .docx готовы, peer review pending |
 | Репо | `djabbat/Books` (private) |
@@ -1421,7 +1421,7 @@ v5 + Methodology_chapter_v1 (2026-04-20) + PMID_audit (2026-04-21)
 | Параметр | Значение |
 |---|---|
 | Название | «24 Жизни» / «24 Lives» / «24 ცხოვრება» |
-| Автор | Jaba Tkemaladze |
+| Автор | Jaba Tqemaladze |
 | Жанр | Спекулятивная / философская проза, элементы science fiction |
 | Версия концепции | v3.0 (финальная, 2026-04-02) |
 | Статус | Черновик 24 глав написан (RU/EN/KA), этап редактуры |
@@ -2009,7 +2009,7 @@ _Создано: 2026-04-21_
 ## Фестский диск и картвельская гипотеза (спорный блок)
 
 - Фестский диск (1908, о. Крит) — один из неразгаданных памятников древнего письма.
-- Автор разрабатывает гипотезу о возможной связи знаков диска с картвельскими языками (см. статью Tkemaladze 2026, DOI 10.65649/0rs6tc34).
+- Автор разрабатывает гипотезу о возможной связи знаков диска с картвельскими языками (см. статью Tqemaladze 2026, DOI 10.65649/0rs6tc34).
 - В книге подавать как **гипотезу автора**, не как консенсус.
 
 ## Уровни достоверности (маркировать в тексте)
@@ -2091,7 +2091,7 @@ _Создано: 2026-04-21_
 
 - Проблема идентичности копии (Parfit, teletransportation paradox)
 - Memory reconsolidation (Nader 2000) — биологическая аналогия стирания
-- Centriolar damage accumulation theory aging (CDATA, собственная работа Tkemaladze) — отсылка к старению как к накоплению повреждений; в романе старение ИЗБЕГАЕТСЯ перманентным омоложением, но эмоциональный эквивалент старения («износ души») остаётся
+- Centriolar damage accumulation theory aging (CDATA, собственная работа Tqemaladze) — отсылка к старению как к накоплению повреждений; в романе старение ИЗБЕГАЕТСЯ перманентным омоложением, но эмоциональный эквивалент старения («износ души») остаётся
 
 ## Известные нерешённые вопросы
 
@@ -2344,10 +2344,10 @@ _Создано: 2026-04-21_
 
 ## Тематически связанные работы автора
 
-- Tkemaladze & Samanishvili (2024). *Mineral ice cream improves recovery of muscle functions after exercise.* Georgian Scientists, 6(2). DOI: 10.52340/gs.2024.06.02.04
-- Tkemaladze (2024). *Editorial: Molecular mechanism of ageing and therapeutic advances through targeting glycative and oxidative stress.* Front. Pharmacol. PMID: 38510429
-- Tkemaladze (2023). *Cross-senolytic effects of dasatinib and quercetin in humans.* Georgian Scientists, 5(3).
-- Tkemaladze & Apkhazava (2019). *Dasatinib and quercetin: short-term simultaneous administration improves physical capacity in human.* J Biomedical Sci.
+- Tqemaladze & Samanishvili (2024). *Mineral ice cream improves recovery of muscle functions after exercise.* Georgian Scientists, 6(2). DOI: 10.52340/gs.2024.06.02.04
+- Tqemaladze (2024). *Editorial: Molecular mechanism of ageing and therapeutic advances through targeting glycative and oxidative stress.* Front. Pharmacol. PMID: 38510429
+- Tqemaladze (2023). *Cross-senolytic effects of dasatinib and quercetin in humans.* Georgian Scientists, 5(3).
+- Tqemaladze & Apkhazava (2019). *Dasatinib and quercetin: short-term simultaneous administration improves physical capacity in human.* J Biomedical Sci.
 
 ## Внешние авторитетные источники (стартовый набор)
 
@@ -2433,7 +2433,7 @@ _Создано: 2026-04-21_
 
 ## Тематически связанные работы автора
 
-- Tkemaladze, J. (2026). **The Phaistos Disc And The Kartvelian Hypothesis.** *Longevity Horizon*, 2(4). DOI: 10.65649/0rs6tc34 — центральная статья по картвельской гипотезе прочтения Фестского диска.
+- Tqemaladze, J. (2026). **The Phaistos Disc And The Kartvelian Hypothesis.** *Longevity Horizon*, 2(4). DOI: 10.65649/0rs6tc34 — центральная статья по картвельской гипотезе прочтения Фестского диска.
 
 ## Ключевые внешние источники (стартовый набор)
 
@@ -2515,7 +2515,7 @@ _Создано: 2026-04-21_
 - Derek Parfit — *Reasons and Persons* (philosophy of personal identity)
 - Daniel Dennett — *Consciousness Explained*
 - Ray Kurzweil — *The Singularity Is Near* (для контекста, не как согласие)
-- Собственные работы Tkemaladze по старению и centriole theory (см. self-citation list в глобальном `~/CLAUDE.md`)
+- Собственные работы Tqemaladze по старению и centriole theory (см. self-citation list в глобальном `~/CLAUDE.md`)
 
 ## Потенциальные издатели / платформы
 

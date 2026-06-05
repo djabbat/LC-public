@@ -5,7 +5,7 @@
 [01:41:22]   packet local GLA_Annals
 [01:41:22]   packet local Iqalto_umbrella
 [01:41:22]   packet local Iqalto_lms
-[01:41:22]   packet local Iqalto_Aqtivirebuli
+[01:41:22]   packet local Iqalto_Activatus
 [01:41:22]   packet local Iqalto_simulator
 [01:41:22]   packet local Iqalto_iqalto-core
 [01:41:22]   packet local LongevityCommon_root
@@ -65,7 +65,7 @@
 [01:51:27]   check GLA_Annals v1
 [01:51:32]   check Claude_service v1
 [01:51:37]   DONE Iqalto_lms: accepted=True
-[01:51:37]   review Iqalto_Aqtivirebuli
+[01:51:37]   review Iqalto_Activatus
 [01:51:41]   refine plan GLA_umbrella -> v2
 [01:51:41]   DONE GLA_Annals: accepted=True
 [01:51:41]   review Iqalto_simulator
@@ -75,11 +75,11 @@
 [01:52:08]   plan Iqalto_simulator
 [01:52:09]   DONE Iqalto_umbrella: accepted=True
 [01:52:09]   review LongevityCommon_root
-[01:52:11]   plan Iqalto_Aqtivirebuli
+[01:52:11]   plan Iqalto_Activatus
 [01:52:25]   plan Iqalto_iqalto-core
 [01:52:45]   check GLA_umbrella v2
 [01:52:50]   check Iqalto_simulator v1
-[01:52:54]   check Iqalto_Aqtivirebuli v1
+[01:52:54]   check Iqalto_Activatus v1
 [01:52:58]   check Iqalto_iqalto-core v1
 [01:53:10]   DONE Iqalto_iqalto-core: accepted=True
 [01:53:10]   review LC_AIM
@@ -87,7 +87,7 @@
 [01:53:10]   review LC_BioSense
 [01:53:13]   refine plan GLA_umbrella -> v3
 [01:53:16]   review LC_CDATA
-[01:53:16]   DONE Iqalto_Aqtivirebuli: accepted=True
+[01:53:16]   DONE Iqalto_Activatus: accepted=True
 [01:53:19]   plan LongevityCommon_root
 [01:53:58]   check GLA_umbrella v3
 [01:53:59]   plan LC_AIM

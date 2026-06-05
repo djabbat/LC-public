@@ -42,11 +42,11 @@
       "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/Iqalto_simulator.check.v1.md",
       "accepted": true
     },
-    "Iqalto_Aqtivirebuli": {
-      "slug": "Iqalto_Aqtivirebuli",
-      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/Iqalto_Aqtivirebuli.review.md",
-      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/Iqalto_Aqtivirebuli.plan.v1.md",
-      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/Iqalto_Aqtivirebuli.check.v1.md",
+    "Iqalto_Activatus": {
+      "slug": "Iqalto_Activatus",
+      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/Iqalto_Activatus.review.md",
+      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/Iqalto_Activatus.plan.v1.md",
+      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/Iqalto_Activatus.check.v1.md",
       "accepted": true
     },
     "GLA_umbrella": {

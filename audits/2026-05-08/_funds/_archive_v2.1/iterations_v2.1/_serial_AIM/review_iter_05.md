@@ -31,7 +31,7 @@
    Раздел Limitations присутствует в CONCEPT.md (8 пунктов) и THEORY.md (7 пунктов), но формулировки и количество пунктов различаются. Нет единого согласованного списка. Например, в CONCEPT.md упоминается "reference integrity: one reference (Hibbard 2004) had incorrect PMID", что является признанием ошибки, но не исправлением в самом документе. В THEORY.md этого пункта нет.
 
 6. **Consortium / collaboration plan** ✗  
-   В CONCEPT.md есть список партнёров с ролью "Lead PI: [Name TBD]", "Co-I: [Name TBD]" и "Potential partners (letters of support pending)". В THEORY.md дан другой список с Dr. Tkemaladze и Dr. Samanishvili. Нет единого документа с указанием ролей каждого. Placeholder TBD в именах — fabrication marker. Письма поддержки не получены.
+   В CONCEPT.md есть список партнёров с ролью "Lead PI: [Name TBD]", "Co-I: [Name TBD]" и "Potential partners (letters of support pending)". В THEORY.md дан другой список с Dr. Tqemaladze и Dr. Samanishvili. Нет единого документа с указанием ролей каждого. Placeholder TBD в именах — fabrication marker. Письма поддержки не получены.
 
 7. **Reference reality + match** ✗  
    Проведён референс-аудит (см. таблицу ниже). Большинство ссылок невалидны: многие имеют "DOI TBD" или "pre-print; DOI TBD", один PMID неверен, один источник проприетарный (не верифицируется). Ни одна ссылка не соответствует требованию "реальная и соответствующая тексту" для всех цитат.
@@ -39,7 +39,7 @@
 8. **No fabrication markers** ✗  
    Fabrication markers присутствуют массово:  
    - `[Name TBD]` в consortium (3 раза)  
-   - `DOI TBD` для Tkemaladze (2026), Tao et al. (2026), Blumenthal-Lee (2024)  
+   - `DOI TBD` для Tqemaladze (2026), Tao et al. (2026), Blumenthal-Lee (2024)  
    - `[pre-print; DOI TBD]`  
    - `osf.io/TBD` и `osf.io/XXXXX`  
    - `PMID_REMOVED` не обнаружено, но `15527447` вместо `15333167` — ошибка, эквивалентная fabrication.  
@@ -67,7 +67,7 @@
 | 3 | Hibbard JH et al. (2009) "PAM scoring & MCID" | Insignia Health technical manual (proprietary) | Нет (не общедоступна, нет DOI/PMID) | Утверждается, что MCID = 5.4; но ссылка непроверяема | ❌ REF_VERIFY |
 | 4 | Tao W. et al. (2026) "Co-design of medical AI improves patient activation: RCT of 2069 patients" | "Nature Medicine" + "pre-print; DOI TBD" | Нет (DOI TBD, не опубликована) | Утверждается, что co-design > fine-tuning – не может быть подтверждено | ❌ REF_VERIFY |
 | 5 | Blumenthal D., Lee J. (2024) "Four-zone framework for human-AI clinical collaboration" | "JAMA" + "pre-print; DOI TBD" | Нет (DOI TBD, не опубликована) | Утверждается 4-zone HCI – не может быть подтверждено | ❌ REF_VERIFY |
-| 6 | Tkemaladze J. (2026) "Patient as a Project: Three-level framework for AI-assisted integrative medicine" | "Longevity Horizon 2(5)" + "DOI TBD" | Нет (DOI TBD, не опубликована) | Утверждается трехуровневая модель – не может быть подтверждено | ❌ REF_VERIFY |
+| 6 | Tqemaladze J. (2026) "Patient as a Project: Three-level framework for AI-assisted integrative medicine" | "Longevity Horizon 2(5)" + "DOI TBD" | Нет (DOI TBD, не опубликована) | Утверждается трехуровневая модель – не может быть подтверждено | ❌ REF_VERIFY |
 | 7 | Hibbard JH et al. (2004) – ошибочный PMID | PMID 15527447 (в CONCEPT.md образец #2) | Неверно: PMID 15527447 – это Hibbard 2005, не 2004 | Не соответствует тексту (2004 paper утверждается, но дан PMID 2005) | ❌ REJECT |
 
 **Вывод:** 2 из 7 ссылок реальны и соответствуют тексту (Hibbard 2004 правильный PMID, Hibbard 2005). Остальные 5 – невалидны (DOI TBD, проприетарный источник, ошибочный PMID). Reference Integrity Score: 1.
@@ -81,7 +81,7 @@
    Использовать один идентификатор, например `osf.io/xxxxx` (5 случайных символов), и указать, что он будет зарезервирован до 2026-08-01. Удалить второй placeholder.
 
 3. **THEORY.md: Заменить ссылки с "DOI TBD" на реальные публикации или удалить**  
-   Для Tao et al. 2026, Blumenthal-Lee 2024, Tkemaladze 2026 – указать либо опубликованные DOI, либо удалить эти утверждения, заменив их на рецензированные источники. Если статьи ещё не опубликованы, нельзя на них ссылаться как на доказательства.
+   Для Tao et al. 2026, Blumenthal-Lee 2024, Tqemaladze 2026 – указать либо опубликованные DOI, либо удалить эти утверждения, заменив их на рецензированные источники. Если статьи ещё не опубликованы, нельзя на них ссылаться как на доказательства.
 
 4. **CONCEPT.md: Исправить неверный PMID для Hibbard 2004**  
    Заменить PMID 15527447 на 15333167 во всех местах. Удалить дублирующийся блок Sample size calculation.

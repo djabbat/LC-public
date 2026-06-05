@@ -37,7 +37,7 @@
    **Невалидные идентификаторы (DOI TBD) для трёх ссылок → автоматический REJECT компонента.**  
    - Tao et al. 2026 *Nature Medicine* — DOI TBD  
    - Blumenthal‑Lee 2024 *JAMA* — DOI TBD  
-   - Tkemaladze 2026 *Longevity Horizon* — DOI TBD  
+   - Tqemaladze 2026 *Longevity Horizon* — DOI TBD  
    Эти ссылки не могут быть проверены на реальность, что прямо запрещено правилом 7(a).  
    Кроме того, путаница с PMID для Hibbard 2004 (в тексте встречается как 15333167, так и ошибочно 15527447) свидетельствует о несоответствии.
 
@@ -62,7 +62,7 @@
 | 3 | Hibbard et al. (2009) PAM scoring/MCID | (proprietary manual) | N/A (не статья) | Упоминается MCID 5.4 | Допустимо, но не проверяемо |
 | 4 | Tao et al. (2026) *Nature Medicine* co‑design RCT | DOI TBD | ❌ Нет (не указан) | Утверждается RCT n=2069 | **REJECT** – нереальная ссылка |
 | 5 | Blumenthal‑Lee (2024) *JAMA* 4‑zone HCI framework | DOI TBD | ❌ Нет (препринт без ID) | Цитируется как основа HCI | **REJECT** – нереальная ссылка |
-| 6 | Tkemaladze (2026) *Longevity Horizon* patient‑as‑project | DOI TBD | ❌ Нет (препринт без ID) | Является концептуальной основой | **REJECT** – нереальная ссылка |
+| 6 | Tqemaladze (2026) *Longevity Horizon* patient‑as‑project | DOI TBD | ❌ Нет (препринт без ID) | Является концептуальной основой | **REJECT** – нереальная ссылка |
 | 7 | Hibbard 2004 (ошибочный PMID в тексте) | PMID 15527447 (ошибочно приписан) | ✅ (PMID реален, но не соответствует тексту) | ❌ Нет – этот PMID относится к 2005 short‑form, а не к 2004 | **REF_VERIFY** – несоответствие |
 
 **Итог:** 3 нереальные ссылки (DOI TBD) → автоматический REJECT. 1 несоответствие (PMID 15527447 приписан неверно).

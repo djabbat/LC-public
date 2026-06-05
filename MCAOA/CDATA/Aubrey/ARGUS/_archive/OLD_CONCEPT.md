@@ -5,7 +5,7 @@
 
 ## 0. MCAOA context
 
-ARGUS operates within the **Multi-Counter Architecture of Organismal Aging (MCAOA)** framework (Tkemaladze J. 2026, DOI: 10.5281/zenodo.20055806). The centriolar **Counter #1** is one of the key limiters of stem cell replicative potential; ARGUS is the empirical validation tool for its predictions.
+ARGUS operates within the **Multi-Counter Architecture of Organismal Aging (MCAOA)** framework (Tqemaladze J. 2026, DOI: 10.5281/zenodo.20055806). The centriolar **Counter #1** is one of the key limiters of stem cell replicative potential; ARGUS is the empirical validation tool for its predictions.
 
 *Note: MCAOA is used here as a biological-motivation context only. Phase A is pure engineering — no living cells, no MCAOA validation claims.*
 
@@ -40,17 +40,17 @@ Centriole inheritance is tissue-specific, motivating the need for a precision ab
 | **La Terra S. et al. (2005) *Mol Biol Cell* PMID: 15738265** | Centriole removal in HeLa cells **does not block cell cycle**; cells assemble new centrioles *de novo* | Confirms ablation is not a lethal intervention in transformed cells |
 | **Uetake Y. et al. (2007) *J Cell Biol* PMID: 17227892** | Normal human cells progress through G1 without centrioles and assemble them *de novo* | Justification for working with normal fibroblasts (BJ-hTERT) in Phase B |
 | **Royall LN et al. (2023) *eLife* PMID: 37882444** | Asymmetric inheritance of the **older** mother centriole is required for human neural progenitor self-renewal | Central justification: ARGUS must distinguish old vs new centrioles |
-| **Tkemaladze J. (2023) *Mol Biol Rep* PMID: 36583780** | Old centrioles are potentially the primary aging structure; during asymmetric stem cell division, the daughter cell retaining stem cell potential selectively conserves old (mother) centrioles | Theoretical justification for MCAOA counter #1 |
+| **Tqemaladze J. (2023) *Mol Biol Rep* PMID: 36583780** | Old centrioles are potentially the primary aging structure; during asymmetric stem cell division, the daughter cell retaining stem cell potential selectively conserves old (mother) centrioles | Theoretical justification for MCAOA counter #1 |
 
 
 ## 3. Verified PMIDs (2026-05-15 — full verification via PubMed)
 
 | # | PMID | Article | Key finding for ARGUS |
 |---|------|---------|----------------------|
-| 1 | **36583780** | Tkemaladze J. *Mol Biol Rep* 2023 | CDATA Counter #1 — selective inheritance of old centrioles by stem cells |
+| 1 | **36583780** | Tqemaladze J. *Mol Biol Rep* 2023 | CDATA Counter #1 — selective inheritance of old centrioles by stem cells |
 | 2 | **37882444** | Royall LN et al. *eLife* 2023 | Asymmetric centriole inheritance in human neural progenitors |
-| 3 | **16336191** | Tkemaladze & Chichinadze 2005 *Biochemistry (Mosc)* | Centriolar mechanisms of morphogenesis |
-| 4 | **15886028** | Tkemaladze J. 2005 *Cell Biol Int* | Determination of morphogenetic status |
+| 3 | **16336191** | Tqemaladze & Chichinadze 2005 *Biochemistry (Mosc)* | Centriolar mechanisms of morphogenesis |
+| 4 | **15886028** | Tqemaladze J. 2005 *Cell Biol Int* | Determination of morphogenetic status |
 | 5 | **21407209** | Januschke J. et al. 2011 *Nat Commun* | Differential PCM regulation of mother and daughter centrioles in Drosophila |
 | 6 | **40243666** | Schaeffer A. et al. 2025 *J Cell Biol* | Microtubule and actomyosin positioning |
 | 7 | **17227892** | Uetake Y. et al. 2007 *J Cell Biol* | *De novo* centriole assembly after ablation in normal human cells |
@@ -62,7 +62,7 @@ Centriole inheritance is tissue-specific, motivating the need for a precision ab
 | 13 | **34440763** | — *Front Cell Dev Biol* 2021 | Centriolar asymmetry in early Drosophila oogenesis |
 | 14 | **28562636** | — *PLoS One* 2017 | Systematic review of asymmetric organelle inheritance |
 
-**Removed (fabricated):** ~~38015348~~, ~~38353211~~ (not Tkemaladze, not centriole biology)
+**Removed (fabricated):** ~~38015348~~, ~~38353211~~ (not Tqemaladze, not centriole biology)
 
 
 ## 4. PI publications — scope of self-citation
@@ -80,7 +80,7 @@ The PI's own work is referenced only where directly relevant:
 - Margin of non-inferiority: ±5 µm vs spec
 - **Power calculation:** n=50 measurements (α=0.05, β=0.2, effect size 1.5σ)
 
-**Secondary endpoint (updated according to biological justification from Royall 2023 and Tkemaladze 2023):**
+**Secondary endpoint (updated according to biological justification from Royall 2023 and Tqemaladze 2023):**
 - **Discrimination between 'old' (photobleached) and 'new' (fresh) centriole mimetic beads**
 - Target: ≥95% correct classification on ≥500 simulated ablation cycles
 - **Power calculation:** n=500 cycles, α=0.05 (Holm-Bonferroni corrected), power 0.9 for detecting 5% deviation from 95%
@@ -122,7 +122,7 @@ The PI's own work is referenced only where directly relevant:
 
 | Role | Name | Institution | Responsibility |
 |:----:|------|-------------|---------------|
-| **PI** | Jaba Tkemaladze, MD, PhD | Georgia Longevity Alliance | System architecture, AI agent integration, hardware assembly, project lead |
+| **PI** | Jaba Tqemaladze, MD, PhD | Georgia Longevity Alliance | System architecture, AI agent integration, hardware assembly, project lead |
 
 **No external Co-PIs or partners are required for ARGUS Phase A.** All engineering is executed by the PI with AI-assisted tooling (Claude Code for firmware/Python scaffolding, Gemini for vision). GLA provides lab space and administrative support in-kind.
 

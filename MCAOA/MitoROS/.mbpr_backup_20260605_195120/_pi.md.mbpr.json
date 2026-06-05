@@ -1,0 +1,19 @@
+{
+  "score": 60,
+  "verdict": "Incomplete project file with strong structural rules but lacking substantive project details and missing content in key files like TODO.md.",
+  "strengths": [
+    "Clear hierarchical structure and rule enforcement",
+    "Defined parent project and key file references",
+    "Explicit memory and review protocols"
+  ],
+  "weaknesses": [
+    "TODO.md is cut off and incomplete",
+    "No actual project content beyond meta-rules",
+    "Missing details on methodology, hypotheses, or experimental plans"
+  ],
+  "top_fixes": [
+    "Complete TODO.md with actionable tasks and milestones",
+    "Add substantive project description including hypotheses and methods",
+    "Ensure all referenced files (CONCEPT.md, STATE.md) exist and are populated"
+  ]
+}

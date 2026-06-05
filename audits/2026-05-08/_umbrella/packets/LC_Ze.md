@@ -166,7 +166,7 @@ Website: `website/` · Deploy: `~/Desktop/Deploy_Admin/ze_website.tar.gz`
 а понимание того, **что заставило Пуанкаре их увидеть**: интуиция, геометрический образ,
 философская позиция, связь с физической реальностью.
 
-**Автор:** Jaba Tkemaladze
+**Автор:** Jaba Tqemaladze
 **Статус:** 🔴 Только начат (2026-03-25)
 
 ---
@@ -188,7 +188,7 @@ Website: `website/` · Deploy: `~/Desktop/Deploy_Admin/ze_website.tar.gz`
 ```md
 # Ze Vectors Theory
 
-**Author:** Jaba Tkemaladze — Kutaisi International University, Georgia
+**Author:** Jaba Tqemaladze — Kutaisi International University, Georgia
 **Materials:** 42 articles in `Materials/` · **Digital Twin:** `website/index.html`
 **Status:** Active research (2024–2026) · 42 papers · 18 interactive modules
 
@@ -392,7 +392,7 @@ Full index: `Materials/INDEX.md`
 ```md
 # Poincaré — Глубокое исследование
 
-**Автор:** Jaba Tkemaladze  
+**Автор:** Jaba Tqemaladze  
 **Начато:** 2026-03-25 · **Обновлено:** 2026-04-03  
 **Статус:** 🔴 Phase 3B активна
 
@@ -415,7 +415,7 @@ Full index: `Materials/INDEX.md`
 Момент озарения → T-burst (подсознательный синтез > предсказание)
 ```
 
-**Ze-теория:** Tkemaladze, J. (2026). *Longevity Horizon*, 2(4). DOI: 10.65649/a874t352
+**Ze-теория:** Tqemaladze, J. (2026). *Longevity Horizon*, 2(4). DOI: 10.65649/a874t352
 
 ---
 
@@ -455,7 +455,7 @@ Poincare/
 # CONCEPT.md — проект Ze Theory (для Claude)
 
 **Проект:** Ze  
-**Автор:** Jaba Tkemaladze, Кутаисский международный университет, Грузия  
+**Автор:** Jaba Tqemaladze, Кутаисский международный университет, Грузия  
 **Роль Claude:** Исследовательский ассистент, рецензент, редактор документов  
 **Последнее обновление:** 2026-04-06  
 **Версия:** v6 (обновлена по флагманской статье FoP: результаты валидации, фальсифицируемость, правило выбора v*, пространство-время)  
@@ -669,7 +669,7 @@ R5 (биогеронтолог): "χ_Ze претендует на измерен
 # Poincaré — КОНЦЕПЦИЯ
 
 **Проект:** Poincare
-**Автор:** Jaba Tkemaladze
+**Автор:** Jaba Tqemaladze
 **Начато:** 2026-03-25
 **Статус:** Активный — Phase 1 завершён, Phase 2 в процессе, Phase 3 готов
 **Версия:** v5 (русская, финальная перед Phase 3)
@@ -712,9 +712,9 @@ R5 (биогеронтолог): "χ_Ze претендует на измерен
 
 ### Формальная Ze-теория vs. Историческое применение
 
-Ze-теория формально определена в Tkemaladze (2026). Настоящий проект применяет её как **аналоговую модель**, а не как прямое нейрофизиологическое измерение. Ключевые различия:
+Ze-теория формально определена в Tqemaladze (2026). Настоящий проект применяет её как **аналоговую модель**, а не как прямое нейрофизиологическое измерение. Ключевые различия:
 
-| Формальное понятие Ze (Tkemaladze 2026) | Использование в проекте Poincaré |
+| Формальное понятие Ze (Tqemaladze 2026) | Использование в проекте Poincaré |
 |-----------------------------------------|----------------------------------|
 | τ_Z ∈ ℕ (счётчик собственного времени, уменьшается при T-событиях) | τ как *структурированная интуиция*, переносимая между доменами (τ-трансфер, τ-мост, τ-накопление) |
 | T-событие = неправильный прогноз → τ_Z - 1 | T-burst = момент озарения (подсознательный синтез превышает предсказание) |
@@ -722,13 +722,13 @@ Ze-теория формально определена в Tkemaladze (2026). Н
 
 **Обоснование расширения:** Подобно тому, как эволюционная биология использует «информацию» и для количества (Шеннон), и для содержания (смысл), наше историческое применение расширяет τ от простого счётчика до *содержания* интуиции, которое накапливается и переносится между доменами. Это расширение является аналоговым, не формальным — и явно признаётся таковым.
 
-**Ссылка на формальную Ze-теорию:** Tkemaladze, J. (2026). Ze Theory as an Interpretive Framework for Quantum Mechanics. *Longevity Horizon*, 2(4). DOI: https://doi.org/10.65649/a874t352
+**Ссылка на формальную Ze-теорию:** Tqemaladze, J. (2026). Ze Theory as an Interpretive Framework for Quantum Mechanics. *Longevity Horizon*, 2(4). DOI: https://doi.org/10.65649/a874t352
 
 ---
 
 ### Ze-параметры: Ретроспективная операционализация
 
-| Ze-параметр | Исторический прокси в жизни Пуанкаре | Метод вывода | Формальное значение Ze (Tkemaladze 2026) |
+| Ze-параметр | Исторический прокси в жизни Пуанкаре | Метод вывода | Формальное значение Ze (Tqemaladze 2026) |
 |-------------|--------------------------------------|--------------|------------------------------------------|
 | **Высокое v (сознательный анализ)** | Периоды интенсивной переписки (письма Клейну), концентрированное написание мемуаров, тетради с плотными формулами | Прямое наблюдение из архивных записей | Не специфицировано (подразумевается динамикой) |
 | **v* (оптимальная инкубация)** | Не может быть наблюдаема напрямую. Выводится из *конъюнкции*: (a) периода сознательного отстранения от целевой проблемы, за которым следует (b) документированный T-burst | Ретроспективный вывод из временной последовательности в самоотчётах | ≈ 0.456 (оптимум активного агента) |
@@ -980,7 +980,7 @@ Poincare (mathematical philosophy + Ze math)
     |                                Ze_NavierStokes
     |
     |--[publication]-----------> longevity.ge (Longevity Horizon)
-    |   Tkemaladze (2026) ×3     → DOI: 10.65649/a874t352 (QM framework)
+    |   Tqemaladze (2026) ×3     → DOI: 10.65649/a874t352 (QM framework)
     |   Phase 3A article ✅          DOI: 10.65649/kzj86888 (math formalism)
     |                                DOI: 10.65649/hqm2c554 (Minkowski from Ze)
     |
@@ -1175,8 +1175,8 @@ Threshold: |v − 0.5| > 0.05 within 10⁴ samples → suspect PRNG.
 
 | Параметр | Значение | Источник |
 |----------|----------|---------|
-| **v*** (активный агент) | ≈ 0.456 | Tkemaladze (2026), DOI: 10.65649/a874t352 |
-| **v*** (пассивный счётчик) | 1 − ln2 ≈ 0.3069 | Tkemaladze (2026) |
+| **v*** (активный агент) | ≈ 0.456 | Tqemaladze (2026), DOI: 10.65649/a874t352 |
+| **v*** (пассивный счётчик) | 1 − ln2 ≈ 0.3069 | Tqemaladze (2026) |
 | **Δv** (цена агентности) | ≈ 0.1491 | v*_active − v*_passive |
 | **τ_Z** | ℕ, уменьшается при T-событиях | Постулат 3 |
 | **T-событие** | неправильный прогноз → τ_Z − 1 | Постулат 3 |
@@ -1233,11 +1233,11 @@ Threshold: |v − 0.5| > 0.05 within 10⁴ samples → suspect PRNG.
 ## Самоцитирование (использовать в статьях проекта)
 
 ```
-Tkemaladze, J. (2026). Ze Theory as an Interpretive Framework for Quantum Mechanics.
+Tqemaladze, J. (2026). Ze Theory as an Interpretive Framework for Quantum Mechanics.
   Longevity Horizon, 2(4). DOI: https://doi.org/10.65649/a874t352
-Tkemaladze, J. (2026). Mathematical formalism of Ze.
+Tqemaladze, J. (2026). Mathematical formalism of Ze.
   Longevity Horizon, 2(2). DOI: https://doi.org/10.65649/kzj86888
-Tkemaladze, J. (2026). Emergence of the Minkowski Metric from Ze Dynamics.
+Tqemaladze, J. (2026). Emergence of the Minkowski Metric from Ze Dynamics.
   Longevity Horizon, 2(4). DOI: https://doi.org/10.65649/hqm2c554
 ```
 
@@ -1523,7 +1523,7 @@ A clear publication roadmap should be drafted before Phase 2 concludes. Priority
 ---
 
 
-**Author:** Jaba Tkemaladze, Kutaisi International University, Georgia
+**Author:** Jaba Tqemaladze, Kutaisi International University, Georgia
 **Materials:** `/home/oem/Desktop/Ze/Materials/` (42 статьи + INDEX.md)
 **Digital twin:** `/home/oem/Desktop/Ze/website/`
 **Deploy archive:** `/home/oem/Desktop/Deploy_Admin/ze_website.tar.gz`
@@ -1793,7 +1793,7 @@ _Последнее обновление: 2026-04-03_
 |------|---------|
 | Username | `centriole` |
 | Email | djabbat@gmail.com |
-| Name | Jaba Tkemaladze |
+| Name | Jaba Tqemaladze |
 | Affiliation | Independent Researcher, Georgia |
 | ORCID | 0000-0001-8651-7243 |
 | Текущие группы | physics, econ, q-bio |
@@ -2192,9 +2192,9 @@ Running log of decisions, context, and key facts across sessions.
 
 ### Опубликованные статьи (Longevity Horizon)
 
-- Tkemaladze (2026). Ze Theory as Interpretive Framework for QM. DOI: 10.65649/a874t352
-- Tkemaladze (2026). Mathematical Formalism of Ze. DOI: 10.65649/kzj86888
-- Tkemaladze (2026). Emergence of Minkowski Metric from Ze Dynamics. DOI: 10.65649/hqm2c554
+- Tqemaladze (2026). Ze Theory as Interpretive Framework for QM. DOI: 10.65649/a874t352
+- Tqemaladze (2026). Mathematical Formalism of Ze. DOI: 10.65649/kzj86888
+- Tqemaladze (2026). Emergence of Minkowski Metric from Ze Dynamics. DOI: 10.65649/hqm2c554
 
 ---
 

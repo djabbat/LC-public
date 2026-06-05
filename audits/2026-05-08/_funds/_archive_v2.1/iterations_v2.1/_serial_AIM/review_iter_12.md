@@ -37,7 +37,7 @@
 - **Hibbard 2004**: в разных местах указаны PMID 15527447 и 15333167. PMID 15527447 на самом деле относится к Hibbard 2005 (short-form PAM). То есть одна и та же работа цитируется с двумя разными PMID, один из которых неверен. Это нарушение п.7b (несоответствие тексту).
 - **Tao et al. (2026)**: DOI TBD, нет реального идентификатора. Нельзя проверить существование.
 - **Blumenthal-Lee (2024)**: DOI TBD, нет реального идентификатора.
-- **Tkemaladze (2026)**: DOI TBD, нет реального идентификатора.
+- **Tqemaladze (2026)**: DOI TBD, нет реального идентификатора.
 - **Hibbard (2009) PAM manual**: проприетарный документ без DOI/ISBN.
 - **Mayo Clinic, NIH MedlinePlus**: веб-ссылки, не научные статьи.
 
@@ -65,7 +65,7 @@
 | 3 | Hibbard et al. (2005) short form PAM, *HSR* 40(6) | PMID 15527447 | ✓ | Да (если указано как 2005) | OK, но путаница с №2 |
 | 4 | Tao et al. (2026) *Nature Medicine* | DOI TBD | ✗ (нет идентификатора) | Невозможно проверить | REJECT маркер |
 | 5 | Blumenthal-Lee (2024) *JAMA* | DOI TBD | ✗ | Невозможно проверить | REJECT маркер |
-| 6 | Tkemaladze (2026) *Longevity Horizon* | DOI TBD | ✗ | Невозможно проверить | REJECT маркер |
+| 6 | Tqemaladze (2026) *Longevity Horizon* | DOI TBD | ✗ | Невозможно проверить | REJECT маркер |
 | 7 | Hibbard (2009) PAM technical manual | Нет DOI/ISBN | ✗ (неопубликованный документ) | Формально соответствует тексту | Приемлемо как дополнительный, но не как основная научная ссылка |
 | 8 | Mayo Clinic reference values | URL | ✓ (веб) | Да | Допустимо для KNOWLEDGE.md |
 | 9 | NIH MedlinePlus | URL | ✓ (веб) | Да | Допустимо для KNOWLEDGE.md |

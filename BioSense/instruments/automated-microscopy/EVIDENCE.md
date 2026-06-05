@@ -129,7 +129,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 Key claims are supported by the following verified sources:
 1. **AI-assisted microscopy:** [REF_PLACEHOLDER — пенding publication; не цитировать как established].
 2. **Low-cost microscope retrofit:** [REF_PLACEHOLDER — pending publication; не цитировать как established].
-3. **CDATA protocol:** Tkemaladze 2023 *Mol Biol Rep* PMID 36583780 (foundation paper, real DOI 10.1007/s11033-022-08203-5).
+3. **CDATA protocol:** Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (foundation paper, real DOI 10.1007/s11033-022-08203-5).
 
 **Systematic review:** A Cochrane/PRISMA-style review of AI in automated microscopy is not yet available; a scoping review is planned.
 

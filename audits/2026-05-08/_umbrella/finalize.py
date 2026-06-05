@@ -153,7 +153,7 @@ def stack_compliance(slug: str) -> str:
 def stack_compliance_for_subproject(slug: str) -> str:
     """Documentation-only / outreach / NGO projects don't need code."""
     DOC_ONLY_OK = {
-        "GLA_umbrella", "GLA_Annals", "Iqalto_Aqtivirebuli",
+        "GLA_umbrella", "GLA_Annals", "Iqalto_Activatus",
         "Marketing_umbrella", "Marketing_Books", "Marketing_JabaEkimi",
         "PhD_umbrella", "PhD_dissertation", "PhD_E0", "PhD_microscope",
         "Regenesis", "SamnuAzuzi", "Sulkalmakhi", "WLRAbastumani",

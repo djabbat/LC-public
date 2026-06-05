@@ -1,0 +1,25 @@
+# MEMORY — Ze_D
+
+## Overview
+Ze_D (Ze-discordance) is a project focused on verifying core hypotheses H₁–H₄ and building a robust framework for discordance analysis. This memory file tracks progress, decisions, and next steps.
+
+## Goals & Tasks
+- **Verify hypotheses H₁–H₄** – confirm or refute each hypothesis through iterative testing (P0, after previous milestone)
+- **Complete core file structure** – finalize CONCEPT.md, README.md, and MEMORY.md with real content (P1, after previous milestone)
+- **Implement mbpr loop** – automate hypothesis verification using `mbpr --loop` (P0, after prerequisite tasks)
+- **Document findings** – produce a summary report for each hypothesis (P2, after previous milestone)
+- **Prepare for next cycle** – define H₅–H₈ based on initial results (P1, after previous milestone)
+
+## Current Status
+- Core files exist: CONCEPT.md, README.md, MEMORY.md (partially filled)
+- First mbpr cycle launched after prerequisite tasks
+- Hypotheses H₁–H₄ are under verification
+
+## Timeline & Milestones
+| Timing                | Milestone                          | Priority |
+|-----------------------|------------------------------------|----------|
+| after prerequisite tasks | First mbpr cycle started           | P0       |
+| after previous milestone | mbpr loop operational              | P0       |
+| after previous milestone | Core files fully populated         | P1       |
+| after previous milestone | All hypotheses verified            | P0       |
+| after

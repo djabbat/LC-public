@@ -119,7 +119,7 @@ took over. Per memory `feedback_no_docker` rule.
 
 **Multisensor wearable platform for Ze-based biomarker analysis: EEG · HRV · Olfaction**
 
-BioSense applies Ze Theory (Tkemaladze) to three biosignal channels for aging biomarker detection
+BioSense applies Ze Theory (Tqemaladze) to three biosignal channels for aging biomarker detection
 and clinical diagnostics. The EEG module is validated across 4 public datasets (N up to 196,
 lifespan ages 5–97). HRV and olfaction modules are in development.
 
@@ -226,11 +226,11 @@ BioSense/
 
 ## Citation
 
-Tkemaladze, J. (2026). *Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
+Tqemaladze, J. (2026). *Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
 Experimental EEG validation across the human lifespan.* [Manuscript under review]
 
 Also cite:
-- PMID 36583780 — Tkemaladze J. *Mol Biol Reports* 2023
+- PMID 36583780 — Tqemaladze J. *Mol Biol Reports* 2023
 - PMID 20480236 — Lezhava T. et al. *Biogerontology* 2011
 
 ```
@@ -1048,12 +1048,12 @@ not via lock-and-key shape matching (classical theory).
 
 ## Key References
 
-- **Ze Theory:** Tkemaladze J. Mol Biol Reports 2023. PMID 36583780
+- **Ze Theory:** Tqemaladze J. Mol Biol Reports 2023. PMID 36583780
 - **Aging biology:** Lezhava T. et al. Biogerontology 2011. PMID 20480236
 - **MPI-LEMON:** Babayan A. et al. Sci Data 2019; 6:308
 - **Cuban EEG:** Valdés-Sosa P.A. et al. NeuroImage 2021
 - **Turin olfaction:** Turin L. Chem Senses 1996; 21(6):773–91
-- **Ze EEG paper:** Tkemaladze J. [Manuscript under review, 2026]
+- **Ze EEG paper:** Tqemaladze J. [Manuscript under review, 2026]
 
 ---
 
@@ -1185,7 +1185,7 @@ _Last updated: 2026-03-28_
 - **Shared:** Aging biomarker framework
 
 ### ClinicA (~/Desktop/ClinicA/)
-- **Link:** Clinical implementation of BioSense biomarkers in Dr. Tkemaladze's practice
+- **Link:** Clinical implementation of BioSense biomarkers in Dr. Tqemaladze's practice
 - **Future:** BioSense wearable data integrated into patient clinical records
 
 ---
@@ -1210,7 +1210,7 @@ _Last updated: 2026-03-28_
 ### Key Literature
 | Reference | Relevance |
 |-----------|-----------|
-| PMID 36583780 — Tkemaladze J. Mol Biol Reports 2023 | Ze Theory primary paper |
+| PMID 36583780 — Tqemaladze J. Mol Biol Reports 2023 | Ze Theory primary paper |
 | PMID 20480236 — Lezhava T. et al. Biogerontology 2011 | Aging biology foundation |
 | Babayan et al. 2019, Sci Data 6:308 | MPI-LEMON dataset paper |
 | Valdés-Sosa et al. | Cuban Normative EEG dataset paper |
@@ -1222,7 +1222,7 @@ _Last updated: 2026-03-28_
 
 ### Under review
 - "Ze cheating index (χ_Ze) as a group-level index of neurodynamic aging:
-  Experimental EEG validation across the human lifespan" — Tkemaladze J. (2026)
+  Experimental EEG validation across the human lifespan" — Tqemaladze J. (2026)
 
 ### Materials/Ze.docx
 - Main Ze theory paper (located in Materials/)
@@ -1246,7 +1246,7 @@ _Last updated: 2026-03-28_
 name = "biosense-backend"
 version = "0.1.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
+authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
 license = "MIT"
 description = "BioSense Rust backend — χ_Ze biomarker computation, MCAOA bridge, exacerbation risk. Listens on 127.0.0.1:4502 (decided 2026-05-07)."
 

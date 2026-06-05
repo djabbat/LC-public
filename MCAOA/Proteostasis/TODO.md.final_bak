@@ -1,0 +1,134 @@
+# Proteostasis — TODO
+=====================================
+
+## Goals & Tasks
+-----------------
+The Proteostasis project aims to understand the mechanisms of protein stability under temperature fluctuations, develop predictive algorithms, and create an open platform for data sharing. Specific objectives include:
+- Establish experimental protocols for thermal stability assays.
+- Build a comprehensive database of experimental results.
+- Develop and validate machine learning models for stability prediction.
+- Publish findings in peer-reviewed journals.
+- Organize an international conference on proteostasis.
+
+## Current Priorities
+---------------------
+
+### 🔴 P0 — Critical
+- [ ] **Develop experimental protocol for studying the effect of temperature fluctuations on protein stability**
+  - Subtask 1: Design temperature ramp conditions (Owner: Research Scientist, deadline: 2025-02-28)
+  - Subtask 2: Select model proteins and prepare samples (Owner: Research Scientist, deadline: 2025-03-07)
+  - Subtask 3: Write standard operating procedure (Owner: Lead Developer, deadline: 2025-03-14)
+  - Subtask 4: Validate protocol with control experiments (Owner: Research Scientist, deadline: 2025-03-21)
+  - **Owner:** Research Scientist, **deadline:** 2025-03-21
+
+- [ ] **Create a database for storing and analyzing experimental results**
+  - Subtask 1: Define database schema (Owner: Lead Developer, deadline: 2025-03-07)
+  - Subtask 2: Set up PostgreSQL instance on cluster (Owner: Lead Developer, deadline: 2025-03-14)
+  - Subtask 3: Implement data ingestion pipeline (Owner: Lead Developer, deadline: 2025-03-28)
+  - Subtask 4: Write API for querying results (Owner: Lead Developer, deadline: 2025-04-11)
+  - **Owner:** Lead Developer, **deadline:** 2025-04-11
+
+- [ ] **Develop an algorithm for predicting protein stability based on collected data**
+  - Subtask 1: Collect training dataset from database (Owner: Research Scientist, deadline: 2025-04-18)
+  - Subtask 2: Feature engineering and selection (Owner: Lead Developer, deadline: 2025-05-02)
+  - Subtask 3: Train baseline ML models (Owner: Lead Developer, deadline: 2025-05-16)
+  - Subtask 4: Hyperparameter tuning and cross-validation (Owner: Lead Developer, deadline: 2025-05-30)
+  - **Owner:** Lead Developer, **deadline:** 2025-05-30
+
+### 🟡 P1 — Important
+- [ ] **Complete CONCEPT.md: project concept description including goals, tasks, and expected outcomes**
+  - Subtask 1: Draft project vision and scope (Owner: Project Lead, deadline: 2025-02-14)
+  - Subtask 2: List specific objectives and deliverables (Owner: Project Lead, deadline: 2025-02-21)
+  - Subtask 3: Review and finalize with team (Owner: Project Lead, deadline: 2025-02-28)
+  - **Owner:** Project Lead, **deadline:** 2025-02-28
+
+- [ ] **Create MAP.md: project roadmap with milestones, timelines, and responsible persons**
+  - Subtask 1: Identify major milestones (Owner: Project Lead, deadline: 2025-03-07)
+  - Subtask 2: Assign timelines and owners (Owner: Project Lead, deadline: 2025-03-14)
+  - Subtask 3: Visualize Gantt chart (Owner: Lead Developer, deadline: 2025-03-21)
+  - **Owner:** Project Lead, **deadline:** 2025-03-21
+
+- [ ] **Define STATE.md: current project status including achievements and challenges**
+  - Subtask 1: Compile completed work and results (Owner: Research Scientist, deadline: 2025-02-28)
+  - Subtask 2: List open issues and risks (Owner: Project Lead, deadline: 2025-03-07)
+  - Subtask 3: Write status report (Owner: Project Lead, deadline: 2025-03-14)
+  - **Owner:** Project Lead, **deadline:** 2025-03-14
+
+- [ ] **Conduct literature review on proteostasis and its role in cellular physiology**
+  - Subtask 1: Search PubMed and Web of Science for recent papers (Owner: Intern, deadline: 2025-02-21)
+  - Subtask 2: Summarize key findings on temperature effects (Owner: Intern, deadline: 2025-03-07)
+  - Subtask 3: Identify gaps and open questions (Owner: Research Scientist, deadline: 2025-03-14)
+  - Subtask 4: Write review section for publication (Owner: Research Scientist, deadline: 2025-03-28)
+  - **Owner:** Research Scientist, **deadline:** 2025-03-28
+
+- [ ] **Publish project results in a leading scientific journal**
+  - Subtask 1: Prepare manuscript draft (Owner: Research Scientist, deadline: 2025-06-30)
+  - Subtask 2: Internal review and revisions (Owner: Project Lead, deadline: 2025-07-31)
+  - Subtask 3: Submit to journal (Owner: Project Lead, deadline: 2025-08-15)
+  - **Owner:** Project Lead, **deadline:** 2025-08-15
+
+- [ ] **Create an open platform for sharing Proteostasis data and results**
+  - Subtask 1: Design platform architecture (Owner: Lead Developer, deadline: 2025-06-01)
+  - Subtask 2: Develop frontend web interface (Owner: Lead Developer, deadline: 2025-07-01)
+  - Subtask 3: Implement data upload and visualization (Owner: Lead Developer, deadline: 2025-08-01)
+  - Subtask 4: Deploy and test (Owner: Lead Developer, deadline: 2025-08-15)
+  - **Owner:** Lead Developer, **deadline:** 2025-08-15
+
+- [ ] **Organize an international conference on proteostasis and its role in cellular physiology**
+  - Subtask 1: Form organizing committee (Owner: Project Lead, deadline: 2025-09-01)
+  - Subtask 2: Call for abstracts and speaker invitations (Owner: Project Lead, deadline: 2025-10-01)
+  - Subtask 3: Secure venue and logistics (Owner: Project Lead, deadline: 2025-11-01)
+  - Subtask 4: Run conference (Owner: Project Lead, deadline: 2026-01-15)
+  - **Owner:** Project Lead, **deadline:** 2026-01-15
+
+### 🟢 P2 — Optional
+- [ ] **Write tests to verify correctness of the protein stability prediction algorithm**
+  - Subtask 1: Write unit tests for data preprocessing (Owner: Lead Developer, deadline: after algorithm development completion)
+  - Subtask 2: Write integration tests for prediction pipeline (Owner: Lead Developer, deadline: after unit tests completion)
+  - Subtask 3: Validate against experimental benchmarks (Owner: Research Scientist, deadline: after integration tests completion)
+  - **Owner:** Lead Developer, **deadline:** after algorithm development completion (estimated 2025-06-15)
+
+- [ ] **Documentation: create detailed user and developer documentation for the Proteostasis project**
+  - Subtask 1: Write user guide for database and API (Owner: Lead Developer, deadline: after database creation completion)
+  - Subtask 2: Write developer guide for algorithm and platform (Owner: Lead Developer, deadline: after platform deployment completion)
+  - Subtask 3: Review and publish on project website (Owner: Project Lead, deadline: after documentation draft completion)
+  - **Owner:** Lead Developer, **deadline:** after database creation completion (estimated 2025-05-01)
+
+- [ ] **Develop a web interface for the Proteostasis project, including result visualization and data analysis tools**
+  - Subtask 1: Design UI mockups (Owner: Lead Developer, deadline: after platform architecture completion)
+  - Subtask 2: Implement interactive charts and tables (Owner: Lead Developer, deadline: after UI mockups approval)
+  - Subtask 3: Integrate with prediction algorithm API (Owner: Lead Developer, deadline: after algorithm development completion)
+  - **Owner:** Lead Developer, **deadline:** after platform architecture completion (estimated 2025-07-01)
+
+## Dependencies
+-----------------
+- **P0 tasks**: No external dependencies; internal sequencing: protocol → database → algorithm.
+- **P1 tasks**: 
+  - CONCEPT.md, MAP.md, STATE.md can be done in parallel.
+  - Literature review must be completed before writing publication manuscript.
+  - Publication and platform can proceed in parallel after algorithm is validated.
+  - Conference organization depends on publication acceptance (estimated).
+- **P2 tasks**: 
+  - Tests depend on algorithm completion.
+  - Documentation depends on database and platform completion.
+  - Web interface depends on platform architecture and algorithm completion.
+
+## Exit Criteria
+-----------------
+- **P0**: All three critical tasks completed and validated.
+- **P1**: All important tasks completed (documents, literature review, publication, platform, conference).
+- **P2**: Optional tasks completed if time and resources permit.
+- **Overall**: Project goals achieved when experimental protocols are established, database is populated, prediction algorithm is validated, findings are published, platform is live, and conference is held.
+
+## Team Members
+-----------------
+- Ivanov I.I. – Project Lead
+- Petrova P.P. – Lead Developer
+- Sidorov S.S. – Research Scientist
+- Nikolaeva N.N. – Intern
+
+## Resources
+-------------
+- Computing resources: cluster of 10 servers with Intel Xeon processors
+- Software: Python, R, MATLAB
+- Budget: 1,000,000 RUB per year

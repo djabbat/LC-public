@@ -120,7 +120,7 @@ Reviewers see **already-corrected** documents (Wave 1 fixes applied), so Wave 2 
 - /home/oem/Desktop/E0/LICENSE
 - /home/oem/Desktop/PhD/LICENSE
 
-Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as structural risk (default proprietary violates EIC open-source mandate). MIT chosen as most permissive academic-standard license. Copyright: Jaba Tkemaladze + Georgia Longevity Alliance, 2026.
+Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as structural risk (default proprietary violates EIC open-source mandate). MIT chosen as most permissive academic-standard license. Copyright: Jaba Tqemaladze + Georgia Longevity Alliance, 2026.
 
 ### Pending (cannot apply autonomously — strategic/structural decisions)
 
@@ -155,13 +155,13 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 
 ### Decision #3 — NGO Grants Manager ✅ RESOLVED (phased)
 **Choice:** Option G — combination phased approach:
-- **Phase 1 (now → Impetus LOI июль 2026):** Self-manage через Tkemaladze. Impetus scale ($75-150K) достаточно для personal management.
+- **Phase 1 (now → Impetus LOI июль 2026):** Self-manage через Tqemaladze. Impetus scale ($75-150K) достаточно для personal management.
 - **Phase 2 (2026-Q3 → EIC 2027 submission):** Recruit одно из двух:
  - University partnership (TSU / Ilia State Univ / AgUni Tbilisi) — MoU + 10-25% overhead, доступ к institutional grants office
  - Lifeboat Foundation fiscal sponsorship через Eric Klien (already на board Annals of Rejuvenation Science с 2026-04-26)
 - Trigger to start recruitment: positive Impetus feedback OR confirmed EIC 2027 submission intent
 
-**Action item для Tkemaladze:** в 2026-Q3 (ориентировочно сентябрь):
+**Action item для Tqemaladze:** в 2026-Q3 (ориентировочно сентябрь):
 1. Email TSU Office of Research Grants — explore MoU template
 2. Direct ask Eric Klien — possibility Lifeboat Foundation как fiscal sponsor
 3. Compare overhead/admin burden и выбрать

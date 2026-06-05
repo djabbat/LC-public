@@ -32,13 +32,13 @@ The motivating observation is that asymmetric centriole inheritance contributes 
 
 The PI's own conceptual parent paper:
 
-- **Tkemaladze J. 2023, *Mol Biol Rep*** — "Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?" PMID 36583780. *(PubMed-verified 2026-05-12. Theoretical foundation of CDATA Counter #1.)*
+- **Tqemaladze J. 2023, *Mol Biol Rep*** — "Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?" PMID 36583780. *(PubMed-verified 2026-05-12. Theoretical foundation of CDATA Counter #1.)*
 
 Additional self-citations are available from the PI's ~10 PubMed-indexed papers (see `~/.claude/projects/-home-oem/memory/publications.md`); they will be added after PMID re-verification in the funded-phase manuscript:
 
-- Chichinadze K & Tkemaladze J. 2008, *Adv Gerontol* — centrosomal hypothesis of aging.
-- Tkemaladze J & Chichinadze K. 2005, *Biochem (Moscow)* — centriolar differentiation mechanisms.
-- Tkemaladze J. 2024, *Georgian Scientists* — centriole asymmetry review.
+- Chichinadze K & Tqemaladze J. 2008, *Adv Gerontol* — centrosomal hypothesis of aging.
+- Tqemaladze J & Chichinadze K. 2005, *Biochem (Moscow)* — centriolar differentiation mechanisms.
+- Tqemaladze J. 2024, *Georgian Scientists* — centriole asymmetry review.
 
 Self-citation budget across this evidence document: ≤ 15 % of total references (per `~/.claude/projects/-home-oem/memory/feedback_article_workflow.md`).
 
@@ -75,7 +75,7 @@ Phase B leadership at the Geiger lab (Ulm) is supported by Geiger's signed LoS d
 3. Verzijlbergen KF et al. 2010, *PNAS*, PMID 20018668 — RITE original.
 4. Yamashita YM et al. 2007, *Science*, PMID 17255513 — *Drosophila* asymmetric centrosome.
 5. Nigg EA. 2018, *Nat Rev Mol Cell Biol*, PMID 29363672 — centriole duplication review.
-6. Tkemaladze J. 2023, *Mol Biol Rep*, PMID 36583780 — CDATA Counter #1 parent (self-citation).
+6. Tqemaladze J. 2023, *Mol Biol Rep*, PMID 36583780 — CDATA Counter #1 parent (self-citation).
 7. Khodjakov A et al. 2001, *J Cell Biol*, PMID 11285289 — centrosome laser microsurgery in vertebrates.
 8. Colombelli J et al. 2005, *Traffic*, PMID 16262721 — sub-cellular UV laser dose-response.
 9. Naldini L et al. 1996, *Science*, PMID 8602510 — lentivirus paradigm.

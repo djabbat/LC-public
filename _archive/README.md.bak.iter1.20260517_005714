@@ -1,0 +1,80 @@
+<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at README.ru.md. -->
+
+# LongevityCommon
+
+**An integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
+
+LongevityCommon is a hypothesis-stage framework, integrating 5 scientific subprojects + a thin social layer:
+
+| Subproject | Level | Function |
+|-----------|---------|------------|
+| **MCAOA** | Theoretical (meta-theory) | Multi-Counter Architecture; aging as a weighted sum of parallel counters |
+| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage in HSC (status: inconclusive) |
+| **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
+| **BioSense** | Applied | Wearable platform + χ_Ze biomarker |
+| **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
+
+Plus **Activated** clinical pilot (anemia management cohort, Tbilisi).
+
+Canonical article: `~/Desktop/LongevityCommon.md` (v5.6).
+
+## Status (2026-04-28, v5.6)
+
+⚠ **Hypothesis-stage research platform.** All empirical results are exploratory (hypothesis-generating), not confirmatory. Pre-registered tests of the early univariate χ_Ze formulation on Cuban/Dortmund/LEMON cohorts → NULL results (deprecated/superseded). Current multimodal χ_Ze is a post-hoc reformulation. AUC and r² values are exploratory with explicit p-hacking risk (Ioannidis 2005, PMID 16060722).
+
+Key publications (MCAOA, Ze, BioSense) are NOT peer-reviewed as of v5.6.
+
+## Authority order on conflict
+
+1. `LongevityCommon/CONCEPT.md` (cross-cutting status, falsifiability, threat model)
+2. `<subproject>/CONCEPT.md` (internal math)
+3. `<subproject>/THEORY.md` (formal derivations)
+4. Article (`~/Desktop/LongevityCommon.md`) — full narrative
+5. Code — follows the CONCEPT of the corresponding level
+
+## Repository structure
+
+```
+LongevityCommon/
+├── *.md # umbrella core (CONCEPT, THEORY, DESIGN, PARAMETERS, MAP, ...)
+├── server/ # Rust/axum REST API (social layer)
+├── web/ # React+TS PWA (social layer UI)
+├── realtime/ # Phoenix Channels (social layer WS)
+├── deploy/ # docker-compose-all.yml
+├── docs/EIC_PartB_2026/ # active grant track
+├── _archive/ # old versions
+├── _audits/ # audit reports
+│
+└── <subprojects>/ # MCAOA, CDATA, Ze, BioSense, ...
+```
+
+## Run (subproject backends)
+
+```bash
+cd Ze && ./run.sh # :4000 / :4001
+cd BioSense && ./run.sh # :4100 / :4101
+```
+
+Social layer (server/web/realtime) is a separate stack, see `DESIGN.md §7`.
+
+## Tests
+
+```bash
+cargo test --release # in any subproject root
+mix test # in any Phoenix subproject
+```
+
+## Grant track (active)
+
+**EIC Pathfinder Challenges 2026 — "Biotechnology for Healthy Ageing", deadline 2026-10-28.**
+LongevityCommon umbrella as an application for Area #2 (biomarker-based tool, BioSense at the center).
+Details: `docs/EIC_PartB_2026/`.
+
+## License
+
+MIT (see LICENSE).
+
+## Contact
+
+Jaba Tqemaladze · jaba@longevity.ge · ORCID 0000-0001-8651-7243
+Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)

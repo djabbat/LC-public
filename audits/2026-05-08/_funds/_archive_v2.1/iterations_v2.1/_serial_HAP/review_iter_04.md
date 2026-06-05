@@ -40,7 +40,7 @@
 **✓** — Таблица партнёров с ролями, но **все статусы «To be confirmed» или «TBD»**. Для ERC AdG требуется минимум 2–3 confirmed partners с письмами поддержки. Формально план есть, но не выполнен по существу.
 
 ### 7. All references PubMed/Crossref-verified or marked as pre-print
-**✗** — **Критическое нарушение.** В разделе References перечислены только 2 ссылки (Anderson & Adolphs, Tkemaladze). Остальные ~15 ссылок, использованные в тексте (Mertens et al., Yanguas-Casas, Huang, Truman, Ishimoto, Shang, Marchetti и др.), **не включены в список литературы** и не верифицированы. Нет ни DOI, ни PMID. Фраза «[Дополнительные ссылки — добавить]» недопустима для грантовой заявки.
+**✗** — **Критическое нарушение.** В разделе References перечислены только 2 ссылки (Anderson & Adolphs, Tqemaladze). Остальные ~15 ссылок, использованные в тексте (Mertens et al., Yanguas-Casas, Huang, Truman, Ishimoto, Shang, Marchetti и др.), **не включены в список литературы** и не верифицированы. Нет ни DOI, ни PMID. Фраза «[Дополнительные ссылки — добавить]» недопустима для грантовой заявки.
 
 ### 8. No fabrication markers ([REF_NEEDED] / [PMID_REMOVED])
 **✓** — Явных fabrication markers нет. Однако отсутствие полного списка литературы (п.7) граничит с небрежностью, но не является fabrication.

@@ -4,7 +4,7 @@
 /// BioSense Python pipeline (or any compatible sensor) into LC.
 ///
 /// Schema version: 1.0
-/// Reference: Tkemaladze J., Ze Vectors Theory, DOI 10.65649/nhjtra67
+/// Reference: Tqemaladze J., Ze Vectors Theory, DOI 10.65649/nhjtra67
 ///
 /// Usage:
 ///   POST /api/biosense/compute  →  BioSenseComputeResponse

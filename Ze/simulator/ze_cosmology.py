@@ -12,7 +12,7 @@ Provides reproducible calculation for:
 Ze Z10 parametrisation:
     w_Ze(z) = w_0 + w_a * z/(1+z)
     where w_0 and w_a are derived from Ze Z10 dynamics
-    (Ze temporal field equation, Tkemaladze 2026)
+    (Ze temporal field equation, Tqemaladze 2026)
 
 DESI DR2 reference:
     DESI Collaboration 2024, arXiv:2404.03002
@@ -24,7 +24,7 @@ Usage:
     python3 ze_cosmology.py --plot        # show w(z) comparison plot
     python3 ze_cosmology.py --tension     # tension analysis only
 
-Author: Tkemaladze / Ze Vectors Theory 2026
+Author: Tqemaladze / Ze Vectors Theory 2026
 ERC-NEW3 fix: reproducible code for arXiv preprint inclusion
 """
 

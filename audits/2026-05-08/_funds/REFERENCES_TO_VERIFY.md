@@ -60,7 +60,7 @@
 | 1 | DOI | `10.1016/j.neuroimage.2021.118123` | [link](https://doi.org/10.1016/j.neuroimage.2021.118123) | CONCEPT.md:439 | - Valdés-Sosa et al., NeuroImage 2021 (Cuban EEG) — DOI: 10.1016/j.neuroimage.2021.118123 [verified] | ☐ | ☐ | ☐ |
 | 2 | DOI | `10.1093/chemse/21.6.773` | [link](https://doi.org/10.1093/chemse/21.6.773) | CONCEPT.md:440 | - Turin, Chem Senses 1996 — DOI: 10.1093/chemse/21.6.773 [verified] | ☐ | ☐ | ☐ |
 | 3 | DOI | `10.1038/s41597-019-0021-4` | [link](https://doi.org/10.1038/s41597-019-0021-4) | CONCEPT.md:441 | - Babayan et al., Sci Data 2019 (MPI-LEMON) — DOI: 10.1038/s41597-019-0021-4 [verified] | ☐ | ☐ | ☐ |
-| 4 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | KNOWLEDGE.md:129 | - **Ze Theory:** Tkemaladze J. Mol Biol Reports 2023. PMID 36583780 | ☐ | ☐ | ☐ |
+| 4 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | KNOWLEDGE.md:129 | - **Ze Theory:** Tqemaladze J. Mol Biol Reports 2023. PMID 36583780 | ☐ | ☐ | ☐ |
 | 5 | PMID | `20480236` | [link](https://pubmed.ncbi.nlm.nih.gov/20480236/) | KNOWLEDGE.md:130 | - **Aging biology:** Lezhava T. et al. Biogerontology 2011. PMID 20480236 | ☐ | ☐ | ☐ |
 
 ### CDATA (73 уникальных, всего вхождений 130)
@@ -315,9 +315,9 @@
 | 8 | DOI | `10.1103/RevModPhys.75.715` | [link](https://doi.org/10.1103/RevModPhys.75.715) | EVIDENCE.md:36 | \| Decoherence / einselection \| Zurek 2003 *Rev Mod Phys* 75 \| DOI **10.1103/RevModPhys.75.715** ✅ | ☐ | ☐ | ☐ |
 | 9 | DOI | `10.1103/PhysRevA.72.042113` | [link](https://doi.org/10.1103/PhysRevA.72.042113) | EVIDENCE.md:37 | \| Quantum Darwinism redundant encoding \| Ollivier/Poulin/Zurek 2005 *Phys Rev A* 72 \| DOI **10.11 | ☐ | ☐ | ☐ |
 | 10 | PMID | `30982602` | [link](https://pubmed.ncbi.nlm.nih.gov/30982602/) | EVIDENCE.md:50 | \| ~~Schultz & Sinclair 2019 PMID 30982602 (NAD+/sirtuin)~~ \| **Miscitation** — PMID 30982602 = Kuc | ☐ | ☐ | ☐ |
-| 11 | PMID | `38510429` | [link](https://pubmed.ncbi.nlm.nih.gov/38510429/) | EVIDENCE.md:53 | \| ~~Tkemaladze 2024 Editorial PMID 38510429~~ \| Removed to bring self-citation < 10% \| | ☐ | ☐ | ☐ |
-| 12 | PMID | `15886028` | [link](https://pubmed.ncbi.nlm.nih.gov/15886028/) | EVIDENCE.md:60 | - Tkemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work | ☐ | ☐ | ☐ |
-| 13 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | EVIDENCE.md:61 | - Tkemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship | ☐ | ☐ | ☐ |
+| 11 | PMID | `38510429` | [link](https://pubmed.ncbi.nlm.nih.gov/38510429/) | EVIDENCE.md:53 | \| ~~Tqemaladze 2024 Editorial PMID 38510429~~ \| Removed to bring self-citation < 10% \| | ☐ | ☐ | ☐ |
+| 12 | PMID | `15886028` | [link](https://pubmed.ncbi.nlm.nih.gov/15886028/) | EVIDENCE.md:60 | - Tqemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work | ☐ | ☐ | ☐ |
+| 13 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | EVIDENCE.md:61 | - Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship | ☐ | ☐ | ☐ |
 
 ### Ze (3 уникальных, всего вхождений 6)
 
@@ -325,7 +325,7 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | PMID | `27330520` | [link](https://pubmed.ncbi.nlm.nih.gov/27330520/) | CONCEPT.md:254 | N_ICC ≥ 50 субъектов с 2 визитами (Koo & Mae 2016, PMID 27330520) | ☐ | ☐ | ☐ |
 | 2 | DOI | `10.64898/2026.03.26.714124` | [link](https://doi.org/10.64898/2026.03.26.714124) | CONCEPT.md:310 | **Прямой конкурент:** BrainYears (Lore, Julihn, Telfer, bioRxiv, март 2026) — EEG brain age clock, r | ☐ | ☐ | ☐ |
-| 3 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | CONCEPT.md:657 | 2. Tkemaladze, J. (2023). Reduction, proliferation, and differentiation defects of stem cells over t | ☐ | ☐ | ☐ |
+| 3 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | CONCEPT.md:657 | 2. Tqemaladze, J. (2023). Reduction, proliferation, and differentiation defects of stem cells over t | ☐ | ☐ | ☐ |
 
 ---
 

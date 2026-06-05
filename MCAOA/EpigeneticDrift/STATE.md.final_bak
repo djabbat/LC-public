@@ -1,0 +1,53 @@
+# EpigeneticDrift — State
+
+**Version:** 0.1.0  
+**Status:** 🟡 In Development
+
+## Completed Milestones
+- Project kickoff meeting held (2025-03-01)
+- Initial repository structure created (2025-03-05)
+- CONCEPT.md draft completed (2025-03-10)
+
+## Goals & Tasks
+
+### Project Goals
+- **P0** (after Task: Finalize CONCEPT.md): Develop a robust pipeline for detecting epigenetic drift in human genomic data.  
+  Owner: Project Manager
+- **P1** (after Task: Implement core algorithm): Validate the pipeline on at least three independent public datasets.  
+  Owner: Lead Developer
+- **P2** (after Task: Build reference database): Publish a peer-reviewed paper describing the methodology and initial findings.  
+  Owner: Principal Investigator
+
+### Key Tasks
+- **P0** (after Task: Repository setup): Finalize CONCEPT.md with detailed objectives, deliverables, and success criteria.  
+  Owner: Project Manager
+- **P0** (no dependencies): Set up project repository structure and version control (Git).  
+  Owner: Lead Developer
+- **P1** (after Task: Finalize CONCEPT.md): Create a comprehensive TODO list covering algorithm development, database creation, and visualization.  
+  Owner: Project Manager
+- **P1** (after Task: Create TODO list): Implement core algorithm for methylation pattern comparison.  
+  Owner: Lead Developer
+- **P2** (after Task: Implement core algorithm): Build a reference database of age-related epigenetic markers.  
+  Owner: Data Scientist
+- **P2** (after Task: Build reference database): Develop interactive visualization dashboard for drift analysis.  
+  Owner: Frontend Developer
+
+## Dependencies
+- **P0 tasks** have no external dependencies; they are the foundation.
+- **P1 tasks** depend on completion of all P0 tasks.
+- **P2 tasks** depend on completion of all P1 tasks.
+- No circular dependencies exist.
+
+## Exits
+- **Phase 1 Exit (P0 complete):** CONCEPT.md finalized, repository operational, version control active.
+- **Phase 2 Exit (P1 complete):** TODO list approved, core algorithm implemented and passing unit tests.
+- **Phase 3 Exit (P2 complete):** Reference database populated with ≥100 markers, dashboard deployed and reviewed.
+
+## Current Phase
+- Project initialization of EpigeneticDrift, aimed at researching and developing methods for detecting and analyzing epigenetic changes in the human genome.  
+  Phase 1 (P0) is in progress; CONCEPT.md and repository setup are complete.
+
+## Next Steps
+1. **Concept Development**: Complete CONCEPT.md, including description of goals, tasks, and expected project outcomes (deadline: after Task: Repository setup, priority: P0, Owner: Project Manager).
+2. **Task Definition**: Create a task list in the TODO section, including algorithm development, database creation, and result visualization (deadline: after Task: Finalize CONCEPT.md, priority: P1, Owner: Project Manager).
+3. **Structure Creation**: Develop project structure, including creation of directory layout, configuration files, and CI/CD pipeline (deadline: after Task: Repository setup, priority: P0, Owner: Lead Developer).

@@ -62,7 +62,7 @@ Path: `/home/oem/Desktop/LC/HAP`  Date: 2026-05-08
 
 **Теория гепатогенного происхождения эмоций**
 
-**Author:** Dr. Jaba Tkemaladze | **Status:** Accepted for publication (*Biological Reviews*, IF ~10)
+**Author:** Dr. Jaba Tqemaladze | **Status:** Accepted for publication (*Biological Reviews*, IF ~10)
 
 ## Core Claim
 
@@ -105,7 +105,7 @@ Affective states cannot **develop** in any bilateral animal lacking an organ tha
 
 **Версия:** CONCEPT v4.0 (STRONG) | **Статус:** Рабочая гипотеза, эмпирически подтверждённая, принята к публикации (Biological Reviews, IF ~10)
 **Дата:** 2026-04-14
-**Автор:** Dr. Tkemaladze / AIM Lab
+**Автор:** Dr. Tqemaladze / AIM Lab
 
 ---
 
@@ -335,7 +335,7 @@ HAP/
 | Полное название | HepatoAffect Principle (HAP Strong) |
 | Аббревиатура | HAP |
 | Версия CONCEPT | v4.0 (STRONG) |
-| Автор | Dr. Jaba Tkemaladze |
+| Автор | Dr. Jaba Tqemaladze |
 | Организация | Georgia Longevity Alliance |
 | Email | djabbat@gmail.com |
 | ORCID | 0000-0002-4898-1099 |

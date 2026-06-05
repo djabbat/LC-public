@@ -39,7 +39,7 @@
    - Hibbard 2009 (proprietary manual) — нет идентификатора, неверифицируем.  
    - Tao et al. (2026) Nature Medicine — pre-print, **нет DOI/PMID**, неверифицируем.  
    - Blumenthal & Lee (2024) JAMA — pre-print, **нет DOI**, неверифицируем.  
-   - Tkemaladze (2026) Longevity Horizon — pre-print, **нет DOI**, неверифицируем.  
+   - Tqemaladze (2026) Longevity Horizon — pre-print, **нет DOI**, неверифицируем.  
    Для 4 из 6 ключевых ссылок отсутствуют разрешимые идентификаторы. Condition не выполнен.
 
 8. **Отсутствие фабрикационных маркеров**  
@@ -62,7 +62,7 @@
 | 3 | Hibbard et al. (2009) PAM scoring & MCID, Insignia Health technical manual | Нет идентификатора | Нет | Частично (MCID=5.4 общеизвестен) | Неверифицируем |
 | 4 | Tao W. et al. (2026) Co-design of medical AI improves patient activation: RCT of 2069 patients. Nature Medicine | Нет DOI/PMID | Неверифицируем | Препринт без идентификатора | Неверифицируем |
 | 5 | Blumenthal D., Lee J. (2024) Four-zone framework for human-AI clinical collaboration. JAMA | Нет DOI/PMID | Неверифицируем | Препринт без идентификатора | Неверифицируем |
-| 6 | Tkemaladze J. (2026) Patient as a Project. Longevity Horizon 2(5) | Нет DOI/PMID | Неверифицируем | Самоцитирование без идентификатора | Неверифицируем |
+| 6 | Tqemaladze J. (2026) Patient as a Project. Longevity Horizon 2(5) | Нет DOI/PMID | Неверифицируем | Самоцитирование без идентификатора | Неверифицируем |
 
 ## Top 5 text-level fixes
 

@@ -8,7 +8,7 @@ This document compiles key evidence supporting the technical choices and biologi
 - **Pachitariu M, Stringer C. 2022.** "CellPose 2.0: human‑in‑the‑loop cellular segmentation." *Nature Methods* 19:1634–1641. PMID: 36344832. — Shows that user‑guided fine‑tuning improves segmentation of rare cell types.
 - **Moen E et al. 2019.** "Deep learning for cellular image analysis." *Nature Methods* 16:1233–1246. PMID: 31792429. — Comprehensive review of deep‑learning segmentation architectures.
 - **Ullman V et al. 2017.** "An objective comparison of cell‑tracking algorithms." *Nature Methods* 14:1141–1152. PMID: 28288189. — CellTrackingChallenge benchmarks showing deep learning outperforms classical methods.
-- **Tkemaladze J et al. 2020.** "A public benchmark for cell tracking in time‑lapse microscopy." *PLoS Computational Biology* 16(6):e1008002. PMID: 32598371. — PI‑led benchmark that established performance baselines for cell‑tracking algorithms.
+- **Tqemaladze J et al. 2020.** "A public benchmark for cell tracking in time‑lapse microscopy." *PLoS Computational Biology* 16(6):e1008002. PMID: 32598371. — PI‑led benchmark that established performance baselines for cell‑tracking algorithms.
 
 ## 2. Centriole biology and aging hypothesis
 
@@ -16,7 +16,7 @@ This document compiles key evidence supporting the technical choices and biologi
 - **Nigg EA, Holland AJ. 2018.** "Once and only once: mechanisms of centriole duplication and their deregulation in disease." *Nature Reviews Molecular Cell Biology* 19:297–312. PMID: 29363672. — Reviews centriole duplication cycle and links to genomic instability.
 - **Baker DJ et al. 2011.** "Clearance of p16Ink4a‑positive senescent cells delays ageing‑associated disorders." *Nature* 479:232–236. PMID: 22048312. — Establishes causal role of cellular senescence in mammalian aging.
 - **Jones M et al. 2022.** "RITE‑centriole: a dual‑colour system for tracking centriole inheritance." *Journal of Cell Biology* 221:e202203012. PMID: 35758709. — Developed the imaging tool used in this project.
-- **Tkemaladze J et al. 2023.** "Centriole inheritance as a lineage tracer during mammalian development." *Cell Reports* 42:112345. PMID: 36583780. — PI paper demonstrating asymmetric centriole inheritance in cultured cells, providing the conceptual foundation for the current project.
+- **Tqemaladze J et al. 2023.** "Centriole inheritance as a lineage tracer during mammalian development." *Cell Reports* 42:112345. PMID: 36583780. — PI paper demonstrating asymmetric centriole inheritance in cultured cells, providing the conceptual foundation for the current project.
 
 ## 3. Null results and limitations
 
@@ -32,13 +32,13 @@ This document compiles key evidence supporting the technical choices and biologi
 
 ## 5. PI publication record (8 peer‑reviewed papers relevant to the project)
 
-1. Tkemaladze J, et al. (2020) “A public benchmark for cell tracking in time‑lapse microscopy.” *PLoS Computational Biology* 16(6):e1008002. PMID: 32598371.
-2. Tkemaladze J, et al. (2023) “Centriole inheritance as a lineage tracer during mammalian development.” *Cell Reports* 42(1):112345. PMID: 36583780.
-3. Tkemaladze J, et al. (2019) “Deep learning for segmentation of phase‑contrast images.” *Bioinformatics* 35(10):1718–1725. [No DOI provided; full list on Google Scholar]
-4. Tkemaladze J, et al. (2021) “Automated lineage reconstruction from time‑lapse imaging using convolutional neural networks.” *BMC Bioinformatics* 22:315. [No DOI provided; full list on Google Scholar]
-5. Tkemaladze J, et al. (2018) “Quantitative analysis of centriole inheritance in dividing cells.” *Journal of Cell Science* 131(15):jcs216473. [No DOI provided; full list on Google Scholar]
-6. Tkemaladze J, et al. (2022) “A comparative study of deep learning architectures for live‑cell segmentation.” *Medical Image Analysis* 75:102237. [No DOI provided; full list on Google Scholar]
-7. Tkemaladze J, et al. (2024) “Lineage‑resolved single‑cell analysis of centriole inheritance in organoids.” *Nature Communications* 15:1234. [No DOI provided; preprint under review]
-8. Tkemaladze J, et al. (2025) “Benchmarking spot detection algorithms for diffraction‑limited punctae in live‑cell microscopy.” *Bioinformatics* (in press). [No DOI provided; full list on Google Scholar]
+1. Tqemaladze J, et al. (2020) “A public benchmark for cell tracking in time‑lapse microscopy.” *PLoS Computational Biology* 16(6):e1008002. PMID: 32598371.
+2. Tqemaladze J, et al. (2023) “Centriole inheritance as a lineage tracer during mammalian development.” *Cell Reports* 42(1):112345. PMID: 36583780.
+3. Tqemaladze J, et al. (2019) “Deep learning for segmentation of phase‑contrast images.” *Bioinformatics* 35(10):1718–1725. [No DOI provided; full list on Google Scholar]
+4. Tqemaladze J, et al. (2021) “Automated lineage reconstruction from time‑lapse imaging using convolutional neural networks.” *BMC Bioinformatics* 22:315. [No DOI provided; full list on Google Scholar]
+5. Tqemaladze J, et al. (2018) “Quantitative analysis of centriole inheritance in dividing cells.” *Journal of Cell Science* 131(15):jcs216473. [No DOI provided; full list on Google Scholar]
+6. Tqemaladze J, et al. (2022) “A comparative study of deep learning architectures for live‑cell segmentation.” *Medical Image Analysis* 75:102237. [No DOI provided; full list on Google Scholar]
+7. Tqemaladze J, et al. (2024) “Lineage‑resolved single‑cell analysis of centriole inheritance in organoids.” *Nature Communications* 15:1234. [No DOI provided; preprint under review]
+8. Tqemaladze J, et al. (2025) “Benchmarking spot detection algorithms for diffraction‑limited punctae in live‑cell microscopy.” *Bioinformatics* (in press). [No DOI provided; full list on Google Scholar]
 
 The full list with DOIs is available on Google Scholar (https://scholar.google.com/citations?user=example). The PI’s h‑index is 5 (as of May 2026).
