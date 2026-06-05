@@ -2,7 +2,7 @@
 name = "mito_ros_counter"
 version = "0.2.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
+authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
 description = "MCAOA Counter #3"
 license = "MIT"
 

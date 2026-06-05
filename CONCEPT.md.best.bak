@@ -1,0 +1,107 @@
+# CONCEPT — LC
+
+**Integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease.**
+
+---
+
+## Core Hypotheses
+
+### H1: Aging as Total Chronic Disease
+Physiological aging = constellation of co-progressing chronic processes that can be tracked, predicted, and modulated as a single multimodal disease entity.
+
+**Falsifiability:** If none of the 5 subprojects shows Δχ_Ze > 0.2 in a pilot cohort (n=30) over 6 months, H1 is rejected.
+
+### H2: MCAOA (Multi-Counter Architecture of Aging)
+Aging = weighted sum of N parallel damage counters (genomic, mitochondrial, centriolar, proteostatic, telomeric).
+
+**Falsifiability:** If cross-counter correlation R² < 0.3 in any of Cuban/Dortmund/LEMON cohorts, MCAOA is rejected.
+
+### H3: Ze Vectors
+Time perception dτ/dt = -α·I(Z) where I(Z) is information content of state vector.
+
+**Falsifiability:** If v* ≠ 0.456 ± 0.05 in healthy physiological oscillators (n=100), Ze hypothesis is rejected.
+
+---
+
+## Quantitative Milestones
+
+| ID | Milestone | Criterion | Deadline | Owner |
+|---|---|---|---|---|
+| M1 | BioSense v* validation | v* = 0.456 ± 0.05 in n=30 | Month 6 | BioSense lead |
+| M2 | MCAOA counter correlation | R² > 0.3 between ≥2 counters | Month 12 | MCAOA lead |
+| M3 | CDATA Sobol completion | BHCA ≥5/9 criteria met | Month 10 | Tqemaladze |
+| M4 | Ze-Hierarchy HI | HI > 0.52 in pilot (30 bots) | Month 9 | Ze lead |
+| M5 | FCLC privacy audit | Semi-honest proof v14 | Month 8 | FCLC lead |
+| M6 | Activated pilot recruitment | n=30 enrolled | Month 18 | Shashviashvili |
+
+---
+
+## Experimental Design (BioSense pilot)
+
+**Cohort:** n=30 healthy volunteers (18-65 yr), stratified by age (5 groups × 6).
+
+**Measurements:**
+- HRV (24h Holter)
+- EEG (30 min resting state)
+- Actigraphy (7 days)
+- Blood biomarkers: 8 epigenetic/mitochondrial aging markers
+
+**Duration:** 6 months, measurements monthly.
+
+**Power analysis:** Δχ_Ze = 0.2, σ = 0.25, α = 0.05, power = 0.8 → n = 25. Taking n = 30.
+
+**Statistics:** Mixed-effects model (time × age group), Tukey HSD post-hoc. 5-fold cross-validation + hold-out n = 10.
+
+---
+
+## Budget
+
+| Item | Cost (€) |
+|---|---|
+| BioSense wearable units (×30) | 15,000 |
+| EEG equipment | 8,000 |
+| Blood biomarker assays (×8 ×30 ×6) | 14,400 |
+| Data analysis server | 3,000 |
+| Coordination (10% FTE × 18 mo) | 9,000 |
+| Publication fees (HardwareX, PLOS ONE) | 3,000 |
+| **Total** | **€52,400** |
+
+---
+
+## Governance
+
+| Role | Person | Responsibility |
+|---|---|---|
+| PI | Tqemaladze | Overall coordination, Ze theory, CDATA |
+| BioSense lead | TBD (→ hire M1) | Wearable platform, v* validation |
+| MCAOA lead | TBD (→ hire M3) | Counter integration, statistics |
+| Clinical lead | Shashviashvili | Activated pilot, cohort recruitment |
+| FCLC lead | TBD (→ hire M2) | Federated learning, privacy audit |
+
+---
+
+## Related Works
+
+| Paper | Relevance |
+|---|---|
+| Horvath 2013 (PMID 24138928) | Epigenetic clock — counter #1 candidate |
+| Tqemaladze 2023 (PMID 36583780) | Centriole age — counter #2 |
+| Mahadevan 2012 | Bristlebot swarms — Ze-Hierarchy basis |
+| Pearl 2009 (Causality) | Intervention vs monitoring framework |
+
+
+---
+
+## Operational Definitions
+
+**v* (Ze steady-state):** HI(t→∞) = 0.456 ± 0.05. Measured as mean HI across 10 independent simulation runs (30 seeds each).
+- If HI ≥ 0.53 → Ze confirmed
+- If HI 0.51-0.53 → inconclusive
+- If HI ≤ 0.51 → Ze rejected
+
+**χ_Ze (integrated metric):** HI(t) / (1 + τ_conv/T). Combines hierarchy strength and speed.
+
+**Falsifiability (updated):**
+- BioSense v*: if mean v* ≠ 0.456 ± 0.05 in n=30 healthy volunteers, reject
+- MCAOA: if cross-counter R² < 0.3 in all tissues, reject
+- Ze-Hierarchy: if HI ≤ 0.51 in 10 runs, reject

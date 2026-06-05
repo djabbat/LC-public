@@ -44,7 +44,7 @@
    - **Hibbard 2004** (PMID 15333167) — реальна, но в тексте Sample size calculation ошибочно приписана к PMID 15527447 (который относится к Hibbard 2005). Путаница: один и тот же факт (SD PAM-13 range 9–11) приписывается то 15333167, то 15527447. Несоответствие тексту.  
    - **Tao et al. (2026) *Nature Medicine*** — указан «DOI TBD». Невалидный идентификатор. Статья не проверяема.  
    - **Blumenthal-Lee (2024) *JAMA*** — указан «DOI TBD». Невалидный идентификатор.  
-   - **Tkemaladze J. (2026) *Longevity Horizon*** — указан «DOI TBD». Невалидный идентификатор.  
+   - **Tqemaladze J. (2026) *Longevity Horizon*** — указан «DOI TBD». Невалидный идентификатор.  
    - **Hibbard 2009 (technical manual)** — без PMID/DOI, указано как «proprietary».  
    - Все три препринта не имеют реального идентификатора → автоматический REJECT по условию 7(a).  
    - Кроме того, утверждение «Co-design > fine-tuning (Tao et al., Nat Med 2026 [pre-print; DOI TBD])» не может быть проверено.  
@@ -71,7 +71,7 @@
 | 3 | Hibbard et al. (2004) – упоминание в Sample size calculation как PMID 15527447 | PMID 15527447 | Да, но неверно приписана к 2004 году | Нет – 2004 работа имеет PMID 15333167, а не 15527447 | Mismatch |
 | 4 | Tao W. et al. (2026) *Co-design of medical AI improves patient activation* | DOI TBD | Нет | Не проверяемо | Reject |
 | 5 | Blumenthal D., Lee J. (2024) *Four-zone framework* | DOI TBD | Нет | Не проверяемо | Reject |
-| 6 | Tkemaladze J. (2026) *Patient as a Project* | DOI TBD | Нет | Не проверяемо | Reject |
+| 6 | Tqemaladze J. (2026) *Patient as a Project* | DOI TBD | Нет | Не проверяемо | Reject |
 | 7 | Hibbard et al. (2009) *PAM scoring & MCID* | Proprietary, нет PMID | Не проверяемо | Не проверяемо | Flag (proprietary) |
 
 **Итог:** 4 из 7 ссылок не имеют разрешающегося идентификатора или не соответствуют тексту.

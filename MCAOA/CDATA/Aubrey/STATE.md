@@ -10,7 +10,7 @@
 
 ## Team / commitments (signed)
 
-- **PI:** Dr. Jaba Tkemaladze (Georgia Longevity Alliance) — bench lead Phase A, both phases conceptual lead.
+- **PI:** Dr. Jaba Tqemaladze (Georgia Longevity Alliance) — bench lead Phase A, both phases conceptual lead.
 - **Strategic Co-PI:** Elizabeth Parrish (BioViva, Seattle, WA) — LoS 2026-04-22, non-compensated.
 - **Phase B subcontracted PI partner:** Hartmut Geiger (Univ. Ulm) — LoS 2026-04-23, €150,000 (market price).
 - **Engineering subcontractor:** Giorgi Tsomaia (Dipl. Ing. Tbilisi Polytechnic) — ARGUS-LP design + assembly, €3,900.

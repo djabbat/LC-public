@@ -1,0 +1,39 @@
+# Proteostasis — State
+
+**Date:** upon approval  
+**Version:** 0.1.0  
+**Status:** 🟡 In Development  
+
+## Current Phase
+- Initialization
+
+## Goals & Tasks
+The primary objective of the Proteostasis project is to build a computational framework for modeling protein homeostasis, integrating molecular dynamics, network analysis, and machine learning. Specific goals for the next 6 months:
+
+- **G1:** Complete core concept and architecture design (P0, due after completion of prerequisite tasks)
+- **G2:** Implement data ingestion pipeline for proteomic datasets (P1, due after completion of prerequisite tasks)
+- **G3:** Develop initial prototype of the homeostasis simulation engine (P1, due after completion of prerequisite tasks)
+- **G4:** Validate model against known protein interaction networks (P2, due next phase)
+- **G5:** Publish project documentation and API reference (P2, due next phase)
+
+### Task Breakdown with Priorities and Deadlines
+
+| ID | Task | Priority | Deadline | Status |
+|----|------|----------|----------|--------|
+| T1 | Fill CONCEPT.md with detailed project description | P0 | after completion of prerequisite tasks | Pending |
+| T2 | Define and document all TODO items in a structured backlog | P0 | after completion of prerequisite tasks | Pending |
+| T3 | Create folder structure (src, tests, docs, data) | P0 | after completion of prerequisite tasks | Pending |
+| T4 | Set up continuous integration (CI) pipeline | P1 | after completion of prerequisite tasks | Pending |
+| T5 | Write core data models (Protein, Interaction, State) | P1 | after completion of prerequisite tasks | Pending |
+| T6 | Implement basic simulation loop | P1 | after completion of prerequisite tasks | Pending |
+| T7 | Integrate external proteomics database API | P2 | after completion of prerequisite tasks | Pending |
+| T8 | Develop visualization module for network graphs | P2 | after completion of prerequisite tasks | Pending |
+| T9 | Write unit tests for core modules | P1 | after completion of prerequisite tasks | Pending |
+| T10 | Performance benchmarking and optimization | P2 | next phase | Pending |
+
+## Blockers
+- None currently identified.
+
+## Metrics
+- Core files completed: 0 / 7 (target: 7 after completion of prerequisite tasks)
+- MBPR Score: Not yet calculated (first evaluation planned after T5 completion)

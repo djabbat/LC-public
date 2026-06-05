@@ -112,7 +112,7 @@ must be $< 10$ s for real‑time tracking performance.
 ### MCAOA framework context
 
 ARGUS operates within the **Multi-Counter Architecture of Organismal Aging (MCAOA)**
-framework (Tkemaladze J. 2026, Zenodo DOI: 10.5281/zenodo.20055806):
+framework (Tqemaladze J. 2026, Zenodo DOI: 10.5281/zenodo.20055806):
 - Organismal aging = parallel accumulation of damage across multiple molecular counters
 - **Centriolar counter (#1)** = key limiter of stem cell replicative potential
 - ARGUS = empirical validation tool for counter #1 predictions through autonomous laser ablation

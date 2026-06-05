@@ -42,7 +42,7 @@
 | 3 | `GLA_Annals` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 4 | `Iqalto_umbrella` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS | VIOLATES (Node/JS) | .rs=14,.tsx=9,.ex=11,.ts=5 |
 | 5 | `Iqalto_lms` | MINOR_REVISION | v1 (ACCEPT) | Phoenix/Elixir | OK | .ex=11 |
-| 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
+| 6 | `Iqalto_Activatus` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
@@ -124,7 +124,7 @@
 1. **Систематическое нарушение правила стека**  
    - Требование «Rust + Phoenix only» проигнорировано в большинстве проектов:  
      - `Claude_service` — ни одного .rs/.ex файла.  
-     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Aqtivirebuli` — только Markdown/PDF.  
+     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Activatus` — только Markdown/PDF.  
      - `LC_AutomatedMicroscopy` — Arduino, Python, без Rust.  
      - `LC_HAP` — Python/R.  
      - `LC_FCLC` — один .ex файл без Rust.  
@@ -133,7 +133,7 @@
    - **Корень**: правило не было воспринято как обязательное; проекты создавались в отрыве от общего технического задания.
 
 2. **Отсутствие исполняемого кода**  
-   - Более половины проектов (Claude_service, GLA_*, Iqalto_Aqtivirebuli, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
+   - Более половины проектов (Claude_service, GLA_*, Iqalto_Activatus, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
@@ -232,7 +232,7 @@
 | 3 | `GLA_Annals` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 4 | `Iqalto_umbrella` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS | VIOLATES (Node/JS) | .rs=14,.tsx=9,.ex=11,.ts=5 |
 | 5 | `Iqalto_lms` | MINOR_REVISION | v1 (ACCEPT) | Phoenix/Elixir | OK | .ex=11 |
-| 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
+| 6 | `Iqalto_Activatus` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
@@ -314,7 +314,7 @@
 1. **Систематическое нарушение правила стека**  
    - Требование «Rust + Phoenix only» проигнорировано в большинстве проектов:  
      - `Claude_service` — ни одного .rs/.ex файла.  
-     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Aqtivirebuli` — только Markdown/PDF.  
+     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Activatus` — только Markdown/PDF.  
      - `LC_AutomatedMicroscopy` — Arduino, Python, без Rust.  
      - `LC_HAP` — Python/R.  
      - `LC_FCLC` — один .ex файл без Rust.  
@@ -323,7 +323,7 @@
    - **Корень**: правило не было воспринято как обязательное; проекты создавались в отрыве от общего технического задания.
 
 2. **Отсутствие исполняемого кода**  
-   - Более половины проектов (Claude_service, GLA_*, Iqalto_Aqtivirebuli, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
+   - Более половины проектов (Claude_service, GLA_*, Iqalto_Activatus, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
@@ -422,7 +422,7 @@
 | 3 | `GLA_Annals` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 4 | `Iqalto_umbrella` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS | VIOLATES (Node/JS) | .rs=14,.tsx=9,.ex=11,.ts=5 |
 | 5 | `Iqalto_lms` | MINOR_REVISION | v1 (ACCEPT) | Phoenix/Elixir | OK | .ex=11 |
-| 6 | `Iqalto_Aqtivirebuli` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
+| 6 | `Iqalto_Activatus` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 7 | `Iqalto_simulator` | REJECT | v1 (ACCEPT) | Node/JS | VIOLATES (Node/JS) | .tsx=9 |
 | 8 | `Iqalto_iqalto-core` | MAJOR_REVISION | v1 (ACCEPT) | Rust | OK |  |
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
@@ -504,7 +504,7 @@
 1. **Систематическое нарушение правила стека**  
    - Требование «Rust + Phoenix only» проигнорировано в большинстве проектов:  
      - `Claude_service` — ни одного .rs/.ex файла.  
-     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Aqtivirebuli` — только Markdown/PDF.  
+     - `GLA_Annals`, `GLA_umbrella`, `Iqalto_Activatus` — только Markdown/PDF.  
      - `LC_AutomatedMicroscopy` — Arduino, Python, без Rust.  
      - `LC_HAP` — Python/R.  
      - `LC_FCLC` — один .ex файл без Rust.  
@@ -513,7 +513,7 @@
    - **Корень**: правило не было воспринято как обязательное; проекты создавались в отрыве от общего технического задания.
 
 2. **Отсутствие исполняемого кода**  
-   - Более половины проектов (Claude_service, GLA_*, Iqalto_Aqtivirebuli, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
+   - Более половины проектов (Claude_service, GLA_*, Iqalto_Activatus, LC_CytogeneticTree, LC_HAP, LC_Ontogenesis, LC_AutomatedMicroscopy, LC_MCOA частично) не содержат ни одной строки кода на целевом стеке.  
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
@@ -1140,7 +1140,7 @@ ACCEPT
 
 ---
 
-## Iqalto_Aqtivirebuli
+## Iqalto_Activatus
 
 ### Peer review (v1)
 
@@ -1197,7 +1197,7 @@ ACCEPT
    *Путь: `papers/` целиком*
 
 4. **Несоответствие между заявленным статусом и реальностью**  
-   `CLAUDE.md` гласит: «Aqtivirebuli — это концептуальный + лабораторный подпроект. Кода пока нет.» Однако в `MAP.md` и `TODO.md` упоминается Phoenix-сайт, интеграции с AIM и DrJaba как «реализованные» или «планируемые». Нет единой картины.
+   `CLAUDE.md` гласит: «Activatus — это концептуальный + лабораторный подпроект. Кода пока нет.» Однако в `MAP.md` и `TODO.md` упоминается Phoenix-сайт, интеграции с AIM и DrJaba как «реализованные» или «планируемые». Нет единой картины.
 
 5. **Отсутствие исполняемых спецификаций**  
    Параметры из `PARAMETERS.md` (активность фитазы, pH, время) не подкреплены ни кодом, ни тестами, ни симуляциями. Это делает проект бесполезным для software аудита.
@@ -1239,14 +1239,14 @@ ACCEPT
 **Заключение.** Проект в текущем виде не является программным продуктом и не может быть принят. Для повторной подачи необходимо: (1) определить минимальный исполняемый прототип на Rust/Phoenix, (2) удалить все неактуальные версии документов, (3) ввести обязательную верификацию внешних ссылок и (4) жёстко привязать документацию к коду через автотесты (например, doctest или ExUnit). После этих изменений — MINOR_REVISION возможна.
 
 
-### Improvement plan (Iqalto_Aqtivirebuli.plan.v1.md)
+### Improvement plan (Iqalto_Activatus.plan.v1.md)
 
-# План улучшений Aqtivirebuli (по результатам peer review)
+# План улучшений Activatus (по результатам peer review)
 
 ## 🔴 P0 — Блокеры (обязательны к выполнению перед повторной подачей)
 
 ### 0.1 Разработать минимальный исполняемый прототип на Rust + Phoenix LiveView
-- **Затронутые файлы:** `Cargo.toml`, `mix.exs`, `src/main.rs`, `lib/aqtivirebuli_web/*.ex`, `priv/static/*.heex`
+- **Затронутые файлы:** `Cargo.toml`, `mix.exs`, `src/main.rs`, `lib/Activatus_web/*.ex`, `priv/static/*.heex`
 - **Что сделать:** Создать бэкенд-модуль на Rust (расчёт биодоступности Fe на основе pH/времени/активности фитазы), Phoenix LiveView дашборд для ввода параметров и отображения результатов. Минимально: 1 экран, 1 REST endpoint.
 - **Трудоёмкость:** L (2–4 недели полной занятости)
 - **Риск:** High — нет текущей Rust/Elixir экспертизы, требуется найм или самообучение
@@ -1265,12 +1265,12 @@ ACCEPT
 
 ### 0.4 Создать файлы конфигурации для Rust и Phoenix проектов
 - **Затронутые файлы:** `Cargo.toml`, `mix.exs`, `.gitignore`, `LICENSE`
-- **Что сделать:** Сгенерировать скелет Rust-библиотеки (`cargo init --lib`) и Phoenix-приложения (`mix phx.new aqtivirebuli`). Добавить `.gitignore` для Rust и Elixir, выбрать лицензию MIT.
+- **Что сделать:** Сгенерировать скелет Rust-библиотеки (`cargo init --lib`) и Phoenix-приложения (`mix phx.new Activatus`). Добавить `.gitignore` для Rust и Elixir, выбрать лицензию MIT.
 - **Трудоёмкость:** M (4–6 часов)
 - **Риск:** Low
 
 ### 0.5 Разрешить несоответствие статуса: удалить упоминания несуществующего кода
-- **Затронутые файлы:** `MAP.md` (строка «Создать сайт aqtivirebuli.drjaba.com (Phoenix LiveView)»), `TODO.md` (задачи по интеграциям с AIM/DrJaba), `LINKS.md` (раздел интеграций)
+- **Затронутые файлы:** `MAP.md` (строка «Создать сайт Activatus.drjaba.com (Phoenix LiveView)»), `TODO.md` (задачи по интеграциям с AIM/DrJaba), `LINKS.md` (раздел интеграций)
 - **Что сделать:** Заменить все "реализовано/планируется" на "P0 блокер — требует MVP кода". Убрать фиктивные ссылки на Phoenix-сайт до его реализации.
 - **Трудоёмкость:** S (1 час)
 - **Риск:** Low
@@ -1303,7 +1303,7 @@ ACCEPT
 ## 🟢 P2 — Nice-to-have (после реализации MVP)
 
 ### 2.1 Минимальные автотесты для биохимических параметров
-- **Затронутые файлы:** `src/lib.rs` (Rust), `test/aqtivirebuli_test.exs` (Elixir)
+- **Затронутые файлы:** `src/lib.rs` (Rust), `test/Activatus_test.exs` (Elixir)
 - **Что сделать:** Написать тест, проверяющий что при заданных pH=5.0–5.5 и T=25–30°C расчётная активность фитазы попадает в диапазон 200–475 U/g. Использовать `#[cfg(test)]` и `ExUnit`.
 - **Трудоёмкость:** S (2–4 часа)
 
@@ -1344,7 +1344,7 @@ ACCEPT
 **Рекомендуемый порядок:** сначала P0.2 (cleanup) → P0.4 (scaffold) → P0.5 (fix status) → P0.3 (verify citations) → P0.1 (MVP code) в параллель с P1.1/P1.2.  P2 — отложить до получения первого работающего прототипа.
 
 
-### Final check (Iqalto_Aqtivirebuli.check.v1.md) — accepted=True
+### Final check (Iqalto_Activatus.check.v1.md) — accepted=True
 
 ## VERDICT
 ACCEPT
@@ -1864,10 +1864,10 @@ ACCEPT
 | Критерий | Оценка | Обоснование |
 |---|---|---|
 | Architecture | 4 | Чёткое разделение на Rust‑ядро, Phoenix‑бэкенд и React‑фронтенд; мультиплеер через Channels. Одно критическое несоответствие: заявленный YAML‑движок curriculum реализован на Rust, что нарушает декларацию CONCEPT.md. |
-| Optimality | 4 | Разумный выбор инструментов. Избыточное дублирование документации: 51 `.md` – много, подпроект Aqtivirebuli дублирует правила родителя. Наличие подпроекта без кода в том же репозитории снижает фокус. |
-| Structure / Modularity | 4 | Кратос хорошо организованы (crates, модули Phoenix, папки симулятора). Минус: Aqtivirebuli в корне размывает границы кода и документации; нет отдельного `content/`. |
-| Systematicity (cross‑file consistency) | 3 | CONCEPT.md объявлен источником истины, но код `iqalto-curriculum` конфликтует с описанием YAML‑траекторий. PARAMETERS.md Aqtivirebuli содержит цифры, не синхронизированные с родительскими параметрами. TODO.md включает задачи, добавленные аудитом, что не системно. |
-| Core‑files vs code alignment | 3 | Код в основном отражает CONCEPT, но curriculum описан иначе. Нет кода для модулей accounts/curriculum/progress в представленном наборе файлов (хотя они упомянуты в MAP.md). Подпроект Aqtivirebuli не имеет ни строки кода, но занимает место в репозитории. |
+| Optimality | 4 | Разумный выбор инструментов. Избыточное дублирование документации: 51 `.md` – много, подпроект Activatus дублирует правила родителя. Наличие подпроекта без кода в том же репозитории снижает фокус. |
+| Structure / Modularity | 4 | Кратос хорошо организованы (crates, модули Phoenix, папки симулятора). Минус: Activatus в корне размывает границы кода и документации; нет отдельного `content/`. |
+| Systematicity (cross‑file consistency) | 3 | CONCEPT.md объявлен источником истины, но код `iqalto-curriculum` конфликтует с описанием YAML‑траекторий. PARAMETERS.md Activatus содержит цифры, не синхронизированные с родительскими параметрами. TODO.md включает задачи, добавленные аудитом, что не системно. |
+| Core‑files vs code alignment | 3 | Код в основном отражает CONCEPT, но curriculum описан иначе. Нет кода для модулей accounts/curriculum/progress в представленном наборе файлов (хотя они упомянуты в MAP.md). Подпроект Activatus не имеет ни строки кода, но занимает место в репозитории. |
 | Stack‑rule compliance (Rust+Phoenix only) | 5 | Полное соответствие: Rust (iqalto‑core), Phoenix/Elixir (lms), Node/JS (simulator). Rustler FFI связывает Rust и Elixir корректно. |
 | Modernity of stack | 5 | Rust edition 2021, Phoenix 1.7 + LiveView, React 18, Three.js 0.165, Tone.js – актуальные версии. |
 | Quality of processes / connections | 3 | Только 8 unit‑тестов (Rust). Нет тестов Phoenix, нет CI/CD, нет интеграционных тестов. Не показаны lock‑файлы (mix.lock отсутствует, package‑lock потерян). Rustler NIF усложняет сборку – это отмечено, но не решено. |
@@ -1884,9 +1884,9 @@ ACCEPT
    Вся бизнес‑логика LMS (Progress, ArteliSession, Channels) не покрыта тестами. Запуск пилота 50 студентов без гарантии корректной работы GenServer и Ecto схем неприемлем.  
    **Требуется:** добавить как минимум unit‑тесты для сервисов и интеграционные для Channels.
 
-3. **Aqtivirebuli — не часть кодовой базы**  
+3. **Activatus — не часть кодовой базы**  
    Подпроект содержит только `.md` файлы (концепция, гранты, научные обзоры) и не имеет кода. Его присутствие в корне репозитория смешивает документацию и исполняемый код, нарушая принцип единой ответственности.  
-   **Требуется:** вынести Aqtivirebuli в отдельный репозиторий или хотя бы в поддиректорию `_docs_subs/`, исключив из корневого `ls`.
+   **Требуется:** вынести Activatus в отдельный репозиторий или хотя бы в поддиректорию `_docs_subs/`, исключив из корневого `ls`.
 
 4. **Нет lock‑файлов для зависимостей** (кроме Cargo.lock)  
    Отсутствие `mix.lock` и `package-lock.json` / `yarn.lock` делает сборку невоспроизводимой. В UPGRADE.md отмечено «Нет mix.lock и deps.get», но проблема не исправлена.  
@@ -1901,7 +1901,7 @@ ACCEPT
 ## MINOR ISSUES
 
 1. **Файлы CLAUDE.md дублируются**  
-   Aqtivirebuli/CLAUDE.md повторяет правила родителя с небольшими дополнениями. При изменении в родительском файле подпроект неизбежно рассинхронизируется. Рекомендуется наследовать через `include` или ссылаться на родительский файл.
+   Activatus/CLAUDE.md повторяет правила родителя с небольшими дополнениями. При изменении в родительском файле подпроект неизбежно рассинхронизируется. Рекомендуется наследовать через `include` или ссылаться на родительский файл.
 
 2. **Версия Tone.js может быть неактуальной**  
    В `package.json` указано `"tone": "^15.0"`. На момент ревью (май 2026) последняя стабильная версия 14.9. Это может вызвать ошибки при `npm install`.  
@@ -1934,13 +1934,13 @@ ACCEPT
 
 2. **Конфликт концепции и реализации curriculum** – вероятно, возник из‑за желания обеспечить высокую производительность (Rust), но YAML‑конфигурация была отложена. Следует либо реализовать YAML, либо явно изменить CONCEPT.md.
 
-3. **Подпроект Aqtivirebuli добавлен без согласования с архитектурой** – поскольку это отдельная научно‑бизнес‑инициатива, её место – отдельный репозиторий или глубокая поддиректория с минимумом файлов. Текущее размещение раздувает корень и усложняет навигацию.
+3. **Подпроект Activatus добавлен без согласования с архитектурой** – поскольку это отдельная научно‑бизнес‑инициатива, её место – отдельный репозиторий или глубокая поддиректория с минимумом файлов. Текущее размещение раздувает корень и усложняет навигацию.
 
 4. **Отсутствие процессов CI/CD** – проект не автоматизирует сборку, тестирование и деплой. Для пилота с внешними грантами это станет blocker.
 
 ---
 
-**Резюме:** Проект имеет продуманную архитектуру и актуальный стек, но страдает от несоответствий между концепцией и кодом (curriculum) и от включения не‑кодового подпроекта. Основной риск – запуск пилота без всестороннего тестирования Phoenix‑части и без воспроизводимой сборки. Рекомендуется провести MAJOR_REVISION: устранить несоответствие curriculum, вынести Aqtivirebuli, добавить lock‑файлы и покрыть LMS тестами. После этого можно перевыпускать AUDIT.
+**Резюме:** Проект имеет продуманную архитектуру и актуальный стек, но страдает от несоответствий между концепцией и кодом (curriculum) и от включения не‑кодового подпроекта. Основной риск – запуск пилота без всестороннего тестирования Phoenix‑части и без воспроизводимой сборки. Рекомендуется провести MAJOR_REVISION: устранить несоответствие curriculum, вынести Activatus, добавить lock‑файлы и покрыть LMS тестами. После этого можно перевыпускать AUDIT.
 
 
 ### Improvement plan (Iqalto_umbrella.plan.v1.md)
@@ -1953,7 +1953,7 @@ ACCEPT
 |---|---------|-----------------|--------------|------|
 | 1 | Привести `curriculum` к CONCEPT.md: переписать на Rust-интерпретатор YAML/JSON (или удалить жёсткий автомат и заменить на загрузку траекторий из конфигурационного файла). Если решите оставить Rust-логику — явно изменить CONCEPT.md §4.1, убрав «YAML-конфигурируемые траектории». | `iqalto-core/crates/curriculum/src/lib.rs`, `CURRICULUM.md`, `CONCEPT.md §4.1` | M | 📈 Подрыв консистентности source-of-truth |
 | 2 | Добавить unit-тесты для Phoenix-бэкенда: ProgressService, ArteliSession GenServer, SimChannel, ArteliChannel. Написать минимальный тест для каждого GenServer (call/cast) и для Ecto-схем (changeset validation). | `lms/lib/iqalto/progress.ex`, `lms/lib/iqalto/arteli_session.ex`, `lms/lib/iqalto_web/channels/sim_channel.ex`, `lms/lib/iqalto_web/channels/arteli_channel.ex`, `lms/test/` | M | 📈 Пилот 50 студентов без тестов — высокий риск |
-| 3 | Вынести Aqtivirebuli из корня репозитория: создать поддиректорию `_drafts/Aqtivirebuli/` (или отдельный репозиторий). Перенести все .md файлы; обновить `MAP.md` и `README.md` корня. | `~/Desktop/Iqalto/Aqtivirebuli/*` → `~/Desktop/Iqalto/_drafts/Aqtivirebuli/`, `MAP.md`, `README.md` | S | 📈 Размывание границ кода и документации |
+| 3 | Вынести Activatus из корня репозитория: создать поддиректорию `_drafts/Activatus/` (или отдельный репозиторий). Перенести все .md файлы; обновить `MAP.md` и `README.md` корня. | `~/Desktop/Iqalto/Activatus/*` → `~/Desktop/Iqalto/_drafts/Activatus/`, `MAP.md`, `README.md` | S | 📈 Размывание границ кода и документации |
 | 4 | Сгенерировать и закоммитить `mix.lock` и `package-lock.json`. Зафиксировать точную версию Tone.js (14.9 вместо ^15.0). | `lms/mix.lock`, `simulator/package-lock.json`, `simulator/package.json` | S | 📈 Невоспроизводимая сборка |
 | 5 | Раскрыть логику симуляторов: либо включить в ревью отсутствующие файлы (`bakery.rs`, `forge.rs`, `pottery.rs`, `winery.rs`), либо добавить header-комментарии с алгоритмами в каждый из них. | `iqalto-core/crates/simulation/src/bakery.rs`, `forge.rs`, `pottery.rs`, `winery.rs` | S | 📈 Невозможно оценить корректность симуляций |
 
@@ -1961,7 +1961,7 @@ ACCEPT
 
 | # | Действие | Затронутые файлы | Трудоёмкость |
 |---|---------|-----------------|--------------|
-| 1 | В `Aqtivirebuli/CLAUDE.md` заменить дублирование правил на явную ссылку на родительский `../CLAUDE.md` (например, «Следуй правилам из `./CLAUDE.md` за исключением…») | `Aqtivirebuli/CLAUDE.md` | S |
+| 1 | В `Activatus/CLAUDE.md` заменить дублирование правил на явную ссылку на родительский `../CLAUDE.md` (например, «Следуй правилам из `./CLAUDE.md` за исключением…») | `Activatus/CLAUDE.md` | S |
 | 2 | Проверить и зафиксировать exact-версию Tone.js: удалить caret `^15.0`, поставить `"15.0.2"` (или актуальную на момент правки). Выполнить `npm install` и обновить lock-файл. | `simulator/package.json`, `simulator/package-lock.json` | S |
 | 3 | Проверить наличие модулей `accounts`, `curriculum`, `progress` в `lms/lib/iqalto/`. Если отсутствуют — создать заглушки (или объяснить в MAP.md, что они планируются, но не реализованы). | `lms/lib/iqalto/accounts/`, `lms/lib/iqalto/curriculum/`, `lms/lib/iqalto/progress/`; `MAP.md` | M |
 | 4 | Удалить строку «ДОБАВЛЕНО АУДИТОМ 2026-04-21» из `TODO.md`. Задачи аудита перенести в соответствующий раздел бэклога. | `TODO.md` | S |
@@ -1973,7 +1973,7 @@ ACCEPT
 |---|---------|-----------------|--------------|
 | 1 | Настроить CI/CD (GitHub Actions): сборка Rust (`cargo check --workspace`), тесты Phoenix (`mix test`), сборка симулятора (`npm run build`), линтеры. | `.github/workflows/ci.yml` | M |
 | 2 | Добавить интеграционные тесты для связки Rust + Elixir (через Rustler NIF mock или реальную компиляцию). | `lms/test/iqalto/core_nif_test.exs` | L |
-| 3 | Если Aqtivirebuli не вынесен как P0 — оформить как отдельный репозиторий `github.com/djabbat/aqtivirebuli` с собственным README и CI. | Весь подпроект | M |
+| 3 | Если Activatus не вынесен как P0 — оформить как отдельный репозиторий `github.com/djabbat/Activatus` с собственным README и CI. | Весь подпроект | M |
 | 4 | Создать `devbox.json` или `.envrc` для автоматической настройки окружения (PostgreSQL, Erlang, Node). | `devbox.json`, `.envrc` | S |
 
 
@@ -1990,8 +1990,8 @@ ACCEPT
 
 ## NOTES
 
-- Все 5 P0-замечаний имеют конкретные, измеримые действия с указанием файлов. План покрывает critical gap между `curriculum` и CONCEPT.md (P0.1), отсутствие тестов (P0.2), размывание границ Aqtivirebuli (P0.3), невоспроизводимость сборки (P0.4) и нераскрытую логику симуляций (P0.5).
-- P1 #1 (дублирование правил в Aqtivirebuli/CLAUDE.md) и P2 #3 (отдельный репозиторий) усиливают чистоту, но не являются критическими.
+- Все 5 P0-замечаний имеют конкретные, измеримые действия с указанием файлов. План покрывает critical gap между `curriculum` и CONCEPT.md (P0.1), отсутствие тестов (P0.2), размывание границ Activatus (P0.3), невоспроизводимость сборки (P0.4) и нераскрытую логику симуляций (P0.5).
+- P1 #1 (дублирование правил в Activatus/CLAUDE.md) и P2 #3 (отдельный репозиторий) усиливают чистоту, но не являются критическими.
 - План не нарушает source-of-truth (CONCEPT.md остаётся авторитетным) и не вводит новых противоречий.
 
 
@@ -6746,7 +6746,7 @@ ACCEPT
 ## MINOR ISSUES
 
 1. **Устаревшая ссылка в LINKS.md**  
-   Строка «Tkemaladze & Chichinadze 2005 *Cell Biology International* — (не indexed в PubMed)».  
+   Строка «Tqemaladze & Chichinadze 2005 *Cell Biology International* — (не indexed в PubMed)».  
    → Указать DOI или хотя бы Web of Science ID, иначе ссылка бесполезна.
 
 2. **Избыточность in_memoriam/CHICHINADZE.md**  
@@ -6823,7 +6823,7 @@ ACCEPT
 
 | № | Действие | Затронутые файлы |
 |---|----------|------------------|
-| 1 | **Обновить ссылку в LINKS.md** для работы Tkemaladze & Chichinadze 2005: указать DOI или WoS ID вместо «не indexed in PubMed». | `LINKS.md` |
+| 1 | **Обновить ссылку в LINKS.md** для работы Tqemaladze & Chichinadze 2005: указать DOI или WoS ID вместо «не indexed in PubMed». | `LINKS.md` |
 | 2 | **Привязать in_memoriam/CHICHINADZE.md** к диссертации: либо включить его как приложение в dissertation, либо явно указать, что это только заметка (добавить комментарий в MAP.md). | `in_memoriam/CHICHINADZE.md`, `MAP.md` |
 | 3 | **Заменить символ "→" на "→"** во всех Markdown-файлах (он может ломать рендеринг). | `CONCEPT.md`, `MAP.md`, `E0/CONCEPT.md`, `E0/MAP.md` |
 | 4 | **Добавить `English/*.pdf` в .gitignore** и написать в `English/README.md` инструкцию по скачиванию. | `.gitignore`, `English/README.md` (создать/дополнить) |

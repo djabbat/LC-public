@@ -2,7 +2,7 @@
 
 **Sub-Subproject of CytogeneticTree | Algorithmic Lineage Reconstruction**
 
-This repository contains the core algorithms for the **GenealogyReconstruction** module, part of Dr. Jaba Tkemaladze's broader CytogeneticTree project. The goal is to computationally reconstruct the complete genealogical tree of cell differentiation, from zygote to terminal cells.
+This repository contains the core algorithms for the **GenealogyReconstruction** module, part of Dr. Jaba Tqemaladze's broader CytogeneticTree project. The goal is to computationally reconstruct the complete genealogical tree of cell differentiation, from zygote to terminal cells.
 
 ## How It Works
 The algorithm takes two key inputs:

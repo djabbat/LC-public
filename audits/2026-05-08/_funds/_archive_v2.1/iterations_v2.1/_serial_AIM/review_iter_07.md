@@ -48,7 +48,7 @@
 - Hibbard 2009 (PAM scoring, proprietary manual) – нет DOI/PMID/ISBN. Неверифицируема.  
 - Tao et al. 2026 (Nat Med) – указан "DOI TBD". Нет идентификатора.  
 - Blumenthal-Lee 2024 (JAMA) – "DOI TBD".  
-- Tkemaladze 2026 (Longevity Horizon) – "DOI TBD".  
+- Tqemaladze 2026 (Longevity Horizon) – "DOI TBD".  
 - Hibbard 2004 в одном из блоков указан с PMID 15527447 (ошибка, хотя рядом есть правильный).  
 Все эти ссылки либо не имеют идентификатора, либо не соответствуют (2005 PMID отнесён к 2004 работе).  
 *Положительно:* Hibbard 2004 (PMID 15333167) и Hibbard 2005 (PMID 15527447) – реальны. Mayo Clinic, MedlinePlus, WHO – URL работают.
@@ -64,7 +64,7 @@
 - **Аналиты:** PARAMETERS.md = 59, KNOWLEDGE.md = 71. Прямое противоречие.  
 - **Sample size calculation:** в CONCEPT.md дважды приведён расчёт с разными PMID для одной работы.  
 - **α-уровень:** THEORY.md упоминает p<0.001 (удалено в CONCEPT.md), что говорит о несинхронизации версий.  
-- **Фреймворк L3:** THEORY.md утверждает, что CONCEPT.md является источником; в CONCEPT.md есть §0 с отсылкой на Tkemaladze – согласовано, но другие несоответствия подрывают доверие.
+- **Фреймворк L3:** THEORY.md утверждает, что CONCEPT.md является источником; в CONCEPT.md есть §0 с отсылкой на Tqemaladze – согласовано, но другие несоответствия подрывают доверие.
 
 ## Reference audit (обязательная таблица — все ссылки компонента)
 

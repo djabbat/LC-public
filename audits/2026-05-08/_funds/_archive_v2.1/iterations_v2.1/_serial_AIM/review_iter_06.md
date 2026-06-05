@@ -37,9 +37,9 @@
    **Три ссылки имеют невалидные идентификаторы (DOI TBD / PMID неверен):**  
    - Tao et al. (2026) — `[pre-print; DOI TBD]` (нереальный идентификатор).  
    - Blumenthal & Lee (2024) — `[pre-print; DOI TBD]`.  
-   - Tkemaladze (2026) — `[pre-print; DOI TBD]`.  
+   - Tqemaladze (2026) — `[pre-print; DOI TBD]`.  
    - Hibbard et al. (2004) в одном месте указан PMID 15527447 (это статья 2005 года) — невалидный идентификатор для 2004 года.  
-   - Jaba (2022) и Tkemaladze (2023) не имеют PMID/DOI.  
+   - Jaba (2022) и Tqemaladze (2023) не имеют PMID/DOI.  
    **Это автоматический REJECT компонента** (п. 7а правил: «Невалидный идентификатор = автоматический REJECT»).
 
 8. **No fabrication markers** — **✗**  

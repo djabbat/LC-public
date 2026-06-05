@@ -56,7 +56,7 @@
   {
     "file": "HAP/KNOWLEDGE.md",
     "action": "replace_text",
-    "find": "Tkemaladze, 2025",
-    "replace": "Tkemaladze, 2025 [PREPRINT]"
+    "find": "Tqemaladze, 2025",
+    "replace": "Tqemaladze, 2025 [PREPRINT]"
   }
 ]

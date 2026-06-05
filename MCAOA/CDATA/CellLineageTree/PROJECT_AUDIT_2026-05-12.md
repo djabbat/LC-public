@@ -10,7 +10,7 @@ Parent files copied into `docs/related/`: **14**.
 
 | PMID | First author | Year | Journal | Title (≤80c) |
 |------|--------------|------|---------|---------------|
-| 36583780 | Tkemaladze J | 2023 | Mol Biol Rep | Reduction, proliferation, and differentiation defects of stem cells over time: a |
+| 36583780 | Tqemaladze J | 2023 | Mol Biol Rep | Reduction, proliferation, and differentiation defects of stem cells over time: a |
 | 10618407 | Bolk S | 2000 | Proc Natl Acad Sci U S | A human model for multigenic inheritance: phenotypic expression in Hirschsprung  |
 | 36882497 | Kapoor V | 2023 | Evid Based Dent | Comparative evaluation of retention and cariostatic effect of glass ionomer, hyd |
 | 26213385 | Madarampalli B | 2015 | Cell | ATF5 Connects the Pericentriolar Materials to the Proximal End of the Mother Cen |

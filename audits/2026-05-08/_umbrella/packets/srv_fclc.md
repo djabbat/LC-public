@@ -159,7 +159,7 @@ FCLC находится на стадии **исследовательского
 
 
 ## Position in MCAOA
-**FCLC = federated calibration infrastructure for the MCAOA framework** (Tkemaladze J., 2026, *Nature Aging* Perspective). MCAOA counters require tissue-weighted calibration from multi-site biomedical data; FCLC provides the privacy-preserving pipeline (SecAgg+, differential privacy ε≤1.0) that allows *w_i(tissue)* weights to be learned without raw data transfer. Meta-architecture: `~/Desktop/LC/MCAOA/CONCEPT.md`.
+**FCLC = federated calibration infrastructure for the MCAOA framework** (Tqemaladze J., 2026, *Nature Aging* Perspective). MCAOA counters require tissue-weighted calibration from multi-site biomedical data; FCLC provides the privacy-preserving pipeline (SecAgg+, differential privacy ε≤1.0) that allows *w_i(tissue)* weights to be learned without raw data transfer. Meta-architecture: `~/Desktop/LC/MCAOA/CONCEPT.md`.
 
 ---
 

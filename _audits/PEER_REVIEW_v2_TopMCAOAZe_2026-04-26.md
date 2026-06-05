@@ -88,7 +88,7 @@
 
 - (CI-1) **MCAOA/EVIDENCE.md.** 9 из 9 проверенных PMID указывают на полностью посторонние работы (см. §0). Это паттерн **AI-фабрикации цитирований**: PubMed-id выбраны случайно, а текст ссылки придуман отдельно. После 2024 года такая ситуация в submission-grade документе квалифицируется большинством высокорейтинговых журналов (включая *Nature*, *Cell*, *Science*) как **research misconduct по NIH ORI definition C(2)** (fabrication of citations).
 - (CI-2) **Ze/EVIDENCE.md.** arXiv 2501.12345, заявленный как «Kerenidis & Cherrat 2025 quantum agents for CHSH games», в реальности — статья Malhotra & Ito по астрофизике пояса Койпера. Минимум 1 фальсификация в физическом корпусе.
-- (CI-3) **Self-citation pattern.** Все 7 «Ze publications» Tkemaladze в EVIDENCE.md имеют DOI с префиксом 10.65649 (Longevity Horizon — Phasis Academy OJS). DOI зарегистрированы в Crossref, но это **self-publishing platform**, без независимого peer review. Доля self-citations внутри Ze §8 = 100%; в MCAOA = 1/8 (Tkemaladze 2026 NATAGING-P13741) — формально приемлемо, но в сочетании с CI-1 теряет вес.
+- (CI-3) **Self-citation pattern.** Все 7 «Ze publications» Tqemaladze в EVIDENCE.md имеют DOI с префиксом 10.65649 (Longevity Horizon — Phasis Academy OJS). DOI зарегистрированы в Crossref, но это **self-publishing platform**, без независимого peer review. Доля self-citations внутри Ze §8 = 100%; в MCAOA = 1/8 (Tqemaladze 2026 NATAGING-P13741) — формально приемлемо, но в сочетании с CI-1 теряет вес.
 - (CI-4) **MCAOA/CONCEPT.md цитирует «Sun 2016» как Sun N. *Measuring In Vivo Mitophagy* Mol Cell.** Этой работы не существует в PubMed под этим именем и в этом году. Реальный Sun N. *Mol Cell* 2016 — про mitophagy, но называется *«Measuring In Vivo Mitophagy»* лишь в 2017 году (PMID 28132843, Sun et al. *Nat Protoc*). Цитата либо галлюцинирована, либо смешана из двух разных статей.
 
 ### 3.2. Conceptual overclaim
@@ -151,7 +151,7 @@
 5. **(R5) Ze Theory — separation of concerns.** Разделить на (a) технический препринт «Impedance ODE simulator + CHSH-deformation prediction» (testable, для arXiv/PRX) и (b) философско-методологическую часть (для Mind/Synthese, не для физического журнала). Сейчас всё перемешано.
 6. **(R6) Ze Z2 (Tsirelson bound).** Обязательно объяснить, какой физический mechanism обеспечивает добавочную корреляцию. Без этого журналы физики тематически неприменимы.
 7. **(R7) Top-level CommonHealth.** Заменить «5000 users / 6 мес» на benchmark-based realistic targets и привести protocol pre-registration на OSF.
-8. **(R8) Self-citation policy.** Доля self-cit в каждом подпроекте — не более 15% (per CLAUDE.md правило). Сейчас Ze/EVIDENCE §8 = 100% self-cit (7/7 Tkemaladze DOI 10.65649).
+8. **(R8) Self-citation policy.** Доля self-cit в каждом подпроекте — не более 15% (per CLAUDE.md правило). Сейчас Ze/EVIDENCE §8 = 100% self-cit (7/7 Tqemaladze DOI 10.65649).
 9. **(R9) DOI 10.65649** (Longevity Horizon) — указывать явно как «author's OJS, non-peer-reviewed» в bibliography, не как обычные journal citations.
 10. **(R10) MCAOA/EVIDENCE §2.2 «MSE = -0.093»** — полностью переделать или удалить; такая ошибка в submission documents недопустима.
 

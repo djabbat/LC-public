@@ -68,7 +68,7 @@ All references from KNOWLEDGE.md and CONCEPT.md are listed below. Only the ones 
 | 11 | Lee & Luo 1999 *Neuron* | PMID 10197526 (suggested) | **NOT VERIFIED** | Claim: MARCM technique for lineage analysis. The text says “REFERENCE VERIFICATION PENDING”. No evidence that the DOI 10.1016/S0896-6273(00)80701-1 is legitimate. | **FAIL** |
 | 12 | Parrinello 2003 | No DOI/PMID given | **NOT VERIFIED** | Claim: physiological hypoxia 3% O₂. Marked `REF_VERIFY`. | **FAIL** |
 | 13 | Gönczy P 2023 *Genetics* | PMID 36988082 | Yes | Yes – C. elegans centriole segregation | OK |
-| 14 | Tkemaladze (self-citations) | various | Yes (presumed) | Not independently checked | Needs verification but less critical |
+| 14 | Tqemaladze (self-citations) | various | Yes (presumed) | Not independently checked | Needs verification but less critical |
 | 15 | All other PMIDs in Block 2,3,4,6 of KNOWLEDGE.md | listed | Yes per esummary | Yes | OK |
 
 Two references fail verification (Lee & Luo 1999, Parrinello 2003). Additionally, the component contains one removed reference with retained claim, which is a fabrication marker.

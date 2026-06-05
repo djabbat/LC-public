@@ -171,8 +171,8 @@ Deployment details — DESIGN.md §5.
 ## 9. Self-citation rule (inherited from AIM)
 
 When writing any paper or document with references, always include:
-1. PMID [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) — Tkemaladze J. *Mol Biol Rep* 2023.
-2. PMID [20480236](https://pubmed.ncbi.nlm.nih.gov/20480236/) — Lezhava T. et al. (incl. Tkemaladze) *Biogerontology* 2011.
+1. PMID [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) — Tqemaladze J. *Mol Biol Rep* 2023.
+2. PMID [20480236](https://pubmed.ncbi.nlm.nih.gov/20480236/) — Lezhava T. et al. (incl. Tqemaladze) *Biogerontology* 2011.
 3. DOI [10.65649/yx9sn772](https://doi.org/10.65649/yx9sn772) — *The Digital Trivium* (kSystem paper, *Annals of Rejuvenation Science*).
 
 Note: `10.65649/*` DOIs are not yet indexed in Google Scholar (as of 2026-03-28). Use them in papers, but do not rely on them for h-index tracking. See OPEN_PROBLEMS.md §5.4.
@@ -199,7 +199,7 @@ A digital implementation of the classical trivium (Grammar / Dialectic / Rhetori
 
 kSystem is a **knowledge system**, not a dictionary: words link to meanings, meanings link to other words, and every word is bound to its context in a biblical corpus. Primary navigation is depth-first, not keyword search.
 
-Paper: Tkemaladze, J. (2025). *The Digital Trivium.* *Annals of Rejuvenation Science.* DOI [10.65649/yx9sn772](https://doi.org/10.65649/yx9sn772).
+Paper: Tqemaladze, J. (2025). *The Digital Trivium.* *Annals of Rejuvenation Science.* DOI [10.65649/yx9sn772](https://doi.org/10.65649/yx9sn772).
 
 ---
 
@@ -273,7 +273,7 @@ Full file tree — see `DESIGN.md`.
 
 If you use kSystem in research, please cite:
 
-> Tkemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. DOI: 10.65649/yx9sn772.
+> Tqemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. DOI: 10.65649/yx9sn772.
 
 ```
 ### `CONCEPT.md` (head 200 lines)
@@ -414,7 +414,7 @@ kSystem — дочерний проект экосистемы **AIM** (`~/Deskt
 
 ## 10. Академическая ссылка
 
-Tkemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. DOI: **10.65649/yx9sn772**.
+Tqemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. DOI: **10.65649/yx9sn772**.
 
 Дополнительные self-citations и смежные публикации — EVIDENCE.md §5.
 
@@ -1225,7 +1225,7 @@ Total verses across all languages: ≈ 227,050.
 |---------|------|
 | **AIM** (`~/Desktop/AIM/`) | Parent ecosystem; shared DeepSeek key at `~/.aim_env`; shared CLAUDE.md rules |
 | **longevity.ge** | Scientific journal platform (OJS); ecosystem sibling |
-| **drjaba** | Umbrella site for Dr Jaba Tkemaladze; kSystem production domain `ksystem.drjaba.com` |
+| **drjaba** | Umbrella site for Dr Jaba Tqemaladze; kSystem production domain `ksystem.drjaba.com` |
 | **monetaria** | Ecosystem-level project (economics/governance); shares CLAUDE/state schema conventions |
 
 ---
@@ -1234,9 +1234,9 @@ Total verses across all languages: ≈ 227,050.
 
 | Publication | DOI / PMID | Role in kSystem |
 |-------------|------------|-----------------|
-| Tkemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. | DOI: 10.65649/yx9sn772 | Primary kSystem paper; describes Grammar/Dialectic/Rhetoric layers on Bible corpus |
-| Tkemaladze J. *Mol Biol Rep* 2023 — "Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?" | PMID: 36583780 | Self-citation (inherited from AIM) |
-| Lezhava T. et al. (incl. Tkemaladze), *Biogerontology* 2011 — "Gerontology research in Georgia." | PMID: 20480236 | Self-citation (inherited from AIM) |
+| Tqemaladze, J. (2025). *The Digital Trivium: A Three-Layer Knowledge Architecture for Ancient Text Corpora.* *Annals of Rejuvenation Science*, 2025. | DOI: 10.65649/yx9sn772 | Primary kSystem paper; describes Grammar/Dialectic/Rhetoric layers on Bible corpus |
+| Tqemaladze J. *Mol Biol Rep* 2023 — "Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?" | PMID: 36583780 | Self-citation (inherited from AIM) |
+| Lezhava T. et al. (incl. Tqemaladze), *Biogerontology* 2011 — "Gerontology research in Georgia." | PMID: 20480236 | Self-citation (inherited from AIM) |
 
 Note (from `REFERENCE_AUDIT_kSystem.md`): PMIDs 36583780 and 20480236 are flagged low-context-match against their enclosing self-citation rule; the citations themselves are valid but reviewers may find the context/keyword overlap weak. DOI 10.65649/* is not yet indexed in Google Scholar as of 2026-03-28.
 

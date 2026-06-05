@@ -59,7 +59,7 @@
 | 2 | DOI | [10.1038/sdata.2018.308](https://doi.org/10.1038/sdata.2018.308) | ✅ OK | Babayan 2019 Scientific Data \| A mind-brain-body dataset of MRI, EEG, cognition, | CONCEPT.md:441 | ☐ | ☐ |
 | 3 | DOI | [10.1093/chemse/21.6.773](https://doi.org/10.1093/chemse/21.6.773) | ✅ OK | Turin 1996 Chemical Senses \| A Spectroscopic Mechanism for Primary Olfactory Rec | CONCEPT.md:440 | ☐ | ☐ |
 | 4 | PMID | [20480236](https://pubmed.ncbi.nlm.nih.gov/20480236/) | ✅ OK | Lezhava T 2011 Biogerontology \| Gerontology research in Georgia. | KNOWLEDGE.md:130; README.md:117 | ☐ | ☐ |
-| 5 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tkemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | KNOWLEDGE.md:129; README.md:116 | ☐ | ☐ |
+| 5 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tqemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | KNOWLEDGE.md:129; README.md:116 | ☐ | ☐ |
 
 ## CDATA  (73: ✅73  🚨0  ⚠️0)
 
@@ -120,7 +120,7 @@
 | 53 | PMID | [32755011](https://pubmed.ncbi.nlm.nih.gov/32755011/) | ✅ OK | Florian MC 2020 Aging Cell \| Inhibition of Cdc42 activity extends lifespan and d | CONCEPT.md:277; CONCEPT.md:292; CONCEPT.md:516 (+3) | ☐ | ☐ |
 | 54 | PMID | [34546229](https://pubmed.ncbi.nlm.nih.gov/34546229/) | ✅ OK | Fan F 2021 Analyst \| Synthesis and application of smart gel material modified si | CONCEPT.md:1146 | ☐ | ☐ |
 | 55 | PMID | [36581635](https://pubmed.ncbi.nlm.nih.gov/36581635/) | ✅ OK | Montserrat-Vazquez S 2022 NPJ Regen Med \| Transplanting rejuvenated blood stem c | CONCEPT.md:1301 | ☐ | ☐ |
-| 56 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tkemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | PARAMETERS.md:11; PARAMETERS.md:25 | ☐ | ☐ |
+| 56 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tqemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | PARAMETERS.md:11; PARAMETERS.md:25 | ☐ | ☐ |
 | 57 | PMID | [36708707](https://pubmed.ncbi.nlm.nih.gov/36708707/) | ✅ OK | Berendzen KM 2023 Neuron \| Oxytocin receptor is not required for social attachme | CONCEPT.md:1372 | ☐ | ☐ |
 | 58 | PMID | [37552892](https://pubmed.ncbi.nlm.nih.gov/37552892/) | ✅ OK | Yamashita YM 2023 Annu Rev Genet \| Asymmetric Stem Cell Division and Germline Im | CONCEPT.md:506; CONCEPT.md:594 | ☐ | ☐ |
 | 59 | PMID | [37882444](https://pubmed.ncbi.nlm.nih.gov/37882444/) | ✅ OK | Royall LN 2023 Elife \| Asymmetric inheritance of centrosomes maintains stem cell | EVIDENCE.md:30 | ☐ | ☐ |
@@ -309,11 +309,11 @@
 | 5 | DOI | [10.1142/S0219887821501279](https://doi.org/10.1142/S0219887821501279) | ✅ OK | Gassner 2021 International Journal of Geometric Methods in Modern Physics \| Info | EVIDENCE.md:32 | ☐ | ☐ |
 | 6 | DOI | [10.1162/089976601753195969](https://doi.org/10.1162/089976601753195969) | ✅ OK | Bialek 2001 Neural Computation \| Predictability, Complexity, and Learning | EVIDENCE.md:25 | ☐ | ☐ |
 | 7 | DOI | [10.22331/q-2021-04-26-443](https://doi.org/10.22331/q-2021-04-26-443) | ✅ OK | Woodhead 2021 Quantum \| Device-independent quantum key distribution with asymmet | EVIDENCE.md:34 | ☐ | ☐ |
-| 8 | PMID | [15886028](https://pubmed.ncbi.nlm.nih.gov/15886028/) | ✅ OK | Tkemaladze J 2005 Cell Biol Int \| Potential role of centrioles in determining th | EVIDENCE.md:60 | ☐ | ☐ |
+| 8 | PMID | [15886028](https://pubmed.ncbi.nlm.nih.gov/15886028/) | ✅ OK | Tqemaladze J 2005 Cell Biol Int \| Potential role of centrioles in determining th | EVIDENCE.md:60 | ☐ | ☐ |
 | 9 | PMID | [16060722](https://pubmed.ncbi.nlm.nih.gov/16060722/) | ✅ OK | Ioannidis JP 2005 PLoS Med \| Why most published research findings are false. | CONCEPT.md:25; README.md:21 | ☐ | ☐ |
 | 10 | PMID | [30982602](https://pubmed.ncbi.nlm.nih.gov/30982602/) | ✅ OK | Kucab JE 2019 Cell \| A Compendium of Mutational Signatures of Environmental Agen | EVIDENCE.md:50; EVIDENCE.md:50 | ☐ | ☐ |
-| 11 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tkemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | EVIDENCE.md:61 | ☐ | ☐ |
-| 12 | PMID | [38510429](https://pubmed.ncbi.nlm.nih.gov/38510429/) | ✅ OK | Tkemaladze J 2023 Front Pharmacol \| Editorial: Molecular mechanism of ageing and | EVIDENCE.md:53 | ☐ | ☐ |
+| 11 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tqemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | EVIDENCE.md:61 | ☐ | ☐ |
+| 12 | PMID | [38510429](https://pubmed.ncbi.nlm.nih.gov/38510429/) | ✅ OK | Tqemaladze J 2023 Front Pharmacol \| Editorial: Molecular mechanism of ageing and | EVIDENCE.md:53 | ☐ | ☐ |
 | 13 | arXiv | [1502.00214](https://arxiv.org/abs/1502.00214) | ✅ OK | arXiv:1502.00214 \| Information loss and entropy production during dissipative pr | THEORY.md:56 | ☐ | ☐ |
 
 ## Ze  (3: ✅3  🚨0  ⚠️0)
@@ -322,7 +322,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | DOI | [10.64898/2026.03.26.714124](https://doi.org/10.64898/2026.03.26.714124) | ✅ OK | Lore 2026  \| BrainYears: A functional EEG-based brain age clock enables interven | CONCEPT.md:310; CONCEPT.md:310; KNOWLEDGE.md:131 (+1) | ☐ | ☐ |
 | 2 | PMID | [27330520](https://pubmed.ncbi.nlm.nih.gov/27330520/) | ✅ OK | Koo TK 2016 J Chiropr Med \| A Guideline of Selecting and Reporting Intraclass Co | CONCEPT.md:254 | ☐ | ☐ |
-| 3 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tkemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | CONCEPT.md:657 | ☐ | ☐ |
+| 3 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tqemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | CONCEPT.md:657 | ☐ | ☐ |
 
 ---
 ## Что делать

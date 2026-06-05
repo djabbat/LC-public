@@ -148,13 +148,13 @@ integrative care, and aesthetic dentistry.
 
 ## Folders
 
-- `Recepturae/` — Medical protocols and formulations by Dr. Jaba Tkemaladze
+- `Recepturae/` — Medical protocols and formulations by Dr. Jaba Tqemaladze
 - `Tabulae/` — Nutrition and fasting program tables (PDF)
 - `Materials/` — Equipment catalogs, REGENESIS presentations, Abastumani territory docs
 
 ## Owner
 
-Dr. Jaba Tkemaladze — Integrative Medicine Physician, Tbilisi, Georgia
+Dr. Jaba Tqemaladze — Integrative Medicine Physician, Tbilisi, Georgia
 
 ```
 ### `CONCEPT.md` (41203 chars)
@@ -456,7 +456,7 @@ WLRAbastumani/
 | Аббревиатура | WLR Abastumani |
 | Статус | Концепция / поиск инвестора |
 | Язык документации | RU (основной), EN, GE |
-| Владелец концепции | Dr. Jaba Tkemaladze |
+| Владелец концепции | Dr. Jaba Tqemaladze |
 
 ## Локация
 
@@ -843,7 +843,7 @@ Running log of decisions, context, and key facts across sessions.
 
 | Resource | URL / ID |
 |----------|---------|
-| PMID 36583780 — Tkemaladze J. *Mol Biol Rep* 2023 (CDATA) | https://pubmed.ncbi.nlm.nih.gov/36583780/ |
+| PMID 36583780 — Tqemaladze J. *Mol Biol Rep* 2023 (CDATA) | https://pubmed.ncbi.nlm.nih.gov/36583780/ |
 | PMID 20480236 — Lezhava T. et al. *Biogerontology* 2011 | https://pubmed.ncbi.nlm.nih.gov/20480236/ |
 | Zenodo CDATA | https://doi.org/10.5281/zenodo.19174506 |
 

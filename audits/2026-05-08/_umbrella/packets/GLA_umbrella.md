@@ -53,7 +53,7 @@ Path: `/home/oem/Desktop/GLA`  Date: 2026-05-08
 - **Legal form:** ა(ა)იპ (non-entrepreneurial non-commercial legal person).
 - **ID:** 404506520.
 - **Registered address:** 47 I. Javakhishvili St., Tbilisi 0170 (NOT 72 King David St.).
-- **President/Chairman:** Jaba Tkemaladze, MD (Art. 4.10).
+- **President/Chairman:** Jaba Tqemaladze, MD (Art. 4.10).
 
 ## Language rule
 
@@ -104,7 +104,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 
 **Стартовано:** 2026-04-26
 **Издатель:** Georgia Longevity Alliance (рег. №404506520)
-**President:** Jaba Tkemaladze, MD
+**President:** Jaba Tqemaladze, MD
 **Co-publisher / Editorial Board contact:** Lifeboat Foundation (Eric Klien, admin@lifeboat.com)
 
 ## Рабочее название журнала
@@ -175,7 +175,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 | Legal address (charter) | ი. ჯავახიშვილის ქ. №47, თბილისი (Art. 1.5) |
 | Registered address (NAPR) | Same as charter — 47 I. Javakhishvili St., Tbilisi 0170 |
 | Contact email (charter) | djabbat@gmail.com (Art. 1.6) |
-| President / Chairman | ჯაბა ტყემალაძე (Jaba Tkemaladze, MD) (Art. 4.10; NAPR) |
+| President / Chairman | ჯაბა ტყემალაძე (Jaba Tqemaladze, MD) (Art. 4.10; NAPR) |
 | Board members (charter) | 5 founders listed in Art. 2 |
 | Charter in force | Original 2016 charter — no successful amendments (B18008130 terminated) |
 | Status | Registered, active (NAPR) |
@@ -192,7 +192,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 
 | Charter objective | Current manifestation (2026) |
 |---|---|
-| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CDATA, MCAOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Aqtivirebuli/Korkoti. |
+| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CDATA, MCAOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Activatus/Korkoti. |
 | **1.8.2** Engaging people in life-extension activities | Public outreach via longevity.ge; collaboration with sister NGO Sulkalmakhi for local workshops; open-access publishing. |
 | **1.8.3** Helping people with employment in line with their interests | Not yet operationalised as a standalone programme — to be developed in Pillar 2.4 (community & networking). |
 | **1.8.4** Searching and establishing contacts with other longevity organisations in Georgia and abroad | ILA node; co-PI links with Ulm, Curie, UPF, COSIC/KU Leuven, BioViva; EIC consortium building. |
@@ -228,7 +228,7 @@ The theory-and-evidence portfolio is organised into **three pillars** so that ev
 
 - **TF — Theoretical Foundation.** Core hypotheses and conceptual frameworks. Lead artefact: **Centriolar Damage Theory (CDATA)** + its umbrella **MCAOA** (Multi-Counter Architecture of Organismal Aging, submitted to eLife since 2026-04-30).
 - **ISE — In-Silico Experimentation.** Computational simulation, modelling, and theoretical validation. Lead artefacts: **Ze Theory** (predictive coding model), **CDATA Rust simulator**, **Ontogenesis simulator**, **HAP** computational pipeline.
-- **IR — In-Real (empirical) Research.** Wet-lab and field-data validation. Lead artefacts: **BioSense** (federated clinical learning), **FCLC** (consortium proposal, server-resident), **Aqtivirebuli-Korkoti** (heritage-anchored nutrition, PNAS 2026 anchor).
+- **IR — In-Real (empirical) Research.** Wet-lab and field-data validation. Lead artefacts: **BioSense** (federated clinical learning), **FCLC** (consortium proposal, server-resident), **Activatus-Korkoti** (heritage-anchored nutrition, PNAS 2026 anchor).
 
 Subprojects move along TF → ISE → IR as they mature. New theory enters at TF; only when ISE simulation supports it does it justify IR experimental investment.
 
@@ -369,7 +369,7 @@ Art. 1.9 permits auxiliary entrepreneurial activity provided:
 **Platform:** OJS 3.5.0.3
 **Crossref member:** 55174
 **Publisher:** Georgia Longevity Alliance (Reg. №404506520)
-**Editor-in-Chief:** Jaba Tkemaladze, MD
+**Editor-in-Chief:** Jaba Tqemaladze, MD
 **Started:** 2026-04-26 (publication setup)
 **Target:** DOAJ submission Q1 2027
 
@@ -471,7 +471,7 @@ Annals/
 - **Status:** ACTIVE
 - **Legal form:** Non-entrepreneurial (non-commercial) legal person — ა(ა)იპ
 - **Charter:** Original 2016, unamended
-- **President:** Jaba Tkemaladze, MD
+- **President:** Jaba Tqemaladze, MD
 - **Address:** 47 I. Javakhishvili St., Tbilisi 0170
 - **Website:** longevity.ge
 
@@ -503,17 +503,17 @@ Annals/
 
 #### Centriolar Damage Theory (CDATA)
 - **Status:** ACTIVE
-- **Lead:** Jaba Tkemaladze
+- **Lead:** Jaba Tqemaladze
 - **Description:** Core theoretical framework for centriolar involvement in aging
 
 #### MCAOA (Mitochondrial-Centriolar Organelle Axis)
 - **Status:** UNDER REVIEW
 - **Submission:** eLife (2026-04-30)
-- **Lead:** Jaba Tkemaladze
+- **Lead:** Jaba Tqemaladze
 
 #### FCLC (Focal Centriolar-Lysosomal Crosstalk)
 - **Status:** PENDING (consortium proposal)
-- **Lead:** Jaba Tkemaladze
+- **Lead:** Jaba Tqemaladze
 - **Server location:** jaba@server:/home/jaba/web/fclc/
 
 #### BioSense
@@ -532,7 +532,7 @@ Annals/
 - **Status:** ACTIVE
 - **Description:** Molecular pathway analysis
 
-#### Aqtivirebuli / Korkoti
+#### Activatus / Korkoti
 - **Status:** ACTIVE
 - **Description:** Local Georgian research initiatives
 
@@ -566,7 +566,7 @@ Annals/
   - Collaboration via written agreements only
   - GLA grants: GLA sole beneficiary
   - Sulkalmakhi may subcontract for public outreach (Art. 1.8.2)
-- **Personnel overlap:** Allowed (Jaba Tkemaladze may serve both)
+- **Personnel overlap:** Allowed (Jaba Tqemaladze may serve both)
 - **NOT GLA scope:** Local ecology, cultural workshops, municipal grants
 
 ---
@@ -618,7 +618,7 @@ Annals/
 ### Board of Directors
 - **Status:** ACTIVE (5 members, 7-year term)
 - **Members:** 5 founders (Art. 4.9)
-- **Chairman:** Jaba Tkemaladze
+- **Chairman:** Jaba Tqemaladze
 - **Quorum:** All 5 must attend (Art. 4.4)
 - **Next election due:** 2030-01-12 (or retroactive ratification at 2026 GA)
 
@@ -673,7 +673,7 @@ Annals/
 |---|---|---|---|
 | **Board size** | 5 members | Art. 4.1 | Fixed; cannot be changed without charter amendment (2/3 GA vote, Art. 6.2). |
 | **Board term** | 7 years | Art. 4.1 | Current term: 2016-01-12 → 2023-01-12 (first renewal missed — see governance roadmap). Next mandatory: 2030-01-12. |
-| **Chairman term** | 7 years | Art. 4.6 | Elected by > half of Board. Current: Jaba Tkemaladze (since 2016-01-12). |
+| **Chairman term** | 7 years | Art. 4.6 | Elected by > half of Board. Current: Jaba Tqemaladze (since 2016-01-12). |
 | **General Assembly quorum** | 1/3 of members | Art. 3.4 | Minimum attendees for valid decisions. |
 | **General Assembly cadence** | ≥ 1 per year | Art. 3.1 | Must convene at least annually. |
 | **Board meeting quorum** | All 5 members must attend | Art. 4.4 | Strict requirement — any meeting without full attendance is invalid. |
@@ -736,7 +736,7 @@ Annals/
 - [ ] **3.1** Bring DOAJ application docs to Q1-2027-ready state (Annals of Rejuvenation Science — e-ISSN 3088-439X; editorial policies, peer review workflow, copyright license must be finalised)
 - [ ] **3.2** Confirm 5th Editorial Board member for Annals (4/5 confirmed; gap blocks first issue publication)
 - [ ] **3.3** Publish Annals first issue by Q4 2026 (Art. 1.8.1 — advancement of rejuvenation science; milestone for EIC credibility)
-- [ ] **3.4** Archive all research subproject charters (CDATA, MCAOA, FCLC, BioSense, Ze, Aqtivirebuli) in GLA docs/ folder (current status: scattered across server; no central repository)
+- [ ] **3.4** Archive all research subproject charters (CDATA, MCAOA, FCLC, BioSense, Ze, Activatus) in GLA docs/ folder (current status: scattered across server; no central repository)
 
 ## Priority 4 — Institutional Documentation & Transparency
 
@@ -750,7 +750,7 @@ Annals/
 
 - [ ] **5.1** Develop non-grant revenue model (Art. 1.9 — consultancy, institutional memberships, conference fees; target ≥10% of budget by 2030)
 - [ ] **5.2** Recruit 2 backup Editorial Board members for Annals (risk: loss of one member delays journal; maintain pool of 5+)
-- [ ] **5.3** Draft emergency succession plan for Chairman (Art. 4.6 — 7-year term; if Jaba Tkemaladze resigns, Board must elect replacement; no interim provision)
+- [ ] **5.3** Draft emergency succession plan for Chairman (Art. 4.6 — 7-year term; if Jaba Tqemaladze resigns, Board must elect replacement; no interim provision)
 - [ ] **5.4** Register GLA in Georgian Tax Authority as non-commercial entity (Art. 1.4 — required for grant overhead exemption; status unknown)
 - [ ] **5.5** Conduct compliance audit of all past profit-distribution (Art. 1.9, 6.6 — zero-tolerance; review all transactions since 2016)
 
@@ -761,7 +761,7 @@ Annals/
 ### `TODO.md` (10984 chars)
 ```md
 # TODO.md — Georgia Longevity Alliance (GLA)
-**Period:** 2026-05-03 → 2026-08-01 | **Owner default:** Chairman (Jaba Tkemaladze) | **Status:** Active
+**Period:** 2026-05-03 → 2026-08-01 | **Owner default:** Chairman (Jaba Tqemaladze) | **Status:** Active
 
 ---
 
@@ -781,7 +781,7 @@ Annals/
 | # | Task | Deadline | Owner | Status |
 |---|---|---|---|---|
 | 2.1 | **EIC Pathfinder LoI — initial consortium list** — Draft list of confirmed co-PIs (Geiger/Ulm, Janke/Curie, Gonzalez Ballester/UPF, COSIC/Preneel/KU Leuven, Parrish/BioViva). Identify gaps (e.g., clinical partner, ethics lead). | 2026-05-14 | Chairman | PENDING |
-| 2.2 | **Aqtivirebuli/Korkoti project scoping** — Define scope document: objectives, timeline, budget estimate. Align with Art. 1.8.1 (rejuvenation). | 2026-05-16 | Chairman | PENDING |
+| 2.2 | **Activatus/Korkoti project scoping** — Define scope document: objectives, timeline, budget estimate. Align with Art. 1.8.1 (rejuvenation). | 2026-05-16 | Chairman | PENDING |
 | 2.3 | **Board meeting — Q1 2026 report** — Prepare Chairman's quarterly report (Art. 4.8). Convene Board (all 5 members required per Art. 4.4). Agenda: approve concept, set EIC prep team, address governance gap. | 2026-05-16 | Chairman | PENDING |
 | 2.4 | **SRNSFG follow-up call** — If no reply to email by 2026-05-07, call SRNSFG. Document outcome. | 2026-05-12 | Chairman | PENDING |
 
@@ -803,7 +803,7 @@ Annals/
 | # | Task | Deadline | Owner | Status |
 |---|---|---|---|---|
 | 4.1 | **EIC Pathfinder — co-PI LoI letters** — Send draft LoI templates to all confirmed co-PIs. Request signed letters by 2026-06-15. | 2026-05-28 | Chairman | PENDING |
-| 4.2 | **Aqtivirebuli/Korkoti — draft project plan** — Complete scope document. Present to Board for approval. | 2026-05-30 | Chairman | PENDING |
+| 4.2 | **Activatus/Korkoti — draft project plan** — Complete scope document. Present to Board for approval. | 2026-05-30 | Chairman | PENDING |
 | 4.3 | **General Assembly preparation — start** — Draft agenda: ratify Board (if 2023 election missed), approve 2025 annual report, adopt governance regularisation resolution. | 2026-05-30 | Chairman | PENDING |
 | 4.4 | **Annals — first issue content plan** — List articles, authors, deadlines. Coordinate with Editorial Board. | 2026-05-28 | Chairman | PENDING |
 
@@ -827,7 +827,7 @@ Annals/
 | 6.1 | **EIC Pathfinder — full proposal draft v1** — Complete first full draft of proposal text. Share with co-PIs for feedback. | 2026-06-11 | Chairman | PENDING |
 | 6.2 | **Annals — first issue manuscript collection** — Send call for papers to Editorial Board. Set submission deadline for 2026-08-01. | 2026-06-11 | Chairman | PENDING |
 | 6.3 | **General Assembly — set date** — Confirm date (target: 2026-09-30). Send notice to all members (Art. 3.6). | 2026-06-11 | Chairman | PENDING |
-| 6.4 | **Aqtivirebuli/Korkoti — budget estimate** — Prepare detailed budget. Identify potential funding sources (EIC? Impetus? private). | 2026-06-13 | Chairman | PENDING |
+| 6.4 | **Activatus/Korkoti — budget estimate** — Prepare detailed budget. Identify potential funding sources (EIC? Impetus? private). | 2026-06-13 | Chairman | PENDING |
 
 ---
 
@@ -860,7 +860,7 @@ Annals/
 | 9.1 | **EIC Pathfinder — budget finalisation** — Finalise budget (€4M ceiling). Ensure all co-PI costs included. | 2026-07-02 | Chairman | PENDING |
 | 9.2 | **General Assembly — agenda finalised** — Finalise agenda: ratification of Board, annual report, governance regularisation, strategy 2026-2031. | 2026-07-02 | Chairman | PENDING |
 | 9.3 | **Annals — first issue peer review** — If manuscripts received, assign reviewers. | 2026-07-02 | Chairman | PENDING |
-| 9.4 | **Aqtivirebuli/Korkoti — funding search** — Identify 3 potential funders (EIC Pathfinder? Impetus? private foundations). | 2026-07-04 | Chairman | PENDING |
+| 9.4 | **Activatus/Korkoti — funding search** — Identify 3 potential funders (EIC Pathfinder? Impetus? private foundations). | 2026-07-04 | Chairman | PENDING |
 
 ---
 
@@ -892,7 +892,7 @@ Annals/
 |---|---|---|---|---|
 | 12.1 | **EIC Pathfinder — submission preparation** — Final checks: budget, consortium agreement, ethics compliance. | 2026-07-23 | Chairman | PENDING |
 | 12.2 | **Board meeting — Q3 2026 report final** — Submit final quarterly report to Board. | 2026-07-25 | Chairman | PENDING |
-| 12.3 | **Aqtivirebuli/Korkoti — project proposal finalised** — Complete proposal for internal approval. | 2026-07-25 | Chairman | PENDING |
+| 12.3 | **Activatus/Korkoti — project proposal finalised** — Complete proposal for internal approval. | 2026-07-25 | Chairman | PENDING |
 | 12.4 | **Sister NGO MoU — finalise** — Review with Sulkalmakhi leadership. Sign if agreed. | 2026-07-23 | Chairman | PENDING |
 
 ---
@@ -925,7 +925,7 @@ Annals/
 
 ---
 
-*Owner default: Chairman (Jaba Tkemaladze). Delegation possible to Mariam Kipshidze or other staff as appropriate. All tasks subject to funding and Board approval.*
+*Owner default: Chairman (Jaba Tqemaladze). Delegation possible to Mariam Kipshidze or other staff as appropriate. All tasks subject to funding and Board approval.*
 ```
 ### `KNOWLEDGE.md` (9244 chars)
 ```md
@@ -951,7 +951,7 @@ Annals/
 | Status | Registered, active |
 | Legal address (charter) | 47 I. Javakhishvili St., Tbilisi 0170 (Art. 1.5) |
 | Contact email (charter) | djabbat@gmail.com (Art. 1.6) |
-| President / Chairman | Jaba Tkemaladze, MD (Art. 4.10) |
+| President / Chairman | Jaba Tqemaladze, MD (Art. 4.10) |
 | Board members | 5 founders (Art. 4.9) — see charter Art. 2 for full list |
 | Charter in force | Original 2016 charter — no successful amendments (B18008130 terminated) |
 
@@ -1020,7 +1020,7 @@ Annals/
 
 - **Profit-distribution ban:** Must be stated in grant agreements. Funders may require a clause that GLA will not distribute surplus.
 - **Asset alienation:** Art. 6.5 — allowed only if serves chartered objectives or charitable purposes.
-- **Conflict of interest:** Chairman (Tkemaladze) must disclose any links to commercial entities (Longevity Clinic, Inc.) in grant applications.
+- **Conflict of interest:** Chairman (Tqemaladze) must disclose any links to commercial entities (Longevity Clinic, Inc.) in grant applications.
 - **Sub-awards:** GLA can sub-award to sister NGO Sulkalmakhi for public engagement (Art. 1.8.2) but must maintain separate accounting.
 
 ---
@@ -1066,11 +1066,11 @@ Annals/
 | Ze Theory | Active | Internal |
 | Ontogenesis | Active | Internal |
 | HAP (Healthy Aging Pathway) | Active | Internal |
-| Aqtivirebuli / Korkoti | Active | Internal |
+| Activatus / Korkoti | Active | Internal |
 
 ### 4.2 Key publications by GLA leadership
 
-- Jaba Tkemaladze has **152 publications** (per Google Scholar, verified 2026-04). Do not enumerate here — refer to ORCID or Google Scholar for full list.
+- Jaba Tqemaladze has **152 publications** (per Google Scholar, verified 2026-04). Do not enumerate here — refer to ORCID or Google Scholar for full list.
 - **Relevant to GLA mission:** Publications on rejuvenation, aging biology, centriolar damage, mitochondrial aging.
 - **Note:** Some publications may be under “Longevity Clinic, Inc.” affiliation — ensure GLA is listed as affiliation in future submissions.
 
@@ -1108,7 +1108,7 @@ Annals/
 # GLA — Operational Memory Log
 
 **Project:** Georgia Longevity Alliance (კავშირი დღეგრძელობა, ID 404506520)
-**Maintainer:** Jaba Tkemaladze, MD (President)
+**Maintainer:** Jaba Tqemaladze, MD (President)
 **Last updated:** 2026-05-03
 
 ---
@@ -1130,7 +1130,7 @@ Annals/
 - **Eric Klien consented as 1st international Editorial Board member** — Annals of Rejuvenation Science. Source: `Annals/editorial/`.
 
 ### 2026-04-21
-- **NAPR full record dump captured** — `enreg.reestri.gov.ge` extract: ID 404506520, status registered, registration date 2016-01-12, address 47 I. Javakhishvili St., Tbilisi 0170, President Jaba Tkemaladze. Application history: B15240095 (completed), B18008130 (terminated). Source: `statute/NAPR_extract_2026-04-21.md`.
+- **NAPR full record dump captured** — `enreg.reestri.gov.ge` extract: ID 404506520, status registered, registration date 2016-01-12, address 47 I. Javakhishvili St., Tbilisi 0170, President Jaba Tqemaladze. Application history: B15240095 (completed), B18008130 (terminated). Source: `statute/NAPR_extract_2026-04-21.md`.
 
 ### 2026-04-11
 - **justice.gov.ge verification** — Entity existence confirmed. Source: `project_longevity_georgia_ngo.md`.
@@ -1154,7 +1154,7 @@ Annals/
 ## 2015
 
 ### 2015-12-16
-- **NAPR application B15240095 filed** — New entity registration for Georgia Longevity Alliance (კავშირი დღეგრძელობა). Submitted by founders: Jaba Tkemaladze, Irine Iamanidze, Megi Sajaia, Davit Gagua, Mamuka Tsitsvidze. Source: NAPR application record.
+- **NAPR application B15240095 filed** — New entity registration for Georgia Longevity Alliance (კავშირი დღეგრძელობა). Submitted by founders: Jaba Tqemaladze, Irine Iamanidze, Megi Sajaia, Davit Gagua, Mamuka Tsitsvidze. Source: NAPR application record.
 
 ---
 

@@ -36,7 +36,7 @@ MIT (code); CC‑BY 4.0 (fine‑tuned weights + training dataset on Zenodo).
 
 **Part of the CytogeneticTree Project**
 
-This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tkemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
+This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tqemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
 
 ## What This Subproject Does
 We provide automated, reproducible workflows to quantify key centriole biomarkers from microscopy images:
@@ -62,7 +62,7 @@ See `PARAMETERS.md` for technical specifications and `TODO.md` for current devel
 
 # StatisticalAnalysis
 
-This directory contains the statistical core for the **CytogeneticTree** project led by Dr. Jaba Tkemaladze.
+This directory contains the statistical core for the **CytogeneticTree** project led by Dr. Jaba Tqemaladze.
 
 ## Overview
 We develop and apply statistical models to analyze the retention of the maternal centriole during cellular differentiation. The goal is to quantify how centriole "age" correlates with cell fate, providing quantitative parameters to help reconstruct lineage trees.
@@ -84,7 +84,7 @@ For the overarching project concept, see the main [CytogeneticTree CONCEPT.md](.
 
 **Sub‑Subproject of CytogeneticTree | Algorithmic Lineage Reconstruction**
 
-This repository contains the core algorithms for the **GenealogyReconstruction** module, part of Dr. Jaba Tkemaladze's broader CytogeneticTree project. The goal is to computationally reconstruct the complete genealogical tree of cell differentiation, from zygote to terminal cells.
+This repository contains the core algorithms for the **GenealogyReconstruction** module, part of Dr. Jaba Tqemaladze's broader CytogeneticTree project. The goal is to computationally reconstruct the complete genealogical tree of cell differentiation, from zygote to terminal cells.
 
 ## How It Works
 The algorithm takes two key inputs:

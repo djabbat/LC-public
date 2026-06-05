@@ -16,7 +16,7 @@ use std::path::PathBuf;
     long_about = "Runs a discrete-time MCAOA simulation for a given tissue, writing per-step counter \
                    states and tissue load to CSV. Includes optional EDC (endocrine disrupting chemical) \
                    modulation for modelling environmental impacts on aging rates.\n\
-                   Reference: Tkemaladze J. (2026) DOI 10.5281/zenodo.20055806"
+                   Reference: Tqemaladze J. (2026) DOI 10.5281/zenodo.20055806"
 )]
 struct Cli {
     /// Tissue name: fibroblast | hsc | neuron | hepatocyte | beta_cell | cd8_t_memory

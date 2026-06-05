@@ -27,7 +27,7 @@
 
 6. **✓ Consortium / collaboration plan** — Перечислены партнёры: Insignia Health (лицензия PAM-13), Fraunhofer IGD (L1), TSU (валидация языка), University of Copenhagen (экономика здоровья). Роли указаны. Lead PI и Co-I обозначены как TBD — приемлемо на этой стадии.
 
-7. **✗ Reference reality + match** — Критическое нарушение. 3 из 5 ключевых ссылок (Tao et al. 2026, Blumenthal-Lee 2024, Tkemaladze 2026) имеют недействительные идентификаторы (DOI TBD). Ссылка Hibbard 2004 в одном месте указана с неверным PMID 15527447, что противоречит правилу. Реальные статьи существуют, но не верифицированы по идентификаторам.
+7. **✗ Reference reality + match** — Критическое нарушение. 3 из 5 ключевых ссылок (Tao et al. 2026, Blumenthal-Lee 2024, Tqemaladze 2026) имеют недействительные идентификаторы (DOI TBD). Ссылка Hibbard 2004 в одном месте указана с неверным PMID 15527447, что противоречит правилу. Реальные статьи существуют, но не верифицированы по идентификаторам.
 
 8. **✗ No fabrication markers** — В тексте обнаружены TBD/placeholder в недопустимых контекстах: σ = TBD, sensitivity analysis = TBD, placeholder OSF ID = XXXXX вместо конкретного идентификатора, [REF_NEEDED] в одном из вариантов. Следы коррекции PMID («исправлено с 15527447 на 15333167») — это маркер предыдущей ошибки.
 
@@ -46,16 +46,16 @@
 | 3 | Hibbard et al. (2009) PAM scoring & MCID | No identifier (proprietary manual) | Не проверяется | Сомнительно — MCID 5.4 может не подтверждаться | [REF_VERIFY] |
 | 4 | Tao et al. (2026) *Nature Medicine* – co-design RCT n=2069 | DOI TBD | Нет — DOI не существует | Утверждение «Level I confirmed» может быть не подтверждено публикацией | [REF_VERIFY] REJECT |
 | 5 | Blumenthal D., Lee J. (2024) *JAMA* – 4-zone HCI framework | DOI TBD | Нет | Нельзя верифицировать существование статьи | [REF_VERIFY] REJECT |
-| 6 | Tkemaladze J. (2026) *Longevity Horizon* – Patient as Project | DOI TBD | Нет | Пока нет публикации, ссылка недействительна | [REF_VERIFY] REJECT |
+| 6 | Tqemaladze J. (2026) *Longevity Horizon* – Patient as Project | DOI TBD | Нет | Пока нет публикации, ссылка недействительна | [REF_VERIFY] REJECT |
 | 7 | Hibbard 2004 (ошибочно указан PMID 15527447 в тексте) | PMID 15527447 (ошибочно) | Да, но неверно отнесена | Текст утверждает «SD range 9-11», а в PMID 15527447 — совсем другая статья (short-form) | Искажение [REF_VERIFY] |
-| 8 | Jaba (2022), Tkemaladze (2023) *Georgian Scientists* | Нет идентификатора | Не проверяется | Неизвестно | [REF_VERIFY] |
+| 8 | Jaba (2022), Tqemaladze (2023) *Georgian Scientists* | Нет идентификатора | Не проверяется | Неизвестно | [REF_VERIFY] |
 
 **Итого:** 3 невалидных ссылки (REJECT уровня) + 3 сомнительных [REF_VERIFY]. Условие 7 полностью провалено.
 
 ## Top 5 text-level fixes
 
 1. **THEORY.md: §8 — заменить все DOI TBD на реальные идентификаторы**  
-   Удалить ссылки Tao 2026, Blumenthal 2024, Tkemaladze 2026, если они не опубликованы. Заменить на существующие публикации с PMID/DOI или указать «in preparation».  
+   Удалить ссылки Tao 2026, Blumenthal 2024, Tqemaladze 2026, если они не опубликованы. Заменить на существующие публикации с PMID/DOI или указать «in preparation».  
    *Файл: THEORY.md, раздел 8*
 
 2. **THEORY.md / CONCEPT.md — унифицировать secondary outcomes**  
@@ -81,7 +81,7 @@
 
 Отправлен на **REVISE_MAJOR**.  
 Критические замечания:
-- Ссылки на неопубликованные статьи (Tao 2026, Blumenthal 2024, Tkemaladze 2026) недопустимы. Требуется замена на верифицируемые источники или удаление.
+- Ссылки на неопубликованные статьи (Tao 2026, Blumenthal 2024, Tqemaladze 2026) недопустимы. Требуется замена на верифицируемые источники или удаление.
 - Внутренние противоречия между THEORY.md и CONCEPT.md (secondary outcomes, α-уровень) необходимо устранить.
 - Placeholder-ы и следы коррекции (TBD, RR) должны быть заменены на конкретные данные.
 Deviation от правил EU Horizon Europe по проверке референций. Требуется полный рефакторинг ссылок.

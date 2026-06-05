@@ -34,7 +34,7 @@
    Список партнёров с ролями присутствует, хотя многие имена заменены на TBD. Формально выполнено.
 
 7. **Reference reality + match** — ✗  
-   **Автоматический REJECT.** Несколько ключевых ссылок имеют невалидные идентификаторы (DOI TBD): Tao et al. (2026), Blumenthal-Lee (2024), Tkemaladze (2026). Это прямое нарушение правила: «Невалидный идентификатор = автоматический REJECT компонента». Кроме того, ссылка на Hibbard et al. (2009) (proprietary manual) не имеет DOI/PMID — тоже нарушение. Реальные PMID (15333167, 15527447) верны и соответствуют тексту, но наличие невалидных ссылок делает пункт невыполненным.
+   **Автоматический REJECT.** Несколько ключевых ссылок имеют невалидные идентификаторы (DOI TBD): Tao et al. (2026), Blumenthal-Lee (2024), Tqemaladze (2026). Это прямое нарушение правила: «Невалидный идентификатор = автоматический REJECT компонента». Кроме того, ссылка на Hibbard et al. (2009) (proprietary manual) не имеет DOI/PMID — тоже нарушение. Реальные PMID (15333167, 15527447) верны и соответствуют тексту, но наличие невалидных ссылок делает пункт невыполненным.
 
 8. **No fabrication markers** — ✗  
    В разделах, где должны стоять конкретные данные, используются TBD и placeholder’ы, не разрешённые условием: в consortium (Name TBD), в ссылках (DOI TBD). Placeholder допустим только в pre-reg плане и risk matrix, но не в списке литературы и консорциуме. Нарушение.
@@ -59,7 +59,7 @@
 | 3 | Hibbard et al. (2009) PAM scoring & MCID, technical manual | Нет DOI/PMID (proprietary) | Нет — идентификатор отсутствует | Ссылка на технический manual без публичного идентификатора | НЕВАЛИДНАЯ |
 | 4 | Tao et al. (2026) Co-design of medical AI, *Nat. Med.* | DOI TBD | Нет | Pre-print, DOI не назначен | НЕВАЛИДНАЯ → REJECT |
 | 5 | Blumenthal D., Lee J. (2024) Four-zone HCI, *JAMA* | DOI TBD | Нет | Pre-print, DOI не назначен | НЕВАЛИДНАЯ → REJECT |
-| 6 | Tkemaladze J. (2026) Patient as a Project, *Longevity Horizon* | DOI TBD | Нет | Pre-print, DOI не назначен | НЕВАЛИДНАЯ → REJECT |
+| 6 | Tqemaladze J. (2026) Patient as a Project, *Longevity Horizon* | DOI TBD | Нет | Pre-print, DOI не назначен | НЕВАЛИДНАЯ → REJECT |
 | 7 | Hibbard et al. (2004) (ошибочный PMID 15527447) | Исправлено | — | Была ошибка, но исправлена | Учтено, не фатально |
 
 **Примечание:** ссылки на интернет-ресурсы (Mayo Clinic, MedlinePlus, WHO, API docs) не являются научными статьями и не проверялись по критерию DOI/PMID. Однако их присутствие не компенсирует невалидные ссылки на статьи.

@@ -22,7 +22,7 @@ st.set_page_config(
 T = {
     "EN": {
         "title":        "🧬 CDATA v3.0 — Centriolar Damage Accumulation Theory of Aging",
-        "subtitle":     "[📄 Read the article](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
+        "subtitle":     "[📄 Read the article](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
         "params":       "⚙️ Parameters",
         "preset":       "Preset",
         "bio_params":   "🔬 Biological parameters",
@@ -34,7 +34,7 @@ T = {
         "damage100":    "Damage @ age 100",
         "telomere100":  "Telomere @ age 100",
         "epi100":       "Epigenetic age @ 100",
-        "caption":      "CDATA v3.0 · Tkemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
+        "caption":      "CDATA v3.0 · Tqemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
         "lang":         "🌐 Language",
         "about_btn":    "ℹ️ About",
         "about_title":  "About CDATA v3.0",
@@ -61,7 +61,7 @@ T = {
 - ROS saturates at 2.2× baseline in deep old age (PMID: 35012345)
 - Epigenetic acceleration: multiplier 0.3 + 0.02 × age (PMID: 24138928)
 """,
-        "about_cite":   "**Cite:** Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Code: DOI 10.5281/zenodo.19174506",
+        "about_cite":   "**Cite:** Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Code: DOI 10.5281/zenodo.19174506",
         "about_limits": "**Model status (v3.0, 2026-03-29):** All Round-7 limitations resolved. 483 tests pass. Differentiated-cell telomere dynamics modelled (M1b). Frailty recalibrated. Circadian M3 validated vs Dijk 1999 cohort data.",
         # Parameter labels
         "alpha":        "α — damage per division",
@@ -101,7 +101,7 @@ T = {
     },
     "FR": {
         "title":        "🧬 CDATA v3.0 — Théorie de l'Accumulation des Dommages Centriolaires",
-        "subtitle":     "[📄 Lire l'article](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
+        "subtitle":     "[📄 Lire l'article](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
         "params":       "⚙️ Paramètres",
         "preset":       "Préréglage",
         "bio_params":   "🔬 Paramètres biologiques",
@@ -113,7 +113,7 @@ T = {
         "damage100":    "Dommages @ 100 ans",
         "telomere100":  "Télomère @ 100 ans",
         "epi100":       "Âge épigénétique @ 100",
-        "caption":      "CDATA v3.0 · Tkemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
+        "caption":      "CDATA v3.0 · Tqemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
         "lang":         "🌐 Langue",
         "about_btn":    "ℹ️ À propos",
         "about_title":  "À propos de CDATA v3.0",
@@ -128,7 +128,7 @@ T = {
 - La longueur des télomères des cellules souches est **maintenue** par la télomérase (PMID: 25678901)
 - ROS sature à 2,2× la valeur de référence en vieillesse avancée
 """,
-        "about_cite":   "**Citation:** Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Code: DOI 10.5281/zenodo.19174506",
+        "about_cite":   "**Citation:** Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Code: DOI 10.5281/zenodo.19174506",
         "about_limits": "**Statut modèle (v3.0):** Toutes les limitations Round-7 résolues. 483 tests OK. Télomères des cellules différenciées modélisés (M1b). Frailty recalibré.",
         "alpha":        "α — dommage par division",
         "pi0":          "π₀ — protection juvénile",
@@ -164,7 +164,7 @@ T = {
     },
     "ES": {
         "title":        "🧬 CDATA v3.0 — Teoría de Acumulación de Daño Centriolítico",
-        "subtitle":     "[📄 Leer el artículo](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
+        "subtitle":     "[📄 Leer el artículo](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
         "params":       "⚙️ Parámetros",
         "preset":       "Preset",
         "bio_params":   "🔬 Parámetros biológicos",
@@ -176,7 +176,7 @@ T = {
         "damage100":    "Daño @ 100 años",
         "telomere100":  "Telómero @ 100 años",
         "epi100":       "Edad epigenética @ 100",
-        "caption":      "CDATA v3.0 · Tkemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
+        "caption":      "CDATA v3.0 · Tqemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
         "lang":         "🌐 Idioma",
         "about_btn":    "ℹ️ Acerca de",
         "about_title":  "Acerca de CDATA v3.0",
@@ -191,7 +191,7 @@ T = {
 - La longitud de los telómeros de las células madre es **mantenida** por la telomerasa (PMID: 25678901)
 - ROS satura a 2,2× el nivel basal en la vejez avanzada
 """,
-        "about_cite":   "**Cita:** Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Código: DOI 10.5281/zenodo.19174506",
+        "about_cite":   "**Cita:** Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | Código: DOI 10.5281/zenodo.19174506",
         "about_limits": "**Estado del modelo (v3.0):** Todas las limitaciones Round-7 resueltas. 483 pruebas OK. Telómeros de células diferenciadas modelados (M1b). Fragilidad recalibrada.",
         "alpha":        "α — daño por división",
         "pi0":          "π₀ — protección juvenil",
@@ -227,7 +227,7 @@ T = {
     },
     "AR": {
         "title":        "🧬 CDATA v3.0 — نظرية تراكم الأضرار المركزية في الشيخوخة",
-        "subtitle":     "[📄 اقرأ المقالة](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
+        "subtitle":     "[📄 اقرأ المقالة](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
         "params":       "⚙️ المعاملات",
         "preset":       "الإعداد المسبق",
         "bio_params":   "🔬 المعاملات البيولوجية",
@@ -239,7 +239,7 @@ T = {
         "damage100":    "الضرر @ 100 سنة",
         "telomere100":  "التيلومير @ 100 سنة",
         "epi100":       "العمر الجيني @ 100",
-        "caption":      "CDATA v3.0 · Tkemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506",
+        "caption":      "CDATA v3.0 · Tqemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506",
         "lang":         "🌐 اللغة",
         "about_btn":    "ℹ️ حول البرنامج",
         "about_title":  "حول CDATA v3.0",
@@ -253,7 +253,7 @@ T = {
 **القيود البيولوجية الرئيسية:**
 - يتم **الحفاظ** على طول تيلومير الخلايا الجذعية بواسطة التيلوميراز (PMID: 25678901)
 """,
-        "about_cite":   "**الاستشهاد:** Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | الكود: DOI 10.5281/zenodo.19174506",
+        "about_cite":   "**الاستشهاد:** Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | الكود: DOI 10.5281/zenodo.19174506",
         "about_limits": "**حالة النموذج (v3.0):** تم حل جميع قيود الجولة 7. 483 اختبار ناجح. ديناميكيات التيلومير في الخلايا المتمايزة مُنمذجة.",
         "alpha":        "α — الضرر لكل انقسام",
         "pi0":          "π₀ — الحماية الشبابية",
@@ -289,7 +289,7 @@ T = {
     },
     "ZH": {
         "title":        "🧬 CDATA v3.0 — 中心粒损伤积累衰老理论模拟器",
-        "subtitle":     "[📄 阅读文章](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
+        "subtitle":     "[📄 阅读文章](https://pubmed.ncbi.nlm.nih.gov/36583780/) · Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780",
         "params":       "⚙️ 参数",
         "preset":       "预设方案",
         "bio_params":   "🔬 生物学参数",
@@ -301,7 +301,7 @@ T = {
         "damage100":    "100岁时损伤值",
         "telomere100":  "100岁时端粒长度",
         "epi100":       "100岁时表观遗传年龄",
-        "caption":      "CDATA v3.0 · Tkemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
+        "caption":      "CDATA v3.0 · Tqemaladze J. (2023) PMID 36583780 · DOI: 10.5281/zenodo.19174506 · EIC Pathfinder 2026",
         "lang":         "🌐 语言",
         "about_btn":    "ℹ️ 关于",
         "about_title":  "关于 CDATA v3.0",
@@ -316,7 +316,7 @@ T = {
 - 干细胞端粒长度由组成性端粒酶**维持**（PMID: 25678901）
 - ROS在深度老年时饱和至基线的2.2倍
 """,
-        "about_cite":   "**引用：** Tkemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | 代码：DOI 10.5281/zenodo.19174506",
+        "about_cite":   "**引用：** Tqemaladze J. *Mol Biol Rep* 2023 · PMID 36583780 | 代码：DOI 10.5281/zenodo.19174506",
         "about_limits": "**模型状态 (v3.0):** 所有Round-7限制已解决。483项测试通过。分化细胞端粒动力学已建模(M1b)。虚弱指数已重新校准。",
         "alpha":        "α — 每次分裂的损伤量",
         "pi0":          "π₀ — 青春保护因子",

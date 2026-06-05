@@ -42,7 +42,7 @@ Path: `/home/oem/Desktop/GLA/Annals`  Date: 2026-05-08
 
 **Стартовано:** 2026-04-26
 **Издатель:** Georgia Longevity Alliance (рег. №404506520)
-**President:** Jaba Tkemaladze, MD
+**President:** Jaba Tqemaladze, MD
 **Co-publisher / Editorial Board contact:** Lifeboat Foundation (Eric Klien, admin@lifeboat.com)
 
 ## Рабочее название журнала
@@ -103,7 +103,7 @@ Path: `/home/oem/Desktop/GLA/Annals`  Date: 2026-05-08
 **Platform:** OJS 3.5.0.3
 **Crossref member:** 55174
 **Publisher:** Georgia Longevity Alliance (Reg. №404506520)
-**Editor-in-Chief:** Jaba Tkemaladze, MD
+**Editor-in-Chief:** Jaba Tqemaladze, MD
 **Started:** 2026-04-26 (publication setup)
 **Target:** DOAJ submission Q1 2027
 

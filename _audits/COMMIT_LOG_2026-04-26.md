@@ -45,7 +45,7 @@ S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигене�
 
 ### HAP — stub state, требует rebuild
 
-10/10 EVIDENCE.md PMID были fabricated, заменены stub. Текущая версия — single citation (Tkemaladze 2026 Longevity Horizon, non-PubMed-indexed). Не fixable through corrections — требует full literature search + rebuild EVIDENCE.md from verified PubMed sources. Halt status сохраняется (per CommonHealth/CLAUDE.md 2026-04-21 audit).
+10/10 EVIDENCE.md PMID были fabricated, заменены stub. Текущая версия — single citation (Tqemaladze 2026 Longevity Horizon, non-PubMed-indexed). Не fixable through corrections — требует full literature search + rebuild EVIDENCE.md from verified PubMed sources. Halt status сохраняется (per CommonHealth/CLAUDE.md 2026-04-21 audit).
 
 ### Ontogenesis — 6/6 prior fabrications quarantined
 

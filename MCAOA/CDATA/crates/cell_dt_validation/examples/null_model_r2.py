@@ -18,7 +18,7 @@ Usage:
 Note: Currently uses synthetic data calibrated to CDATA parameters.
 Replace simulated_data() with real NHANES / cohort data for publication.
 
-Author: Tkemaladze / CDATA v4.1 — 2026-04-11
+Author: Tqemaladze / CDATA v4.1 — 2026-04-11
 Reference: CDATA/CONCEPT.md §Validation, AC-B1 fix
 """
 

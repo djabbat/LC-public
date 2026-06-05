@@ -110,7 +110,7 @@
 ## MCAOA framework context
 
 ARGUS operates within the **Multi-Counter Architecture of Organismal Aging (MCAOA)**
-framework (Tkemaladze J. 2026, DOI: 10.5281/zenodo.20055806). The centriolar
+framework (Tqemaladze J. 2026, DOI: 10.5281/zenodo.20055806). The centriolar
 **Counter #1** is one of the key limiters of stem cell replicative potential;
 ARGUS is the empirical validation tool for its predictions.
 

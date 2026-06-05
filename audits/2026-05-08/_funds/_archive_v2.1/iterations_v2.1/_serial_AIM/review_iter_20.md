@@ -35,14 +35,14 @@
    Явный раздел есть в THEORY.md и в CONCEPT.md. Перечислено 8+ ограничений. Без приукрашиваний.
 
 6. **Consortium / collaboration plan** — ✗ (неполный)
-   Список партнёров есть (Tkemaladze, Samanishvili, Insignia Health, Fraunhofer IGD, TSU, UCPH), но:
+   Список партнёров есть (Tqemaladze, Samanishvili, Insignia Health, Fraunhofer IGD, TSU, UCPH), но:
    - Lead PI указан как "Name TBD".
    - Роли Co-I и Data management — "TBD".
    - Letters of support — "pending" или "to be obtained".
    Это fabrication markers (см. п.8).
 
 7. **Reference reality + match** — ✗ (критическое нарушение)
-   **Множественные неразрешимые ссылки**: Hibbard 2009 (proprietary manual без DOI), Tao et al. 2026 (DOI TBD), Blumenthal-Lee 2024 (DOI TBD), Tkemaladze 2026 (DOI TBD), Tkemaladze 2023 (без идентификатора), Jaba 2022 (без идентификатора).  
+   **Множественные неразрешимые ссылки**: Hibbard 2009 (proprietary manual без DOI), Tao et al. 2026 (DOI TBD), Blumenthal-Lee 2024 (DOI TBD), Tqemaladze 2026 (DOI TBD), Tqemaladze 2023 (без идентификатора), Jaba 2022 (без идентификатора).  
    **Несоответствие тексту**: обоснование σ=10 ссылается на Hibbard 2005 (PMID 15527447), хотя должно опираться на Hibbard 2004 (PMID 15333167). Это искажение смысла.  
    **Непроверяемые проприетарные ссылки**: Hibbard 2009 manual.  
    См. таблицу Reference audit ниже.

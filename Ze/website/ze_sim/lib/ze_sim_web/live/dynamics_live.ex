@@ -29,7 +29,7 @@ defmodule ZeSimWeb.DynamicsLive do
             Physical reality emerges from statistics of causal event updates.
           </p>
           <p class="ze-main-ref">
-            Tkemaladze J. (2026) · <em>Longevity Horizon</em> ·
+            Tqemaladze J. (2026) · <em>Longevity Horizon</em> ·
             <a href="https://doi.org/10.65649/3hm9b025" target="_blank">DOI 10.65649/3hm9b025</a>
           </p>
         </div>
@@ -257,7 +257,7 @@ defmodule ZeSimWeb.DynamicsLive do
             <p><strong>Proof:</strong> τ(0)=N; τ(v)=√(N²−N_S²)=N√(1−v²). Therefore τ(v)/τ(0)=√(1−v²). □</p>
             <p><strong>Falsification condition:</strong> |τ(v)/τ(0) − √(1−v²)| > ε for any well-defined (N_T,N_S) in large-N limit.</p>
             <p><strong>Experimental result:</strong> 21 velocity values, N=10⁷, residuals < 10⁻⁵. Status: VERIFIED ✓</p>
-            <p><strong>Reference:</strong> Tkemaladze (2026) DOI 10.65649/1p3e3b94</p>
+            <p><strong>Reference:</strong> Tqemaladze (2026) DOI 10.65649/1p3e3b94</p>
           `
         },
         fp2: {
@@ -334,7 +334,7 @@ defmodule ZeSimWeb.DynamicsLive do
             access, or if the functional form deviates from √(1−P²).</p>
             <p><strong>Experimental apparatus (proposed):</strong> Double-slit with polarization-based which-path
             tagging, microcontroller feedback to tune P continuously from 0 to 1. Measure V(P) at 20 points.</p>
-            <p><strong>Existing setup:</strong> Described in Tkemaladze (2026) DOI 10.65649/pt1hx971.</p>
+            <p><strong>Existing setup:</strong> Described in Tqemaladze (2026) DOI 10.65649/pt1hx971.</p>
             <p><strong>Status:</strong> PROPOSED — near-term experimental work required (see EX-1, EX-5).</p>
           `
         },

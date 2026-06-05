@@ -22,7 +22,7 @@
 | 4 | **Risk matrix ≥5 rows** | ✓ | 6 строк с probability/impact/mitigation. Есть также дополнительная строка про недоступность линии — итого 7. |
 | 5 | **Limitations section** | ✓ | Отдельный раздел в CONCEPT.md (Фундаментальная нефальсифицируемость, проблема субъективного чувства, риск тавтологии). |
 | 6 | **Consortium / collaboration plan** | ✓ | Таблица с 5 партнёрами (TBD), ролями и статусом. Указано, что письма поддержки ожидаются. |
-| 7 | **All references PubMed/Crossref-verified or marked preprint** | ✗ | Верифицированы только 2 ссылки (Anderson & Adolphs, 2014 — PMID; Tkemaladze, 2026 — [PREPRINT]). Остальные ссылки (Mertens, Yanguas-Casas, Huang и др.) не имеют PubMed/Crossref-идентификаторов в списке литературы. Нет пометки [PREPRINT] для непроверенных. |
+| 7 | **All references PubMed/Crossref-verified or marked preprint** | ✗ | Верифицированы только 2 ссылки (Anderson & Adolphs, 2014 — PMID; Tqemaladze, 2026 — [PREPRINT]). Остальные ссылки (Mertens, Yanguas-Casas, Huang и др.) не имеют PubMed/Crossref-идентификаторов в списке литературы. Нет пометки [PREPRINT] для непроверенных. |
 | 8 | **No fabrication markers** | ✓ | Отсутствуют `[REF_NEEDED]`, `[PMID_REMOVED]` или другие маркеры фабрикации. |
 
 ## Top 5 text-level fixes

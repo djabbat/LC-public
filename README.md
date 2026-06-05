@@ -96,7 +96,7 @@ Imagine a 2036 in which any biology PhD anywhere on the planet — Tbilisi, Mani
 
 ### Personal note
 
-This stack exists because Koté Chichinadze (1944–2018) spent forty years arguing that centrioles were an under-explored axis of aging and didn't live to see the experiment that would have settled it. CDATA is the experiment. Everything else is the scaffolding I had to build because the experiment couldn't be done with the tools that existed. — Jaba Tkemaladze
+This stack exists because Koté Chichinadze (1944–2018) spent forty years arguing that centrioles were an under-explored axis of aging and didn't live to see the experiment that would have settled it. CDATA is the experiment. Everything else is the scaffolding I had to build because the experiment couldn't be done with the tools that existed. — Jaba Tqemaladze
 
 ## Positioning (industry context)
 
@@ -217,7 +217,7 @@ Details: `docs/EIC_PartB_2026/`.
 - **Code**: MIT (see [`LICENSE`](LICENSE)).
 - **Clinical data (Activated)**: NOT MIT — governed by a Data Use Agreement (DUA) per cohort. Public repo contains no raw patient data.
 - **Subproject carve-outs**: any subproject with a different licence ships its own `LICENSE` file at its root.
-- **Citation**: see [`CITATION.cff`](CITATION.cff) (machine-readable CFF 1.2.0). Human-readable form: Tkemaladze J., *LC: an integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease*, v5.6, 2026, ORCID 0000-0001-8651-7243.
+- **Citation**: see [`CITATION.cff`](CITATION.cff) (machine-readable CFF 1.2.0). Human-readable form: Tqemaladze J., *LC: an integrative ecosystem for biomarker-guided interventions in aging as Total Chronic Disease*, v5.6, 2026, ORCID 0000-0001-8651-7243.
 
 ## Governance & community
 
@@ -228,5 +228,5 @@ Details: `docs/EIC_PartB_2026/`.
 
 ## Contact
 
-Jaba Tkemaladze · jaba@longevity.ge · ORCID [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243)
+Jaba Tqemaladze · jaba@longevity.ge · ORCID [0000-0001-8651-7243](https://orcid.org/0000-0001-8651-7243)
 Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)

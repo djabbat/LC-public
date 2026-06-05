@@ -47,7 +47,7 @@ Path: `/home/oem/Desktop/LC/server`  Date: 2026-05-08
 name = "longevitycommon-server"
 version = "0.1.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze"]
+authors = ["Jaba Tqemaladze"]
 description = "LC REST API — longevity social network backend"
 
 [lib]

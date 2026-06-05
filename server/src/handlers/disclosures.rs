@@ -57,7 +57,7 @@ pub async fn get_v5_changes() -> Json<V5Disclosures> {
             "MCAOA submitted to Nature Aging (NATAGING-P13741) but NOT peer-reviewed at the time of this disclosure",
         ],
         headline_blockers: vec![
-            "Confirmatory validation: pending pre-registered N≥2000 cohort (UK Biobank wearable subset / All-of-Us / Aqtivirebuli pilot)",
+            "Confirmatory validation: pending pre-registered N≥2000 cohort (UK Biobank wearable subset / All-of-Us / Activatus pilot)",
             "EIC Pathfinder Challenges 2026: 0 signed EU LoIs as of 2026-04-21 (Geiger Ulm confirmed 2026-04-23 = 1; Janke Curie pending; Miguel Angel González Ballester UPF in active discussion)",
             "FCLC v14 malicious-secure migration: planned Q1 2027",
             "Nature Aging review of MCAOA: pending decision",

@@ -34,4 +34,4 @@
    Указаны lead PI (TBD), Co-Is (TBD), потенциальные партнёры (Insignia Health, Fraunhofer, TSU, Copenhagen) с ролями. Достаточно для предварительного плана.
 
 7. **Reference reality + match** — ✗  
-   **Critical:** из 6 цитируемых научных работ только 2 имеют валидные разрешаемые идентификаторы (Hibbard 2004 PMID 15333167, Hibbard 2005 PMID 15527447). Остальные 4 (Hibbard 2009, Tao et al. 2026, Blumenthal-Lee 2024, Tkemaladze 2026) имеют
+   **Critical:** из 6 цитируемых научных работ только 2 имеют валидные разрешаемые идентификаторы (Hibbard 2004 PMID 15333167, Hibbard 2005 PMID 15527447). Остальные 4 (Hibbard 2009, Tao et al. 2026, Blumenthal-Lee 2024, Tqemaladze 2026) имеют

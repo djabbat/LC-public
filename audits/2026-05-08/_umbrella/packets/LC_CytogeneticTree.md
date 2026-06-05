@@ -135,10 +135,10 @@ Path: `/home/oem/Desktop/LC/CytogeneticTree`  Date: 2026-05-08
 
 Applicable from master list in `~/CLAUDE.md` (≤15% of references). Most relevant for CytogeneticTree:
 
-- Tkemaladze 2023 *Mol Biol Rep* PMID 36583780 — CDATA foundation
-- Tkemaladze 2024 *Georgian Scientists* — centriole asymmetry review
-- Chichinadze & Tkemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
-- Tkemaladze & Chichinadze 2005 *Biochem (Moscow)* — centriolar differentiation mechanisms
+- Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 — CDATA foundation
+- Tqemaladze 2024 *Georgian Scientists* — centriole asymmetry review
+- Chichinadze & Tqemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
+- Tqemaladze & Chichinadze 2005 *Biochem (Moscow)* — centriolar differentiation mechanisms
 
 ```
 ### `README.md` (2668 chars)
@@ -198,7 +198,7 @@ CytogeneticTree/
 
 ## Contact
 
-- **PI:** Dr. Jaba Tkemaladze, MD — jaba@longevity.ge, ORCID 0000-0001-8651-7243
+- **PI:** Dr. Jaba Tqemaladze, MD — jaba@longevity.ge, ORCID 0000-0001-8651-7243
 - **Host:** Georgia Longevity Alliance / კავშირი დღეგრძელობა (NGO #404506520, founded 2016-01-12)
 - **Funding context:** Longevity Impetus Grants LOI 2026-04-25 (Phase A MVCT demonstration)
 - **Parent:** `~/Desktop/LC/`
@@ -210,7 +210,7 @@ CytogeneticTree/
 
 **Part of the CytogeneticTree Project**
 
-This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tkemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
+This repository contains the image analysis pipelines for the CytogeneticTree project, led by Dr. Jaba Tqemaladze. Our goal is to reconstruct a cell's genealogical tree by using the age of its centrioles as a persistent lineage tracer.
 
 ## What This Subproject Does
 We provide automated, reproducible workflows to quantify key centriole biomarkers from microscopy images:
@@ -1082,7 +1082,7 @@ Initial scaffolding:
 - Eliminates API latency + cloud dependency for decision loop
 
 ## U4. RLHF from expert annotations
-- Dr. Tkemaladze labels "good" vs "bad" decisions on replayed runs
+- Dr. Tqemaladze labels "good" vs "bad" decisions on replayed runs
 - Use DPO to refine the decision policy
 
 ## U5. Integration with CDATA
@@ -1220,7 +1220,7 @@ Initial scaffolding:
 
 ## A1. Prompt engineering
 - [ ] Draft `PROMPT.md` with policy sections (tree shape, age bias, focus, mitosis, phototoxicity, abort)
-- [ ] Peer-review PROMPT.md with Dr. Tkemaladze + one imaging specialist
+- [ ] Peer-review PROMPT.md with Dr. Tqemaladze + one imaging specialist
 - [ ] Define JSON command schema (machine-readable)
 - [ ] Safety / dry-run rules documented
 
@@ -1430,11 +1430,11 @@ Additional off-the-shelf infrastructure (software/vendor, no PMID):
 5. **Lineage-tree comparison:** Chan 2019 (PMID 31086336) + Kalhor 2018 (PMID 30093604) as benchmark; note they provide ~10 generations but **zero** aging information — CytogeneticTree fills that orthogonal axis.
 
 6. **Self-citation slots (CLAUDE.md ≤15% rule):**
-   - Tkemaladze 2023 *Mol Biol Rep* (PMID 36583780) — reduction/proliferation defects from old-centriole accumulation
-   - Tkemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CDATA
-   - Chichinadze & Tkemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
-   - Tkemaladze 2024 *Georgian Scientists* — cell center + oldest centrioles in stem cells
-   - Tkemaladze 2026 *Longevity Horizon* (DOI 10.65649/3zzek632) — First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in HSC (companion paper)
+   - Tqemaladze 2023 *Mol Biol Rep* (PMID 36583780) — reduction/proliferation defects from old-centriole accumulation
+   - Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CDATA
+   - Chichinadze & Tqemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
+   - Tqemaladze 2024 *Georgian Scientists* — cell center + oldest centrioles in stem cells
+   - Tqemaladze 2026 *Longevity Horizon* (DOI 10.65649/3zzek632) — First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in HSC (companion paper)
 
 ---
 
@@ -1547,7 +1547,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 - RITE core: Verzijlbergen 2010 PNAS (yeast) — PMID 20018668
 - Centriolin-RITE precedent: Royall 2023 *eLife* — PMID 37882444 (RITE in neural progenitors)
-- CDATA core: Tkemaladze 2023 *Mol Biol Rep* — PMID 36583780
+- CDATA core: Tqemaladze 2023 *Mol Biol Rep* — PMID 36583780
 - Asymmetric centriole inheritance: Yamashita 2007 *Science* — PMID 17255513
 - Lineage tracing foundation: Wang 2009 *Nature* — PMID 19829375 (neural progenitors)
 - Live-cell AI segmentation: Stringer 2021 *Nat Methods* (CellPose) — PMID 33318659
@@ -1558,7 +1558,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 ## Author / funder
 
-- **PI:** Dr. Jaba Tkemaladze, MD — jaba@longevity.ge
+- **PI:** Dr. Jaba Tqemaladze, MD — jaba@longevity.ge
 - **ORCID:** 0000-0002-3826-7982
 - **Google Scholar:** (pending link — see DrJaba.com)
 - **Host:** Georgia Longevity Alliance / კავშირი დღეგრძელობა (NGO #404506520, est. 2016-01-12)

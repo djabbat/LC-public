@@ -1,6 +1,6 @@
 # Ze Vectors Theory
 
-**Author:** Jaba Tkemaladze — Kutaisi International University, Georgia
+**Author:** Jaba Tqemaladze — Kutaisi International University, Georgia
 **Materials:** 42 articles in `Materials/` · **Digital Twin:** `website/index.html`
 **Status:** Active research (2024–2026) · 42 papers · 18 interactive modules
 
@@ -196,23 +196,7 @@ Full index: `Materials/INDEX.md`
 
 ---
 
-## Subproject: Poincaré
 
-`Poincare/` — research into Poincaré's works as a historical and mathematical precursor to Ze theory.
-
-**Focus:** "Intuition as Ze-Stream" — Poincaré's mathematical intuition reinterpreted through Ze dynamics.
-
-```
-Ze/Poincare/
-├── Articles/ 10 research articles (Ze-theory, arXiv-ready)
-├── Sources/ Poincaré primary texts and translations
-└── scripts/ Analysis scripts
-```
-
-**arXiv status:** 6 of 10 articles ready for submission.
-**Needed:** endorsement for math.DS, math.NT, math-ph, math.HO (account: *centriole*).
-
----
 
 ## Repository Structure
 
@@ -223,10 +207,7 @@ Ze/
 ├── Materials/
 │ ├── INDEX.md ← index of all 42 papers
 │ └── YYYYMMDD_Title/ ← each paper in its own folder (.docx)
-├── Poincare/ ← Poincaré subproject (Ze interpretation of Poincaré's intuition)
-│ ├── Articles/ ← 10 articles
-│ ├── Sources/
-│ └── scripts/
+
 └── website/
  ├── index.html ← Digital Twin (standalone, no server needed)
  ├── css/
@@ -273,4 +254,4 @@ See `Materials/20260225_Falsifiable Predictions` and the live dashboard in `webs
 
 ---
 
-*Ze Vectors Theory © 2024–2026 Jaba Tkemaladze. All rights reserved.*
+*Ze Vectors Theory © 2024–2026 Jaba Tqemaladze. All rights reserved.*

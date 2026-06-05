@@ -2,7 +2,7 @@
 
 **Теория гепатогенного происхождения эмоций**
 
-**Author:** Dr. Jaba Tkemaladze | **Status:** Accepted for publication (*Biological Reviews*, IF ~10)
+**Author:** Dr. Jaba Tqemaladze | **Status:** Accepted for publication (*Biological Reviews*, IF ~10)
 
 ## Core Claim
 

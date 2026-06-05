@@ -85,10 +85,10 @@
 
 | PMID | Author | Source | Notes |
 |------|--------|--------|-------|
-| **36583780** | Tkemaladze 2023 | *Mol Biol Rep* | CDATA Counter #1 conceptual parent |
+| **36583780** | Tqemaladze 2023 | *Mol Biol Rep* | CDATA Counter #1 conceptual parent |
 | **37882444** | Royall et al 2023 | *eLife* | Asymmetric centrosome inheritance, human NPCs |
-| **16336191** | Tkemaladze & Chichinadze 2005 | *Biochemistry (Mosc)* | Centriolar mechanisms differentiation |
-| **15886028** | Tkemaladze 2005 | *Cell Biol Int* | Morphogenetic status determination |
+| **16336191** | Tqemaladze & Chichinadze 2005 | *Biochemistry (Mosc)* | Centriolar mechanisms differentiation |
+| **15886028** | Tqemaladze 2005 | *Cell Biol Int* | Morphogenetic status determination |
 | **21407209** | Januschke et al 2011 | *Nat Commun* | Drosophila neuroblasts retain daughter |
 | **40243666** | Schaeffer et al 2025 | *J Cell Biol* | Microtubule + actomyosin centrosome positioning |
 

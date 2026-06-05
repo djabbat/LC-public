@@ -572,7 +572,7 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 - Real run на ecosystem: **335 entities imported** (88 dupes detected, 537 skipped)
 - Distribution by project scope (top hits):
   - LC_CDATA: 174, LC_MCOA: 70, LC_FCLC: 63, LC_BioSense: 50, Marketing_JabaEkimi: 36, PhD: 33
-  - GLA_Annals: 25, LC_Ontogenesis: 29, LC_Ze: 27, Iqalto_Aqtivirebuli: 15
+  - GLA_Annals: 25, LC_Ontogenesis: 29, LC_Ze: 27, Iqalto_Activatus: 15
 - AIM_FS теперь содержит **358 entities** (~90 % покрытия user's ecosystem facts)
 
 ### ✅ /fs/search interactive LiveView

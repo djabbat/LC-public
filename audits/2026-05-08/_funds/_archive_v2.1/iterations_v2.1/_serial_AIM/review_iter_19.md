@@ -30,14 +30,14 @@
    Есть в CONCEPT.md и THEORY.md, перечислено 8+ ограничений.
 
 6. **Consortium / collaboration plan:** ✓  
-   Указаны Lead PI (Dr. Tkemaladze), Co-I, партнёры (Insignia Health, Fraunhofer IGD, TSU, UCPH). Letters of support pending. Placeholder для Co-I (Name TBD) допустим в этом разделе.
+   Указаны Lead PI (Dr. Tqemaladze), Co-I, партнёры (Insignia Health, Fraunhofer IGD, TSU, UCPH). Letters of support pending. Placeholder для Co-I (Name TBD) допустим в этом разделе.
 
 7. **Reference reality + match:** ✗ **КРИТИЧЕСКОЕ НАРУШЕНИЕ**  
    Из 8 уникальных ссылок только 2 (PMID 15333167, 15527447) имеют реальные и проверяемые идентификаторы. Остальные 6:
    - Hibbard 2009 (Insignia technical manual) — без DOI/PMID
    - Tao et al. 2026 (Nat Med) — DOI TBD
    - Blumenthal & Lee 2024 (JAMA) — DOI TBD
-   - Tkemaladze 2026 (Longevity Horizon) — DOI TBD
+   - Tqemaladze 2026 (Longevity Horizon) — DOI TBD
    - Ссылки KNOWLEDGE.md на Mayo Clinic, NIH — это URL, не DOI/PMID  
    **Условие не выполнено. Автоматический REJECT.**
 
@@ -47,7 +47,7 @@
 9. **Internal consistency core docs:** ✗  
    - Две версии Sample size calculation в CONCEPT.md (одна с верным PMID, другая с неверным).  
    - Дублирование разделов Falsifiability и Pre-registration.  
-   - В одном месте Consortium указывает Dr. Tkemaladze, в другом — Name TBD.  
+   - В одном месте Consortium указывает Dr. Tqemaladze, в другом — Name TBD.  
    - Разные форматы risk matrix.  
    Несогласованность между core-файлами.
 
@@ -60,7 +60,7 @@
 | 3 | Hibbard et al. 2009, MCID & technical manual | Нет (proprietary) | Нет идентификатора | Да, но без проверяемого DOI/PMID | REF_VERIFY: нет ID |
 | 4 | Tao et al. 2026, co-design RCT (Nat Med) | DOI TBD | Нет (pre-print, не зарегистрирован) | Утверждается, что n=2069 RCT; DOI отсутствует | REJECT |
 | 5 | Blumenthal & Lee 2024, 4-zone HCI (JAMA) | DOI TBD | Нет | Утверждается как основа HCI; DOI отсутствует | REJECT |
-| 6 | Tkemaladze 2026, Patient as Project (Longevity Horizon) | DOI TBD | Нет | Используется как аксиоматическая рамка; DOI отсутствует | REJECT |
+| 6 | Tqemaladze 2026, Patient as Project (Longevity Horizon) | DOI TBD | Нет | Используется как аксиоматическая рамка; DOI отсутствует | REJECT |
 | 7 | Mayo Clinic Lab Reference Values | URL (mayoclinic.org) | Да, но не DOI/PMID | Соответствует | REF_VERIFY: URL не DOI |
 | 8 | NIH MedlinePlus lab tests | URL (medlineplus.gov) | Да, но не DOI/PMID | Соответствует | REF_VERIFY: URL не DOI |
 
@@ -73,7 +73,7 @@
    - Hibbard 2009 — получить официальный DOI (Insignia manual может иметь ISBN).  
    - Tao 2026 — указать arXiv ID или DOI если pre-print опубликован.  
    - Blumenthal-Lee 2024 — указать реальный DOI из JAMA.  
-   - Tkemaladze 2026 — зарегистрировать preprint с DOI.  
+   - Tqemaladze 2026 — зарегистрировать preprint с DOI.  
    - Для Mayo Clinic и NIH — можно оставить как URL, но добавить оговорку, что это не научные статьи.
 2. **Устранить дублирование** в CONCEPT.md — оставить один блок Falsifiability, один Pre-registration, один Sample size calculation.  
 3. **Согласовать Consortium** — убрать "Name TBD" и указать реальное имя Lead PI во всех местах.  

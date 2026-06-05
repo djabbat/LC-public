@@ -1,0 +1,19 @@
+{
+  "score": 65,
+  "verdict": "Adequate but incomplete",
+  "strengths": [
+    "Clear structure with defined sections",
+    "Explicit IRON RULE for memory before action",
+    "Specific project objectives (P0) with journal targets"
+  ],
+  "weaknesses": [
+    "One objective is empty (no description)",
+    "Lacks timeline or milestones",
+    "No success criteria or metrics for completion"
+  ],
+  "top_fixes": [
+    "Complete the empty P0 objective with a concrete task",
+    "Add a timeline or sequence for the objectives",
+    "Define measurable success criteria for each objective"
+  ]
+}

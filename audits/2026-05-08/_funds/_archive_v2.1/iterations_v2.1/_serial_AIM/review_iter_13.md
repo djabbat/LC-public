@@ -37,7 +37,7 @@
    **Автоматический REJECT компонента.**  
    - Ссылка Tao et al. (2026) *Nature Medicine* — DOI TBD. Невалидный идентификатор.  
    - Ссылка Blumenthal-Lee (2024) *JAMA* — DOI TBD.  
-   - Ссылка Tkemaladze (2026) *Longevity Horizon* — DOI TBD.  
+   - Ссылка Tqemaladze (2026) *Longevity Horizon* — DOI TBD.  
    - В одном месте Hibbard 2004 указан с PMID 15527447 (это статья 2005 года), что является несоответствием содержания.  
    Reference Integrity Score = 1.
 
@@ -62,7 +62,7 @@
 | 3 | Hibbard et al. (2009) PAM scoring & MCID | Нет DOI/PMID (proprietary manual) | Невозможно проверить | Утверждение о MCID 5.4 — общепринято, но ссылка неверифицируема | Принять условно |
 | 4 | Tao et al. (2026) Co-design, Nature Medicine | DOI TBD | Нет — несуществующий идентификатор | Утверждение "co-design > fine-tuning" не может быть проверено | **REJECT** (невалидный DOI) |
 | 5 | Blumenthal D., Lee J. (2024) 4-zone HCI, JAMA | DOI TBD | Нет | Невозможно проверить существование фреймворка | **REJECT** |
-| 6 | Tkemaladze J. (2026) Patient as a Project, Longevity Horizon | DOI TBD | Нет | Невозможно проверить трёхуровневую модель | **REJECT** |
+| 6 | Tqemaladze J. (2026) Patient as a Project, Longevity Horizon | DOI TBD | Нет | Невозможно проверить трёхуровневую модель | **REJECT** |
 | 7 | Mayo Clinic Laboratories Reference Values | URL (mayoclinic.org) | Да | Соответствует | OK |
 | 8 | NIH MedlinePlus | URL (medlineplus.gov) | Да | Соответствует | OK |
 
@@ -70,7 +70,7 @@
 
 1. **CONCEPT.md**: удалить дублированные разделы Falsifiability и Sample size calculation. Оставить единый согласованный блок с α = 0.05 (primary) + Bonferroni 0.025 (≤2 secondary). Убрать упоминание p < 0.001.
 
-2. **CONCEPT.md** и **THEORY.md**: заменить все DOI TBD на реальные идентификаторы. Для Tao et al. (2026) и Blumenthal-Lee (2024) — как минимум arXiv ID или preprint DOI. Если статьи не опубликованы — убрать ссылки или указать "submitted". Для Tkemaladze (2026) — указать DOI журнала.
+2. **CONCEPT.md** и **THEORY.md**: заменить все DOI TBD на реальные идентификаторы. Для Tao et al. (2026) и Blumenthal-Lee (2024) — как минимум arXiv ID или preprint DOI. Если статьи не опубликованы — убрать ссылки или указать "submitted". Для Tqemaladze (2026) — указать DOI журнала.
 
 3. **CONCEPT.md** (Sample size calculation): исправить PMID 15527447 для Hibbard 2004 на 15333167. Указать, что Hibbard 2004 — это PMID 15333167, а 15527447 — Hibbard 2005. Проверить все вхождения.
 

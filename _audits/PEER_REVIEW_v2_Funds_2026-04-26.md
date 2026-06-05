@@ -7,7 +7,7 @@
 Schmidt Sciences, NIH R01, Impetus Longevity)
 **Объект:** CommonHealth umbrella + 7 подпроектов
 (MCAOA, FCLC, Ze, CDATA, BioSense, Ontogenesis, HAP)
-**Принципалы:** PI Jaba Tkemaladze (independent researcher, Грузия);
+**Принципалы:** PI Jaba Tqemaladze (independent researcher, Грузия);
 host org — Georgia Longevity Alliance NGO, рег. №404506520
 **Источники:**
 - `/home/oem/Desktop/LC/CONCEPT.md` (v5.1)
@@ -38,7 +38,7 @@ capacity-building, sequencing strategy.
 | ARPA-H | REJECT | US-based PI обязателен; нет прототипа; TRL 1; нет milstone-driven плана. |
 | EIC Pathfinder Open 2027 | COND | Единственный фонд, где umbrella может быть адаптирован как WP0 "Coordination". Требует ≥3 EU MS partners + signed LoIs. Сейчас только cold-contact DFKI. Без LoIs — REJECT. |
 | Gates Foundation | REJECT | Longevity вне фокуса; нет LMIC partner; нет community engagement framework; Georgia upper-middle-income не закрывает критерий LMIC. |
-| Schmidt Sciences | REJECT | Платформа не демонстрирует AI/ML core; Tkemaladze не имеет strong publication record в AI; риск fabrications блокирует trust. |
+| Schmidt Sciences | REJECT | Платформа не демонстрирует AI/ML core; Tqemaladze не имеет strong publication record в AI; риск fabrications блокирует trust. |
 | NIH R01 | REJECT | US PI mandatory; нет preliminary data; нет NIH grant history у PI. |
 | Impetus Longevity | N/A | Umbrella не является testable intervention или biomarker validation. Не подходит по scope. |
 
@@ -140,7 +140,7 @@ capacity-building, sequencing strategy.
 Однако эти сильные стороны перевешиваются слабостями: нет консорциума, нет signed LoIs, PI не аффилирован с university, и fabrications в подпроектах уничтожают доверие к umbrella.
 
 ## MCAOA
-1. **Публикация в Nature Aging (перспектива)** — Tkemaladze подал Perspective, что показывает попытку диалога с мейнстримом. Для Impetus или Schmidt это могло бы быть сильным сигналом, если бы не fabrications.
+1. **Публикация в Nature Aging (перспектива)** — Tqemaladze подал Perspective, что показывает попытку диалога с мейнстримом. Для Impetus или Schmidt это могло бы быть сильным сигналом, если бы не fabrications.
 2. **Multi-Counter Architecture** — визуально простая метафора (multiple “clocks”). Потенциально может быть переосмыслена как AI ensemble model.
 3. **Наличие математической формулировки (w_i)** — хотя w_i — Placeholder, сама идея параметризации может быть развита.
 
@@ -234,21 +234,21 @@ capacity-building, sequencing strategy.
 ## HAP
 1. **10/10 PMID fabricated**. 
 2. **Evidence.md = stub** — нет содержания. 
-3. **Единственная цитата — self-citation Tkemaladze в Longevity Horizon (не индексированный)**. 
+3. **Единственная цитата — self-citation Tqemaladze в Longevity Horizon (не индексированный)**. 
 
 ### §3a. Risk register — ecosystem-wide post Wave 1
 
 | # | Риск | Вероятность | Влияние (impact) | Mitigation (существующее / планируемое) | Residual risk |
 |---|------|-------------|------------------|-----------------------------------------|---------------|
 | R1 | Massive citation fabrication: после Wave 1 коррекций остаются неверифицированные ссылки; Smith J. 2025 не подтверждён, Sun 2016 удалён, полный reverse-verification всех 24+ ссылок не проведён | Medium (высокая, т.к. fabrication была массовой и системной) | Critical — потеря доверия фонда, ретракция публикации, репутационный ущерб, невозможность подачи в тир-1 фонды | Частичная замена PMID в MCAOA, FCLC, CDATA, BioSense; НЕТ полного librarian-level аудита; НЕТ плана верификации оставшихся ссылок | High |
-| R2 | Single-PI dependency (Tkemaladze — единственный PI, bus factor = 1) | High (нет co-PI, нет заместителя, все архитектурные решения принимает один человек) | High — при недееспособности PI проект останавливается; ни один фонд не одобрит single-PI без succession plan | Нет co-PI; нет documented design decisions; документация в стадии формирования | High |
+| R2 | Single-PI dependency (Tqemaladze — единственный PI, bus factor = 1) | High (нет co-PI, нет заместителя, все архитектурные решения принимает один человек) | High — при недееспособности PI проект останавливается; ни один фонд не одобрит single-PI без succession plan | Нет co-PI; нет documented design decisions; документация в стадии формирования | High |
 | R3 | Геополитический риск Грузия: близость к RU, нестабильность, ограничение сотрудничества с EU партнёрами | Medium (текущая ситуация стабильна, но риски санкций, логистики, ограничения виз) | Medium — возможные задержки, сложности с привлечением EU partners, отказ страховых покрытий | Юридическая регистрация NGO в Грузии, но нет геополитического хеджирования (резервная юрисдикция) | Medium–High |
-| R4 | NGO host (Georgia Longevity Alliance) не имеет опыта управления грантами >€500K (заявка на €3M); нет CFO, нет грант-менеджера | High (отсутствие инфраструктуры, бухгалтерии, compliance) | Critical — фонды требуют auditable financial management; отсутствие грантового опыта = immediate rejection в EIC, Wellcome, Gates | Tkemaladze указывает опыт управления бюджетом кафедры ($200K/yr); нет hiring plan для CFO/grant manager | High |
+| R4 | NGO host (Georgia Longevity Alliance) не имеет опыта управления грантами >€500K (заявка на €3M); нет CFO, нет грант-менеджера | High (отсутствие инфраструктуры, бухгалтерии, compliance) | Critical — фонды требуют auditable financial management; отсутствие грантового опыта = immediate rejection в EIC, Wellcome, Gates | Tqemaladze указывает опыт управления бюджетом кафедры ($200K/yr); нет hiring plan для CFO/grant manager | High |
 | R5 | PhD pipeline: указан 1 PhD candidate (Lezhava) для capacity-building claim; недостаточно для масштаба заявки | High (для capacity-building нужна критическая масса студентов, минимум 3–4) | Medium — фонды (Wellcome, Gates) ожидают pipeline минимум 3–5 PhD; иначе claim выглядит натянутым | Планируется привлечение студентов Javakheti University (Akhaltsikhe), но нет подтверждённых commitments | Medium |
 | R6 | Theoretical incoherence: MCAOA M3 + CDATA Sobol + Ze Tsirelson — разрозненные модели без единой формальной теории | Medium (комбинация математически несовместима: M3 — детерминированная, CDATA — статистическая, Ze — квантовая) | High — рецензенты укажут на отсутствие концептуальной связности; снижение научной убедительности | Нет unified framework; ссылки на “deep learning meets quantum biology” не подкреплены публикациями | High |
 | R7 | Privacy/regulatory risk: FCLC ε=10 не соответствует ISO/IEC 27559; не проведён GDPR clearance для обработки данных из ЕС | Medium (заявка предполагает международные данные, ε=10 слишком слабый для медицинских данных) | Critical — нарушение GDPR/ISO блокирует использование в клинических исследованиях; европейские партнёры не смогут участвовать | ε снижен с 100 до 10, но формального аудита не было; нет DPA/DPO; нет data processing agreement | High |
 | R8 | Technology debt: FCLC stub PATE; w_i Placeholder (не обучены веса) | High (прототип не реализует ключевой модуль) | Medium — без работающего PATE система не обеспечивает privacy guarantee, демо нерепрезентативно | Обещано завершить к Q4 2026; но нет roadmap и выделенного инженера | Medium |
-| R9 | Reputational risk: Tkemaladze 149 публикаций, но ~10 в PubMed; высокий процент в нерецензируемых источниках | Medium (часть публикаций – тезисы, локальные журналы) | High — фонды проверяют publication track record; несоответствие заявленного объёма и индексируемого качества | Ссылки на PubMed постепенно добавляются; но legacy остаётся; необходима объяснительная записка | Medium |
+| R9 | Reputational risk: Tqemaladze 149 публикаций, но ~10 в PubMed; высокий процент в нерецензируемых источниках | Medium (часть публикаций – тезисы, локальные журналы) | High — фонды проверяют publication track record; несоответствие заявленного объёма и индексируемого качества | Ссылки на PubMed постепенно добавляются; но legacy остаётся; необходима объяснительная записка | Medium |
 | R10 | Open-source disclosure: репозитории (Rust simulator, React PWA, Phoenix) не содержат LICENSE файла → дефолтное copyright (все права защищены) | High (ни один репозиторий не имеет LICENSE) | Medium — противоречит требованию EIC “open-source publication”; блокирует коммерческое/академическое переиспользование; может быть воспринято как недобросовестность | Необходимо добавить LICENSE (GPL/MIT) во все репозитории; это не сделано | Medium |
 
 **Aggregate residual risk = HIGH** 
@@ -301,7 +301,7 @@ capacity-building, sequencing strategy.
 
 Однако в Ontogenesis остаётся ссылка «Smith J. 2025» — не верифицированный источник; по состоянию на 26.04.2026 такая публикация не обнаружена ни в PubMed, ни в arXiv, ни в репозиториях bioRxiv/medRxiv. Это означает, что раздел Ontogenesis по-прежнему содержит подозрение на fabrication. Для фондов это критично: если разумное сомнение остаётся хотя бы в одной цитате, весь проект получает ярлык «integrity risk».
 
-Компонент HAP остаётся в stub state: 10/10 fabrication по-прежнему не исправлены, единственная цитата (Tkemaladze в Longevity Horizon) не индексируется. HAP является одним из ключевых блоков системы (Hormonal Aging Profile). Невозможно рекомендовать проект с непроверяемой ссылочной базой в важном компоненте.
+Компонент HAP остаётся в stub state: 10/10 fabrication по-прежнему не исправлены, единственная цитата (Tqemaladze в Longevity Horizon) не индексируется. HAP является одним из ключевых блоков системы (Hormonal Aging Profile). Невозможно рекомендовать проект с непроверяемой ссылочной базой в важном компоненте.
 
 **Итог:** 
 - **Acceptable but flagged** — MCAOA, FCLC, CDATA, BioSense (коррекции проведены, но полный аудит не завершён). 
@@ -321,7 +321,7 @@ capacity-building, sequencing strategy.
 ## MCAOA (для Schmidt Sciences – условно)
 - ❌ **Полный рестарт теории** — заменить w_i на вычислимые параметры. 
 - ❌ **Pre-register 3 checkable predictions** (например, на основе epigenetic datasets). 
-- ✅ **Independent replication MCAOA без участия Tkemaladze**. 
+- ✅ **Independent replication MCAOA без участия Tqemaladze**. 
 - ❌ **Поиск external collaborator (UCSD/Stanford)** для со-PI позиции. 
 
 Но реалистично: MCAOA не готов к подаче ни в один фонд в 2026–2027.

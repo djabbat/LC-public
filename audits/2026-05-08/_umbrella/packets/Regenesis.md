@@ -141,7 +141,7 @@ Path: `/home/oem/Desktop/Regenesis`  Date: 2026-05-08
 ```md
 # Regenesis — Integrative Medicine Protocols
 
-**Author:** Dr. Jaba Tkemaladze
+**Author:** Dr. Jaba Tqemaladze
 **Brand:** Regenesis (luxury spa/clinic)
 **Partner:** WLRAbastumani clinic, SilkAesthetic brand
 **Status:** Active — protocols in clinical use
@@ -167,7 +167,7 @@ A luxury integrative medicine brand built on:
 | Protocollum Nutritionis | Complete nutrition protocol |
 | Diaeta Sana | Dietary correction (baseline healthy diet) |
 | Diaeta Recta | Dietary correction (therapeutic elimination) |
-| Triticum Activatum | Activated wheat (Tkemaladze method) |
+| Triticum Activatum | Activated wheat (Tqemaladze method) |
 | Cannabis Pasta | Topical/internal cannabis |
 | Syrupus Rosae | Cardioprotective |
 | Decoctum Urologicum | Urological |
@@ -916,7 +916,7 @@ Accumulated clinical and theoretical knowledge.
 
 ## Why Commercial Yeast Is Forbidden
 
-Tkemaladze Nutrition Protocol basis: commercial Saccharomyces cerevisiae (baker's, brewer's, thermophilic) colonizes the gut and persists. Unlike natural yeasts, thermophilic strains survive bread baking temperatures. Consequence: dysbiosis → intestinal permeability → systemic inflammation → autoimmune cascades.
+Tqemaladze Nutrition Protocol basis: commercial Saccharomyces cerevisiae (baker's, brewer's, thermophilic) colonizes the gut and persists. Unlike natural yeasts, thermophilic strains survive bread baking temperatures. Consequence: dysbiosis → intestinal permeability → systemic inflammation → autoimmune cascades.
 
 This is why the protocol:
 1. Forbids all commercial bread
@@ -927,7 +927,7 @@ This is why the protocol:
 
 ## Why Casein Is Forbidden
 
-Cow's milk casein (β-casein A1) → digests into β-casomorphin-7 → crosses intestinal barrier → molecular mimicry with self-proteins → antibody production → autoimmune reactions. Tkemaladze protocol eliminates all casein sources (milk, kefir, yogurt, cottage cheese, unsalted cheese).
+Cow's milk casein (β-casein A1) → digests into β-casomorphin-7 → crosses intestinal barrier → molecular mimicry with self-proteins → antibody production → autoimmune reactions. Tqemaladze protocol eliminates all casein sources (milk, kefir, yogurt, cottage cheese, unsalted cheese).
 
 ---
 
@@ -946,7 +946,7 @@ Connection to ZeAnastasis: this breathing protocol is a candidate for the Ze bio
 
 ## Stem Cell Theory (Regenesis Scientific Foundation)
 
-Based on Tkemaladze's centriole aging theory (CDATA):
+Based on Tqemaladze's centriole aging theory (CDATA):
 - Stem cells accumulate old centrioles with each division (asymmetric inheritance)
 - Old centrioles → impaired spindle function → asymmetric division defects
 - Net effect: stem cell pool ages → organ regeneration capacity declines
@@ -1074,7 +1074,7 @@ Version tracking: Protocollum_Nutritionis is v. 09.03.2026 (expanded).
 1. **Pine Cone Syrup** — only PINE (Pinus sylvestris) cones. Spruce cones are dangerous.
 2. **Nutrition protocol** — the forbidden list is comprehensive. Key logic: commercial yeast = dysbiosis; casein = autoimmune; cooked coffee = hepatotoxic; industrial bread = yeast + gluten combo.
 3. **108 Breaths** — done AFTER exercise, not before. Prevents cortisol spike, adrenal fatigue.
-4. **Activated wheat** (Triticum Activatum) — Tkemaladze's specific preparation method.
+4. **Activated wheat** (Triticum Activatum) — Tqemaladze's specific preparation method.
 
 ---
 

@@ -35,7 +35,7 @@
 
 7. **Reference reality + match**  
    ✗ — Две ссылки не имеют реального идентификатора:
-   - Tkemaladze J. "Ze EEG paper" [Manuscript under review, 2026] — нет DOI/PMID/arXiv.
+   - Tqemaladze J. "Ze EEG paper" [Manuscript under review, 2026] — нет DOI/PMID/arXiv.
    - PhysioNet EEG-MMI — указано только physionet.org, нет конкретного DOI.
    Остальные 5 проверенных ссылок реальны и соответствуют тексту.
 

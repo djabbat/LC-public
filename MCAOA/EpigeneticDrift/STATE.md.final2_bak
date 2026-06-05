@@ -1,0 +1,109 @@
+# EpigeneticDrift — State
+
+**Version:** 0.2.0  
+**Status:** 🟡 In Development  
+**Last Updated:** 2025-03-15  
+
+## Overview
+
+EpigeneticDrift is a research and development project aimed at building a robust computational pipeline to detect, quantify, and visualize epigenetic drift in human genomic data. Epigenetic drift refers to age-related changes in DNA methylation patterns that accumulate over time and can serve as biomarkers for biological aging, disease risk, and environmental exposures. The project will produce an open-source pipeline, a curated reference database of age-related epigenetic markers, and an interactive visualization dashboard. The ultimate goal is to publish a peer-reviewed paper describing the methodology and initial findings.
+
+## Current Status
+
+- **Phase 1 (Foundation) – In Progress**  
+  - Project kickoff meeting held (2025-03-01)  
+  - Initial repository structure created (2025-03-05)  
+  - CONCEPT.md draft completed (2025-03-10) – pending final review  
+- **Phase 2 (Core Development) – Not started**  
+- **Phase 3 (Validation & Publication) – Not started**  
+
+## Goals & Tasks
+
+All tasks are prioritized as **P0** (critical), **P1** (important), or **P2** (nice-to-have). Each task has a single owner and clear dependencies.
+
+### P0 – Foundation (Must complete before any other work)
+
+| Task ID | Description | Owner | Dependencies | Estimated Effort | Success Criteria |
+|---------|-------------|-------|--------------|------------------|-----------------|
+| T0.1 | Finalize CONCEPT.md with detailed objectives, deliverables, success criteria, and ethical considerations. | Project Manager | None | 2 days | Document approved by PI and stakeholders. |
+| T0.2 | Set up project repository structure (Git), including directories for code, data, docs, tests, and CI/CD configuration. | Lead Developer | None | 1 day | Repository operational, version control active, CI passes on push. |
+| T0.3 | Define coding standards, contribution guidelines, and issue templates. | Lead Developer | T0.2 | 0.5 day | Guidelines documented in CONTRIBUTING.md. |
+| T0.4 | Establish communication channels (Slack, weekly stand-ups, shared calendar). | Project Manager | None | 0.5 day | All team members invited and first stand-up scheduled. |
+
+### P1 – Core Development (After P0 complete)
+
+| Task ID | Description | Owner | Dependencies | Estimated Effort | Success Criteria |
+|---------|-------------|-------|--------------|------------------|-----------------|
+| T1.1 | Create a comprehensive TODO list covering algorithm development, database creation, and visualization. | Project Manager | T0.1 | 1 day | TODO.md approved by team. |
+| T1.2 | Implement core algorithm for methylation pattern comparison (e.g., beta-value difference, smoothing, statistical testing). | Lead Developer | T0.2, T1.1 | 4 weeks | Algorithm passes unit tests on synthetic data; documented in code and design doc. |
+| T1.3 | Develop data ingestion module to handle common methylation array formats (IDAT, CSV, BED). | Data Scientist | T0.2, T1.1 | 2 weeks | Module reads at least three public datasets without error. |
+| T1.4 | Write unit tests for core algorithm and data ingestion (coverage ≥80%). | Lead Developer | T1.2, T1.3 | 1 week | Tests pass in CI; coverage report generated. |
+| T1.5 | Set up continuous integration (GitHub Actions) for automated testing and linting. | Lead Developer | T0.2 | 1 day | CI runs on every PR; status badges in README. |
+
+### P2 – Validation & Publication (After P1 complete)
+
+| Task ID | Description | Owner | Dependencies | Estimated Effort | Success Criteria |
+|---------|-------------|-------|--------------|------------------|-----------------|
+| T2.1 | Build a reference database of age-related epigenetic markers (≥100 markers from literature and public repositories). | Data Scientist | T1.3 | 3 weeks | Database contains curated markers with metadata (gene, CpG, age association, PMID). |
+| T2.2 | Validate pipeline on at least three independent public datasets (e.g., GEO, TCGA). | Lead Developer | T1.4, T2.1 | 4 weeks | Results reproduce known age associations; false discovery rate <0.05. |
+| T2.3 | Develop interactive visualization dashboard for drift analysis (e.g., using Plotly/Dash or R Shiny). | Frontend Developer | T1.2, T2.1 | 3 weeks | Dashboard deployed, allows filtering by age, tissue, marker; reviewed by PI. |
+| T2.4 | Write manuscript describing methodology and initial findings. | Principal Investigator | T2.2, T2.3 | 6 weeks | Draft submitted to internal review; target journal identified. |
+| T2.5 | Prepare open-source release (documentation, examples, PyPI package). | Lead Developer | T2.2 | 2 weeks | Package installable via pip; README with quickstart; DOI assigned. |
+
+## Dependencies
+
+- **P0 tasks** have no external dependencies; they are the foundation.  
+- **P1 tasks** depend on completion of all P0 tasks (T0.1–T0.4).  
+- **P2 tasks** depend on completion of all P1 tasks (T1.1–T1.5).  
+- No circular dependencies exist.  
+- External dependencies: Public methylation datasets (GEO, TCGA) – access is free; no licensing issues.  
+
+## Risks & Mitigations
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|------------|--------|------------|
+| Algorithm fails to detect known drift signals | Medium | High | Use synthetic data with known ground truth; test on multiple datasets; consult domain experts. |
+| Data format incompatibility | Low | Medium | Build flexible ingestion module; support common formats; document required columns. |
+| Team member availability changes | Medium | Medium | Cross-train tasks; maintain documentation; have backup owners. |
+| Publication delay due to journal review | High | Low | Submit to preprint server (bioRxiv) immediately; target open-access journals. |
+| Dashboard performance with large datasets | Low | Medium | Implement data aggregation and caching; test with 1000+ samples. |
+
+## Milestones & Timeline
+
+| Milestone | Target Date | Deliverables | Exit Criteria |
+|-----------|-------------|--------------|---------------|
+| Phase 1 Complete | 2025-03-31 | CONCEPT.md finalized, repository operational, CI/CD running | All P0 tasks closed; team aligned on scope. |
+| Phase 2 Complete | 2025-05-15 | Core algorithm implemented, unit tests passing, TODO list approved | All P1 tasks closed; algorithm validated on synthetic data. |
+| Phase 3 Complete | 2025-07-31 | Reference database (≥100 markers), dashboard deployed, manuscript draft | All P2 tasks closed; manuscript submitted to journal. |
+
+## Resources
+
+- **Team**: Project Manager (1), Lead Developer (1), Data Scientist (1), Frontend Developer (1), Principal Investigator (1) – all part-time (20% effort).  
+- **Computing**: Cloud credits for testing (AWS/GCP) – $500 budget.  
+- **Data**: Public datasets from GEO (GSE series) and TCGA – free.  
+- **Tools**: Python, R, Git, GitHub Actions, Plotly/Dash, LaTeX.  
+
+## Communication
+
+- Weekly stand-up every Monday 10:00 AM (15 min).  
+- Slack channel #epigenetic-drift for daily updates.  
+- Monthly review with PI and stakeholders.  
+- All decisions documented in project wiki (GitHub Wiki).  
+
+## Next Steps (Immediate)
+
+1. **Finalize CONCEPT.md** – Project Manager to incorporate feedback from PI and publish final version (deadline: 2025-03-20).  
+2. **Set up repository** – Lead Developer to create directory structure, CI, and contribution guidelines (deadline: 2025-03-18).  
+3. **Schedule first stand-up** – Project Manager to send calendar invite (deadline: 2025-03-16).  
+
+## Key Performance Indicators (KPIs)
+
+- **Code coverage**: ≥80% by end of Phase 2.  
+- **Pipeline accuracy**: ≥90% on synthetic data, ≥80% on real data (age correlation).  
+- **Database size**: ≥100 curated markers by end of Phase 3.  
+- **Dashboard uptime**: ≥99% during review period.  
+- **Publication**: Manuscript submitted within 2 weeks of Phase 3 completion.  
+
+---
+
+*This STATE.md is a living document. Update after each milestone review.*

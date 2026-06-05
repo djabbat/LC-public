@@ -100,7 +100,7 @@
 
 ## ✅ v4.3 фиксы (2026-05-15, post TBPR cycle-11)
 
-- [x] **§8 Team** — PI-only (Jaba Tkemaladze). Убрана Parrish из команды ARGUS
+- [x] **§8 Team** — PI-only (Jaba Tqemaladze). Убрана Parrish из команды ARGUS
 - [x] **§9 Grant context** — новая секция: Parrish + Geiger как external commitments для Phase B (Aubrey), не для ARGUS
 - [x] **TBPR concern resolved** — «Co-PI mismatch»: в ARGUS больше нет внешних Co-PI
 - [x] **README.md** — синхронизирован с v4.3

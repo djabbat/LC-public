@@ -75,7 +75,7 @@
 
 
 **Project:** MCAOA (Multi-Counter Architecture of Organismal Aging)
-**Author:** Jaba Tkemaladze, MD | Georgia Longevity Alliance
+**Author:** Jaba Tqemaladze, MD | Georgia Longevity Alliance
 **Version:** 1.0
 **Date:** 2026-04-21
 **Status:** CONCEPT APPROVED — initial implementation in progress

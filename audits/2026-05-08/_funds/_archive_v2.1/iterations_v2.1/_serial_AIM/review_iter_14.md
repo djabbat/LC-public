@@ -35,13 +35,13 @@
    ✓ Явный раздел с 8 пунктами в CONCEPT.md (и дублирован в THEORY.md). Перечислены single-centre, self-report, digital literacy, Hawthorne effect, placebo effect, σ assumption, reference integrity и др.
 
 6. **Consortium / collaboration plan**  
-   ✓ Указаны Lead PI (Dr. Tkemaladze), Co-I (Dr. Samanishvili), потенциальные партнёры с ролями (Insignia Health, Fraunhofer IGD, TSU, University of Copenhagen). Имена некоторых исполнителей – placeholder («TBD»), что допустимо для pre-grant стадии.
+   ✓ Указаны Lead PI (Dr. Tqemaladze), Co-I (Dr. Samanishvili), потенциальные партнёры с ролями (Insignia Health, Fraunhofer IGD, TSU, University of Copenhagen). Имена некоторых исполнителей – placeholder («TBD»), что допустимо для pre-grant стадии.
 
 7. **Reference reality + match**  
    ✗ **Критическое нарушение.** Для следующих цитируемых работ отсутствует валидный DOI/PMID/arXiv ID, либо он указан как «TBD»:  
    – Tao et al. (2026) *Nature Medicine* [pre-print; DOI TBD]  
    – Blumenthal & Lee (2024) *JAMA* [pre-print; DOI TBD]  
-   – Tkemaladze (2026) *Longevity Horizon* [pre-print; DOI TBD]  
+   – Tqemaladze (2026) *Longevity Horizon* [pre-print; DOI TBD]  
    – Hibbard et al. (2009) Insignia Health technical manual (proprietary) – не научная статья, нет идентификатора.  
    Согласно правилам, отсутствие или невалидный идентификатор ведёт к автоматическому REJECT компонента.
 

@@ -221,7 +221,7 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 
 PhD by Published Works — coherent programme of 10 PubMed-indexed publications.
 
-**Candidate:** Jaba Tkemaladze, MD
+**Candidate:** Jaba Tqemaladze, MD
 **Topic:** Centriolar Damage Accumulation Theory of Aging (CDATA)
 **Language:** Georgian (Georgian programmes) or English (EU programmes)
 **Target defense:** Q1–Q2 2027
@@ -979,7 +979,7 @@ PhD/
 
 **PMID покрытие (критично — только эти считаются):**
 - PMID 36583780 (*Mol Biol Reports* 2023) — центральная
-- PMID 20480236 (*Biogerontology* 2011, multi-author Tbilisi gerontology review incl. Tkemaladze)
+- PMID 20480236 (*Biogerontology* 2011, multi-author Tbilisi gerontology review incl. Tqemaladze)
 - + 8 других PubMed-индексированных
 
 **НЕ ССЫЛАТЬСЯ в диссертации:** Longevity Horizon (10.65649/*) — журнал не индексирован PubMed/Scholar.
@@ -999,7 +999,7 @@ PhD/
 
 | Роль | Имя | Контакт |
 |------|-----|---------|
-| Кандидат | Jaba Tkemaladze, MD | jaba@longevity.ge |
+| Кандидат | Jaba Tqemaladze, MD | jaba@longevity.ge |
 | Научный руководитель | TBD (по правилу 2026-05-04 не записываем имена потенциальных) | — |
 | Посвящение | Kote Chichinadze (in memoriam, 2005–2013 соавтор) | — |
 
@@ -1587,7 +1587,7 @@ E0 — отдельный submodule, ведётся самостоятельно
 - Bettencourt-Dias M. & Glover D.M. (2007). *Centrosome biogenesis*. Nat Rev Mol Cell Biol.
 - Bornens M. (2012). *The centrosome in cells and organisms*. Science.
 
-**Tkemaladze/Chichinadze вклад:** centriolar inheritance as driver of cell fate (2005, *Cell Biol Int*; 2005, *Biochemistry Moscow*).
+**Tqemaladze/Chichinadze вклад:** centriolar inheritance as driver of cell fate (2005, *Cell Biol Int*; 2005, *Biochemistry Moscow*).
 
 ## 3. Stem cell asymmetric inheritance
 
@@ -1596,7 +1596,7 @@ E0 — отдельный submodule, ведётся самостоятельно
 - Yamashita Y.M. et al. (2007). Drosophila germline SC — mother centriole retained. *Science*. PMID 17255513 [verified 2026-04-26].
 - Wang X. et al. (2009). **Mammalian (mouse) neocortex — radial glial cells**, NOT Drosophila — старая центриоль → удерживается в СК. *Nature*. PMID 19829375 [verified 2026-04-26]. **Внимание:** в более ранних версиях глав диссертации Wang 2009 неоднократно ошибочно описывался как Drosophila — исправлено 2026-04-26 в 02_introduction_ka.md, 05_ka.md, 07_ka.md, DISSERTATION_MASTER_ka.md. См. PMID_CORRECTIONS_2026-04-26.md.
 - Conduit P.T. et al. (2015). *Centrosome function and assembly*. Nat Rev.
-- **Preprint 2026 (НЕ peer-reviewed, НЕ для диссертации primary citation):** Tkemaladze J. *First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in Murine Hematopoietic Stem Cells* — DOI 10.65649/3zzek632 (Longevity Horizon, non-indexed). Использовать только в вспомогательных материалах или после перепода в PubMed-indexed журнал. Основной CDATA evidence — 10 PubMed publications из §1.
+- **Preprint 2026 (НЕ peer-reviewed, НЕ для диссертации primary citation):** Tqemaladze J. *First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in Murine Hematopoietic Stem Cells* — DOI 10.65649/3zzek632 (Longevity Horizon, non-indexed). Использовать только в вспомогательных материалах или после перепода в PubMed-indexed журнал. Основной CDATA evidence — 10 PubMed publications из §1.
 
 ## 4. Modern CDATA-relevant literature
 
@@ -1611,7 +1611,7 @@ E0 — отдельный submodule, ведётся самостоятельно
 
 ## 5. MCAOA
 
-**Multi-Counter Architecture of Organismal Aging** (Tkemaladze 2026). Подана в Nature Aging 2026-04-19 (NATAGING-P13741). Формализует 5 параллельных счётчиков повреждений:
+**Multi-Counter Architecture of Organismal Aging** (Tqemaladze 2026). Подана в Nature Aging 2026-04-19 (NATAGING-P13741). Формализует 5 параллельных счётчиков повреждений:
 
 1. Genomic mutations (CNV + SNV drift)
 2. **Centriolar damage (CDATA)** — Counter #2 ← вклад диссертации
@@ -1638,7 +1638,7 @@ E0 — отдельный submodule, ведётся самостоятельно
 
 **Kote Chichinadze** (покойный, см. memory `fact_chichinadze_deceased`):
 - Соавтор **6 из 10** PubMed работ диссертации
-- Разработчик центросомной гипотезы (2005, совместно с Tkemaladze)
+- Разработчик центросомной гипотезы (2005, совместно с Tqemaladze)
 - Ключевые работы: *Biochemistry (Moscow)* 2005; *Advances in Gerontology* 2008, 2012; *Protoplasma* 2013; *Nucleosides Nucleotides NA* 2012.
 
 **Правило для диссертации:**
@@ -1793,7 +1793,7 @@ MCAOA подана в Nature Aging (NATAGING-P13741) — desk-reject 2026-04-28 
 - `feedback_no_supervisor_names` — никаких имён в файлах проекта
 - `feedback_appeal_to_pubmed_only` — в академической переписке упоминать только ~10 PubMed-indexed работ, не общие 154
 - `feedback_tsu_correspondence_language` — TSU emails только на грузинском/английском, **не на русском**
-- `feedback_passport_name_tqemaladze` — паспорт `Jaba Tqemaladze` (Q), публикации `Tkemaladze` (K); ORCID связывает обе формы; passport № 18AD77307
+- `feedback_passport_name_tqemaladze` — паспорт `Jaba Tqemaladze` (Q), публикации `Tqemaladze` (K); ORCID связывает обе формы; passport № 18AD77307
 - `pubmed_authoritative` — единственный авторитетный список 10 работ
 - `feedback_verify_references` — все ссылки в KNOWLEDGE.md/диссертации верифицированы через PubMed/Crossref
 - `feedback_deepseek_no_citations` — DeepSeek галлюцинирует DOI/PMID; не использовать для lit-search; всегда верифицировать
@@ -1856,15 +1856,15 @@ Before starting any substantive work on этом проекте — прочит
 
 | # | Работа | URL |
 |---|--------|-----|
-| 1 | Tkemaladze & Chichinadze 2005 *Cell Biology International* | (не indexed в PubMed; есть в Web of Science) |
-| 2 | Tkemaladze & Chichinadze 2005 *Biochemistry (Moscow)* | https://pubmed.ncbi.nlm.nih.gov/?term=Tkemaladze+Chichinadze |
-| 3 | Chichinadze & Tkemaladze 2008 *Adv Gerontol* | https://pubmed.ncbi.nlm.nih.gov/?term=Chichinadze+Tkemaladze+2008 |
-| 4 | Tkemaladze & Chichinadze 2010 *Rejuv Res* | https://pubmed.ncbi.nlm.nih.gov/?term=Tkemaladze+Chichinadze+2010 |
+| 1 | Tqemaladze & Chichinadze 2005 *Cell Biology International* | (не indexed в PubMed; есть в Web of Science) |
+| 2 | Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* | https://pubmed.ncbi.nlm.nih.gov/?term=Tqemaladze+Chichinadze |
+| 3 | Chichinadze & Tqemaladze 2008 *Adv Gerontol* | https://pubmed.ncbi.nlm.nih.gov/?term=Chichinadze+Tqemaladze+2008 |
+| 4 | Tqemaladze & Chichinadze 2010 *Rejuv Res* | https://pubmed.ncbi.nlm.nih.gov/?term=Tqemaladze+Chichinadze+2010 |
 | 5 | PMID **20480236** | https://pubmed.ncbi.nlm.nih.gov/20480236/ |
 | 6 | Chichinadze et al. 2012 *Adv Gerontol* | https://pubmed.ncbi.nlm.nih.gov/?term=Chichinadze+2012 |
 | 7+ | (см. `pubmed_authoritative.md` для полного списка) | |
 
-**ORCID:** https://orcid.org/0000-0001-8651-7243 (связывает обе формы паспорта/публикаций — `Tkemaladze` / `Tqemaladze`).
+**ORCID:** https://orcid.org/0000-0001-8651-7243 (связывает обе формы паспорта/публикаций — `Tqemaladze` / `Tqemaladze`).
 
 ## Базы и стандарты
 

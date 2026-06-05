@@ -1,0 +1,19 @@
+# EpigeneticDrift — TODO
+=====================================
+
+## Goals & Tasks
+----------------
+- **Primary Goal**: Develop a robust platform for storing, analyzing, and visualizing epigenetic drift data to support aging research.
+- **Key Objectives**:
+  - Design and implement a scalable database schema for epigenetic data (DNA methylation, histone modifications, etc.).
+  - Build an interactive user interface for researchers to query and visualize epigenetic patterns.
+  - Establish a continuous integration pipeline with automated testing and deployment.
+  - Publish findings in a peer-reviewed journal and present at an international conference.
+  - Prepare a commercial version of the platform for broader adoption.
+
+## Prioritized Tasks (Current and Next Phase Timeline)
+------------------------------------------
+
+### 🔴 P0 — Critical
+- [ ] Develop prototype database for storing epigenetic data after completion of prerequisite tasks
+-

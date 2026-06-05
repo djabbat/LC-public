@@ -172,7 +172,7 @@ Path: `/home/oem/Desktop/LC/MCAOA`  Date: 2026-05-08
 *   **Формула Health Score удалена.** Веса 0.40·organism + 0.25·psyche... не имели математического обоснования из MCAOA. Вместо неё используется прямая тканевая нагрузка `L_tissue`.
 *   **χ_Ze — теоретический конструкт, а не валидированный биомаркер.** Утверждение "χ_Ze predicts biological age with R²=0.84" отозвано, так как было основано на синтетических данных.
 *   **Связь γ_i и MCAOA Test 2.** Параметр связи `γ_i` по умолчанию равен 0. MCAOA Test 2 — это будущий протокол для *измерения* связей между уже работающими счётчиками, а не источник *априорных* значений `γ_i`.
-*   **Структура EIC Pathfinder.** В текущей заявке (Variant B) MCAOA является WP1 (€0.3M, M1-M12). Подпроекты Ze, BioSense и Aqtivirebuli не включены в качестве отдельных рабочих пакетов.
+*   **Структура EIC Pathfinder.** В текущей заявке (Variant B) MCAOA является WP1 (€0.3M, M1-M12). Подпроекты Ze, BioSense и Activatus не включены в качестве отдельных рабочих пакетов.
 
 **Статус:** Концепция утверждена. Идёт подготовка рукописи для *Nature Aging* (дедлайн 2026-04-25) и разработка эталонной реализации на Rust.
 ```
@@ -238,7 +238,7 @@ This is the backend service for the MCAOA (Multi-Counter Architecture of Organis
 
 
 **Project:** MCAOA (Multi-Counter Architecture of Organismal Aging)
-**Author:** Jaba Tkemaladze, MD | Georgia Longevity Alliance
+**Author:** Jaba Tqemaladze, MD | Georgia Longevity Alliance
 **Version:** 1.0
 **Date:** 2026-04-21
 **Status:** CONCEPT APPROVED — initial implementation in progress
@@ -896,7 +896,7 @@ members = [
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["Jaba Tkemaladze <jaba@longevity.ge>"]
+authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
 license = "MIT"
 repository = "https://github.com/djabbat/LC"
 
@@ -1309,7 +1309,7 @@ pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
 //!   M3 — a-priori tissue weighting
 //!   M4 — falsifiability first-class
 //!
-//! Reference: Tkemaladze (2026) "The Multi-Counter Architecture of Organismal Aging",
+//! Reference: Tqemaladze (2026) "The Multi-Counter Architecture of Organismal Aging",
 //! Nature Aging Perspective submission, 2026-04-25.
 
 use serde::{Deserialize, Serialize};

@@ -77,7 +77,7 @@ Path: `/home/oem/Desktop/Marketing/JabaEkimi`  Date: 2026-05-08
 
 ## Позиционирование
 
-- **Кто говорит:** Jaba Tkemaladze, MD, CEO Georgia Longevity Alliance, longevity-исследователь.
+- **Кто говорит:** Jaba Tqemaladze, MD, CEO Georgia Longevity Alliance, longevity-исследователь.
 - **О чём:** доказательная longevity-медицина, центриоли & differentiation, биомаркеры старения, протоколы для пациентов клиники.
 - **Тон:** экспертный, без хайпа, с цитированием первоисточников; региональная (Грузия/post-Soviet) + международная аудитория.
 - **Языки:** грузинский (основной), русский (вторичный), английский (для мировой longevity-аудитории — отдельный трек).

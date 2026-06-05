@@ -35,7 +35,7 @@
    Список партнёров с ролями и статусом «To be confirmed». Для ERC AdG/Wellcome требуется минимум 2 подтверждённых письма поддержки. Здесь все TBD. Пока засчитываем как план, но директивно: до подачи необходимо **реальное подтверждение** хотя бы 2-3 партнёров.
 
 7. **References PubMed/Crossref-verified or explicitly marked as pre-print** – ✗  
-   В разделе `References` CONCEPT.md перечислены только 2 источника (Anderson 2014 — verified, Tkemaladze 2026 — pre-print). Остальная литература, цитируемая в тексте (Mertens 2017, Yanguas-Casas 2017, Huang 2016, Shang 2022 и др.) **не вынесена в список references** и не помечена как pre-print. В KNOWLEDGE.md ссылки есть, но не указан их статус верификации.  
+   В разделе `References` CONCEPT.md перечислены только 2 источника (Anderson 2014 — verified, Tqemaladze 2026 — pre-print). Остальная литература, цитируемая в тексте (Mertens 2017, Yanguas-Casas 2017, Huang 2016, Shang 2022 и др.) **не вынесена в список references** и не помечена как pre-print. В KNOWLEDGE.md ссылки есть, но не указан их статус верификации.  
    Требование: **каждая ссылка должна либо иметь DOI/PMID с подтверждением, либо быть явно помечена [PREPRINT]**. Нарушение критическое.
 
 8. **No fabrication markers** – ✓  

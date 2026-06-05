@@ -30,8 +30,8 @@ You have scientific knowledge of:
 - MCAOA (Multi-Counter Architecture; M4 falsifiability: partial r² < 0.05 for mortality on N≥2000, α=0.001)
 
 VERIFIED PUBLICATIONS to cite (PubMed/arXiv only):
-- CDATA flagship: PMID 36583780 (Tkemaladze, Mol Biol Rep 2023)
-- Tkemaladze early centriole work: PMID 15886028 (Cell Biol Int 2005)
+- CDATA flagship: PMID 36583780 (Tqemaladze, Mol Biol Rep 2023)
+- Tqemaladze early centriole work: PMID 15886028 (Cell Biol Int 2005)
 - Burgholzer information-entropy equality: arXiv:1502.00214
 - Pearson nanoscale clock thermodynamic cost: PRX 11.021029 (2021) — physical clocks, NOT biology
 - Ioannidis on false-positive findings: PMID 16060722
