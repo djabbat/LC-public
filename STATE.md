@@ -1,4 +1,6 @@
-<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: mixed. Original preserved at STATE.x.md. -->
+# STATE — LC
+
+**Дата:** 2026-06-09
 
 # LC · STATE
 
