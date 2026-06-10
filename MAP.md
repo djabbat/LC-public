@@ -1,20 +1,54 @@
-# MAP — LC (LongevityCommon)
+# LC — MAP
+
+**Дата:** 2026-06-11
 
 ## Структура проекта
-- `BioSense/` — ЭЭГ/биосенсоры (данные, анализ)
-- `MCAOA/` — MCAOA подпроекты (CDATA, Proteostasis, MitoROS, Telomere, EpigeneticDrift)
-- `Ze/` — Ze-симуляции (Ze_D, Ze_Model, Ze_CHSH, Ze-Hierarchy)
-- `HAP/` — Hepato-Affective Primacy
-- `FCLC/` — FCLC клеточные линии
-- `server/` — Phoenix сервер
-- `web/` — Веб-интерфейс
-- `realtime/` — Real-time коммуникация
-- `services/` — Сервисы
-- `docs/` — Документация
-- `audits/` — Аудиты
-- `refs/` — Референсы
-- `scripts/` — Скрипты
-- `validate/` — Валидация
-- `data/` — Данные (registry.json, CITATION.cff)
-- `deploy/` — Деплой
-- `_archive/` — Архив
+
+```
+LC/ (LongevityCommon)
+├── _pi.md                          — правила для pi
+├── CONCEPT.md                       — концепт
+├── TODO.md                          — задачи
+├── PARAMETERS.md                    — параметры
+├── MAP.md                           — этот файл
+├── STATE.md                         — текущий статус
+├── MEMORY.md                        — история решений
+├── README.md                        — описание
+├── DESIGN.md                        — архитектура
+├── THEORY.md                        — теория
+├── EVIDENCE.md                      — доказательная база
+├── .gitignore
+├── LICENSE
+│
+├── BioSense/                        — биосенсоры и биомаркеры (7/7)
+│   ├── data/                        — данные (lemon, cuban EEG)
+│   └── instruments/                 — инструменты (automated-microscopy)
+├── FCLC/                            — федеративные вычисления (7/7) ✅
+│   ├── fclc-web/                    — Phoenix веб-интерфейс
+│   └── audits/                     — аудиты безопасности
+├── HAP/                             — Health-Age Profiling (7/7)
+├── MCAOA/                           — центриолярный анализ (7/7)
+│   └── CDATA/                       — центриолярные данные
+├── Ze/                              — Ze-Hierarchy симуляция (7/7)
+│   └── Ze-Hierarchy/               — submodule
+│
+├── _archive/                        — архив
+├── _audits/                         — аудиты
+├── audits/                          — отчёты аудита
+├── data/                            — данные
+├── deploy/                          — деплой
+├── docs/                            — документация
+├── _originals/                      — оригиналы документов
+├── realtime/                        — real-time сервисы
+├── refs/                            — референсы
+├── scripts/                         — скрипты
+├── server/                          — серверная часть
+├── services/                        — сервисы
+├── shared-types/                    — общие типы
+├── validate/                        — валидация
+└── web/                             — веб-интерфейс
+```
+
+---
+
+*Обновлено 2026-06-11 (аудит pi).*
