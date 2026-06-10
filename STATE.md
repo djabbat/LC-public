@@ -43,13 +43,13 @@
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
 | **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
-| **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
+| **CDATA** | 🟡 **Готовится к сабмиту** — доработка языка (2026-06-09) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
 | **Activated** | clinical pilot ready (Shashviashvili) | (extern) |
 | **AIM** | ✅ **Декомпозирован 2026-06-02** — компоненты распределены по проектам | removed |
-| HAP / Ontogenesis | TOXIC — not in v5.6 ecosystem | halted 2026-04-21 |
+| HAP / Ontogenesis | 🟡 **Публикация разрешена** (не в грант) — подготовка к сабмиту 2026-06-09 | halted 2026-04-21, revived 2026-06-09 |
 
 ## §3. Open blockers
 
