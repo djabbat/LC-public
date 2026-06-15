@@ -50,14 +50,12 @@
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
 | **Activated** | clinical pilot ready (Shashviashvili) | (extern) |
-| **AIM** | ✅ **Декомпозирован 2026-06-02** — компоненты распределены по проектам | removed |
 | HAP / Ontogenesis | 🟡 **Публикация разрешена** (не в грант) — подготовка к сабмиту 2026-06-09 | halted 2026-04-21, revived 2026-06-09 |
 
 ## §3. Open blockers
 
 ### Top 3 critical:
 1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester (ожидается follow-up)
-2. **N≥2000 pre-registered cohort** — all scientific claims hypothesis-stage until this
 3. **FCLC malicious-secure (v14)** — GDPR Art. 9 blocker; Q1 2027 timeline
 
 Full list: `OPEN_PROBLEMS.md`.
@@ -83,7 +81,6 @@ Per `DESIGN.md §5`:
 ### §5.1 Server (`~/Desktop/LC/server/src/`)
 - [ ] `handlers/biosense.rs` — add header `X-LC-Status: hypothesis-stage-exploratory`
 - [ ] `handlers/dashboard.rs` — strings "biological age" → "exploratory aging activity index (research only)"
-- [ ] `handlers/ze_guide.rs` — system prompt update: explicit "research-grade exploratory metric, not validated medical biomarker; v1 NULL retracted; v2 post-hoc; no medical advice; decline confirmatory clinical claims"
 - [ ] new endpoint `GET /api/disclosures/v5_changes` returning changelog
 - [ ] `migrations/003_health_factors.sql` — add comment "thresholds exploratory, see CONCEPT v5.6 §2"
 
