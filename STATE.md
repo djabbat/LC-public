@@ -29,7 +29,8 @@
 - Абастумани — лучший горный курорт Грузии (уровня Давоса, Швейцария)
 - Идут переговоры по покупке земли
 - Курорт начнёт принимать мировую элиту через ~2 года (€500M+ development)
-- **Вторник 9 июня 15:00 GMT+4** — подтверждённая встреча с Roberts (Vortex Capital)
+- **2026-06-15 (аудит pi):** Встреча 9 июня перенесена на 12 июня. Ожидается follow-up.
+- **2026-06-02:** Jaba подтвердил встречу (Vortex Capital)
 - Investment Memorandum обновлён (добавлен Abastumani контекст)
 
 ## §1. What was done in this iteration (2026-04-28)
@@ -55,7 +56,7 @@
 ## §3. Open blockers
 
 ### Top 3 critical:
-1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester meeting today 12:30 gating
+1. **EIC consortium 0 signed EU LoIs** — Miguel Angel González Ballester (ожидается follow-up)
 2. **N≥2000 pre-registered cohort** — all scientific claims hypothesis-stage until this
 3. **FCLC malicious-secure (v14)** — GDPR Art. 9 blocker; Q1 2027 timeline
 
