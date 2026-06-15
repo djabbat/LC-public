@@ -1,7 +1,8 @@
-# STATE — ARGUS
+# STATE — ARGUS (CDATA/Aubrey)
 
-## Текущий статус
-- **Дата:** 2026-06-09
-- **Состояние:** active
-- **Инициализирован:** аудит 2026-06-09
+**Дата:** 2026-06-15 (аудит pi)
+**Статус:** 🟢 Submitted (RSI)
 
+- ARGUS-LP отправлен в Robotic Surgery International
+- Core-файлы: 7/7
+- Git: ✅ (через LC)
