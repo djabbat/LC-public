@@ -1,0 +1,22 @@
+{
+  "L_basal": 1.0,
+  "L_capacity": 2.0,
+  "k_S_L": 0.5,
+  "k_I_L": 0.3,
+  "gamma_L": 0.2,
+  "k_B_L": 0.8,
+  "theta_L": 0.5,
+  "gamma_B": 0.1,
+  "k_A_B": 1.0,
+  "gamma_A": 0.1,
+  "k_L_S": 0.3,
+  "k_A_S": 0.1,
+  "k_S_M": 0.2,
+  "k_L_M": 0.3,
+  "I_basal": 0.1,
+  "k_M_I": 0.2,
+  "gamma_I": 0.2,
+  "gamma_S": 0.2,
+  "M_basal": 0.5,
+  "gamma_M": 0.15
+}
