@@ -1,3 +1,5 @@
+**Аудит 2026-06-16:** состояние подтверждено (глубокий аудит pi).
+
 <!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at STATE.ru.md. -->
 
 # STATE — MCAOA

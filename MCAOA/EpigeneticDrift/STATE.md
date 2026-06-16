@@ -1,3 +1,5 @@
+**Аудит 2026-06-16:** состояние подтверждено (глубокий аудит pi).
+
 # EpigeneticDrift — Project Status File (STATE.md)
 
 **Version:** 0.2.0  
