@@ -2,6 +2,16 @@
 
 **Назначение:** Что нужно помнить между сессиями. Новое сверху.
 
+## 2026-06-16 — Третий desk reject: Psychoneuroendocrinology
+
+- **16 июн 2026** — отказ Psychoneuroendocrinology (PNEC-D-26-00481)
+- **Редактор:** Elizabeth (Birdie) Shirtcliff (Editor-in-Chief)
+- **Причина:** «falls outside of the scope of this journal»
+- **Это 3-й desk reject подряд** (J. Affective Disorders → Medical Hypotheses → Psychoneuroendocrinology)
+- **Все три — по скоупу, не по качеству** (статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT)
+- **Проблема:** HAP — междисциплинарная работа (эволюционная биология + математическое моделирование + аффективная нейронаука), её трудно уместить в узкий журнальный скоуп
+- **Решение:** искать журналы, специально принимающие теоретические/математические работы (J. Theoretical Biology, Biosystems) или мультидисциплинарные (PLOS ONE, PeerJ)
+
 ## 2026-06-15 — Afaf отказалась от Biomarker Review
 
 - **15 июн 2026** — Afaf El Fettahi вышла из Biomarker Review (Dynamic Biomarkers Systematic Map)
