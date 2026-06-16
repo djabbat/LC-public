@@ -1,23 +1,41 @@
 # STATE — HAP Project
 
 **Date:** 2026-06-16
-**Status:** 🔴 Третий desk reject (Psychoneuroendocrinology). Ищем альтернативный журнал.
+**Status:** 🟢 ПОДАНА в Chaos, Solitons & Fractals (16.06.2026, 19:30)
 
-## 2026-06-16 — Psychoneuroendocrinology: Editorial Desk Reject
+## 2026-06-16 (19:00) — Chaos, Solitons & Fractals: ГОТОВИМ ПОДАЧУ
 
-- **PNEC-D-26-00481** — editorial desk reject (16 июн, 3:56 AM)
+- **CSF** (Elsevier) — IF 5.6, CiteScore 9.9
+- **Решение:** 5 дней
+- **Тип:** Subscription (бесплатно)
+- **Причина выбора:** идеальный тематический match — нелинейная динамика + бифуркации
+- **Cover letter:** `manuscript_submission/cover_letter_Chaos_Solitons_Fractals.md`
+
+## 2026-06-16 (18:40) — BioSystems: Editorial Desk Reject
+
+- **BIOSYS-D-26-00840** — desk reject (16 июн, 18:40)
+- **Редактор:** Abir U. Igamberdiev, PhD (Editor-in-Chief)
+- **Причина:** «does not fit within the scope of the journal»
+
+## 2026-06-16 (3:56) — Psychoneuroendocrinology: Editorial Desk Reject
+
+- **PNEC-D-26-00481** — desk reject (16 июн, 3:56 AM)
 - **Редактор:** Elizabeth (Birdie) Shirtcliff (Editor-in-Chief)
 - **Причина:** «topic falls outside of the scope of this journal»
-- **Хронология отказов:**
-  1. J. Affective Disorders (JAFD-D-26-06247) — desk reject, «lack of novelty» / mismatch
-  2. Medical Hypotheses — трансфер в Psychoneuroendocrinology (не отказ, но не приняли)
-  3. Psychoneuroendocrinology (PNEC-D-26-00481) — desk reject, «не в скоупе»
-- **Все три отказа — по скоупу, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
-- **Нужен:** журнал, принимающий теоретические + математические работы в биологии
+
+## Хронология отказов:
+1. J. Affective Disorders (JAFD-D-26-06247) — desk reject, «lack of novelty»
+2. Medical Hypotheses — трансфер в Psychoneuroendocrinology
+3. Psychoneuroendocrinology (PNEC-D-26-00481) — desk reject, scope
+4. BioSystems (BIOSYS-D-26-00840) — desk reject, scope
+5. 🎯 **Chaos, Solitons & Fractals — ГОТОВИМ ПОДАЧУ** ← оптимальный match
+
+- **Все четыре отказа — по скоупу, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
 
 ### Следующий шаг
-- [ ] Elsevier Journal Finder (http://journalfinder.elsevier.com)
-- [ ] Рассмотреть: J. Theoretical Biology, Biosystems, PLOS ONE, PeerJ, Frontiers in Physiology
+- [x] ✅ **Подана** в Chaos, Solitons & Fractals (16.06.2026, 19:30)
+- [x] GitHub: https://github.com/djabbat/hap-dynamics (публичный)
+- [ ] Ждать решения ~5 дней
 
 ## Сессия 2026-06-15 (итог): Полный цикл ревизии завершён
 

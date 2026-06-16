@@ -15,8 +15,8 @@ Aubrey is a 6-month live-cell centriole age tracking programme in BJ-hTERT fibro
 | `STATE.md` | Project status |
 | `~/Desktop/ARGUS-LP_hardware_spec.md` | Full hardware BOM (€13,850/unit) |
 | `~/Desktop/ARGUS-LP_schematic.drawio` | Schematic (diagrams.net) |
-| `~/Desktop/Aubrey_CONCEPT_v5_ENG.md` | CONCEPT clean copy (English) |
-| `~/Desktop/Aubrey_META-REVIEW_v5.md` | Meta-review 55/55 |
+| `~/Desktop/Marketing/Aubrey/Aubrey_CONCEPT_v5_ENG.md` | CONCEPT clean copy (English) |
+| `~/Desktop/Marketing/Aubrey/Aubrey_META-REVIEW_v5.md` | Meta-review 55/55 |
 
 ## Status
 
