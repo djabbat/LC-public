@@ -1,7 +1,23 @@
 # STATE — HAP Project
 
-**Date:** 2026-06-15
-**Status:** ✅ ГОТОВО К ПОДАЧЕ — Medical Hypotheses | 3 раунда ревизии | Вердикт: ACCEPT
+**Date:** 2026-06-16
+**Status:** 🔴 Третий desk reject (Psychoneuroendocrinology). Ищем альтернативный журнал.
+
+## 2026-06-16 — Psychoneuroendocrinology: Editorial Desk Reject
+
+- **PNEC-D-26-00481** — editorial desk reject (16 июн, 3:56 AM)
+- **Редактор:** Elizabeth (Birdie) Shirtcliff (Editor-in-Chief)
+- **Причина:** «topic falls outside of the scope of this journal»
+- **Хронология отказов:**
+  1. J. Affective Disorders (JAFD-D-26-06247) — desk reject, «lack of novelty» / mismatch
+  2. Medical Hypotheses — трансфер в Psychoneuroendocrinology (не отказ, но не приняли)
+  3. Psychoneuroendocrinology (PNEC-D-26-00481) — desk reject, «не в скоупе»
+- **Все три отказа — по скоупу, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
+- **Нужен:** журнал, принимающий теоретические + математические работы в биологии
+
+### Следующий шаг
+- [ ] Elsevier Journal Finder (http://journalfinder.elsevier.com)
+- [ ] Рассмотреть: J. Theoretical Biology, Biosystems, PLOS ONE, PeerJ, Frontiers in Physiology
 
 ## Сессия 2026-06-15 (итог): Полный цикл ревизии завершён
 
