@@ -110,7 +110,7 @@ Both units are identical. A single GLA technician (€6,000, 50% FTE × 6 mo) ma
 - Schematic (diagrams.net): `~/Desktop/ARGUS-LP_schematic.drawio`
 - Budget: `~/Desktop/ARGUS-LP_budget_v5.md`
 - Biology CONCEPT (parent): `../CONCEPT.md`
-- Meta-review (55/55): `~/Desktop/Aubrey_META-REVIEW_v5.md`
+- Meta-review (55/55): `~/Desktop/Marketing/Aubrey/Aubrey_META-REVIEW_v5.md`
 - Engineering literature: `refs/` directory
 
 

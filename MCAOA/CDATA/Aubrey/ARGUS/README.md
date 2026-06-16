@@ -47,5 +47,5 @@ ARGUS-LP (Autonomous Robotic Genealogical Ultra-surveillance for Lineage Purific
 | Hardware spec | `~/Desktop/ARGUS-LP_hardware_spec.md` |
 | Schematic (drawio) | `~/Desktop/ARGUS-LP_schematic.drawio` |
 | Budget v5 | `~/Desktop/ARGUS-LP_budget_v5.md` |
-| Meta-review | `~/Desktop/Aubrey_META-REVIEW_v5.md` |
+| Meta-review | `~/Desktop/Marketing/Aubrey/Aubrey_META-REVIEW_v5.md` |
 | Engineering refs | `refs/` (PMID summaries) |

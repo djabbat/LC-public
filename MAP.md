@@ -21,22 +21,15 @@ LC/ (LongevityCommon)
 ├── LICENSE
 │
 ├── BioSense/                        — биосенсоры и биомаркеры (7/7)
-│   ├── data/                        — данные (lemon, cuban EEG)
 │   └── instruments/                 — инструменты (automated-microscopy)
 ├── FCLC/                            — федеративные вычисления (7/7) ✅
 │   ├── fclc-web/                    — Phoenix веб-интерфейс
-│   └── audits/                     — аудиты безопасности
 ├── HAP/                             — Health-Age Profiling (7/7)
 ├── MCAOA/                           — центриолярный анализ (7/7)
-│   └── CDATA/                       — центриолярные данные
 ├── Ze/                              — Ze-Hierarchy симуляция (7/7)
 │   └── Ze-Hierarchy/               — submodule
 │
 ├── _archive/                        — архив
-├── _audits/                         — аудиты
-├── audits/                          — отчёты аудита
-├── data/                            — данные
-├── deploy/                          — деплой
 ├── docs/                            — документация
 ├── _originals/                      — оригиналы документов
 ├── realtime/                        — real-time сервисы
