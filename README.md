@@ -29,9 +29,9 @@
 
 | Audience | Where to start |
 |----------|----------------|
-| Aging biologist | [`MCAOA/CONCEPT.md`](MCAOA/CONCEPT.md), [`CDATA/CONCEPT.md`](CDATA/CONCEPT.md), `THEORY.md` |
+| Aging biologist | [`MCAOA/CONCEPT.md`](MCAOA/CONCEPT.md), [`MCAOA/CDATA/CONCEPT.md`](MCAOA/CDATA/CONCEPT.md), `THEORY.md` |
 | ML / FL engineer | [`FCLC/CONCEPT.md`](FCLC/CONCEPT.md), `realtime/`, `server/` |
-| Mathematician | [`Ze/THEORY.md`](Ze/THEORY.md), `PARAMETERS.md` |
+| Mathematician | [`Ze/CONCEPT.md`](Ze/CONCEPT.md), `PARAMETERS.md` |
 | Clinician | [`Activated/`](https://github.com/djabbat/) (private), `Activated/CONCEPT.md` |
 | Funder / journalist | this README + `docs/EIC_PartB_2026/EXECUTIVE_SUMMARY.md` |
 | Citizen-scientist | [`BioSense/README.md`](BioSense/README.md), no clinical claim |
