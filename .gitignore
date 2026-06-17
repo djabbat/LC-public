@@ -12,3 +12,4 @@ FCLC/
 # Большие бинарные данные — не должны быть в git (аудит 2026-06-16)
 BioSense/data/lemon/*.tar.gz
 BioSense/data/cuban/**/*.zip
+Ze/Ze-Hierarchy/
