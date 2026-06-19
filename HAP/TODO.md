@@ -9,7 +9,10 @@
 - [x] **Письмо Afaf** — отправлено, ответ получен (отказ), проект заморожен
 - [x] **Parameter sensitivity analysis** (Morris + Sobol) → theta_L главный (ST=0.75)
 - [x] **Stochastic parameter perturbation** → robustness = 0.992 (±5% шум)
-- [ ] **Medical Hypotheses** — подача статьи
+- [x] **Medical Hypotheses** — подача (15.06), отозвана (17.06) из-за dual submission
+- [x] **CSF** — подача (16.06), rejected (17.06): dual submission detected
+- [x] **Отзыв YMEHY-D-26-00985** (17.06) + apology letter Marcel Clerc
+- [ ] **Journal of Biological Dynamics** — подача (T&F, subscription, IF ~2.8, не Elsevier)
 
 ## ⚠️ Biomarker Review — ЗАМОРОЖЕНО (2026-06-15)
 
@@ -18,7 +21,7 @@
 - [ ] **При разморозке:** сузить протокол до 1-2 biomarker domains (соло)
 - [ ] Embase access — отложено
 
-## 🔴 ТЕКУЩИЙ ФОКУС: HAP-симуляция + Medical Hypotheses
+## 🔴 ТЕКУЩИЙ ФОКУС: Подача в Journal of Biological Dynamics (T&F)
 
 ## PH1 — Литература / Evidence
 

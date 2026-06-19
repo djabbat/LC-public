@@ -2,6 +2,27 @@
 
 **Назначение:** Что нужно помнить между сессиями. Новое сверху.
 
+## 2026-06-18 — Medical Hypotheses: Handling Editor → Instant Reject
+
+- **18 июн 2026, 14:57** — YMEHY-D-26-00985: Editor-in-Chief Dr Sachin Sarode назначен handling editor
+- **18 июн 2026, 15:00** — Rejected (через 3 минуты!), desk reject без рецензий
+- **Причина:** Стандартная формулировка («reviewers recommend against publishing»), но reviewers не назначались → desk reject
+- **Ирония:** Отзыв был запрошен 17.06, но не обработан — рукопись всё равно получила отказ
+- **5-й отказ подряд** (JAD, PNEC, BioSystems, CSF, Medical Hypotheses) — все по скоупу/формату
+- **Следующий:** Journal of Biological Dynamics (T&F, subscription, IF ~2.8, не Elsevier)
+- **Cover letter:** `~/Desktop/cover_letter_JBD.md` уже готов
+
+## 2026-06-17 — CSF Rejected (dual submission) + Medical Hypotheses withdrawal
+
+- **17 июн 2026** — CSF (CHAOS-D-26-05728) rejected: Elsevier обнаружил dual submission
+- **Причина:** Medical Hypotheses (YMEHY-D-26-00985) не закрыл рукопись при трансфере в Psychoneuroendocrinology
+- **Medical Hypotheses** отзыв отправлен (17.06) через Editorial Manager
+- **Apology letter** отправлен Marcel Clerc (CSF Editor-in-Chief)
+- **Урок:** При трансфере внутри Elsevier всегда проверять, что рукопись закрыта в исходном журнале
+- **Решение:** Подача в Journal of Biological Dynamics (T&F, не Elsevier, subscription, IF ~2.8)
+- **Cover letter:** `~/Desktop/cover_letter_JBD.md`
+- **BBS:** «Sensation, Feeling, Abstraction» (BBS-D-26-00814) — тоже rejected 17.06 (scope)
+
 ## 2026-06-16 — Третий desk reject: Psychoneuroendocrinology
 
 - **16 июн 2026** — отказ Psychoneuroendocrinology (PNEC-D-26-00481)

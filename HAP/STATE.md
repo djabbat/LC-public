@@ -1,7 +1,23 @@
 # STATE — HAP Project
 
-**Date:** 2026-06-16
-**Status:** 🟢 ПОДАНА в Chaos, Solitons & Fractals (16.06.2026, 19:30)
+**Date:** 2026-06-18
+**Status:** ❌ Medical Hypotheses — rejected. Готовим Journal of Biological Dynamics (T&F)
+
+## 2026-06-18 — Medical Hypotheses: Rejected (desk reject, EIC)
+
+- **YMEHY-D-26-00985** — rejected by Editor-in-Chief **Dr Sachin Sarode** (18.06.2026, 15:00)
+- **Форма:** desk reject, без рецензий (отказ через 3 мин после назначения редактора)
+- **Причина:** стандартная формулировка — «reviewers recommend against publishing» (но reviewers не назначались → desk reject)
+- **Итог:** 5-й отказ подряд, все по скоупу/несоответствию формату.
+
+## 2026-06-17 — CSF: Rejected (dual submission) + Medical Hypotheses withdrawal
+
+- **CHAOS-D-26-05728** — rejected: dual submission detected (Medical Hypotheses YMEHY-D-26-00985)
+- **Причина:** Рукопись осталась активной в Medical Hypotheses после трансфера в Psychoneuroendocrinology
+- **YMEHY-D-26-00985** — formal withdrawal requested (17.06.2026)
+- **Apology letter** отправлен Marcel Clerc
+- **Решение (пересмотрено 18.06):** Medical Hypotheses начал обработку → ждать решения
+- **Запасной вариант:** Journal of Biological Dynamics (T&F, subscription, IF ~2.8)
 
 ## 2026-06-16 (19:00) — Chaos, Solitons & Fractals: ГОТОВИМ ПОДАЧУ
 
@@ -28,14 +44,17 @@
 2. Medical Hypotheses — трансфер в Psychoneuroendocrinology
 3. Psychoneuroendocrinology (PNEC-D-26-00481) — desk reject, scope
 4. BioSystems (BIOSYS-D-26-00840) — desk reject, scope
-5. 🎯 **Chaos, Solitons & Fractals — ГОТОВИМ ПОДАЧУ** ← оптимальный match
+5. Chaos, Solitons & Fractals (CHAOS-D-26-05728) — rejected, dual submission
+6. Medical Hypotheses (YMEHY-D-26-00985) — desk reject, EIC (18.06.2026)
+7. 🎯 **Journal of Biological Dynamics (T&F)** ← следующий
 
-- **Все четыре отказа — по скоупу, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
+- **Пять отказов — по скоупу/формату, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
 
 ### Следующий шаг
-- [x] ✅ **Подана** в Chaos, Solitons & Fractals (16.06.2026, 19:30)
+- [x] ✅ Была подана в CSF (16.06.2026, 19:30) — rejected 17.06 (dual submission)
+- [x] Отзыв из Medical Hypotheses (YMEHY-D-26-00985)
 - [x] GitHub: https://github.com/djabbat/hap-dynamics (публичный)
-- [ ] Ждать решения ~5 дней
+- [ ] Подача в **Journal of Biological Dynamics** (T&F)
 
 ## Сессия 2026-06-15 (итог): Полный цикл ревизии завершён
 
