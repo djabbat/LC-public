@@ -1,7 +1,7 @@
 # STATE — HAP Project
 
-**Date:** 2026-06-18
-**Status:** ❌ Medical Hypotheses — rejected. Готовим Journal of Biological Dynamics (T&F)
+**Date:** 2026-06-19
+**Status:** 🟢 Подано в Biomedical Signal Processing and Control (Elsevier) — BSPC-D-26-11119
 
 ## 2026-06-18 — Medical Hypotheses: Rejected (desk reject, EIC)
 
@@ -46,7 +46,7 @@
 4. BioSystems (BIOSYS-D-26-00840) — desk reject, scope
 5. Chaos, Solitons & Fractals (CHAOS-D-26-05728) — rejected, dual submission
 6. Medical Hypotheses (YMEHY-D-26-00985) — desk reject, EIC (18.06.2026)
-7. 🎯 **Journal of Biological Dynamics (T&F)** ← следующий
+7. ✅ **Biomedical Signal Processing and Control (Elsevier)** — BSPC-D-26-11119, Submitted to Journal (19.06.2026)
 
 - **Пять отказов — по скоупу/формату, не по качеству.** Статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT.
 
@@ -54,7 +54,7 @@
 - [x] ✅ Была подана в CSF (16.06.2026, 19:30) — rejected 17.06 (dual submission)
 - [x] Отзыв из Medical Hypotheses (YMEHY-D-26-00985)
 - [x] GitHub: https://github.com/djabbat/hap-dynamics (публичный)
-- [ ] Подача в **Journal of Biological Dynamics** (T&F)
+- [x] ✅ Подано в **Biomedical Signal Processing and Control** (Elsevier, BSPC-D-26-11119) — 19 июн 2026, Submitted to Journal
 
 ## Сессия 2026-06-15 (итог): Полный цикл ревизии завершён
 
