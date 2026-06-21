@@ -22,7 +22,7 @@ MCAOA (Multi-Counter Architecture of Organismal Aging) is a formal, falsifiable 
 | 4 | **Epigenetic** | DNA methylation drift, Cdc42 polarity loss | `LC/MCAOA/EpigeneticDrift/` |
 | 5 | **Proteostatic** | Protein aggregation, chaperone/autophagy decline | `LC/MCAOA/Proteostasis/` |
 
-Candidate #6 (piRNA) is **EXPLORATORY** — see [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md) for refuting evidence.
+Candidate #6 (piRNA) is **EXPLORATORY** — see [OPEN_PROBLEMS.md]() for refuting evidence.
 
 ### Core Equations
 
