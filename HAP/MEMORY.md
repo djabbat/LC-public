@@ -2,6 +2,15 @@
 
 **Назначение:** Что нужно помнить между сессиями. Новое сверху.
 
+## 2026-06-19 — Подано в Biomedical Signal Processing and Control (7-я попытка)
+
+- **19 июн 2026, 21:40** — BSPC-D-26-11119 подтверждён, Submitted to Journal
+- **Журнал:** Biomedical Signal Processing and Control (Elsevier)
+- **Путь:** Трансфер Elsevier из BioSystems (BIOSYS-D-26-00840 desk reject 16 июн) → BSPC
+- **Cover letter:** адаптирован под biomedical signal processing
+- **Файлы:** HAP_Dynamics.docx + highlights + title_page + declaration + 20 figures
+- **Это 7-я попытка после 6 отказов (все desk reject по скоупу, не по качеству)**
+
 ## 2026-06-18 — Medical Hypotheses: Handling Editor → Instant Reject
 
 - **18 июн 2026, 14:57** — YMEHY-D-26-00985: Editor-in-Chief Dr Sachin Sarode назначен handling editor

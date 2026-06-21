@@ -12,7 +12,7 @@
 - [x] **Medical Hypotheses** — подача (15.06), отозвана (17.06) из-за dual submission
 - [x] **CSF** — подача (16.06), rejected (17.06): dual submission detected
 - [x] **Отзыв YMEHY-D-26-00985** (17.06) + apology letter Marcel Clerc
-- [ ] **Journal of Biological Dynamics** — подача (T&F, subscription, IF ~2.8, не Elsevier)
+- [x] **Biomedical Signal Processing and Control** — подача (19.06.2026, BSPC-D-26-11119, Elsevier)
 
 ## ⚠️ Biomarker Review — ЗАМОРОЖЕНО (2026-06-15)
 
@@ -21,7 +21,7 @@
 - [ ] **При разморозке:** сузить протокол до 1-2 biomarker domains (соло)
 - [ ] Embase access — отложено
 
-## 🔴 ТЕКУЩИЙ ФОКУС: Подача в Journal of Biological Dynamics (T&F)
+## 🔴 ТЕКУЩИЙ ФОКУС: Ожидание решения BSPC (Biomedical Signal Processing and Control)
 
 ## PH1 — Литература / Evidence
 
