@@ -1,6 +1,6 @@
 # MCAOA — Multi-Counter Architecture of Organismal Aging
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+> ⚠️ **См. [../CORRECTIONS_2026-04-22.md]()** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 
 **Project:** MCAOA (Multi-Counter Architecture of Organismal Aging)
@@ -177,7 +177,7 @@ MCAOA является **WP1 MCAOA Framework** в текущей заявке EI
 3. Документированные JSON schemas для counter registration
 4. Bayesian coupling estimation protocol (см. CORRECTIONS §1.3 — `γ_i = 0` by default, отклонение requires post-hoc statistical rejection)
 
-Подробности: [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md) §1.4 EIC структура v3.
+Подробности: [../CORRECTIONS_2026-04-22.md]() §1.4 EIC структура v3.
 
 ## Pre-registration plan
 

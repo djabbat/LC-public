@@ -1,6 +1,6 @@
 # Proteostasis Collapse as a Quantifiable Counter in the Multi-Counter Architecture of Aging
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+> ⚠️ **См. [../CORRECTIONS_2026-04-22.md]()** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 
 ## Abstract

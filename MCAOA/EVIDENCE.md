@@ -58,7 +58,7 @@
 
 ## 3. Disconfirming Evidence and Unresolved Problems (Honest Disclosure)
 
-*This section is directly linked to [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md).*
+*This section is directly linked to [OPEN_PROBLEMS.md]().*
 
 1. **Lack of direct measurements of *a priori* weights `w_i(tissue)`.**
  * **Evidence:** Currently, there is no widely accepted database linking parameters such as in vivo cell division rate, metabolic rate, and expression of specific genes to the predicted contribution to tissue aging.
