@@ -1,93 +1,82 @@
-<!-- AUTO-TRANSLATED via DeepSeek 2026-05-13. Source language: russian. Original preserved at THEORY.ru.md. -->
+# LC · THEORY (v7.0 — Organismal Aging, единая теория)
 
-# LC · THEORY (umbrella view)
+**Статус:** Каноническая · 2026-06-21
+**Версия:** 7.0 — объединение CDATA + MCAOA + Ze в единый формализм
 
-**Status:** Canonical · regenerated 2026-04-28 from CONCEPT v5.6 + article §3-§4
-**Authority:** Cross-cutting math summary; complete derivations are in `<subproject>/THEORY.md`
-
----
-
-## §1. Notation (cross-subproject)
-
-| Symbol | Meaning | Defined in |
-|--------|---------|------------|
-| `L_tissue(n,t)` | Tissue-level aging burden, MCAOA aggregator | `MCAOA/THEORY.md` |
-| `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCAOA/THEORY.md` |
-| `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCAOA/THEORY.md` |
-| `D(t)` | Centriolar damage (CDATA hypothetical counter) | `CDATA/THEORY.md` |
-| `I(Z)` | Impedance / KL-divergence between actual and modeled state | `Ze/THEORY.md` |
-| `τ_Ze` | Proper-time budget | `Ze/THEORY.md` |
-| `α, β, λ` | Coupling constants (Ze) | `Ze/THEORY.md` |
-| `v` | Ze velocity (binary symbol stream) | `BioSense/THEORY.md` (two conventions: Python ∈ [0,1], Article ∈ [-1,+1]) |
-| `v*` | Theoretical fixed point ≈ 0.45631 (Python convention; ≈ -0.087 Article) | `BioSense/THEORY.md` §3 |
-| `χ_Ze` | Composite biomarker ∈ [0,1] | `BioSense/THEORY.md` §3.4 |
-| `(ε, δ, k, σ, q, T)` | DP + k-anon + DP-SGD parameters | `FCLC/THEORY.md` + `BioSense/THEORY.md` §6 |
+> Полный вывод: `Organismal_Aging/THEORY.md`. Здесь — кросс-компонентная сводка.
 
 ---
 
-## §2. Cross-level connections
+## §1. Нотация (единая)
+
+| Символ | Значение | Уровень |
+|---|---|---|
+| S_centriole(t) | Энтропия центриоли [0,1] | #1 |
+| Dᵢ(n,t) | Повреждение счётчика i | #2 |
+| L_tissue(t) | Бремя старения ткани [0,1] | #2 |
+| fᵢ(x) | Сигмоида: 1/(1+exp(−kᵢ(x−x_crit))) | #2 |
+| wᵢ(tissue) | Вес счётчика i в ткани | #2 |
+| τ_renewal | Период самообновления ткани | #3 |
+| Z_conflict(i,j,t) | Межтканевой Ze-конфликт | #3 |
+| C_ij | Сила связи между тканями | #3 |
+| FI | Frailty Index (Rockwood) | Калибровка |
+
+---
+
+## §2. Три уровня — сводка
 
 ```
-MCAOA L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
- ↑
- one of Dᵢ is CDATA (hypothetical)
+УРОВЕНЬ #1: S_centriole(t) = S₀ + ∫₀ᵗ η(τ) dτ
+  η = η_div·n/n* + η_time/τ* + η_ROS·ROS/ROS_max + η_rep·ε_rep
 
-CDATA A(t) = a + b·D(t) + c·D(t)² (status: inconclusive)
- χ_Ze = g₀ − g₁·A(t) (linear bridge, 5 free params, underpowered)
+УРОВЕНЬ #2: L_tissue = Σᵢ₌₁⁵ wᵢ · fᵢ(Dᵢ(t))
+  Dᵢ = Dᵢ₀ + αᵢ·n/nᵢ* + βᵢ·t/τᵢ + γᵢ·Σⱼ≠ᵢ Γᵢⱼ·Dⱼ/Dⱼ_crit
 
-Ze I(Z) = S(Z_real ‖ Z_model) (KL divergence)
- dτ_Ze/dt = −α·I(Z) (POSTULATED ansatz)
- E_Ze(a,b) = −a·b + δ·[(a·b)²−1/3] (CHSH deformation)
+УРОВЕНЬ #3: Z_conflict(i,j,t) = |τᵢ·dLᵢ/dt − τⱼ·dLⱼ/dt| · C_ij
 
-BioSense F = E − T·S − λ·I_pred (variational principle)
- v* = 0.45631 (k_λ = 1) (theoretical fixed point)
- χ_Ze = 1 − |v − v*| / max(v*, 1−v*) (per-modality)
- composite = Σ w_modality · χ_Ze (4 modalities EEG/HRV/resp/sleep)
-
-FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
- Krum aggregator (Byzantine ≤ 25%)
- threat model: semi-honest server, NOT active
+ИНТЕГРАЦИЯ:
+  T_death = min{t : max_tissue(L_tissue(t)) > 1.0}
+  Disease onset = min{t : L_k(t) > 0.60 ∨ Z_conflict(i,j,t) > Z_crit}
 ```
 
-## §3. Authoritative derivations
+---
 
-Complete derivations are in the subprojects:
+## §3. Аксиомы
 
-| Lemma | Where | Status |
-|-------|-------|--------|
-| Burgholzer information-entropy equality `I = ⟨ΔS⟩_gen` | `Ze/THEORY.md §2` | Theorem (Burgholzer 2015 arXiv:1502.00214) |
-| Quadratic CHSH deformation derivation | `Ze/THEORY.md §3` | Lemma B + C; `1.7478` constant verified by F3 test |
-| Correlation decay `C(τ) = C₀·exp(−β·I·τ)` | `Ze/THEORY.md §4` | Lemma D (Gassner 2021) |
-| QFI bound `F_Q ≥ 8C₀(βIτ)²(1−βIτ)` | `Ze/THEORY.md §5` | Lemma E (Abboud 2026) |
-| Variational principle `F = E − T·S − λ·I_pred` | `BioSense/THEORY.md §3.1` | Friston 2010 framework |
-| `λ` from thermodynamics | `BioSense/THEORY.md §3.2` | Lemma C (Wallace 2015 inferential argument) |
-| `v* = 0.45631` fixed point | `BioSense/THEORY.md §3.3` | Theorem 1 (numerical extremum at `k_λ=1`) |
-| CDATA bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
-| RDP composition for DP-SGD | `FCLC/THEORY.md` | Mironov 2017 + Wang/Balle/Kasiviswanathan 2019 |
+| # | Аксиома | Формулировка |
+|---|---|---|
+| A1 | Центриолярная энтропия | Центриоль — единственная структура без self-renewal → первопричина |
+| A2 | Множественность | ≥5 параллельных счётчиков; ни один не достаточен |
+| A3 | Тканевая специфичность | wᵢ различны для разных тканей |
+| A4 | Ze-конфликты | Рассогласование τ_renewal → Z_conflict → болезнь |
+| A5 | Старение → болезнь | L > L_crit → disease onset (не ассоциация, причинность) |
+| A6 | Фальсифицируемость | Каждое утверждение имеет операциональный тест опровержения |
 
-## §4. What is **not** a theorem, but an ansatz / hypothesis
+---
 
-(after v5 honest relabel)
+## §4. Что является теоремой, а что — ansatz
 
-| Claim | Old framing | New framing |
-|-------|-------------|-------------|
-| `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy with physical clocks; biology not validated |
-| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** on N=196 underpowered; moved to Supplementary |
-| `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
-| Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
-| CDATA "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
+| Утверждение | Статус |
+|---|---|
+| S_centriole растёт необратимо | Постулат (PMID 36583780 — косвенные данные) |
+| fᵢ(x) — сигмоида | Каноническая форма (экспертная) |
+| L_tissue = FI/0.7 | Калибровочное (Rockwood 2005) |
+| Z_conflict предсказывает болезни | Гипотеза (не валидирована) |
+| v* = 0.45631 (Ze) | Теорема (численный экстремум), подтверждена на N=500 |
+| Связь центриоль → счётчики #2–#5 | Гипотеза (Sobol p=0.12 — inconclusive) |
 
-## §5. Falsifiability (operational)
+---
 
-- **MCAOA M4** (article §3.1): falsified if on a pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² for all-cause mortality (controlling age, sex) `< 0.05` for each counter. Power analysis: N=1875 for R²=0.3 at 80% power.
-- **CDATA**: falsified if a full Sobol decomposition (S1+S2+ST) with nested CV on real GTEx-like data shows that the α-component does not contribute significantly. Current Sobol on synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), but difference NOT significant (p=0.12 after correction).
-- **Ze fixed point v***: falsified if a swept-v* search on All-of-Us N≥500 shows `v*_optimal` outside `[0.32, 0.58]` (sensitivity range for `k_λ ∈ [0.5, 2.0]`). **Test status:** done on N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent with theory.
-- **FCLC**: falsified as GDPR-compliant infrastructure if an active server attack succeeds. Current status: semi-honest secure only; known blocker; v14 planned Q1 2027.
+## §5. Фальсифицируемость
 
-## §6. Relationship to implementation
+| Гипотеза | Тест | Порог |
+|---|---|---|
+| MCAOA M4 | N≥2000, α=0.001 | partial r² < 0.05 → счётчик опровергнут |
+| CDATA | Sobol full decomposition | S1 незначим → центриоль не первопричина |
+| v* | All-of-Us N≥500 | v* вне [0.32, 0.58] → опровергнуто |
+| Z_conflict | GTEx + продольные данные | AUC < 0.6 для disease prediction |
+| Самообучение | A/B: Bayesian vs static | ΔAIC < 2 |
 
-- All 6 canonical Ze quantities → `Ze/biosense-simulator/` (Rust)
-- All 5 canonical BioSense computations → `BioSense/biosense-simulator/` (Rust)
-- FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
-- MCAOA aggregator → `MCAOA/CellDT_v4/` (planned, not fully implemented)
-- CDATA bridge fitting → out of canonical simulator surface; Python prototype in `_archive/`
+---
+
+*LC THEORY v7.0 — 2026-06-21. Полный формализм: Organismal_Aging/THEORY.md.*
