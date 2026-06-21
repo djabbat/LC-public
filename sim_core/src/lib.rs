@@ -11,6 +11,9 @@ pub mod microbiome;
 pub mod macrobiome;
 pub mod learning;
 pub mod spatial;
+pub mod provenance;
+pub mod intervention;
+pub mod migration;
 
 pub mod prelude;
 

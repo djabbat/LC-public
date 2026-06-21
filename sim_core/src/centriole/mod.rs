@@ -1,7 +1,12 @@
 // Уровень #1: Центриоль — накопитель энтропии
 //
-// Центриоль — единственная внутриклеточная структура,
-// не способная к самообновлению. Первопричина старения.
+// Центриоль — структура с ограниченным самообновлением.
+// Рабочая гипотеза: потенциальный накопитель энтропии.
+
+pub mod entropy;
+pub mod replication;
+pub mod division;
+pub mod polyglutamylation;
 
 use crate::{Fraction, Time, Divisions};
 
@@ -27,15 +32,18 @@ pub struct EntropyRates {
     pub eta_ros: Fraction,
     /// Интенсивность ошибок репликации
     pub eta_rep: Fraction,
+    /// Источник параметров
+    pub source: crate::provenance::Source,
 }
 
 impl Default for EntropyRates {
     fn default() -> Self {
         Self {
             eta_div: 0.02 / 50.0,  // 0.0004 на референсное деление
-            eta_time: 0.005,        // 0.005 в год
+            eta_time: 0.010,        // 0.010 в год → S(85)≈0.86
             eta_ros: 0.01,
             eta_rep: 0.001,
+            source: crate::provenance::sources::CENTRIOLE_ENTROPY_POSTULATE,
         }
     }
 }
