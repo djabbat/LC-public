@@ -49,6 +49,14 @@ full = ["cli", "python", "api"]
 name = "aging_simulation"
 harness = false
 
+[[example]]
+name = "life_simulation"
+path = "examples/life_simulation.rs"
+
+[[bin]]
+name = "oa"
+path = "src/bin/cli.rs"
+
 [lib]
 name = "organismal_aging"
 path = "src/lib.rs"

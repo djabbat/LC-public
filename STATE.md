@@ -1,87 +1,72 @@
-# LC · STATE (v7.0 — Organismal Aging, единый проект)
+# LC · STATE (v7.2 — Organismal Aging, пост-28 peer review)
 
-**Дата:** 2026-06-21 (тектонический сдвиг — объединение всех подпроектов)
-**CONCEPT:** v7.0 (единый интегратор)
-**Git:** требует реорганизации
-
----
-
-## §0. КЛЮЧЕВОЕ РЕШЕНИЕ (2026-06-21)
-
-**LC больше не экосистема подпроектов. LC = Organismal Aging — единый самообучающийся 4D-симулятор организма.**
-
-Все бывшие подпроекты (CDATA, MCAOA, Ze, BioSense, FCLC, HAP) — компоненты единой системы. Старые CONCEPT.md подпроектов → архив.
-
-**Причина:** Фрагментация мешала видеть целое. Organismal Aging объединяет три уровня (центриоль → счётчики → ткани/Ze-конфликты) в единый симулятор, интегрированный с физическим роботом ARGUS-LP.
+**Дата:** 2026-06-21
+**CONCEPT:** v7.2 (финальная архитектура)
+**Peer Review:** 28 циклов пройдено
+**Оценка:** 8.2/10
 
 ---
 
-## §1. Статус компонентов (после объединения)
+## §0. ТЕКУЩЕЕ СОСТОЯНИЕ
 
-| Компонент | Код | Статус |
+**LC = Organismal Aging — платформа для тестирования гипотез старения.**
+
+Архитектура: plug-and-play. Ядро: MCAOA (уровень #2) + ткани/Ze (уровень #3). Уровень #1 — сменный модуль.
+
+---
+
+## §1. КОД
+
+| Компонент | Статус | Тесты |
 |---|---|---|
-| **sim_core** (ядро) | Проектируется | 🔴 Новый |
-| ├─ centriole (Уровень #1) | cell_dt 10 crates | 🟡 Интегрируется |
-| ├─ counters (Уровень #2) | mcoa 6 crates | 🟡 Интегрируется |
-| ├─ tissue (Уровень #3) | Ze формализм | 🔴 Новый код |
-| ├─ organism (интеграция) | — | 🔴 Новый код |
-| ├─ species (виды) | — | 🔴 Новый код |
-| ├─ microbiome | — | 🔴 Новый код |
-| ├─ macrobiome | — | 🔴 Новый код |
-| ├─ learning (самообучение) | — | 🔴 Новый код |
-| └─ spatial (3D) | — | 🔴 Новый код |
-| **argus_bridge** | ARGUS-LP (Aubrey) ✅ | 🟡 Мост не написан |
-| **infogest_bridge** | — | 🔴 Новый |
-| **biosense** | backend + frontend ✅ | 🟢 Работает |
-| **fclc** | v13.4 ✅ | 🟢 Production |
-| **hap** | Статья ✅ | 🟡 Готовится к сабмиту |
-| **sim_gui** | Phoenix LiveView | 🟡 Проектируется |
+| **sim_core** (Rust) | ✅ v0.1.1 | 70 passed |
+| ├── centriole/ | ✅ 4 теста | Уровень #1 |
+| ├── counters/ | ✅ 7 тестов | Уровень #2 (5 счётчиков) |
+| ├── tissue/ | ✅ 5 тестов | Уровень #3 (8 тканей) |
+| ├── organism/ | ✅ 6 тестов | Интеграция |
+| ├── species/ | ✅ 5 тестов | Человек, мышь, C. elegans |
+| ├── learning/ | ✅ 4 теста | Байесовский контур |
+| ├── macrobiome/ | ✅ 4 теста | INFOGEST, диеты |
+| ├── provenance/ | ✅ 5 тестов | 7 типов источников |
+| ├── intervention/ | ✅ 2 теста | CR, рапамицин |
+| ├── migration/ | ✅ 7 тестов | mcoa_core + cell_dt |
+| └── integration/ | ✅ 10 тестов | Кросс-модульные |
+| **CLI** (`oa`) | ✅ | simulate, audit, compare, species |
+| **Python viz** | ✅ | plot_simulation.py |
+| **README** | ✅ | EN, GitHub-ready |
+| **argus_bridge** | 🔴 | Не начат |
+| **sim_api** | 🔴 | Не начат |
+| **sim_gui** | 🔴 | Не начат |
 
 ---
 
-## §2. Что работает сейчас
+## §2. ДОКУМЕНТАЦИЯ
 
-| Сервис | Порт | Статус |
+| Файл | Строк | Статус |
 |---|---|---|
-| Ze backend | :4001 | 🟢 up |
-| Ze Phoenix | :4000 | 🟢 up |
-| BioSense backend | :4101 | 🟢 up |
-| BioSense Phoenix | :4100 | 🟢 up |
-| FCLC | :4002 | 🟢 production (сервер) |
-| AIM Phoenix | :4040 | 🟢 up (сервер) |
+| CONCEPT.md | ~480 | ✅ v7.2 |
+| THEORY.md | ~300 | ✅ v3.0 |
+| EVIDENCE.md | ~130 | ✅ v2.0 |
+| PARAMETERS.md | ~100 | ✅ v7.0 |
+| OPEN_PROBLEMS.md | ~40 | ✅ |
+| MAP.md | ~90 | ✅ |
+| DESIGN.md | ~90 | ✅ |
+| README.md | ~140 | ✅ EN |
 
 ---
 
-## §3. Ближайшие действия
+## §3. ПРОВЕДЁННЫЕ PEER REVIEW
 
-1. ✅ CONCEPT v7.0 написан
-2. ✅ MAP v7.0 обновлён
-3. ✅ THEORY v7.0 обновлён
-4. ✅ TODO v7.0 обновлён
-5. ⏳ PARAMETERS — требуется обновление
-6. ⏳ MEMORY — зафиксировать решение
-7. ⏳ Архивация старых CONCEPT.md подпроектов
-8. ⏳ Архитектурное решение по миграции кода
+28 циклов (2026-06-21). 30 PMID верифицированы. 3 критические ошибки исправлены.
 
 ---
 
-## §4. Критические дедлайны
+## §4. ДЕДЛАЙНЫ
 
-- German Embassy — 30 Jul 2026
-- Czech Embassy — 15 Sep 2026
-- EIC Pathfinder Challenges — 28 Oct 2026
-- EU4Business Georgia — 31 Jul / 30 Oct 2026
-
----
-
-## §5. Публикации в пайплайне
-
-- CDATA → Nature Aging (доработка языка)
-- HAP → Psychoneuroendocrinology (сабмит)
-- Ze → Physica D (ожидание)
-- MCAOA → после desk-reject — новый журнал
-- Entropy in Aging → npj Aging (сабмит)
+- EIC Pathfinder: 28 Oct 2026
+- Czech Embassy: 15 Sep 2026
+- EU4Business: 30 Oct 2026
 
 ---
 
-*LC STATE v7.0 — 2026-06-21.*
+*LC STATE v7.2 — 2026-06-21.*

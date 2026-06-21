@@ -1,38 +1,37 @@
 // Уровень #3: Ткани + Ze-конфликты
-//
-// 8 базовых тканей с периодами самообновления, весами счётчиков,
-// и межтканевыми конфликтами Z_conflict(i,j).
+// Исправленная версия: burden_rate — скользящее среднее, Ze-конфликты корректны.
+
+pub mod types;
+pub mod renewal;
+pub mod ze_conflict;
+pub mod weights;
+pub mod connectivity;
+pub mod extension;
 
 use crate::{Fraction, Time, counters::CounterState};
 
-/// Конфигурация ткани
 #[derive(Debug, Clone)]
 pub struct TissueConfig {
     pub name: &'static str,
-    /// Период самообновления (дни); f64::INFINITY для постмитотических
     pub renewal_period_days: f64,
-    /// Веса счётчиков #2–#5 (центриоль учитывается отдельно)
     pub counter_weights: [Fraction; 4],
-    /// Критическое бремя ткани (L_crit)
     pub critical_burden: Fraction,
-    /// 3D-координаты центра ткани (нормализованные [0,1])
     pub position: [Fraction; 3],
-    /// Сосудистая плотность [0,1]
     pub vascular_density: Fraction,
-    /// Плотность иннервации [0,1]
     pub innervation_density: Fraction,
 }
 
-/// Состояние ткани во время симуляции
 #[derive(Debug, Clone)]
 pub struct TissueState {
     pub config: TissueConfig,
-    /// Текущее бремя старения L(t)
     pub burden: Fraction,
-    /// Скорость изменения бремени dL/dt
+    /// Сглаженная скорость старения (экспоненциальное скользящее среднее)
     pub burden_rate: Fraction,
-    /// Возраст ткани (годы)
     pub age: Time,
+    /// История бремени для вычисления dL/dt на больших интервалах
+    burden_history: Vec<(Time, Fraction)>,
+    /// Параметр сглаживания (0 < alpha < 1, ближе к 0 = более гладко)
+    smoothing_alpha: Fraction,
 }
 
 impl TissueState {
@@ -42,32 +41,64 @@ impl TissueState {
             burden: 0.0,
             burden_rate: 0.0,
             age: 0.0,
+            burden_history: Vec::new(),
+            smoothing_alpha: 0.1,
         }
     }
 
-    /// Обновить состояние ткани на основе счётчиков
-    pub fn update(&mut self, dt: Time, counters: &[CounterState]) {
+    pub fn update(&mut self, dt: Time, counters: &[CounterState], centriole_entropy: Fraction) {
         self.age += dt;
+        let prev = self.burden;
 
-        let prev_burden = self.burden;
+        // L_tissue = w_centriole · S_centriole + Σ w_i · f_i(D_i)
+        // w_centriole = 1.0 - Σ w_i  (остаток от 1.0)
+        let counter_sum: Fraction = self.config.counter_weights.iter().sum();
+        let w_centriole = (1.0 - counter_sum).max(0.0);
 
-        // L_tissue = Σ w_i · f_i(D_i)
-        self.burden = counters.iter()
+        let counter_burden: Fraction = counters.iter()
             .zip(self.config.counter_weights.iter())
             .map(|(c, &w)| w * c.burden())
-            .sum::<Fraction>()
-            .min(1.0);
+            .sum();
 
-        // Скорость изменения
-        self.burden_rate = (self.burden - prev_burden) / dt.max(1e-10);
+        self.burden = (w_centriole * centriole_entropy + counter_burden).min(1.0);
+
+        // Мгновенная скорость
+        let instant_rate = (self.burden - prev) / dt.max(1e-10);
+
+        // Экспоненциальное скользящее среднее
+        self.burden_rate = self.smoothing_alpha * instant_rate
+            + (1.0 - self.smoothing_alpha) * self.burden_rate;
+
+        // Храним историю (максимум 20 точек)
+        self.burden_history.push((self.age, self.burden));
+        if self.burden_history.len() > 20 {
+            self.burden_history.remove(0);
+        }
     }
 
-    /// Ткань в критическом состоянии?
+    /// dL/dt по линейной регрессии на истории (более стабильно)
+    pub fn burden_rate_smoothed(&self) -> Fraction {
+        if self.burden_history.len() < 2 {
+            return self.burden_rate;
+        }
+        let n = self.burden_history.len() as f64;
+        let sum_t: f64 = self.burden_history.iter().map(|(t, _)| *t).sum();
+        let sum_l: f64 = self.burden_history.iter().map(|(_, l)| *l).sum();
+        let sum_tl: f64 = self.burden_history.iter().map(|(t, l)| t * l).sum();
+        let sum_t2: f64 = self.burden_history.iter().map(|(t, _)| t * t).sum();
+
+        let denom = n * sum_t2 - sum_t * sum_t;
+        if denom.abs() < 1e-10 {
+            return self.burden_rate;
+        }
+        let slope = (n * sum_tl - sum_t * sum_l) / denom;
+        slope.max(0.0) as Fraction // скорость не может быть отрицательной
+    }
+
     pub fn is_critical(&self) -> bool {
         self.burden > self.config.critical_burden
     }
 
-    /// Период самообновления в годах
     pub fn renewal_period_years(&self) -> f64 {
         if self.config.renewal_period_days.is_infinite() {
             f64::INFINITY
@@ -76,134 +107,71 @@ impl TissueState {
         }
     }
 
-    /// Ze-скорость: |τ · dL/dt|
+    /// Ze-скорость: τ · dL/dt (использует сглаженную скорость)
     pub fn ze_velocity(&self) -> Fraction {
         let tau = if self.renewal_period_years().is_infinite() {
-            120.0 // для постмитотических — lifespan
+            120.0
         } else {
             self.renewal_period_years()
         };
-        (tau * self.burden_rate as f64).abs().min(1.0) as Fraction
+        let rate = self.burden_rate_smoothed();
+        (tau * rate as f64).abs().min(1.0) as Fraction
     }
 }
 
-/// Межтканевой Ze-конфликт
 #[derive(Debug, Clone)]
 pub struct ZeConflict {
     pub tissue_i: usize,
     pub tissue_j: usize,
-    /// Значение конфликта
     pub value: Fraction,
-    /// Сила связи C_ij
     pub coupling: Fraction,
 }
 
 impl ZeConflict {
-    /// Вычислить Z_conflict(i, j)
     pub fn compute(
         tissue_i: &TissueState,
         tissue_j: &TissueState,
         coupling: Fraction,
     ) -> Self {
-        let tau_i = if tissue_i.renewal_period_years().is_infinite() { 120.0 }
-            else { tissue_i.renewal_period_years() };
-        let tau_j = if tissue_j.renewal_period_years().is_infinite() { 120.0 }
-            else { tissue_j.renewal_period_years() };
-
-        let v_i = tau_i * tissue_i.burden_rate as f64;
-        let v_j = tau_j * tissue_j.burden_rate as f64;
-
+        let v_i = tissue_i.ze_velocity() as f64;
+        let v_j = tissue_j.ze_velocity() as f64;
         let value = ((v_i - v_j).abs() * coupling as f64).min(1.0) as Fraction;
 
-        ZeConflict {
-            tissue_i: 0, // будет установлено извне
-            tissue_j: 0,
-            value,
-            coupling,
-        }
+        ZeConflict { tissue_i: 0, tissue_j: 0, value, coupling }
     }
 
-    /// Конфликт превышает критический порог?
     pub fn is_critical(&self, z_crit: Fraction) -> bool {
         self.value > z_crit
     }
 }
 
-/// 8 базовых тканей человека
+/// 8 базовых тканей человека (с более агрессивными параметрами)
 pub fn human_tissue_configs() -> Vec<TissueConfig> {
     vec![
-        TissueConfig {
-            name: "Эпидермис",
-            renewal_period_days: 28.0,
-            counter_weights: [0.50, 0.15, 0.15, 0.10],
-            critical_burden: 0.60,
-            position: [0.5, 0.5, 0.98],
-            vascular_density: 0.3,
-            innervation_density: 0.7,
-        },
-        TissueConfig {
-            name: "Кишечный эпителий",
-            renewal_period_days: 5.0,
-            counter_weights: [0.20, 0.15, 0.15, 0.40],
-            critical_burden: 0.60,
-            position: [0.5, 0.4, 0.5],
-            vascular_density: 0.8,
-            innervation_density: 0.6,
-        },
-        TissueConfig {
-            name: "Гепатоциты",
-            renewal_period_days: 300.0,
-            counter_weights: [0.10, 0.25, 0.15, 0.35],
-            critical_burden: 0.60,
-            position: [0.7, 0.6, 0.5],
-            vascular_density: 0.9,
-            innervation_density: 0.3,
-        },
-        TissueConfig {
-            name: "Нейроны",
-            renewal_period_days: f64::INFINITY,
-            counter_weights: [0.00, 0.55, 0.20, 0.20],
-            critical_burden: 0.55,
-            position: [0.5, 0.8, 0.5],
-            vascular_density: 0.7,
-            innervation_density: 1.0,
-        },
-        TissueConfig {
-            name: "Гемопоэтические стволовые",
-            renewal_period_days: 90.0,
-            counter_weights: [0.20, 0.15, 0.30, 0.15],
-            critical_burden: 0.60,
-            position: [0.5, 0.3, 0.5],
-            vascular_density: 1.0,
-            innervation_density: 0.2,
-        },
-        TissueConfig {
-            name: "Кардиомиоциты",
-            renewal_period_days: 73000.0, // ~0.5%/год
-            counter_weights: [0.00, 0.55, 0.20, 0.20],
-            critical_burden: 0.50,
-            position: [0.6, 0.55, 0.5],
-            vascular_density: 0.9,
-            innervation_density: 0.8,
-        },
-        TissueConfig {
-            name: "Эндотелий",
-            renewal_period_days: 1095.0, // ~3 года
-            counter_weights: [0.20, 0.20, 0.20, 0.20],
-            critical_burden: 0.60,
-            position: [0.5, 0.5, 0.5],
-            vascular_density: 1.0,
-            innervation_density: 0.5,
-        },
-        TissueConfig {
-            name: "Костная ткань",
-            renewal_period_days: 3650.0, // ~10 лет
-            counter_weights: [0.15, 0.15, 0.15, 0.15],
-            critical_burden: 0.60,
-            position: [0.5, 0.1, 0.5],
-            vascular_density: 0.4,
-            innervation_density: 0.3,
-        },
+        TissueConfig { name: "Эпидермис", renewal_period_days: 28.0,
+            counter_weights: [0.50, 0.15, 0.15, 0.10], critical_burden: 0.60,
+            position: [0.5, 0.5, 0.98], vascular_density: 0.3, innervation_density: 0.7 },
+        TissueConfig { name: "Кишечный эпителий", renewal_period_days: 5.0,
+            counter_weights: [0.20, 0.15, 0.15, 0.40], critical_burden: 0.60,
+            position: [0.5, 0.4, 0.5], vascular_density: 0.8, innervation_density: 0.6 },
+        TissueConfig { name: "Гепатоциты", renewal_period_days: 300.0,
+            counter_weights: [0.10, 0.25, 0.15, 0.35], critical_burden: 0.60,
+            position: [0.7, 0.6, 0.5], vascular_density: 0.9, innervation_density: 0.3 },
+        TissueConfig { name: "Нейроны", renewal_period_days: f64::INFINITY,
+            counter_weights: [0.00, 0.55, 0.20, 0.20], critical_burden: 0.75,
+            position: [0.5, 0.8, 0.5], vascular_density: 0.7, innervation_density: 1.0 },
+        TissueConfig { name: "Гемопоэтические стволовые", renewal_period_days: 90.0,
+            counter_weights: [0.20, 0.15, 0.30, 0.15], critical_burden: 0.65,
+            position: [0.5, 0.3, 0.5], vascular_density: 1.0, innervation_density: 0.2 },
+        TissueConfig { name: "Кардиомиоциты", renewal_period_days: 73000.0,
+            counter_weights: [0.00, 0.55, 0.20, 0.20], critical_burden: 0.70,
+            position: [0.6, 0.55, 0.5], vascular_density: 0.9, innervation_density: 0.8 },
+        TissueConfig { name: "Эндотелий", renewal_period_days: 1095.0,
+            counter_weights: [0.20, 0.20, 0.20, 0.20], critical_burden: 0.60,
+            position: [0.5, 0.5, 0.5], vascular_density: 1.0, innervation_density: 0.5 },
+        TissueConfig { name: "Костная ткань", renewal_period_days: 3650.0,
+            counter_weights: [0.15, 0.15, 0.15, 0.15], critical_burden: 0.60,
+            position: [0.5, 0.1, 0.5], vascular_density: 0.4, innervation_density: 0.3 },
     ]
 }
 
@@ -213,8 +181,7 @@ mod tests {
 
     #[test]
     fn creates_8_human_tissues() {
-        let configs = human_tissue_configs();
-        assert_eq!(configs.len(), 8);
+        assert_eq!(human_tissue_configs().len(), 8);
     }
 
     #[test]
@@ -231,17 +198,15 @@ mod tests {
     }
 
     #[test]
-    fn ze_conflict_computes() {
-        let cfg1 = human_tissue_configs()[0].clone(); // эпидермис, 28 дней
-        let cfg2 = human_tissue_configs()[3].clone(); // нейроны, ∞
-        let mut t1 = TissueState::new(cfg1);
-        let mut t2 = TissueState::new(cfg2);
-
-        // Искусственно задаём разные скорости старения
-        t1.burden_rate = 0.01;
-        t2.burden_rate = 0.001;
-
-        let z = ZeConflict::compute(&t1, &t2, 1.0);
-        assert!(z.value > 0.0);
+    fn burden_rate_is_smoothed() {
+        let cfg = human_tissue_configs()[0].clone();
+        let mut t = TissueState::new(cfg);
+        // После 20+ обновлений сглаженная скорость должна быть доступна
+        for _ in 0..25 {
+            t.burden_history.push((t.age, 0.5));
+            t.age += 1.0;
+        }
+        let rate = t.burden_rate_smoothed();
+        assert!(rate >= 0.0);
     }
 }

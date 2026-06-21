@@ -30,7 +30,7 @@
 | Burgholzer information-entropy equality | Burgholzer 2015 | arXiv **1502.00214** ✅ |
 | Pearson nanoscale clock thermodynamic cost | Pearson et al. 2021 *Phys Rev X* 11 | DOI **10.1103/PhysRevX.11.021029** ✅ |
 | Information geometry / minimal entropy paths | Gassner et al. 2021 *Int J Geom Methods Mod Phys* 18 | DOI **10.1142/S0219887821501279** ✅ |
-| LGI ↔ QFI bound | Abboud et al. 2026 | arXiv **2604.09772** ✅ (preprint, not yet peer-reviewed) |
+| LGI ↔ QFI bound | Abboud et al. 2026 | arXiv **2604.09772** ⚠️ (preprint, не верифицирован при аудите 2026-06-21 — требует перепроверки) |
 | Asymmetric CHSH | Woodhead/Acín/Pironio 2021 *Quantum* 5 | DOI **10.22331/q-2021-04-26-443** ✅ |
 | Wigner's friend experiment | Proietti et al. 2019 *Sci Adv* 5 | DOI **10.1126/sciadv.aaw9832** ✅ |
 | Decoherence / einselection | Zurek 2003 *Rev Mod Phys* 75 | DOI **10.1103/RevModPhys.75.715** ✅ |
