@@ -124,4 +124,3 @@
 
 ## Update (2026-05-15)
 
-See CONCEPT.md — MCAOA Phase III v2.0 corrected concept. All references verified, power calculation added, proteostatic counter (#5) expanded with cyclophilin A (PPIA) data, piRNA counter (#6) supported by PMID: 38142432.
