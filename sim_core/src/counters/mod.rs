@@ -4,6 +4,16 @@
 // f_i(x) = 1 / (1 + exp(-k_i · (x - x_crit)))  — сигмоида
 
 use crate::{Fraction, Time, Divisions};
+use crate::provenance::Source;
+
+pub mod telomere;
+pub mod mitochondrial;
+pub mod epigenetic;
+pub mod proteostatic;
+pub mod coupling;
+pub mod extension;
+
+pub use coupling::GammaMatrix;
 
 /// Типы счётчиков
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -16,7 +26,7 @@ pub enum CounterType {
 }
 
 /// Параметры счётчика
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Copy)]
 pub struct CounterParams {
     /// Интенсивность от делений
     pub alpha: Fraction,
@@ -30,6 +40,8 @@ pub struct CounterParams {
     pub k: Fraction,
     /// Средняя точка сигмоиды (полумаксимальное бремя)
     pub x_crit: Fraction,
+    /// Источник параметров (PMID, DOI, оценка, постулат)
+    pub source: Source,
 }
 
 /// Состояние счётчика
@@ -72,23 +84,12 @@ impl CounterState {
     }
 }
 
-/// Параметры счётчиков по умолчанию (для калибровки)
+/// Параметры счётчиков — делегированы в подмодули
 impl CounterParams {
-    pub fn telomere() -> Self {
-        Self { alpha: 0.02/50.0, beta: 0.001, n_star: 50.0, tau_star: 0.019, k: 5.0, x_crit: 0.5 }
-    }
-
-    pub fn mitochondrial() -> Self {
-        Self { alpha: 0.001, beta: 0.02, n_star: 50.0, tau_star: 0.0082, k: 5.0, x_crit: 0.5 }
-    }
-
-    pub fn epigenetic() -> Self {
-        Self { alpha: 0.0005, beta: 0.018, n_star: 50.0, tau_star: 3.6, k: 5.0, x_crit: 0.5 }
-    }
-
-    pub fn proteostatic() -> Self {
-        Self { alpha: 0.001, beta: 0.015, n_star: 50.0, tau_star: 0.027, k: 5.0, x_crit: 0.5 }
-    }
+    pub fn telomere() -> Self { telomere::default_params() }
+    pub fn mitochondrial() -> Self { mitochondrial::default_params() }
+    pub fn epigenetic() -> Self { epigenetic::default_params() }
+    pub fn proteostatic() -> Self { proteostatic::default_params() }
 }
 
 /// Агрегатор L_tissue: взвешенная сумма бремен счётчиков
