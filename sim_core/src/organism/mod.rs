@@ -1,12 +1,20 @@
 // Интеграция: целый организм
-//
 // Развитие с зиготы, кривая старения, смертность,
 // Frailty Index, заболевания, травмы, интервенции.
 
+pub mod development;
+pub mod aging_curve;
+pub mod mortality;
+pub mod frailty;
+pub mod disease;
+pub mod trauma;
+
 use crate::{Fraction, Time, Divisions, SimulationStep};
 use crate::centriole::{CentrioleState, EntropyRates};
-use crate::counters::{CounterState, CounterParams, CounterType, l_tissue_aggregator};
+use crate::counters::{CounterState, CounterParams, CounterType};
 use crate::tissue::{TissueState, ZeConflict, human_tissue_configs};
+use crate::macrobiome::{DietConfig, DigestionResult};
+use crate::learning::BayesianLoop;
 
 /// Главная структура — организм
 #[derive(Debug, Clone)]
@@ -22,7 +30,6 @@ pub struct Organism {
 
     // Уровень #2
     pub counters: Vec<CounterState>,
-    pub counter_weights: Vec<Vec<Fraction>>, // [ткань][счётчик]
 
     // Уровень #3
     pub tissues: Vec<TissueState>,
@@ -38,6 +45,13 @@ pub struct Organism {
     // Внешние возмущения
     pub ros_level: Fraction,
     pub division_rate: Fraction, // средняя по организму
+
+    // Макробиом
+    pub diet: DietConfig,
+    pub digestion: Option<DigestionResult>,
+
+    // Самообучение
+    pub learning_loop: BayesianLoop,
 }
 
 impl Organism {
@@ -53,10 +67,8 @@ impl Organism {
             CounterState::new(CounterType::Proteostatic, CounterParams::proteostatic()),
         ];
 
-        // Веса счётчиков для каждой ткани (из TissueConfig)
-        let counter_weights: Vec<Vec<Fraction>> = tissue_configs.iter()
-            .map(|cfg| cfg.counter_weights.to_vec())
-            .collect();
+        // Веса счётчиков — хранятся в TissueConfig каждой ткани
+        // (используются в TissueState::update())
 
         // Матрица связности (по умолчанию — единичная)
         let connectivity = vec![vec![1.0; n_tissues]; n_tissues];
@@ -66,7 +78,7 @@ impl Organism {
             .map(TissueState::new)
             .collect();
 
-        Self {
+        let mut org = Self {
             name: "Homo sapiens".into(),
             age: 0.0,
             max_lifespan: 120.0,
@@ -74,7 +86,6 @@ impl Organism {
             entropy_rates: EntropyRates::default(),
             n_ref: 50.0,
             counters,
-            counter_weights,
             tissues,
             connectivity,
             z_crit: 0.30,
@@ -83,7 +94,38 @@ impl Organism {
             events: vec!["Рождение".into()],
             step_count: 0,
             ros_level: 0.1,
-            division_rate: 1.0, // 1 деление/год в среднем (замедляется с возрастом)
+            division_rate: 1.0,
+            diet: DietConfig::default(),
+            digestion: None,
+            learning_loop: BayesianLoop::new(),
+        };
+
+        // Инициализация байесовского контура
+        org.init_learning_parameters();
+
+        org
+    }
+
+    /// Инициализировать параметры байесовского контура
+    fn init_learning_parameters(&mut self) {
+        self.learning_loop.register_parameter("eta_time", 0.010, 0.005,
+            crate::provenance::sources::CENTRIOLE_ENTROPY_POSTULATE);
+        self.learning_loop.register_parameter("beta_epi", 0.030, 0.010,
+            crate::provenance::sources::EPIGENETIC_CLOCK);
+    }
+
+    /// Применить диету — пересчитать ROS и протеостазные множители
+    pub fn apply_diet(&mut self, diet: DietConfig) {
+        self.diet = diet.clone();
+        self.digestion = Some(DigestionResult::simulate(&diet));
+        if let Some(ref dig) = self.digestion {
+            self.ros_level = (0.1 * dig.ros_impact(&diet)).min(1.0);
+            // Влияние на протеостаз: модифицируем beta счётчика #5
+            for counter in &mut self.counters {
+                if matches!(counter.counter_type, CounterType::Proteostatic) {
+                    counter.params.beta *= dig.proteo_impact(&diet);
+                }
+            }
         }
     }
 
@@ -108,14 +150,15 @@ impl Organism {
         }
 
         // === Уровень #3: Ткани ===
-        for (i, tissue) in self.tissues.iter_mut().enumerate() {
-            // Каждая ткань имеет свои веса счётчиков
-            let weights = &self.counter_weights[i];
-            // Вычисляем бремя ткани через агрегатор
-            let burden = l_tissue_aggregator(&self.counters, weights);
-            tissue.burden = burden;
-            tissue.burden_rate = (burden - tissue.burden) / dt.max(1e-10);
-            tissue.age += dt;
+        for (_i, tissue) in self.tissues.iter_mut().enumerate() {
+            tissue.update(dt, &self.counters, self.centriole.entropy);
+
+            if tissue.is_critical() && !self.events.iter().any(|e| e.contains(&format!("Болезнь: {}", tissue.config.name))) {
+                self.events.push(format!(
+                    "Болезнь: {} (L={:.3} > L_crit={:.3}, возраст {:.1} лет)",
+                    tissue.config.name, tissue.burden, tissue.config.critical_burden, self.age
+                ));
+            }
         }
 
         // === Ze-конфликты ===
@@ -147,20 +190,12 @@ impl Organism {
         self.frailty_index = 0.7 * max_burden; // FI = 0.7 * L_max (Rockwood 2005)
 
         // === Проверка смерти ===
+        // Смерть при L_max > 0.90 (практически — полиорганная недостаточность)
+        // или при превышении max_lifespan
         let l_max = max_burden;
-        if l_max > 1.0 || self.age > self.max_lifespan {
+        if l_max >= 0.99 || self.age > self.max_lifespan {
             self.is_alive = false;
             self.events.push(format!("Смерть в возрасте {:.1} лет (L_max={:.3})", self.age, l_max));
-        }
-
-        // === Проверка заболеваний ===
-        for tissue in &self.tissues {
-            if tissue.is_critical() && !self.events.iter().any(|e| e.contains(&format!("болезнь: {}", tissue.config.name))) {
-                self.events.push(format!(
-                    "Болезнь: {} (L={:.3} > L_crit={:.3})",
-                    tissue.config.name, tissue.burden, tissue.config.critical_burden
-                ));
-            }
         }
 
         SimulationStep {
@@ -185,6 +220,24 @@ impl Organism {
             history.push(s);
         }
         history
+    }
+
+    /// Аудит источников — вывести все provenance в человекочитаемом виде
+    pub fn audit_provenance(&self) -> Vec<String> {
+        let mut lines = Vec::new();
+        lines.push("=== АУДИТ ИСТОЧНИКОВ ===".into());
+        lines.push(format!("Центриоль: {}", self.entropy_rates.source.cite()));
+        for c in &self.counters {
+            lines.push(format!("  Счётчик {:?}: {}", c.counter_type, c.params.source.cite()));
+        }
+        for t in &self.tissues {
+            lines.push(format!("  Ткань '{}': τ={:.0} дн, [ОЦЕНКА] веса счётчиков",
+                t.config.name, t.config.renewal_period_days));
+        }
+        lines.push(format!("Z_crit={:.2}: [{}]", self.z_crit,
+            crate::provenance::sources::Z_CRIT_ESTIMATE.cite()));
+        lines.push(format!("Frailty Index: {}", crate::provenance::sources::FRAILTY_INDEX.cite()));
+        lines
     }
 }
 
@@ -226,5 +279,20 @@ mod tests {
             org.step(1.0);
             assert!(org.frailty_index >= 0.0 && org.frailty_index <= 0.7);
         }
+    }
+
+    #[test]
+    fn diet_changes_ros() {
+        let mut org = Organism::human();
+        let ros_before = org.ros_level;
+        org.apply_diet(DietConfig::high_fat());
+        assert!(org.ros_level > ros_before, "High-fat diet must increase ROS");
+    }
+
+    #[test]
+    fn mediterranean_diet_lowers_ros() {
+        let mut org = Organism::human();
+        org.apply_diet(DietConfig::mediterranean());
+        assert!(org.ros_level < 0.1, "Mediterranean diet must lower ROS below baseline");
     }
 }
