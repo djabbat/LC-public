@@ -131,7 +131,7 @@ Full list: [EVIDENCE.md](Organismal_Aging/EVIDENCE.md)
 - [CONCEPT.md](CONCEPT.md) — full project concept
 - [THEORY.md](Organismal_Aging/THEORY.md) — mathematical formalism
 - [EVIDENCE.md](Organismal_Aging/EVIDENCE.md) — evidence base
-- [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md) — open problems
+- [OPEN_PROBLEMS.md]() — open problems
 - [AUDIT_2026-06-21.md](Organismal_Aging/AUDIT_2026-06-21.md) — code & document audit
 - [EIC_PATHFINDER.md](Organismal_Aging/docs/EIC_PATHFINDER.md) — grant proposal
 
