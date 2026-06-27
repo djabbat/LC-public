@@ -935,9 +935,10 @@ principle: **affect is brain-liver, not brain-only.**
 13. PMID: 39227758 --- Mendelian randomization study of NAFLD and
     anxiety disorders. *BMC Gastroenterology*, 2024.
 
-14. PMID: 38075046 --- Chen, S., et al. (2023). Bile acid signalling and
-    its role in anxiety disorders. *Frontiers in Endocrinology*, 14,
-    1263456.
+14. PMID: 39227758 --- Wang, S., et al. (2024). Causal relationships between
+    neuropsychiatric disorders and nonalcoholic fatty liver disease: A
+    bidirectional Mendelian randomization study. *BMC Gastroenterology*, 24, 299.
+    DOI: 10.1186/s12876-024-03123-4. PMCID: PMC11373482.
 
 15. PMID: 31955616 --- Petruccelli, E., et al. (2020). Significance of
     DopEcR, a G-protein coupled dopamine/ecdysteroid receptor. *Journal
