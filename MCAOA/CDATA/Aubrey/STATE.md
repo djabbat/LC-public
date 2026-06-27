@@ -1,5 +1,7 @@
 # STATE — Aubrey (ARGUS-LP)
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Date:** 2026-05-15
 **Status:** **Pre-funding proposal stage.** No pilot data exist; CONCEPT v5 complete (55/55 meta-review).
 

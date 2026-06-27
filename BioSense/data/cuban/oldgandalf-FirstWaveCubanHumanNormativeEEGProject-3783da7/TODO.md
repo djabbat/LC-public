@@ -1,5 +1,7 @@
 # Cuban EEG — TODO
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Дата:** 2026-06-11
 
 - [ ] **Валидация Ze** — завершить Ze EEG validation на кубинских данных
