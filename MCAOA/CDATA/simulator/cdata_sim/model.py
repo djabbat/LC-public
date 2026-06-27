@@ -103,7 +103,7 @@ class CDATAModel:
     def _sigma_F(self, M_f: float, M_crit: float = 0.05, beta_M: float = 6.0) -> float:
         return 1.0 / (1.0 + np.exp(beta_M * (M_crit - M_f)))
 
-    def _sigma_N(self, N_mat: int, gamma: float = 0.3) -> float:
+    def _sigma_N(self, N_mat: int, gamma: float = 0.10) -> float:
         return max(0.0, 1.0 - gamma * max(0, N_mat - 1))
 
     def _p53_net(self, N_mat: int, M_f: float) -> float:
