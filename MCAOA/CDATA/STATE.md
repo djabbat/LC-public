@@ -1,5 +1,7 @@
 # STATE — CDATA
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Purpose:** volatile state, active TODOs, decision log, milestones.
 **Convention:** new entries in Decision Log at the top with date.
 
