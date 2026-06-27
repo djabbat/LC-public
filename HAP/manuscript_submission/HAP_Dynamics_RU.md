@@ -304,7 +304,7 @@
 22. El Fettahi, A., & Tqemaladze, J. (2025). Neural-Hepatic Affective Model: an initial formulation. *Preprints.org*, 2025051234.
 23. **PMID: 41373461** — Emerging Roles of Bile Acids in Neuroinflammation. *International Journal of Molecular Sciences*, 26(23), 11301 (2025).
 24. Low polarity fraction of Radix Bupleuri alleviates chronic unpredictable mild stress-induced depression in rats through FXR modulating bile acid homeostasis in liver, gut, and brain. *Phytomedicine*, 2024. DOI: 10.1016/j.phymed.2024.156340.
-25. Klein, A.S., & Kheirbek, M.A. (2024). From bile acids to melancholia. *Neuron*, 112(11). (Подтверждает роль TGR5 в гипоталамусе при стрессе).
+25. Klein, A.S., & Kheirbek, M.A. (2024). From bile acids to melancholia. *Neuron*, 112(11), 1725-1727. PMID: 38843777. DOI: 10.1016/j.neuron.2024.05.007.
 26. **PMID: 41378179** — Song, H., et al. (2025). From Mind to Liver: Exploring the Causal Relationship Between Anxiety Disorders and Non-Alcoholic Fatty Liver Disease Through Mendelian Randomization and UK Biobank Validation. *Journal of Multidisciplinary Healthcare*.
 
 ---
