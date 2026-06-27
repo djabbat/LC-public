@@ -1,5 +1,7 @@
 # BioSense — TODO
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Дата:** 2026-06-11
 
 ---
