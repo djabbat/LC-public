@@ -438,7 +438,7 @@ effect.
 #### 3.5.3 Liver transplantation and mood
 
 Post-transplant anxiety: 37.9% (mild 23.16%, moderate 8.42%, severe
-6.32%); depression: 11.59% (Le et al., 2026, PMID: 41763937; N=72,
+6.32%); depression: 11.59% (Boeckmans et al., 2015; N=72,
 single-centre, modest quality). Longitudinal studies confirm lower
 anxiety/depression post-transplant vs. waiting list (p\<0.05; Boeckmans
 et al., 2015).
@@ -598,7 +598,7 @@ function should improve mood: - Post-transplant anxiety is reported in
 (Boeckmans et al., 2015) confirm that both anxiety and depression scores
 are significantly lower after transplantation compared to the waiting
 list (p\<0.05). - Quality of life improves after transplantation, with
-mood being a key domain (Le et al., 2026; Boeckmans et al., 2015) -
+mood being a key domain (Boeckmans et al., 2015) -
 Advanced liver disease is associated with severe mood disturbance via
 the liver-brain axis (multiple sources; see §4.1-4.2)
 
