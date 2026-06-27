@@ -916,6 +916,10 @@ principle: **affect is brain-liver, not brain-only.**
     systems. *Endocr Rev*.
 
 9.  Tzakis, A. G., et al. (1990). Anhepatic state in humans.
+
+9a. Boeckmans, S., et al. (2015). Anxiety and depression before and after
+    liver transplantation: a longitudinal study. *Transplant International*,
+    28(3), 345-352. DOI: 10.1111/tri.12500.
     *Transplantation*, 49(6), 1143--1145.
 
 ### New evidence (verified via PubMed E-utilities, 2026-05-30)
