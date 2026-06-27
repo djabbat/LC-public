@@ -1,5 +1,16 @@
 # ARGUS-LP — Hardware Architecture & Specification
 
+> **⚠️ v2.0 ОБНОВЛЕНИЕ (2026-06-27):** аппаратная архитектура пересмотрена.  
+> **v1.0 (ниже, 2026-05-15):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, Claude API, BSL-2, fluidics.  
+> **v2.0 (актуальная):** 40× сухой / 60× Water Immersion, RasPi 5 + SSD снаружи, LED/лазеры, BSL-1, водяная муфта.  
+> **Актуальный BOM и компоновка:** `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md`  
+> **Актуальные параметры:** `../PARAMETERS.md` (обновлён 2026-06-27)  
+> **Ниже сохранена v1.0 для истории.**
+
+---
+
+# ARGUS-LP — Hardware Architecture & Specification (v1.0)
+
 **Version:** 1.0 (2026-05-15)
 **Status:** Design complete. Engineering build (Tsomaia G.) pending funding.
 **Biological context:** See parent `../CONCEPT.md` (Aubrey — centriole age tracking, Phase A)
