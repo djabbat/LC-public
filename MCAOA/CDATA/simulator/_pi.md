@@ -27,11 +27,11 @@
 ## Быстрые команды
 ```bash
 # Запуск тестов
-cd ~/Desktop/CDATA_simulator && python -m pytest tests/ -v
+cd ~/Desktop/LC/MCAOA/CDATA/simulator && python3 -m pytest tests/ -v
 
 # Установка в dev-режиме
-pip install -e .
+cd ~/Desktop/LC/MCAOA/CDATA/simulator && python3 -m pip install -e ".[dev]"
 
 # Запуск симуляции
-python -c "from cdata_sim import CDATAModel; m = CDATAModel(seed=42); print(m.simulate_tree(max_generations=40, n_cells=100))"
+cd ~/Desktop/LC/MCAOA/CDATA/simulator && python3 -c "from cdata_sim import CDATAModel; m = CDATAModel(seed=42); trees = m.simulate_tree(max_generations=60, n_cells=200); print(m.compute_statistics(trees))"
 ```
