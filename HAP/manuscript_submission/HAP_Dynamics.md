@@ -932,9 +932,6 @@ principle: **affect is brain-liver, not brain-only.**
     its role in anxiety disorders. *Frontiers in Endocrinology*, 14,
     1263456.
 
-13. PMID: 39227758 --- Mendelian randomization study of NAFLD and
-    anxiety disorders. *BMC Gastroenterology*, 2024.
-
 14. PMID: 39227758 --- Wang, S., et al. (2024). Causal relationships between
     neuropsychiatric disorders and nonalcoholic fatty liver disease: A
     bidirectional Mendelian randomization study. *BMC Gastroenterology*, 24, 299.
@@ -963,6 +960,12 @@ principle: **affect is brain-liver, not brain-only.**
     Research Progress on the Mechanism of Bile Acids and Their Receptors
     in Depression. *International Journal of Molecular Sciences*,
     26(9), 4023. DOI: 10.3390/ijms26094023. PMCID: PMC12071821.
+
+20a. PMID: 41378179 --- Song, Y., et al. (2025). From Mind to Liver:
+    Exploring the Causal Relationship Between Anxiety Disorders and
+    Non-Alcoholic Fatty Liver Disease Through Mendelian Randomization
+    and UK Biobank Validation. *Journal of Multidisciplinary Healthcare*.
+    DOI: 10.2147/JMDH.S498234. [Anxiety→NAFLD HR=1.630.]
 
 21. PMID: 39566821 --- Idahosa, S.O., Diarra, R., Ranu, H.K., et
     al. (2025). Evidence and Mechanism of Bile Acid-Mediated Gut-Brain
