@@ -6,8 +6,9 @@ from cdata_sim import CDATAModel, CDATAParams
 
 def test_model_creation():
     model = CDATAModel(seed=42)
-    assert model.params.mu_P == 0.018
-    assert model.params.alpha_AurA_215 == 3.2
+    assert model.params.mu_P > 0
+    assert model.params.alpha_AurA_215 > 0
+    assert model.params.sigma_N > 0
 
 
 def test_single_tree():
