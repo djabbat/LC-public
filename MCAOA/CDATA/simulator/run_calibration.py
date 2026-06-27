@@ -45,7 +45,7 @@ def sample_params():
         alpha_AurA_215=rng.uniform(0.3, 12.0),
         alpha_AurA_315=rng.uniform(0.3, 12.0),
         kappa=rng.uniform(0.03, 0.40),
-        sigma_N=rng.uniform(0.1, 1.0),  # Ключевой параметр амплификации
+        sigma_N=rng.uniform(0.25, 1.2),  # Мин. 0.25 для стабильной амплификации
     )
 
 def evaluate(params, n_cells=30):
@@ -62,7 +62,7 @@ def evaluate(params, n_cells=30):
     return np.sqrt(dist), stats
 
 # Три фазы с увеличивающимся числом клеток
-N_TRIALS = 3000
+N_TRIALS = 5000
 best_params = None
 best_dist = np.inf
 best_stats = None
