@@ -1,5 +1,13 @@
 # Aubrey — 6-Month Centriole Age Tracking Platform
 
+> **⚠️ АППАРАТНАЯ ЧАСТЬ ОБНОВЛЕНА (2026-06-27).**  
+> **v1.0 (ниже, 2026-05-15):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, Claude/Gemini API, BSL-2, €13,850/ед.  
+> **v2.0 (актуальная):** 40× сухой / 60×/1.2 Water Immersion, RasPi 5 + SSD снаружи, LED/лазеры, BSL-1, $2,045–5,945.  
+> **Актуальный BOM и компоновка:** `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md`  
+> **Актуальные параметры:** `PARAMETERS.md` (обновлён 2026-06-27)  
+> **Научная методология (pre-registration, sample size, phototoxicity budget, blinding, controls, go/no-go) — сохранена и актуальна.**  
+> **Данный CONCEPT сохраняется для научного содержания; аппаратные спецификации в секциях §Hardware, §Budget — исторические (v1.0).**
+
 **Formal grant title (per signed LoS Parrish 2026-04-22 and Geiger 2026-04-23):** *AI-Directed Pure-Lineage Test of Counter #1 (Centriolar) in the Multi-Counter Architecture of Organismal Aging (MCAOA)*
 
 **Phase A equipment name:** **ARGUS-LP** — *AI-Resident Robotic Genealogical Ultra-surveillance for Lineage Purification.* A purpose-built COTS-assembled live-cell imaging station (not a Zeiss retrofit), designed from scratch for 24/7 AI-agent-driven continuous live-cell observation over the 6-month tracking window. The Argus mythological reference is intentional: 24/7 multi-month autonomous surveillance of a slowly-drifting cellular phenotype is a function that no human-operated workflow can deliver. ARGUS-LP is Phase A's capital deliverable; it remains the property of GLA at the end of the grant. Two identical units are built (see §Budget): Unit #1 at GLA Abastumani, Unit #2 at an independent replication site (Zheleznov, LoS pending). Engineering subcontractor G. Tsomaia (Dipl. Ing. Tbilisi Polytechnic) handles design and assembly.
