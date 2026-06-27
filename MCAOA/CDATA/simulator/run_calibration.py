@@ -45,6 +45,7 @@ def sample_params():
         alpha_AurA_215=rng.uniform(0.3, 12.0),
         alpha_AurA_315=rng.uniform(0.3, 12.0),
         kappa=rng.uniform(0.03, 0.40),
+        sigma_N=rng.uniform(0.1, 1.0),  # Ключевой параметр амплификации
     )
 
 def evaluate(params, n_cells=30):
@@ -61,22 +62,22 @@ def evaluate(params, n_cells=30):
     return np.sqrt(dist), stats
 
 # Три фазы с увеличивающимся числом клеток
-N_TRIALS = 2000
+N_TRIALS = 3000
 best_params = None
 best_dist = np.inf
 best_stats = None
 
 t0 = time.time()
 for i in range(N_TRIALS):
-    # Фаза 1 (первые 500): быстрая оценка (10 клеток)
-    # Фаза 2 (500-1000): средняя (30 клеток)
-    # Фаза 3 (1000+): точная (80 клеток)
-    if i < 500:
-        nc = 10
-    elif i < 1200:
-        nc = 30
+    # Фаза 1 (первые 1000): быстрая (5 клеток)
+    # Фаза 2 (1000-2000): средняя (20 клеток)
+    # Фаза 3 (2000+): точная (60 клеток)
+    if i < 1000:
+        nc = 5
+    elif i < 2000:
+        nc = 20
     else:
-        nc = 80
+        nc = 60
     
     params = sample_params()
     dist, stats = evaluate(params, n_cells=nc)
