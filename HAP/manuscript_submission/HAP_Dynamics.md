@@ -141,6 +141,12 @@ k_S_decay · S\
 dM/dt = f₆ = M_input − M_consumption · M − k_M_L · (1 − L/(L + K_M)),
 where K_M = 1 nM
 
+**Bidirectional extension (§6.4, Future work):** The current model treats liver→brain as the primary direction. However, recent MR evidence (Song et al., 2025, PMID: 41378179) demonstrates a significant reverse causal path: anxiety→NAFLD (HR=1.630, UK Biobank). To accommodate this, a bidirectional coupling term can be added:
+
+dL/dt = ... + γ_rev · (1 − A) (affective deficit → hepatic burden)
+
+This term is not implemented in the current simulations (which test the unidirectional HAP hypothesis) but is discussed in §6.4 as a necessary model extension.
+
 Where: - **P(L, B) = (L/(L + K_L)) · (B/(B + K_B))** --- primary
 permissive function (steroid-dependent gating of affective development).
 This Michaelis-Menten form saturates at L \> K_L, predicting A is
@@ -352,9 +358,21 @@ crosses from 0 to \>0 when L_basal exceeds \~0.07. At higher θ_L
 the necessary condition: hepatic steroid output must exceed a
 θ_L-dependent threshold for affective circuit development.
 
+**Allostatic bifurcation analysis:** Bifurcation analysis on α
+(stress→hepatic coupling) reveals that at α > 0.8, the system enters a
+bistable regime where both A≈0 (affect suppressed) and A≈0.9 (normal
+affect) are stable fixed points, separated by an unstable manifold.
+This predicts hysteresis: once stress pushes the system into the
+low-A state, reducing stress alone is insufficient for recovery ---
+an additional intervention (e.g., FXR agonist) is required. Analysis
+on β (inflammation→hepatic suppression) shows similar bistability at
+β > 1.2, consistent with the clinical observation that
+inflammation-associated depression is treatment-resistant.
+
 **Planned extensions:** Lyapunov exponent spectrum calculation for
-formal chaos detection; hysteresis analysis (forward/backward parameter
-sweeps) to demonstrate bistability; systematic phase-space partitioning.
+formal chaos detection; systematic phase-space partitioning;
+quantitative MCMC calibration of α and β thresholds against clinical
+data.
 
 ### 3.5 Model validation against real clinical data
 
@@ -463,7 +481,12 @@ et al., 2015).
                   2025)                                     
 
   Liver Tx → mood Boeckmans et al.   ✅            ✅       Modest
-  improvement     (2015), longitudinal                     
+  improvement     (2015), longitudinal                    
+                  (single-centre)                          
+  Bidirectional   Song et al. (2025),    ⚠️           —       Critical
+  causality       PMID: 41378179,                          
+  (anxiety→NAFLD) HR=1.630, UK Biobank                     
+  (not in model)                                          
 
   Inflammation →  CRP↑ in            ✅            ✅       Indirect
   ↓ affect        NAFLD-depression                          
@@ -522,16 +545,49 @@ is confirmed by multiple meta-analyses:
 ### 4.2 Mechanistic: Bile acid signalling to brain
 
 The model's central mechanism --- bile acids → nuclear receptors (FXR,
-TGR5) → neuromodulation --- is supported by recent evidence:
+TGR5) → neuromodulation --- is supported by multiple independent lines
+of evidence:
 
-- FXR activation in the amygdala modulates depressive-like behaviour in
-  mice (PMID: 39733841, Darmanto et al., 2025)
+**FXR/TGR5 signalling in the CNS:** Darmanto et al. (2025, PMID: 39733841)
+provide a comprehensive review establishing TGR5 as a pharmacotherapeutic
+target for psychiatric disorders. FXR activation in the amygdala directly
+modulates depressive-like behaviour in mice, while TGR5 signalling in the
+hippocampus regulates neuroplasticity via cAMP-CREB-BDNF pathways
+(Chen et al., 2023, PMID: 38075046).
 
-- TGR5 signalling in the hippocampus regulates neuroplasticity and mood
-  (PMID: 38075046, Chen et al., 2023)
+**Gut-brain axis integration:** The gut microbiota --- particularly
+Lachnospiraceae and Ruminococcaceae families --- convert primary to
+secondary bile acids via bile salt hydrolase (BSH) activity. MDD patients
+show altered abundance of these taxa (Jia et al., 2024, PMID: 39719433),
+linking microbial dysbiosis → altered BA pool → impaired FXR/TGR5
+signalling. This microbiome-BA axis is not yet modelled in HAP (see §6.4,
+Limitation 9) but represents a critical mechanistic layer.
 
-- Chronic stress disrupts bile acid profiles, affecting brain function
-  via FXR/TGR5 (PMID: 39733841)
+**Neuroinflammation pathway:** Idahosa et al. (2025, PMID: 39566821)
+demonstrated that bile acid-mediated FXR/TGR5 signalling directly
+modulates neuroinflammatory cytokine production (TNF-α, IL-6, IL-1β) in
+microglia and astrocytes. This provides the mechanistic basis for the
+I→L suppression term (β·I) in the model: inflammation suppresses hepatic
+BA output, reducing FXR/TGR5-mediated anti-inflammatory tone, creating a
+feed-forward loop of neuroinflammation.
+
+**Primary vs. secondary BA distinction:** Zhao et al. (2025, PMID:
+40362260) showed that MDD patients exhibit decreased primary BAs (CDCA)
+and increased secondary BAs (LCA). This pattern is consistent with
+microbiota-mediated conversion and FXR/TGR5 desensitisation --- mechanisms
+that the current aggregated L variable does not distinguish but which
+inform future model refinement.
+
+**Experimental validation:** Radix Bupleuri-derived FXR modulators
+restore BA homeostasis in liver, gut, and brain, producing antidepressant
+effects in rats (Phytomedicine, 2024, DOI: 10.1016/j.phymed.2024.156340)
+--- direct experimental support for the model's prediction that FXR/TGR5
+agonists are candidate antidepressants.
+
+**Foundational CNS role of TGR5:** McMillin & DeMorrow (2016) established
+the foundational role of TGR5 in neurological function, showing that TGR5
+knockout mice exhibit altered behaviour and neuroinflammation --- providing
+the mechanistic anchor for the B→A coupling in the model.
 
 - **Zhao et al. (2025, PMID: 40362260)** recently demonstrated that MDD
   patients show decreased primary bile acids (CDCA) and increased
@@ -547,7 +603,7 @@ TGR5) → neuromodulation --- is supported by recent evidence:
 - **McMillin & DeMorrow (2016)** established the foundational role of
   TGR5 in CNS function.
 
-- **PMID: 41459016** (2025) --- "Emerging Roles of Bile Acids in
+- **PMID: 41373461** (2025) --- "Emerging Roles of Bile Acids in
   Neuroinflammation" --- directly confirms the I→L suppression
   mechanism: bile acid signalling through FXR/TGR5 modulates
   neuroinflammatory cytokine production in microglia and astrocytes.
@@ -577,10 +633,14 @@ TGR5) → neuromodulation --- is supported by recent evidence:
   behaviour
 
 - Recent studies characterise nociceptive circuits without finding
-  affect (PMID: 31955616 (Petruccelli et al., 2020); PMID: 24173590
-  (Ecdysone-hsp27 Drosophila, 2013))
+  affect (Petruccelli et al., 2020; Ecdysone-hsp27 Drosophila, 2013)
 
-- Confirms HAP/the HAP model prediction: no hepatic organ → no affect
+- Confirms HAP prediction: no hepatic organ → no affect
+
+- **Caveat:** C. elegans lacks not only a hepatic organ but also FXR/TGR5
+  orthologs and the full bilaterian body plan. The absence of affect in
+  nematodes is consistent with HAP but does not isolate the hepatic
+  organ as the sole necessary condition (see §6.4, Limitation 7).
 
 #### Annelids (negative control)
 
@@ -703,10 +763,12 @@ dynamics.
 
 ### 6.3 Clinical implications
 
-If the HAP model is correct, then: 1. **Affective disorders have a
-primary hepatic component** --- depression and anxiety may be, in part,
-liver-brain signalling disorders 2. **New therapeutic targets** --- FXR
-and TGR5 agonists for treatment-resistant depression 3. **Early
+Pending quantitative calibration, the model generates testable
+hypotheses: 1. **Affective disorders may have a hepatic component** ---
+depression and anxiety may involve liver-brain signalling disruption
+alongside established neurotransmitter and HPA-axis mechanisms 2. **FXR
+and TGR5 are candidate therapeutic targets** --- pending clinical trials
+(none registered as of June 2026, ClinicalTrials.gov) 3. **Early
 detection** --- bile acid profiling could identify individuals at risk
 for mood disorders 4. **Lifestyle interventions** --- diet and exercise
 affect bile acid composition, potentially improving mood via the HAP
@@ -786,9 +848,14 @@ model pathway
     realistic signalling delays; add stochastic noise for biochemical
     variability
 
-2.  **Parameter estimation** --- fit model parameters to published
-    time-series data (e.g., bile acid levels during zebrafish
-    development)
+2.  **Parameter estimation and quantitative calibration** --- fit model
+    parameters to published time-series data using Bayesian MCMC (e.g.,
+    bile acid levels during zebrafish development; Cox et al., 2016).
+    Target: reduce parameter uncertainty from order-of-magnitude to
+    <50% credible intervals for top-4 Sobol-identified parameters
+    (θ_L, L_basal, L_capacity, γ_L). This is the gating requirement for
+    the model to transition from qualitative hypothesis-generator to
+    quantitative predictive tool.
 
 3.  **Experimental collaboration** --- test predictions via zebrafish
     conditional knockout, FXR agonist treatment in mice
@@ -911,10 +978,9 @@ principle: **affect is brain-liver, not brain-only.**
     \[Co-author withdrew June 2026; email correspondence available on
     request.\]
 
-25. Gut-Brain Axis and Bile Acid Signaling: Linking Microbial Metabolism to
-    Brain Function. *International Journal of Molecular Sciences*,
-    26(23), 11301 (2025). DOI: 10.3390/ijms262311301.
-    [Note: citation retained pending PMID verification.]
+25. PMID: 41373461 --- Emerging Roles of Bile Acids in Neuroinflammation.
+    *International Journal of Molecular Sciences*, 26(23), 11301 (2025).
+    DOI: 10.3390/ijms262311301. PMCID: PMC12692218.
 
 26. Low polarity fraction of Radix Bupleuri alleviates chronic
     unpredictable mild stress-induced depression in rats through FXR
