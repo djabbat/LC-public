@@ -1,5 +1,7 @@
 # TODO — HAP Project
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## PH0 — Симуляция (приоритет)
 
 - [x] **Создан прототип ODE модели** (Python, 6 переменных, 4 ablation эксперимента)
