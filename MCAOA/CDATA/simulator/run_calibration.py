@@ -111,5 +111,4 @@ print(f"  Амплиф:  {stats['amplification_freq']:.3f} (цель: {TARGET['a
 print(f"\n# Откалиброванные параметры (скопировать в CDATAParams):")
 d = best_params.__dict__
 for k in sorted(d):
-    if not k.startswith('sigma'):
-        print(f"    {k}: float = {d[k]:.6f}")
+    print(f"    {k}: float = {d[k]:.6f}")
