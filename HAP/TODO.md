@@ -11,10 +11,7 @@
 - [x] **Письмо Afaf** — отправлено, ответ получен (отказ), проект заморожен
 - [x] **Parameter sensitivity analysis** (Morris + Sobol) → theta_L главный (ST=0.75)
 - [x] **Stochastic parameter perturbation** → robustness = 0.992 (±5% шум)
-- [x] **Medical Hypotheses** — подача (15.06), отозвана (17.06) из-за dual submission
-- [x] **CSF** — подача (16.06), rejected (17.06): dual submission detected
-- [x] **Отзыв YMEHY-D-26-00985** (17.06) + apology letter Marcel Clerc
-- [x] **Biomedical Signal Processing and Control** — подача (19.06.2026, BSPC-D-26-11119, Elsevier)
+
 
 ## ⚠️ Biomarker Review — ЗАМОРОЖЕНО (2026-06-15)
 
@@ -22,8 +19,6 @@
 - [ ] **При разморозке:** удалить имя Afaf из протокола, OSF, всех документов
 - [ ] **При разморозке:** сузить протокол до 1-2 biomarker domains (соло)
 - [ ] Embase access — отложено
-
-## 🔴 ТЕКУЩИЙ ФОКУС: Ожидание решения BSPC (Biomedical Signal Processing and Control)
 
 ## PH1 — Литература / Evidence
 
@@ -46,12 +41,6 @@
 - [ ] Определить, какие биомаркеры нужны для эмпирической проверки
 - [ ] Оценить доступность данных через GLA
 - [ ] Дизайн протокола сбора данных
-
-## PH3 — Публикация
-
-- [ ] Вторая статья HAP/NHAM (новый коллаборатор взамен Afaf — TBD)
-- [ ] Подача в журнал (Cell/Neuron/PNAS/PLOS Biology — после консультации)
-- [x] **Medical Hypotheses** — cover letter готов, в процессе подачи
 
 ## PH4 — Инфраструктура
 
