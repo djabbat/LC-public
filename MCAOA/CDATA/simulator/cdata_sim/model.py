@@ -61,7 +61,7 @@ class CDATAParams:
     sigma_D: float = 0.12
     sigma_s: float = 0.06
     sigma_f: float = 0.09
-    sigma_N: float = 0.05
+    sigma_N: float = 0.45
 
 
 @dataclass
