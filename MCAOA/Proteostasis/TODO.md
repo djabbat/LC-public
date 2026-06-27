@@ -1,5 +1,7 @@
 # Proteostasis — Comprehensive TODO.md
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Project Overview
 Proteostasis aims to understand mechanisms of protein stability under temperature fluctuations, develop predictive algorithms, and create an open platform for data sharing. This TODO.md outlines all tasks, owners, dependencies, and milestones required to achieve project success. The project is divided into three priority levels: P0 (critical), P1 (important), and P2 (optional). All tasks are assigned to specific team members with clear deadlines and dependencies.
 

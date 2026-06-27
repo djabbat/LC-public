@@ -1,5 +1,7 @@
 # MitoROS — TODO
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Goals & Tasks
 
 - **Goal 1:** Establish core MitoROS functionality upon approval.

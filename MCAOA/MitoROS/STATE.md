@@ -1,5 +1,7 @@
 # MitoROS — State
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Date:** after completion of prerequisite tasks  
 **Version:** 0.1.0  
 **Status:** 🟡 In Development

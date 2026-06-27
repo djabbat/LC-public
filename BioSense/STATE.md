@@ -1,5 +1,7 @@
 # STATE — BioSense
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Дата:** 2026-06-11
 **Версия:** 2.0 (аудит — заменён фиктивный AI-шаблон от 2025-04-01)
 

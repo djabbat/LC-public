@@ -1,5 +1,7 @@
 # ARGUS-LP — Build Checklist
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Owner:** G. Tsomaia (engineering subcontractor)
 **Status:** Pending funding decision
 **Reference:** `CONCEPT.md` (this dir), `~/Desktop/ARGUS-LP_hardware_spec.md`
