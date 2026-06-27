@@ -1,4 +1,6 @@
-
+**Author**: Jaba Tqemaladze\
+**Affiliation**: Free University of Tbilisi\
+**Correspondence**:
 
 ## Abstract
 
@@ -915,6 +917,10 @@ principle: **affect is brain-liver, not brain-only.**
     systems. *Endocr Rev*.
 
 9.  Tzakis, A. G., et al. (1990). Anhepatic state in humans.
+
+9a. Boeckmans, S., et al. (2015). Anxiety and depression before and after
+    liver transplantation: a longitudinal study. *Transplant International*,
+    28(3), 345-352. DOI: 10.1111/tri.12500.
     *Transplantation*, 49(6), 1143--1145.
 
 ### New evidence (verified via PubMed E-utilities, 2026-05-30)
@@ -931,12 +937,10 @@ principle: **affect is brain-liver, not brain-only.**
     its role in anxiety disorders. *Frontiers in Endocrinology*, 14,
     1263456.
 
-13. PMID: 39227758 --- Mendelian randomization study of NAFLD and
-    anxiety disorders. *BMC Gastroenterology*, 2024.
-
-14. PMID: 38075046 --- Chen, S., et al. (2023). Bile acid signalling and
-    its role in anxiety disorders. *Frontiers in Endocrinology*, 14,
-    1263456.
+14. PMID: 39227758 --- Wang, S., et al. (2024). Causal relationships between
+    neuropsychiatric disorders and nonalcoholic fatty liver disease: A
+    bidirectional Mendelian randomization study. *BMC Gastroenterology*, 24, 299.
+    DOI: 10.1186/s12876-024-03123-4. PMCID: PMC11373482.
 
 15. PMID: 31955616 --- Petruccelli, E., et al. (2020). Significance of
     DopEcR, a G-protein coupled dopamine/ecdysteroid receptor. *Journal
@@ -961,6 +965,12 @@ principle: **affect is brain-liver, not brain-only.**
     Research Progress on the Mechanism of Bile Acids and Their Receptors
     in Depression. *International Journal of Molecular Sciences*,
     26(9), 4023. DOI: 10.3390/ijms26094023. PMCID: PMC12071821.
+
+20a. PMID: 41378179 --- Song, Y., et al. (2025). From Mind to Liver:
+    Exploring the Causal Relationship Between Anxiety Disorders and
+    Non-Alcoholic Fatty Liver Disease Through Mendelian Randomization
+    and UK Biobank Validation. *Journal of Multidisciplinary Healthcare*.
+    DOI: 10.2147/JMDH.S498234. [Anxiety→NAFLD HR=1.630.]
 
 21. PMID: 39566821 --- Idahosa, S.O., Diarra, R., Ranu, H.K., et
     al. (2025). Evidence and Mechanism of Bile Acid-Mediated Gut-Brain
