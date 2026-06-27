@@ -42,7 +42,7 @@ class CDATAParams:
     mu_P: float = 0.020
     r_0: float = 0.060
     r_age: float = 0.003
-    lambda_age: float = 0.010
+    lambda_age: float = 0.025
     k_cat: float = 0.080
     mu_s: float = 0.020
     mu_f: float = 0.020
@@ -55,6 +55,18 @@ class CDATAParams:
     alpha_AurA_315: float = 3.0
     kappa: float = 0.200
     tau: float = 2.5
+    # Homeostasis
+    M_max: float = 3.0
+    K_s: float = 1.5
+    K_f: float = 1.5
+    # Asymmetry (additive model)
+    gamma_D: float = 0.015
+    gamma_S: float = 0.02
+    gamma_F: float = 0.02
+    gamma_N: float = 0.08
+    D_healthy: float = 0.3
+    M_healthy: float = 0.7
+    recovery_rate: float = 0.005
 
     # Noise coefficients
     sigma_P: float = 0.080
@@ -135,17 +147,18 @@ class CDATAModel:
              p.sigma_D * np.sqrt(max(0, state.D)) * self.rng.normal(0, np.sqrt(dt))
         new_D = max(0.0, state.D + dD)
 
-        # Structural maintenance
-        dM_s = (-(p.mu_s + p.eta_s * state.D) * state.M_s + p.alpha_CEP - 
+        # Structural maintenance (с гомеостазом: синтез падает при высоком M_s)
+        synthesis_s = p.alpha_CEP / (1.0 + state.M_s / p.K_s)
+        dM_s = (-(p.mu_s + p.eta_s * state.D) * state.M_s + synthesis_s -
                 p.omega * state.D * state.M_s) * dt + \
                p.sigma_s * np.sqrt(max(0, state.M_s)) * self.rng.normal(0, np.sqrt(dt))
-        new_M_s = max(0.0, state.M_s + dM_s)
+        new_M_s = max(0.01, state.M_s + dM_s)
 
-        # Functional maintenance
-        dM_f = (-(p.mu_f + p.eta_f * state.D) * state.M_f + 
-                p.beta_0 * state.M_s * state.P) * dt + \
+        # Functional maintenance (с гомеостазом)
+        synthesis_f = p.beta_0 * state.M_s * state.P / (1.0 + state.M_f / p.K_f)
+        dM_f = (-(p.mu_f + p.eta_f * state.D) * state.M_f + synthesis_f) * dt + \
                p.sigma_f * np.sqrt(max(0, state.M_f)) * self.rng.normal(0, np.sqrt(dt))
-        new_M_f = max(0.0, state.M_f + dM_f)
+        new_M_f = max(0.01, state.M_f + dM_f)
 
         # Центросомная амплификация (без положительной обратной связи)
         dN = p.sigma_N * (1.0 - lambda_eff) * dt + \
