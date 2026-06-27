@@ -884,10 +884,6 @@ principle: **affect is brain-liver, not brain-only.**
     impairment via bile acid metabolism in MDD. *Transl Psychiatry*,
     2024.
 
-18. PMID: 41763937 --- Le et al. (2026). Assessment of Anxiety,
-    Depression and Associated Factors in Post-Liver Transplant
-    Recipients in Vietnam. *Transplant Proc*, 2026. \[N=72,
-    single-centre.\]
 
 19. PMID: 37142003 --- Cai, H., et al. (2023). Associations of
     depression score with MAFLD and liver fibrosis. *J Affect Disord*,
