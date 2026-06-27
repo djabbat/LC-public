@@ -14,9 +14,9 @@
 __version__ = "2.0.0"
 __author__ = "Jaba Tqemaladze"
 
-from .model import CDATAModel
+from .model import CDATAModel, CDATAParams
 from .calibration import ABCSMC
 from .sensitivity import SobolGSA
 from .regularization import RegularizationComparison
 
-__all__ = ["CDATAModel", "ABCSMC", "SobolGSA", "RegularizationComparison"]
+__all__ = ["CDATAModel", "CDATAParams", "ABCSMC", "SobolGSA", "RegularizationComparison"]
