@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "cdata-sim"
+version = "2.0.0"
+description = "CDATA-v2: Stochastic model of centriole-driven stem cell exhaustion"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+authors = [{name = "Jaba Tqemaladze", email = "jaba@longevity.ge"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest", "scipy", "matplotlib"]
+
+[project.urls]
+Homepage = "https://github.com/djabbat/CDATA-sim"
+Repository = "https://github.com/djabbat/CDATA-sim"
