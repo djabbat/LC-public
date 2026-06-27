@@ -1,5 +1,7 @@
 # CDATA — TODO
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Goals & Tasks
 
 ### Project Objectives

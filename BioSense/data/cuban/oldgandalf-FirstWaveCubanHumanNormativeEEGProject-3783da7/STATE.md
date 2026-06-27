@@ -1,5 +1,7 @@
 # STATE — Cuban EEG Dataset
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Дата:** 2026-06-15 (аудит pi)
 **Статус:** 🟡 Архивный датасет
 

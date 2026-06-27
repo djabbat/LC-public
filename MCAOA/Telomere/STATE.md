@@ -1,5 +1,7 @@
 # Telomere — State
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Date:** upon approval  
 **Version:** 0.1.0  
 **Status:** 🟡 In Development
