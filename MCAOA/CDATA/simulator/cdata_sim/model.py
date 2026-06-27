@@ -148,8 +148,8 @@ class CDATAModel:
         new_M_f = max(0.0, state.M_f + dM_f)
 
         # Centrosome number (stochastic amplification when CCP5 declines)
-        dN = p.sigma_N * (1.0 - lambda_eff) * state.N_mat * dt + \
-             p.sigma_N * np.sqrt(state.N_mat) * self.rng.normal(0, np.sqrt(dt))
+        dN = p.sigma_N * (1.0 - lambda_eff) * float(state.N_mat) * dt + \
+             p.sigma_N * np.sqrt(float(state.N_mat)) * self.rng.normal(0, np.sqrt(dt))
         new_N_mat = max(1, int(round(state.N_mat + dN)))
 
         # Store history for delay
