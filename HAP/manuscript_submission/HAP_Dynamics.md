@@ -462,9 +462,8 @@ et al., 2015).
   in MDD          CDCA/LCA (Zhao                            
                   2025)                                     
 
-  Liver Tx → mood N=72 (PMID:        ✅            ✅       Modest
-  improvement     41763937) +                               
-                  longitudinal                              
+  Liver Tx → mood Boeckmans et al.   ✅            ✅       Modest
+  improvement     (2015), longitudinal                     
 
   Inflammation →  CRP↑ in            ✅            ✅       Indirect
   ↓ affect        NAFLD-depression                          
@@ -754,25 +753,29 @@ model pathway
     debated (Anderson & Adolphs, 2014). Stricter criteria would restrict
     affect to vertebrates.
 
-8.  **Confounding** --- NAFLD and depression share risk factors
+8.  **Bidirectional causality not modelled** --- the current model treats the liver→brain direction as primary. However, MR evidence supports reverse causality (anxiety→NAFLD, OR up to 1.73; Wang et al., 2024, PMID: 39227758). Future model iterations should include bidirectional A→L coupling.
+
+9.  **Microbiome not modelled** --- gut microbiota (Lachnospiraceae, Ruminococcaceae) modulate bile acid metabolism and are altered in MDD. The model's L variable aggregates hepatic steroid output without distinguishing primary vs. microbiota-modified secondary BAs. This is a significant biological simplification.
+
+10. **Confounding** --- NAFLD and depression share risk factors
     (obesity, sedentary lifestyle) not modelled. Mendelian randomisation
     (PMID: 39227758, OR=1.016) provides partial protection against
     confounding, but the effect is modest.
 
-9.  **No clinical trials** --- no FXR/TGR5 agonist trials for depression
+11. **No clinical trials** --- no FXR/TGR5 agonist trials for depression
     are registered (ClinicalTrials.gov, June 2026). Predictions 5.2-5.3
     are preclinical extrapolations.
 
-10. **Dynamical analysis incomplete** --- phase portraits, Lyapunov
+12. **Dynamical analysis incomplete** --- phase portraits, Lyapunov
     spectra, and hysteresis analysis are not performed. The critical
     window (§2.3) implies bistability, but this has not been formally
     demonstrated.
 
-11. **Single-author limitation** --- following co-author withdrawal (El
+13. **Single-author limitation** --- following co-author withdrawal (El
     Fettahi, June 2026; see §1.1), the manuscript is sole-authored.
     Independent methodological review is advised.
 
-12. **Citation accuracy** --- the initial version of this manuscript
+14. **Citation accuracy** --- the initial version of this manuscript
     contained incorrectly transcribed PMIDs, which have been corrected.
     All PMIDs should be independently verified before submission. We
     recommend using automated validation tools.
