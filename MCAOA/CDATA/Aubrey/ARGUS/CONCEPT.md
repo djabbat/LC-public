@@ -1,11 +1,75 @@
 # ARGUS-LP — Hardware Architecture & Specification
 
-> **⚠️ v2.0 ОБНОВЛЕНИЕ (2026-06-27):** аппаратная архитектура пересмотрена.  
-> **v1.0 (ниже, 2026-05-15):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, Claude API, BSL-2, fluidics.  
-> **v2.0 (актуальная):** 40× сухой / 60× Water Immersion, RasPi 5 + SSD снаружи, LED/лазеры, BSL-1, водяная муфта.  
-> **Актуальный BOM и компоновка:** `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md`  
-> **Актуальные параметры:** `../PARAMETERS.md` (обновлён 2026-06-27)  
-> **Ниже сохранена v1.0 для истории.**
+> **⚠️ v2.0 (АКТУАЛЬНАЯ, 2026-06-27):** аппаратная архитектура полностью пересмотрена после переписки с Алексеем.
+>
+> **v1.0 (ниже, 2026-05-15, СОХРАНЕНА ДЛЯ ИСТОРИИ):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, Claude API, BSL-2, fluidics.
+
+---
+
+## v2.0 — Актуальная архитектура (2026-06-27)
+
+### Ключевые изменения (v1.0 → v2.0)
+
+| Параметр | v1.0 (15 мая) | **v2.0 (27 июня)** | Причина |
+|----------|:---:|:---:|------|
+| **Объектив** | 100×/1.4 Oil | **40×/0.95 сухой (V1) / 60×/1.2 Water (V2)** | Масло сохнет при 37°C за 4–6 ч |
+| **Иммерсия** | Масляная | **Водяная (collar + шприцевой насос 0.1 мл/ч)** | Вода не сохнет, 24/7 |
+| **Камера** | sCMOS ORCA-Flash4 | **RasPi HQ (V1) / sCMOS (V2)** | V1: бюджетный PoC |
+| **Освещение** | Лазеры 488/561/405 | **LED 488/561 (V1) / Лазеры (V2)** | V1: без лазерной безопасности |
+| **Управление** | RTX 4090 (внутри/рядом) | **RasPi 5 + SSD — снаружи ящика** | Экономия €3,500 → $80, без перегрева |
+| **AI-ускоритель** | RTX 4090 | **Hailo-8L (13 TOPS, $70)** | CellPose <300 мс, 20W вместо 450W |
+| **AI-мозг** | Claude/Gemini API (платный) | **Mac M4 Pro 48GB + Qwen VL 72B (локально, $0)** | Без API, без интернета |
+| **LLM** | DeepSeek-V3 (RTX 4090) | **Mixtral 8×7B (V4) → Qwen 2.5 VL 72B (V6)** | Vision + код + рассуждение |
+| **Агент** | Свой Python-цикл | **OpenHands (SEE→THINK→ACT→OBSERVE)** | Уровень Claude Code |
+| **Самообучение** | — | **LoRA еженедельно + RAG (Qdrant) + аномалии** | V5 |
+| **BSL** | 2 (лентивирус) | **1 (аденовирус)** | Не требует бокса и −80°C |
+| **Fluidics** | Syringe pump + valves (RITE) | **Водяная муфта + насос (только иммерсия)** | Для PoC fluidics не нужна |
+| **Сборка** | Цомая (195 ч × €20) | **Инженеры Алексея** | Кооперация |
+| **Бюджет** | €13,850/ед. × 2 = €27,700 | **V1: $2,045 / V2: $5,945 / V6: $8,170** | Поэтапный подход |
+
+### Шесть версий (поэтапная сборка)
+
+| Версия | Бюджет | Объектив | Освещение | Камера | AI | Что делает |
+|--------|:---:|------|------|------|-----|------|
+| **V1** | **$2,045** | 40× сухой | LED 488/561 | RasPi HQ | CPU | Поймать деление |
+| **V2** | **$5,945** | 60×/1.2 Water | Лазеры 405/488/561 | sCMOS | CPU | + элиминация |
+| **V3** | **$6,020** | 60×/1.2 Water | Лазеры | sCMOS | Hailo-8L | + real-time зрение |
+| **V4** | **$8,120** | 60×/1.2 Water | Лазеры | sCMOS | Mac M4 Pro + Mixtral | + AI-агент |
+| **V5** | **$8,170** | 60×/1.2 Water | Лазеры | sCMOS | M4 Pro + LoRA + RAG | + самообучение 24/7 |
+| **V6** | **$8,170** | 60×/1.2 Water | Лазеры | sCMOS | M4 Pro + Qwen VL 72B + OpenHands | Claude Code-уровень с vision |
+
+### Актуальные документы
+
+| Документ | Путь |
+|----------|------|
+| **Полная версия v3 (все 6 версий)** | `~/Desktop/ARGUS-LP_v3_final_2026-06-27.md` |
+| **Инженерный BOM (35 + 19 позиций)** | `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md` |
+| **Сопроводительное письмо Алексею** | `~/Desktop/ARGUS_LP_followup_v3_2026-06-27.md` |
+| **Сравнительный анализ всех версий** | `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_comparison_all_versions_2026-06-27.md` |
+| **Параметры** | `../PARAMETERS.md` |
+
+### Компоновка (v2.0)
+
+Герметичный алюминиевый ящик 40×30×30 см. **Инвертированная схема:** объектив 60×/1.2 Water Immersion снизу, чашка Петри 35mm со стеклянным дном — сверху, неподвижно. X-Y-Z каретка перемещает объектив + оптический тракт + лазеры. **RasPi 5 + Hailo-8L + SSD 1 TB — снаружи ящика.** Mac M4 Pro 48GB — отдельно, управляет агентом.
+
+**Водяная иммерсия снизу вверх:** водяная муфта (collar, 3D-печать PETG) + капиллярная подача от шприцевого насоса 0.1 мл/ч. Поверхностное натяжение (~500 Па) >> гидростатического (~10 Па). Вода не падает.
+
+### Защита от лазерного излучения (V2+)
+
+- Научная камера: эмиссионный фильтр OD6+ + дихроик OD4+ + механический затвор Uniblitz LS2 (закрыт синхронно с 405 nm)
+- Камеры наблюдения: notch-фильтры 405/488/561 OD4+
+- Водяной объектив: абляция под стеклом, дебрис в среде, вода чистая
+- Лазерная безопасность Class 3B: стенки OD6+, магнитный интерлок, ключ-выключатель, защитные очки
+
+### AI-конвейер (V3–V6)
+
+**Быстрый мозг (RasPi 5 + Hailo-8L):** CellPose v3 + spotiflow <300 мс/кадр.  
+**Умный мозг (Mac M4 Pro 48GB + Qwen VL 72B + OpenHands):** видит кадры + маски, рассуждает, принимает решения, пишет код. Локально, без API.  
+**Самообучение (V5):** LoRA еженедельно на исправлениях человека + RAG-память (Qdrant) + детекция аномалий.
+
+---
+
+## v1.0 — Историческая версия (2026-05-15)
 
 ---
 
@@ -106,7 +170,7 @@ Engineering subcontractor **Giorgi Tsomaia** (Dipl. Ing. Tbilisi Polytechnic, co
 5. **Documentation** (15 h) — build guide, calibration protocol, troubleshooting
 6. **Total: 195 h × €20/h = €3,900**
 
-## 5. Two-Unit Strategy
+## 5. Two-Unit Strategy (v1.0, историческая)
 
 | Unit | Location | Operator | Status |
 |------|----------|----------|--------|
@@ -115,7 +179,7 @@ Engineering subcontractor **Giorgi Tsomaia** (Dipl. Ing. Tbilisi Polytechnic, co
 
 Both units are identical. A single GLA technician (€6,000, 50% FTE × 6 mo) maintains cell culture for both units; the postdoctoral fellow (€9,000, 50% FTE × 6 mo) leads image analysis and manuscript preparation.
 
-## 6. References
+## 6. References (v1.0)
 
 - Full hardware specification: `~/Desktop/ARGUS-LP_hardware_spec.md`
 - Schematic (diagrams.net): `~/Desktop/ARGUS-LP_schematic.drawio`
@@ -127,7 +191,7 @@ Both units are identical. A single GLA technician (€6,000, 50% FTE × 6 mo) ma
 
 ---
 
-## PR Recommendations Applied
+## PR Recommendations Applied (v1.0)
 
 **Error analysis added:**
 - Optical resolution test: USAF target, ≤1 μm @ 40×
