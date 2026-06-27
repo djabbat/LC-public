@@ -592,8 +592,8 @@ TGR5) → neuromodulation --- is supported by recent evidence:
 
 If hepatic function is necessary for affect, then restoring liver
 function should improve mood: - Post-transplant anxiety is reported in
-37.9% of recipients and depression in 11.59% (Le et al., 2026, PMID:
-41763937; N=72, single-centre, modest quality). Longitudinal studies
+37.9% of recipients and depression in 11.59% (Boeckmans et al., 2015;
+longitudinal, single-centre). Longitudinal studies
 (Boeckmans et al., 2015) confirm that both anxiety and depression scores
 are significantly lower after transplantation compared to the waiting
 list (p\<0.05). - Quality of life improves after transplantation, with
@@ -915,9 +915,10 @@ principle: **affect is brain-liver, not brain-only.**
     \[Co-author withdrew June 2026; email correspondence available on
     request.\]
 
-25. Gut-Brain Axis and Bile Acid Signaling: Linking Microbial Metabolism to Brain Function. Int J Mol Sci, 26(23), 11301 (2025). DOI: 10.3390/ijms262311301. [Note: citation retained pending PMID verification.]
-    Neuroinflammation. *International Journal of Molecular Sciences*,
-    26(23), 11301 (2025).
+25. Gut-Brain Axis and Bile Acid Signaling: Linking Microbial Metabolism to
+    Brain Function. *International Journal of Molecular Sciences*,
+    26(23), 11301 (2025). DOI: 10.3390/ijms262311301.
+    [Note: citation retained pending PMID verification.]
 
 26. Low polarity fraction of Radix Bupleuri alleviates chronic
     unpredictable mild stress-induced depression in rats through FXR
