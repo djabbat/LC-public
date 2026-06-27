@@ -53,8 +53,11 @@ class CDATAParams:
     beta_0: float = 0.040
     alpha_AurA_215: float = 4.0
     alpha_AurA_315: float = 3.0
-    kappa: float = 0.200
+    kappa: float = 0.350
     tau: float = 2.5
+    # Сенесценция (p53-опосредованная)
+    kappa_D: float = 0.100
+    D_senescence: float = 1.0
     # Homeostasis
     M_max: float = 3.0
     K_s: float = 1.5
@@ -118,14 +121,17 @@ class CDATAModel:
     def _sigma_N(self, N_mat: int, gamma: float = 0.10) -> float:
         return max(0.0, 1.0 - gamma * max(0, N_mat - 1))
 
-    def _p53_net(self, N_mat: int, M_f: float) -> float:
-        """Dual-pathway p53 activity."""
-        if N_mat <= 1:
-            return 0.0
-        excess = N_mat - 1
-        atm_signal = excess * self.params.kappa
-        aurora_inhibition = (1.0 + self.params.alpha_AurA_315 * excess / max(M_f, 0.01)) * \
-                           (1.0 + self.params.alpha_AurA_215 * excess)
+    def _p53_net(self, N_mat: int, M_f: float, D: float) -> float:
+        """Dual-pathway p53 activity: ATM (centrosome + damage) vs Aurora A inhibition."""
+        # ATM signal: centrosome amplification + direct DNA damage
+        excess_N = max(0, N_mat - 1)
+        excess_D = max(0.0, D - self.params.D_senescence)
+        atm_signal = excess_N * self.params.kappa + excess_D * self.params.kappa_D
+        # Aurora A inhibition (dual pathway)
+        aurora_inhibition = (1.0 + self.params.alpha_AurA_315 * max(0, excess_N) / max(M_f, 0.01)) * \
+                           (1.0 + self.params.alpha_AurA_215 * max(0, excess_N))
+        if aurora_inhibition < 0.01:
+            return atm_signal / 0.01
         return atm_signal / aurora_inhibition
 
     def _step_cell(self, state: CellState) -> CellState:
@@ -172,15 +178,17 @@ class CDATAModel:
             history_N = history_N[-int(p.tau)-1:]
             history_sigma_N = history_sigma_N[-int(p.tau)-1:]
 
-        # Senescence probability (delay feedback)
+        # Senescence probability (delay feedback — p53 via ATM/Aurora A)
         new_S = state.S
         if state.S == 0 and len(history_N) >= int(p.tau):
             cumulative_misseg = 0.0
-            for s in range(max(0, len(history_N) - int(p.tau)), len(history_N)):
-                excess = max(0, history_N[s] - 1)
-                cumulative_misseg += excess * (1.0 - history_sigma_N[s])
-            p53_val = self._p53_net(new_N_mat, new_M_f)
-            p_senescence = 1.0 - np.exp(-p.kappa * cumulative_misseg * max(0, p53_val))
+            for s_idx in range(max(0, len(history_N) - int(p.tau)), len(history_N)):
+                excess_N = max(0, history_N[s_idx] - 1)
+                cumulative_misseg += excess_N * (1.0 - history_sigma_N[s_idx])
+            # Добавляем вклад повреждений D (накопленные за tau поколений)
+            cumulative_misseg += max(0.0, new_D - p.D_senescence) * p.tau * p.kappa_D
+            p53_val = self._p53_net(new_N_mat, new_M_f, new_D)
+            p_senescence = 1.0 - np.exp(-p.kappa * cumulative_misseg * max(0.0, p53_val))
             if self.rng.random() < p_senescence:
                 new_S = 1
 
