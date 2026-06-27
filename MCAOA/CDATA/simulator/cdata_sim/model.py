@@ -38,30 +38,30 @@ from typing import Optional, Tuple, List
 
 @dataclass
 class CDATAParams:
-    """CDATA-v2 model parameters with ABC-calibrated defaults."""
-    mu_P: float = 0.018
-    r_0: float = 0.08
-    r_age: float = 0.002
-    lambda_age: float = 0.015
-    k_cat: float = 0.08
-    mu_s: float = 0.03
-    mu_f: float = 0.04
-    eta_s: float = 0.04
-    eta_f: float = 0.06
-    omega: float = 0.05
-    alpha_CEP: float = 0.06
-    beta_0: float = 0.042
-    alpha_AurA_215: float = 3.2
-    alpha_AurA_315: float = 2.1
-    kappa: float = 0.15
+    """CDATA-v2 model parameters with calibrated defaults (MC search, 2026-06-27)."""
+    mu_P: float = 0.020
+    r_0: float = 0.060
+    r_age: float = 0.003
+    lambda_age: float = 0.010
+    k_cat: float = 0.080
+    mu_s: float = 0.020
+    mu_f: float = 0.020
+    eta_s: float = 0.050
+    eta_f: float = 0.060
+    omega: float = 0.040
+    alpha_CEP: float = 0.040
+    beta_0: float = 0.030
+    alpha_AurA_215: float = 4.0
+    alpha_AurA_315: float = 3.0
+    kappa: float = 0.200
     tau: float = 2.5
 
     # Noise coefficients
-    sigma_P: float = 0.08
-    sigma_D: float = 0.12
-    sigma_s: float = 0.06
-    sigma_f: float = 0.09
-    sigma_N: float = 0.45
+    sigma_P: float = 0.080
+    sigma_D: float = 0.120
+    sigma_s: float = 0.060
+    sigma_f: float = 0.090
+    sigma_N: float = 0.300
 
 
 @dataclass
