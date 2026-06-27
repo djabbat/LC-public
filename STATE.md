@@ -1,5 +1,7 @@
 # LC · STATE (v7.2 — Organismal Aging, пост-28 peer review)
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 **Дата:** 2026-06-21
 **CONCEPT:** v7.2 (финальная архитектура)
 **Peer Review:** 28 циклов пройдено

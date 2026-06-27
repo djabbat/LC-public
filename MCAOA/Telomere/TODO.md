@@ -1,5 +1,7 @@
 # Telomere — TODO
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Goals & Tasks
 
 - **Define core architecture** — finalize component design and data flow (P0, upon approval)

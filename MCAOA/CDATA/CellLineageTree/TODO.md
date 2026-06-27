@@ -1,5 +1,7 @@
 # TODO — CytogeneticTree
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Phase 0 (2026-04 scaffolding)
 
 - [x] Generate umbrella CONCEPT.md + core files (this set) — 2026-04-21

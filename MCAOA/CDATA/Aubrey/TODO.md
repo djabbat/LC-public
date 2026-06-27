@@ -1,5 +1,7 @@
 # TODO — Aubrey (Phase A)
 
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+
 ## Pre-submission
 
 - [ ] Obtain Zheleznov Letter of Support for Unit #2 (or activate contingency: single-unit Phase A)
