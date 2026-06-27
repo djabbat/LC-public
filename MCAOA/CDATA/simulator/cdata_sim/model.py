@@ -97,10 +97,10 @@ class CDATAModel:
     def _sigma_D(self, D: float, D_crit: float = 5.0, beta_D: float = 1.5) -> float:
         return 1.0 / (1.0 + np.exp(beta_D * (D - D_crit)))
 
-    def _sigma_S(self, M_s: float, M_crit: float = 0.3, beta_M: float = 1.5) -> float:
+    def _sigma_S(self, M_s: float, M_crit: float = 0.05, beta_M: float = 6.0) -> float:
         return 1.0 / (1.0 + np.exp(beta_M * (M_crit - M_s)))
 
-    def _sigma_F(self, M_f: float, M_crit: float = 0.3, beta_M: float = 1.5) -> float:
+    def _sigma_F(self, M_f: float, M_crit: float = 0.05, beta_M: float = 6.0) -> float:
         return 1.0 / (1.0 + np.exp(beta_M * (M_crit - M_f)))
 
     def _sigma_N(self, N_mat: int, gamma: float = 0.3) -> float:
