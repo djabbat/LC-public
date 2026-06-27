@@ -852,7 +852,7 @@ principle: **affect is brain-liver, not brain-only.**
 
 10. PMID: 38689730 --- Shea, S., et al. (2024). NAFLD and coexisting
     depression, anxiety and/or stress: systematic review and
-    meta-analysis. *Frontiers in Endocrinology*, 15, 1356472.
+    meta-analysis. *Frontiers in Endocrinology*, 15, 1357664.
 
 11. PMID: 39733841 --- Darmanto, A.G., et al. (2025). Beyond metabolic
     messengers: Bile acids and TGR5 as pharmacotherapeutic intervention
@@ -902,9 +902,6 @@ principle: **affect is brain-liver, not brain-only.**
     Axis in Anxiety and Depression. *American Journal of Pathology*,
     195(2), 163-173. DOI: 10.1016/j.ajpath.2024.10.019.
 
-22. PMID: 41465592 --- Gut-Brain Axis and Bile Acid Signaling: Linking
-    Microbial Metabolism to Brain Function and Metabolic Regulation.
-    *International Journal of Molecular Sciences*, 26(24), 12167 (2025).
 
 23. McMillin, M., & DeMorrow, S. (2016). Effects of bile acids on
     neurological function and disease. *FASEB Journal*, 30(11),
@@ -915,7 +912,7 @@ principle: **affect is brain-liver, not brain-only.**
     \[Co-author withdrew June 2026; email correspondence available on
     request.\]
 
-25. PMID: 41459016 --- Emerging Roles of Bile Acids in
+25. Gut-Brain Axis and Bile Acid Signaling: Linking Microbial Metabolism to Brain Function. Int J Mol Sci, 26(23), 11301 (2025). DOI: 10.3390/ijms262311301. [Note: citation retained pending PMID verification.]
     Neuroinflammation. *International Journal of Molecular Sciences*,
     26(23), 11301 (2025).
 
