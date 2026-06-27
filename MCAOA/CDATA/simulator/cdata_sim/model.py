@@ -184,10 +184,18 @@ class CDATAModel:
             if self.rng.random() < p_senescence:
                 new_S = 1
 
-        # Asymmetry (conditional on non-senescent)
+        # Asymmetry — АДДИТИВНАЯ МОДЕЛЬ (вместо мультипликативной)
+        # delta_A = сумма штрафов за отклонения от гомеостаза
         if new_S == 0:
-            A_g = state.A * self._sigma_D(new_D) * self._sigma_S(new_M_s) * \
-                  self._sigma_F(new_M_f) * self._sigma_N(new_N_mat)
+            delta_A = (
+                p.gamma_D * max(0.0, new_D - p.D_healthy) +
+                p.gamma_S * max(0.0, p.M_healthy - new_M_s) +
+                p.gamma_F * max(0.0, p.M_healthy - new_M_f) +
+                p.gamma_N * max(0, new_N_mat - 1)
+            )
+            # Восстановление асимметрии при здоровом состоянии
+            recovery = p.recovery_rate if (new_D < p.D_healthy and new_M_s > p.M_healthy) else 0.0
+            A_g = max(0.0, min(1.0, state.A - delta_A + recovery))
         else:
             A_g = 0.0
 
