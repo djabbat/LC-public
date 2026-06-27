@@ -217,7 +217,7 @@ class CDATAModel:
             "hayflick_median": np.median(exhaustion_gens),
             "hayflick_iqr": np.percentile(exhaustion_gens, 75) - np.percentile(exhaustion_gens, 25),
             "amplification_freq": np.mean([
-                np.mean([s.N_mat > 2 for s in traj if s.generation > 30])
+                np.mean([s.N_mat > 2 for s in traj if s.generation > 30] or [0])
                 for traj in trees
             ]) if trees else 0.0,
         }
