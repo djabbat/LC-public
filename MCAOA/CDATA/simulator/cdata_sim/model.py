@@ -38,19 +38,19 @@ from typing import Optional, Tuple, List
 
 @dataclass
 class CDATAParams:
-    """CDATA-v2 model parameters with calibrated defaults (MC search, 2026-06-27)."""
+    """CDATA-v2 model parameters — откалиброваны 2026-06-27 (аддитивная A, гомеостаз)."""
     mu_P: float = 0.020
-    r_0: float = 0.060
-    r_age: float = 0.003
+    r_0: float = 0.040
+    r_age: float = 0.002
     lambda_age: float = 0.025
-    k_cat: float = 0.080
-    mu_s: float = 0.020
-    mu_f: float = 0.020
-    eta_s: float = 0.050
-    eta_f: float = 0.060
-    omega: float = 0.040
-    alpha_CEP: float = 0.040
-    beta_0: float = 0.030
+    k_cat: float = 0.100
+    mu_s: float = 0.015
+    mu_f: float = 0.015
+    eta_s: float = 0.040
+    eta_f: float = 0.050
+    omega: float = 0.030
+    alpha_CEP: float = 0.050
+    beta_0: float = 0.040
     alpha_AurA_215: float = 4.0
     alpha_AurA_315: float = 3.0
     kappa: float = 0.200
@@ -60,20 +60,20 @@ class CDATAParams:
     K_s: float = 1.5
     K_f: float = 1.5
     # Asymmetry (additive model)
-    gamma_D: float = 0.015
-    gamma_S: float = 0.02
-    gamma_F: float = 0.02
-    gamma_N: float = 0.08
+    gamma_D: float = 0.005
+    gamma_S: float = 0.015
+    gamma_F: float = 0.015
+    gamma_N: float = 0.005
     D_healthy: float = 0.3
     M_healthy: float = 0.7
-    recovery_rate: float = 0.005
+    recovery_rate: float = 0.035
 
     # Noise coefficients
     sigma_P: float = 0.080
     sigma_D: float = 0.120
     sigma_s: float = 0.060
     sigma_f: float = 0.090
-    sigma_N: float = 0.300
+    sigma_N: float = 0.200
 
 
 @dataclass
