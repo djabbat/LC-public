@@ -54,11 +54,15 @@ def evaluate(params, n_cells=30):
     trees = model.simulate_tree(max_generations=80, n_cells=n_cells)
     stats = model.compute_statistics(trees)
     
-    # Расстояние до цели
+    # Расстояние до цели (с усиленным штрафом за отсутствие амплификации)
     dist = 0.0
     for k in TARGET:
         w = WEIGHTS.get(k, 1.0)
-        dist += w * (TARGET[k] - stats.get(k, 0.0)) ** 2
+        val = stats.get(k, 0.0)
+        # Усиленный штраф если амплификация = 0
+        if k == "amplification_freq" and val < 0.01:
+            w *= 3.0
+        dist += w * (TARGET[k] - val) ** 2
     return np.sqrt(dist), stats
 
 # Три фазы с увеличивающимся числом клеток
