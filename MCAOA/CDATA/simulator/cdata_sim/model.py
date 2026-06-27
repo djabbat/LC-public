@@ -211,6 +211,8 @@ class CDATAModel:
                 exhaustion_gens.append(traj[-1].generation)
 
         exhaustion_gens = np.array(exhaustion_gens)
+        if len(exhaustion_gens) == 0:
+            return {"hayflick_median": 0.0, "hayflick_iqr": 0.0, "amplification_freq": 0.0}
         return {
             "hayflick_median": np.median(exhaustion_gens),
             "hayflick_iqr": np.percentile(exhaustion_gens, 75) - np.percentile(exhaustion_gens, 25),
