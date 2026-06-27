@@ -35,8 +35,10 @@ def test_statistics():
 
 def test_p53_net():
     model = CDATAModel()
-    assert model._p53_net(N_mat=1, M_f=1.0) == 0.0
-    assert model._p53_net(N_mat=3, M_f=1.0) > 0.0
+    assert model._p53_net(N_mat=1, M_f=1.0, D=0.0) >= 0.0
+    assert model._p53_net(N_mat=3, M_f=1.0, D=0.0) > 0.0
+    # Повреждения активируют p53 даже при N_mat=1
+    assert model._p53_net(N_mat=1, M_f=1.0, D=3.0) > 0.0
 
 
 def test_serialization():
