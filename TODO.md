@@ -1,5 +1,7 @@
 # LC · TODO (v7.2 — пост-28 peer review)
 
+## Активные
+
 > **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
 **Дата:** 2026-06-21
@@ -39,3 +41,7 @@
 ---
 
 *LC TODO v7.2 — 2026-06-21.*
+
+## Ожидание
+
+## Готово
