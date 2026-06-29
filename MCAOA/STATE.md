@@ -1,7 +1,7 @@
 # STATE — MCAOA
 
 **Аудит 2026-06-16:** состояние подтверждено (глубокий аудит pi).
-**Date:** 2026-06-27
+**Date:** 2026-06-29
 
 > **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
@@ -29,6 +29,11 @@ Arm F: Counter #6 (Dicer/Piwi KD)  → piRNA-mediated
 ```
 
 **Budget:** €351,600 ($390,000). **Conditional:** Phase A + Phase B completion first.
+
+## 📬 Статус рукописей
+| Рукопись | Журнал | ID | Подана | Статус |
+|----------|--------|----|--------|--------|
+| MCAOA | **Biogerontology** | `7cc6de62` | 3 июн 2026 | ✅ **Peer review — рецензенты приглашены** (29 июн) |
 
 ## Active TODOs
 
