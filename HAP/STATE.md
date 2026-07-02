@@ -1,7 +1,15 @@
 # STATE — HAP Project
 
-**Date:** 2026-06-27
+**Date:** 2026-07-02
 **Status:** 🟢 Активный
+
+## ⚠️ BSPC — формальный отказ (1 июл 2026)
+
+- **1 июл 2026** — получен формальный отказ от BSPC (BSPC-D-26-11119)
+- **Редактор:** Mathias Baumert (Executive Editor)
+- **Причина:** prescreen — «threshold for acceptance is high»
+- **Это 9-й отказ** (JAD, PNEC, BioSystems, CSF, MedHyp, BMB, BBS, BSPC + CSF dual)
+- **Текущая активная подача:** Mathematical Biosciences (MBS-D-26-00817, 27 июн)
 
 > **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
