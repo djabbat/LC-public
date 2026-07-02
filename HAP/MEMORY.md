@@ -2,6 +2,15 @@
 
 **Назначение:** Что нужно помнить между сессиями. Новое сверху.
 
+## 2026-07-01 — BSPC формальный отказ (9-й отказ)
+
+- **1 июл 2026** — формальный отказ BSPC (BSPC-D-26-11119), Executive Editor Mathias Baumert
+- **Причина:** prescreen — high acceptance threshold, не подходит по скоупу
+- **Подана:** 19 июн через Elsevier Article Transfer из BioSystems
+- **Итого 9 отказов:** JAD → PNEC → BioSystems → CSF → MedHyp → BMB → BBS → BSPC → (CSF dual)
+- **Текущая:** Mathematical Biosciences (MBS-D-26-00817, 27 июн) — With Editor
+- **Следующие варианты при отказе:** Discover Aging (Springer), J. Biological Dynamics (T&F)
+
 ## 2026-06-19 — Подано в Biomedical Signal Processing and Control (7-я попытка)
 
 - **19 июн 2026, 21:40** — BSPC-D-26-11119 подтверждён, Submitted to Journal
