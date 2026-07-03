@@ -23,6 +23,8 @@ struct Cli {
     #[arg(short='m', long, default_value = "16")] trotter: usize,
     #[arg(long, default_value = "1.0")] jt: f64,
     #[arg(long, default_value = "0.0")] js: f64,
+    /// NNN AFM coupling (создаёт фрустрацию)
+    #[arg(long, default_value = "0.0")] jnnn: f64,
     #[arg(short='G', long, default_value = "1.0")] gamma: f64,
     #[arg(short='H', long, default_value = "0.0")] h: f64,
     #[arg(short='b', long, default_value = "10.0")] beta: f64,
