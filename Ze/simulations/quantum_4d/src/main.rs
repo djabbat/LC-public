@@ -298,11 +298,18 @@ fn run(cli: &Cli, gamma: f64, l: usize) -> Meas {
     let (va, va_err) = jackknife(&v_data, cli.n_bins);
     let (vs, vs_err) = jackknife(&vs_data, cli.n_bins);
     let (b, b_err) = binder_jk(&vs_data, &vs2_data, &vs4_data, cli.n_bins);
+    let w_data: Vec<f64> = raw.iter().map(|r| r.w_1x1).filter(|x| x.is_finite()).collect();
+    let w_1x1 = if w_data.len()>0 { w_data.iter().sum::<f64>()/w_data.len() as f64 } else { f64::NAN };
+    let w_data2: Vec<f64> = raw.iter().map(|r| r.w_1x2).filter(|x| x.is_finite()).collect();
+    let w_1x2 = if w_data2.len()>0 { w_data2.iter().sum::<f64>()/w_data2.len() as f64 } else { f64::NAN };
+    let w_data3: Vec<f64> = raw.iter().map(|r| r.w_2x2).filter(|x| x.is_finite()).collect();
+    let w_2x2 = if w_data3.len()>0 { w_data3.iter().sum::<f64>()/w_data3.len() as f64 } else { f64::NAN };
     
     Meas { e:e_mean, e_err, v_abs:va, v_abs_err:va_err,
         v_stag:vs, v_stag_err:vs_err, binder:b, binder_err:b_err,
         tau_int_e:tau_e, gamma, l, beta:p.b,
-        n_thermal, n_samples:cli.samples, n_spins:nspin(&p) }
+        n_thermal, n_samples:cli.samples, n_spins:nspin(&p),
+        wilson_1x1: w_1x1, wilson_1x2: w_1x2, wilson_2x2: w_2x2 }
 }
 
 // ============================================================
