@@ -185,7 +185,7 @@ fn run(p: &Params, cli: &Cli, gamma: f64, l: usize) -> Meas {
             wolff(&mut zs[rep], &pp_rep, &c_rep, &mut rng);
         }
         if n_replicas > 1 && rng.gen_range(0..5)==0 {
-            pt_swap(&mut zs, &betas, &pp, &c, &mut rng);
+            pt_swap(&mut zs, &betas, &pp, &mut rng);
         }
     }
     
@@ -200,7 +200,7 @@ fn run(p: &Params, cli: &Cli, gamma: f64, l: usize) -> Meas {
             wolff(&mut zs[rep], &pp_rep, &c_rep, &mut rng);
         }
         if n_replicas > 1 && rng.gen_range(0..5)==0 {
-            pt_swap(&mut zs, &betas, &pp, &c, &mut rng);
+            pt_swap(&mut zs, &betas, &pp, &mut rng);
         }
         if rng.gen_range(0..cli.interval)==0 {
             let m = measure_at(&zs[0], &pp, &c, cli.wilson, gamma);
