@@ -69,62 +69,42 @@ def metropolis_sweep_4d(z, L, Lt, J_t, J_s, h, beta, n_sweeps=1):
 
 @njit
 def measure_wilson_loops(z, L, Lt, max_size=3):
-    """Измерение петель Вильсона в пространственно-временных плоскостях.
+    """Измерение петель Вильсона. Возвращает массивы."""
+    n_loops = max_size * max_size
+    areas = np.zeros(n_loops)
+    perimeters = np.zeros(n_loops)
+    W_values = np.zeros(n_loops)
+    idx = 0
     
-    W(R,T) = ⟨Π z_i z_j⟩ для прямоугольника R×T.
-    Perimeter law: W ∼ exp(-c·P) — деконфайнмент.
-    Area law: W ∼ exp(-σ·A) — конфайнмент.
-    """
-    results = []
     for R in range(1, max_size + 1):
-        for T in range(1, max_size + 1):
-            w_xt = 0.0  # x-t plane
-            w_yt = 0.0  # y-t plane
-            w_zt = 0.0  # z-t plane
-            w_xy = 0.0  # x-y plane
+        for T_val in range(1, max_size + 1):
+            w_sum = 0.0
             count = 0
             
-            for x in range(L):
+            for x in range(L - R):
                 for y in range(L):
                     for zz in range(L):
-                        for t in range(Lt):
+                        for t in range(Lt - T_val):
                             # x-t loop
-                            if x+R < L and t+T < Lt:
-                                loop = 1.0
-                                for dx in range(R):
-                                    loop *= z[x+dx, y, zz, t]
-                                for dt in range(T):
-                                    loop *= z[x+R, y, zz, t+dt]
-                                for dx in range(R):
-                                    loop *= z[x+R-dx, y, zz, t+T]
-                                for dt in range(T):
-                                    loop *= z[x, y, zz, t+T-dt]
-                                w_xt += loop
-                                count += 1
-                            
-                            # y-t loop
-                            if y+R < L and t+T < Lt:
-                                loop = 1.0
-                                for dy in range(R):
-                                    loop *= z[x, y+dy, zz, t]
-                                for dt in range(T):
-                                    loop *= z[x, y+R, zz, t+dt]
-                                for dy in range(R):
-                                    loop *= z[x, y+R-dy, zz, t+T]
-                                for dt in range(T):
-                                    loop *= z[x, y, zz, t+T-dt]
-                                w_yt += loop
-                                count += 1
+                            loop = 1.0
+                            for dx in range(R):
+                                loop *= z[x+dx, y, zz, t]
+                            for dt in range(T_val):
+                                loop *= z[x+R, y, zz, t+dt]
+                            for dx in range(R):
+                                loop *= z[x+R-dx, y, zz, t+T_val]
+                            for dt in range(T_val):
+                                loop *= z[x, y, zz, t+T_val-dt]
+                            w_sum += loop
+                            count += 1
             
             if count > 0:
-                results.append({
-                    "R": R, "T": T,
-                    "area": R * T,
-                    "perimeter": 2 * (R + T),
-                    "W_xt": w_xt / count,
-                    "W_yt": w_yt / count,
-                })
-    return results
+                areas[idx] = R * T_val
+                perimeters[idx] = 2 * (R + T_val)
+                W_values[idx] = w_sum / count
+                idx += 1
+    
+    return areas[:idx], perimeters[:idx], W_values[:idx]
 
 
 def run_4d_simulation(L=4, Lt=8, J_t=1.0, J_s=0.3, h=0.0, T=2.0,
