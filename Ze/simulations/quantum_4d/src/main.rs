@@ -47,7 +47,7 @@ fn main() {
             n_spins, cli.pt_replicas, total);
         if cli.fss { println!("FSS: L = {:?}", ls); }
         println!("{:>4} {:>6} {:>10} {:>10} {:>10} {:>10} {:>7} {:>5}  W(1)/W(2)",
-                 "L","Γ","|v|","v_stag","E/N","Binder","τ_int","Фаза");
+                 "L","Γ","|v|","v_stag","E/N","Binder/Cv","τ_int","Фаза");
         println!("{}","─".repeat(82));
     }
     
