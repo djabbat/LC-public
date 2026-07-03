@@ -306,10 +306,10 @@ fn main() {
         for &g in &gammas {
             let m = run(&cli, g, l);
             let phase = if m.v_stag>0.3 {"АФМ"} else if m.v_abs<0.2 {"пара"} else {"крит"};
-            if cli.json { all.push(m); }
+            if cli.json { all.push(m.clone()); }
             else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:10.4} {:7.2} {:>5}",
                 l,g,m.v_abs,m.v_stag,m.e,m.binder,m.tau_int_e,phase); }
-            all.push(m);  // всегда сохраняем для Binder-анализа
+            all.push(m);
         }
     }
     
