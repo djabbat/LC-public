@@ -190,84 +190,38 @@ fn measure(z: &Lattice5D, p: &Params, c: &TrotterCouplings) -> (f64, f64, f64, f
 }
 
 fn main() {
-    let p = Params {
-        lx: 4, ly: 4, lz: 4,
-        lt: 6,
-        m_trotter: 12,
-        j_t: 1.0,
-        j_s: 0.3,
-        gamma: 0.5,
-        h: 0.0,
-        beta: 2.0,
-        n_thermal: 5000,
-        n_samples: 10000,
-        sample_interval: 10,
-        seed: 42,
-    };
+    println!("Ze QMC 4+1d — сканирование по Γ\n");
+    println!("{:>8} {:>10} {:>10} {:>10} {:>20}", "Γ", "|v|", "|v_stag|", "E/N", "Фаза");
+    println!("{}", "─".repeat(65));
     
-    let c = TrotterCouplings::new(&p);
-    let n = total_size(p.lx, p.ly, p.lz, p.lt, p.m_trotter);
-    
-    println!("Ze QMC 4+1d: {}×{}×{}×{}×{} = {} спинов",
-             p.lx, p.ly, p.lz, p.lt, p.m_trotter, n);
-    println!("J_t={} J_s={} Γ={} β={}", p.j_t, p.j_s, p.gamma, p.beta);
-    println!("Эфф. связи: K_t={:.4} K_s={:.4} K_τ={:.4}",
-             c.k_t, c.k_s, c.k_tau);
-    
-    let mut rng = StdRng::seed_from_u64(p.seed);
-    let mut z = init_staggered(p.lx, p.ly, p.lz, p.lt, p.m_trotter);
-    
-    // Термализация
-    let t0 = Instant::now();
-    println!("\nТермализация ({} шагов)...", p.n_thermal);
-    for _ in 0..p.n_thermal {
-        metropolis_sweep(&mut z, &p, &c, &mut rng);
-    }
-    
-    // Измерения
-    println!("Измерения ({} шагов)...", p.n_samples);
-    let n_meas = p.n_samples / p.sample_interval;
-    let mut e_sum = 0.0f64;
-    let mut v_sum = 0.0f64;
-    let mut vs_sum = 0.0f64;
-    
-    for step in 0..p.n_samples {
-        let acc = metropolis_sweep(&mut z, &p, &c, &mut rng);
-        if step % p.sample_interval == 0 {
-            let (e, v, vs, _) = measure(&z, &p, &c);
-            e_sum += e;
-            v_sum += v;
-            vs_sum += vs;
+    for gamma in [0.2, 0.5, 0.8, 1.0, 1.2, 1.5, 2.0, 3.0f64] {
+        let p = Params {
+            lx: 4, ly: 4, lz: 4, lt: 6, m_trotter: 12,
+            j_t: 1.0, j_s: 0.3, gamma, h: 0.0, beta: 2.0,
+            n_thermal: 3000, n_samples: 6000, sample_interval: 10,
+            seed: 42 + (gamma*100.0) as u64,
+        };
+        let c = TrotterCouplings::new(&p);
+        let mut rng = StdRng::seed_from_u64(p.seed);
+        let mut z = init_staggered(p.lx, p.ly, p.lz, p.lt, p.m_trotter);
+        
+        for _ in 0..p.n_thermal { metropolis_sweep(&mut z, &p, &c, &mut rng); }
+        
+        let n_meas = p.n_samples / p.sample_interval;
+        let (mut es, mut vs, mut vss) = (0.0, 0.0, 0.0);
+        for _ in 0..p.n_samples {
+            metropolis_sweep(&mut z, &p, &c, &mut rng);
+            if rng.gen_range(0..p.sample_interval) == 0 {
+                let (e, v, vs, _) = measure(&z, &p, &c);
+                es += e; vs += v; vss += vs;
+            }
         }
-        if step % (p.n_samples / 10) == 0 {
-            let elapsed = t0.elapsed().as_secs_f64();
-            println!("  {:3}% | acc={:.3} | t={:.1}s", 
-                     100*step/p.n_samples, acc, elapsed);
-        }
+        es /= n_meas as f64; vs /= n_meas as f64; vss /= n_meas as f64;
+        
+        let phase = if vss > 0.3 { "АФМ (конфайнмент)" }
+            else if vs < 0.2 { "квант. парамагнетик" }
+            else { "критическая" };
+        
+        println!("{:8.2} {:10.4} {:10.4} {:10.4} {:>20}", gamma, vs, vss, es, phase);
     }
-    
-    let elapsed = t0.elapsed().as_secs_f64();
-    e_sum /= n_meas as f64;
-    v_sum /= n_meas as f64;
-    vs_sum /= n_meas as f64;
-    
-    let v_star = 1.0 - 2.0f64.ln();
-    
-    println!("\n═══════════════════════════════════");
-    println!("РЕЗУЛЬТАТЫ");
-    println!("  ⟨E⟩/N  = {:.4}", e_sum);
-    println!("  |v|    = {:.4}", v_sum);
-    println!("  |v_s|  = {:.4}", vs_sum);
-    println!("  v*     = {:.4}", v_star);
-    println!("  Время  = {:.1} сек", elapsed);
-    
-    // фаза
-    if vs_sum > 0.3 {
-        println!("  ФАЗА:  АФМ (конфайнмент)");
-    } else if v_sum < 0.2 {
-        println!("  ФАЗА:  квантовый парамагнетик");
-    } else {
-        println!("  ФАЗА:  критическая / промежуточная");
-    }
-    println!("═══════════════════════════════════");
 }
