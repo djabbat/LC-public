@@ -197,7 +197,7 @@ fn main() {
     for gamma in [0.2, 0.5, 0.8, 1.0, 1.2, 1.5, 2.0, 3.0f64] {
         let p = Params {
             lx: 4, ly: 4, lz: 4, lt: 8, m_trotter: 16,
-            j_t: 1.0, j_s: 0.0, gamma, h: 0.0, beta: 1.0,
+            j_t: 1.0, j_s: 0.0, gamma, h: 0.0, beta: 10.0,
             n_thermal: 2000, n_samples: 4000, sample_interval: 10,
             seed: 42 + (gamma*100.0) as u64,
         };
