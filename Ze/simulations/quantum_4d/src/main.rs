@@ -235,8 +235,11 @@ fn run(cli: &Cli, gamma: f64, l: usize) -> Meas {
     }
     
     // Анализ
-    let (e_data, v_data, vs_data, vs2_data, vs4_data): (Vec<f64>,_,_,_,_) = raw.iter()
-        .map(|r| (r.e, r.v_abs, r.v_stag, r.v_stag2, r.v_stag4)).unzip();
+    let e_data: Vec<f64> = raw.iter().map(|r| r.e).collect();
+    let v_data: Vec<f64> = raw.iter().map(|r| r.v_abs).collect();
+    let vs_data: Vec<f64> = raw.iter().map(|r| r.v_stag).collect();
+    let vs2_data: Vec<f64> = raw.iter().map(|r| r.v_stag2).collect();
+    let vs4_data: Vec<f64> = raw.iter().map(|r| r.v_stag4).collect();
     
     let tau_e = tau_int(&e_data);
     let (e, e_err) = jackknife(&e_data, cli.n_bins);
