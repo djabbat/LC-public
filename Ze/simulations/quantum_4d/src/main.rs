@@ -73,11 +73,16 @@ fn wolff(z:&mut Lattice, p:&Params, c:&TC, rng:&mut impl Rng)->usize{
     q.len()
 }
 
-/// Parallel tempering swap
-fn pt_swap(zs: &mut [Lattice], betas: &[f64], p: &Params, c: &TC, rng: &mut impl Rng) {
+/// Parallel tempering swap — исправленная версия с учётом beta-зависимых couplings
+fn pt_swap(zs: &mut [Lattice], betas: &[f64], p: &Params, rng: &mut impl Rng) {
     for i in 0..zs.len()-1 {
-        let e0 = energy_at(zs[i].as_slice(), p, c);
-        let e1 = energy_at(zs[i+1].as_slice(), p, c);
+        // Вычисляем энергии с ПРАВИЛЬНЫМИ coupling для каждой реплики
+        let pp0 = Params { b: betas[i], ..*p };
+        let pp1 = Params { b: betas[i+1], ..*p };
+        let c0 = TC::new(&pp0);
+        let c1 = TC::new(&pp1);
+        let e0 = energy_at(zs[i].as_slice(), &pp0, &c0);
+        let e1 = energy_at(zs[i+1].as_slice(), &pp1, &c1);
         let delta = (betas[i] - betas[i+1]) * (e0 - e1);
         if delta > 0.0 || rng.gen::<f64>() < delta.exp() {
             zs.swap(i, i+1);
