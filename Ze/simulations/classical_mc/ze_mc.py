@@ -65,8 +65,8 @@ def total_energy(z, Lx, Ly, Lt, J_t, J_s, h):
         for y in range(Ly):
             for t in range(Lt):
                 E += -h * z[x, y, t]
-                E += -J_t * z[x, y, t] * z[x, y, (t + 1) % Lt]
-                E += -J_s * z[x, y, t] * z[(x + 1) % Lx, y, t]
+                E += J_t * z[x, y, t] * z[x, y, (t + 1) % Lt]  # АФМ: +J_t
+                E += -J_s * z[x, y, t] * z[(x + 1) % Lx, y, t]  # ФМ: −J_s
                 E += -J_s * z[x, y, t] * z[x, (y + 1) % Ly, t]
     return E
 
