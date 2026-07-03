@@ -336,9 +336,15 @@ fn main() {
         for &g in &gammas {
             let m = run(&cli, g, l);
             let phase = if m.v_stag>0.3 {"АФМ"} else if m.v_abs<0.2 {"пара"} else {"крит"};
+            // Wilson: area law (W_2x2≈W_1x1^4) → confinement; perimeter (W_2x2≈W_1x2^2) → deconfinement
+            let w_diag = if m.wilson_1x1.is_finite() && m.wilson_2x2.is_finite() {
+                let area_pred = m.wilson_1x1.powi(4);
+                let perim_pred = m.wilson_1x2.powi(2);
+                if (m.wilson_2x2-perim_pred).abs() < (m.wilson_2x2-area_pred).abs() {"deconf"} else {"conf"}
+            } else {"?"};
             if cli.json { all.push(m.clone()); }
-            else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:10.4} {:7.2} {:>5}",
-                l,g,m.v_abs,m.v_stag,m.e,m.binder,m.tau_int_e,phase); }
+            else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:10.4} {:7.2} {:>5}  W:{:.3}/{:.3} {}",
+                l,g,m.v_abs,m.v_stag,m.e,m.binder,m.tau_int_e,phase,m.wilson_1x1,m.wilson_2x2,w_diag); }
             all.push(m);
         }
     }
