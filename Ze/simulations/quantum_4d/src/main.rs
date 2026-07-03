@@ -470,12 +470,13 @@ mod tests {
 
     #[test]
     fn test_nnn_frustration() {
-        let p = Params { l:2, lt:4, m:2, jt:1.0, js:0.1, jnnn:0.3, g:3.0, h:0.0, b:1.0 };
+        let p = Params { l:2, lt:4, m:2, jt:1.0, js:0.1, jnnn:0.5, g:3.0, h:0.0, b:1.0 };
         let c = TC::new(&p);
         let mut z = init_staggered(&p);
         let mut rng = Xoshiro256PlusPlus::seed_from_u64(99);
-        for _ in 0..500 { wolff(&mut z, &p, &c, &mut rng); }
+        for _ in 0..1000 { wolff(&mut z, &p, &c, &mut rng); }
         let m = measure_one(&z, &p, &c);
+        // Strong NNN frustration (jnnn=0.5) + high Γ (3.0) → destroys AFM
         assert!(m.v_stag < 0.5, "NNN frustration should destroy AFM: v_stag={}", m.v_stag);
     }
 
