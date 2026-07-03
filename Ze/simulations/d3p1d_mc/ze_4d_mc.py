@@ -137,7 +137,7 @@ def run_4d_simulation(L=4, Lt=8, J_t=1.0, J_s=0.3, h=0.0, T=2.0,
     
     # петли Вильсона
     print(f"  Измерение петель Вильсона...")
-    loops = measure_wilson_loops(z, L, Lt, max_size=min(3, L//2))
+    areas, perimeters, W_vals = measure_wilson_loops(z, L, Lt, max_size=min(3, L//2))
     
     # анализ шлейфа Вильсона
     v_star = 1.0 - np.log(2.0)
@@ -149,21 +149,19 @@ def run_4d_simulation(L=4, Lt=8, J_t=1.0, J_s=0.3, h=0.0, T=2.0,
         "v_std": float(np.std(magnetizations)),
         "v_star": v_star,
         "delta_v": float(abs(np.mean(magnetizations) - v_star)),
-        "wilson_loops": loops,
     }
     
     # анализ фазового состояния
-    # Конфайнмент: петли Вильсона ∼ exp(-Area)
-    # Деконфайнмент: петли Вильсона ∼ exp(-Perimeter)
-    if loops:
-        areas = np.array([l["area"] for l in loops])
-        W_xt = np.array([abs(l["W_xt"]) for l in loops])
-        # фит: log(W) ∼ −σ·Area (конфайнмент) или −c·Perimeter (деконф.)
-        mask = (W_xt > 1e-10) & (areas > 0)
+    if len(W_vals) > 0:
+        mask = (np.abs(W_vals) > 1e-10) & (areas > 0)
         if mask.sum() >= 2:
-            coeffs = np.polyfit(areas[mask], np.log(W_xt[mask]), 1)
+            coeffs = np.polyfit(areas[mask], np.log(np.abs(W_vals[mask])), 1)
             results["string_tension"] = float(-coeffs[0])
             results["phase"] = "confinement" if results["string_tension"] > 0.01 else "possible deconfinement"
+        # также фит по периметру для сравнения
+        if mask.sum() >= 2:
+            coeffs_p = np.polyfit(perimeters[mask], np.log(np.abs(W_vals[mask])), 1)
+            results["perimeter_coeff"] = float(-coeffs_p[0])
     
     print(f"\n  ⟨E⟩/N = {results['E_per_node']:.4f}")
     print(f"  |v| = {results['v_abs']:.4f} (v*={v_star:.4f})")
