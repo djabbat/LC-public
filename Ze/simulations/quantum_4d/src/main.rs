@@ -153,20 +153,23 @@ fn measure(z: &Lattice5D, p: &Params, c: &TrotterCouplings) -> (f64, f64, f64, f
     let n = total_size(p.lx, p.ly, p.lz, p.lt, p.m_trotter);
     let mut energy = 0.0f64;
     let mut mag = 0.0f64;
-    let mut mag_stag = 0.0f64;
+    let mut mag_stag_sum = 0.0f64;
+    let n_chains = (p.lx * p.ly * p.lz) as f64;
     
     for x in 0..p.lx {
         for y in 0..p.ly {
             for zz in 0..p.lz {
+                // staggered mag для ОДНОЙ цепочки
+                let mut chain_stag = 0.0f64;
                 for t in 0..p.lt {
                     let sign = if t % 2 == 0 { 1.0 } else { -1.0 };
                     for tau in 0..p.m_trotter {
                         let i = idx(p.lx,p.ly,p.lz,p.lt,p.m_trotter, x,y,zz,t,tau);
                         let val = z[i];
                         mag += val;
-                        mag_stag += sign * val;
+                        chain_stag += sign * val;
                         
-                        // энергия связей (считаем один раз на узел для простоты)
+                        // энергия связей
                         let tn = (t+1) % p.lt;
                         let xn = (x+1) % p.lx;
                         let yn = (y+1) % p.ly;
@@ -181,12 +184,13 @@ fn measure(z: &Lattice5D, p: &Params, c: &TrotterCouplings) -> (f64, f64, f64, f
                         energy -= c.k_tau * val * z[idx(p.lx,p.ly,p.lz,p.lt,p.m_trotter, x,y,zz,t,taun)];
                     }
                 }
+                mag_stag_sum += (chain_stag / (p.lt * p.m_trotter) as f64).abs();
             }
         }
     }
     
     let nn = n as f64;
-    (energy / nn, mag.abs() / nn, mag_stag.abs() / nn, mag / nn)
+    (energy / nn, mag.abs() / nn, mag_stag_sum / n_chains, mag / nn)
 }
 
 fn main() {
