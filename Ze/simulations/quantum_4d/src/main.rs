@@ -44,13 +44,14 @@ struct Cli {
 struct Params { l: usize, lt: usize, m: usize, jt: f64, js: f64, jnnn: f64, g: f64, h: f64, b: f64 }
 
 #[derive(Copy, Clone)]
-struct TC { kt: f64, ks: f64, ktau: f64, kh: f64 }
+struct TC { kt: f64, ks: f64, ktau: f64, kh: f64, kjnnn: f64 }
 
 impl TC {
     fn new(p: &Params) -> Self {
         let m = p.m as f64; let bt = p.b;
         Self { kt: bt*p.jt/m, ks: bt*p.js/m, kh: bt*p.h/m,
-            ktau: if p.g>0.0 { -0.5*(bt*p.g/m).tanh().ln() } else { 10.0 } }
+            ktau: if p.g>0.0 { -0.5*(bt*p.g/m).tanh().ln() } else { 10.0 },
+            kjnnn: bt*p.jnnn/m }
     }
 }
 
@@ -84,6 +85,7 @@ fn init_staggered(p: &Params) -> Lattice {
 fn wolff(z: &mut Lattice, p: &Params, c: &TC, rng: &mut impl Rng) -> usize {
     let n = nspin(p);
     let seed = rng.gen_range(0..n);
+    let pnnn = 1.0-(-2.0*c.jnnn).exp();
     let (pt, ps, ptau) = (1.0-(-2.0*c.kt).exp(), 1.0-(-2.0*c.ks).exp(), 1.0-(-2.0*c.ktau).exp());
     
     let mut cluster = vec![false; n];
@@ -104,6 +106,19 @@ fn wolff(z: &mut Lattice, p: &Params, c: &TC, rng: &mut impl Rng) -> usize {
         tr!(idx(p,x,y,(zc+1)%p.l,t,tau),ps,true);  tr!(idx(p,x,y,(zc+p.l-1)%p.l,t,tau),ps,true);
         tr!(idx(p,x,y,zc,(t+1)%p.lt,tau),pt,false); tr!(idx(p,x,y,zc,(t+p.lt-1)%p.lt,tau),pt,false);
         tr!(idx(p,x,y,zc,t,(tau+1)%p.m),ptau,true); tr!(idx(p,x,y,zc,t,(tau+p.m-1)%p.m),ptau,true);
+        tr!(idx(p,(x+1)%p.l,(y+1)%p.l,zc,t,tau), pnnn, false); 
+        tr!(idx(p,(x+p.l-1)%p.l,(y+p.l-1)%p.l,zc,t,tau), pnnn, false);
+        tr!(idx(p,(x+1)%p.l,(y+p.l-1)%p.l,zc,t,tau), pnnn, false);
+        tr!(idx(p,(x+p.l-1)%p.l,(y+1)%p.l,zc,t,tau), pnnn, false);
+        tr!(idx(p,(x+1)%p.l,y,(zc+1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,(x+p.l-1)%p.l,y,(zc+p.l-1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,(x+1)%p.l,y,(zc+p.l-1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,(x+p.l-1)%p.l,y,(zc+1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,x,(y+1)%p.l,(zc+1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,x,(y+p.l-1)%p.l,(zc+p.l-1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,x,(y+1)%p.l,(zc+p.l-1)%p.l,t,tau), pnnn, false);
+        tr!(idx(p,x,(y+p.l-1)%p.l,(zc+1)%p.l,t,tau), pnnn, false);
+
     }
     // Rayon: параллельный flip
     z.par_iter_mut().enumerate().for_each(|(i,v)| { if cluster[i] { *v = -*v; } });
