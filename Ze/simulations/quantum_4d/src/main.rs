@@ -16,7 +16,7 @@ use rand_xoshiro::Xoshiro256PlusPlus;
 use rayon::prelude::*;
 use clap::Parser;
 use serde::{Serialize, Deserialize};
-use std::io::{Write, BufReader, BufWriter};
+use std::io::{BufReader, BufWriter};
 use std::fs;
 use std::path::PathBuf;
 
@@ -392,7 +392,7 @@ fn main() {
             let m = if cli.trotter_extrap {
                 // Запуск с M и M/2, линейная экстраполяция к M→∞
                 let m1 = run(&cli, g, l);
-                let cli_half = Cli { trotter: cli.trotter/2, ..cli.clone() };
+                let cli_half = Cli { trotter: cli.trotter/2, ..*cli };
                 let m2 = run(&cli_half, g, l);
                 // Richardson extrapolation: E_∞ = 2*E(M) − E(M/2)
                 Meas { e: 2.0*m1.e - m2.e, e_err: (4.0*m1.e_err.powi(2)+m2.e_err.powi(2)).sqrt(),
