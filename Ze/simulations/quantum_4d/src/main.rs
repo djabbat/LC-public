@@ -149,7 +149,13 @@ fn measure(z: &Lattice, p: &Params, c: &TC, do_wilson: bool) -> (f64, f64, f64, 
     }}}
     
     let v_avg = v/n; let v_abs = v_avg.abs();
-    let binder = 1.0 - v4/n/(3.0*v_avg.powi(2).max(1e-16));
+    let vs_avg = vs_sum / nc;
+    // Binder cumulant для staggered magnetization (АФМ параметр порядка)
+    // U₄ = 1 − ⟨m⁴⟩/(3⟨m²⟩²)
+    let binder = if vs_avg > 0.001 { 
+        let m2 = vs_avg.powi(2);
+        1.0 - (cs_val.powi(4).max(1e-16))/(3.0*m2.max(1e-16))
+    } else { 0.0 };
     
     // Wilson loops (R=1,2 × T=1,2)
     if do_wilson && p.l >= 3 {
