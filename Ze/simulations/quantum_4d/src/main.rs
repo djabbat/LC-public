@@ -261,7 +261,7 @@ fn run(p_template: &Params, cli: &Cli, gamma: f64, l: usize) -> Meas {
     }
     
     // Измерения
-    let raw = vec![];
+    let mut raw = vec![];
     for step in 0..cli.samples {
         for rep in 0..n_rep {
             let pp = Params { b: betas[rep], ..p };
