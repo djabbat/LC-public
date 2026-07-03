@@ -190,15 +190,15 @@ fn measure(z: &Lattice5D, p: &Params, c: &TrotterCouplings) -> (f64, f64, f64, f
 }
 
 fn main() {
-    println!("Ze QMC 4+1d — сканирование по Γ (J_s=0.1, β=1.0)\n");
+    println!("Ze QMC 4+1d — J_s=0 (1D цепочки), β=1.0\n");
     println!("{:>8} {:>10} {:>10} {:>10} {:>20}", "Γ", "|v|", "|v_stag|", "E/N", "Фаза");
     println!("{}", "─".repeat(65));
     
     for gamma in [0.2, 0.5, 0.8, 1.0, 1.2, 1.5, 2.0, 3.0f64] {
         let p = Params {
-            lx: 4, ly: 4, lz: 4, lt: 6, m_trotter: 12,
-            j_t: 1.0, j_s: 0.1, gamma, h: 0.0, beta: 1.0,
-            n_thermal: 3000, n_samples: 6000, sample_interval: 10,
+            lx: 4, ly: 4, lz: 4, lt: 8, m_trotter: 16,
+            j_t: 1.0, j_s: 0.0, gamma, h: 0.0, beta: 1.0,
+            n_thermal: 2000, n_samples: 4000, sample_interval: 10,
             seed: 42 + (gamma*100.0) as u64,
         };
         let c = TrotterCouplings::new(&p);
