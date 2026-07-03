@@ -248,7 +248,7 @@ struct Meas {
 }
 
 fn run(cli: &Cli, gamma: f64, l: usize) -> Meas {
-    let p = Params { l, lt:cli.lt, m:cli.trotter, jt:cli.jt, js:cli.js, g:gamma, h:cli.h, b:cli.beta };
+    let p = Params { l, lt:cli.lt, m:cli.trotter, jt:cli.jt, js:cli.js, jnnn:cli.jnnn, g:gamma, h:cli.h, b:cli.beta };
     let c = TC::new(&p);
     let n_rep = cli.pt_replicas.max(1);
     let betas: Vec<f64> = (0..n_rep).map(|r| cli.beta/(1<<r) as f64).collect();
