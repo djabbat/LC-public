@@ -392,7 +392,12 @@ fn main() {
             let m = if cli.trotter_extrap {
                 // Запуск с M и M/2, линейная экстраполяция к M→∞
                 let m1 = run(&cli, g, l);
-                let cli_half = Cli { trotter: cli.trotter/2, ..*cli };
+                let cli_half = Cli { trotter: cli.trotter/2, size: cli.size, lt: cli.lt,
+                    jt: cli.jt, js: cli.js, jnnn: cli.jnnn, gamma: cli.gamma, h: cli.h,
+                    beta: cli.beta, thermal: cli.thermal, samples: cli.samples,
+                    interval: cli.interval, scan: None, fss: false, seed: cli.seed,
+                    pt_replicas: cli.pt_replicas, json: false, n_bins: cli.n_bins,
+                    auto_thermal: false, trotter_extrap: false, checkpoint: None };
                 let m2 = run(&cli_half, g, l);
                 // Richardson extrapolation: E_∞ = 2*E(M) − E(M/2)
                 Meas { e: 2.0*m1.e - m2.e, e_err: (4.0*m1.e_err.powi(2)+m2.e_err.powi(2)).sqrt(),
