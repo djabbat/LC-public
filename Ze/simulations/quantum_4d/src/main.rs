@@ -41,7 +41,7 @@ struct Cli {
 }
 
 #[derive(Copy, Clone)]
-struct Params { l: usize, lt: usize, m: usize, jt: f64, js: f64, g: f64, h: f64, b: f64 }
+struct Params { l: usize, lt: usize, m: usize, jt: f64, js: f64, jnnn: f64, g: f64, h: f64, b: f64 }
 
 #[derive(Copy, Clone)]
 struct TC { kt: f64, ks: f64, ktau: f64, kh: f64 }
