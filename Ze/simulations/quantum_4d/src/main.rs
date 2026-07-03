@@ -242,6 +242,7 @@ struct Meas {
     v_stag: f64, v_stag_err: f64, binder: f64, binder_err: f64,
     tau_int_e: f64, gamma: f64, l: usize, beta: f64,
     n_thermal: usize, n_samples: usize, n_spins: usize,
+    wilson_1x1: f64, wilson_1x2: f64, wilson_2x2: f64,
 }
 
 fn run(cli: &Cli, gamma: f64, l: usize) -> Meas {
