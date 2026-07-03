@@ -143,7 +143,8 @@ fn pt_swap(zs: &mut [Lattice], betas: &[f64], p_template: &Params, rng: &mut imp
 // Измерения
 // ============================================================
 #[derive(Clone)]
-struct RawMeas { e: f64, v_abs: f64, v_stag: f64, v_stag2: f64, v_stag4: f64 }
+struct RawMeas { e: f64, v_abs: f64, v_stag: f64, v_stag2: f64, v_stag4: f64,
+    w_1x1: f64, w_1x2: f64, w_2x1: f64, w_2x2: f64 }
 
 fn measure_one(z: &Lattice, p: &Params, c: &TC) -> RawMeas {
     let (nn, nc) = (nspin(p) as f64, (p.l*p.l*p.l) as f64);
