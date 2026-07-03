@@ -150,8 +150,8 @@ fn main() {
         for step in 0..p.n_samples {
             wolff_flip(&mut z, &p, &c, &mut rng);
             if step % p.sample_interval == 0 {
-                let (e, v, vs) = measure(&z, &p, &c);
-                es += e; vs += v; vss += vs;
+                let (e, v_abs, v_stag) = measure(&z, &p, &c);
+                es += e; vs += v_abs; vss += v_stag;
             }
         }
         es /= n_meas as f64; vs /= n_meas as f64; vss /= n_meas as f64;
