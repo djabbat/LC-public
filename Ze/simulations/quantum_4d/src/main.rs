@@ -309,6 +309,7 @@ fn main() {
             if cli.json { all.push(m); }
             else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:10.4} {:7.2} {:>5}",
                 l,g,m.v_abs,m.v_stag,m.e,m.binder,m.tau_int_e,phase); }
+            all.push(m);  // всегда сохраняем для Binder-анализа
         }
     }
     
