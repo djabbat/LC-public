@@ -181,6 +181,13 @@ fn measure_one(z: &Lattice, p: &Params, c: &TC) -> RawMeas {
                 e -= c.ks*val*z[idx(p,x,y,zn,t,tau)] as f64;
                 e -= c.ktau*val*z[idx(p,x,y,zc,t,taun)] as f64;
                 e -= c.kh*val;
+                // NNN: 12 диагональных соседей (АФМ)
+                e += c.kjnnn*val*z[idx(p,(x+1)%p.l,(y+1)%p.l,zc,t,tau)] as f64;
+                e += c.kjnnn*val*z[idx(p,(x+1)%p.l,(y+p.l-1)%p.l,zc,t,tau)] as f64;
+                e += c.kjnnn*val*z[idx(p,(x+1)%p.l,y,(zc+1)%p.l,t,tau)] as f64;
+                e += c.kjnnn*val*z[idx(p,(x+1)%p.l,y,(zc+p.l-1)%p.l,t,tau)] as f64;
+                e += c.kjnnn*val*z[idx(p,x,(y+1)%p.l,(zc+1)%p.l,t,tau)] as f64;
+                e += c.kjnnn*val*z[idx(p,x,(y+1)%p.l,(zc+p.l-1)%p.l,t,tau)] as f64;
             }
         }
         let stag = cs/(p.lt*p.m) as f64;
