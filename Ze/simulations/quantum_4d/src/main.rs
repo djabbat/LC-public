@@ -85,7 +85,7 @@ fn init_staggered(p: &Params) -> Lattice {
 fn wolff(z: &mut Lattice, p: &Params, c: &TC, rng: &mut impl Rng) -> usize {
     let n = nspin(p);
     let seed = rng.gen_range(0..n);
-    let pnnn = 1.0-(-2.0*c.jnnn).exp();
+    let pnnn = 1.0-(-2.0*c.kjnnn).exp();
     let (pt, ps, ptau) = (1.0-(-2.0*c.kt).exp(), 1.0-(-2.0*c.ks).exp(), 1.0-(-2.0*c.ktau).exp());
     
     let mut cluster = vec![false; n];
