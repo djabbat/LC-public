@@ -87,8 +87,8 @@ fn main() {
             } else {"?"};
             
             if cli.json { all.push(m.clone()); }
-            else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:10.4} {:7.2} {:>5}  {:.3}/{:.3} {}",
-                l,g,m.v_abs,m.v_stag,m.e,m.binder,m.tau_int_e,phase,m.wilson_1x1,m.wilson_2x2,w); }
+            else { println!("{:4} {:6.2} {:10.4} {:10.4} {:10.4} {:7.3}/{:.3} {:7.2} {:>5}  {:.3}/{:.3} {}",
+                l,g,m.v_abs,m.v_stag,m.e,m.binder,m.cv,m.tau_int_e,phase,m.wilson_1x1,m.wilson_2x2,w); }
             all.push(m);
             if let Some(ref pb) = pb { pb.inc(1); }
         }
