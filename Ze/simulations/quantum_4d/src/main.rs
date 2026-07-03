@@ -208,12 +208,12 @@ fn main() {
         for _ in 0..p.n_thermal { metropolis_sweep(&mut z, &p, &c, &mut rng); }
         
         let n_meas = p.n_samples / p.sample_interval;
-        let (mut es, mut vs, mut vss) = (0.0, 0.0, 0.0);
+        let (mut es, mut vs, mut vss) = (0.0f64, 0.0f64, 0.0f64);
         for _ in 0..p.n_samples {
             metropolis_sweep(&mut z, &p, &c, &mut rng);
             if rng.gen_range(0..p.sample_interval) == 0 {
-                let (e, v, vs, _) = measure(&z, &p, &c);
-                es += e; vs += v; vss += vs;
+                let (e, v, vs_val, _) = measure(&z, &p, &c);
+                es += e; vs += v; vss += vs_val;
             }
         }
         es /= n_meas as f64; vs /= n_meas as f64; vss /= n_meas as f64;
