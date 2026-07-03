@@ -169,7 +169,28 @@ fn measure_one(z: &Lattice, p: &Params, c: &TC) -> RawMeas {
         let stag = cs/(p.lt*p.m) as f64;
         vs += stag.abs(); vs2 += stag*stag; vs4 += stag.powi(4);
     }}}
-    RawMeas{e:e/nn, v_abs:v_sum.abs()/nn, v_stag:vs/nc, v_stag2:vs2/nc, v_stag4:vs4/nc}
+    RawMeas{e:e/nn, v_abs:v_sum.abs()/nn, v_stag:vs/nc, v_stag2:vs2/nc, v_stag4:vs4/nc,
+        w_1x1: wilson_loop(z,p,1,1), w_1x2: wilson_loop(z,p,1,2),
+        w_2x1: wilson_loop(z,p,2,1), w_2x2: wilson_loop(z,p,2,2) }
+}
+
+/// Петля Вильсона R×T в x-t плоскости
+fn wilson_loop(z: &Lattice, p: &Params, r: usize, t_loop: usize) -> f64 {
+    if p.l < r+1 || p.lt < t_loop+1 { return f64::NAN; }
+    let (mut w, mut cnt) = (0.0f64, 0u64);
+    for x in 0..p.l-r {
+        for y in 0..p.l { for zc in 0..p.l {
+            for t in 0..p.lt-t_loop {
+                let mut prod = 1.0f64;
+                for dx in 0..r { prod *= z[idx(p,x+dx,y,zc,t,0)] as f64; }
+                for dt in 0..t_loop { prod *= z[idx(p,x+r,y,zc,t+dt,0)] as f64; }
+                for dx in 0..r { prod *= z[idx(p,x+r-dx,y,zc,t+t_loop,0)] as f64; }
+                for dt in 0..t_loop { prod *= z[idx(p,x,y,zc,t+t_loop-dt,0)] as f64; }
+                w += prod; cnt += 1;
+            }
+        }}
+    }
+    if cnt > 0 { w / cnt as f64 } else { f64::NAN }
 }
 
 // ============================================================
