@@ -28,7 +28,8 @@ LC — интегративная экосистема для биомаркер
 | **Ze Theory** | Математический анзац (dτ/dt = −α·I(Z)) | `Ze/` |
 | **BioSense** | Носимые биомаркеры (wearable platform) | `BioSense/` |
 | **FCLC** | Федеративное обучение + DP + k-anonymity | `FCLC/` |
-| **Activated** | Клинический пилот (Тбилиси) | `AIM/` |
+| **HAP** | Health Analytics Platform (клинический пилот) | `HAP/` |
+| **Organismal_Aging** | Организменное старение (интегративный уровень) | `Organismal_Aging/` |
 
 ## Ключевые файлы
 
@@ -44,14 +45,18 @@ LC — интегративная экосистема для биомаркер
 ```
 LC/
 ├── README.md, MAP.md, STATE.md, TODO.md, PARAMETERS.md, _pi.md
-├── AIM/             — ИИ-медицина (Ze-HRV, Activated clinic)
 ├── BioSense/        — носимые устройства
 ├── FCLC/            — федеративное обучение
+├── HAP/             — Health Analytics Platform
 ├── MCAOA/           — (включая CDATA, Telomere, MitoROS и др.)
+├── Organismal_Aging/ — организменное старение
 ├── Ze/              — Ze Vectors Theory
-├── scripts/         — утилиты
+├── realtime/        — real-time обработка
+├── shared-types/    — общие типы
+├── sim_core/        — ядро симуляций
 ├── server/          — серверная часть
 ├── web/             — веб-интерфейсы
+├── scripts/         — утилиты
 └── docs/            — документация
 ```
 \n## 🚫 Правило: не писать про внутренние ревью во внешних документах\nНикогда не упоминать внутренние процессы (peer review, MBPR, TA-review, 9-state, audit loop) в документах для партнёров, грантов, инвесторов. Во внешних документах — только результат.\n

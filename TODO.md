@@ -1,4 +1,11 @@
-# LC · TODO (v7.2 — пост-28 peer review)
+# LC · TODO
+
+## 🔴 4 июля 2026
+- [ ] **Centrosome as Integrative Sensor** — submit в Progress in Biophysics and Molecular Biology (PBMB)
+  - [ ] Проверить author guidelines (PBMB — Elsevier)
+  - [ ] Написать cover letter
+  - [ ] Проверить references (Vancouver)
+  - [ ] Submit через Editorial Manager (v7.2 — пост-28 peer review)
 
 ## Активные
 
