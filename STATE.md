@@ -1,11 +1,11 @@
-# LC · STATE (v7.2 — Organismal Aging, пост-28 peer review)
+# LC · STATE (v7.4 — Ze Theory ready for Entropy)
 
 > **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-**Дата:** 2026-06-21
+**Дата:** 2026-07-04
 **CONCEPT:** v7.2 (финальная архитектура)
 **Peer Review:** 28 циклов пройдено
-**Оценка:** 8.2/10
+**Оценка:** 8.5/10
 
 ---
 
@@ -61,6 +61,21 @@
 
 28 циклов (2026-06-21). 30 PMID верифицированы. 3 критические ошибки исправлены.
 
+## §3b. СТАТЬИ — НОВОЕ
+
+**Ze Theory** (2026-07-04) — готов к сабмиту:
+- Файлы: `~/Desktop/Ze_Theory_English.md` / `.docx` + `Ze_Theory_cover_letter.md` / `.docx`
+- Целевой журнал: **Entropy** (MDPI) — идеальный scope (Shannon entropy, FEP, information theory)
+- 9,000 слов, 33 референса, код cross-validated (3 имплементации)
+- План Б: Int. J. Theoretical Physics (Springer)
+- ⏳ Submit через MDPI Susy
+
+**Centrosome as Integrative Sensor** (2026-07-03):
+- Файл: `~/Desktop/Centrosome_as_Integrative_Sensor.md` / `.docx`
+- 34 PMID, 20 фальсифицируемых предсказаний, экспериментальный roadmap
+- Английский вычитан, следы ИИ убраны, references отформатированы (Vancouver)
+- ⏳ Подобрать журнал, начать submit
+
 ---
 
 ## §4. ДЕДЛАЙНЫ
@@ -71,4 +86,4 @@
 
 ---
 
-*LC STATE v7.2 — 2026-06-21.*
+*LC STATE v7.3 — 2026-07-03.*
