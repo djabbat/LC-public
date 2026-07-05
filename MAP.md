@@ -1,14 +1,13 @@
-# LC — MAP (v7.0: Organismal Aging — единый проект)
+# LC — MAP (v7.1: фактическая структура)
 
-**Дата:** 2026-06-21 (полная реорганизация — объединение подпроектов)
+**Дата:** 2026-07-04 (Цикл 8 аудита pi — приведение к реальности)
 
-## Новая структура (единый проект)
+## Фактическая структура (июль 2026)
 
 ```
-LC/  =  Organismal Aging
-│
+LC/
 ├── _pi.md                          ← правила для pi
-├── CONCEPT.md                       ← ЕДИНЫЙ концепт (этот документ — главный)
+├── CONCEPT.md                       ← концепт LC
 ├── TODO.md                          ← задачи
 ├── PARAMETERS.md                    ← параметры
 ├── MAP.md                           ← этот файл
@@ -16,77 +15,79 @@ LC/  =  Organismal Aging
 ├── MEMORY.md                        ← история решений
 ├── README.md                        ← описание
 ├── DESIGN.md                        ← архитектура ПО
-├── THEORY.md                        ← единая теория (центриоль + MCAOA + Ze)
-├── EVIDENCE.md                      ← доказательная база (все PMID)
-├── OPEN_PROBLEMS.md                 ← открытые вопросы
+├── THEORY.md                        ← теория
+├── EVIDENCE.md                      ← доказательная база
 ├── LICENSE                          ← Apache 2.0
 ├── .gitignore
 │
-├── sim_core/                        ← ЯДРО СИМУЛЯТОРА (Rust)
-│   ├── Cargo.toml
-│   └── src/
-│       ├── centriole/               ← Уровень #1 (← cell_dt crates)
-│       ├── counters/                ← Уровень #2 (← mcoa crates)
-│       ├── tissue/                  ← Уровень #3: ткани + Z_conflict
-│       ├── organism/                ← Интеграция: онтогенез, кривая старения
-│       ├── species/                 ← Видовая параметризация
-│       ├── microbiome/              ← Микробиом
-│       ├── macrobiome/              ← Макробиом (питание, среда)
-│       ├── learning/                ← Самообучение (Байес)
-│       └── spatial/                 ← 3D-модель
+├── MCAOA/                           ← Multi-Counter Architecture (5 подпроектов)
+│   ├── CDATA/                       ←   + 4 подподпроекта (simulator, Aubrey, CellLineageTree, articles)
+│   ├── EpigeneticDrift/
+│   ├── MitoROS/
+│   ├── Proteostasis/
+│   └── Telomere/
 │
-├── argus_bridge/                    ← Мост к ARGUS-LP (робот)
-├── infogest_bridge/                 ← Мост к INFOGEST (пищеварение)
+├── Ze/                              ← Ze Vectors Theory (4 подпроекта)
+│   ├── Ze_CHSH/
+│   ├── Ze_D/
+│   ├── Ze-Hierarchy/
+│   ├── Ze_Model/
+│   ├── simulator/                   ← Rust-симулятор (Cargo)
+│   ├── website/ze_sim/              ← Веб-симулятор
+│   ├── bristlebot_sim/              ← Python-симуляция
+│   ├── simulations/                 ← Python-симуляции
+│   └── ze-web/                      ← Веб-конфиг
 │
-├── biosense/                        ← Сенсоры (← BioSense)
-├── fclc/                            ← Конфиденциальные вычисления (← FCLC)
-├── hap/                             ← Health-Age Profiling (← HAP)
+├── BioSense/                        ← Носимые биомаркеры (7/7)
+├── FCLC/                            ← Федеративное обучение (7/7)
+├── HAP/                             ← Health Analytics Platform (7/7)
+├── Organismal_Aging/                ← Организменное старение (7/7)
 │
-├── sim_cli/                         ← CLI (Rust)
-├── sim_api/                         ← REST API (Rust)
-├── sim_gui/                         ← Веб-интерфейс (Phoenix LiveView)
-├── sim_py/                          ← Python bindings (PyO3)
-│
-├── calibration/                     ← Калибровка
-│   ├── gtex/
-│   ├── uk_biobank/
-│   └── all_of_us/
-│
-├── validation/                      ← Валидация
-│   └── ze_hierarchy/               ← Ze-Hierarchy (← Ze/Ze-Hierarchy)
-│
-├── tests/                           ← Интеграционные тесты
-├── benches/                         ← Бенчмарки
-│
-├── docs/                            ← Документация
-├── scripts/                         ← Скрипты
-│
-├── _archive/                        ← Архив
-│   ├── subprojects_concepts/        ← Старые CONCEPT.md подпроектов
-│   └── v_pre_2026-06-21/            ← Предыдущая версия
+├── sim_core/                        ← Ядро симулятора (Rust workspace)
+├── realtime/                        ← Real-time сервисы
+├── shared-types/                    ← Общие типы
 │
 ├── server/                          ← Серверная инфраструктура
-├── web/                             ← Веб (существующий)
-├── realtime/                        ← Real-time сервисы
-├── services/                        ← Сервисы
-├── shared-types/                    ← Общие типы
-├── refs/                            ← Референсы
-└── _originals/                      ← Оригиналы документов
+├── web/                             ← Веб-интерфейсы
+├── docs/                            ← Документация
+├── scripts/                         ← Скрипты
+├── _archive/                        ← Архив
+└── _originals/                      ← Оригиналы
 ```
 
-## Бывшие подпроекты → новые компоненты
+## Подпроекты (с _pi.md)
 
-| Бывший подпроект | Путь | Новый путь | Статус |
-|---|---|---|---|
-| **MCAOA** | `MCAOA/` | `sim_core/counters/` | Интегрируется |
-| **CDATA** | `MCAOA/CDATA/` | `sim_core/centriole/` | Интегрируется |
-| **Ze** | `Ze/` | `sim_core/tissue/` + `validation/ze_hierarchy/` | Интегрируется |
-| **BioSense** | `BioSense/` | `biosense/` | ✅ Работает |
-| **FCLC** | `FCLC/` | `fclc/` | ✅ Production |
-| **HAP** | `HAP/` | `hap/` | 🟡 Сабмит |
-| **Organismal_Aging** | `Organismal_Aging/` | → КОРЕНЬ LC | Интегрируется |
-| **Aubrey/ARGUS** | `~/Desktop/Marketing/Aubrey/` | `argus_bridge/` + `docs/argus/` | 🟡 Мост |
+| Подпроект | Путь | Core |
+|-----------|------|:----:|
+| **MCAOA** | `MCAOA/` | 7/7 |
+| **CDATA** | `MCAOA/CDATA/` | 7/7 |
+| **EpigeneticDrift** | `MCAOA/EpigeneticDrift/` | 7/7 |
+| **MitoROS** | `MCAOA/MitoROS/` | 7/7 |
+| **Proteostasis** | `MCAOA/Proteostasis/` | 7/7 |
+| **Telomere** | `MCAOA/Telomere/` | 7/7 |
+| **CDATA/simulator** | `MCAOA/CDATA/simulator/` | 7/7 |
+| **CDATA/Aubrey** | `MCAOA/CDATA/Aubrey/` | 7/7 |
+| **CDATA/CellLineageTree** | `MCAOA/CDATA/CellLineageTree/` | 7/7 |
+| **CDATA/articles** | `MCAOA/CDATA/articles/` | 7/7 |
+| **Ze_CHSH** | `Ze/Ze_CHSH/` | 7/7 |
+| **Ze_D** | `Ze/Ze_D/` | 7/7 |
+| **Ze-Hierarchy** | `Ze/Ze-Hierarchy/` | 7/7 |
+| **Ze_Model** | `Ze/Ze_Model/` | 7/7 |
+| **ze_sim** | `Ze/website/ze_sim/` | 7/7 |
+| **Ze/simulator** | `Ze/simulator/` | ⚠️ 1/7 |
+| **BioSense** | `BioSense/` | 7/7 |
+| **FCLC** | `FCLC/` | 7/7 |
+| **HAP** | `HAP/` | 7/7 |
+| **Organismal_Aging** | `Organismal_Aging/` | 7/7 |
+
+## План реорганизации (v7.0 от 2026-06-21)
+
+> ⚠️ Следующая архитектура — **ПЛАН**, не реализована:
+> - `sim_core/` — единое ядро (центриоль + counters + tissue + organism + ...)
+> - `biosense/`, `fclc/`, `hap/` — переименование (lowercase)
+> - `sim_cli/`, `sim_api/`, `sim_gui/`, `sim_py/` — интерфейсы
+> - `calibration/`, `validation/`, `argus_bridge/`, `infogest_bridge/` — мосты
 
 ---
 
-*Обновлено 2026-06-21 (v7.0 — единый проект Organismal Aging).*
+*Обновлено 2026-07-04 (Цикл 8 аудита — фактическая структура).*
