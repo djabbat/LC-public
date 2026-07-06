@@ -16,7 +16,7 @@
 > 2. Each project requires a **new set of reviewers** for each peer review cycle. The reviewer pool is forcibly rotated.
 > 3. The set of reviewers is determined **based on the project's CONCEPT.md** — topics, disciplines, methods, mentioned experts. Reviewers are selected for the specific CONCEPT, not by template.
 
-**Parent:** LC/MCAOA  
+**Parent:** LC/MCAOA
 **CONCEPT.md:** CONCEPT.md  
 **Created:** after completion of prerequisite tasks
 
