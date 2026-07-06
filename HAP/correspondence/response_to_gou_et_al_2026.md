@@ -1,6 +1,6 @@
 # Response to Gou et al. (2026): Beyond the microbiome — the macrobiome and the case for digital twin collaboration
 
-**Author:** Jaba Tkemaladze, MD
+**Author:** Jaba Tqemaladze, MD
 **Affiliation:** Georgia Longevity Alliance, Tbilisi, Georgia
 **Email:** jaba@longevity.ge
 **Date:** 2026-06-06
@@ -74,7 +74,7 @@ I look forward to a productive discussion and, I hope, collaboration.
 
 **Sincerely,**
 
-**Jaba Tkemaladze, MD**
+**Jaba Tqemaladze, MD**
 President, Georgia Longevity Alliance
 Tbilisi, Georgia
 jaba@longevity.ge

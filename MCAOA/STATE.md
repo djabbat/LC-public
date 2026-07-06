@@ -1,7 +1,10 @@
+**Последнее обновление:** 2026-07-05 (аудит pi — Цикл 6)
+
 # STATE — MCAOA
 
 **Аудит 2026-06-16:** состояние подтверждено (глубокий аудит pi).
-**Date:** 2026-06-29
+**Date:** 2026-07-05
+**📚 Итог:** Hardware/Software, Bradford-Hill, entropy markers (polyGlu, centriole length, cilium). CONCEPT.md §11, EVIDENCE.md §8.
 
 > **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
