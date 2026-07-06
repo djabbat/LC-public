@@ -1,5 +1,7 @@
 # _pi.md — Organismal Aging
 
+**Parent:** LC
+
 **Правила для pi при работе с этим проектом.**
 
 ---

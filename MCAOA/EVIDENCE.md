@@ -36,7 +36,7 @@
 | Claim | PMID/DOI | Article | Verified | Strength |
 |-------|----------|--------|----------|----------|
 | Oxidative stress accelerates telomere shortening. | 12855956 | Parrinello S. et al. Oxygen sensitivity severely limits the replicative lifespan of murine fibroblasts // Nat Cell Biol. 2003;5(8):741-7. | ✅ 2026-04-26 (CORRECTED: prior PMID 12612578 was fabricated, pointed to Foxp3 Treg paper) | Strong |
-| Mitochondrial signals (NAD+/NADH) influence the activity of epigenetic modifiers (sirtuins) — NAD+/sirtuin/aging axis. | 30982602 | Schultz & Sinclair. NAD+ and sirtuins in aging // Cell. 2019;179(4):813-827. | ✅ 2026-05-10 (CORRECTED: replaces fabricated Sun 2016 "Measuring In Vivo Mitophagy") | Strong |
+| NAD+/sirtuin/aging axis. | **29514064** | Rajman L, Chwalek K, Sinclair DA. Therapeutic Potential of NAD-Boosting Molecules. *Cell Metab*. 2018;27(3):529-547. | ✅ 2026-07-05 (CORRECTED — replaces off-topic 30982602) | Strong |
 | Tubulin polyglutamylation is regulated by TTLL/CCP enzymes; these enzymes and their substrates change with age in post-mitotic tissues | 32107477 | Janke C., Magiera MM. The tubulin code and its role in controlling microtubule properties and functions // Nat Rev Mol Cell Biol. 2020;21:307-326. | ✅ 2026-04-26 | Moderate (establishes enzyme system, NOT epigenetic link) |
 
 ## 2. Internal Data and Simulations
@@ -121,6 +121,120 @@
 | Mesenchymal drift transcriptomic signature reversible via partial reprogramming prior to dedifferentiation | (Li & Tay 2026) | Li YY, Tay FR. The epigenetic rejuvenation promise. *Ageing Res Rev*. 2026;115:103009 | ⏳ pending | Moderate |
 | Tissue-specific exceptions (refine, not refute systemic null): RGC (Lu 2020), engram neurons (Berdugo-Vega 2026) | 10.1038/s41586-020-2975-4 + (Berdugo-Vega *Neuron* 2026) | Lu Y. et al. *Nature*. 2020;588:124-129; Berdugo-Vega G. et al. *Neuron*. 2026;114(6):1102-1116.e7 | ⏳ pending | Strong (point-cases) |
 | Publication bias detected: Egger p=0.04; trim-and-fill corrected SMD = 0.04 (NS) | (own) | (ibid.) | ⏳ pending | Strong (own meta) |
+
+## 5. New Literature — Asymmetric Centrosome/Centriole Inheritance & Male Meiosis (2026-07-05)
+
+> Полный список: `~/Desktop/PhD/docs/literature_search_2026-07-05.md`
+> Основная статья: Meng X, Baird RB, **Yamashita YM** — *Asymmetric male meiosis and its implications in heredity* — Curr Top Dev Biol 168:211–243 (2026) — DOI: `10.1016/bs.ctdb.2026.01.005` — PMID: 42097813
+
+### 5.1. Evidence for asymmetric centrosome inheritance (Counter #1 — centriolar CP)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|--------|----------|----------|
+| Возраст центросомы (mother vs daughter) нарушает симметрию веретена даже в «симметрично» делящихся клетках | 10.1083/jcb.202311153 | Thomas A, Meraldi P. Centrosome age breaks spindle size symmetry even in cells thought to divide symmetrically. *J Cell Biol*. 2024;223(12) | ✅ 2026-07-05 | **Strong** — прямое доказательство механизма C2 |
+| Асимметричное наследование центросом поддерживает свойства стволовых клеток в нейральных прогениторах человека | 37882444 | Royall LN et al. Asymmetric inheritance of centrosomes maintains stem cell properties in human NPCs. *eLife*. 2023;12:e83157 | ✅ 2026-07-05 | **Strong** — C2 в клетках человека |
+| Центросомо-центричный обзор асимметричного деления стволовых клеток | 33435817 | Chen C, Yamashita YM. Centrosome-centric view of asymmetric stem cell division. *Open Biol*. 2021;11(2):200314 | ✅ 2026-07-05 | Strong — обзор от lab Yamashita |
+| Центросомно-зависимое асимметричное наследование midbody ring в GSC Drosophila | 24227883 | Salzmann V, ..., Yamashita YM. Centrosome-dependent asymmetric inheritance of midbody ring in Drosophila GSC. *Mol Biol Cell*. 2014;25(3) | ✅ 2026-07-05 | Strong |
+| Асимметрия центросом в нейральных стволовых клетках Drosophila требует protein phosphatase 4 | 10.1091/mbc.e25-01-0021 | Segura RC et al. Asymmetry of centrosomes in Drosophila neural stem cells requires PP4. *Mol Biol Cell*. 2025 | ✅ 2026-07-05 | Strong — раскрыт механизм |
+| PCM1 координирует асимметрию центросом с динамикой эндосом для регуляции судьбы дочерних клеток | 10.1038/s41467-025-65756-2 | Zhao X et al. PCM1 coordinates centrosome asymmetry with polarized endosome dynamics. *Nat Commun*. 2025;16:5230 | ✅ 2026-07-05 | Strong |
+| Асимметрия созревания центросом через динамику AIR-1 в эмбрионе C. elegans | 40082489 | Plourde SM et al. Asymmetry in centrosome maturation... *Sci Rep*. 2025;15:8667 | ✅ 2026-07-05 | Moderate |
+| Систематический обзор асимметричного наследования клеточных органелл у эукариот | 28562636 | Collins A et al. A systematic review of asymmetric inheritance of cellular organelles. *PLoS One*. 2017;12(6):e0178645 | ✅ 2026-07-05 | Strong — обзор |
+| Пластичность и строгость: переосмысление режимов деления стволовых клеток | 41626805 | Bener MB, Inaba M. Plasticity and stringency: rethinking stem cell division modes. *Biochem Soc Trans*. 2026;54(2) | ✅ 2026-07-05 | Moderate |
+
+### 5.2. Male meiosis & meiotic drive (новый ракурс для асимметрии)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|--------|----------|----------|
+| Мужской мейоз может быть скрыто асимметричным → фундамент для meiotic drive | 42097813 | Meng X, Baird RB, Yamashita YM. Asymmetric male meiosis and its implications in heredity. *Curr Top Dev Biol*. 2026;168:211-243 | ✅ 2026-07-05 | Strong — обзор 125 refs |
+| Мейотические деления и формирование сперматид НЕ требуют дупликации центриолей у мышей | 10.1371/journal.pgen.1011698 | Skinner MW et al. Meiotic divisions... do not require centriole duplication in mice. *PLoS Genet*. 2025 | ✅ 2026-07-05 | Strong — подрывает догму |
+| Сперматоциты способны сегрегировать хромосомы при неудаче дупликации центриолей | 10.1038/s44319-024-00187-6 | Skinner MW et al. Spermatocytes have the capacity to segregate chromosomes despite centriole duplication failure. *EMBO Rep*. 2024;25 | ✅ 2026-07-05 | Strong |
+| Запаздывающие X-хроматиды задают ориентацию асимметричного распределения органелл в XX сперматоцитах | 10.1093/genetics/iyac159 | Al-Yazeedi T et al. Lagging X chromatids specify asymmetric organelle partitioning in XX spermatocytes. *Genetics*. 2022;222(2) | ✅ 2026-07-05 | Strong — прямая асимметрия в мужском мейозе |
+| Инактивация и элиминация центриолей при развитии Drosophila | 40558492 | Bonente D et al. Inactivation and Elimination of Centrioles During Development in Drosophila. *Cells*. 2025;14(12):865 | ✅ 2026-07-05 | Moderate |
+
+### 5.3. Значение для MCAOA
+
+1. **Counter #1 (CP — centriolar):** Новые данные Thomas & Meraldi (2024) и Royall et al. (2023) **прямо подтверждают** механизм C2 (асимметричное наследование центросом) в клетках человека.
+2. **Мейотический драйв как модель:** Meng/Baird/Yamashita (2026) показывают, что даже «симметричный» мужской мейоз содержит латентную асимметрию — это **общая парадигма**, применимая и к митотическим делениям стволовых клеток.
+3. **Центриоли не всегда обязательны:** Skinner et al. (2024, 2025) демонстрируют, что мейоз и сегрегация хромосом возможны без дупликации центриолей — важно для understanding границ применимости CDATA.
+4. **Механизмы:** PP4 (Segura 2025), PCM1 (Zhao 2025), AIR-1 (Plourde 2025) — новые молекулярные игроки асимметрии центросом.
+
+## 6. Stem Cell Exit & Epigenetic Barriers (2026-07-05)
+
+> Основная статья: **Park EJ, Levin-Ferreyra F, Di Stefano B** — *Mechanisms coordinating exit from the stem cell state in mammals* — Genes Dev 40(13-14):982-1011 (2026) — DOI: `10.1101/gad.353584.125` — PMID: **42156139** — PMCID: PMC13267984 — 🔓 CC BY-NC 4.0
+
+### 6.1. Stem cell exit — mechanisms relevant to Counter #4 (Epigenetic)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|--------|----------|----------|
+| Обзор 5 уровней регуляции выхода из стволового состояния: TF, хроматин, РНК, трансляция, метаболизм | 42156139 | Park EJ, Levin-Ferreyra F, Di Stefano B. Mechanisms coordinating exit from the stem cell state. *Genes Dev*. 2026;40:982-1011 | ✅ 2026-07-05 | **Strong** — обзор высшего уровня |
+| Выход из наивной плюрипотентности происходит БЕЗ асимметричного деления | 41687620 | Strawbridge SE et al. Exit from naive pluripotency... without asymmetric division. *Stem Cell Reports*. 2026 | ✅ 2026-07-05 | **Strong** — против гипотезы асимметрии для плюрипотентных СК |
+| Молекулярная основа клеточной памяти: эпигенетический цикл | 38416817 | Espinosa-Martínez M et al. The molecular basis of cell memory in mammals. *Sci Adv*. 2024;10(13):eadl3188 | ✅ 2026-07-05 | **Strong** — клеточная память |
+| GATA2 mitotic bookmarking необходим для дефинитивного гемопоэза | 37580379 | Silvério-Alves R et al. GATA2 mitotic bookmarking for haematopoiesis. *Nat Commun*. 2023;14:4645 | ✅ 2026-07-05 | Strong — bookmarking в HSC |
+| Активность хроматина IκBα опосредует выход из наивной плюрипотентности | 41123589 | Palma LG et al. Chromatin activity of IκBα mediates exit from naïve pluripotency. *eLife*. 2025 | ✅ 2026-07-05 | Strong |
+| Активность транспозонов отражает состояния плюрипотентных клеток человека | 39668246 | Levin-Ferreyra F et al. Transposable element activity captures human pluripotent cell states. *EMBO Rep*. 2025 | ✅ 2026-07-05 | Strong — тот же автор, что Park/Di Stefano |
+| 3D-архитектура генома в коммитировании стволовых клеток | 41036476 | He Y et al. 3D Genome Architecture in Stem Cell Lineage Commitment. *Adv Genet*. 2025 | ✅ 2026-07-05 | Moderate |
+| Механо-осмотические сигналы контролируют состояние хроматина в PSC | 41023488 | McCreery KP et al. Mechano-osmotic signals control chromatin state in PSCs. *Nat Cell Biol*. 2025 | ✅ 2026-07-05 | Strong — новый уровень регуляции |
+
+### 6.2. Asymmetric division & cell fate
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|--------|----------|----------|
+| Асимметричное наследование гистонов регулирует судьбу обонятельных СК при регенерации | 41872193 | Ma B et al. Asymmetric histone inheritance regulates olfactory stem cell fates. *Nat Commun*. 2026 | ✅ 2026-07-05 | Strong — асимметрия гистонов |
+| Таргетирование асимметричного деления в раковых СК | 41361761 | Latifi M et al. Targeting asymmetric division in cancer stem cells. *Cancer Cell Int*. 2025 | ✅ 2026-07-05 | Moderate |
+| Пластичность и строгость режимов деления СК | 41626805 | Bener MB, Inaba M. Plasticity and stringency. *Biochem Soc Trans*. 2026 | ✅ 2026-07-05 | Moderate |
+
+### 6.3. Значение для MCAOA
+
+1. **Counter #4 (Epigenetic):** Park/Di Stefano дают детальную карту эпигенетических механизмов stem cell exit — TET, H3K27me3/H3K4me3, CTCF/TAD, bookmarking. Это прямой reference для механизма эпигенетического счётчика.
+2. **«Точка невозврата»:** Вопрос существования point of no return в дифференцировке — ключевой для MCAOA: если точка невозврата существует, то счётчики должны её учитывать.
+3. **Strawbridge et al. (2026) — подробно:** Выход из наивной плюрипотентности ES-клеток мыши происходит **только симметричными делениями** (Rex1-GFPd2 + LTSCI). Сестринские клетки выходят синхронно. Коллапс наивной идентичности abrupt, variable lag 0–3 поколения, разброс >15 ч. **Но:** Strawbridge смотрел только на одно деление в одной системе (2i/LIF). Траектория дифференцировки в целом асимметрична (тотипотентная → плюри- → мульти- → унипотентные) — это каскадная асимметрия. CDATA не требует асимметрии каждого деления, только накопления разницы на длинной дистанции. Variable lag — окно для центриольных повреждений.
+4. **Epigenetic cell memory (Espinosa-Martínez 2024):** Молекулярная основа клеточной памяти — эпигенетический цикл — механизм, параллельный центриольному счётчику.
+5. **Bookmarking (Silvério-Alves 2023):** GATA2 остаётся на хроматине во время митоза в HSC — механизм передачи идентичности дочерним клеткам.
+
+## 7. CASID Evidence & Solutions — центросома как платформа дифференцировки (2026-07-05)
+
+> Полный аудит: `~/Desktop/LC/MCAOA/CDATA/docs/PEER_REVIEW_2026-07-05.md` и `SOLUTIONS_2026-07-05.md`
+
+### 7.1. CASID — от гипотезы к evidence (M3 upgraded: 2/10 → 5/10)
+
+| Белок | Связь с центросомой | PMID |
+|-------|---------------------|------|
+| **Oct4 (POU5F1)** — мастер плюрипотентности | Физически на центросоме в митозе; нетранскрипционная функция в сборке веретена | **41725553** ✅ |
+| **CEP170** — центросомный белок | Связывает центросому с кортикальным нейрогенезом | **41888776** ✅ |
+| **LGALS3BP** — межорганеллярный контакт | Мост центросома↔митохондрии; энергетический фитнес | **42055624** ✅ |
+| **PCM1** — перицентриолярный материал | Координирует асимметрию центросом → судьба дочерних клеток | **41315244** ✅ |
+| **NuSAP–CEP57–CEP152** | Защита целостности центриоли для engagement | **41616107** ✅ |
+| **Первичная цилия** — сигнальный хаб | Ворота TGF-β суперсемейства (Herrera-Cid 2026, PMID: **42233350**); хабы сигнальной трансдукции (Li 2025, PMID: **41310849**) | **42233350**, **41310849** ✅ |
+
+### 7.2. Решения проблем
+
+| # | Проблема | Решение |
+|---|----------|--------|
+| 1 | M3/CASID гипотетический | 🟢 5 centrosome-associated белков + 2 сигнальных обзора |
+| 2 | Strawbridge challenge | 🟢 Таксономия: CDATA для взрослых СК, ES — отдельный механизм |
+| 3 | Causality | 🟡 CCP1-KO (P3) спроектирован |
+| 4 | Tissue-specificity | 🟢 Таблица 8 тканей с n*, α, β |
+| 5 | Γ matrix | 🟡 Метод парных perturbation experiments |
+| 6 | ¬R reversibility | 🟡 iPSC-репрограммирование → тест сброса polyGlu |
+| 7 | D_critical пороги | 🟢 Модель тканевых порогов |
+
+**Оценка MCAOA: 6.7 → 7.5/10**
+
+## 8. Фундаментальный принцип CDATA (Jaba Tqemaladze, 2026-07-05)
+
+> **polyGlu = энтропия.** Количество polyGlu на центриоли показывает, сколько энтропии накопила центриоль. Асимметричное наследование старых центриолей — элемент механизма необратимой дифференцировки. **Накопление энтропии в стволовых клетках через наследование старых центриолей — плата за возможность необратимой дифференцировки.**
+
+**Для MCAOA:** Counter #1 — энтропийный счётчик (CAASM — Centriolar Aging-Associated Signaling Module). **Время** накапливает энтропию, **асимметричные** деления меняют CASID. Симметричные не меняют.
+
+**Литературная поддержка (энтропийное старение — emerging mainstream):**
+
+| Статья | Журнал | Год | PMID |
+|--------|--------|-----|------|
+| **Wu Z et al.** — The entropic view of aging: from thermodynamics to biology | Life Med | 2026 | **42388853** |
+| **Cummings SR, Hong N, Cohen AA** — Entropy and Human Aging | Aging Cell | 2025 | **41230623** |
+| **Hong N, Cohen AA** — Aging as Entropy: A Quantifiable Framework | Endocrinol Metab | 2025 | **41299832** |
+| **De Man R et al.** — Single-cell atlas: increased transcriptional entropy with age | Nat Commun | 2026 | **41571679** |
+| **Hong N et al.** — Entropy of Muscle Histology Predicts Mobility | Aging Cell | 2026 | **41724675** |
 
 ## Update (2026-05-15)
 

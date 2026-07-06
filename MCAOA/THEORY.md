@@ -18,6 +18,8 @@ Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are cons
 
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCAOA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCAOA.
 
+**Axiom M5 (Time-Driven Entropy + Asymmetric CAASM — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centriolar Aging-Associated Signaling Module (CAASM). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAASM. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAASM (active, programmatic). Full specification: CDATA/THEORY.md.
+
 ## 3. Formal Definitions
 
 ### 3.1. Single Counter Kinetics
@@ -51,7 +53,7 @@ The total phenotypic burden due to aging in a given tissue is defined as the wei
 
 `L_tissue = FI / 0.7`
 
-where FI is the Frailty Index (range 0.0–0.7 in populations >70 years, Rockwood et al. 2005, *CMAJ*, PMID 16129869). FI = Σ(deficits present) / Σ(deficits measured) per Searle et al. 2008 protocol (*BMC Geriatr*, PMID 18671847). The denominator 0.7 normalises so that the maximum observed FI maps to L_tissue ≈ 1.0.
+where FI is the Frailty Index (range 0.0–0.7 in populations >70 years, Rockwood et al. 2005, *CMAJ*, PMID 16129869). FI = Σ(deficits present) / Σ(deficits measured) per Searle et al. 2008 protocol (*BMC Geriatr*, PMID: **18826625**). The denominator 0.7 normalises so that the maximum observed FI maps to L_tissue ≈ 1.0.
 
 **Calibrated thresholds:**
 - `L_tissue < 0.30` → young/healthy tissue (FI < 0.21, corresponds to 20–30 yr old reference)
@@ -59,7 +61,7 @@ where FI is the Frailty Index (range 0.0–0.7 in populations >70 years, Rockwoo
 - `L_tissue > 0.60` → `L_critical`: disease onset / high mortality risk (FI > 0.42, hospitalisation threshold per Searle 2008)
 - `L_tissue > 1.00` → `L_max`: death / organ failure (FI > 0.70, near-maximal deficit accumulation, Rockwood 2005)
 
-**Validation reference:** Gompertz mortality hazard doubles with each 0.07 increment in FI (Mitnitski et al. 2002, *J Gerontol A Biol Sci Med Sci*, PMID 12456714). `L_critical = 0.60` corresponds to a FI of 0.42, at which 5-year mortality exceeds 50% in septuagenarians (Rockwood 2005, Fig. 3).
+**Validation reference:** Gompertz mortality hazard doubles with each 0.07 increment in FI (Mitnitski et al. 2001, *ScientificWorldJournal*, PMID: **12806071**). `L_critical = 0.60` corresponds to a FI of 0.42, at which 5-year mortality exceeds 50% in septuagenarians (Rockwood 2005, Fig. 3).
 
 These thresholds are **provisional** and will be refined during the calibration phase (MCAOA Test 1). They provide a falsifiable mapping: if longitudinal data show that tissue dysfunction occurs at significantly different L_tissue values, the model must be revised.
 
@@ -160,7 +162,7 @@ The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is 
 
 **Known (from literature) Proposed Non-Zero Couplings:**
 * `Γ_{telomere, mito} > 0`: Oxidative stress (mitochondria) accelerates telomere shortening (Parrinello et al., 2003).
-* `Γ_{epigenetic, mito} > 0`: Mitochondrial signals (NAD+/NADH) influence the activity of epigenetic modifiers (Schultz & Sinclair, *Cell* 2019, PMID 30982602 — review on NAD+/sirtuin/aging axis).
+* `Γ_{epigenetic, mito} > 0`: Mitochondrial signals (NAD+/NADH) influence the activity of epigenetic modifiers (Rajman L, Chwalek K, Sinclair DA. *Cell Metab*. 2018, PMID: **29514064** — NAD-boosting molecules review).
 
 **Hypothetical couplings (NO published evidence; included only as testable predictions; default = 0):**
 * `Γ_{centriole, epigenetic} > 0` (hypothetical): The author hypothesizes that epigenetic dysregulation could alter TTLL/CCP enzyme balance affecting polyglutamylation. **No published data support this.** Janke & Magiera (2020) describe the tubulin code but do **not** provide evidence for epigenetic regulation of TTLL/CCP. Default value: 0 (independence).

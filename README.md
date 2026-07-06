@@ -163,6 +163,6 @@ Apache 2.0 © 2026 Jaba Tqemaladze, MD — Georgia Longevity Alliance
 
 ## 🔗 Links
 
-- **PubMed:** [Tqemaladze J (ORCID: 0000-0001-8651-7243)](https://pubmed.ncbi.nlm.nih.gov/?term=Tkemaladze+J)
+- **PubMed:** [Tqemaladze J (ORCID: 0000-0001-8651-7243)](https://pubmed.ncbi.nlm.nih.gov/?term=Tqemaladze+J)
 - **MCAOA Preprint:** [Zenodo 10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
 - **ARGUS-LP:** [github.com/djabbat/Aubrey](https://github.com/djabbat/Aubrey)
