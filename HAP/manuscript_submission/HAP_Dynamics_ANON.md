@@ -48,7 +48,7 @@ enable affect? What are the mechanisms, the feedback loops, the
 dynamical properties of this brain-liver interaction?
 
 **Relationship to prior work:** An earlier preprint explored an initial
-formulation of this model (El Fettahi & Tkemaladze, 2025). The co-author
+formulation of this model (El Fettahi & Tqemaladze, 2025). The co-author
 (El Fettahi) subsequently withdrew from the project (June 2026), and her
 name has been removed from all project documents per her request. The
 present manuscript is a substantially revised and extended version,

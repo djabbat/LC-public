@@ -11,7 +11,7 @@
 > 
 > ---
 
-**Parent:** LC  
+**Parent:** LC
 **CONCEPT.md:** CONCEPT.md (if exists)  
 **Created:** 2025-04-10
 
