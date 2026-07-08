@@ -154,8 +154,8 @@ pub mod sources {
         Source::KnownFact("Гомпертцовская модель смертности: h(t) = h₀·exp(γ·t)");
     pub const ZE_CONFLICT_POSTULATE: Source =
         Source::Postulate("Межтканевые конфликты из-за разных периодов самообновления → Z_conflict (Tqemaladze 2026, Organismal Aging)");
-    pub const MCAOA_AXIOMS: Source =
-        Source::DOI("10.5281/zenodo.20055806", "Tqemaladze 2026 — MCAOA preprint, аксиомы M1-M4");
+    pub const MCARA_AXIOMS: Source =
+        Source::DOI("10.5281/zenodo.20055806", "Tqemaladze 2026 — MCARA preprint, аксиомы M1-M4");
 
     // Параметры — оценки
     pub const ETA_DIV_ESTIMATE: Source =
@@ -167,7 +167,7 @@ pub mod sources {
     pub const Z_CRIT_ESTIMATE: Source =
         Source::Estimate("Z_crit = 0.30 — предварительная оценка порога конфликта");
     pub const COUNTER_PARAMS_ESTIMATE: Source =
-        Source::Estimate("α, β, k, x_crit — оценки, требуют калибровки (MCAOA Test 1)");
+        Source::Estimate("α, β, k, x_crit — оценки, требуют калибровки (MCARA Test 1)");
 }
 
 #[cfg(test)]
@@ -209,7 +209,7 @@ mod tests {
             sources::ASYMMETRIC_INHERITANCE,
             sources::HAYFLICK_LIMIT,
             sources::FRAILTY_INDEX,
-            sources::MCAOA_AXIOMS,
+            sources::MCARA_AXIOMS,
         ];
     }
 }

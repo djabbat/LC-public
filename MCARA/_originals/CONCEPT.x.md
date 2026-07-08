@@ -23,7 +23,7 @@
 
 MCARA is the theoretical mother-project of the LC aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
 
-MCARA is **not** a replacement for CDATA, Ze, or BioSense; it is the meta-framework in which they live as specialised counters or measurement layers.
+MCARA is **not** a replacement for CEDAR, Ze, or BioSense; it is the meta-framework in which they live as specialised counters or measurement layers.
 
 ---
 
@@ -78,7 +78,7 @@ A cell enters senescence, apoptosis, or dysfunction when:
 
 | # | Name | Subproject | Nature | *n_i\** anchor | *τ_i* anchor |
 |---|------|------------|--------|----------------|--------------|
-| **1** | **Centriolar polyglutamylation** | CDATA | division + time | ~50–80 for HSC, ~30–50 for epithelial | months–years (mass-spec to calibrate) |
+| **1** | **Centriolar polyglutamylation** | CEDAR | division + time | ~50–80 for HSC, ~30–50 for epithelial | months–years (mass-spec to calibrate) |
 | **2** | **Telomere** | Telomere (new subproject) | division-dominant | Hayflick limit per cell type (~50 for human fibroblasts) | turnover of telomeric repeats |
 | **3** | **Mitochondrial ROS / mtDNA** | MitoROS (new subproject) | time-dominant | α → 0 for post-mitotic | days–weeks for mtDNA lesion turnover |
 | **4** | **Epigenetic drift** | EpigeneticDrift (new subproject) | time-dominant | α → 0 for post-mitotic | Horvath clock / DunedinPACE doubling time |
@@ -121,7 +121,7 @@ Test 4 is the near-term priority.
 
 | Subproject | MCARA role |
 |------------|-----------|
-| CDATA | Counter #1 (centriolar polyglutamylation) — specialised instance |
+| CEDAR | Counter #1 (centriolar polyglutamylation) — specialised instance |
 | Ze | Counter "S" — dimensionless χ_Ze synchronisation index computed from an ODE model of the plasma/SASP feedback loop (see `Ze/CONCEPT.md` §4, rewritten 2026-04-23 on Argentieri 2024 / Jeon 2022 basis) |
 | BioSense | Measurement layer for *D_autonomic*, *D_neural*, *D_olfactory* |
 | FCLC | Federated calibration of *w_i(tissue)* across clinics |
@@ -134,7 +134,7 @@ Test 4 is the near-term priority.
 
 - [x] Nature Aging Perspective manuscript ready (`~/Documents/MCOA_NatureAging_submission/`)
 - [ ] Rust reference implementation (`mcoa_core`, `mcoa_simulation`) compiling and tested
-- [ ] At least one MCARA Test 4 simulation run, output comparable to CDATA v5.1
+- [ ] At least one MCARA Test 4 simulation run, output comparable to CEDAR v5.1
 - [ ] 3-figure visualisation (Fig 1–3 already produced for Perspective)
 - [ ] Submission to *Nature Aging* by 2026-04-25
 
@@ -160,15 +160,15 @@ Test 4 is the near-term priority.
 
 MCARA является **WP1 MCARA Framework** в текущей заявке EIC Pathfinder Open.
 
-**Цель WP1:** формализовать MCARA как операциональный стандарт для интеграции моделей клеточного/организменного старения. Результат — software library + community white paper + dimensional transformation functions `f_i(D_i)` для ключевых counters (CDATA, telomere, epigenetic clock drift).
+**Цель WP1:** формализовать MCARA как операциональный стандарт для интеграции моделей клеточного/организменного старения. Результат — software library + community white paper + dimensional transformation functions `f_i(D_i)` для ключевых counters (CEDAR, telomere, epigenetic clock drift).
 
 **Duration:** M1-M12 (первые 12 месяцев проекта)
 **Budget:** €0.3M (1 postdoc + 0.5 PhD)
 **TRL target:** 2 → 3
 
 **Связь с другими WP:**
-- **WP2 CDATA Experimental:** использует MCARA dimensional framework для интерпретации in vivo результатов
-- **WP3 CDATA Computational:** использует MCARA coupling параметры для Bayesian model comparison (ABL-2 resolution)
+- **WP2 CEDAR Experimental:** использует MCARA dimensional framework для интерпретации in vivo результатов
+- **WP3 CEDAR Computational:** использует MCARA coupling параметры для Bayesian model comparison (ABL-2 resolution)
 - **WP4 FCLC Platform:** использует MCARA counter registry для federated model aggregation schema
 
 **Обязательства (после WP1 завершения):**
@@ -189,7 +189,7 @@ MCARA является **WP1 MCARA Framework** в текущей заявке EI
 
 **Proposed partners (letters of intent pending):**
 - Cell biology lab (human iPSC and organoid expertise) — experimental validation of Test 4 (Division vs Time) in human cell lines.
-- Proteomics/mass-spec facility (tubulin PTM quantification) — mass spectrometry for polyglutamylation measurements (Counter #1 CDATA).
+- Proteomics/mass-spec facility (tubulin PTM quantification) — mass spectrometry for polyglutamylation measurements (Counter #1 CEDAR).
 - Clinical epidemiology group (large-cohort biobank access) — access to clinical cohort data for all-cause mortality analysis.
 - Independent replication group (aging biomarker validation) — replication of tissue-specific weighting predictions (Test 1A).
 
@@ -245,9 +245,9 @@ Systematic review + meta-analysis (PROSPERO **CRD42026218473**, 14 studies, 274 
 - A-priori weight prediction (Problem 1): остаётся P0-блокером.
 
 
-## Адрес peer-review concerns (общие для CDATA experiments, Q3 2026)
+## Адрес peer-review concerns (общие для CEDAR experiments, Q3 2026)
 
-CDATA experiments share common blocker patterns. План addressing:
+CEDAR experiments share common blocker patterns. План addressing:
 
 ### 1. Budget — detailed line items required
 
@@ -315,7 +315,7 @@ PubMed esummary. Fabricated PMIDs IMMEDIATELY removed или replaced
 - Honest statement: "This is a conceptual/template proposal. Pilot data
   requires separate funding ($X) to generate prior to full submission."
 - Cite literature-derived parameter estimates с confidence intervals
-- Cross-reference parent papers (e.g., MCARA, parent CDATA literature)
+- Cross-reference parent papers (e.g., MCARA, parent CEDAR literature)
 
 ### 7. Risk matrix — honest mitigations
 
@@ -361,7 +361,7 @@ Before data collection:
 | **Address** | 42 Rustaveli, Resort Abastumani, Georgia |
 | **Email** | jaba@longevity.ge |
 | **Background** | MD Tbilisi State Medical University; clinical residency Institute of Psychiatry Tbilisi |
-| **Theoretical contribution** | Originator of CDATA (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
+| **Theoretical contribution** | Originator of CEDAR (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
 
 **Note:** This PI applies к ALL projects under GLA/LC umbrella unless explicitly overridden. Replace any `[TODO: PI name]`, `Lead PI: TBD`, `Principal Investigator: TBD` placeholders с этим блоком.
 

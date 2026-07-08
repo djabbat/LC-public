@@ -4,7 +4,7 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
-description = "Axum REST + WebSocket API for MCAOA, consumed by the Phoenix frontend."
+description = "Axum REST + WebSocket API for MCARA, consumed by the Phoenix frontend."
 
 [[bin]]
 name = "mcoa-api"

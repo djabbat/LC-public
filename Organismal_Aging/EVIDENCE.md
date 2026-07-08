@@ -11,7 +11,7 @@
 
 | PMID | Статья | Роль | Достоверность |
 |---|---|---|---|
-| **36583780** | Tqemaladze J. *Mol Biol Rep* 2023 — Centriole aging in stem cells | Формулировка CDATA | 📌 Постулат |
+| **36583780** | Tqemaladze J. *Mol Biol Rep* 2023 — Centriole aging in stem cells | Формулировка CEDAR | 📌 Постулат |
 | **15886028** | Tqemaladze J. *Cell Biol Int* 2005 — Centriole role in morphogenesis | Ранняя работа | 📌 Постулат |
 | **17255513** | Yamashita YM et al. *Science* 2007 — Asymmetric centrosome inheritance | Асимметрия в Drosophila | ✅ Эксперимент (Drosophila) |
 | **19829375** | Wang X et al. *Nature* 2009 — Asymmetric centrosome in neocortex | Асимметрия в нейральных прогениторах | ✅ Эксперимент (мышь) |
@@ -25,7 +25,7 @@
 | **23058597** | Pantic I et al. *Microsc Microanal* 2012 — Chromatin entropy in spleen | Хроматин ↔ возраст | ✅ Эксперимент (мышь) |
 | **19808878** | Shamir L et al. *Bioinformatics* 2009 — Image texture entropy for aging | Энтропия изображений C. elegans | ✅ Эксперимент |
 
-### Уровень #2: Счётчики MCAOA
+### Уровень #2: Счётчики MCARA
 
 | PMID | Статья | Роль | Достоверность |
 |---|---|---|---|
@@ -80,7 +80,7 @@
 
 | Источник | Роль |
 |---|---|
-| Tqemaladze J. 2026 — MCAOA preprint (Zenodo 10.5281/zenodo.20055806) | Аксиомы M1-M4 |
+| Tqemaladze J. 2026 — MCARA preprint (Zenodo 10.5281/zenodo.20055806) | Аксиомы M1-M4 |
 | Brodkorb A et al. *Nat Protoc* 2019 — INFOGEST protocol (DOI 10.1038/s41596-018-0119-1) | Макробиом |
 | Maneix L et al. *Nat Cell Biol* 2024 — PPIA chaperone in HSC | Счётчик #5 |
 | Pan Y et al. *Front Syst Biol* 2023 — HSC clonal dynamics | Параметры n*, α |
@@ -93,7 +93,7 @@
 |---|---|---|---|
 | #1 | Центриоль — накопитель энтропии | 📌 Гипотеза (Tqemaladze 2023 — гипотетическая модель; 13 PMID косвенно) | ARGUS Phase B (Q4 2026) |
 | #1 | Асимметрия в человеке | ⚠️ Только Drosophila/мышь | ARGUS Phase A (Q1 2027) |
-| #2 | 5 счётчиков независимы | ⚠️ Частично (VEXAS для #5 — патология, не физиология) | MCAOA Test 2 |
+| #2 | 5 счётчиков независимы | ⚠️ Частично (VEXAS для #5 — патология, не физиология) | MCARA Test 2 |
 | #2 | Параметры w_i, k_i, x_crit | ⚠️ Модельные параметры, не измеренные величины | Калибровка GTEx |
 | #2 | L_tissue ↔ FI | ✅ Операциональный мост (Rockwood 2005) | UK Biobank валидация |
 | #3 | τ_renewal различаются | ✅ Известные факты клеточной биологии | — |

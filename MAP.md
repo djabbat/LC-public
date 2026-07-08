@@ -20,8 +20,8 @@ LC/
 ├── LICENSE                          ← Apache 2.0
 ├── .gitignore
 │
-├── MCAOA/                           ← Multi-Counter Architecture (5 подпроектов)
-│   ├── CDATA/                       ←   + 4 подподпроекта (simulator, Aubrey, CellLineageTree, articles)
+├── MCARA/                           ← Multi-Counter Architecture (5 подпроектов)
+│   ├── CEDAR/                       ←   + 4 подподпроекта (simulator, Aubrey, CellLineageTree, articles)
 │   ├── EpigeneticDrift/
 │   ├── MitoROS/
 │   ├── Proteostasis/
@@ -59,16 +59,16 @@ LC/
 
 | Подпроект | Путь | Core |
 |-----------|------|:----:|
-| **MCAOA** | `MCAOA/` | 7/7 |
-| **CDATA** | `MCAOA/CDATA/` | 7/7 |
-| **EpigeneticDrift** | `MCAOA/EpigeneticDrift/` | 7/7 |
-| **MitoROS** | `MCAOA/MitoROS/` | 7/7 |
-| **Proteostasis** | `MCAOA/Proteostasis/` | 7/7 |
-| **Telomere** | `MCAOA/Telomere/` | 7/7 |
-| **CDATA/simulator** | `MCAOA/CDATA/simulator/` | 7/7 |
-| **CDATA/Aubrey** | `MCAOA/CDATA/Aubrey/` | 7/7 |
-| **CDATA/CellLineageTree** | `MCAOA/CDATA/CellLineageTree/` | 7/7 |
-| **CDATA/articles** | `MCAOA/CDATA/articles/` | 7/7 |
+| **MCARA** | `MCARA/` | 7/7 |
+| **CEDAR** | `MCARA/CEDAR/` | 7/7 |
+| **EpigeneticDrift** | `MCARA/EpigeneticDrift/` | 7/7 |
+| **MitoROS** | `MCARA/MitoROS/` | 7/7 |
+| **Proteostasis** | `MCARA/Proteostasis/` | 7/7 |
+| **Telomere** | `MCARA/Telomere/` | 7/7 |
+| **CEDAR/simulator** | `MCARA/CEDAR/simulator/` | 7/7 |
+| **CEDAR/Aubrey** | `MCARA/CEDAR/Aubrey/` | 7/7 |
+| **CEDAR/CellLineageTree** | `MCARA/CEDAR/CellLineageTree/` | 7/7 |
+| **CEDAR/articles** | `MCARA/CEDAR/articles/` | 7/7 |
 | **Ze_CHSH** | `Ze/Ze_CHSH/` | 7/7 |
 | **Ze_D** | `Ze/Ze_D/` | 7/7 |
 | **Ze-Hierarchy** | `Ze/Ze-Hierarchy/` | 7/7 |

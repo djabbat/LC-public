@@ -15,4 +15,4 @@ Potential partners for hardware co‑development, image analysis, and external v
 - OpenFlexure community (open-source microscope design)
 - Micro‑Manager developers (software integration)
 
-Formal collaboration agreements will be established by Month 3 of funding. Cross‑lab validation plan: repeat CDATA Phase A experiments at partner site using identical hardware and protocols.
+Formal collaboration agreements will be established by Month 3 of funding. Cross‑lab validation plan: repeat CEDAR Phase A experiments at partner site using identical hardware and protocols.

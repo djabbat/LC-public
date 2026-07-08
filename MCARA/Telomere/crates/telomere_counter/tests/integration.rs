@@ -1,4 +1,4 @@
-//! Integration tests for MCAOA Counter #2.
+//! Integration tests for MCARA Counter #2.
 
 use telomere_counter::{compute_damage, CounterParams, divisions_to_critical};
 use telomere_counter::tissue::Tissue;

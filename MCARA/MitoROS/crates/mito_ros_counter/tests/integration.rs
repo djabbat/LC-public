@@ -1,4 +1,4 @@
-//! Integration tests for MCAOA Counter #3.
+//! Integration tests for MCARA Counter #3.
 
 use mito_ros_counter::{compute_damage, CounterParams, divisions_to_critical};
 use mito_ros_counter::tissue::Tissue;

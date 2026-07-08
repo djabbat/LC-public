@@ -13,7 +13,7 @@ Traditional time-lapse microscopy требует continuous human oversight: р�
 **Теза:** Low-cost retrofit ($4,500) + AI agent в роли "night-shift lab technician" позволяет достичь industrial-grade 24/7 imaging без capital-intensive hardware.
 
 **Формальная аксиома M1 (Feasibility):**
-> Для class CDATA-type experiments (time-lapse polyGlu intensity measurement on mother centrioles в BJ-hTERT fibroblasts), а AI agent (Claude Code в `/overnight` режиме) может выполнять supervisory function eq. quality к trained technician, при условиях:
+> Для class CEDAR-type experiments (time-lapse polyGlu intensity measurement on mother centrioles в BJ-hTERT fibroblasts), а AI agent (Claude Code в `/overnight` режиме) может выполнять supervisory function eq. quality к trained technician, при условиях:
 > - **Well-defined PROMPT** (natural-language protocol)
 > - **Bounded autonomy** (pre-authorized routine actions + require-human-approval для strategic decisions)
 > - **Full journaling** (every decision logged с rationale, reproducible after-the-fact)
@@ -75,9 +75,9 @@ P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action 
 
 | Subproject | Interface |
 |------------|-----------|
-| **CDATA** | Primary user — Phase A experiments run on this platform |
+| **CEDAR** | Primary user — Phase A experiments run on this platform |
 | **FCLC** | Future: anonymized imaging data contribution to federated learning pool |
-| **MCAOA** | Future: multi-counter experiments (Telomere, MitoROS) reuse same infrastructure |
+| **MCARA** | Future: multi-counter experiments (Telomere, MitoROS) reuse same infrastructure |
 | **BioSense** | Potential: shared signal-processing pipelines (cross-domain aging markers) |
 
 ### 7. Predictions
@@ -95,9 +95,9 @@ Platform is **falsified / not-suitable** если:
 - Contamination rate >10% per experimental run (vs typical 1-3% in standard microscopy)
 - User (Jaba) abandons autonomous mode after 1 month (too stressful, too much supervision needed)
 
-### 9. Связь с MCAOA framework
+### 9. Связь с MCARA framework
 
-AutomatedMicroscopy — **instrumental layer** не theoretical counter. Но сам факт его существования enables MCAOA framework operationally: без 24/7 imaging infrastructure невозможно собрать данные для temporal dynamics D_i(n, t) разных counter'ов.
+AutomatedMicroscopy — **instrumental layer** не theoretical counter. Но сам факт его существования enables MCARA framework operationally: без 24/7 imaging infrastructure невозможно собрать данные для temporal dynamics D_i(n, t) разных counter'ов.
 
-Без AutomatedMicroscopy → MCAOA остаётся теоретической абстракцией.
-С AutomatedMicroscopy → MCAOA получает эмпирический substrate.
+Без AutomatedMicroscopy → MCARA остаётся теоретической абстракцией.
+С AutomatedMicroscopy → MCARA получает эмпирический substrate.

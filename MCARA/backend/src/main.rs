@@ -15,7 +15,7 @@ async fn main() -> AppResult<()> {
         .with(tracing_subscriber::fmt::layer())
         .init();
 
-    tracing::info!("Starting MCAOA backend...");
+    tracing::info!("Starting MCARA backend...");
 
     // Load configuration
     let config = Config::load()?;

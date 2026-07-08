@@ -2,6 +2,67 @@
 
 # Theoretical Foundation of MCARA
 
+**Дата:** 2026-07-08 (v4.5 — Hardware/Software + Stress Integrator)
+
+## 0. Hardware/Software Distinction (Jaba Tqemaladze, 2026-07-08)
+
+**Центриоль = hardware.** Не ремонтируется in situ. UPS деградирует отдельные повреждённые центросомные белки, но нет координированного механизма quality-control, восстанавливающего всю органеллу до «молодого» состояния. Однако центриоль можно **элиминировать и создать de novo** — именно это происходит в мейозе: ооцитные центриоли элиминируются, сперматозоидные центриоли реструктурируются в seeds (не темплаты) для de novo сборки в бластомерах нового организма.
+
+**Эпигеном = software.** Перепрограммируем факторами Яманаки, но неспособен исправить hardware-дефекты. Это объясняет, почему частичное репрограммирование омолаживает метилом, но не восстанавливает полную репликативную способность: центриолярный hardware не заменён.
+
+## 0.1. Centriole as Conditional Entropy Carrier (Stress Integrator)
+
+Центриоль — не автономный счётчик делений, а **стресс-интегратор.** polyE накапливается, когда центриоль работает как центросома-организатор (стресс-чувствительное состояние), и прекращает накопление, когда центриоль темплатирует цилию. Накопление зависит от функционального состояния и стресс-среды, а не только от хронологического времени.
+
+The sinc-MT/KIFC3 pathway (Robichaud 2024, PMID 39266565) — это стресс-ответ, ведущий к cell cycle arrest. Убери стресс — polyE-массивы могут не формироваться, и сенесценс может не наступить несмотря на центриолярный «возраст».
+
+**Это не ослабляет CEDAR:** интегратор, прогрессивно отказывающий при хроническом низкоуровневом стрессе (hTERT + гипоксия), функционально неотличим от автономного счётчика, и экспериментальное предсказание — удаление центриоли повышает эффективность репрограммирования — остаётся идентичным.
+
+## 0.2. Centriole-Specific Kinetic Equations
+
+### Линейное приближение
+```
+S_centriole(t) = S₀ + β·t + η(t) − δ·CCP(t)
+CAASM(N) = CAASM₀ − λ·N_asym
+```
+где:
+- `β·t` — время-зависимое накопление энтропии (термодинамическое)
+- `η(t)` — окислительные повреждения (ROS → центриоль)
+- `δ·CCP(t)` — активность деглутамилаз (снижается с возрастом). Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 удаляют polyGlu. CCP1 KO → impaired osteogenesis (PMID 40349688).
+- `λ·N_asym` — ремоделирование CAASM при асимметричных делениях
+
+### Сигмоидальная модель (биологически реалистичнее)
+```
+S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
+```
+Критический порог `t½` — точка ускорения накопления polyE, потенциально соответствующая onset репликативного сенесценса.
+
+### Динамика polyE баланса
+```
+d[E]/dt = k_E · [Stress] − k_CCP · [CCP] · [E]
+```
+polyE ([E]) растёт, когда стресс (k_E) превышает ёмкость CCP (k_CCP).
+
+**Гипотеза:** Активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом. Параметры β, λ, η(t), δ не откалиброваны — уравнения представляют тестируемые предсказания.
+
+## 0.3. Bradford Hill Analysis (Causal Inference)
+
+| Критерий | Оценка | Обоснование |
+|----------|:------:|-------------|
+| Strength | 🟡 Moderate | Plk1-асимметрия, ATF5-связывание — корреляционные |
+| Consistency | 🟢 Supported | 4 типа, конвергентные данные |
+| Specificity | 🔴 Weak | Множественные механизмы |
+| Temporality | 🟡 Partial | sinc-MT: polyE предшествует сенесценсу |
+| Biological gradient | 🟡 Predicted | polyE vs пассаж — не измерено |
+| Plausibility | 🟢 Strong | Сигнальный хаб + переключатель цилия |
+| Coherence | 🟢 Strong | Объясняет hTERT + гипоксия парадокс |
+| Analogy | 🟢 Strong | Элиминация центриолей в germline = сброс |
+| Experiment | 🔴 Absent | Центральное предсказание не тестировано |
+
+**Итого:** ~5/9 критериев с доказательствами. Класс доказательности II–III.
+
+---
+
 ## 1. Philosophical and Methodological Premises
 
 MCARA is built upon the principles of **mechanism pluralism** and **strict falsifiability**. It rejects the reductionist search for a single "root cause" of aging, recognizing that multiple, partially independent damage accumulation processes can reach critical thresholds in different tissues at different times. The key methodological tenet is the prohibition of post-hoc adjustment of counter weights (`w_i`). All weights and reference scales (`n_i*`, `τ_i`) must be fixed *a priori*, based on independent biological knowledge, prior to model validation on data. This transforms MCARA from a curve-fitting tool into a set of testable predictions.
@@ -12,13 +73,13 @@ MCARA is built upon the principles of **mechanism pluralism** and **strict falsi
 
 **Axiom M2 (Dimensional Consistency).** In the kinetic equation of a counter, direct summation of terms dependent on the number of divisions (`n`) and chronological time (`t`) is inadmissible without conversion to a common dimensionless form. The canonical form is:
 `D_i(n, t) = D_i₀ + α_i · (n / n_i*) + β_i · (t / τ_i) + γ_i · I(other counters)`.
-Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are constants, fixed *a priori* for each counter based on cell biology (e.g., `n_i*` = Hayflick limit for the telomere counter in fibroblasts; `τ_i` = tubulin half-life for CDATA). This ensures that `α_i` and `β_i` become dimensionless *intensities* of damage per unit of normalized scale.
+Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are constants, fixed *a priori* for each counter based on cell biology (e.g., `n_i*` = Hayflick limit for the telomere counter in fibroblasts; `τ_i` = tubulin half-life for CEDAR). This ensures that `α_i` and `β_i` become dimensionless *intensities* of damage per unit of normalized scale.
 
-**Axiom M3 (A Priori Tissue Weighting).** The weight `w_i(tissue)`, defining the contribution of counter `i` to the total tissue burden, must be predicted BEFORE the model fitting procedure to experimental aging data. The prediction is based on independent cellular-tissue parameters: basal division rate, metabolic intensity, half-life of the counter's primary substrate, expression of relevant genes (e.g., TERT for telomeres, TTLL/CCP for CDATA), mitochondrial content. Any post-hoc adjustment of `w_i` to improve agreement with data is considered a model adjustment, not a prediction, and must be explicitly declared as a hypothesis for the next verification cycle.
+**Axiom M3 (A Priori Tissue Weighting).** The weight `w_i(tissue)`, defining the contribution of counter `i` to the total tissue burden, must be predicted BEFORE the model fitting procedure to experimental aging data. The prediction is based on independent cellular-tissue parameters: basal division rate, metabolic intensity, half-life of the counter's primary substrate, expression of relevant genes (e.g., TERT for telomeres, TTLL/CCP for CEDAR), mitochondrial content. Any post-hoc adjustment of `w_i` to improve agreement with data is considered a model adjustment, not a prediction, and must be explicitly declared as a hypothesis for the next verification cycle.
 
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCARA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCARA.
 
-**Axiom M5 (Time-Driven Entropy + Asymmetric CAASM — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centriolar Aging-Associated Signaling Module (CAASM). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAASM. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAASM (active, programmatic). Full specification: CDATA/THEORY.md.
+**Axiom M5 (Time-Driven Entropy + Asymmetric CAASM — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centriolar Aging-Associated Signaling Module (CAASM). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAASM. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAASM (active, programmatic). Full specification: CEDAR/THEORY.md.
 
 ## 3. Formal Definitions
 
@@ -35,7 +96,7 @@ Damage for the `i`-th counter is described by the equation:
 * `γ_i`: Coupling scalar. Defines the strength of influence from other counters on the damage accumulation rate in counter `i`. `γ_i ∈ ℝ`. **Canonical default value:** `γ_i = 0` (independence hypothesis). Deviation from zero requires statistical justification based on data.
 * `I(other counters)`: Influence function. Simplest linear form: `I = Σ_{j≠i} (Γ_{ij} · D_j / D_j_crit)`, where `Γ_{ij}` is a dimensionless element of the coupling matrix, `D_j_crit` is the critical damage value for counter `j`. Non-linear forms may be proposed.
 * `n_i*`: Reference number of divisions for counter `i`. Fixed *a priori* (e.g., Hayflick limit for a given cell type).
-* `τ_i`: Reference time scale for counter `i`. Fixed *a priori* (e.g., tubulin half-life for CDATA, drift constant of epigenetic clocks).
+* `τ_i`: Reference time scale for counter `i`. Fixed *a priori* (e.g., tubulin half-life for CEDAR, drift constant of epigenetic clocks).
 
 ### 3.2. Integrated Tissue Burden
 
@@ -73,17 +134,21 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 1. `L_tissue(n, t) > L_critical(tissue)`, where `L_critical` is a tissue-specific threshold for integrated burden.
 2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, where `D_critical` is a tissue-specific threshold for a specific counter (e.g., critical telomere shortening).
 
-## 4. Canonical Set of MCARA Counters (v1.0)
+## 4. Canonical Set of MCARA Counters (v4.5 — Gatekeeper article)
+
+> 🔄 **Нумерация обновлена 2026-07-08** для соответствия MCARA.docx (Gatekeeper article).
+> Старая нумерация (v1.0): #1=CP, #2=Telomere, #3=MitoROS, #4=Epigenetic, #5=Proteostasis.
+> Новая нумерация (v4.5): #1=Centriolar, #2=Epigenetic, #3=Mitochondrial, #4=Structural, #5=Telomeric.
 
 | # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
 |---|------|--------|---------|----------------|---------------|---------|
-| 1 | **Centriolar Polyglutamylation (CP)** | CDATA | Divisions + Time | ~50–80 (for HSC), ~30–50 (for epithelium) | Months–Years (calibrated by mass spectrometry) | Structural counter of asymmetric inheritance. `α_i` significant, `β_i` driven by tubulin turnover. |
-| 2 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit for cell type (e.g., ~50 for human fibroblasts) | Turnover time of telomeric repeats (weeks) | Classic replicative counter. `β_i ≈ 0` for most somatic cells. |
-| 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (turnover of mtDNA damage) | Metabolic/temporal counter. `β_i` significant, may be amplified upon dysfunction. |
-| 4 | **Epigenetic Drift (SA-DNAm)** | EpigeneticDrift | Dominantly Time | `α_i → 0` for most cells; `α_i > 0` in proliferating compartments (Wagner 2013: SA-DNAm accumulates with passage number) | Doubling time of epigenetic age (e.g., ~3.6 years per DunedinPACE); for SA-DNAm: passage-dependent (Wagner 2013, PMID 23080539) | "Molecular clock". Two distinct components: (a) organismal epigenetic age (Horvath clock) — dominantly time; (b) SA-DNAm (senescence-associated methylation) — passage-dependent. Wagner (2013): TERT does NOT prevent SA-DNAm; only iPSC reprogramming resets it. Epigenetic-Senescence-Signature (6 CpG) tracks passage number. MCARA uses SA-DNAm trajectory, not organismal clock. |
-| 5 | **Proteostasis Disruption (Protein Aggregation)** | Proteostasis | Mixed | Depends on cell type (division frequency affects "dilution" of aggregates) | Half-life of the dominant aggregating protein (days–years) | `α_i` may be negative if division removes aggregates; `β_i` positive. |
+| 1 | **Centriolar Polyglutamylation (CP)** | CEDAR | Divisions + Time | ~50–80 (HSC), ~30–50 (epithelium) | Months–Years (mass spectrometry) | Stress integrator. polyE accumulation + CAASM. `α_i` significant, `β_i` driven by tubulin turnover. **Фаворит гонки** — без защиты. |
+| 2 | **Epigenetic Drift (SA-DNAm)** | EpigeneticDrift | Dominantly Time + Divisions | `α_i → 0` for most cells; `α_i > 0` in proliferating compartments | Doubling time of epigenetic age (~3.6 years DunedinPACE) | SA-DNAm trajectory (Wagner 2013). TERT does NOT prevent. EPIC arrays (850K CpG). Замедлен гипоксией на ~30-40%, но тикает. |
+| 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (mtDNA damage turnover) | ROS повреждает центриоль (η(t)), но не originates from it. **Защищён 2% O₂.** |
+| 4 | **Structural (Centriole/Cilium)** | CEDAR | Divisions + Time | ~50–80 (follows C1) | Months–Years | Tubulin code (polyE, detyrosination). Цилия ↔ центриоль переключатель. **Ведомый** — следует за C1. |
+| 5 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit (~50 for fibroblasts) | Weeks (telomeric repeat turnover) | Классический репликативный счётчик. **Снят с гонки** теломеразой (hTERT). `β_i ≈ 0` для большинства соматических клеток. |
 
-**Order and Rationale:** Counter CP (#1) occupies the first position as a structural element organizing asymmetric damage inheritance — a key principle in the stem cell attrition hypothesis. The telomere counter (#2) is considered dependent on CP (possibly via signaling pathways regulated by centriole state). The remaining counters represent core cellular machineries (energetics, genome regulation, protein quality).
+**Order and Rationale:** Counter CP (#1) = фаворит гонки — stress integrator без защиты. C2 (эпигенетический) бежит независимо, замедлен гипоксией. C3 (митохондриальный) защищён 2% O₂. C4 (структурный) следует за C1. C5 (теломерный) снят с гонки теломеразой. **Судья гонки:** Geiger (Ulm) — HSC трансплантация, in vivo валидация победителя.
 
 ### 4.1. Candidate counter #6 — piRNA (placeholder, NOT canonical in v1.0)
 

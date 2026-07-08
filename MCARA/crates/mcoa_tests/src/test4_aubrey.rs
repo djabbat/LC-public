@@ -1,6 +1,6 @@
 //! Test 4 — α/β decomposition (Aubrey's test) stub.
 //!
-//! A 2×2 design (high/low division × normal/accelerated time) on iPSC-derived organoids. MCAOA
+//! A 2×2 design (high/low division × normal/accelerated time) on iPSC-derived organoids. MCARA
 //! predicts α_i ≠ 0 AND β_i ≠ 0 for division-linked counters; falsified if β_i dominates for a
 //! counter claimed to be division-linked.
 

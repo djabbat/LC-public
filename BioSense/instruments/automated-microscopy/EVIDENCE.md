@@ -67,11 +67,11 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 
 
 **Unified limitations (see also CONCEPT.md):**
-1. Sample stability ≥3 weeks not validated beyond CDATA.
+1. Sample stability ≥3 weeks not validated beyond CEDAR.
 2. Imaging frequency ≤2/hour misses fast dynamics.
 3. Environmental tolerances ±0.5°C/±0.5% CO₂; not suitable for sensitive primary cells.
 4. No on-platform liquid handling; media changes human-performed.
-5. AI generalizability limited to CDATA-class protocols.
+5. AI generalizability limited to CEDAR-class protocols.
 6. Stage accuracy ±2 µm (placeholder).
 7. Camera sensitivity may limit low-light applications.
 8. Long-term stepper drift requires further characterization.
@@ -118,7 +118,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision
 - Related open problems: `OPEN_PROBLEMS.md` §1 AI judgment quality, §2 hardware reliability
 - Parameter provenance: `PARAMETERS.md`
-- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
+- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LC/CEDAR/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
 
 ---
 
@@ -129,7 +129,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 Key claims are supported by the following verified sources:
 1. **AI-assisted microscopy:** [REF_PLACEHOLDER — пенding publication; не цитировать как established].
 2. **Low-cost microscope retrofit:** [REF_PLACEHOLDER — pending publication; не цитировать как established].
-3. **CDATA protocol:** Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (foundation paper, real DOI 10.1007/s11033-022-08203-5).
+3. **CEDAR protocol:** Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (foundation paper, real DOI 10.1007/s11033-022-08203-5).
 
 **Systematic review:** A Cochrane/PRISMA-style review of AI in automated microscopy is not yet available; a scoping review is planned.
 
