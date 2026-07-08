@@ -23,8 +23,8 @@ LC — интегративная экосистема для биомаркер
 
 | Подпроект | Роль | Путь |
 |---|---|---|
-| **MCAOA** | Теоретическая мета-рамка (Multi-Counter Architecture of Aging) | `MCAOA/` |
-| **CDATA** | Молекулярно-клеточная гипотеза (Centriolar Damage) | `MCAOA/CDATA/` |
+| **MCARA** | Теоретическая мета-рамка (Multi-Counter Architecture of Replicative Aging) | `MCARA/` |
+| **CDATA** | Молекулярно-клеточная гипотеза (Centriolar Damage) | `MCARA/CDATA/` |
 | **Ze Theory** | Математический анзац (dτ/dt = −α·I(Z)) | `Ze/` |
 | **BioSense** | Носимые биомаркеры (wearable platform) | `BioSense/` |
 | **FCLC** | Федеративное обучение + DP + k-anonymity | `FCLC/` |
@@ -48,7 +48,7 @@ LC/
 ├── BioSense/        — носимые устройства
 ├── FCLC/            — федеративное обучение
 ├── HAP/             — Health Analytics Platform
-├── MCAOA/           — (включая CDATA, Telomere, MitoROS и др.)
+├── MCARA/           — (включая CDATA, Telomere, MitoROS и др.)
 ├── Organismal_Aging/ — организменное старение
 ├── Ze/              — Ze Vectors Theory
 ├── realtime/        — real-time обработка
