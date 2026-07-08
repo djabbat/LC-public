@@ -117,7 +117,7 @@
 
 ## POST-SCRIPTUM: СТРАТЕГИЯ ПРИ ОТКЛОНЕНИИ
 
-Если Biogerontology отклонит — **НЕ подавать в топ-журналы** (урок MCAOA → Nature Aging/eLife). Следующие журналы:
+Если Biogerontology отклонит — **НЕ подавать в топ-журналы** (урок MCARA → Nature Aging/eLife). Следующие журналы:
 1. **GeroScience** (IF ~5) — принимает hypothesis + computational
 2. **BioEssays** (IF ~4) — идеально для hypothesis articles
 3. **Frontiers in Cell and Developmental Biology** — высокий acceptance rate

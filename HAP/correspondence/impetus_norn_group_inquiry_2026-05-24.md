@@ -16,7 +16,7 @@ Dear Norn Group / Impetus Grants Team,
 
 I am writing to inquire about the current and upcoming application rounds for **Impetus Grants**.
 
-I am PI of a longevity research program hosted at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CDATA)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCAOA).
+I am PI of a longevity research program hosted at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CEDAR)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCARA).
 
 The project has two phases:
 
@@ -26,7 +26,7 @@ The project has two phases:
 
 My background:
 - MD, Tbilisi State Medical University
-- **PhD candidate, UNED Madrid (starting Autumn 2026)** — Doctorado en Biología, tesis por compendio on CDATA
+- **PhD candidate, UNED Madrid (starting Autumn 2026)** — Doctorado en Biología, tesis por compendio on CEDAR
 - President, Georgia Longevity Alliance
 - 10 PubMed-indexed publications on centriolar biology and aging
 

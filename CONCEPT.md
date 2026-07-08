@@ -12,7 +12,7 @@
 
 **LC больше не экосистема подпроектов. LC = Organismal Aging — платформа для тестирования гипотез старения.**
 
-**Фундаментальный принцип:** Сила проекта — не в единственной гипотезе (центриоль), а в способности тестировать **любые** гипотезы старения в единой архитектуре. Центриоль — одна из многих гипотез, сменный модуль. Ядро симулятора — MCAOA (уровень #2) + ткани/Ze-конфликты (уровень #3). Уровень #1 — **plug-and-play**: любой кандидат на «первопричину» может быть подключён, протестирован и заменён.
+**Фундаментальный принцип:** Сила проекта — не в единственной гипотезе (центриоль), а в способности тестировать **любые** гипотезы старения в единой архитектуре. Центриоль — одна из многих гипотез, сменный модуль. Ядро симулятора — MCARA (уровень #2) + ткани/Ze-конфликты (уровень #3). Уровень #1 — **plug-and-play**: любой кандидат на «первопричину» может быть подключён, протестирован и заменён.
 
 ### Старая vs новая структура
 
@@ -20,8 +20,8 @@
 СТАРАЯ (v6.0): фрагментированная экосистема         НОВАЯ (v7.0): единый интегратор
                                                       │
 LC/                                                   LC/ = Organismal Aging
-├── MCAOA/     (свой CONCEPT, свои crates)            │
-├── CDATA/     (свой CONCEPT, свои crates)            ├── sim_core/         ← ядро (Rust)
+├── MCARA/     (свой CONCEPT, свои crates)            │
+├── CEDAR/     (свой CONCEPT, свои crates)            ├── sim_core/         ← ядро (Rust)
 ├── Ze/        (свой CONCEPT, своя иерархия)          │   ├── centriole/    ← Уровень #1
 ├── BioSense/  (свой CONCEPT, свои сенсоры)           │   ├── counters/     ← Уровень #2
 ├── HAP/       (свой CONCEPT)                         │   ├── tissue/       ← Уровень #3
@@ -79,7 +79,7 @@ LC/                                                   LC/ = Organismal Aging
 │  │ Микробиом + макробиом + травмы + заболевания             │    │
 │  └──────────────────────────────────────────────────────────┘    │
 │                          ↑                                        │
-│  УРОВЕНЬ #2: 5 ТРЕКОВ MCAOA                                      │
+│  УРОВЕНЬ #2: 5 ТРЕКОВ MCARA                                      │
 │  ┌──────────────────────────────────────────────────────────┐    │
 │  │ L_tissue = Σ wᵢ·fᵢ(Dᵢ)                                   │    │
 │  │ #2 Теломеры │ #3 Митохондрии │ #4 Эпигенетика            │    │
@@ -107,8 +107,8 @@ LC/                                                   LC/ = Organismal Aging
 
 | Бывший подпроект | Код (файлов) | Новая роль в Organismal Aging |
 |---|---|---|
-| **CDATA / cell_dt** | 10 crates (Rust) | Уровень #1: центриолярная энтропия, деление, polyGlu |
-| **MCAOA / mcoa_*** | 6 crates (Rust) | Уровень #2: 5 счётчиков, агрегатор L_tissue, Γ-матрица |
+| **CEDAR / cell_dt** | 10 crates (Rust) | Уровень #1: центриолярная энтропия, деление, polyGlu |
+| **MCARA / mcoa_*** | 6 crates (Rust) | Уровень #2: 5 счётчиков, агрегатор L_tissue, Γ-матрица |
 | **Ze / Ze-Hierarchy** | 5 подпроектов (Rust + Phoenix) | Уровень #3: Z_conflict, T/S-формализм, HI |
 | **BioSense** | backend + frontend (Rust + Phoenix) | Поток биомаркеров (ЭЭГ, HRV) → калибровка симулятора |
 | **FCLC** | сервер (Rust) | Конфиденциальные данные пациентов для калибровки |
@@ -169,7 +169,7 @@ S_centriole(t) = S₀ + ∫₀ᵗ [η_div·n(τ)/n* + η_time·τ/τ* + η_ROS·
 
 ---
 
-## 4. Уровень #2: 5 треков MCAOA
+## 4. Уровень #2: 5 треков MCARA
 
 > piRNA Counter #6 исключён из v1.0. Оставлен как слот расширения.
 
@@ -372,7 +372,7 @@ P(θ | data) ∝ P(data | θ) · P(θ)    ← Байесовское обнов�
 |---|---|---|---|
 | 1 | *Organismal Aging: An Integrative 4D Simulator of Development and Aging* | *PLOS ONE* или *Scientific Reports* | После Phase 4 (Q3 2027) |
 | 2 | *Centriole as a Candidate Entropy Accumulator: Review and Simulation* | *Aging Cell* или *Biogerontology* | После ARGUS Phase B |
-| 3 | *MCAOA: Multi-Counter Architecture — In Silico Exploration* | *Cell Systems* или *PLOS Computational Biology* | После калибровки |
+| 3 | *MCARA: Multi-Counter Architecture — In Silico Exploration* | *Cell Systems* или *PLOS Computational Biology* | После калибровки |
 | 4 | *Ze-Conflict: A Theoretical Model of Tissue-Tissue Aging Mismatch* | *Journal of Theoretical Biology* | После валидации |
 | 5 | *ARGUS-LP: An Open-Hardware Robot for Autonomous Aging Research* | *HardwareX* или *Scientific Reports* | После Phase B |
 
@@ -388,15 +388,15 @@ P(θ | data) ∝ P(data | θ) · P(θ)    ← Байесовское обнов�
 
 | Компонент | Текущее положение | Новое положение |
 |---|---|---|
-| CDATA crates | `MCAOA/CDATA/crates/cell_dt_*` | `sim_core/centriole/` (код), `_archive/cdata_concept/` (старые core-файлы) |
-| MCAOA crates | `MCAOA/crates/mcoa_*` | `sim_core/counters/` (код) |
+| CEDAR crates | `MCARA/CEDAR/crates/cell_dt_*` | `sim_core/centriole/` (код), `_archive/cdata_concept/` (старые core-файлы) |
+| MCARA crates | `MCARA/crates/mcoa_*` | `sim_core/counters/` (код) |
 | Ze симуляции | `Ze/Ze_Model/`, `Ze/Ze_CHSH/`, `Ze/Ze_D/` | `sim_core/tissue/ze_conflict.rs` (формализм) |
 | Ze-Hierarchy | `Ze/Ze-Hierarchy/` | `validation/ze_hierarchy/` (экспериментальная валидация) |
 | BioSense | `BioSense/` | `biosense/` (сенсоры) |
 | FCLC | `FCLC/` | `fclc/` (безопасность) |
 | HAP | `HAP/` | `hap/` (Health-Age Profiling) |
 | ARGUS-LP | `~/Desktop/Marketing/Aubrey/` | `argus_bridge/` (мост к роботу), `docs/argus/` (спецификация) |
-| Старые core-файлы | `MCAOA/CONCEPT.md`, `CDATA/CONCEPT.md`, etc. | `_archive/subprojects_concepts/` |
+| Старые core-файлы | `MCARA/CONCEPT.md`, `CEDAR/CONCEPT.md`, etc. | `_archive/subprojects_concepts/` |
 
 **Правило:** Код интегрируется. Core-файлы подпроектов архивируются. Единый CONCEPT.md (этот файл) — единственный источник истины.
 

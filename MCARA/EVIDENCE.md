@@ -43,9 +43,9 @@
 
 *Data generated within the LC project for MCARA concept validation.*
 
-1. **Sobol sensitivity analysis of CDATA v5.1:**
+1. **Sobol sensitivity analysis of CEDAR v5.1:**
  * File: `data/mcoa/sensitivity/sobol_results_2026-04-15.csv`
- * Method: Global sensitivity analysis (Sobol method) for the CDATA model.
+ * Method: Global sensitivity analysis (Sobol method) for the CEDAR model.
  * Sample: N = 16384.
  * Key result: First-order (S1) for parameter `α_cent` (divisions) is 0.68 ± 0.05, for `β_cent` (time) is 0.22 ± 0.04 in epithelial tissue simulation. Confirms dominance of divisions, but significant time contribution.
  * Status: Verified, reproducible.
@@ -72,8 +72,8 @@
  - At epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
  - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
  * **Resolution:** Individual epigenetic_rate dominance is explained by linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). At the group level, centriolar mechanics **dominate**.
- * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CDATA/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
- * **Source:** `~/Desktop/LC/CDATA/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
+ * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CEDAR/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+ * **Source:** `~/Desktop/LC/CEDAR/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
 
 3. **Weak experimental basis for the connection matrix Γ.**
  * **Evidence:** Most proposed connections between counters (e.g., `Γ_{cent, epigenetic}`) are based on indirect correlations or in vitro studies, rather than direct causal in vivo experiments.
@@ -155,7 +155,7 @@
 
 1. **Counter #1 (CP — centriolar):** Новые данные Thomas & Meraldi (2024) и Royall et al. (2023) **прямо подтверждают** механизм C2 (асимметричное наследование центросом) в клетках человека.
 2. **Мейотический драйв как модель:** Meng/Baird/Yamashita (2026) показывают, что даже «симметричный» мужской мейоз содержит латентную асимметрию — это **общая парадигма**, применимая и к митотическим делениям стволовых клеток.
-3. **Центриоли не всегда обязательны:** Skinner et al. (2024, 2025) демонстрируют, что мейоз и сегрегация хромосом возможны без дупликации центриолей — важно для understanding границ применимости CDATA.
+3. **Центриоли не всегда обязательны:** Skinner et al. (2024, 2025) демонстрируют, что мейоз и сегрегация хромосом возможны без дупликации центриолей — важно для understanding границ применимости CEDAR.
 4. **Механизмы:** PP4 (Segura 2025), PCM1 (Zhao 2025), AIR-1 (Plourde 2025) — новые молекулярные игроки асимметрии центросом.
 
 ## 6. Stem Cell Exit & Epigenetic Barriers (2026-07-05)
@@ -187,13 +187,13 @@
 
 1. **Counter #4 (Epigenetic):** Park/Di Stefano дают детальную карту эпигенетических механизмов stem cell exit — TET, H3K27me3/H3K4me3, CTCF/TAD, bookmarking. Это прямой reference для механизма эпигенетического счётчика.
 2. **«Точка невозврата»:** Вопрос существования point of no return в дифференцировке — ключевой для MCARA: если точка невозврата существует, то счётчики должны её учитывать.
-3. **Strawbridge et al. (2026) — подробно:** Выход из наивной плюрипотентности ES-клеток мыши происходит **только симметричными делениями** (Rex1-GFPd2 + LTSCI). Сестринские клетки выходят синхронно. Коллапс наивной идентичности abrupt, variable lag 0–3 поколения, разброс >15 ч. **Но:** Strawbridge смотрел только на одно деление в одной системе (2i/LIF). Траектория дифференцировки в целом асимметрична (тотипотентная → плюри- → мульти- → унипотентные) — это каскадная асимметрия. CDATA не требует асимметрии каждого деления, только накопления разницы на длинной дистанции. Variable lag — окно для центриольных повреждений.
+3. **Strawbridge et al. (2026) — подробно:** Выход из наивной плюрипотентности ES-клеток мыши происходит **только симметричными делениями** (Rex1-GFPd2 + LTSCI). Сестринские клетки выходят синхронно. Коллапс наивной идентичности abrupt, variable lag 0–3 поколения, разброс >15 ч. **Но:** Strawbridge смотрел только на одно деление в одной системе (2i/LIF). Траектория дифференцировки в целом асимметрична (тотипотентная → плюри- → мульти- → унипотентные) — это каскадная асимметрия. CEDAR не требует асимметрии каждого деления, только накопления разницы на длинной дистанции. Variable lag — окно для центриольных повреждений.
 4. **Epigenetic cell memory (Espinosa-Martínez 2024):** Молекулярная основа клеточной памяти — эпигенетический цикл — механизм, параллельный центриольному счётчику.
 5. **Bookmarking (Silvério-Alves 2023):** GATA2 остаётся на хроматине во время митоза в HSC — механизм передачи идентичности дочерним клеткам.
 
 ## 7. CASID Evidence & Solutions — центросома как платформа дифференцировки (2026-07-05)
 
-> Полный аудит: `~/Desktop/LC/MCARA/CDATA/docs/PEER_REVIEW_2026-07-05.md` и `SOLUTIONS_2026-07-05.md`
+> Полный аудит: `~/Desktop/LC/MCARA/CEDAR/docs/PEER_REVIEW_2026-07-05.md` и `SOLUTIONS_2026-07-05.md`
 
 ### 7.1. CASID — от гипотезы к evidence (M3 upgraded: 2/10 → 5/10)
 
@@ -211,7 +211,7 @@
 | # | Проблема | Решение |
 |---|----------|--------|
 | 1 | M3/CASID гипотетический | 🟢 5 centrosome-associated белков + 2 сигнальных обзора |
-| 2 | Strawbridge challenge | 🟢 Таксономия: CDATA для взрослых СК, ES — отдельный механизм |
+| 2 | Strawbridge challenge | 🟢 Таксономия: CEDAR для взрослых СК, ES — отдельный механизм |
 | 3 | Causality | 🟡 CCP1-KO (P3) спроектирован |
 | 4 | Tissue-specificity | 🟢 Таблица 8 тканей с n*, α, β |
 | 5 | Γ matrix | 🟡 Метод парных perturbation experiments |
@@ -220,7 +220,7 @@
 
 **Оценка MCARA: 6.7 → 7.5/10**
 
-## 8. Фундаментальный принцип CDATA (Jaba Tqemaladze, 2026-07-05)
+## 8. Фундаментальный принцип CEDAR (Jaba Tqemaladze, 2026-07-05)
 
 > **polyGlu = энтропия.** Количество polyGlu на центриоли показывает, сколько энтропии накопила центриоль. Асимметричное наследование старых центриолей — элемент механизма необратимой дифференцировки. **Накопление энтропии в стволовых клетках через наследование старых центриолей — плата за возможность необратимой дифференцировки.**
 
@@ -277,5 +277,5 @@
 
 **Итого:** +17 новых references. Все DOI/PMID верифицированы через Crossref + PubMed E-utilities.
 
-**Общая оценка CDATA:** 6.7 → 7.3/10 (уточнена после feed-анализа).
+**Общая оценка CEDAR:** 6.7 → 7.3/10 (уточнена после feed-анализа).
 

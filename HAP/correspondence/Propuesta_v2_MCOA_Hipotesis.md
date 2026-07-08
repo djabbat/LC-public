@@ -1,4 +1,4 @@
-# Propuesta de tesis v2 — MCAOA como hipótesis computacional a evaluar críticamente
+# Propuesta de tesis v2 — MCARA como hipótesis computacional a evaluar críticamente
 
 **Programa:** Doctorado en Ciencias Biomédicas y Salud Pública (código 9620)
 **Equipo 8, Línea 3:** Bases moleculares-celulares y fisiopatología de las enfermedades crónicas
@@ -11,17 +11,17 @@
 
 ## Cambio fundamental respecto a la versión 1
 
-En esta versión, **MCAOA se formula como una hipótesis computacional que debe ser evaluada críticamente** mediante comparación con modelos alternativos sobre datos reales, no como un modelo previamente validado. La tesis no asume que MCAOA es correcto — su objetivo es determinar si aporta valor predictivo más allá de modelos más simples.
+En esta versión, **MCARA se formula como una hipótesis computacional que debe ser evaluada críticamente** mediante comparación con modelos alternativos sobre datos reales, no como un modelo previamente validado. La tesis no asume que MCARA es correcto — su objetivo es determinar si aporta valor predictivo más allá de modelos más simples.
 
 ---
 
 ## 1. Preguntas de investigación
 
 **Pregunta principal:**
-¿Puede un modelo multi-contador (MCAOA) con modulación por disruptores endocrinos tiroideos mejorar la predicción de trayectorias de envejecimiento patológico (mortalidad, fragilidad, enfermedades crónicas) en comparación con modelos de un solo contador (telómero, epigenético) o modelos de regresión logística tradicionales?
+¿Puede un modelo multi-contador (MCARA) con modulación por disruptores endocrinos tiroideos mejorar la predicción de trayectorias de envejecimiento patológico (mortalidad, fragilidad, enfermedades crónicas) en comparación con modelos de un solo contador (telómero, epigenético) o modelos de regresión logística tradicionales?
 
 **Preguntas secundarias:**
-1. ¿Qué contador(es) de MCAOA tienen mayor poder predictivo para cada tipo de patología crónica?
+1. ¿Qué contador(es) de MCARA tienen mayor poder predictivo para cada tipo de patología crónica?
 2. ¿La incorporación de exposición a EDCs tiroideos (PCB, bisfenol A, PFAS) como modulador externo mejora significativamente el ajuste del modelo?
 3. ¿Existe un efecto sinérgico entre múltiples contadores de daño y la exposición a EDCs?
 
@@ -29,7 +29,7 @@ En esta versión, **MCAOA se formula como una hipótesis computacional que debe 
 
 ## 2. Hipótesis operativas (falsables)
 
-**H1 (nula):** MCAOA completo (5 contadores) no predice significativamente mejor la mortalidad/trayectorias de fragilidad que un modelo de regresión que use solo edad, sexo y un solo biomarcador (longitud telomérica o edad epigenética).
+**H1 (nula):** MCARA completo (5 contadores) no predice significativamente mejor la mortalidad/trayectorias de fragilidad que un modelo de regresión que use solo edad, sexo y un solo biomarcador (longitud telomérica o edad epigenética).
 
 **H2 (nula):** La inclusión de exposición a EDCs tiroideos como modulador de los contadores no reduce significativamente la desviación del modelo respecto a los datos observados (test de razón de verosimilitud, α = 0.05, corrección FDR).
 
@@ -62,8 +62,8 @@ En esta versión, **MCAOA se formula como una hipótesis computacional que debe 
 | **M0** | Nulo: solo edad + sexo | 2 |
 | **M1** | Regresión logística: edad + sexo + un biomarcador (telómero o epigenético) | 3 |
 | **M2** | Regresión logística: edad + sexo + exposiciones a EDCs | 3–5 |
-| **M3** | MCAOA basal (5 contadores, parámetros a priori) + edad + sexo | 7 |
-| **M4** | MCAOA con modulación EDC + edad + sexo | 7 + k_c × N_contadores |
+| **M3** | MCARA basal (5 contadores, parámetros a priori) + edad + sexo | 7 |
+| **M4** | MCARA con modulación EDC + edad + sexo | 7 + k_c × N_contadores |
 
 ### 3.4. Criterios de comparación
 
@@ -78,9 +78,9 @@ En esta versión, **MCAOA se formula como una hipótesis computacional que debe 
 
 ### 3.5. Criterio de éxito pre-definido
 
-MCAOA se considera útil si **M4 (MCAOA + EDC)** supera a **M1** y **M2** en AUC-ROC con una diferencia ≥ 0.05 y un test de razón de verosimilitud significativo (p < 0.05 con corrección FDR).
+MCARA se considera útil si **M4 (MCARA + EDC)** supera a **M1** y **M2** en AUC-ROC con una diferencia ≥ 0.05 y un test de razón de verosimilitud significativo (p < 0.05 con corrección FDR).
 
-Si ningún modelo MCAOA supera a modelos más simples, se concluirá que **el marco multi-contador no aporta valor predictivo adicional** para los datos analizados, lo cual es un resultado igualmente válido desde el punto de vista científico.
+Si ningún modelo MCARA supera a modelos más simples, se concluirá que **el marco multi-contador no aporta valor predictivo adicional** para los datos analizados, lo cual es un resultado igualmente válido desde el punto de vista científico.
 
 ---
 
@@ -88,10 +88,10 @@ Si ningún modelo MCAOA supera a modelos más simples, se concluirá que **el ma
 
 | Escenario | Interpretación | Implicación para la línea |
 |-----------|---------------|---------------------------|
-| M4 mejor que M1, M2, M3 | MCAOA con EDCs mejora la predicción — la hipótesis multi-contador+ambiental es plausible | Desarrollar como NAM computacional |
-| M3 mejor que M1, M2, pero M4 no | MCAOA basal es útil, pero la modulación por EDCs no mejora — la vía tiroidea no es el mecanismo dominante | Refinar el módulo EDC o buscar otros moduladores |
+| M4 mejor que M1, M2, M3 | MCARA con EDCs mejora la predicción — la hipótesis multi-contador+ambiental es plausible | Desarrollar como NAM computacional |
+| M3 mejor que M1, M2, pero M4 no | MCARA basal es útil, pero la modulación por EDCs no mejora — la vía tiroidea no es el mecanismo dominante | Refinar el módulo EDC o buscar otros moduladores |
 | M4 similar a M2 | La exposición a EDCs explica la variabilidad, los contadores no añaden información | Marco teórico no refutado pero no superior — publicar como hallazgo negativo |
-| Ningún modelo mejora M0 | Ni MCAOA ni EDCs predicen envejecimiento patológico — las variables no son las adecuadas | Repetir con otras cohortes o biomarcadores |
+| Ningún modelo mejora M0 | Ni MCARA ni EDCs predicen envejecimiento patológico — las variables no son las adecuadas | Repetir con otras cohortes o biomarcadores |
 
 ---
 
@@ -100,7 +100,7 @@ Si ningún modelo MCAOA supera a modelos más simples, se concluirá que **el ma
 | Actividad | Modalidad | Dedicación estimada |
 |-----------|-----------|:-------------------:|
 | Análisis de datos NHANES (extracción, limpieza, modelado) | Remota (R/Python) | 6 meses (15 h/sem) |
-| Desarrollo de interfaz MCAOA-NHANES (calibración) | Remota (Rust/R) | 3 meses (15 h/sem) |
+| Desarrollo de interfaz MCARA-NHANES (calibración) | Remota (Rust/R) | 3 meses (15 h/sem) |
 | Redacción de artículos (3) y tesis | Remota | 6 meses (15 h/sem) |
 | Videoconferencias quincenales con directores | Remota | 1 h/sem |
 | Estancia presencial en Madrid (si necesaria) | Presencial | 2 semanas × 1–2 veces |
@@ -111,9 +111,9 @@ Si ningún modelo MCAOA supera a modelos más simples, se concluirá que **el ma
 
 ## 6. Publicaciones previstas (compendio)
 
-1. **Artículo metodológico:** «MCAOA-EDC: a multi-counter computational model for evaluating cumulative EDC risk on tissue aging» → target: *Toxicology in Vitro* o *ALTEX* (factor de impacto ~3–5).
-2. **Artículo de validación:** «Comparative evaluation of MCAOA vs. single-counter models for predicting mortality in NHANES (1999–2018): the role of thyroid-disrupting EDCs» → target: *Environmental Research* o *Environmental Health Perspectives* (FI ~6–8).
-3. **Artículo de revisión:** «Thyroid-disrupting chemicals and tissue aging: a quantitative framework using MCAOA» → target: *Endocrine Reviews* o *Molecular and Cellular Endocrinology* (FI ~8–15).
+1. **Artículo metodológico:** «MCARA-EDC: a multi-counter computational model for evaluating cumulative EDC risk on tissue aging» → target: *Toxicology in Vitro* o *ALTEX* (factor de impacto ~3–5).
+2. **Artículo de validación:** «Comparative evaluation of MCARA vs. single-counter models for predicting mortality in NHANES (1999–2018): the role of thyroid-disrupting EDCs» → target: *Environmental Research* o *Environmental Health Perspectives* (FI ~6–8).
+3. **Artículo de revisión:** «Thyroid-disrupting chemicals and tissue aging: a quantitative framework using MCARA» → target: *Endocrine Reviews* o *Molecular and Cellular Endocrinology* (FI ~8–15).
 
 ---
 

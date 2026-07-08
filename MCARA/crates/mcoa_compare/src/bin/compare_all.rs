@@ -5,7 +5,7 @@
 //! statistics for any pair of CSVs and emits a flat report.
 //!
 //! Per `feedback_mcoa_cdata_comparison v2`: 5 counter simulators (CDATA,
-//! Telomere, MitoROS, EpigeneticDrift, Proteostasis) + MCAOA coordinator.
+//! Telomere, MitoROS, EpigeneticDrift, Proteostasis) + MCARA coordinator.
 //! Every full run produces all 15 pairwise counter-vs-counter residuals
 //! across 6 tissues = 90 cells.
 

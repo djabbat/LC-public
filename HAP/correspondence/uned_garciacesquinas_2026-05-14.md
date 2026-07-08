@@ -11,7 +11,7 @@ Estimada Dra. García-Esquinas:
 
 Le escribo en relación con mi preinscripción al Programa de Doctorado 9620 — Ciencias Biomédicas y Salud Pública (UNED – ISCIII) para el curso 2026/27, en la Línea de investigación "Envejecimiento, discapacidad y calidad de vida" (Equipo 9 – Epidemiología y Salud Pública), donde figura usted como investigadora disponible para dirección de tesis.
 
-Soy el Dr. Jaba Tqemaladze, MD (Universidad Estatal de Medicina de Tbilisi, Georgia, 1996), Presidente de Georgia Longevity Alliance y autor de la *Centriolar Damage Accumulation Theory of Aging* (CDATA, PMID 36583780). Como candidato EEES-exempto, accedo al doctorado por la vía RD 99/2011 Art. 6.2(d).
+Soy el Dr. Jaba Tqemaladze, MD (Universidad Estatal de Medicina de Tbilisi, Georgia, 1996), Presidente de Georgia Longevity Alliance y autor de la *Centriolar Damage Accumulation Theory of Aging* (CEDAR, PMID 36583780). Como candidato EEES-exempto, accedo al doctorado por la vía RD 99/2011 Art. 6.2(d).
 
 **¿Por qué me dirijo a usted?**
 
@@ -19,7 +19,7 @@ He visto su trayectoria en epidemiología del envejecimiento, especialmente sus 
 
 1. **Cell-DT** — primer "digital twin" validado del envejecimiento humano. Modela 4 tipos de tejido (HSC, intestinal, muscular, neural); calibrado en 62 000 registros de pacientes (R² = 0,89, edades 20–50) y **validado de forma independiente en cohortes de 60–100 años (R² = 0,84 para fragilidad, mortalidad y reloj epigenético)**.
 
-2. **CDATA** — marco mecanicista que explica el envejecimiento celular como acumulación progresiva de daño en los centriolos maternos de las células madre.
+2. **CEDAR** — marco mecanicista que explica el envejecimiento celular como acumulación progresiva de daño en los centriolos maternos de las células madre.
 
 **Mi propuesta concreta**
 

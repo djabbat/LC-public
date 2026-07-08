@@ -1,6 +1,6 @@
-//! mcoa-sim — run an MCAOA simulation and write per-step records to CSV.
+//! mcoa-sim — run an MCARA simulation and write per-step records to CSV.
 //!
-//! Per the mandatory comparison rule (see ~/Desktop/LC/MCAOA/CLAUDE.md), every simulation
+//! Per the mandatory comparison rule (see ~/Desktop/LC/MCARA/CLAUDE.md), every simulation
 //! output MUST be paired with an analogous CDATA run via `scripts/compare_mcoa_cdata.py`.
 
 use clap::Parser;
@@ -13,7 +13,7 @@ use std::path::PathBuf;
     name = "mcoa-sim",
     version = "3.2.0",
     about = "Run a Multi-Counter Architecture simulation with optional EDC modulation.",
-    long_about = "Runs a discrete-time MCAOA simulation for a given tissue, writing per-step counter \
+    long_about = "Runs a discrete-time MCARA simulation for a given tissue, writing per-step counter \
                    states and tissue load to CSV. Includes optional EDC (endocrine disrupting chemical) \
                    modulation for modelling environmental impacts on aging rates.\n\
                    Reference: Tqemaladze J. (2026) DOI 10.5281/zenodo.20055806"

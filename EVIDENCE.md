@@ -23,7 +23,7 @@
 | Proteomic Aging Clock | Argentieri et al. 2024 | PMID **39117878** ✅ |
 | Free-energy principle | Friston 2010 *Nat Rev Neurosci* 11 | PMID **20068583** ✅ |
 | Predictive information (binary Markov) | Bialek/Nemenman/Tishby 2001 *Neural Computation* 13 | DOI 10.1162/089976601753195969 ✅ |
-| CDATA original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
+| CEDAR original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
 | Tqemaladze 2005 early centriole work | *Cell Biol Int* 29 | PMID **15886028** ✅ |
 | ATF5-centriole link | Madarampalli 2015 *Cell* 162 | PMID **26213385** ✅ |
 | Ioannidis on false-positive findings | Ioannidis JPA 2005 *PLOS Med* | PMID **16060722** ✅ |
@@ -75,12 +75,12 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 | `v* = 0.45631` empirical (BioSense) | ✅ Pilot (All-of-Us N=500, 95% CI 0.443-0.459) | — | consistent with theory; full pre-registered test pending |
 | χ_Ze correlates with PhenoAge r=0.67 | ⚠ Exploratory (post-hoc, not pre-registered) | — | Bonferroni / replication required |
 | AUC=0.81 accelerated aging detection | ⚠ Exploratory | — | winner's curse risk; pre-reg N≥2000 required |
-| CDATA causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
-| MCAOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
+| CEDAR causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
+| MCARA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
 
 ## §5. What is deliberately NOT cited
 
-- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense , Ze , CDATA bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
+- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense , Ze , CEDAR bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
 - **HAP** (any reference) — failed PMID audit.
 - **Ontogenesis** (any reference) — failed PMID audit.
 - **Self-citations counted as peer-reviewed** — only the 5 PubMed-indexed Tqemaladze entries.

@@ -1,7 +1,7 @@
 /// Миграция из mcoa_core — ReferenceScales, DriftRates, Gamma
 /// Совместимость с Axiom M2 (dimensional consistency)
 ///
-/// Оригинал: MCAOA/crates/mcoa_core/src/lib.rs
+/// Оригинал: MCARA/crates/mcoa_core/src/lib.rs
 /// Мигрировано: 2026-06-21
 
 use crate::{Fraction, Time, Divisions};

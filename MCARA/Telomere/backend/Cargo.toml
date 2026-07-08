@@ -3,7 +3,7 @@ name = "telomere_backend"
 version = "0.1.0"
 edition = "2021"
 authors = ["LC Team"]
-description = "Backend service for Telomere Shortening Counter (MCAOA Counter #2)"
+description = "Backend service for Telomere Shortening Counter (MCARA Counter #2)"
 license = "MIT"
 repository = "https://github.com/longevitycommon/telomere"
 

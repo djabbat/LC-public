@@ -1,7 +1,7 @@
-/// Миграция кода из старых подпроектов (CDATA, MCAOA)
+/// Миграция кода из старых подпроектов (CDATA, MCARA)
 ///
-/// Файлы: mcoa_core (MCAOA/crates/mcoa_core) → ReferenceScales, DriftRates, Gamma
-///        cell_dt   (MCAOA/CDATA/crates/cell_dt_core) → inflammaging, asymmetric_division
+/// Файлы: mcoa_core (MCARA/crates/mcoa_core) → ReferenceScales, DriftRates, Gamma
+///        cell_dt   (MCARA/CDATA/crates/cell_dt_core) → inflammaging, asymmetric_division
 ///
 /// Всего мигрировано: 360+ файлов → 2 модуля с ключевыми структурами
 /// Остальные файлы — в _archive/subprojects_concepts/

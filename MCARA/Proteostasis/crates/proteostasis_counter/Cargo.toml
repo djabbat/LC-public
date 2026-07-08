@@ -3,7 +3,7 @@ name = "proteostasis_counter"
 version = "0.2.0"
 edition = "2021"
 authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
-description = "MCAOA Counter #5"
+description = "MCARA Counter #5"
 license = "MIT"
 
 [[bin]]

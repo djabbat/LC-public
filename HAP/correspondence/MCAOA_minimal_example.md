@@ -1,6 +1,6 @@
-# MCAOA Simulator — Minimal Reproducible Example
+# MCARA Simulator — Minimal Reproducible Example
 
-**Instrucciones para clonar, compilar y ejecutar el simulador MCAOA con el módulo EDC**
+**Instrucciones para clonar, compilar y ejecutar el simulador MCARA con el módulo EDC**
 
 ---
 
@@ -15,7 +15,7 @@
 
 ```bash
 git clone -b mcaoa-v3.2 https://github.com/djabbat/LC.git
-cd LC/MCAOA
+cd LC/MCARA
 ```
 
 ## 3. Compilar

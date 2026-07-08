@@ -1,4 +1,4 @@
-//! MCAOA simulation — time evolution of multi-counter damage per tissue.
+//! MCARA simulation — time evolution of multi-counter damage per tissue.
 //!
 //! Includes optional EDC (Endocrine Disrupting Chemical) modulation module
 //! for modelling environmental impacts on aging (thyroid disruptors, etc.).

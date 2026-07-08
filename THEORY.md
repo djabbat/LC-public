@@ -1,7 +1,7 @@
 # LC · THEORY (v7.0 — Organismal Aging, единая теория)
 
 **Статус:** Каноническая · 2026-06-21
-**Версия:** 7.0 — объединение CDATA + MCAOA + Ze в единый формализм
+**Версия:** 7.0 — объединение CEDAR + MCARA + Ze в единый формализм
 
 > Полный вывод: `Organismal_Aging/THEORY.md`. Здесь — кросс-компонентная сводка.
 
@@ -71,8 +71,8 @@
 
 | Гипотеза | Тест | Порог |
 |---|---|---|
-| MCAOA M4 | N≥2000, α=0.001 | partial r² < 0.05 → счётчик опровергнут |
-| CDATA | Sobol full decomposition | S1 незначим → центриоль не первопричина |
+| MCARA M4 | N≥2000, α=0.001 | partial r² < 0.05 → счётчик опровергнут |
+| CEDAR | Sobol full decomposition | S1 незначим → центриоль не первопричина |
 | v* | All-of-Us N≥500 | v* вне [0.32, 0.58] → опровергнуто |
 | Z_conflict | GTEx + продольные данные | AUC < 0.6 для disease prediction |
 | Самообучение | A/B: Bayesian vs static | ΔAIC < 2 |

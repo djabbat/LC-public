@@ -12,7 +12,7 @@ Dr. Ruiz Moreno declined supervision, citing misalignment between the user's pro
 
 ## Full exchange
 
-**User's initial email (2026-05-06):** Preinscripción UNED 9620, proposing Cell-DT + CDATA integration with her epidemiological cohort work.
+**User's initial email (2026-05-06):** Preinscripción UNED 9620, proposing Cell-DT + CEDAR integration with her epidemiological cohort work.
 
 **Her reply (2026-05-06):**
 > Buenos tardes Jaba,

@@ -8,7 +8,7 @@
 [![Status](https://img.shields.io/badge/status-Pre--Alpha-yellow)](https://github.com/djabbat/LC)
 
 Models organismal development from zygote through ontogenesis to aging and death.  
-Integrates the centriolar damage theory, 5 molecular aging counters (MCAOA), and inter-tissue Ze-conflicts into a unified computational platform.
+Integrates the centriolar damage theory, 5 molecular aging counters (MCARA), and inter-tissue Ze-conflicts into a unified computational platform.
 
 ---
 
@@ -20,7 +20,7 @@ LEVEL #3: 8 TISSUES + Ze-CONFLICTS
 ├── Inter-tissue conflicts: Z_conflict(i,j) = |τᵢ·dLᵢ/dt − τⱼ·dLⱼ/dt|·C_ij
 └── Disease at L_tissue > L_crit
 
-LEVEL #2: 5 MCAOA COUNTERS
+LEVEL #2: 5 MCARA COUNTERS
 ├── #2 Telomere — shortening, Hayflick limit
 ├── #3 Mitochondrial — ROS, dysfunction
 ├── #4 Epigenetic — methylation, Cdc42
@@ -164,5 +164,5 @@ Apache 2.0 © 2026 Jaba Tqemaladze, MD — Georgia Longevity Alliance
 ## 🔗 Links
 
 - **PubMed:** [Tqemaladze J (ORCID: 0000-0001-8651-7243)](https://pubmed.ncbi.nlm.nih.gov/?term=Tqemaladze+J)
-- **MCAOA Preprint:** [Zenodo 10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
+- **MCARA Preprint:** [Zenodo 10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
 - **ARGUS-LP:** [github.com/djabbat/Aubrey](https://github.com/djabbat/Aubrey)

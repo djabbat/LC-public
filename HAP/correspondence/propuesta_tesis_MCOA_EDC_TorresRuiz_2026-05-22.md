@@ -11,13 +11,13 @@
 
 ## Título tentativo
 
-**Arquitectura Multi-Contador del Envejecimiento (MCAOA) como modelo computacional para evaluar el impacto acumulativo de disruptores endocrinos en el envejecimiento tisular y la función tiroidea**
+**Arquitectura Multi-Contador del Envejecimiento (MCARA) como modelo computacional para evaluar el impacto acumulativo de disruptores endocrinos en el envejecimiento tisular y la función tiroidea**
 
 ---
 
 ## 1. Hipótesis principal
 
-**Hipótesis:** La exposición crónica a disruptores endocrinos (EDCs) con actividad tiroidea (PCB, bisfenoles, ftalatos, compuestos perfluorados) acelera el envejecimiento tisular mediante un mecanismo cuantificable de daño acumulativo en células madre, modelable a través de la Arquitectura Multi-Contador del Envejecimiento (MCAOA). Específicamente, el eje tiroideo constituye un «contador» identificable dentro del marco MCAOA, cuyo ritmo de avance es modulado por la carga ambiental de EDCs.
+**Hipótesis:** La exposición crónica a disruptores endocrinos (EDCs) con actividad tiroidea (PCB, bisfenoles, ftalatos, compuestos perfluorados) acelera el envejecimiento tisular mediante un mecanismo cuantificable de daño acumulativo en células madre, modelable a través de la Arquitectura Multi-Contador del Envejecimiento (MCARA). Específicamente, el eje tiroideo constituye un «contador» identificable dentro del marco MCARA, cuyo ritmo de avance es modulado por la carga ambiental de EDCs.
 
 **Predicción falsable:** La incorporación de un parámetro de exposición acumulativa a EDCs tiroideos mejora significativamente la capacidad predictiva del modelo Cell-DT para trayectorias de envejecimiento patológico (fragilidad, enfermedad cardiovascular, deterioro cognitivo) en cohortes con datos ambientales, en comparación con el modelo basal sin exposición.
 
@@ -29,10 +29,10 @@ La línea de la Dra. Torres Ruiz aborda:
 
 | Dimensión de su línea | Conexión con la propuesta |
 |-----------------------|---------------------------|
-| **Toxicología ambiental** | Los EDCs se modelan como moduladores externos de los contadores de envejecimiento tisular en MCAOA. La exposición acumulativa (dosis × tiempo) se formaliza matemáticamente como un factor de aceleración de contadores. |
+| **Toxicología ambiental** | Los EDCs se modelan como moduladores externos de los contadores de envejecimiento tisular en MCARA. La exposición acumulativa (dosis × tiempo) se formaliza matemáticamente como un factor de aceleración de contadores. |
 | **Disruptores endocrinos** | El eje tiroideo es especialmente relevante: las hormonas tiroideas (T3/T4) regulan la tasa metabólica basal, la función mitocondrial y la homeostasis de células madre en múltiples tejidos. Los EDCs que interfieren con la señalización tiroidea (PCBs, bisfenoles, PFAS) constituyen un mecanismo específico y cuantificable de modulación del envejecimiento. |
-| **NAMs (New Approach Methodologies)** | MCAOA + Cell-DT se proponen como una **NAM computacional** para la evaluación de riesgos acumulativos de mezclas de EDCs. La plataforma permite simular in silico el efecto de combinaciones de contaminantes sobre la función tiroidea y el envejecimiento tisular, reduciendo la necesidad de ensayos in vivo. |
-| **Función tiroidea** | La glándula tiroidea se modela como un tejido con su propio contador de daño dentro de MCAOA. La disfunción tiroidea inducida por EDCs constituye un dominio concreto y validable de la teoría. |
+| **NAMs (New Approach Methodologies)** | MCARA + Cell-DT se proponen como una **NAM computacional** para la evaluación de riesgos acumulativos de mezclas de EDCs. La plataforma permite simular in silico el efecto de combinaciones de contaminantes sobre la función tiroidea y el envejecimiento tisular, reduciendo la necesidad de ensayos in vivo. |
+| **Función tiroidea** | La glándula tiroidea se modela como un tejido con su propio contador de daño dentro de MCARA. La disfunción tiroidea inducida por EDCs constituye un dominio concreto y validable de la teoría. |
 | **Enfermedades crónicas** | Las patologías crónicas asociadas a factores ambientales (enfermedad cardiovascular, diabetes tipo 2, deterioro cognitivo) se modelan como umbrales de superación de contadores tisulares, cuya tasa de avance está modulada por la carga de EDCs. |
 
 ---
@@ -75,8 +75,8 @@ La tesis combina una componente computacional principal con una componente exper
 ## 5. Publicaciones previstas
 
 1. **Artículo de revisión/meta-análisis:** «Impacto de disruptores endocrinos tiroideos sobre el envejecimiento tisular: un meta-análisis bajo el marco MCOA» (target: *Environmental Health Perspectives* o *Environment International*).
-2. **Artículo metodológico:** «MCAOA-EDC: un modelo computacional multi-contador para evaluar el riesgo acumulativo de mezclas de contaminantes» (target: *Toxicology in Vitro* o *ALTEX*).
-3. **Artículo de validación:** «Validación del módulo tiroideo de MCAOA en la cohorte ENRICA-Seniors: la exposición a PCB predice trayectorias de fragilidad mediadas por función tiroidea» (target: *Journal of the American Geriatrics Society* o *Environmental Research*).
+2. **Artículo metodológico:** «MCARA-EDC: un modelo computacional multi-contador para evaluar el riesgo acumulativo de mezclas de contaminantes» (target: *Toxicology in Vitro* o *ALTEX*).
+3. **Artículo de validación:** «Validación del módulo tiroideo de MCARA en la cohorte ENRICA-Seniors: la exposición a PCB predice trayectorias de fragilidad mediadas por función tiroidea» (target: *Journal of the American Geriatrics Society* o *Environmental Research*).
 
 ---
 

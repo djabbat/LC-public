@@ -25,7 +25,7 @@ async fn main() -> Result<(), AppError> {
         .json()
         .init();
 
-    info!("Starting Telomere Backend (MCAOA Counter #2)");
+    info!("Starting Telomere Backend (MCARA Counter #2)");
 
     // Load configuration
     let config = Config::load()?;
@@ -49,7 +49,7 @@ async fn main() -> Result<(), AppError> {
     let app = Router::new()
         // Health check
         .route("/health", get(routes::health))
-        // Counter registry (MCAOA)
+        // Counter registry (MCARA)
         .route("/api/v1/counters", get(routes::list_counters))
         .route("/api/v1/counters/:id", get(routes::get_counter))
         // Telomere measurements
@@ -78,7 +78,7 @@ async fn main() -> Result<(), AppError> {
         .route("/api/v1/subjects/:subject_id/parameters",
             get(routes::get_subject_parameters)
         )
-        // Tissue load computation (MCAOA)
+        // Tissue load computation (MCARA)
         .route("/api/v1/compute-tissue-load", post(routes::compute_tissue_load))
         .layer(TraceLayer::new_for_http())
         .layer(CorsLayer::permissive())

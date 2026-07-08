@@ -1,6 +1,6 @@
-//! MCAOA Counter #2: Telomere shortening
+//! MCARA Counter #2: Telomere shortening
 //!
-//! Kinetic equation (MCAOA-compliant, dimensionless):
+//! Kinetic equation (MCARA-compliant, dimensionless):
 //!   D_2(n, t) = D_20 + α_2·(n / n_2*) + β_2·(t / τ_2) + γ_2·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

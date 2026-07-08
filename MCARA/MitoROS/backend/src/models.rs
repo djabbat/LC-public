@@ -59,7 +59,7 @@ impl Counter3ParametersCreate {
     }
 }
 
-// Tissue - Biological tissue types with MCAOA weights
+// Tissue - Biological tissue types with MCARA weights
 #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
 pub struct Tissue {
     pub id: Uuid,
@@ -67,7 +67,7 @@ pub struct Tissue {
     pub description: Option<String>,
     pub mitotic_index: f64,  // 0-1 scale, proportion of dividing cells
     pub metabolic_rate: f64, // Relative metabolic rate
-    pub weight_w3: Option<f64>, // Weight for Counter #3 in MCAOA L_tissue computation
+    pub weight_w3: Option<f64>, // Weight for Counter #3 in MCARA L_tissue computation
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
 }
