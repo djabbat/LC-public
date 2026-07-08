@@ -1,6 +1,6 @@
 /// Миграция из cell_dt_core — компоненты клеточного деления
 ///
-/// Оригинал: MCAOA/CDATA/crates/cell_dt_core/src/components/
+/// Оригинал: MCARA/CDATA/crates/cell_dt_core/src/components/
 /// Мигрировано: 2026-06-21
 ///
 /// Компоненты:

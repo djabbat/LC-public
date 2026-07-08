@@ -1,10 +1,10 @@
-# Módulo EDC (Endocrine Disrupting Chemicals) del simulador MCAOA
+# Módulo EDC (Endocrine Disrupting Chemicals) del simulador MCARA
 
 **Descripción técnica**
 
 **Autor:** Dr. Jaba Tqemaladze, MD
 **Fecha:** 2026-05-26
-**Código fuente:** https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA/crates/mcoa_simulation/src/lib.rs
+**Código fuente:** https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCARA/crates/mcoa_simulation/src/lib.rs
 **Licencia:** MIT
 
 ---
@@ -13,7 +13,7 @@
 
 Los disruptores endocrinos con actividad tiroidea (PCB, bisfenoles, PFAS, ftalatos) interfieren con la señalización de hormonas tiroideas (T3/T4) a múltiples niveles (Gore et al. 2015, *Endocr Rev*; PMID 25522325):
 
-| Nivel de interferencia | Efecto sobre MCAOA | Contador afectado |
+| Nivel de interferencia | Efecto sobre MCARA | Contador afectado |
 |------------------------|-------------------|-------------------|
 | Unión al receptor de hormona tiroidea (TR) | Alteración de la transcripción de genes diana (PGC-1α, UCPs) → aumento de ROS mitocondrial | Mitocondrial (#3) |
 | Captación de yoduro (NIS) | Disminución de síntesis de T3/T4 → reducción de tasa metabólica, acumulación de daño mitocondrial | Mitocondrial (#3) |

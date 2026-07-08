@@ -1,6 +1,6 @@
-//! MCAOA Counter #5: Proteostasis collapse
+//! MCARA Counter #5: Proteostasis collapse
 //!
-//! Kinetic equation (MCAOA-compliant, dimensionless):
+//! Kinetic equation (MCARA-compliant, dimensionless):
 //!   D_5(n, t) = D_50 + α_5·(n / n_5*) + β_5·(t / τ_5) + γ_5·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

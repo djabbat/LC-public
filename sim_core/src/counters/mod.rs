@@ -1,4 +1,4 @@
-// Уровень #2: 5 счётчиков MCAOA
+// Уровень #2: 5 счётчиков MCARA
 //
 // L_tissue = Σ w_i · f_i(D_i)
 // f_i(x) = 1 / (1 + exp(-k_i · (x - x_crit)))  — сигмоида
@@ -103,7 +103,7 @@ pub fn l_tissue_aggregator(counters: &[CounterState], weights: &[Fraction]) -> F
 }
 
 /// Константа: агрегатор L_tissue (для совместимости)
-pub static L_TISSUE_AGGREGATOR: &str = "MCAOA v1.0 — 5 counters";
+pub static L_TISSUE_AGGREGATOR: &str = "MCARA v1.0 — 5 counters";
 
 #[cfg(test)]
 mod tests {

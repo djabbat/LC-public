@@ -21,7 +21,7 @@ I am writing to inquire about the current status of the **Impetus Grants** progr
 
 *(Note: My previous email to info@hevolution.org bounced — the .org domain's MX record is non-functional. This is a resend to the correct .com domain.)*
 
-I am PI of a longevity research program at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CDATA)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCAOA).
+I am PI of a longevity research program at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CEDAR)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCARA).
 
 **Project overview:**
 

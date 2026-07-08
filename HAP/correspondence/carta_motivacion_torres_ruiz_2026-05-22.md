@@ -9,9 +9,9 @@
 
 ## Trayectoria y motivación científica
 
-Soy médico (Universidad Estatal de Medicina de Tbilisi, 1996) con más de 25 años de investigación en biología del envejecimiento. Mi contribución principal es la **Teoría de la Acumulación de Daño Centriolar (CDATA)**, publicada en *Molecular Biology Reports* (PMID 36583780, 2023) y respaldada por un programa coherente de 10 publicaciones indexadas en PubMed (2005–2024).
+Soy médico (Universidad Estatal de Medicina de Tbilisi, 1996) con más de 25 años de investigación en biología del envejecimiento. Mi contribución principal es la **Teoría de la Acumulación de Daño Centriolar (CEDAR)**, publicada en *Molecular Biology Reports* (PMID 36583780, 2023) y respaldada por un programa coherente de 10 publicaciones indexadas en PubMed (2005–2024).
 
-En 2024–2026 desarrollé la **Arquitectura Multi-Contador del Envejecimiento (MCAOA)** — un marco cuantitativo y falsable que modela el envejecimiento como la integración de contadores paralelos de daño en distintos tejidos. MCAOA fue aprobado como eLife Reviewed Preprint (eLife-RP-RA-2026-111885, abril 2026) y está depositado en Zenodo (DOI 10.5281/zenodo.20055806).
+En 2024–2026 desarrollé la **Arquitectura Multi-Contador del Envejecimiento (MCARA)** — un marco cuantitativo y falsable que modela el envejecimiento como la integración de contadores paralelos de daño en distintos tejidos. MCARA fue aprobado como eLife Reviewed Preprint (eLife-RP-RA-2026-111885, abril 2026) y está depositado en Zenodo (DOI 10.5281/zenodo.20055806).
 
 Paralelamente, construí **Cell-DT**, un gemelo digital del envejecimiento humano (Rust, 8 módulos, 385+ tests) que simula 4 tipos tisulares, calibrado en 62.000 registros clínicos (R² = 0,89 en edades 20–50) y validado externamente en cohortes de 60–100 años (R² = 0,84 para fragilidad y mortalidad).
 

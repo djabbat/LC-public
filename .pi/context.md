@@ -14,17 +14,17 @@ Georgia Longevity Alliance — research ecosystem
 ./deploy/scripts
 ./deploy/systemd
 ./refs
-./MCAOA
-./MCAOA/Proteostasis
-./MCAOA/MitoROS
-./MCAOA/refs
-./MCAOA/frontend
-./MCAOA/tests
-./MCAOA/crates
-./MCAOA/_originals
-./MCAOA/CDATA
-./MCAOA/results
-./MCAOA/audits
+./MCARA
+./MCARA/Proteostasis
+./MCARA/MitoROS
+./MCARA/refs
+./MCARA/frontend
+./MCARA/tests
+./MCARA/crates
+./MCARA/_originals
+./MCARA/CEDAR
+./MCARA/results
+./MCARA/audits
 ```
 
 ## Команды

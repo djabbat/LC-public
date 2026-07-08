@@ -1,14 +1,14 @@
 // Интеграционные тесты: sim_core ↔ mcoa_core ↔ cell_dt
 //
 // Проверяют, что новый sim_core совместим с существующим кодом
-// mcoa_core (MCAOA) и cell_dt_core (CDATA).
+// mcoa_core (MCARA) и cell_dt_core (CDATA).
 
 #[cfg(test)]
 mod tests {
     use organismal_aging::organism::Organism;
     use organismal_aging::counters::{CounterState, CounterParams, CounterType, l_tissue_aggregator};
 
-    /// MCAOA Axiom M3: Σ w_i ≈ 1.0 для каждой ткани
+    /// MCARA Axiom M3: Σ w_i ≈ 1.0 для каждой ткани
     /// Примечание: веса счётчиков #2–#5 хранятся в TissueConfig;
     /// центриоль (#1) добавляется отдельно → сумма ~0.6-0.9.
     #[test]
@@ -25,7 +25,7 @@ mod tests {
         }
     }
 
-    /// MCAOA Axiom M2: размерностная согласованность
+    /// MCARA Axiom M2: размерностная согласованность
     #[test]
     fn drift_is_dimensionless() {
         let params = CounterParams::telomere();

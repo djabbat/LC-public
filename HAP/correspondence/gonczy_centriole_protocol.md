@@ -11,7 +11,7 @@
 
 ### 1. Outgoing (Tqemaladze → Gönczy, 2026-05-13)
 
-**Subject:** Centriole-age dual staining protocol — request from a CDATA group (Tqemaladze, Georgia)
+**Subject:** Centriole-age dual staining protocol — request from a CEDAR group (Tqemaladze, Georgia)
 
 Requested:
 - Protocol for distinguishing young (daughter) from old (mother) centrioles by immunostaining

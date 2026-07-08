@@ -10,7 +10,7 @@
 Всё общение, комментарии в коде, документация — **строго на русском**.
 
 ## Приоритет
-Organismal Aging — **главный интегратор LC**. Все бывшие подпроекты (CDATA, MCAOA, Ze, BioSense, FCLC, HAP) — компоненты единой системы.
+Organismal Aging — **главный интегратор LC**. Все бывшие подпроекты (CEDAR, MCARA, Ze, BioSense, FCLC, HAP) — компоненты единой системы.
 
 ## Архитектура
 - **sim_core/** — ядро на Rust (центриоль → счётчики → ткани → организм)
@@ -29,7 +29,7 @@ Apache 2.0 — весь код, данные CC-BY 4.0.
 
 ## Связанные проекты
 - **Aubrey** (~/Desktop/Marketing/Aubrey/) — ARGUS-LP робот
-- **PhD** (~/Desktop/PhD/) — диссертация (CDATA)
+- **PhD** (~/Desktop/PhD/) — диссертация (CEDAR)
 - **Services/mbpr** — peer review инструмент
 
 ---

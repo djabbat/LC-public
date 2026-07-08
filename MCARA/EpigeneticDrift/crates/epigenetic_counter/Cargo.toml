@@ -3,7 +3,7 @@ name = "epigenetic_counter"
 version = "0.2.0"
 edition = "2021"
 authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
-description = "MCAOA Counter #4"
+description = "MCARA Counter #4"
 license = "MIT"
 
 [[bin]]

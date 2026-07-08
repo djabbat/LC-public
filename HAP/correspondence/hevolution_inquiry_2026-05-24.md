@@ -16,7 +16,7 @@ Dear Hevolution Foundation Team,
 
 I am writing to inquire about the current status of the **Impetus Grants** program, in which Hevolution participated as a co-funder in Rounds 2 and 3.
 
-I am PI of a longevity research program at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CDATA)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCAOA).
+I am PI of a longevity research program at the **Georgia Longevity Alliance** (Abastumani, Georgia), focused on testing the **Centriolar Damage Accumulation Theory of Aging (CEDAR)** — Counter #1 in the Multi-Counter Architecture of Organismal Aging (MCARA).
 
 **Project overview:**
 

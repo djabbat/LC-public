@@ -3,7 +3,7 @@ name = "epigeneticdrift_backend"
 version = "0.1.0"
 edition = "2021"
 authors = ["LC Team"]
-description = "Epigenetic Drift Counter backend for MCAOA"
+description = "Epigenetic Drift Counter backend for MCARA"
 
 [[bin]]
 name = "epigeneticdrift-backend"

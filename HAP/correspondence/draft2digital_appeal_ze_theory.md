@@ -20,11 +20,11 @@ I respectfully request a re-evaluation based on the following facts:
 
 **1. The author is a published scientist with 149 publications**
 
-I am Jaba Tqemaladze, MD, a medical doctor and independent researcher. I am the President of the Georgia Longevity Alliance (NGO, reg. №404506520), and the author of 149 publications, approximately 10 of which are indexed in PubMed/MEDLINE. My research on the Centriolar Damage Accumulation Theory of Aging (CDATA) has been published in peer-reviewed journals including *Molecular Biology Reports* (PMID 36583780) and *Cell Biology International* (PMID 15886028).
+I am Jaba Tqemaladze, MD, a medical doctor and independent researcher. I am the President of the Georgia Longevity Alliance (NGO, reg. №404506520), and the author of 149 publications, approximately 10 of which are indexed in PubMed/MEDLINE. My research on the Centriolar Damage Accumulation Theory of Aging (CEDAR) has been published in peer-reviewed journals including *Molecular Biology Reports* (PMID 36583780) and *Cell Biology International* (PMID 15886028).
 
 **2. The book presents original scientific theory**
 
-*Ze Theory* is not auto-generated content. It is a monograph laying out the centriolar damage accumulation theory of aging (CDATA) — a hypothesis I have developed over two decades. The book contains original experimental design proposals, falsification criteria, and references to 10 PubMed-indexed publications co-authored by myself.
+*Ze Theory* is not auto-generated content. It is a monograph laying out the centriolar damage accumulation theory of aging (CEDAR) — a hypothesis I have developed over two decades. The book contains original experimental design proposals, falsification criteria, and references to 10 PubMed-indexed publications co-authored by myself.
 
 **3. AI was used as an assistive tool, not as an author**
 

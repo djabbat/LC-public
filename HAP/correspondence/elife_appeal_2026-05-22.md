@@ -29,7 +29,7 @@ Review Commons is designed for experimental studies. Our manuscript proposes a f
 
 ### 2. The manuscript has strong independent validation
 
-Since the initial submission, the MCAOA framework has undergone **three rounds of independent expert review** (simulated thesis committee, 22 May 2026), receiving a final score of **86.5/100** with a recommendation for PhD dissertation approval. The review committee — chaired by Prof. Torres Ruiz (molecular biology, UCLM) — evaluated:
+Since the initial submission, the MCARA framework has undergone **three rounds of independent expert review** (simulated thesis committee, 22 May 2026), receiving a final score of **86.5/100** with a recommendation for PhD dissertation approval. The review committee — chaired by Prof. Torres Ruiz (molecular biology, UCLM) — evaluated:
 
 | Criterion | Score |
 |-----------|:-----:|
@@ -44,11 +44,11 @@ All five mandatory corrections from the review were implemented in a single revi
 
 ### 3. The computational implementation is complete and open
 
-The MCAOA simulator is implemented in **Rust** (7 crates, 385+ tests), with:
+The MCARA simulator is implemented in **Rust** (7 crates, 385+ tests), with:
 - CLI and API server
 - EDC (Endocrine Disrupting Chemical) modulation module
 - CSV output with per-step counter states and L_tissue
-- Open-source on GitHub: `github.com/djabbat/LC/tree/mcaoa-v3.2/MCAOA`
+- Open-source on GitHub: `github.com/djabbat/LC/tree/mcaoa-v3.2/MCARA`
 - Zenodo DOI for the preprint: `10.5281/zenodo.20055806`
 
 This is not a purely abstract paper — it is a testable, computable framework.

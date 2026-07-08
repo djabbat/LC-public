@@ -1,4 +1,4 @@
-//! Integration tests for MCAOA Counter #4.
+//! Integration tests for MCARA Counter #4.
 
 use epigenetic_counter::{compute_damage, CounterParams, divisions_to_critical};
 use epigenetic_counter::tissue::Tissue;

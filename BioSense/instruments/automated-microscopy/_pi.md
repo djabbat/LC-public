@@ -12,7 +12,7 @@
 ## Правила
 - Интеграция с ARGUS-LP (аппаратное обеспечение)
 - Изображения → automated analysis pipeline
-- Связан с CDATA (центриолярная теория)
+- Связан с CEDAR (центриолярная теория)
 
 ## Ключевые файлы
 - DESIGN.md, EVIDENCE.md, PARAMETERS.md, THEORY.md, README.md

@@ -25,7 +25,7 @@ Número de solicitud: **712356513** (disponible para verificación si lo precisa
 
 ---
 
-## 2. Estado exacto del manuscrito MCOA/MCAOA
+## 2. Estado exacto del manuscrito MCOA/MCARA
 
 Aclaro el estado actual con toda transparencia:
 
@@ -58,7 +58,7 @@ La evaluación de 86.5/100 corresponde a un **procedimiento interno de revisión
 
 ---
 
-## 4. Documento técnico: módulo EDC del simulador MCAOA
+## 4. Documento técnico: módulo EDC del simulador MCARA
 
 Adjunto a este correo el documento **`EDC_module_description.md`** con la descripción técnica completa del módulo de disruptores endocrinos. A continuación un resumen:
 
@@ -91,10 +91,10 @@ donde `k_c` es el coeficiente de sensibilidad específico del contador:
 
 ## 5. Ejemplo mínimo reproducible
 
-Adjunto el anexo **`MCAOA_minimal_example.md`** con instrucciones paso a paso para:
+Adjunto el anexo **`MCARA_minimal_example.md`** con instrucciones paso a paso para:
 
 1. Clonar el repositorio: `git clone -b mcaoa-v3.2 https://github.com/djabbat/LC.git`
-2. Compilar: `cd LC/MCAOA && cargo build --release`
+2. Compilar: `cd LC/MCARA && cargo build --release`
 3. Ejecutar el test EDC: `cargo test --package mcoa_simulation edc_thyroid -- --nocapture`
 4. O bien ejecutar la simulación completa: `cargo run --package mcoa_cli --example run_edc`
 
@@ -102,13 +102,13 @@ Adjunto el anexo **`MCAOA_minimal_example.md`** con instrucciones paso a paso pa
 
 ---
 
-## 6. Propuesta reformulada: MCAOA como hipótesis computacional a evaluar críticamente
+## 6. Propuesta reformulada: MCARA como hipótesis computacional a evaluar críticamente
 
-Entiendo perfectamente su planteamiento: la tesis no debe asumir que MCAOA está validado, sino someterlo a **evaluación crítica objetiva** comparándolo con modelos alternativos sobre datos reales. Adjunto la propuesta revisada **`Propuesta_v2_MCOA_Hipotesis.md`** con este enfoque.
+Entiendo perfectamente su planteamiento: la tesis no debe asumir que MCARA está validado, sino someterlo a **evaluación crítica objetiva** comparándolo con modelos alternativos sobre datos reales. Adjunto la propuesta revisada **`Propuesta_v2_MCOA_Hipotesis.md`** con este enfoque.
 
 **Cambios fundamentales respecto a la versión anterior:**
 
-1. **MCAOA se formula como hipótesis computacional**, no como modelo validado. Las preguntas de investigación son:
+1. **MCARA se formula como hipótesis computacional**, no como modelo validado. Las preguntas de investigación son:
    - ¿Puede un modelo multi-contador mejorar la predicción de trayectorias de envejecimiento patológico frente a modelos de un solo contador (telómero, epigenético)?
    - ¿La incorporación de exposición a EDCs tiroideos como modulador externo mejora significativamente el ajuste del modelo?
 
@@ -116,9 +116,9 @@ Entiendo perfectamente su planteamiento: la tesis no debe asumir que MCAOA está
    - Exposición a PCB, bisfenol A, PFAS (variables séricas)
    - Biomarcadores de función tiroidea (TSH, T4L, T3L)
    - Variables de envejecimiento (mortalidad, fragilidad, enfermedades crónicas)
-   - Comparación de modelos: MCAOA completo vs. modelo nulo (sin contadores) vs. modelo de un solo contador (telómero) vs. regresión logística estándar
+   - Comparación de modelos: MCARA completo vs. modelo nulo (sin contadores) vs. modelo de un solo contador (telómero) vs. regresión logística estándar
 
-3. **Criterio de éxito pre-definido:** mejora significativa en AIC/BIC y AUC-ROC del modelo MCAOA frente a alternativas más simples (ANOVA de modelos anidados, α = 0.05, con corrección FDR).
+3. **Criterio de éxito pre-definido:** mejora significativa en AIC/BIC y AUC-ROC del modelo MCARA frente a alternativas más simples (ANOVA de modelos anidados, α = 0.05, con corrección FDR).
 
 ---
 
@@ -138,5 +138,5 @@ Email: djabbat@gmail.com
 
 **Documentos adjuntos:**
 1. `EDC_module_description.md` — descripción técnica del módulo EDC (ecuaciones, parámetros, fuentes)
-2. `MCAOA_minimal_example.md` — instrucciones para clonar, compilar y ejecutar el simulador
-3. `Propuesta_v2_MCOA_Hipotesis.md` — propuesta de tesis reformulada: MCAOA como hipótesis a evaluar críticamente
+2. `MCARA_minimal_example.md` — instrucciones para clonar, compilar y ejecutar el simulador
+3. `Propuesta_v2_MCOA_Hipotesis.md` — propuesta de tesis reformulada: MCARA como hipótesis a evaluar críticamente
