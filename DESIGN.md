@@ -21,8 +21,8 @@
 ├── web/ # social-layer React+TS PWA
 ├── realtime/ # social-layer Phoenix Channels
 │
-├── MCAOA/ # subproject: theoretical
-├── CDATA/ # subproject: molecular hypothesis
+├── MCARA/ # subproject: theoretical
+├── CEDAR/ # subproject: molecular hypothesis
 ├── Ze/ # subproject: math + simulator (regenerated 2026-04-28)
 ├── BioSense/ # subproject: applied + simulator + datasets (regenerated 2026-04-28)
 ├── FCLC/ # subproject: federated infra (server-resident, separate repo)

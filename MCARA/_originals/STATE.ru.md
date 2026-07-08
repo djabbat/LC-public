@@ -19,7 +19,7 @@
 - [ ] Дождаться решения Nature Aging editorial decision (рукопись #1)
 - [ ] Подготовить response к reviewer comments (если будут)
 - [ ] Backup: secondary target (npj Aging, eLife) если reject
-- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CDATA L1
+- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CEDAR L1
 - [ ] Tissue-specific weights калибровка против реальных данных HSC/skin/neural
 - [ ] **Stem-Cell-Centric extension:** финальная TBPR-сверка, verify VEXAS PMID, JAK/NLRP3 therapeutic refs, формализовать D_pi (piRNA counter) кинетику для §4.1 THEORY.md
 - [ ] **Damage Shadow review:** перенести черновик в `docs/manuscripts/DAMAGE_SHADOW/`, сверить PROSPERO record, добавить EpigeneticDrift subproject EVIDENCE.md cross-link
@@ -70,7 +70,7 @@ Created `crates/mcoa_compare/`:
 Добавлены CLAUDE + STATE. Существующие 7 файлов (CONCEPT/DESIGN/EVIDENCE/OPEN_PROBLEMS/PARAMETERS/README/THEORY) уже соответствуют новой схеме.
 
 ### 2026-04-19 — Nature Aging submission
-MCARA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CDATA), и формализует общую multi-counter архитектуру.
+MCARA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CEDAR), и формализует общую multi-counter архитектуру.
 
 ---
 

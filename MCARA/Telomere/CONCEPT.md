@@ -181,13 +181,13 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 ---
 
-## Связь с ABL-2 parodox (CDATA) — научный контекст
+## Связь с ABL-2 parodox (CEDAR) — научный контекст
 
-Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
+Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CEDAR/CONCEPT.md Appendix B](../CEDAR/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCARA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CEDAR-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCARA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
-Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
+Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CEDAR) и пару (этот counter, другие active counters).
 
 Принцип по умолчанию (§CORRECTIONS 1.3): `γ_i = 0` пока post-hoc статистика не отвергнет независимость на данных.
 
@@ -256,7 +256,7 @@ The following potential partners are identified to execute the experimental vali
 **Lead PI:** [Имя организации/лаборатории] — координация, биоинформатика, симуляции MCARA.
 **Partner 1:** [Название биологической лаборатории] — in vitro эксперименты на фибробластах (Q-FISH, TRAP, TIF).
 **Partner 2:** [Название клиники/биобанка] — продольные образцы тканей человека для in vivo валидации.
-**Potential funders:** ERC AdG (WP1–3), EIC Pathfinder Challenges (WP4, теломеры+CDATA), NIH R01 (опционально).
+**Potential funders:** ERC AdG (WP1–3), EIC Pathfinder Challenges (WP4, теломеры+CEDAR), NIH R01 (опционально).
 
 Roles:
 - Telomere kinetics measurement: Partner 1.
@@ -411,9 +411,9 @@ The following key claims are supported by verified, independent sources:
 - **Blinding:** All telomere length measurements performed by technician blinded to condition assignment.
 
 
-## Адрес peer-review concerns (общие для CDATA experiments, Q3 2026)
+## Адрес peer-review concerns (общие для CEDAR experiments, Q3 2026)
 
-CDATA experiments share common blocker patterns. План addressing:
+CEDAR experiments share common blocker patterns. План addressing:
 
 ### 1. Budget — detailed line items required
 
@@ -481,7 +481,7 @@ PubMed esummary. Fabricated PMIDs IMMEDIATELY removed или replaced
 - Honest statement: "This is a conceptual/template proposal. Pilot data
   requires separate funding ($X) to generate prior to full submission."
 - Cite literature-derived parameter estimates с confidence intervals
-- Cross-reference parent papers (e.g., MCARA, parent CDATA literature)
+- Cross-reference parent papers (e.g., MCARA, parent CEDAR literature)
 
 ### 7. Risk matrix — honest mitigations
 
@@ -527,7 +527,7 @@ Before data collection:
 | **Address** | 42 Rustaveli, Resort Abastumani, Georgia |
 | **Email** | jaba@longevity.ge |
 | **Background** | MD Tbilisi State Medical University; clinical residency Institute of Psychiatry Tbilisi |
-| **Theoretical contribution** | Originator of CDATA (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
+| **Theoretical contribution** | Originator of CEDAR (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
 
 **Note:** This PI applies к ALL projects under GLA/LC umbrella unless explicitly overridden. Replace any `[TODO: PI name]`, `Lead PI: TBD`, `Principal Investigator: TBD` placeholders с этим блоком.
 

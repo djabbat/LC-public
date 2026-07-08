@@ -1,4 +1,4 @@
-//! MCAOA core — multi-counter architecture of organismal aging.
+//! MCARA core — multi-counter architecture of organismal aging.
 //!
 //! Implements Axioms M1–M4 from CONCEPT.md:
 //!   M1 — parallel counters
@@ -14,7 +14,7 @@ use thiserror::Error;
 
 pub const N_COUNTERS: usize = 5;
 
-/// MCAOA counter numbering aligned with user decision 2026-05-07:
+/// MCARA counter numbering aligned with user decision 2026-05-07:
 ///   #1 = Centriolar (CDATA), #2 = Telomere, #3 = Mitochondrial,
 ///   #4 = Epigenetic, #5 = Proteostasis.
 ///
@@ -22,11 +22,11 @@ pub const N_COUNTERS: usize = 5;
 /// (`c as usize`); the user-facing number is `as u8 + 1`.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum Counter {
-    Centriolar = 0,    // MCAOA #1 — CDATA
-    Telomere = 1,      // MCAOA #2
-    Mitochondrial = 2, // MCAOA #3 — MitoROS
-    Epigenetic = 3,    // MCAOA #4 — EpigeneticDrift
-    Proteostasis = 4,  // MCAOA #5
+    Centriolar = 0,    // MCARA #1 — CDATA
+    Telomere = 1,      // MCARA #2
+    Mitochondrial = 2, // MCARA #3 — MitoROS
+    Epigenetic = 3,    // MCARA #4 — EpigeneticDrift
+    Proteostasis = 4,  // MCARA #5
 }
 
 impl Counter {

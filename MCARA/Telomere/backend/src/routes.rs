@@ -31,7 +31,7 @@ pub async fn health() -> impl IntoResponse {
     })))
 }
 
-// Counter registry endpoints (MCAOA)
+// Counter registry endpoints (MCARA)
 pub async fn list_counters() -> AppResult<Json<Vec<CounterRegistry>>> {
     let counters = vec![
         CounterRegistry {
@@ -201,7 +201,7 @@ pub async fn get_subject_parameters(
     Ok(Json(parameters))
 }
 
-// Tissue load computation (MCAOA)
+// Tissue load computation (MCARA)
 pub async fn compute_tissue_load(
     State(db): State<Database>,
     Json(request): Json<TissueLoadRequest>,
@@ -271,7 +271,7 @@ fn compute_d2(measurement: &TelomereMeasurement, parameters: &TelomereParameters
 }
 
 fn get_tissue_weight(tissue_type: &str) -> f64 {
-    // Default tissue weights based on MCAOA framework
+    // Default tissue weights based on MCARA framework
     // These should be calibrated per tissue type
     match tissue_type.to_lowercase().as_str() {
         "blood" | "leukocyte" => 0.8,

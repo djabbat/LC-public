@@ -1,6 +1,6 @@
-//! Tissue-specific parameter panel for MCAOA Counter #5.
+//! Tissue-specific parameter panel for MCARA Counter #5.
 //!
-//! These are the **a priori** tissue weights (MCAOA Axiom M3).  They must
+//! These are the **a priori** tissue weights (MCARA Axiom M3).  They must
 //! be fixed before any fitting procedure.  Any post-hoc adjustment is a
 //! model correction, not a model prediction.
 
@@ -30,7 +30,7 @@ impl Tissue {
     }
 
     /// a-priori weight w_5(tissue) for this counter.
-    /// Sum across the 5 MCAOA counters for any one tissue should be ~1.0.
+    /// Sum across the 5 MCARA counters for any one tissue should be ~1.0.
     pub fn weight(self) -> f64 {
         match self {
             Tissue::HSC             => 0.2,

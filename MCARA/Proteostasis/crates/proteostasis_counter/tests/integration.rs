@@ -1,4 +1,4 @@
-//! Integration tests for MCAOA Counter #5.
+//! Integration tests for MCARA Counter #5.
 
 use proteostasis_counter::{compute_damage, CounterParams, divisions_to_critical};
 use proteostasis_counter::tissue::Tissue;

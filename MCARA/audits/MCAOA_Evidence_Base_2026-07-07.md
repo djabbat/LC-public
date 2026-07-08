@@ -5,12 +5,12 @@
 
 ## 1. CORE REFERENCES (Все верифицированы через PMID)
 
-### PMID 36583780 ✅ — CDATA Theory
+### PMID 36583780 ✅ — CEDAR Theory
 **Tkemaladze J.** (2023) «Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?» *Mol Biol Rep*, 50(3):2751-2761. DOI: 10.1007/s11033-022-08203-5
 
 > **Ключевая цитата:** «Old centrioles are more subjected to destruction than other structures of a cell — which makes centrioles potentially the main structure of aging.»
 >
-> **Методология:** Review. Обоснование CDATA через асимметричное деление стволовых клеток и отсутствие репарации в центриолях.
+> **Методология:** Review. Обоснование CEDAR через асимметричное деление стволовых клеток и отсутствие репарации в центриолях.
 
 ---
 
@@ -26,7 +26,7 @@
 
 > **12 hallmarks:** genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, disabled macroautophagy, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, altered intercellular communication, chronic inflammation, dysbiosis.
 >
-> ⚠️ **Центросомы/центриоли НЕ упомянуты.** CDATA = пропущенный hallmark.
+> ⚠️ **Центросомы/центриоли НЕ упомянуты.** CEDAR = пропущенный hallmark.
 
 ---
 
@@ -105,7 +105,7 @@
 >
 > ⚠️ **Центросомы/центриоли НЕ упомянуты как отдельный механизм.** Несмотря на Yamashita (2007) и Barandun (2025), asymmetric centrosome inheritance не вошёл в hallmarks.
 >
-> **Стратегия:** Позиционировать CDATA как «the missing sixth hallmark of stem cell aging» → commentary в Cell Stem Cell.
+> **Стратегия:** Позиционировать CEDAR как «the missing sixth hallmark of stem cell aging» → commentary в Cell Stem Cell.
 
 ---
 
@@ -143,7 +143,7 @@
 | Centriole polyE accumulation with age | **B** (известно для тубулина, экстраполяция на центриоль) | Janke/Magiera reviews |
 | Senescence ≠ telomere length | **A** (single-cell) | Passanisi 2026 |
 | Центросом не признан hallmark | **A** (обзорная статья) | López-Otín 2023, Rando 2025 |
-| CDATA theory | **C** (гипотеза, не тестирована experimental) | Tkemaladze 2023 |
+| CEDAR theory | **C** (гипотеза, не тестирована experimental) | Tkemaladze 2023 |
 | C1 rate-limiting при hTERT + гипоксии | **D** (экстраполяция, ключевая гипотеза проекта) | — |
 
 ---
@@ -163,7 +163,7 @@
 1. **Для Вагнера (C2):** Kabacik 2018 + Matsuyama 2019 прямо показывают, что его часы будут тикать в условиях MCARA. Это сильный аргумент.
 2. **Для Gönczy (C5):** Yamashita 2007 — классика centrosome inheritance в модельном организме. Barandun 2025 — млекопитающие.
 3. **Для Magiera (C4):** Требуется tubulin code expertise для polyE measurements.
-4. **Для Geiger (C5/HSC):** UBE2G1 (PMID 41641641) — его собственная работа, coupling proteostasis и aging.
+4. **Для Geiger (👨‍⚖️ Судья гонки)):** UBE2G1 (PMID 41641641) — его собственная работа, coupling proteostasis и aging.
 5. **Общий аргумент:** López-Otín (2023) и Rando (2025) пропустили центросому как hallmark → MCARA закрывает этот пробел.
 
 ---

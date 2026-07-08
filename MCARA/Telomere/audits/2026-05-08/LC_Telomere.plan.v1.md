@@ -45,10 +45,10 @@
 - В LiveView `DashboardLive` загрузить данные через этот клиент и отобразить.  
 Затронутые файлы: `frontend/lib/telomere_frontend/telomere_client.ex` (новый), `frontend/lib/telomere_frontend_web/live/dashboard_live.ex`.
 
-**P0.6 – Разрешить конфликт нумерации Counter #2 с CDATA**  
+**P0.6 – Разрешить конфликт нумерации Counter #2 с CEDAR**  
 Трудоёмкость: **S**  
 Риск: Блокирует интеграцию в MCARA.  
-- Согласовать с user/командой: либо переименовать Telomere в `#2a` или другой номер, либо изменить CDATA.  
+- Согласовать с user/командой: либо переименовать Telomere в `#2a` или другой номер, либо изменить CEDAR.  
 - Обновить `CLAUDE.md` и `CONCEPT.md` после решения.  
 Затронутые файлы: `CLAUDE.md`, `CONCEPT.md`, `backend/src/routes.rs` (список counters).
 

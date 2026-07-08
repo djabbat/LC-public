@@ -1,6 +1,6 @@
-//! MCAOA Counter #3: Mitochondrial ROS / mtDNA
+//! MCARA Counter #3: Mitochondrial ROS / mtDNA
 //!
-//! Kinetic equation (MCAOA-compliant, dimensionless):
+//! Kinetic equation (MCARA-compliant, dimensionless):
 //!   D_3(n, t) = D_30 + α_3·(n / n_3*) + β_3·(t / τ_3) + γ_3·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

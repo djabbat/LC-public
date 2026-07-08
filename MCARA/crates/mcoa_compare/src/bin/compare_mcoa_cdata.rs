@@ -1,8 +1,8 @@
-//! mcoa-compare-cdata — MANDATORY MCAOA vs CDATA comparison harness.
+//! mcoa-compare-cdata — MANDATORY MCARA vs CDATA comparison harness.
 //!
 //! Rust port of `scripts/compare_mcoa_cdata.py`.
 //!
-//! Per project rule (`feedback_mcoa_cdata_comparison`): every MCAOA simulation run
+//! Per project rule (`feedback_mcoa_cdata_comparison`): every MCARA simulation run
 //! MUST be paired with an analogous CDATA run and a Δ report filed to
 //! `docs/comparisons/YYYY-MM-DD_label.md`.
 
@@ -11,7 +11,7 @@ use mcoa_compare::{compare_mcoa_cdata, CompareArgs};
 use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
-#[command(name = "mcoa-compare-cdata", about = "MCAOA vs CDATA comparison harness")]
+#[command(name = "mcoa-compare-cdata", about = "MCARA vs CDATA comparison harness")]
 struct Cli {
     #[arg(long)]
     mcoa_csv: PathBuf,

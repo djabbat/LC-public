@@ -1,4 +1,4 @@
-//! mcoa_compare — MCAOA vs CDATA comparison and full pairwise comparison harness.
+//! mcoa_compare — MCARA vs CDATA comparison and full pairwise comparison harness.
 //!
 //! Rust port of `scripts/compare_mcoa_cdata.py` and `scripts/compare_all.py`.
 //! Plot generation is OUT OF SCOPE for the Rust port — comparison reports are
@@ -69,7 +69,7 @@ pub struct CompareArgs<'a> {
     pub out_dir: &'a Path,
 }
 
-/// MCAOA-vs-CDATA comparison. Returns path to written markdown report.
+/// MCARA-vs-CDATA comparison. Returns path to written markdown report.
 pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     let mcoa = read_csv(args.mcoa_csv)?;
     let cdata = read_csv(args.cdata_csv)?;
@@ -79,7 +79,7 @@ pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     } else if mcoa.headers.len() > 1 {
         &mcoa.headers[1]
     } else {
-        return Err(anyhow!("MCAOA CSV has no usable x-axis column"));
+        return Err(anyhow!("MCARA CSV has no usable x-axis column"));
     };
 
     let cdata_col = if cdata.columns.contains_key("damage") {
@@ -97,7 +97,7 @@ pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     };
 
     let mcoa_data = mcoa.columns.get(mcoa_col)
-        .ok_or_else(|| anyhow!("MCAOA missing column {}", mcoa_col))?;
+        .ok_or_else(|| anyhow!("MCARA missing column {}", mcoa_col))?;
     let cdata_data = cdata.columns.get(&cdata_col)
         .ok_or_else(|| anyhow!("CDATA missing column {}", cdata_col))?;
 
@@ -108,12 +108,12 @@ pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     let report_path = args.out_dir.join(format!("{}_{}.md", date, args.label));
 
     let mut s = String::new();
-    s.push_str(&format!("# MCAOA vs CDATA comparison — {}\n\n", args.label));
+    s.push_str(&format!("# MCARA vs CDATA comparison — {}\n\n", args.label));
     s.push_str(&format!("**Date:** {}\n", date));
     s.push_str(&format!("**Tissue:** {}\n", args.tissue));
-    s.push_str(&format!("**MCAOA input:** `{}`\n", args.mcoa_csv.display()));
+    s.push_str(&format!("**MCARA input:** `{}`\n", args.mcoa_csv.display()));
     s.push_str(&format!("**CDATA input:** `{}`\n", args.cdata_csv.display()));
-    s.push_str(&format!("**MCAOA column compared:** `{}`\n", mcoa_col));
+    s.push_str(&format!("**MCARA column compared:** `{}`\n", mcoa_col));
     s.push_str(&format!("**CDATA column compared:** `{}`\n\n", cdata_col));
     s.push_str("## Summary\n\n");
     s.push_str(&format!("- Samples compared: {}\n", stats.n));
@@ -123,7 +123,7 @@ pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     s.push_str("## Interpretation — to be filled in by author\n\n");
     s.push_str("Classify the divergence:\n\n");
     s.push_str("- [ ] (a) missing counter in CDATA's single-counter view\n");
-    s.push_str("- [ ] (b) artefact of MCAOA dimensionless normalisation\n");
+    s.push_str("- [ ] (b) artefact of MCARA dimensionless normalisation\n");
     s.push_str("- [ ] (c) real biological signal\n");
     s.push_str("- [ ] (d) bug in one of the simulators\n\n");
     s.push_str("Write at least three sentences of interpretation. Cite PARAMETERS.md entries that ");

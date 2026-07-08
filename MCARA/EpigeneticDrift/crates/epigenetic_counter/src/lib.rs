@@ -1,6 +1,6 @@
-//! MCAOA Counter #4: Epigenetic drift
+//! MCARA Counter #4: Epigenetic drift
 //!
-//! Kinetic equation (MCAOA-compliant, dimensionless):
+//! Kinetic equation (MCARA-compliant, dimensionless):
 //!   D_4(n, t) = D_40 + α_4·(n / n_4*) + β_4·(t / τ_4) + γ_4·I(others)
 //!
 //! All parameters are dimensionless; input n is integer division count,

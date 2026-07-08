@@ -1,4 +1,4 @@
-# MCARA Simulator — Multi-Counter Architecture of Organismal Aging
+# MCARA Simulator — Multi-Counter Architecture of Replicative Aging
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-1.85+-blue.svg)](https://www.rust-lang.org)
@@ -16,7 +16,7 @@ MCARA (Multi-Counter Architecture of Organismal Aging) is a formal, falsifiable 
 
 | # | Counter | Mechanism | Project |
 |---|---------|-----------|---------|
-| 1 | **Centriolar** (CDATA) | Polyglutamylation damage on maternal centrioles of stem cells | `LC/MCARA/CDATA/` |
+| 1 | **Centriolar** (CEDAR) | Polyglutamylation damage on maternal centrioles of stem cells | `LC/MCARA/CEDAR/` |
 | 2 | **Telomeric** | Telomere shortening at each division (Hayflick limit) | `LC/MCARA/Telomere/` |
 | 3 | **Mitochondrial** | ROS accumulation, mtDNA damage, respiratory decline | `LC/MCARA/MitoROS/` |
 | 4 | **Epigenetic** | DNA methylation drift, Cdc42 polarity loss | `LC/MCARA/EpigeneticDrift/` |
@@ -129,8 +129,8 @@ LC/MCARA/
 │   ├── mcoa_cli/           # CLI binary (mcoa-sim)
 │   ├── mcoa_api/           # HTTP API server (axum)
 │   ├── mcoa_tests/         # Integration tests
-│   └── mcoa_compare/       # Comparison with CDATA runs
-├── CDATA/                  # Centriolar Damage Accumulation (Counter #1)
+│   └── mcoa_compare/       # Comparison with CEDAR runs
+├── CEDAR/                  # Centriolar Damage Accumulation (Counter #1)
 ├── Telomere/               # Telomere counter (#2)
 ├── MitoROS/                # Mitochondrial counter (#3)
 ├── EpigeneticDrift/        # Epigenetic counter (#4)

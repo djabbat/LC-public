@@ -1,7 +1,7 @@
-//! MCAOA falsifiability test harnesses.
+//! MCARA falsifiability test harnesses.
 //!
 //! Implements simulated versions of §6.1–6.5 of the Nature Aging Perspective. Each harness
-//! generates synthetic data under the MCAOA prior and under a competing null (e.g. single-counter),
+//! generates synthetic data under the MCARA prior and under a competing null (e.g. single-counter),
 //! so that a statistical pipeline can be calibrated against expected effect sizes before real
 //! data are available.
 

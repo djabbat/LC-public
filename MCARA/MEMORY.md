@@ -4,6 +4,59 @@
 
 ---
 
+## 2026-07-08: Реорганизация — ARGUS-LP, Aubrey, CEDAR → MCARA
+
+**Решение:** Переместить научные и инструментальные подпроекты из Marketing/ в LC/MCARA/.
+
+| Перемещение | Откуда | Куда |
+|-------------|--------|------|
+| ARGUS-LP | Marketing/ARGUS-LP/ | **MCARA/ARGUS-LP/** |
+| Aubrey | Marketing/Aubrey/ | **MCARA/Aubrey/** |
+| CEDAR (Marketing) | Marketing/CEDAR/ | **MCARA/CEDAR/_merged_marketing/** |
+
+**Замена MCARA → MCARA:** Выполнена во всех файлах ARGUS-LP, Aubrey, Marketing/CEDAR.
+
+**В Marketing/_archive/ перемещены:** KorkotiLine, BACCHUS, MCARA.
+
+**Core-файлы MCARA синтезированы:** _pi.md, MAP.md, STATE.md, TODO.md обновлены с учётом новых подпроектов.
+
+---
+
+## Rejection #29 — 2026-07-08 — bioRxiv (Gatekeeper)
+
+**Журнал:** bioRxiv
+**ID:** `BIORXIV/2026/737107`
+**Дней до решения:** 0 (скрининг)
+**Тип решения:** Desk reject — административный
+
+### Причина (что сказал редактор)
+> «bioRxiv requires authors to have an organizational affiliation. It is necessary for submissions to be associated with an organization that provides oversight of research activities so that it can adjudicate any ethical issues/disputes that arise.»
+
+### Что мы упустили
+- bioRxiv требует institutional affiliation с oversight capability. GLA (регистр. №404506520) — НКО, не университет/институт. Для bioRxiv этого недостаточно.
+- Не проверили требования bioRxiv к affiliation перед подачей.
+- Не использовали соавтора с университетской affiliation.
+
+### Что изменить перед следующей подачей
+- [ ] Выбрать препринт-сервер без строгих требований к affiliation: **Zenodo** (бесплатно, DOI, без affiliation check), OSF Preprints, или Research Square
+- [ ] Либо добавить соавтора с университетской affiliation (Вагнер/RWTH, Гейгер/Ulm, и др.)
+
+### Следующий препринт-сервер
+**Zenodo** — бесплатно, DOI, нет требований к institutional affiliation.
+**Почему:** Самый простой путь. bioRxiv — не опция без университетской affiliation.
+
+---
+
+## 2026-07-08: Поиск литературы — новые концептуальные подтверждения
+
+**mei-P26 (Genetics, 2026, iyag163):** Terry et al. — гипоморфная мутация mei-P26 в *Drosophila* нарушает координацию митоз→мейоз. Клетки входят в мейоз с митотическими сигналами → кроссинговеры идут неправильно. Концептуальный аналог: один ген-таймер → каскад downstream дефектов, подобно центриоли как таймеру клеточного состояния в MCARA.
+
+**Центриоли морской звезды (PMID 27002173):** Разные механизмы для mother vs daughter центриолей при мейотической элиминации. Подтверждает тезис MCARA о полном сбросе центриолей в мейозе.
+
+**Рецензии (8 раундов):** Статья прошла 8 раундов сверхстрогого peer review. Все 45 ссылок верифицированы через PubMed API. Ключевые изменения: деглутамилазы CCP1-6, sinc-MT/KIFC3, Lindhout, Ma et al. (ARL13B-ARL3), Bobinnec (1998), Bradford Hill скорректирован (5/9).
+
+---
+
 ## 2026-07-07 (вечер): v4.4 — Центриоль = органелла необратимой дифференцировки
 
 **Фундаментальная коррекция:** Счётчик — не polyE, а **возраст центриоли.** polyE — циферблат (readout). Центриоль — органелла, с которой ассоциирована необратимая дифференцировка. В асимметричных делениях старая материнская центриоль наследуется стволовой клеткой (Yamashita 2007, Barandun 2025).
@@ -18,7 +71,7 @@
 **Сверхстрогое peer review:** `audits/MCARA_Peer_Review_2026-07-07.md`. 6/6 PMID верифицированы. Гипотеза: 5/10 по доказательной базе. Для гранта достаточно.
 
 **Верификация (11/11 PMID подтверждены через PubMed):**
-- PMID 36583780 ✅ (Tkemaladze 2023, CDATA)
+- PMID 36583780 ✅ (Tkemaladze 2023, CEDAR)
 - PMID 17255513 ✅ (Yamashita 2007, Science — mother centrosome)
 - PMID 36599349 ✅ (López-Otín 2023, Cell — centrosome НЕ в hallmarks)
 - PMID 24138928 ✅ (Horvath 2013, DNAm clock)
@@ -49,7 +102,7 @@
 
 **Бюджет:** ~€3.5M, 36 месяцев, реальные EU-цены.
 
-**Консорциум:** 8 партнёров, 6 стран. GLA (C1) + Wagner DE ✅ (C2) + Suomalainen FI (C3) + Magiera FR (C4) + Gönczy CH (C5) + Geiger DE (C5) + Jacquemet FI (ENG) + Senescence TBD.
+**Консорциум:** 8 партнёров, 6 стран. GLA (C1) + Wagner DE ✅ (C2) + Suomalainen FI (C3) + Magiera FR (C4) + Gönczy CH 🔴 отказал + Geiger DE (👨‍⚖️ судья) + Jacquemet FI (ENG) + Senescence TBD.
 
 **Ключевой аргумент:** C1 — rate-limiting counter. В условиях hTERT + гипоксии теломеры (C5) защищены, митохондрии (C3) защищены, эпигенетика (C2) частично — а центриоль (C1) не защищена ничем. polyE накапливается. Лимит Хейфлика сохраняется.
 
@@ -132,7 +185,7 @@
 
 **Верификация:** 39/39 ссылок (29 PMID + 10 DOI) подтверждены через PubMed E-utilities + Crossref API. 0 фальшивых.
 
-**Hallmarks of stem cell aging:** Rando/Brunet/Goodell (Cell Stem Cell 2025, PMID 40562035) — 5 hallmark'ов. Центросомы НЕ упомянуты. CDATA не процитирована. Решение: позиционировать CDATA как «the missing sixth hallmark» → commentary в Cell Stem Cell.
+**Hallmarks of stem cell aging:** Rando/Brunet/Goodell (Cell Stem Cell 2025, PMID 40562035) — 5 hallmark'ов. Центросомы НЕ упомянуты. CEDAR не процитирована. Решение: позиционировать CEDAR как «the missing sixth hallmark» → commentary в Cell Stem Cell.
 
 **Ключевые находки:**
 - CD8+ T cell mother centrosome → fate (Barandun/Oxenius, Cell Reports 2025) — прямое доказательство в млекопитающих. C2: 9/10.
@@ -145,6 +198,6 @@
 
 **Консорциум (Волна 1):** Письма отправлены Yamashita (MIT), Di Stefano (Baylor), Oxenius (ETH), Meraldi (UNIGE). Ждём ответов.
 
-**Оценка CDATA:** 6.7 → 7.3 → **7.8/10.**
+**Оценка CEDAR:** 6.7 → 7.3 → **7.8/10.**
 
 **Файлы:** Переписаны CONCEPT.md (v3.4), STATE.md, PARAMETERS.md, EVIDENCE.md (все 3 проекта). Созданы: CONSORTIUM_ANALYSIS, META_ANALYSIS, feed_analysis, CELTRA-MAP Concept Note + 4 письма.

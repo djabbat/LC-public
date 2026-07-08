@@ -15,7 +15,7 @@
 
 **Ключевые принципы:**
 - **Старение — первопричина заболеваний.** Не «возраст-ассоциированные», а «возраст-обусловленные» (aging-driven).
-- **Три уровня:** Центриоль (энтропия) → MCAOA-счётчики → Тканевые Ze-конфликты.
+- **Три уровня:** Центриоль (энтропия) → MCARA-счётчики → Тканевые Ze-конфликты.
 - **Самообучение:** Симулятор формулирует гипотезу → ARGUS-LP тестирует на физическом симуляторе → результат возвращается в модель → модель уточняется.
 - **Универсальность видов:** Параметризуемая модель — от одноклеточных до млекопитающих.
 - **Открытость:** Apache 2.0, открытые данные, открытое железо (ARGUS-LP).
@@ -50,7 +50,7 @@ S_centriole(t) = S₀ + ∫₀ᵗ η(τ) dτ
 
 ---
 
-### Уровень #2: 5 ТРЕКОВ MCAOA (Counters #2–#5)
+### Уровень #2: 5 ТРЕКОВ MCARA (Counters #2–#5)
 
 > **Примечание:** Counter #6 (piRNA) исключён из v1.0. Оставлен как слот расширения.
 
@@ -263,7 +263,7 @@ Organismal_Aging/                     ← в составе LC/
 │   │   │   ├── division.rs            ← Асимметричное/симметричное деление
 │   │   │   └── polyglutamylation.rs   ← polyGlu накопление (TTLL/CCP)
 │   │   │
-│   │   ├── counters/                  ← Уровень #2: 5 треков MCAOA
+│   │   ├── counters/                  ← Уровень #2: 5 треков MCARA
 │   │   │   ├── mod.rs                 ← L_tissue агрегатор
 │   │   │   ├── telomere.rs            ← #2: Теломеры
 │   │   │   ├── mitochondrial.rs       ← #3: Митохондрии/АФК
@@ -413,7 +413,7 @@ struct TissueConfig {
 |---|---|---|
 | Ядро | Rust | Производительность, безопасность, WASM |
 | CLI | Rust (clap) | Единая экосистема |
-| REST API | Rust (actix-web) | Совместимость с CDATA/MCAOA |
+| REST API | Rust (actix-web) | Совместимость с CEDAR/MCARA |
 | Веб-интерфейс | Phoenix LiveView | Совместимость с LC |
 | Python | PyO3 | Научная экосистема (scipy, numpy) |
 | Байесовское обновление | PyMC / Stan (через Python) | MCMC, вариационный вывод |
@@ -442,8 +442,8 @@ struct TissueConfig {
 | # | Статья | Журнал | Основа |
 |---|---|---|---|
 | 1 | *Organismal Aging: A Self-Learning 4D Integrative Simulator of Organismal Development and Aging* | *Nature Computational Science* | Organismal Aging |
-| 2 | *Centriole as the Primary Entropy Accumulator: From Zygote to Death* | *Aging Cell* | CDATA + ARGUS |
-| 3 | *MCAOA in silico: Simulation of Five Aging Tracks Across Eight Human Tissues* | *Cell Systems* | MCAOA Phase III |
+| 2 | *Centriole as the Primary Entropy Accumulator: From Zygote to Death* | *Aging Cell* | CEDAR + ARGUS |
+| 3 | *MCARA in silico: Simulation of Five Aging Tracks Across Eight Human Tissues* | *Cell Systems* | MCARA Phase III |
 | 4 | *Ze-Conflict: Tissue-Tissue Aging Rate Mismatch as a Disease Driver* | *PNAS* | Ze-конфликты |
 | 5 | *ARGUS-LP: A Self-Learning Robot for Physical Validation of Aging Hypotheses* | *Science Robotics* | ARGUS + самообучение |
 
@@ -453,8 +453,8 @@ struct TissueConfig {
 
 ```
 Organismal Aging (LC/)
-├── CDATA/cell_dt → Уровень #1 (центриоль)
-├── MCAOA/crates → Уровень #2 (5 счётчиков)
+├── CEDAR/cell_dt → Уровень #1 (центриоль)
+├── MCARA/crates → Уровень #2 (5 счётчиков)
 ├── Ze/Ze-Hierarchy → Уровень #3 (Z_conflict)
 ├── BioSense → поток биомаркеров для калибровки
 ├── FCLC → конфиденциальные данные пациентов
