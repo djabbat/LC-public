@@ -35,5 +35,5 @@ cd ~/Desktop/CEDAR-sim && python3 -m pytest tests/ -v
 cd ~/Desktop/CEDAR-sim && python3 -m pip install -e ".[dev]"
 
 # Запуск симуляции
-cd ~/Desktop/CEDAR-sim && python3 -c "from cdata_sim import CDATAModel; m = CDATAModel(seed=42); trees = m.simulate_tree(max_generations=60, n_cells=200); print(m.compute_statistics(trees))"
+cd ~/Desktop/CEDAR-sim && python3 -c "from cedar_sim import CEDARModel; m = CEDARModel(seed=42); trees = m.simulate_tree(max_generations=60, n_cells=200); print(m.compute_statistics(trees))"
 ```
