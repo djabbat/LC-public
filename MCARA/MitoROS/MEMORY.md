@@ -22,3 +22,8 @@
 ### Project Objectives (P0 – Critical)
 - **Goal 1:** Deliver a stable real-time kernel after previous milestone
   - Task 1.1: Implement task scheduler with O(1) context switching (P0, due after
+## 2026-07-09 — Глубокий аудит MCARA
+- **Находка:** 4 митохондриальные протеазы (ClpP, YME1L, LONP1, PARL) → cell fate
+- **Находка:** MLKL → non-lethal mitochondrial damage → HSC aging (Yamada 2026, Nat Commun)
+- **Находка:** UPR^mt → HSC quiescence exit (Mohrin 2018) и NSC aging (Wang 2023)
+- **Решение:** Добавлены находки в EVIDENCE.md §v4

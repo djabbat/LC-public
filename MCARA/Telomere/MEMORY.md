@@ -110,3 +110,6 @@ Telomere is a structured project management and long-term memory system designed
 - Risk register: Maintained in separate document; top risks include dependency chain delays and tool integration complexity.
 - Retrospectives: Held after each milestone; action items added to task list.
 - This memory file is version-controlled and updated at least once per week.
+## 2026-07-09 — Глубокий аудит MCARA
+- **Статус:** Core-файлы подтверждены. Пассивный счётчик — активных обновлений не требуется.
+- **Ссылка:** Passanisi & Spencer (2026) — senescence NOT predicted by telomere length

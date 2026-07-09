@@ -26,10 +26,10 @@ pip install -e .
 ## Quick Start
 
 ```python
-from cdata_sim import CDATAModel, ABCSMC, SobolGSA
+from cedar_sim import CEDARModel, ABCSMC, SobolGSA
 
 # Simulate a lineage tree
-model = CDATAModel(seed=42)
+model = CEDARModel(seed=42)
 trees = model.simulate_tree(max_generations=40, n_cells=100)
 stats = model.compute_statistics(trees)
 print(f"Hayflick median: {stats['hayflick_median']:.1f} generations")

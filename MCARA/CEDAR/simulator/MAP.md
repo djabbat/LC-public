@@ -1,7 +1,7 @@
 # MAP.md — CEDAR-v2 Simulator
 
 ```
-CDATA_simulator/
+CEDAR_simulator/
 ├── _pi.md                # Правила для pi
 ├── CONCEPT.md            # Концепт
 ├── TODO.md               # Задачи
@@ -18,7 +18,7 @@ CDATA_simulator/
 ├── .gitignore
 ├── cdata_sim/            # Исходный код
 │   ├── __init__.py
-│   ├── model.py          # CDATAModel
+│   ├── model.py          # CEDARModel
 │   ├── abc_smc.py        # ABC-SMC калибровка
 │   ├── gsa.py            # Sobol GSA
 │   └── utils.py          # Вспомогательные функции
