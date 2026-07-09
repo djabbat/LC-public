@@ -1,4 +1,4 @@
-# CEDAR — Грантовый подпроект
+# CEDAR — Centriolar Damage Accumulation Theory of Aging
 
 Centriolar Damage Accumulation Theory of Aging.
 
