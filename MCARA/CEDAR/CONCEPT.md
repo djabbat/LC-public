@@ -30,6 +30,7 @@ CEDAR — теория, согласно которой **центриоли н�
 - **M9 — Ооцитное/мейотическое старение** → анеуплоидия (Delimitreva 2025)
 
 > ⚠️ **Peer Review 2026-07-05:** v5.5 содержала 2 сфабрикованных PMID. Исправлено в v5.6. Все 15 references верифицированы через PubMed. Общая оценка теории: **6.7/10.** Сильные стороны: C1/C2, M1-M2, фальсифицируемость. Слабые: M3/CAASM гипотетичен. См. `docs/PEER_REVIEW_2026-07-05.md`.
+> 🆕 **Update 2026-07-09:** Мета-анализ 4 статей + 12 дополнительных (см. `EVIDENCE.md` §10). Общая оценка: **7.3/10 → 7.8/10.** Усилены Counter #3 (ClpP, YME1L, MLKL) и #5 (митохондриальные протеазы).
 
 ## 📚 Новая литература (2026-07-05) + Мета-анализ (2026-07-06)
 
@@ -38,6 +39,16 @@ CEDAR — теория, согласно которой **центриоли н�
 > **🔥 Критическая находка 3:** **Barandun N et al.** — *Mother centrosome → CD8+ T cell memory* — Cell Reports (2025) — DOI: `10.1016/j.celrep.2024.115127`
 > **🔥 Критическая находка 4:** **Passanisi S, Spencer SL** — *Senescence NOT predicted by telomere length* — iScience (2026) — DOI: `10.1016/j.isci.2026.114801`
 > **Мета-анализ:** `~/Desktop/PhD/docs/META_ANALYSIS_2026-07-06.md`
+
+### 🔥 Спермиогенез и митохондриальные протеазы (2026-07-09)
+
+> **Новый раздел:** `EVIDENCE.md` §10. 16 статей. Ключевые находки:
+> 1. **Feng et al. (2026)** — ClpP mitochondrial protease → meiosis. Гигантские митохондрии, ↓RAD51.
+> 2. **Yamada et al. (2026)** — MLKL → митохондрии → HSC aging (Nat Commun).
+> 3. **Khire et al. (2016)** — Центриоли ремоделируются при спермиогенезе (Curr Biol, PMID: 28094036).
+> 4. **Mao et al. (2026)** — Slmap → аксонема + митохондрии + Hid-Diap1 апоптоз.
+> 5. **Wani et al. (2022)** — YME1L mitochondrial protease → NSC self-renewal.
+> **Общая оценка: 7.3 → 7.8/10.** Counter #3: 8→8.5, Counter #5: 6.5→7.5, Counter #1: 7.5→8.0.
 
 ### 🔥 Ключевая находка: CD8+ T cell mother centrosome (Cell Reports 2025)
 

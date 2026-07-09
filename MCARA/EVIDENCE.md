@@ -66,14 +66,14 @@
 
 2. **ABL-2 paradox — RESOLVED 2026-04-26 via counter-factual Sobol analysis.**
  * **Previous evidence (NMC-2):** Individual S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224 indicated that the centriolar counter might be downstream/parallel.
- * **Counter-factual ablation analysis (v4.7, N=8192, executed 2026-04-26 via `scripts/cdata_ablation_sobol.py`):**
+ * **Counter-factual ablation analysis (v4.7, N=8192, executed 2026-04-26 via `scripts/cedar_ablation_sobol.py`):**
  - Centriolar parameter group (alpha, nu, beta, tau, pi): **S1_sum = 0.471**
  - Epigenetic parameter group (ep_rate, ep_stress_k): **S1_sum = 0.470**
  - At epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
  - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
  * **Resolution:** Individual epigenetic_rate dominance is explained by linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). At the group level, centriolar mechanics **dominate**.
- * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CEDAR/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
- * **Source:** `~/Desktop/LC/CEDAR/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
+ * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+ * **Source:** `~/Desktop/LC/MCARA/CEDAR/scripts/cedar_ablation_sobol.py` + ablation log 2026-04-26.
 
 3. **Weak experimental basis for the connection matrix Γ.**
  * **Evidence:** Most proposed connections between counters (e.g., `Γ_{cent, epigenetic}`) are based on indirect correlations or in vitro studies, rather than direct causal in vivo experiments.

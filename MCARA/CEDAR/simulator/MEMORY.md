@@ -3,7 +3,7 @@
 ## История решений
 
 ### 2026-06-27 — Аудит и создание core-файлов
-- **Решение:** Проведён глубокий аудит всех проектов. CDATA_simulator обнаружен без core-файлов.
+- **Решение:** Проведён глубокий аудит всех проектов. CEDAR_simulator обнаружен без core-файлов.
 - **Действие:** Созданы все 10 core-файлов (_pi.md, CONCEPT.md, TODO.md, PARAMETERS.md, MAP.md, STATE.md, MEMORY.md, DESIGN.md, THEORY.md, EVIDENCE.md).
 - **Контекст:** README.md и pyproject.toml уже существовали.
 
