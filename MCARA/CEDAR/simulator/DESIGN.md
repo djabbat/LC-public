@@ -4,7 +4,7 @@
 
 ```
 ┌─────────────────────────────────┐
-│         CDATAModel              │
+│         CEDARModel              │
 │  ┌──────────┐  ┌─────────────┐  │
 │  │ Centriole │  │  p53 cascade │  │
 │  │ dynamics  │  │  (Aurora A,  │  │
@@ -26,7 +26,7 @@
 
 ## Компоненты
 
-### `model.py` — CDATAModel
+### `model.py` — CEDARModel
 - `simulate_tree(max_generations, n_cells)` → lineage trees
 - `compute_statistics(trees)` → hayflick_median, senescence_rate, apoptosis_rate
 - 14 параметров (конфигурируемые)

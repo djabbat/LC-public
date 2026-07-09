@@ -34,3 +34,7 @@
 - **Decision:** Adopt Python-based simulation framework (PyRosetta, AlphaFold2 interface).
 - **Rationale:** Community support, existing infrastructure, and flexibility for custom extensions.
 - **Status:** Planned
+## 2026-07-09 — Глубокий аудит MCARA
+- **Находка:** ClpP, YME1L, LONP1, PARL — митохондриальные протеазы, критичные для cell fate
+- **Гипотеза:** Протеостатическая ось митохондрий — универсальный механизм cell fate control
+- **Решение:** Добавлены находки в EVIDENCE.md §v4

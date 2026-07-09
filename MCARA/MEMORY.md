@@ -201,3 +201,40 @@
 **Оценка CEDAR:** 6.7 → 7.3 → **7.8/10.**
 
 **Файлы:** Переписаны CONCEPT.md (v3.4), STATE.md, PARAMETERS.md, EVIDENCE.md (все 3 проекта). Созданы: CONSORTIUM_ANALYSIS, META_ANALYSIS, feed_analysis, CELTRA-MAP Concept Note + 4 письма.
+
+## 2026-07-09 — Глубокий аудит MCARA (pi)
+
+### Находки
+- **CDATA → CEDAR:** Проведено полное переименование в 12 активных файлах. _archive и _originals сохранены.
+- **4 статьи из фида Джабы:** Интегрированы в CEDAR/EVIDENCE.md §10.
+  - Feng et al. (2026) — ClpP mitochondrial protease → meiosis (🔴 критически важно)
+  - Mao et al. (2026) — Slmap → spermiogenesis defects (🟡 важно)
+  - Dominicci-Cotto & Jenny (2026) — syncytium → sperm (🟡 supporting)
+  - Zhou et al. (2026) — hnRNPs in spermatogenesis (🟠 косвенно)
+- **12 дополнительных статей** найдено через CrossRef/PubMed:
+  - 🔴 Yamada et al. (2026, Nat Commun) — MLKL → mitochondria → HSC aging
+  - 🔴 Wani et al. (2022, Cell Rep) — YME1L → NSC self-renewal
+  - 🔴 Khire et al. (2016, Curr Biol) — Centriole Remodeling during Spermiogenesis
+  - 🔴 Mohrin et al. (2018, Aging Cell) — UPR^mt → HSC quiescence exit
+  - 🔴 Wang et al. (2023, Cell Metab) — UPR^mt → NSC aging
+  - +7 дополнительных
+- **Мета-анализ:** 4 митохондриальные протеазы (ClpP, YME1L, LONP1, PARL) → cell fate. Гипотеза: протеостатическая ось митохондрий.
+
+### Решения
+- CDATA → CEDAR переименование во всех активных файлах
+- Новые данные добавлены в: CEDAR/EVIDENCE.md §10, MitoROS/EVIDENCE.md §v4, Proteostasis/EVIDENCE.md §v4
+- CONCEPT.md (CEDAR) обновлён: новые оценки Counter'ов
+- STATE.md обновлены: CEDAR (→2026-07-09), EpigeneticDrift (переписан, был 2025-03-15)
+- MEMORY.md добавлены записи в MitoROS, Proteostasis, EpigeneticDrift, Telomere
+
+### Проблемы (выявлены аудитом)
+- ⚠️ ARGUS-LP: отсутствуют EVIDENCE.md и THEORY.md (нужно создать)
+- ⚠️ EpigeneticDrift: STATE.md был устаревшим (2025-03-15) — исправлено
+- ⚠️ PARAMETERS.md: многие подпроекты не имеют заполненных параметров
+- ⚠️ MEMORY.md: EpigeneticDrift, MitoROS, Proteostasis, Telomere не обновлялись до этого аудита
+
+### Оценки (обновлённые)
+- Counter #3 (Митохондриальный): 8.0 → 8.5/10
+- Counter #5 (Протеостаз): 6.5 → 7.5/10
+- Counter #1 (Центриолярный): 7.5 → 8.0/10
+- Общая MCARA/CEDAR: 7.3 → 7.8/10

@@ -361,3 +361,158 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 | Cell lineage-resolved embryonic map | Nat Commun | 2025 | 10.1038/s41467-025-58878-0 |
 | Asymmetric histone inheritance in olfactory SC | Nat Commun | 2026 | 41872193 |
 | 3D Genome Architecture in Stem Cell Commitment | Adv Genet | 2025 | 41036476 |
+
+---
+
+## 10. SPERMIOGENESIS & MITOCHONDRIAL PROTEASES — New Evidence (2026-07-09)
+
+> **Дата анализа:** 2026-07-09 | **Источник:** 4 статьи из фида Джабы + широкий поиск по CrossRef/PubMed (20+ дополнительных статей)
+> **Метод:** Верификация DOI через CrossRef API, абстрактов через PubMed/CrossRef, поиск родственной литературы.
+
+---
+
+### 10.1. ЧЕТЫРЕ ОСНОВНЫЕ СТАТЬИ
+
+| # | Статья | Журнал | DOI | Тип | Ссылок |
+|---|--------|--------|-----|-----|--------|
+| 1 | **Zhou K, Ren K, An Y, Xia L, Cheng X** — The role of heterogeneous nuclear ribonucleoproteins in mammalian spermatogenesis: mechanisms and clinical implications | *Reproduction* (2026) | `10.1093/reprod/xaag066` | REVIEW | 66 |
+| 2 | **Mao B, Li SY, Dong WY, Wang YF** — *Slmap* Is Required For Spermiogenesis in *Drosophila melanogaster* | *Arch Insect Biochem Physiol* (2026) | `10.1002/arch.70186` | RESEARCH | 39 |
+| 3 | **Dominicci-Cotto C, Jenny A** — From syncytium to sperm: Coordinated membrane and cytoskeletal remodeling in *Drosophila* spermiogenesis | *Curr Top Dev Biol* (2026) 168:317–370 | `10.1016/bs.ctdb.2026.03.005` | REVIEW | 232 |
+| 4 | **Feng HW, Gao YL, Jiang BJ, Zubair M, Liu DT, …, Huo LJ** — ClpP Ensures Mitochondrial Integrity and Spermatocyte Meiotic Progression in Mice | *Andrology* (2026) | `10.1111/andr.70274` | RESEARCH | 17 |
+
+**Верификация:** Все 4 DOI подтверждены через CrossRef API + Semantic Scholar. Статья №3 имеет PubMed ID: 42097816. Все статьи реальны, 2026 года.
+
+---
+
+### 10.2. АНАЛИЗ ПО СТАТЬЯМ
+
+#### 🔴 Статья №4 — Feng et al. (2026): ClpP → митохондриальная целостность → мейоз
+
+**Суть:** ClpP (казеинолитическая пептидаза P) — митохондриальная протеаза контроля качества. Conditional KO (*Ddx4*-Cre^ERT2) в сперматоцитах мыши вызывает:
+- Уменьшение размера семенников, отсутствие зрелых сперматозоидов
+- **«Гигантские митохондрии»** в сперматоцитах *Clpp* cKO
+- Нормальный мейотический синапсис НО нарушенная рекомбинация: **↓RAD51 фокусов, аномальная локализация MLH1**
+- Элиминация пахитенных/диплотенных сперматоцитов и сперматид
+
+**Значение для MCARA/CEDAR:**
+
+| Аспект | Значение | Counter |
+|--------|----------|--------|
+| **ClpP = митохондриальный протеостаз** | Митохондриальная протеаза контролирует cell fate (мейотическую рекомбинацию). Прямая демонстрация: **митохондриальный протеостаз → судьба клетки.** | Counter #3 + #5 |
+| **«Гигантские митохондрии»** | Морфологический фенотип, идентичный стареющим митохондриям в HSC. ClpP deficiency → mitochondrial swelling. | Counter #3 |
+| **Ретроградный сигналинг** | ClpP (митохондриальный матрикс) → RAD51 фокусы (ядро). Митохондриальная протеаза контролирует ядерные процессы. | **НОВЫЙ МЕХАНИЗМ:** Counter #3 ↔ #1 |
+| **ClpP + ClpX = комплекс** | Guo et al. (2022, препринт; 2023, Hum Reprod): ClpP/ClpX deficiency → impaired mTORC1. mTORC1 = ключевой путь старения. | Counter #3 + #4 |
+
+**🔥 КЛЮЧЕВОЙ ВЫВОД:** ClpP — первый конкретный пример mitochondrial protease, чья потеря вызывает: (а) морфологические дефекты митохондрий, (б) нарушение ядерных процессов (рекомбинация), (в) клеточную гибель. **Прямая аналогия с MCARA Counter #3**: потеря митохондриального протеостаза → функциональный дефицит стволовых клеток.
+
+#### 🟡 Статья №2 — Mao et al. (2026): Slmap → спермиогенез → аксонема + митохондрии
+
+**Суть:** Slmap (sarcolemma-associated protein) knockdown в ранней зародышевой линии дрозофилы →:
+- Аберрантные паракристаллические отложения в обоих митохондриальных дериватах
+- Слияние митохондриальных дериватов и сперматид
+- **Потеря центральной пары микротрубочек аксонемы** ← ДЕФЕКТ ЦЕНТРИОЛЯРНОГО ПРОИСХОЖДЕНИЯ
+- Кластеризация аксонем
+- Upregulation генов individualization complex (*chic*, *ctp*, *WASp*, *Lasp*)
+- Транскриптомика: затронуты гены cuticle development, oxidative phosphorylation
+- **Апоптоз через Hid-Diap1 путь**
+
+**Значение для MCARA/CEDAR:**
+
+| Аспект | Значение | Связь |
+|--------|----------|------|
+| **Мембранный белок → митохондрии + центриоли** | Slmap влияет на митохондриальные дериваты И на аксонему. Межкомпартментная связь. | **Counter #1 ↔ #3 crosstalk** |
+| **Паракристаллические отложения** | Сбой протеостаза в митохондриях → структурная патология. | Counter #3 + #5 |
+| **Потеря центральной пары аксонемы** | Прямой центриолярный дефект. | **Counter #1** |
+| **Hid-Diap1 апоптоз** | Структурные дефекты → caspase-зависимая клеточная смерть. | CEDAR: D_c → apoptosis |
+
+#### 🟡 Статья №3 — Dominicci-Cotto & Jenny (2026): Синцитий → сперматозоиды
+
+**Суть:** Капитальный обзор (232 ссылки) мембранного и цитоскелетного ремоделирования при Drosophila спермиогенезе: от синцития до индивидуальных сперматозоидов. Coordinated membrane remodeling + actin dynamics + microtubule reorganization.
+
+**Значение для CEDAR:**
+- Синцитий → индивидуальные клетки — аналогия: СК в нише → дифференцированные клетки.
+- Актиновый цитоскелет (Arp2/3, WASp) — regulated by centrosomes through Cdc42/Rac1/RhoA.
+- **232 references** — золотая жила. Рекомендуется ручной просмотр при доступе к полному тексту.
+
+#### 🟠 Статья №1 — Zhou et al. (2026): hnRNPs в сперматогенезе
+
+**Суть:** Обзор роли hnRNPs (РНК-связывающих белков) в сперматогенезе млекопитающих. 66 ссылок.
+
+**Значение:** Умеренная косвенная поддержка Counter #4 (эпигенетический/РНК-метаболизм).
+
+---
+
+### 10.3. ДОПОЛНИТЕЛЬНАЯ ЛИТЕРАТУРА (широкий поиск)
+
+#### 🔴 КРИТИЧЕСКИ ВАЖНЫЕ
+
+| # | Статья | Журнал | Год | DOI/PMID | Значение |
+|---|--------|--------|-----|----------|----------|
+| 1 | **Yamada Y et al.** — Non-necroptotic MLKL function damages mitochondria and promotes HSC aging | *Nat Commun* | 2026 | `10.1038/s41467-026-71060-4` | 🔥 **Прямая связь: митохондриальные повреждения → HSC aging.** MLKL → mitochondria → impaired self-renewal. RIPK3-MLKL = ключевой медиатор HSC-старения. |
+| 2 | **Wani GA et al.** — Metabolic control of adult NSC self-renewal by mitochondrial protease YME1L | *Cell Rep* | 2022 | `10.1016/j.celrep.2022.110370` | 🔥 **YME1L → NSC self-renewal.** Параллель с ClpP: mitochondrial protease → stem cell fate — УНИВЕРСАЛЬНЫЙ ПРИНЦИП. |
+| 3 | **Mohrin M et al.** — UPR^mt activated upon HSC exit from quiescence | *Aging Cell* | 2018 | `10.1111/acel.12756` | 🔥 **UPR^mt → HSC.** Митохондриальный протеостаз меняется при HSC quiescence→proliferation. |
+| 4 | **Wang CL et al.** — UPR^mt regulates hippocampal NSC aging | *Cell Metab* | 2023 | `10.1016/j.cmet.2023.04.012` | 🔥 **UPR^mt → NSC aging.** |
+| 5 | **Khire A et al.** — Centriole Remodeling during Spermiogenesis in Drosophila | *Curr Biol* | 2016 | PMID: **28094036** | 🔥 **Центриоли ремоделируются при спермиогенезе.** Poc1 enrichment необходимо. |
+
+#### 🟡 ВАЖНЫЕ
+
+| # | Статья | Журнал | Год | DOI | Значение |
+|---|--------|--------|-----|-----|----------|
+| 6 | **Schumacher S et al.** — PARL is required for spermatogenesis | *Commun Biol* | 2024 | `10.1038/s42003-023-05703-3` | Третья митохондриальная протеаза → сперматогенез. PARL → PINK1. |
+| 7 | **Morganti C, Ito K** — Mitochondrial Contributions to HSC Aging | *Int J Mol Sci* | 2021 | `10.3390/ijms222011117` | Обзор митохондрий в старении HSC. |
+| 8 | **Bautista J, López-Cortés A** — Mitochondrial drivers of stem cell aging | *npj Aging* | 2026 | `10.1038/s41514-026-00422-5` | Современный обзор. |
+| 9 | **Tcheng M et al.** — LONP1 reliance in AML stem cells | *J Clin Invest* | 2026 | `10.1172/jci196687` | 🔥 LONP1 — ещё одна митохондриальная протеаза → cancer SC. |
+| 10 | **Varuzhanyan G, Chan DC** — Mitochondrial dynamics during spermatogenesis | *J Cell Sci* | 2020 | `10.1242/jcs.235937` | Контекст для ClpP и Slmap. |
+| 11 | **Guo C et al.** — ClpP/ClpX deficiency impairs mTORC1 during spermatogenesis | *bioRxiv* | 2022 | `10.1101/2022.12.16.520702` | Препринт → Feng 2026. |
+| 12 | **Manandhar G et al.** — Centriole degeneration during mouse spermiogenesis | *Cell Motil Cytoskeleton* | 1999 | PMID: 10401572 | Классика. |
+
+---
+
+### 10.4. МЕТА-АНАЛИЗ: Митохондриальные протеазы → судьба стволовых клеток
+
+**Наблюдение:** Четыре митохондриальные протеазы независимо показаны как критические для cell fate:
+
+| Протеаза | Локализация | Модель | Фенотип потери | Ссылка |
+|----------|-------------|--------|----------------|--------|
+| **ClpP** | Матрикс | Сперматоциты мыши | Гигантские митохондрии, ↓RAD51, гибель | Feng 2026 |
+| **YME1L** | Внутр. мембрана (i-AAA) | Нейральные СК | Нарушение self-renewal | Wani 2022 |
+| **LONP1** | Матрикс | Лейкемические СК | Повышенная зависимость | Tcheng 2026 |
+| **PARL** | Внутр. мембрана (ромбоид) | Сперматогенез | Нарушение, ↓PINK1 | Schumacher 2024 |
+
+**🔥 ГИПОТЕЗА ДЛЯ MCARA:** Митохондриальные протеазы (ClpP, YME1L, LONP1, PARL) образуют **протеостатическую ось**, чья дисфункция при старении → накопление повреждённых белков → mitochondrial dysfunction → нарушение cell fate. Универсальный механизм: HSC (Yamada 2026), NSC (Wani 2022, Wang 2023), сперматоциты (Feng 2026), лейкемические СК (Tcheng 2026).
+
+**Связь с CEDAR:** Два компартмента, где протеостаз критичен для cell fate:
+- **Центриоль:** polyGlu — признак энтропии; нет механизма ремонта
+- **Митохондрии:** ClpP/YME1L/LONP1 — протеостатический контроль; дисфункция → потеря cell fate control
+
+**Предсказание:** В стареющих HSC должно наблюдаться: (а) ↓ClpP и YME1L, (б) накопление убиквитинилированных белков в митохондриях, (в) «гигантские митохондрии» — параллельно с (г) накоплением polyGlu на центриолях.
+
+---
+
+### 10.5. СВЯЗЬ С CDATA (Cell Death And Tissue Architecture)
+
+> **Примечание:** CDATA — отдельный концепт (Cell Death And Tissue Architecture), не CEDAR. Связь через апоптотические пути.
+
+**Mao et al. (2026):** Slmap → Hid-Diap1 апоптоз. Структурная патология → programmed cell death.
+
+**Feng et al. (2026):** ClpP deficiency → элиминация сперматоцитов.
+
+**Yamada et al. (2026):** MLKL → non-lethal mitochondrial damage → functional decline (не апоптоз/некроптоз).
+
+---
+
+### 10.6. ИТОГОВАЯ ОЦЕНКА
+
+| Компонент | Было | Стало | Δ | Причина |
+|-----------|------|-------|-----|--------|
+| **Counter #3 (Митохондриальный)** | 8/10 | **8.5/10** | +0.5 | ClpP + YME1L + MLKL → stem cell fate |
+| **Counter #5 (Протеостаз)** | 6.5/10 | **7.5/10** | +1.0 | ClpP/YME1L/LONP1: mitochondrial proteases |
+| **Counter #1 (Центриолярный)** | 7.5/10 | **8.0/10** | +0.5 | Khire 2016 + Slmap axoneme defects |
+| **CDATA (апоптоз)** | — | **7.0/10** | NEW | Hid-Diap1 + ClpP → structural damage → death |
+| **M3/CAASM** | 6/10 | **6.5/10** | +0.5 | ClpP: mito protease → nuclear recombination |
+
+**Общая оценка MCARA/CEDAR: 7.3/10 → 7.8/10 (+0.5)**
+
+---
+
+*Анализ проведён 2026-07-09. Верифицировано: 4 основные статьи + 12 дополнительных через CrossRef API, PubMed. Все DOI/PMID подтверждены.*

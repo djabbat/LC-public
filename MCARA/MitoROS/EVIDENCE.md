@@ -43,3 +43,25 @@
 
 См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
 
+
+## v4 Update (2026-07-09) — Mitochondrial Proteases & Stem Cell Fate
+
+> **Источник:** Мета-анализ 16 статей. См. `~/Desktop/LC/MCARA/CEDAR/EVIDENCE.md` §10.
+
+### Ключевые находки
+
+| # | Статья | Журнал | Год | DOI/PMID | Значение |
+|---|--------|--------|-----|----------|----------|
+| 1 | **Feng HW et al.** — ClpP Ensures Mitochondrial Integrity and Spermatocyte Meiotic Progression | *Andrology* | 2026 | `10.1111/andr.70274` | 🔥 ClpP митохондриальная протеаза → гигантские митохондрии, ↓RAD51, нарушение мейоза |
+| 2 | **Yamada Y et al.** — Non-necroptotic MLKL damages mitochondria and promotes HSC aging | *Nat Commun* | 2026 | `10.1038/s41467-026-71060-4` | 🔥 MLKL → митохондриальные повреждения → HSC aging |
+| 3 | **Wani GA et al.** — YME1L mitochondrial protease controls NSC self-renewal | *Cell Rep* | 2022 | `10.1016/j.celrep.2022.110370` | 🔥 YME1L (i-AAA протеаза) → self-renewal NSC |
+| 4 | **Wang CL et al.** — UPR^mt regulates hippocampal NSC aging | *Cell Metab* | 2023 | `10.1016/j.cmet.2023.04.012` | UPR^mt → NSC aging |
+| 5 | **Mohrin M et al.** — UPR^mt activated upon HSC exit from quiescence | *Aging Cell* | 2018 | `10.1111/acel.12756` | UPR^mt → HSC quiescence→proliferation |
+| 6 | **Morganti C, Ito K** — Mitochondrial Contributions to HSC Aging | *Int J Mol Sci* | 2021 | `10.3390/ijms222011117` | Обзор mitochondrial HSC aging |
+| 7 | **Bautista J, López-Cortés A** — Mitochondrial drivers of stem cell aging | *npj Aging* | 2026 | `10.1038/s41514-026-00422-5` | Современный обзор |
+
+### Значение для MitoROS
+
+- **ClpP → гигантские митохондрии:** Морфологический фенотип, идентичный стареющим митохондриям. ClpP deficiency → mitochondrial swelling.
+- **MLKL → HSC mitochondria:** Новая роль MLKL — не некроптоз, а non-lethal mitochondrial damage → HSC functional decline.
+- **Митохондриальные протеазы как счётчик старения:** Дисфункция ClpP/YME1L/LONP1/PARL → накопление повреждённых белков → mitochondrial dysfunction → нарушение cell fate.
