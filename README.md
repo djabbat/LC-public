@@ -1,4 +1,4 @@
-# Organismal Aging
+# LC — LongevityCommon (зонтичный проект)
 
 **A Self-Learning 4D Simulator of the Organism (3D + Time).**
 
