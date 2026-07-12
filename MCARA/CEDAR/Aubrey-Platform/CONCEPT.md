@@ -10,7 +10,7 @@
 
 **Formal grant title (per signed LoS Parrish 2026-04-22 and Geiger 2026-04-23):** *AI-Directed Pure-Lineage Test of Counter #1 (Centriolar) in the Multi-Counter Architecture of Organismal Aging (MCARA)*
 
-**Phase A equipment name:** **ARGUS-LP** — *AI-Resident Robotic Genealogical Ultra-surveillance for Lineage Purification.* A purpose-built COTS-assembled live-cell imaging station (not a Zeiss retrofit), designed from scratch for 24/7 AI-agent-driven continuous live-cell observation over the 6-month tracking window. The Argus mythological reference is intentional: 24/7 multi-month autonomous surveillance of a slowly-drifting cellular phenotype is a function that no human-operated workflow can deliver. ARGUS-LP is Phase A's capital deliverable; it remains the property of GLA at the end of the grant. Two identical units are built (see §Budget): Unit #1 at GLA Abastumani, Unit #2 at an independent replication site (Zheleznov, LoS pending). Engineering subcontractor G. Tsomaia (Dipl. Ing. Tbilisi Polytechnic) handles design and assembly.
+**Phase A equipment name:** **ARGUS-LP** — *AI-Resident Robotic Genealogical Ultra-surveillance for Lineage Purification.* A purpose-built COTS-assembled live-cell imaging station (not a Zeiss retrofit), designed from scratch for 24/7 AI-agent-driven continuous live-cell observation over the 6-month tracking window. The Argus mythological reference is intentional: 24/7 multi-month autonomous surveillance of a slowly-drifting cellular phenotype is a function that no human-operated workflow can deliver. ARGUS-LP is Phase A's capital deliverable; it remains the property of GLA at the end of the grant. Two identical units are built (see §Budget): Unit #1 at GLA Abastumani, Unit #2 at an independent replication site (Zheleznov, LoS pending). Engineering subcontractor  handles design and assembly.
 
 **Parent project:** [CytogeneticTree (CellLineageTree)](../CONCEPT.md)
 **Created:** 2026-05-09; **scope revised 2026-05-12: from 48 h pilot → 6-month tracking programme** aligned with the parent project's quantitative predictions P5 (50-passage polyGlu trend; reachable in ~6 mo at 1 division/day from passage 25 → 50) and partial coverage of P11 (relapse half-life ~40–60 divisions; full 80–120 divisions in Phase B). The 48 h figure is retained only as the *duration of one continuous time-lapse imaging block*, not the duration of the whole experiment.
@@ -76,7 +76,7 @@ This multi-month architecture is what makes the project relevant to aging: a sin
 **Honest scope statement.** The PI's expertise is theoretical and clinical. The Phase A experimental work is hosted at the **GLA Abastumani facility** (PI's home laboratory), where two purpose-built ARGUS-LP stations are installed — one for the PI's tracking runs, one for independent replication (Zheleznov). Routine bench work — RITE cassette assembly, third-generation lentiviral packaging, BJ‑hTERT clonal QC, karyotyping, cell culture maintenance — is executed by a GLA technician hired for 50% FTE × 6 months under the PI's supervision. The 24/7 imaging-and-ablation manipulation across the 6-month tracking window is executed by a **fully autonomous local AI agent** (RTX 4090, local DeepSeek-V3, CellPose v3, spotiflow) — no API costs, no operator confirmation for ablation. This division of labour is what makes a 24/7 multi-month protocol feasible at a single-PI / single-technician scale. **No pilot data have been generated as of the submission date.**
 
 **Bench execution — co-PI status:**
-- 🇬🇪 **Phase A — fully hosted at GLA Abastumani, Georgia.** PI is the bench lead; ARGUS-LP (2× purpose-built stations, assembled by engineering subcontractor G. Tsomaia); one GLA technician (50% FTE × 6 mo) handles cell culture, lentivirus prep, periodic QC; the AI agent handles 24/7 imaging-and-ablation decisions fully autonomously (no operator confirmation per shot). The host institution Georgia Longevity Alliance (NGO, reg. №404506520) has the legal capacity to administer the Phase A grant (TBC GLA account active per memory `project_tbc_account_gla`). **No external bench Co-PI is contracted for Phase A**; the previously-discussed Geiger Phase A subcontract is dropped — Geiger does Phase B only.
+- 🇬🇪 **Phase A — fully hosted at GLA Abastumani, Georgia.** PI is the bench lead; ARGUS-LP (2× purpose-built stations, assembled by engineering subcontractor ); one GLA technician (50% FTE × 6 mo) handles cell culture, lentivirus prep, periodic QC; the AI agent handles 24/7 imaging-and-ablation decisions fully autonomously (no operator confirmation per shot). The host institution Georgia Longevity Alliance (NGO, reg. №404506520) has the legal capacity to administer the Phase A grant (TBC GLA account active per memory `project_tbc_account_gla`). **No external bench Co-PI is contracted for Phase A**; the previously-discussed Geiger Phase A subcontract is dropped — Geiger does Phase B only.
 - ✅ Geiger lab (Ulm, DE) — **Phase B only**. Letter of Support signed 2026-04-23: €150,000 subcontract (рыночная цена: TV-L персонал + животные + реагенты) for the 12-month in vivo animal phase (~150-250 CD45.1/CD45.2 congenic mice serial BMT, 4 transduced arms, flow + CFU readouts), conditional on Phase A end-of-month-6 Go decision.
 - 🟡 Curie/Paris (Janke lab) — declined personally on CoI grounds (2026-04-28); Janke has offered to introduce an advisory co-PI from his lab. Status: introduction pending; advisory-only €0 role (reagent exchange, RITE methodology consultation).
 
@@ -96,16 +96,16 @@ Decision 2026-05-12: **Phase A runs entirely at GLA Abastumani (Georgia) with a 
 | 2 | GLA technician | TBD (Georgian academic hire) | GLA Abastumani | 6 mo × 50% FTE | — | Cell culture (BJ-hTERT-RITE clones), lentivirus packaging, RITE cassette assembly, periodic karyotyping, flow cytometry tag-swap QC, ARGUS-LP equipment maintenance | **€6,000** (50% FTE × 6 mo at Georgian academic rate ≈ €1,000/mo full-time) |
 | 3 | AI agent (autonomous) | Local AI stack (RTX 4090, DeepSeek-V3, CellPose v3, spotiflow) | Local GPU on AI station | 24/7 × 6 mo (continuous attention) | — (handed off to in vivo) | Per-frame ROI selection, focus correction, channel-switching, asymmetric-division detection, autonomous ablation targeting (no operator confirmation). Runs locally — zero API cost, zero recurring fees. | **€0 recurring** (hardware cost included in ARGUS-LP unit BOM — PC + RTX 4090) |
 | 4 | Postdoctoral fellow | TBD (Georgian / EU academic hire) | GLA Abastumani / remote | 6 mo × 50% FTE | — (handed off to Geiger lab Ulm) | Image analysis (CellPose / spotiflow fine-tuning on BJ-hTERT mitotic frames), lineage-tree stitching across inter-block gaps, statistical model fitting, manuscript co-author | **€9,000** (base €7,000 + benefits €2,000) |
-| 5 | Engineering subcontractor (ARGUS-LP build) | **Tsomaia** (Giorgi) | Tbilisi / GLA Abastumani | mo 1–4, ~150 h total | — | Design (CAD), manufacture, and assembly of both ARGUS-LP units: XY stage, isolated enclosure, fluidics, optics integration, wiring, calibration. Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems. | **€3,900** (≈€20/h × 195 h: CAD 40h, assembly Unit#1 80h, Unit#2 40h, calibration 20h, docs 15h) |
+| 5 | Engineering subcontractor (ARGUS-LP build) | **[инженер TBD]** (Giorgi) | Tbilisi / GLA Abastumani | mo 1–4, ~150 h total | — | Design (CAD), manufacture, and assembly of both ARGUS-LP units: XY stage, isolated enclosure, fluidics, optics integration, wiring, calibration. Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems. | **€3,900** (≈€20/h × 195 h: CAD 40h, assembly Unit#1 80h, Unit#2 40h, calibration 20h, docs 15h) |
 | 6 | Phase B subcontracted PI partner *(not Co-PI per user instruction 2026-05-14)* | **Geiger** (Hartmut) | Institut für Molekulare Medizin, Univ. Ulm, Meyerhofstr. N27, 89081 Ulm, Germany | — | 12 mo experimental lead | Phase B in vivo: BMT ~150-250 CD45.1/CD45.2 congenic mice (serial), 4 transduced arms (CCP1-OE / PACT-CCP1-OE / TTLL6-OE / GFP), flow cytometry, CFU readouts. Conditional on Phase A end-of-month-6 Go decision | **€150,000 (≈$166,000)** subcontract (рыночная цена: TV-L E13 postdoc + E9b technician + 200-250 mice + housing + lentivirus + flow + consumables + contingency) |
 | 7 | Janke-introduced advisor (no contract) | TBD (Curie lab, Paris) | Institut Curie, Paris | mo 1–6 × ad-hoc | mo 7–18 × ad-hoc | RITE methodology consultation; reagent exchange (Asl construct, CEP152 antibodies); centriole-biology second opinion. **No bench work, no salary line.** | **€0** (Curie absorbs; MTA + advisory letter only) |
 | 8 | **Sole Co-PI** *(promoted 2026-05-14 per user instruction; all other Co-PI slots removed)* | **Parrish** (Elizabeth) | BioViva Sciences LLC, Seattle, WA, USA | mo 1–6 | mo 7–18 | Per signed LoS 2026-04-22 — 4 commitments: (1) quarterly strategic review calls × 4; (2) FDA/EMA regulatory pathway consultation for Phase B CCP1-OE therapeutic conversion; (3) BioViva industry-network introductions for post-grant Series A/B; (4) public-communication support via BioViva media (webinars, conference talks on MCARA-CEDAR integration). Liz@bioviva-science.com. Signed PDF: `docs/letters_of_support/Parrish_LoS_BioViva_2026-04-22.pdf` | **€0** (signed in-kind strategic commitment, non-compensated advisory basis) |
 
-**Phase A total:** **€90,000 (≈$100,000)** — exactly at the Impetus single-grant cap, reflecting a project of appropriate scale: 2 purpose-built ARGUS-LP units (PI site + independent replication site), engineering subcontractor (Tsomaia G.), 6-month fully autonomous AI-driven lineage tracking, 2 open-access publications, and contingency. No external bench subcontract for Phase A biology; PI retains full experimental autonomy.
+**Phase A total:** **€90,000 (≈$100,000)** — exactly at the Impetus single-grant cap, reflecting a project of appropriate scale: 2 purpose-built ARGUS-LP units (PI site + independent replication site), engineering subcontractor (), 6-month fully autonomous AI-driven lineage tracking, 2 open-access publications, and contingency. No external bench subcontract for Phase A biology; PI retains full experimental autonomy.
 
 **Phase B total:** €200,400 (≈$222,000) — including Geiger €150,000 subcontract (рыночная цена).
 
-**Combined A + B ask:** **€290,400 (≈$323,000)** across 18 months total. Phase A (€90,000 — 2 ARGUS units + Tsomaia engineering + 2 publications) + Phase B (€200,400 — Geiger in vivo BMT). Filed under the Impetus **Strategic Co-PI** tier, anchored by Parrish's signed Co-PI letter (2026-04-22 — sole Co-PI per 2026-05-14 user decision). Geiger's signed Phase B LoS (2026-04-23) provides the Phase B subcontracted-PI commitment, not a Co-PI commitment.
+**Combined A + B ask:** **€290,400 (≈$323,000)** across 18 months total. Phase A (€90,000 — 2 ARGUS units + [инженер TBD] engineering + 2 publications) + Phase B (€200,400 — Geiger in vivo BMT). Filed under the Impetus **Strategic Co-PI** tier, anchored by Parrish's signed Co-PI letter (2026-04-22 — sole Co-PI per 2026-05-14 user decision). Geiger's signed Phase B LoS (2026-04-23) provides the Phase B subcontracted-PI commitment, not a Co-PI commitment.
 
 Phase A is self-contained at GLA Abastumani; no further LoS or subcontract is needed for Phase A. The Geiger LoS for Phase B (dated 2026-04-23) is the second strategic anchor of the Impetus packet.
 
@@ -271,7 +271,7 @@ Each ARGUS-LP station comprises:
 4. **Fluidics** — syringe pump + 3-port pinch valves for periodic RITE stain delivery
 5. **AI station** — PC + RTX 4090, local DeepSeek-V3, CellPose v3, spotiflow. Fully autonomous (no operator confirmation for ablation, zero API cost)
 
-Engineering assembly by G. Tsomaia (€3,900 subcontract). See `ARGUS/CONCEPT.md` for detailed block diagram and build checklist.
+Engineering assembly by  (€3,900 subcontract). See `ARGUS/CONCEPT.md` for detailed block diagram and build checklist.
 
 ## §3 Current state of the art
 
@@ -288,7 +288,7 @@ Engineering assembly by G. Tsomaia (€3,900 subcontract). See `ARGUS/CONCEPT.md
 ## §5 Known gaps + mitigations
 
 **Gaps:**
-1. Purpose-built COTS microscopy at this resolution has no turnkey supplier; each unit is a custom integration. Mitigation: engineering subcontractor (Tsomaia) with building experience + phase-graduated commissioning (beads → transient transfection → stable clones).
+1. Purpose-built COTS microscopy at this resolution has no turnkey supplier; each unit is a custom integration. Mitigation: engineering subcontractor [инженер TBD] with building experience + phase-graduated commissioning (beads → transient transfection → stable clones).
 2. Long-term (24–72 h continuous, ≥ 9 blocks across 6 months) autonomous AI operation without operator checks is novel. Mitigation: remote monitoring (4G modem + IoT relay), backup RTX 4090 GPU, UPS for grid fluctuations.
 3. Single‑camera sequential acquisition avoids simultaneous channel alignment but halves temporal resolution. This is acceptable given 30–60 min frame intervals.
 
@@ -336,7 +336,7 @@ To ensure that Cre‑ER^T2 activation does not impair cell proliferation or cent
 | RITE_Centriole (molecular clock cassette) | 4,195 |
 | LentiviralTools (3rd-gen packaging, BJ-hTERT transduction, clonal QC) | 5,300 |
 | **Engineering** | |
-| Tsomaia G. subcontract (design + manufacture + assembly of both ARGUS-LP units: CAD, XY stage, enclosure, fluidics, optics integration, wiring, calibration — Dipl. Ing. automated systems) | 3,900 |
+|  subcontract (design + manufacture + assembly of both ARGUS-LP units: CAD, XY stage, enclosure, fluidics, optics integration, wiring, calibration — Dipl. Ing. automated systems) | 3,900 |
 | **Operations (both units, 6 months)** | |
 | Shipping, customs clearance & insurance (EU/China → Georgia, both units, DHL/FedEx priority, customs broker; GLA NGO may qualify for VAT exemption) | 3,000 |
 | Cell culture & QC consumables (both units: DMEM/FBS/antibiotics, karyotyping × 2 timepoints, flow tag-swap checks, periodic RITE staining reagents) | 5,000 |
@@ -366,11 +366,11 @@ Phase B extends the platform to in vivo HSC transplantation (BMT, CD45.1/CD45.2 
 | Institutional overhead 20% | 33,400 |
 | **Phase B total project cost** | **200,400** (≈$222,000) |
 
-**Combined Phase A + B ask:** Phase A **€90,000** (2 × ARGUS-LP units, Tsomaia engineering, 2 OA publications) + Phase B **€200,400** (Geiger lab Ulm in vivo, рыночная цена) = **€290,400 (≈$323,000)** across 18 months total.
+**Combined Phase A + B ask:** Phase A **€90,000** (2 × ARGUS-LP units, [инженер TBD] engineering, 2 OA publications) + Phase B **€200,400** (Geiger lab Ulm in vivo, рыночная цена) = **€290,400 (≈$323,000)** across 18 months total.
 
 **Phase B Go criterion (end of Month 6 / Phase A):** asymmetry ratio ≥ 0.6 measured in BJ‑hTERT first 72 h imaging block, RITE tag-swap efficiency ≥ 70% confirmed by flow cytometry, and ≥ 3 viable BJ‑hTERT‑RITE clones karyotype-validated. If all three are met, Phase B starts at Month 7. If any one fails, Phase B is delayed by one quarter while contingencies are activated; full abandonment requires PI + both bench co-PIs to concur.
 
-*Note: Phase A total of **€90,000 (≈$100,000 at 0.9 EUR/USD)** is exactly at the Impetus Longevity cap. The budget covers **two purpose-built ARGUS-LP units** — one at GLA Abastumani (PI site) and one at an independent replication site (second researcher), enabling parallel lineage tracking and built-in independent validation. Engineering subcontractor **Giorgi Tsomaia** (Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems) is contracted for €3,900 to design and assemble both units. Each unit is an identical COTS-assembled imaging-and-ablation station with fully autonomous local AI (RTX 4090, CellPose v3, spotiflow) — no Zeiss retrofit, no Claude API, no operator-confirmed ablation. The project also funds 2 open-access publications and contingencies. A single GLA technician serves both units; the postdoctoral fellow leads analysis. Combined Phase A + Phase B programme: **€290,400 (≈$323,000)** across 18 months. Phase B Geiger subcontract is priced at **€150,000 (≈$166,000)** — German TV-L E13 postdoc 50% FTE + E9b technician 50% FTE, ~250 mice for serial BMT, animal housing per-diem, lentiviral production (4 constructs), flow cytometry, CFU, genotyping, lab consumables, and 10% contingency. The signed Geiger LoS (2026-04-23) commits €100,000; the additional €50,000 represents co-investment by Universität Ulm (existing animal protocol, shared equipment, institutional overhead) to be confirmed in the Phase B subcontract amendment. fs-IR ablation remains deferred. The requested postdoctoral salary is €9,000 total for 50% FTE × 6 months (base €7,000 + benefits €2,000); the GLA technician is €6,000 for 50% FTE × 6 months at Georgian academic rate. No price-volatility contingency is double-booked: line items are at quoted vendor prices (Q1 2026); any consumable inflation is absorbed by GLA institutional overhead.*
+*Note: Phase A total of **€90,000 (≈$100,000 at 0.9 EUR/USD)** is exactly at the Impetus Longevity cap. The budget covers **two purpose-built ARGUS-LP units** — one at GLA Abastumani (PI site) and one at an independent replication site (second researcher), enabling parallel lineage tracking and built-in independent validation. Engineering subcontractor **[инженер TBD]** (Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems) is contracted for €3,900 to design and assemble both units. Each unit is an identical COTS-assembled imaging-and-ablation station with fully autonomous local AI (RTX 4090, CellPose v3, spotiflow) — no Zeiss retrofit, no Claude API, no operator-confirmed ablation. The project also funds 2 open-access publications and contingencies. A single GLA technician serves both units; the postdoctoral fellow leads analysis. Combined Phase A + Phase B programme: **€290,400 (≈$323,000)** across 18 months. Phase B Geiger subcontract is priced at **€150,000 (≈$166,000)** — German TV-L E13 postdoc 50% FTE + E9b technician 50% FTE, ~250 mice for serial BMT, animal housing per-diem, lentiviral production (4 constructs), flow cytometry, CFU, genotyping, lab consumables, and 10% contingency. The signed Geiger LoS (2026-04-23) commits €100,000; the additional €50,000 represents co-investment by Universität Ulm (existing animal protocol, shared equipment, institutional overhead) to be confirmed in the Phase B subcontract amendment. fs-IR ablation remains deferred. The requested postdoctoral salary is €9,000 total for 50% FTE × 6 months (base €7,000 + benefits €2,000); the GLA technician is €6,000 for 50% FTE × 6 months at Georgian academic rate. No price-volatility contingency is double-booked: line items are at quoted vendor prices (Q1 2026); any consumable inflation is absorbed by GLA institutional overhead.*
 
 ---
 
@@ -438,7 +438,7 @@ Purpose-built COTS station (not a Zeiss retrofit) with:
 
 ### Two-Unit Strategy
 
-Two identical ARGUS-LP stations (€13,850 each), assembled by engineering subcontractor G. Tsomaia:
+Two identical ARGUS-LP stations (€13,850 each), assembled by engineering subcontractor :
 - Unit #1: GLA Abastumani (PI site)
 - Unit #2: Independent replication site (Zheleznov, LoS pending)
 
@@ -637,7 +637,7 @@ All hardware is specified in the ARGUS-LP build (see `~/Desktop/ARGUS-LP_hardwar
 - **Isolated environmental enclosure** with O₂/CO₂ control (€2,200 incl. gas controller)
 - **Fluidics system** (syringe pump + 3-port valves for periodic staining — €400)
 
-Integrated by engineering subcontractor G. Tsomaia (€3,900).
+Integrated by engineering subcontractor  (€3,900).
 
 
 
@@ -645,7 +645,7 @@ Integrated by engineering subcontractor G. Tsomaia (€3,900).
 
 ## TBPR v2 Resolution Map (2026-05-14)
 
-Parent project: Aubrey (centriole age tracking). PI=Tqemaladze. Phase A = 2× ARGUS-LP purpose-built stations (€90K total), Phase B = in vivo HSC BMT with Geiger (LoS 2026-04-23). BJ-hTERT in 2-3% hypoxia + Centrin1-Kaede photoconversion. Engineering: G. Tsomaia (Dipl. Ing. automated systems).
+Parent project: Aubrey (centriole age tracking). PI=Tqemaladze. Phase A = 2× ARGUS-LP purpose-built stations (€90K total), Phase B = in vivo HSC BMT with Geiger (LoS 2026-04-23). BJ-hTERT in 2-3% hypoxia + Centrin1-Kaede photoconversion. Engineering:  (Dipl. Ing. automated systems).
 
 
 ---

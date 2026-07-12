@@ -1,6 +1,6 @@
 # ARGUS-LP — Autonomous Centriole Tracking Platform
 
-**Status:** Hardware specification complete. Engineering subcontract (G. Tsomaia) pending.
+**Status:** Hardware specification complete. Engineering subcontract () pending.
 
 ## What is ARGUS-LP?
 
@@ -36,7 +36,7 @@ ARGUS-LP (Autonomous Robotic Genealogical Ultra-surveillance for Lineage Purific
 | AI | Local RTX 4090, zero API cost | Claude Code API (€8K recurring) |
 | Biology | BJ-hTERT live cells, 6 mo | Simulator-only (beads) |
 | Ablation | Autonomous (no operator confirm) | Manual |
-| Engineering | G. Tsomaia subcontract (€3,900) | DIY |
+| Engineering |  subcontract (€3,900) | DIY |
 | Language | English | Russian + English mixed |
 
 ## Links

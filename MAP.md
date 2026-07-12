@@ -21,11 +21,13 @@ LC/
 ├── .gitignore
 │
 ├── MCARA/                           ← Multi-Counter Architecture (5 подпроектов)
-│   ├── CEDAR/                       ←   + 4 подподпроекта (simulator, Aubrey, CellLineageTree, articles)
+│   ├── ARGUS-LP/                    ←   грантовый подпроект
+│   ├── CEDAR/                       ←   + 5 подподпроектов (Aubrey-Platform, simulator, CellLineageTree, articles, ARGUS-Hardware)
 │   ├── EpigeneticDrift/
 │   ├── MitoROS/
 │   ├── Proteostasis/
-│   └── Telomere/
+│   ├── Telomere/
+│   └── Aubrey/                      ←   Centriolar Atlas + Phase-0/A/B + grants
 │
 ├── Ze/                              ← Ze Vectors Theory (4 подпроекта)
 │   ├── Ze_CHSH/
@@ -60,13 +62,20 @@ LC/
 | Подпроект | Путь | Core |
 |-----------|------|:----:|
 | **MCARA** | `MCARA/` | 7/7 |
+| **ARGUS-LP** | `MCARA/ARGUS-LP/` | 7/7 |
+| **Aubrey** | `MCARA/Aubrey/` | 7/7 |
+| **Aubrey/Phase-0** | `MCARA/Aubrey/Phase-0/` | 7/7 |
+| **Aubrey/Phase-A** | `MCARA/Aubrey/Phase-A/` | 7/7 |
+| **Aubrey/Phase-B** | `MCARA/Aubrey/Phase-B/` | 7/7 |
+| **Aubrey/EIC_Pathfinder_Open** | `MCARA/Aubrey/grants/EIC_Pathfinder_Open/` | 7/7 |
 | **CEDAR** | `MCARA/CEDAR/` | 7/7 |
 | **EpigeneticDrift** | `MCARA/EpigeneticDrift/` | 7/7 |
 | **MitoROS** | `MCARA/MitoROS/` | 7/7 |
 | **Proteostasis** | `MCARA/Proteostasis/` | 7/7 |
 | **Telomere** | `MCARA/Telomere/` | 7/7 |
+| **CEDAR/Aubrey-Platform** | `MCARA/CEDAR/Aubrey-Platform/` | 7/7 |
+| **CEDAR/ARGUS-Hardware** | `MCARA/CEDAR/Aubrey-Platform/ARGUS-Hardware/` | 7/7 |
 | **CEDAR/simulator** | `MCARA/CEDAR/simulator/` | 7/7 |
-| **CEDAR/Aubrey** | `MCARA/CEDAR/Aubrey/` | 7/7 |
 | **CEDAR/CellLineageTree** | `MCARA/CEDAR/CellLineageTree/` | 7/7 |
 | **CEDAR/articles** | `MCARA/CEDAR/articles/` | 7/7 |
 | **Ze_CHSH** | `Ze/Ze_CHSH/` | 7/7 |
@@ -76,6 +85,8 @@ LC/
 | **ze_sim** | `Ze/website/ze_sim/` | 7/7 |
 | **Ze/simulator** | `Ze/simulator/` | ⚠️ 1/7 |
 | **BioSense** | `BioSense/` | 7/7 |
+| **BioSense/automated-microscopy** | `BioSense/instruments/automated-microscopy/` | 7/7 |
+| **BioSense/CubanEEG** | `BioSense/data/cuban/oldgandalf-.../` | 7/7 |
 | **FCLC** | `FCLC/` | 7/7 |
 | **HAP** | `HAP/` | 7/7 |
 | **Organismal_Aging** | `Organismal_Aging/` | 7/7 |
@@ -90,4 +101,4 @@ LC/
 
 ---
 
-*Обновлено 2026-07-04 (Цикл 8 аудита — фактическая структура).*
+*Обновлено 2026-07-10 (Цикл 13 аудита — переименования Aubrey→Aubrey-Platform, ARGUS→ARGUS-Hardware, +недостающие подпроекты).*
