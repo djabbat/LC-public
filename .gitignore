@@ -19,3 +19,6 @@ Ze/Ze-Hierarchy/
 *.heartbeat
 drjaba.db
 test_*.db
+
+# Runtime files (аудит 2026-07-12)
+*.sqlite
