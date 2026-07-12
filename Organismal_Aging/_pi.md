@@ -28,7 +28,7 @@ Organismal Aging — **главный интегратор LC**. Все бывш
 Apache 2.0 — весь код, данные CC-BY 4.0.
 
 ## Связанные проекты
-- **Aubrey** (~/Desktop/Marketing/Aubrey/) — ARGUS-LP робот
+- **Aubrey** (~/Desktop/LC/MCARA/Aubrey/) — ARGUS-LP робот
 - **PhD** (~/Desktop/PhD/) — диссертация (CEDAR)
 - **Services/mbpr** — peer review инструмент
 
