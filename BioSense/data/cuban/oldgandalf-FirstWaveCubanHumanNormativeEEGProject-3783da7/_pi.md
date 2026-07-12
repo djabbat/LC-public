@@ -3,7 +3,7 @@
 > ## 🔴 ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
 > Перед любым действием прочитать: _pi.md
 
-**Parent:** LC/BioSense/data/cuban
+**Parent:** LC/BioSense
 **Created:** 2026-05-18 | **Updated:** 2026-06-11
 
 ## Описание

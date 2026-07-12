@@ -12,7 +12,7 @@
 
 ## Engineering (funded phase)
 
-- [ ] See `ARGUS/TODO.md` for full Tsomaia build checklist (P0-P5)
+- [ ] See `ARGUS/TODO.md` for full [инженер TBD] build checklist (P0-P5)
 - [ ] Order all COTS components (per `~/Desktop/ARGUS-LP_hardware_spec.md`)
 - [ ] Phase-graduated commissioning: [0] beads → [1] transient transfection → [2] stable clones
 

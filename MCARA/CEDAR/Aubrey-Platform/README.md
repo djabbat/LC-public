@@ -4,7 +4,7 @@
 
 ## Overview
 
-Aubrey is a 6-month live-cell centriole age tracking programme in BJ-hTERT fibroblasts, powered by **ARGUS-LP** — two purpose-built COTS autonomous imaging stations (not a Zeiss retrofit). Phase A (€90K) covers 2× ARGUS-LP units, engineering subcontractor G. Tsomaia, 2 OA publications, and full local AI stack (RTX 4090, DeepSeek-V3, CellPose v3, spotiflow). Phase B (€150K) extends to in vivo HSC BMT at the Geiger lab (Ulm).
+Aubrey is a 6-month live-cell centriole age tracking programme in BJ-hTERT fibroblasts, powered by **ARGUS-LP** — two purpose-built COTS autonomous imaging stations (not a Zeiss retrofit). Phase A (€90K) covers 2× ARGUS-LP units, engineering subcontractor , 2 OA publications, and full local AI stack (RTX 4090, DeepSeek-V3, CellPose v3, spotiflow). Phase B (€150K) extends to in vivo HSC BMT at the Geiger lab (Ulm).
 
 ## Key references
 

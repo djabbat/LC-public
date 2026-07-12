@@ -9,7 +9,7 @@
 
 ## Scope (current)
 
-- **Phase A:** 6-month centriole age tracking in BJ-hTERT cells, 2× purpose-built ARGUS-LP stations (not Zeiss retrofit), 2 OA publications, €90,000. AI: fully autonomous local RTX 4090. Engineering: G. Tsomaia subcontract. See `CONCEPT.md`.
+- **Phase A:** 6-month centriole age tracking in BJ-hTERT cells, 2× purpose-built ARGUS-LP stations (not Zeiss retrofit), 2 OA publications, €90,000. AI: fully autonomous local RTX 4090. Engineering:  subcontract. See `CONCEPT.md`.
 - **Phase B:** 12-month in vivo HSC competitive BMT at the Geiger lab (Ulm), conditional on Phase A end-of-month-6 Go decision. €150,000.
 
 ## Team / commitments (signed)
@@ -17,7 +17,7 @@
 - **PI:** Dr. Jaba Tqemaladze (Georgia Longevity Alliance) — bench lead Phase A, both phases conceptual lead.
 - **Strategic Co-PI:** Elizabeth Parrish (BioViva, Seattle, WA) — LoS 2026-04-22, non-compensated.
 - **Phase B subcontracted PI partner:** Hartmut Geiger (Univ. Ulm) — LoS 2026-04-23, €150,000 (market price).
-- **Engineering subcontractor:** Giorgi Tsomaia (Dipl. Ing. Tbilisi Polytechnic) — ARGUS-LP design + assembly, €3,900.
+- **Engineering subcontractor:** [инженер TBD] (Dipl. Ing. Tbilisi Polytechnic) — ARGUS-LP design + assembly, €3,900.
 - **Phase A AI agent:** Fully autonomous (RTX 4090, DeepSeek-V3 local, CellPose v3, spotiflow). Zero API cost.
 - **GLA technician:** 50% FTE × 6 mo.
 - **Postdoctoral fellow:** 50% FTE × 6 mo.
@@ -26,7 +26,7 @@
 
 | | EUR |
 |---|---|
-| Phase A (2× ARGUS-LP, Tsomaia, 2 pubs, contingency) | 90,000 |
+| Phase A (2× ARGUS-LP, [инженер TBD], 2 pubs, contingency) | 90,000 |
 | Phase B (Geiger in vivo BMT) | 150,000 |
 | **Combined A+B** | **290,400** |
 
@@ -37,7 +37,7 @@
 | Microscope | Zeiss IM 35 retrofit | Purpose-built COTS (2× units) |
 | AI | Claude API (€8K) | Local RTX 4090 (€0 recurring) |
 | Ablation | Operator-approved | Fully autonomous |
-| Engineering | DIY | G. Tsomaia subcontract (€3,900) |
+| Engineering | DIY |  subcontract (€3,900) |
 | Replication | Single unit | 2 identical units (Zheleznov, LoS pending) |
 | Budget Phase A | €78,594 | €90,000 ($100K) |
 | Publications | 0 | 2 OA (primary + replication) |
