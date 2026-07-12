@@ -24,7 +24,7 @@
 | **Самообучение** | — | **LoRA еженедельно + RAG (Qdrant) + аномалии** | V5 |
 | **BSL** | 2 (лентивирус) | **1 (аденовирус)** | Не требует бокса и −80°C |
 | **Fluidics** | Syringe pump + valves (RITE) | **Водяная муфта + насос (только иммерсия)** | Для PoC fluidics не нужна |
-| **Сборка** | Цомая (195 ч × €20) | **Инженеры Алексея** | Кооперация |
+| **Сборка** | [инженер TBD] (195 ч × €20) | **Инженеры Алексея** | Кооперация |
 | **Бюджет** | €13,850/ед. × 2 = €27,700 | **V1: $2,045 / V2: $5,945 / V6: $8,170** | Поэтапный подход |
 
 ### Шесть версий (поэтапная сборка)
@@ -76,7 +76,7 @@
 # ARGUS-LP — Hardware Architecture & Specification (v1.0)
 
 **Version:** 1.0 (2026-05-15)
-**Status:** Design complete. Engineering build (Tsomaia G.) pending funding.
+**Status:** Design complete. Engineering build () pending funding.
 **Biological context:** See parent `../CONCEPT.md` (Aubrey — centriole age tracking, Phase A)
 
 ## 1. Design Philosophy
@@ -161,7 +161,7 @@ Full BOM: `~/Desktop/ARGUS-LP_hardware_spec.md` (€13,850 per unit)
 
 ## 4. Build & Integration
 
-Engineering subcontractor **Giorgi Tsomaia** (Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems) is responsible for:
+Engineering subcontractor **[инженер TBD]** (Dipl. Ing. Tbilisi Polytechnic, constructor and producer of automated systems) is responsible for:
 
 1. **CAD** (40 h) — mechanical design of enclosure, stage mount, optics rail, fluidics integration
 2. **Unit #1 assembly** (80 h) — first build at GLA Abastumani workshop

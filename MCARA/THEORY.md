@@ -4,13 +4,100 @@
 
 **Дата:** 2026-07-08 (v4.5 — Hardware/Software + Stress Integrator)
 
+# THEORY — MCARA: Centriolar Theory of Differentiation and Aging
+
+**Центральная концепция (Tqemaladze, 2026):**
+
+1. **Центриоли наследуются избирательно.** При асимметричном делении стволовой клетки старая центриоль остаётся в стволовой, новая уходит в дифференцирующуюся.
+
+2. **Стволовые клетки накапливают старейшие центриоли.** Вместо того чтобы избавляться от старых центриолей, организм сохраняет их в самом важном компартменте — стволовом.
+
+3. **Старение многоклеточных организмов — цена за необратимо дифференцированные клетки, истинные ткани, органы.** Растения используют модуляцию (обратимую дифференцировку) и не имеют центриолей в соме. Животные приобрели необратимую дифференцировку через центриолярный храповик — и вместе с ней — старение.
+
+---
+
 ## 0. Hardware/Software Distinction (Jaba Tqemaladze, 2026-07-08)
 
-**Центриоль = hardware.** Не ремонтируется in situ. UPS деградирует отдельные повреждённые центросомные белки, но нет координированного механизма quality-control, восстанавливающего всю органеллу до «молодого» состояния. Однако центриоль можно **элиминировать и создать de novo** — именно это происходит в мейозе: ооцитные центриоли элиминируются, сперматозоидные центриоли реструктурируются в seeds (не темплаты) для de novo сборки в бластомерах нового организма.
+**Барьер для тотипотентности — три компонента:** (1) **DID** — гипотетические частицы индукции необратимой дифференцировки, ассоциированные со старой центриолью; (2) **старая центриоль** с включёнными генными сетями в нетотипотентном режиме; (3) **момент начала синтеза центриолей de novo** — ключевой переключатель: отключение старых генных сетей и включение генной сети, характерной для тотипотентности.
+
+**Тотипотентность = способность одной клетки породить полный организм.** Как из клетки растения — целое растение. Как из одного бластомера до появления центриолей de novo — близнецы. Золотой стандарт: тетраплоидная комплементация → живое рождение. Ни один метод (TLSC, MFiTLSC, hTBLC, 8CLC) этого не достиг.
+
+**Термодинамическое обоснование.** Клетка — открытая система, но центриоль — самая консервативная и медленно обновляемая структура (t½ тубулина: месяцы-годы). Второй закон применим к изолированным системам; центриоль приближается к таковой. **Доказательство сброса центриолярной энтропии:** старые ооциты (десятилетия в диплотене) → тотипотентные зиготы. Элиминация центриолей сбрасывает энтропию на уровне органеллы. **CCP1-6 — индикатор степени энтропии.** PolyE накапливается как компенсация. Баланс TTLL/CCP = маркер борьбы центриоли с энтропией.
+
+**1. Пассивный накопитель энтропии — основа старения.** Как любая материальная структура, центриоль накапливает энтропию по второму закону термодинамики: polyE, карбонилирование, структурные дефекты. Это пассивно, универсально, неизбежно. С ростом энтропии центриоль хуже выполняет обе функции: (а) как организатор центросомы — меньше микротрубочек, дезорганизованное веретено, задержка митоза, ошибки сегрегации хромосом; (б) как организатор цилии — дефектный сигналинг (Hedgehog, Wnt, TGF-β). Стволовые клетки делятся медленнее, производят меньше потомства, хуже отвечают на сигналы морфогенов. Самообновление тканей падает. Организм стареет.
+
+**2. Активный регулятор дифференцировки — храповик.** Через DID-РНК, CAMC, NANOG-секвестрацию и cilium-сигналинг центриоль активно поддерживает дифференцированное состояние. **Это ЕДИНСТВЕННЫЙ механизм, которым центриоль блокирует тотипотентность.** Энтропия — не второй механизм. Энтропия ЛОМАЕТ этот механизм. Когда активная регуляция падает ниже порога, клетка не возвращается к тотипотентности — она становится РАКОВОЙ (центросомная амплификация, фрагментация PCM, анеуплоидия). Поэтому недостаточно дождаться «старения» центриоли — нужна контролируемая элиминация + de novo замена.
+
+**Фундаментальный принцип (2026-07-12):**
+
+1. **Центриоль стареет по второму закону термодинамики — как любая вещественная структура.** Не от делений, не от участия в дифференцировке. Энтропия накапливается пассивно и универсально — у центриолей, белков, липидов, всех молекул.
+
+   **PolyE и подобные молекулы — не повреждение, а КОМПЕНСАЦИЯ дисфункции.** Когда центриоль накапливает энтропию (карбонилирование, структурные дефекты), TTLL-ферменты добавляют полиглутамилирование для стабилизации микротрубочек. Это активный защитный ответ, а не пассивный маркер старения. CCP-деглутамилазы удаляют polyE при восстановлении. Баланс TTLL/CCP отражает, насколько центриоль борется с энтропией — не саму энтропию.
+
+   **Энтропия — не храповик и не барьер.** Храповик — активная регуляция (DID-РНК, CAMC, NANOG, cilium). Энтропия ЛОМАЕТ активную регуляцию → клетка не возвращается к тотипотентности, а становится раковой.
+
+2. **Каждое асимметричное деление продвигает храповик на один щелчок.** Старая центриоль → стволовая клетка (сохраняет текущий статус дифференцировки). Новая центриоль → дифференцирующаяся клетка (шаг вперёд, к следующему статусу).
+
+3. **Стволовые клетки накапливают старые центриоли** вместо того, чтобы избавляться от них. При асимметричном делении: стволовая получает старую центриоль + большинство НОВЫХ молекул (белки, липиды, РНК); дифф-ка получает новую центриоль + большинство СТАРЫХ молекул. Стволовая клетка — «чистая» линия с единственным старым элементом (центриоль). Попытки «починить» центриоль обычно заканчиваются малигнизацией.
+
+4. **Разные центриоли несут разные CAMC-профили** — гипотетические структуры индукции необратимой дифференцировки. Старая центриоль ассоциирована с CAMC_old (удерживает стволовое состояние), новая — с CAMC_new (толкает в дифференцировку). Варианты CAMC_new (Y₁, Y₂, Y₃...) определяют конкретную линию. Храповик ветвящийся.
+
+5. **DID-частицы (Differentiation-Inducing Determinants) — конкретный молекулярный счётчик.** Внутри CAMC находятся гипотетические частицы индукции необратимой дифференцировки:
+   - (а) при асимметричном делении одна DID-частица отщепляется и уходит с новой центриолью в дифференцирующуюся клетку;
+   - (б) при редупликации центриоли DID редуплицируются, но в меньшем количестве на дочерней.
+
+   **DID может не закончиться.** Запас DID может быть достаточным для многих делений. Проблема в другом: **второй закон термодинамики делает центриоль-носитель всё более нестабильной со временем.** Даже если DID=N неизменно, сама центриоль накапливает polyE, карбонилирование, ALMS1-конденсаты. Со временем она становится настолько повреждённой, что больше не может надёжно удерживать DID или передавать их при делении. Старение стволового компартмента — это не истощение счётчика, а **деградация носителя счётчика.**
+
+   **Θ-индекс — функциональность центриоли, НЕ статус дифференцировки.** Энтропия и дифференцировка — две разные оси. Θ измеряет, насколько хорошо центриоль выполняет свои функции (центросома + цилия). Статус дифференцировки определяют генные сети (GRN). Высокий Θ = центриоль плохо работает → старение. GRN = какие сети включены → дифференцировка.
+
+   **Молекулярная природа DID (Tqemaladze, 2026-07-12): DID = РНК.** DID-РНК → обратная транскриптаза → ДНК → встройка в центромеру/повторы → отключение одной генной сети + включение другой. DID-РНК ограничены в количестве. LINE1/HERV — «одомашненные» потомки.
+
+   **Три шага — Eliminate → Reprogram → Rebuild.** Как в природе. (1) ELIMINATE — удаление старой центриоли (Θ → 0). (2) REPROGRAM — DUX4+TPRX1. (3) REBUILD — de novo сборка (PLK4, SAS-6, STIL, CPAP). **De novo центриоль — ИНСТРУМЕНТ ПЕРЕКЛЮЧЕНИЯ генных сетей.** С её помощью отключаются сети, поддерживавшие нетотипотентное состояние, и включаются сети, поддерживающие тотипотентное состояние дифференцировки — до следующего переключения. Тотипотентность — такое же состояние дифференцировки, как и любое другое, просто с другим набором включённых генных сетей.
+
+**Сперматозоид приносит затравки, не матрицы.** Центриоли сперматозоида могут организовать центросому, но не являются темплатами для новых центриолей. De novo сборка в бластомерах происходит с использованием этих затравок, но строит НОВЫЕ центриоли, свободные от эпигенетического груза.
+
+**C. elegans: элиминация происходит, но у соматических клеток нет сброса генных сетей (GRN reset).** Без Reprogram и Rebuild генным сетям нечем переключиться. Только Eliminate → клетка остаётся в текущем состоянии.
+
+   **Состояние взрослых стволовых клеток — асимметрия DID и асимметрия стабильности.** Две центриоли различаются по двум параметрам: (1) запас DID (одна N, вторая 0); (2) степень термодинамической деградации (старая центриоль более повреждена). При асимметричном делении дочерняя клетка с DID=N сохраняет стволовость, но получает всё более нестабильную центриоль. Рано или поздно нестабильность достигает порога — центриоль теряет способность удерживать DID → функциональное истощение.
+
+4. **Старение организма — цена за истинную дифференциацию.** Необратимая дифференцировка = необратимое закрытие одних генных сетей (GRN) + открытие других. **Наивные клетки: GRN открыты** — бивалентный хроматин (H3K4me3 + H3K27me3), гены доступны → TLSC/hTBLC работают без центриолей. **Сома: GRN закрыты** — H3K9me3, DNA-метилирование, LAD-секвестрация. Центриоль — физический участник поддержания закрытых GRN (DID-РНК, NANOG-секвестрация, cilium-сигналинг). Элиминация центриоли убирает физический якорь закрытия — сети могут быть открыты DUX4+TPRX1 и остаться открытыми.
+
+7. **CCP1-6 частично обратимы,** но не могут полностью сбросить центриоль. Частичный ремонт ≠ полный сброс.
+
+8. **Аутофагия может разрушать центриоли** (показано в C. elegans), но: (а) germline использует специализированную Polo/PCM программу; (б) в стволовых клетках центриоли защищены от аутофагии; (в) частичная деградация ≠ полный сброс.
+
+9. **Только элиминация + de novo сборка даёт полный сброс.**
+
+10. **Технические риски:** (а) центринон при суб-насыщающих дозах вызывает амплификацию, не элиминацию; (б) пифитрин-α нестабилен, бьёт по NF-κB — критический контроль OSKM+p53i без элиминации обязателен; (в) DUX4 токсичен — только Tet-On; (г) n≥10, пилот n=3; (д) человеческие клетки в мышиных эмбрионах — видовой барьер, идеально — один вид (mouse→mouse).
+
+11. **Направление движения имеет значение.** Вниз от тотипотентности (зигота → бластоциста) — естественный путь, барьеров нет. Вверх от соматической клетки к тотипотентности — против храповика, через четыре механизма центриолярного удержания (секвестрация NANOG, сигналинг реснички, асимметричное наследование, пространственное ограничение хроматина). Бипотентные состояния in vitro без элиминации достигаются из плюрипотентных клеток (ES/iPSC) — движение вниз, не вверх. UPS деградирует отдельные повреждённые центросомные белки, но нет координированного механизма quality-control, восстанавливающего всю органеллу до «молодого» состояния. Однако центриоль можно **элиминировать и создать de novo** — именно это происходит в мейозе: ооцитные центриоли элиминируются, сперматозоидные центриоли реструктурируются в seeds (не темплаты) для de novo сборки в бластомерах нового организма.
+12. **Maturity sensor — альтернативная модель (Lindhout 2021).** Центриоль = датчик зрелости, не замок. Потеря центриоли снижает порог дифф-ки неспецифически. Обе модели (hardware reset и maturity sensor) предсказывают повышение пластичности после элиминации — трудноразличимы без специальных тестов. Различающие эксперименты: (а) ядерный NANOG — если ↑ → активный регулятор; (б) элиминация без факторов — если хаотичная активация ZGA → maturity sensor; (в) IFT88 shRNA — если потеря реснички имитирует потерю центриоли → эффект через cilium. Модели не взаимоисключающие: центриоль может быть и сенсором (через cilium), и хабом (через NANOG/DID).
 
 **Эпигеном = software.** Перепрограммируем факторами Яманаки, но неспособен исправить hardware-дефекты. Это объясняет, почему частичное репрограммирование омолаживает метилом, но не восстанавливает полную репликативную способность: центриолярный hardware не заменён.
 
-## 0.1. Centriole as Conditional Entropy Carrier (Stress Integrator)
+## 0.1. Totipotency vs Pluripotency: Hardware + Software Reset (2026-07-12)
+
+**Pluripotency factors (OSKM)** reset the software (epigenome) to an ICM-like state (~E4.5). The cell can form all three germ layers but NOT trophectoderm. The centriole — as a physical organelle — is untouched by transcription factors.
+
+**Totipotency factors** (DUX4/DUX, TPRX1, ZSCAN4, DPPA3/STELLA) reset to a zygotic state (~E1.5):
+- DUX4 opens chromatin at ZGA loci, activates MERVL transposons
+- TPRX1 drives human 8-cell stage transcription
+- ZSCAN4 elongates telomeres via recombination (not telomerase)
+- DPPA3 protects imprinted loci from demethylation
+- Active (TET-mediated) total methylation erasure, not passive
+
+**In nature**, totipotency involves centriole elimination: oocyte centrioles are cleared, sperm centrioles serve only as seeds for de novo assembly. **The hardware is reset.**
+
+**MCARA prediction:**
+1. Centriole elimination + OSKM → more efficient pluripotency (≥2×), possibly intermediate state between pluri- and totipotency
+2. Centriole elimination + totipotent factors (DUX4 + TPRX1) → possibly true totipotency (MERVL+, Zscan4+, CDX2+ trophectoderm)
+3. OSKM alone (centriole intact) → pluripotency only, never totipotency — because the hardware lock remains
+
+**Test:** MERVL activation, Zscan4 expression, CDX2+ trophectoderm differentiation capacity.
+
+**Key insight:** Partial reprogramming (OSK) rejuvenates the methylome but fails to restore full replicative capacity. The centriole — hardware that transcription factors cannot reset — may be why.
+
+## 0.2. Centriole as Conditional Entropy Carrier (Stress Integrator)
 
 Центриоль — не автономный счётчик делений, а **стресс-интегратор.** polyE накапливается, когда центриоль работает как центросома-организатор (стресс-чувствительное состояние), и прекращает накопление, когда центриоль темплатирует цилию. Накопление зависит от функционального состояния и стресс-среды, а не только от хронологического времени.
 
@@ -23,19 +110,68 @@ The sinc-MT/KIFC3 pathway (Robichaud 2024, PMID 39266565) — это стрес�
 ### Линейное приближение
 ```
 S_centriole(t) = S₀ + β·t + η(t) − δ·CCP(t)
-CAASM(N) = CAASM₀ − λ·N_asym
+CAMC(N) = CAMC₀ − λ·N_asym
 ```
 где:
 - `β·t` — время-зависимое накопление энтропии (термодинамическое)
 - `η(t)` — окислительные повреждения (ROS → центриоль)
 - `δ·CCP(t)` — активность деглутамилаз (снижается с возрастом). Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 удаляют polyGlu. CCP1 KO → impaired osteogenesis (PMID 40349688).
-- `λ·N_asym` — ремоделирование CAASM при асимметричных делениях
+- `λ·N_asym` — ремоделирование CAMC при асимметричных делениях
 
 ### Сигмоидальная модель (биологически реалистичнее)
 ```
 S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
 ```
 Критический порог `t½` — точка ускорения накопления polyE, потенциально соответствующая onset репликативного сенесценса.
+
+## 0.3. Three Classes of Centriole Elimination Methods: Disentangling Centriole vs CAMC (2026-07-09)
+
+**Fundamental question:** What locks the cell in the differentiated state — the centriole itself (its microtubules, polyE) or the hypothetical Centrosome-Associated Memory Complex (CAMC)?
+
+**Three classes of methods make this distinction experimentally testable:**
+
+| Class | Mechanism | Removes centriole? | Removes CAMC? | Time |
+|-------|-----------|:---:|:---:|------|
+| **PHYSICAL** (laser ablation, microsurgery) | Direct organelle removal | ✅ Whole organelle + PCM | ❌ Removed together | Instant |
+| **CHEMICAL** (centrinone, Plk4 siRNA) | Prevent duplication → dilution over 2-3 cycles | ❌ Only prevents new | ✅ Persists on existing centriole | Days |
+| **ANTIBODY** (GT335 loading) | Disassemble centriolar MTs, PCM remains | ✅ MTs only | 🟡 PCM remains, unknown | Hours |
+
+### Experimental Logic:
+
+```
+IF laser ablation + OSKM → iPSC succeeds
+   BUT centrinone + OSKM → iPSC blocked
+   → CAMC EXISTS (laser removed it, centrinone preserved it)
+
+IF laser = centrinone (identical outcome)
+   → centriole microtubules/polyE = the actual memory carrier
+   → CAMC is secondary or nonexistent
+
+IF GT335 + OSKM → iPSC succeeds
+   → CAMC components are in centriolar MTs (removed by GT335)
+IF GT335 + OSKM → iPSC blocked
+   → CAMC components are in PCM (GT335 spares PCM)
+```
+
+### Key Physical Methods Literature:
+
+| Study | PMID | Method | Cells | Key Result |
+|-------|------|--------|-------|------------|
+| Maniotis & Schliwa 1991 | **1934057** | Microsurgery | BSC-1 | Growth ✅, division ❌, >10 cycles without centrioles |
+| La Terra et al. 2005 | **15738265** | Laser ablation | HeLa | Division ✅, de novo centrioles form |
+| Uetake et al. 2007 | **17227892** | Laser + microsurgery | RPE1, HMEC | G1→S ✅ without centrioles, p38-dependent arrest |
+| Bobinnec et al. 1998 | **9852152** | GT335 loading | HeLa | Centriolar MT disassembly in vivo |
+
+**Critical implication (Uetake 2007):** Normal human cells enter S-phase WITHOUT centrioles. Thus, the centriole is NOT required for cell cycle progression per se. However, centrosome loss acts as a stress (p38-dependent), additive with other stresses. For the centrinone + OSKM experiment, both p53 inhibitor (pifithrin-α) AND p38 inhibitor (SB203580) may be necessary.
+
+### Predictions for CEDAR:
+
+| Experiment | Method class | CEDAR prediction |
+|------------|:-----------:|------------------|
+| Laser ablation + OSKM | Physical | Reprogramming POSSIBLE (CAMC removed) |
+| Centrinone + OSKM | Chemical | Reprogramming BLOCKED (CAMC persists) |
+| GT335 loading + OSKM | Antibody | Intermediate (PCM/CAMC may remain) |
+| Centrinone then laser | Sequential | CAMC preserved then removed |
 
 ### Динамика polyE баланса
 ```
@@ -79,7 +215,7 @@ Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are cons
 
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCARA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCARA.
 
-**Axiom M5 (Time-Driven Entropy + Asymmetric CAASM — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centriolar Aging-Associated Signaling Module (CAASM). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAASM. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAASM (active, programmatic). Full specification: CEDAR/THEORY.md.
+**Axiom M5 (Time-Driven Entropy + Asymmetric CAMC — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centrosome-Associated Memory Complex (CAMC). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAMC. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAMC (active, programmatic). Full specification: CEDAR/THEORY.md.
 
 ## 3. Formal Definitions
 
@@ -142,7 +278,7 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 
 | # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
 |---|------|--------|---------|----------------|---------------|---------|
-| 1 | **Centriolar Polyglutamylation (CP)** | CEDAR | Divisions + Time | ~50–80 (HSC), ~30–50 (epithelium) | Months–Years (mass spectrometry) | Stress integrator. polyE accumulation + CAASM. `α_i` significant, `β_i` driven by tubulin turnover. **Фаворит гонки** — без защиты. |
+| 1 | **Centriolar Polyglutamylation (CP)** | CEDAR | Divisions + Time | ~50–80 (HSC), ~30–50 (epithelium) | Months–Years (mass spectrometry) | Stress integrator. polyE accumulation + CAMC. `α_i` significant, `β_i` driven by tubulin turnover. **Фаворит гонки** — без защиты. |
 | 2 | **Epigenetic Drift (SA-DNAm)** | EpigeneticDrift | Dominantly Time + Divisions | `α_i → 0` for most cells; `α_i > 0` in proliferating compartments | Doubling time of epigenetic age (~3.6 years DunedinPACE) | SA-DNAm trajectory (Wagner 2013). TERT does NOT prevent. EPIC arrays (850K CpG). Замедлен гипоксией на ~30-40%, но тикает. |
 | 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (mtDNA damage turnover) | ROS повреждает центриоль (η(t)), но не originates from it. **Защищён 2% O₂.** |
 | 4 | **Structural (Centriole/Cilium)** | CEDAR | Divisions + Time | ~50–80 (follows C1) | Months–Years | Tubulin code (polyE, detyrosination). Цилия ↔ центриоль переключатель. **Ведомый** — следует за C1. |

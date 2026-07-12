@@ -17,6 +17,28 @@
 
 ---
 
+## 1.5. Physical Methods of Centriole Elimination (2026-07-09)
+
+### Laser Ablation and Microsurgery
+
+| Claim | PMID | Article | Verified | Strength |
+|-------|------|---------|----------|----------|
+| Microsurgical removal → blocks cell division, no centriole regeneration in BSC-1 | 1934057 | Maniotis A, Schliwa M. Cell. 1991;67(3):495-504 | ✅ | Strong |
+| Laser ablation → HeLa cells divide, de novo centrioles assemble | 15738265 | La Terra S et al. J Cell Biol. 2005;168(5):713-22 | ✅ | Strong |
+| Laser + microsurgery in normal human cells (RPE1, HMEC) → G1 arrest via p38 (not p53), cells enter S without centrioles | 17227892 | Uetake Y et al. J Cell Biol. 2007;176(2):173-82 | ✅ | Strong |
+| GT335 antibody loading → centriolar MT disassembly in vivo | 9852152 | Bobinnec Y et al. J Cell Biol. 1998;143(6):1575-89 | ✅ | Strong |
+| Centrioles resist forces via polyglutamylation | 15898952 | Abal M et al. Biol Cell. 2005;97(6):425-34 | ✅ | Moderate |
+
+### Key Insight: Three Classes of Elimination Methods
+
+| Class | Methods | Removes CAMC? | Implication |
+|-------|---------|:---:|-------------|
+| **Physical** (laser, microsurgery) | Whole organelle + PCM | ❌ No | Tests centriole necessity |
+| **Chemical** (centrinone, Plk4 siRNA) | Dilution over cycles | ✅ Yes | Tests CAMC necessity |
+| **Antibody** (GT335) | MT only, PCM remains | 🟡 Unknown | Tests MT vs PCM |
+
+---
+
 ## 1. Supporting Literature Sources (Verified)
 
 ### Supports the Concept of Parallel Counters (Axiom M1)
@@ -222,9 +244,25 @@
 
 ## 8. Фундаментальный принцип CEDAR (Jaba Tqemaladze, 2026-07-05)
 
+## 9. Totipotency Factors — Literature (2026-07-12)
+
+> Контекст: гипотеза о достижении тотипотентности через centriole elimination + тотипотентные факторы (см. THEORY.md §0.1)
+
+| Фактор | Функция | PMID/DOI | Статья |
+|--------|--------|----------|--------|
+| **DUX4** (человек) / Dux (мышь) | Pioneer factor ZGA, активация MERVL, master regulator 2C-like state | 28369030 | Hendrickson PG et al. Conserved roles of mouse DUX and human DUX4 in activating cleavage-stage genes and MERVL/HERVL retrotransposons. *Nat Genet*. 2017;49:925-934 |
+| **ZSCAN4** | Теломерное удлинение через рекомбинацию, геномная стабильность в ранних эмбрионах | 20139984 | Zalzman M et al. Zscan4 regulates telomere elongation and genomic stability in ES cells. *Nature*. 2010;464:858-863 |
+| **TPRX1** | Человеческий 8-клеточный транскрипционный фактор; активирует гены раннего эмбриогенеза | 38271721 | Zou Z et al. Translatome and transcriptome co-profiling reveals a role of TPRXs in human zygotic genome activation. *Science*. 2024;384:168-174 |
+| **MERVL** (мышь) | Эндогенный ретровирус — маркер 2C-like состояния, тотипотентности | 28369030 | (см. Hendrickson 2017) |
+| **DPPA3/STELLA** | Защита импринтированных локусов от деметилирования | 17143267 | Nakamura T et al. Stella is a maternal effect gene required for normal early development in mice. *Nat Cell Biol*. 2007;9:64-71 |
+| **TET1/2/3** | Активное деметилирование ДНК в зиготе и раннем эмбрионе | 21496894 | Gu TP et al. The role of Tet3 DNA dioxygenase in epigenetic reprogramming by oocytes. *Nature*. 2011;477:606-610 |
+| **CARM1** | H3R26me2 — открытие хроматина на локусах тотипотентности | 38531368 | Hupalowska A et al. CARM1 and paraspeckles regulate pre-implantation mouse embryo development. *Cell*. 2024;187:1487-1503 |
+
+**Ключевое отличие от OSKM:** OSKM = software-only reset. Totipotent factors + centriole elimination = hardware + software reset. В природе тотипотентность всегда сопровождается элиминацией центриолей.
+
 > **polyGlu = энтропия.** Количество polyGlu на центриоли показывает, сколько энтропии накопила центриоль. Асимметричное наследование старых центриолей — элемент механизма необратимой дифференцировки. **Накопление энтропии в стволовых клетках через наследование старых центриолей — плата за возможность необратимой дифференцировки.**
 
-**Для MCARA:** Counter #1 — энтропийный счётчик (CAASM — Centriolar Aging-Associated Signaling Module). **Время** накапливает энтропию, **асимметричные** деления меняют CASID. Симметричные не меняют.
+**Для MCARA:** Counter #1 — энтропийный счётчик (CAMC — Centrosome-Associated Memory Complex). **Время** накапливает энтропию, **асимметричные** деления меняют CASID. Симметричные не меняют.
 
 **Литературная поддержка (энтропийное старение — emerging mainstream):**
 
