@@ -17,7 +17,8 @@
 > 3. Состав рецензентов определяется **исходя из CONCEPT.md** проекта — темы, дисциплин, методов, упомянутых экспертов. Рецензенты подбираются под конкретный CONCEPT, не по шаблону.
 
 
-**Parent:** LC/MCARA/CEDAR/Aubrey
+**Parent:** LC/MCARA/CEDAR/Aubrey-Platform
+**Alias:** ARGUS-Hardware (ранее CEDAR/Aubrey/ARGUS — переименован 2026-07-10 для устранения конфликта с MCARA/ARGUS-LP)
 **CONCEPT.md:** CONCEPT.md
 **Created:** 2026-05-17
 

@@ -11,7 +11,7 @@ Integrated control plane:
 
 | Phase | Tasks | ETA |
 |---|---|---|
-| P0 — engineering | ARGUS-LP design + build + calibration (Tsomaia G.) | ~5 mo |
+| P0 — engineering | ARGUS-LP design + build + calibration () | ~5 mo |
 | P1 — molecular | RITE cassette design, lentivirus packaging, clonal isolation | ~3 mo (parallel) |
 | P2 — imaging | ARGUS-LP commissioning: beads → transient → stable clones, environmental validation | ~2 mo (overlaps P1) |
 | P3 — intervention | NAC treatment (Phase III), forced asymmetry construct generation | ~2 mo (overlaps P2) |

@@ -9,12 +9,14 @@
 - [x] CONCEPT.md v4.4 — Rejuvenation Platform
 - [x] MCARA Concept Note (Desktop + docx)
 - [x] Trifunovic (Cologne) вошла в консорциум (C3)
-- [ ] 🔴 **Gönczy отказал** — найти замену на C1 (центриоль)
-- [ ] Письмо Wagner (RWTH) — C2 Epigenetic
-- [ ] Письмо Suomalainen (Helsinki) — C3 Mitochondrial
-- [ ] Follow-up Magiera (Curie) — C4 Structural
-- [ ] Follow-up Geiger (Ulm) — 👨‍⚖️ Судья гонки, HSC мышь, LoI
-- [ ] Письмо Senescence/Safety lab
+- [x] 🔴 **Gönczy отказал** — найти замену на C1 (центриоль)
+- [x] Написать **Bettencourt-Dias** (Drosophila, Science 2016, PMID 27229142) — C1 experimental validation ✅ 10 июл
+- [x] Написать **Čajánek** (PLK4/STIL, hPSC, Stem Cell Reports 2018, PMID 30197118) — C1 experimental validation ✅ 10 июл
+- [x] Письмо Wagner (RWTH) — C2 Epigenetic ✅
+- [x] Письмо Suomalainen (Helsinki) — C3 Mitochondrial ✅
+- [x] Follow-up Magiera (Curie) — C4 Structural ✅
+- [x] Follow-up Geiger (Ulm) — 👨‍⚖️ Судья гонки, HSC мышь, LoI ✅
+- [x] Письмо Senescence/Safety lab ✅
 - [ ] Подписать LoI со всеми партнёрами
 - [ ] Написать Part B заявки
 
@@ -24,17 +26,20 @@
 - [x] Письмо Филиппову ($1,600 софинансирование)
 - [x] Поиск открытых датасетов с центриолями (не найдены)
 - [x] Звонок Gönczy 7 июля (отказал)
-- [ ] 🔴 **Gönczy отказал** — пересмотреть стратегию C1
+- [x] 🔴 **Gönczy отказал** — пересмотреть стратегию C1
+- [x] Письмо Gönczy (5 data points) — ответ получен 9 июл: Sci Adv 2023 (PMID 37256957), реверс-эксперимент не делал никто
+- [x] Благодарственное письмо Gönczy → `Desktop/Gonczy_Thanks_draft.md`
+- [x] Concept note реверс-эксперимента для Bettencourt-Dias / Čajánek ✅ 10 июл
 - [ ] Предварительные данные до 1 окт 2026
 
 ## 🔴 P0 — Статьи
 
-- [ ] **bioRxiv desk reject (Gatekeeper)** → подать на Zenodo
-- [ ] ARGUS-LP → RSI — ждать решения
-- [ ] Centrioles → npj Aging — ждать решения
-- [ ] MCARA → Biogerontology — ждать peer review
-- [ ] Ze: Formal Axiomatics → Foundations of Physics — ждать
-- [ ] Ze_Z₂ → Annalen der Physik — ждать
+- [x] **bioRxiv desk reject (Gatekeeper)** → на ResearchGate ✅
+- [x] ARGUS-LP → RSI — ждать решения ✅
+- [x] Centrioles → npj Aging — ждать решения ✅
+- [x] MCARA → Biogerontology — ждать peer review ✅
+- [x] Ze: Formal Axiomatics → Foundations of Physics — ждать ✅
+- [x] Ze_Z₂ → Annalen der Physik — ждать ✅
 
 ## 🟡 P1 — ARGUS-LP
 

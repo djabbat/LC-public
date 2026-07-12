@@ -18,6 +18,7 @@
 
 
 **Parent:** LC/MCARA/CEDAR
+**Alias:** Aubrey-Platform (ранее CEDAR/Aubrey — переименован 2026-07-10 для устранения конфликта с MCARA/Aubrey)
 **CONCEPT.md:** CONCEPT.md
 **Created:** 2026-05-17
 

@@ -1,5 +1,21 @@
 # CEDAR — Memory
 
+## 2026-07-10 — Сабмит в BioEssays + препринт Research Square
+
+**События:**
+- Препринт «Centriole Elimination as a Gateway to a New Differentiation State» подан на Research Square: `rs-10309814` (статус: screening, язык 8/10 → Rubriq 10/10)
+- Полный сабмит в BioEssays (Wiley): `5285ce27`, статья «Centriole Elimination as a Gateway to a New Differentiation State: A Hypothesis»
+- Article type: Problems & Paradigms
+- IF 3.3, acceptance 37%, median first decision 5 дней, PubMed-индексирован, бесплатно (subscription model)
+- EIC: Kerstin Brachhold & Emery Bresnick
+- Рукопись: `~/Desktop/Centriole_Elimination_Hypothesis_BioEssays.docx` (Times New Roman 12pt, 17 стр.)
+- Cover letter: `~/Desktop/Cover_Letter_BioEssays.docx`
+- Язык вычитан вручную, следы AI убраны
+- 29 верифицированных PMID, включая самоцитирование Tqemaladze 2023 [25]
+- Gönczy подтвердил пробел (personal communication, July 2026) — указано в статье
+
+**Параллельно:** Centrioles в npj Aging (`2e8466c7`) — Peer Review с 12 июня.
+
 ## 2026-07-05 — FUNDAMENTAL CORRECTION: Time drives entropy, divisions change CAASM
 
 **Джаба:** Центриоли накапливают энтропию со временем, как все вещественные структуры. С делениями изменяется CAASM. Два независимых процесса: (1) время → энтропия (пассивный, термодинамический), (2) деления → CAASM (активный, программируемый).
