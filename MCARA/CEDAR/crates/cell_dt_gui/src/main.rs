@@ -1,4 +1,4 @@
-/// CDATA v3.0 — Desktop GUI (eframe / egui)
+/// CEDAR v3.0 — Desktop GUI (eframe / egui)
 ///
 /// Layout:
 ///   Left  (200px) — preset + interventions + age cursor
@@ -25,7 +25,7 @@ struct VarMeta {
 
 const VARS: [VarMeta; 9] = [
     VarMeta { name:"Centriole Damage", unit:"index 0–1",
-        description:"Core CDATA. Irreversible centriolar DNA damage.\nα=0.0082 · ν(t) · (1−Π(t))",
+        description:"Core CEDAR. Irreversible centriolar DNA damage.\nα=0.0082 · ν(t) · (1−Π(t))",
         y_max:1.0, warn:0.40, crit:0.70, bad_is_high:true },
     VarMeta { name:"Stem Cell Pool", unit:"fraction",
         description:"Residual regenerative capacity.\n= 1 − damage × 0.8. Below 0.3 → regen failure.",
@@ -150,7 +150,7 @@ impl eframe::App for CdataApp {
             .show(ctx, |ui| {
                 egui::ScrollArea::vertical().show(ui, |ui| {
                     ui.add_space(4.0);
-                    ui.heading(RichText::new("CDATA v3.0").strong());
+                    ui.heading(RichText::new("CEDAR v3.0").strong());
                     ui.label(RichText::new("Cell Digital Twin Simulator").small().weak());
                     ui.separator();
 
@@ -521,12 +521,12 @@ mod tests {
 fn main() -> eframe::Result<()> {
     let options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_title("CDATA v3.0 — Cell Digital Twin Simulator")
+            .with_title("CEDAR v3.0 — Cell Digital Twin Simulator")
             .with_inner_size([1300.0, 840.0]),
         ..Default::default()
     };
     eframe::run_native(
-        "CDATA v3.0",
+        "CEDAR v3.0",
         options,
         Box::new(|_cc| Box::new(CdataApp::new())),
     )

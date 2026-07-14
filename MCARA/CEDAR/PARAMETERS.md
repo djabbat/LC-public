@@ -25,7 +25,7 @@ CEDAR is a lightweight data transformation and validation framework designed for
 | status | draft | Project status (draft / alpha / beta / stable) |
 | language | English | Primary documentation language |
 | license | MIT | Open-source license |
-| repository | github.com/example/cdata | Source code repository |
+| repository | github.com/example/cedar | Source code repository |
 
 ## Timeline
 

@@ -56,7 +56,7 @@ cp .env.example .env
 ```bash
 ENVIRONMENT=development
 PORT=3003
-DATABASE_URL=postgres://cn:cn@localhost/cdata_db
+DATABASE_URL=postgres://cn:cn@localhost/cedar_db
 LOG_LEVEL=debug
 ```
 
@@ -64,7 +64,7 @@ LOG_LEVEL=debug
 
 1. Create database:
 ```bash
-createdb cdata_db
+createdb cedar_db
 ```
 
 2. Run migrations:
@@ -95,8 +95,8 @@ Similar endpoints for all other entities.
 ### Running with Docker
 
 ```bash
-docker build -t cdata-backend .
-docker run -p 3003:3003 --env-file .env cdata-backend
+docker build -t cedar-backend .
+docker run -p 3003:3003 --env-file .env cedar-backend
 ```
 
 ## Development

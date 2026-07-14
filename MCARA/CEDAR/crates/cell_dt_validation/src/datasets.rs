@@ -1,4 +1,4 @@
-/// Synthetic reference datasets for CDATA v3.0 calibration.
+/// Synthetic reference datasets for CEDAR v3.0 calibration.
 ///
 /// All values are derived from published literature (see PMID annotations).
 /// Each dataset covers the training age range 20–50 years.

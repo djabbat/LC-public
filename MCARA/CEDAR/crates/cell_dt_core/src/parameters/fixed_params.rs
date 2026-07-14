@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-/// 32 параметра модели CDATA v3.2.3
+/// 32 параметра модели CEDAR v3.2.3
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct FixedParameters {
     // Базовые
@@ -153,7 +153,7 @@ impl FixedParameters {
     ///   P_A = p0 · exp(−β_A · D) · (1 − fidelity_loss · (1 − spindle_fidelity))
     /// Used by stochastic per-division model (stochastic.rs).
     ///
-    /// Empirical validation (CDATA v4.6):
+    /// Empirical validation (CEDAR v4.6):
     /// - Human NPCs: ~80% of self-renewing daughters inherit older centrosome (Royall 2023, eLife)
     /// - Murine CD8+ T cells: >90% directed inheritance (Barandun & Oxenius 2025, Cell Reports)
     /// - p0=0.94 is the upper limit (healthy young cell, full Ninein activity, no damage)

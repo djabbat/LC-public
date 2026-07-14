@@ -4,6 +4,45 @@
 
 ---
 
+## 2026-07-13: Анализ Research Feed — ClpP, mRNA-регионализация, mei-P26 + похожие статьи
+
+- **Событие:** Анализ 7 статей из ленты Jaba + PubMed-поиск похожих (митохондриальный QC, ClpP/LONP1, mRNA-локализация).
+- **Результат:** 4 категории статей (ТОП-3 + 4 дополнительных из ленты, 5 из поиска по митохондриальному QC, 5 из поиска по ClpP/LONP1). Всего ~20 высокорелевантных PMID.
+- **КЛЮЧЕВОЕ:** CDATA переименован в CEDAR — заменено в AGENTS.md, директории уже переименованы.
+- **КЛЮЧЕВЫЕ НАХОДКИ ДЛЯ MCARA:**
+
+### 1. Серия ClpP — митохондриальный протеостаз и мейоз
+| PMID | Статья | Год | Связь |
+|------|--------|-----|-------|
+| 42281331 | Feng HW et al. ClpP Ensures Mitochondrial Integrity and Meiotic Progression — Andrology | 2026 | 🔥 ClpP cKO → мейотический блок, дефекты митохондрий |
+| 37798322 | Guo C et al. ClpP/ClpX deficiency → impaired mTORC1 signaling — Commun Biol | 2023 | mTOR-ось: ClpP → митохондрии → mTORC1 → мейоз |
+| 23851121 | Gispert S et al. Clpp null → infertility, mtDNA accumulation — Hum Mol Genet | 2013 | Первая характеристика Clpp KO |
+| 38927630 | Key J, Gispert S, Auburger G. CLPP/CLPX in matrix condensates near IMM — Genes | 2024 | Молекулярный механизм CLPP/CLPX |
+| 38341415 | Ng AQE et al. Nutrient-dependent intron → germline mitochondrial QC — Nat Commun | 2024 | Связь нутриентов с митохондриальным QC в герм-клетках |
+
+### 2. Митохондриальный UPR и протеазы
+| PMID | Статья | Журнал | Год |
+|------|--------|--------|-----|
+| 42216472 | Czechowicz P et al. The mammalian mitochondrial UPR — multilayered circuit | FEBS J | 2026 |
+| 41655698 | Currie SQW et al. Molecular mechanisms of mitochondrial AAA+ proteases | J Biol Chem | 2026 |
+| 40903791 | Nandha SR et al. Targeting CLPP and LONP1 → proteotoxic stress | Cell Commun Signal | 2025 |
+
+### 3. mRNA-регионализация и клеточное паттернирование
+| Статья | Журнал | Связь с CEDAR |
+|--------|--------|---------------|
+| Albright AR et al. mRNA regionalization in giant single cell | PNAS 2026 | 🔥 Прямой proof: одиночная клетка → пространственное паттернирование → основа асимметричного деления |
+| Leite I et al. Cyst-ained connections in mammalian germline | Curr Top Dev Biol 2026 | Цисты герм-клеток — структурный контекст для mRNA-регионализации |
+
+### 4. Митоз→мейоз переход
+| Статья | Журнал | Связь |
+|--------|--------|-------|
+| Terry J et al. mei-P26 mutation → impaired chromosome dynamics | Genetics 2026 | Молекулярный gatekeeper: митоз→мейоз переход |
+| Iniesta-Cuerda M et al. SIRT1 haploinsufficiency → age-associated subfertility (α-tubulin hyperacetylation) | Biol Direct 2026 | Эпигенетический механизм возрастной субфертильности |
+
+- **Полный анализ:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
+
+---
+
 ## 2026-07-12: Анализ 144 references Manni et al. (IGF-1 senescence switch)
 
 - **Событие:** Глубокий анализ reference list статьи Manni et al. (Cytokine, 2026, PMID: 41905220) — 144 references.
@@ -240,7 +279,7 @@
 ## Rejection #29 — 2026-07-08 — bioRxiv (Gatekeeper)
 
 **Журнал:** bioRxiv
-**ID:** `BIORXIV/2026/737107`
+**ID:** `10.5281/zenodo.21299683`
 **Дней до решения:** 0 (скрининг)
 **Тип решения:** Desk reject — административный
 
@@ -420,7 +459,7 @@
 ## 2026-07-09 — Глубокий аудит MCARA (pi)
 
 ### Находки
-- **CDATA → CEDAR:** Проведено полное переименование в 12 активных файлах. _archive и _originals сохранены.
+- **CEDAR → CEDAR:** Проведено полное переименование в 12 активных файлах. _archive и _originals сохранены.
 - **4 статьи из фида Джабы:** Интегрированы в CEDAR/EVIDENCE.md §10.
   - Feng et al. (2026) — ClpP mitochondrial protease → meiosis (🔴 критически важно)
   - Mao et al. (2026) — Slmap → spermiogenesis defects (🟡 важно)
@@ -436,7 +475,7 @@
 - **Мета-анализ:** 4 митохондриальные протеазы (ClpP, YME1L, LONP1, PARL) → cell fate. Гипотеза: протеостатическая ось митохондрий.
 
 ### Решения
-- CDATA → CEDAR переименование во всех активных файлах
+- CEDAR → CEDAR переименование во всех активных файлах
 - Новые данные добавлены в: CEDAR/EVIDENCE.md §10, MitoROS/EVIDENCE.md §v4, Proteostasis/EVIDENCE.md §v4
 - CONCEPT.md (CEDAR) обновлён: новые оценки Counter'ов
 - STATE.md обновлены: CEDAR (→2026-07-09), EpigeneticDrift (переписан, был 2025-03-15)
@@ -449,7 +488,7 @@
 - ⚠️ MEMORY.md: EpigeneticDrift, MitoROS, Proteostasis, Telomere не обновлялись до этого аудита
 
 ### Оценки (обновлённые)
-- Counter #3 (Митохондриальный): 8.0 → 8.5/10
-- Counter #5 (Протеостаз): 6.5 → 7.5/10
+- Counter #3 (Митохондриальный): 8.5 → 9.0/10 (серия ClpP 2013-2026 укрепляет механизм)
+- Counter #5 (Протеостаз): 7.5 → 8.5/10 (ClpP/ClpXP + AAA+ протеазы обзоры 2026)
 - Counter #1 (Центриолярный): 7.5 → 8.0/10
 - Общая MCARA/CEDAR: 7.3 → 7.8/10

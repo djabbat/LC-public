@@ -108,7 +108,7 @@ pub struct CounterUpdate {
     pub tissue_type: Option<String>,
 }
 
-// CDATA-specific counter extension
+// CEDAR-specific counter extension
 #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
 pub struct CdataCounter {
     pub id: Uuid,

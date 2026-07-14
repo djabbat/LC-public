@@ -1,13 +1,13 @@
 //! O₂ dose-response simulation: N_Hayflick as a function of ambient O₂.
 //!
 //! Reproduces Figure 1B from Tqemaladze (2026) "Centriolar Damage Accumulation Drives
-//! Replicative Senescence" (target: Aging Cell). Validates CDATA v3.4 Group 8 parameters
+//! Replicative Senescence" (target: Aging Cell). Validates CEDAR v3.4 Group 8 parameters
 //! against Peters-Hall et al. (2020, FASEB J, DOI: 10.1096/fj.201901415R).
 //!
 //! Usage:
 //!   cargo run --example o2_dose_response --release
 //!
-//! Expected output (CDATA v3.4 predictions):
+//! Expected output (CEDAR v3.4 predictions):
 //!   [0.5%  O₂] EpithelialProgenitor: N_Hayflick ≈ 526
 //!   [2.0%  O₂] EpithelialProgenitor: N_Hayflick ≈ 148  (Peters-Hall: >200 + ROCKi)
 //!   [5.0%  O₂] HematopoieticStem:    N_Hayflick ≈ 101  (HSC niche)
@@ -17,7 +17,7 @@ use cell_dt_mitochondrial::{mito_shield_for_o2, predicted_hayflick, CellTypeShie
 
 fn main() {
     println!("═══════════════════════════════════════════════════════════════════");
-    println!("  CDATA v3.4 — O₂ Dose-Response: Predicted Hayflick Limit");
+    println!("  CEDAR v3.4 — O₂ Dose-Response: Predicted Hayflick Limit");
     println!("  Formula: N = D_crit / (α·ν·β × (1 − mito_shield([O₂])))");
     println!("  D_crit = 1000 a.u. | α·ν·β = 20 a.u./div");
     println!("  Ref: Tqemaladze 2026 (Aging Cell); Peters-Hall 2020 (FASEB J)");
@@ -118,7 +118,7 @@ fn main() {
     }
 
     println!("\n  Note: Peters-Hall benchmark uses ROCKi + feeder-free conditions.");
-    println!("  CDATA v3.4 models O₂ effect only; ROCKi adds synergistic protection.");
+    println!("  CEDAR v3.4 models O₂ effect only; ROCKi adds synergistic protection.");
     println!("  Full reconciliation: Tqemaladze (2026) §5.1 Hypotheses 1–3.");
     println!("═══════════════════════════════════════════════════════════════════");
 }

@@ -1,4 +1,4 @@
-/// CDATA v3.0 — Basic Simulation (uses AgingEngine)
+/// CEDAR v3.0 — Basic Simulation (uses AgingEngine)
 ///
 /// Drives all 6 subsystems through the AgingEngine integrator.
 /// Round 7 fixes are embedded in AgingEngine::step().
@@ -6,7 +6,7 @@
 use cell_dt_aging_engine::{AgingEngine, SimulationConfig, SimulationPreset, InterventionSet};
 
 fn main() {
-    println!("=== CDATA v3.0 — Basic Simulation (AgingEngine) ===\n");
+    println!("=== CEDAR v3.0 — Basic Simulation (AgingEngine) ===\n");
 
     // --- Baseline: Normal HSC ---
     let mut engine = AgingEngine::new(SimulationConfig::default()).expect("param validation");

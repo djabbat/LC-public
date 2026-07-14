@@ -57,7 +57,7 @@
  - При epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
  - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
  * **Разрешение:** Individual epigenetic_rate dominance объясняется linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). На group-level центриолярная механика **доминирует**.
- * **Следствие:** Counter #1 (CP) сохраняет canonical position, переформулирован как «structural age-tracker» per `CEDAR/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+ * **Следствие:** Counter #1 (CP) сохраняет canonical position, переформулирован как «structural age-tracker» per `CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md`. NMC-2 closed.
  * **Источник:** `~/Desktop/LC/CEDAR/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
 
 3. **Слабая экспериментальная база для матрицы связей Γ.**

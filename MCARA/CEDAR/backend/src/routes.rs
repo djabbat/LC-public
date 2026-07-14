@@ -25,9 +25,9 @@ pub fn app_router(db: PgPool) -> Router {
         // Counter routes
         .route("/counters", get(list_counters).post(create_counter))
         .route("/counters/:id", get(get_counter).put(update_counter).delete(delete_counter))
-        // CDATA Counter routes
-        .route("/cdata_counters", get(list_cdata_counters).post(create_cdata_counter))
-        .route("/cdata_counters/:id", get(get_cdata_counter).put(update_cdata_counter).delete(delete_cdata_counter))
+        // CEDAR Counter routes
+        .route("/cedar_counters", get(list_cedar_counters).post(create_cedar_counter))
+        .route("/cedar_counters/:id", get(get_cedar_counter).put(update_cedar_counter).delete(delete_cedar_counter))
         // Tissue routes
         .route("/tissues", get(list_tissues).post(create_tissue))
         .route("/tissues/:id", get(get_tissue).put(update_tissue).delete(delete_tissue))
@@ -60,7 +60,7 @@ pub fn app_router(db: PgPool) -> Router {
 
 // Health check endpoint
 async fn health_check() -> impl IntoResponse {
-    (StatusCode::OK, Json(json!({"status": "ok", "service": "cdata_backend"})))
+    (StatusCode::OK, Json(json!({"status": "ok", "service": "cedar_backend"})))
 }
 
 // Parameter handlers
@@ -252,28 +252,28 @@ async fn delete_counter(State(pool): DbState, Path(id): Path<Uuid>) -> Result<St
 // we'll implement only Parameter and Counter fully. The rest would be similar.
 // In production, you would implement all handlers.
 
-// CDATA Counter handlers (stub implementations)
-async fn list_cdata_counters(State(pool): DbState) -> Result<Json<Vec<CdataCounter>>, AppError> {
-    let counters = sqlx::query_as::<_, CdataCounter>("SELECT * FROM cdata_counters ORDER BY created_at DESC")
+// CEDAR Counter handlers (stub implementations)
+async fn list_cedar_counters(State(pool): DbState) -> Result<Json<Vec<CdataCounter>>, AppError> {
+    let counters = sqlx::query_as::<_, CdataCounter>("SELECT * FROM cedar_counters ORDER BY created_at DESC")
         .fetch_all(&pool)
         .await
         .map_err(|e| AppError::Database(e.to_string()))?;
     Ok(Json(counters))
 }
 
-async fn get_cdata_counter(State(pool): DbState, Path(id): Path<Uuid>) -> Result<Json<CdataCounter>, AppError> {
-    let counter = sqlx::query_as::<_, CdataCounter>("SELECT * FROM cdata_counters WHERE id = $1")
+async fn get_cedar_counter(State(pool): DbState, Path(id): Path<Uuid>) -> Result<Json<CdataCounter>, AppError> {
+    let counter = sqlx::query_as::<_, CdataCounter>("SELECT * FROM cedar_counters WHERE id = $1")
         .bind(id)
         .fetch_optional(&pool)
         .await
         .map_err(|e| AppError::Database(e.to_string()))?
-        .ok_or_else(|| AppError::NotFound("CDATA counter not found".to_string()))?;
+        .ok_or_else(|| AppError::NotFound("CEDAR counter not found".to_string()))?;
     Ok(Json(counter))
 }
 
-async fn create_cdata_counter(State(pool): DbState, Json(counter): Json<CdataCounterCreate>) -> Result<Json<CdataCounter>, AppError> {
+async fn create_cedar_counter(State(pool): DbState, Json(counter): Json<CdataCounterCreate>) -> Result<Json<CdataCounter>, AppError> {
     let created = sqlx::query_as::<_, CdataCounter>(
-        "INSERT INTO cdata_counters (counter_id, hayflick_limit_hypoxia, d_crit, rescue_half_life, inheritance_ratio_hsc, asymmetry_index) 
+        "INSERT INTO cedar_counters (counter_id, hayflick_limit_hypoxia, d_crit, rescue_half_life, inheritance_ratio_hsc, asymmetry_index) 
          VALUES ($1, $2, $3, $4, $5, $6) 
          RETURNING *"
     )
@@ -287,17 +287,17 @@ async fn create_cdata_counter(State(pool): DbState, Json(counter): Json<CdataCou
         .await
         .map_err(|e| AppError::Database(e.to_string()))?;
     
-    info!("Created CDATA counter for counter_id: {}", counter.counter_id);
+    info!("Created CEDAR counter for counter_id: {}", counter.counter_id);
     Ok(Json(created))
 }
 
-async fn update_cdata_counter(
+async fn update_cedar_counter(
     State(pool): DbState, 
     Path(id): Path<Uuid>, 
     Json(update): Json<CdataCounterUpdate>
 ) -> Result<Json<CdataCounter>, AppError> {
     let updated = sqlx::query_as::<_, CdataCounter>(
-        "UPDATE cdata_counters 
+        "UPDATE cedar_counters 
          SET counter_id = COALESCE($1, counter_id),
              hayflick_limit_hypoxia = COALESCE($2, hayflick_limit_hypoxia),
              d_crit = COALESCE($3, d_crit),
@@ -318,24 +318,24 @@ async fn update_cdata_counter(
         .fetch_optional(&pool)
         .await
         .map_err(|e| AppError::Database(e.to_string()))?
-        .ok_or_else(|| AppError::NotFound("CDATA counter not found".to_string()))?;
+        .ok_or_else(|| AppError::NotFound("CEDAR counter not found".to_string()))?;
     
-    info!("Updated CDATA counter: {}", id);
+    info!("Updated CEDAR counter: {}", id);
     Ok(Json(updated))
 }
 
-async fn delete_cdata_counter(State(pool): DbState, Path(id): Path<Uuid>) -> Result<StatusCode, AppError> {
-    let result = sqlx::query("DELETE FROM cdata_counters WHERE id = $1")
+async fn delete_cedar_counter(State(pool): DbState, Path(id): Path<Uuid>) -> Result<StatusCode, AppError> {
+    let result = sqlx::query("DELETE FROM cedar_counters WHERE id = $1")
         .bind(id)
         .execute(&pool)
         .await
         .map_err(|e| AppError::Database(e.to_string()))?;
     
     if result.rows_affected() == 0 {
-        return Err(AppError::NotFound("CDATA counter not found".to_string()));
+        return Err(AppError::NotFound("CEDAR counter not found".to_string()));
     }
     
-    info!("Deleted CDATA counter: {}", id);
+    info!("Deleted CEDAR counter: {}", id);
     Ok(StatusCode::NO_CONTENT)
 }
 

@@ -9,7 +9,7 @@ defmodule CDATAFrontend.Application do
       {Phoenix.PubSub, name: CDATAFrontend.PubSub},
       CDATAFrontendWeb.Endpoint,
       CDATAFrontendWeb.Telemetry,
-      {Oban, Application.fetch_env!(:cdata_frontend, Oban)},
+      {Oban, Application.fetch_env!(:cedar_frontend, Oban)},
       {DynamicSupervisor, strategy: :one_for_one, name: CDATAFrontend.DynamicSupervisor}
     ]
 

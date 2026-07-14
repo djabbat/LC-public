@@ -38,7 +38,7 @@
 - `project_longevity_georgia_ngo` — NGO that hosts this research
 - `feedback_deepseek_no_citations` — enforce for all KNOWLEDGE.md entries
 - `feedback_verify_references` — verify every PMID before commit
-- `feedback_cdata_docs_sync` — when editing CEDAR, check if CytogeneticTree docs need update (and vice versa)
+- `feedback_cedar_docs_sync` — when editing CEDAR, check if CytogeneticTree docs need update (and vice versa)
 - `project_mcoa_nature_correspondence` — MCARA manuscript at Nature Aging; CytogeneticTree is the empirical counterpart
 
 
