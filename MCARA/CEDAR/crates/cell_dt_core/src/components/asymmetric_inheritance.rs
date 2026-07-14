@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 /// Asymmetric centriole inheritance state for a stem cell.
 ///
-/// ## Experimental basis (CDATA v4.6)
+/// ## Experimental basis (CEDAR v4.6)
 ///
 /// **C2 — Directed maternal centrosome inheritance in mammals:**
 /// - Human neural progenitor cells: ~80% of self-renewing daughters inherit the older centrosome

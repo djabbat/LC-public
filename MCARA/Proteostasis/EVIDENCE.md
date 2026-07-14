@@ -103,3 +103,46 @@ If any are invalid or do not support the cited claim, replace with verified alte
 **Slmap → паракристаллические отложения:** Mao et al. (2026, DOI: `10.1002/arch.70186`) — сбой протеостаза в митохондриальных дериватах → структурная патология → Hid-Diap1 апоптоз.
 
 **Связь с CEDAR:** ClpP и центриоли — два компартмента, где протеостаз критичен для cell fate. Центриоль: polyGlu = признак энтропии, нет механизма ремонта. Митохондрии: ClpP/YME1L/LONP1 = протеостатический контроль, дисфункция → потеря cell fate control.
+
+---
+
+## Добавлено 2026-07-13 — Глубокий разбор
+
+### AAA+ протеазы митохондрий: обзор механизмов (Currie et al., J Biol Chem 2026)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| LONP1 — главная AAA+ unfoldase/bulk protease в матриксе; делеция → эмбриональная летальность | 41655698 | ✅ 2026-07-13 | Strong |
+| ClpXP действует при стрессе; CLPP мутации → infertility, deafness, growth retardation | 41655698 | ✅ 2026-07-13 | Strong |
+| ATP-зависимые конформационные циклы → substrate recognition, unfolding, translocation, proteolysis | 41655698 | ✅ 2026-07-13 | Strong |
+| Dordaviprone (ONC201) — активатор человеческого ClpP (proof-of-concept фарм. модуляции) | 41655698 | ✅ 2026-07-13 | Strong |
+
+### CLPP/CLPX в конденсатах матрикса (Key, Gispert, Auburger, Genes 2024)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| CLPP на phase-separated RNP гранулах — «first-aid» около IMM | 38927630 | ✅ 2026-07-13 | Moderate |
+| CLPX на multi-enzyme конденсатах — максимизация PLP-зависимого трансаминирования | 38927630 | ✅ 2026-07-13 | Moderate |
+| Компартмент-селективный протеостаз: CLPXP, MPP, m-AAA, i-AAA, PARL, OMA1 — разные компартменты | 38927630 | ✅ 2026-07-13 | Strong |
+
+### Таргетирование CLPP + LONP1 → протеотоксический стресс (Nandha et al., Cell Commun Signal 2025)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| TNBC наиболее чувствителен к mtROS — корреляция с митохондриальной нагрузкой | 40903791 | ✅ 2026-07-13 | Strong |
+| mtROS → агрегация LONP1 и CLPP → потеря функции → протеотоксический стресс → гибель | 40903791 | ✅ 2026-07-13 | Strong |
+| LONP1 + CLPP overexpression → ранний релапс в breast cancer | 40903791 | ✅ 2026-07-13 | Moderate |
+
+### UPR^mt — центральная роль LONP1 + CLPP (Czechowicz et al., FEBS J 2026)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| LONP1- и CLPP-зависимый протеолиз + mitoribosome pausing + tRNA checkpoints | 42216472 | ✅ 2026-07-13 | Strong |
+| Import-gated sensing → ISR → ATF4/CHOP/ATF5 → transcriptional reprogramming | 42216472 | ✅ 2026-07-13 | Strong |
+
+### ClpP → нарушение рекомбинации при мейозе (Feng et al., Andrology 2026)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| ClpP loss → RAD51↓, MLH1 аберрантный → специфическое нарушение рекомбинации | 42281331 | ✅ 2026-07-13 | Strong |
+
+### SIRT1 → центриолярные белки + α-тубулин (Iniesta-Cuerda et al., Biol Direct 2026)
+| Утверждение | PMID | Проверено | Сила |
+|-------------|------|:---:|:---:|
+| Потеря ацетилирования CEP170, CEP350 при старении и SIRT1↓ | 41882697 | ✅ 2026-07-13 | Strong |
+| α-tubulin hyperacetylation in midpiece → mitochondrial dysfunction → impaired fertilization | 41882697 | ✅ 2026-07-13 | Strong |

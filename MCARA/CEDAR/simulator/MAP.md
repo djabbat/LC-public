@@ -16,7 +16,7 @@ CEDAR_simulator/
 ├── pyproject.toml        # Python-пакет
 ├── LICENSE               # GPL v3
 ├── .gitignore
-├── cdata_sim/            # Исходный код
+├── cedar_sim/            # Исходный код
 │   ├── __init__.py
 │   ├── model.py          # CEDARModel
 │   ├── abc_smc.py        # ABC-SMC калибровка

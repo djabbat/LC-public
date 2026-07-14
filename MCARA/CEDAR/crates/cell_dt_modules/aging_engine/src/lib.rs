@@ -1,8 +1,8 @@
-/// CDATA v3.2.3 — AgingEngine
+/// CEDAR v3.2.3 — AgingEngine
 ///
 /// # Canonical equation note (audit 2026-04-21)
 ///
-/// This engine implements the MULTIPLICATIVE *rate* form of the CDATA damage
+/// This engine implements the MULTIPLICATIVE *rate* form of the CEDAR damage
 /// dynamics (article v3.2.3):
 ///
 ///   dD/dt = α · ν · (1 − Π) · S · P_A · M · C
@@ -129,10 +129,10 @@ pub struct InterventionSet {
     /// Telomerase activation (partial): −50% differentiated telomere loss per division.
     /// See also `htert` for full overexpression.
     pub telomerase: bool,
-    /// hTERT overexpression (Experiment 3, CDATA v4.0): fully prevents differentiated
+    /// hTERT overexpression (Experiment 3, CEDAR v4.0): fully prevents differentiated
     /// telomere shortening. Differentiating daughters maintain telomere length at 1.0.
     ///
-    /// CDATA prediction (¬R argument): even with hTERT active, centriolar damage
+    /// CEDAR prediction (¬R argument): even with hTERT active, centriolar damage
     /// continues to accumulate → senescence is triggered by SenescenceTrigger::CentriolarDamage,
     /// NOT by SenescenceTrigger::TelomereShortening.
     ///
@@ -303,7 +303,7 @@ impl AgingEngine {
         let regen_factor      = (1.0 - self.inflamm.fibrosis_level * 0.4).max(0.3);       // L3
 
         // Dual-clock senescence check: if D(t) >= D_crit, division stops entirely (→ 0).
-        // SenescenceTrigger::CentriolarDamage is the primary CDATA mechanism in stem cells.
+        // SenescenceTrigger::CentriolarDamage is the primary CEDAR mechanism in stem cells.
         const D_CRIT_NORM: f64 = 1.0;  // damage is normalised to [0, 1]; D_crit = 1.0
         const TL_CRIT: f64 = 0.12;     // differentiated telomere Hayflick floor
         let senescence = SenescenceTrigger::evaluate(
@@ -337,7 +337,7 @@ impl AgingEngine {
             + self.params.circadian_amplitude
                 * (2.0 * std::f64::consts::PI * (t_in_year + 0.25)).sin();
 
-        // --- Core CDATA equation (v3.2.3): dD/dt = α·ν·(1−Π)·S·P_A·M·C ---
+        // --- Core CEDAR equation (v3.2.3): dD/dt = α·ν·(1−Π)·S·P_A·M·C ---
         let damage_rate = self.params.alpha
             * division_rate
             * (1.0 - protection)
@@ -365,10 +365,10 @@ impl AgingEngine {
         // Differentiating daughters lack telomerase; they shorten ~40 bp/yr in HSC context
         // (Lansdorp 2005, PMID: 15653082). Floor at 0.12 (Hayflick-equivalent).
         //
-        // hTERT overexpression (Experiment 3, CDATA v4.0 / ¬R argument):
+        // hTERT overexpression (Experiment 3, CEDAR v4.0 / ¬R argument):
         //   htert=true → telo_loss_factor = 1.0 → zero telomere loss (full telomerase in all cells).
         //   This completely eliminates the telomere clock from senescence.
-        //   CDATA prediction: senescence still occurs via SenescenceTrigger::CentriolarDamage.
+        //   CEDAR prediction: senescence still occurs via SenescenceTrigger::CentriolarDamage.
         //
         // telomerase=true → partial protection: −50% telomere loss (endogenous upregulation).
         let telo_loss_factor = if ivs.htert {

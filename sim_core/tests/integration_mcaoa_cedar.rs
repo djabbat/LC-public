@@ -1,7 +1,7 @@
 // Интеграционные тесты: sim_core ↔ mcoa_core ↔ cell_dt
 //
 // Проверяют, что новый sim_core совместим с существующим кодом
-// mcoa_core (MCARA) и cell_dt_core (CDATA).
+// mcoa_core (MCARA) и cell_dt_core (CEDAR).
 
 #[cfg(test)]
 mod tests {
@@ -49,7 +49,7 @@ mod tests {
             "Вес теломерного счётчика для нейронов должен быть 0");
     }
 
-    /// CDATA: центриолярная энтропия монотонна
+    /// CEDAR: центриолярная энтропия монотонна
     #[test]
     fn centriole_entropy_monotonic() {
         let mut org = Organism::human();

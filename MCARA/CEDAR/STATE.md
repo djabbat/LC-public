@@ -18,7 +18,7 @@
 
 ## 📚 2026-07-09 — Итог сессии
 
-- 🔑 **Фундаментальный принцип (Dzhaba):** polyGlu = энтропия. Асимметричное наследование — элемент механизма необратимой дифференцировки. Накопление энтропии в СК — плата за возможность дифференцировки.
+- 🔑 **Фундаментальный принцип (Dzhaba):** polyGlu = компенсаторный маркер накопленной энтропии (не её механизм). Асимметричное наследование — элемент механизма необратимой дифференцировки. Накопление энтропии в СК — плата за возможность дифференцировки.
 - 🔴 Peer Review v2: 55 PMID, 6 off-topic исправлены
 - 🧬 M1-M9, M3/CASID (5 evidence), SPEM гипотеза
 - 📊 Оценка: 7.5/10
@@ -55,7 +55,7 @@ Cell‑DT v4.0 will unify the additive and multiplicative forms using the damage
 ### L4 — P1..P10 prediction test harness
 Created `predictions_P1_to_P10.rs` with stubs (v3.0). Tests will be implemented as experimental data become available.
 
-### L6 — `cdata_coupling` Sobol range
+### L6 — `cedar_coupling` Sobol range
 Updated coupling parameters: `γ_epi` range [0, 0.05] (still zero default). Coupling k_ep range [0.5 – 2.0] (to be calibrated).
 
 ### L7 — Python ↔ Rust name map
