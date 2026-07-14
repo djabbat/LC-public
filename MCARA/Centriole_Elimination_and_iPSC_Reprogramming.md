@@ -1102,7 +1102,7 @@ Srsen 2006 (PMID 16943179): p38 → посттрансляционная ста�
 ## Comprehensive Experimental Design with All Variants and Combinations
 
 **Authors:** Jaba Tqemaladze, MD  
-**Affiliation:** Georgia Longevity Alliance (GLA)  
+**Affiliation:** Georgia Longevity Alliance (GLA), Tbilisi, Georgia; International Teaching University of Georgia, Tbilisi, Georgia
 **Date:** 2026-07-09  
 **Status:** Pre-experimental design document  
 **Target Journal:** Cell Stem Cell / Nature Cell Biology / Cell Reports  
