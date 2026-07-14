@@ -11,7 +11,7 @@ pub struct InflammagingParams {
     // Biochemistry: extracellular HMGB1/HSP70 cleared by lysosomal degradation
     // Default 0.1 yr⁻¹ → τ = 10 years; fast pool (HMGB1) τ~1 yr → use 1.0 if needed
     pub damps_decay_rate: f64,
-    /// CHIP→SASP amplification strength (CDATA v3.5, Open Question 4).
+    /// CHIP→SASP amplification strength (CEDAR v3.5, Open Question 4).
     ///
     /// Quantitative coupling: CHIP VAF amplifies SASP production rate.
     ///   sasp_prod *= (1 + chip_vaf × chip_sasp_strength)

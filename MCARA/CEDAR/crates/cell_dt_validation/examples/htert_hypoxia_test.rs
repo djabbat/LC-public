@@ -1,4 +1,4 @@
-//! CDATA v4.0 — Experiment 3: hTERT + Hypoxia Critical Test (¬R Argument)
+//! CEDAR v4.0 — Experiment 3: hTERT + Hypoxia Critical Test (¬R Argument)
 //!
 //! Tests the ¬R argument: the centriole is the only structure not renewed during
 //! division, making centriolar damage the only possible autonomous aging clock.
@@ -11,7 +11,7 @@
 //! Two levels of analysis:
 //!
 //! 1. ANALYTICAL (N_Hayflick formula, per-cell):
-//!    Uses the closed-form formula from CDATA §2.3.
+//!    Uses the closed-form formula from CEDAR §2.3.
 //!    Directly answers: "is N_Hayflick finite even with hTERT + hypoxia?"
 //!
 //! 2. POPULATION MODEL (AgingEngine ODE, tissue-level):
@@ -48,7 +48,7 @@ fn run_analytical(cond: &AnalyticalCondition) -> f64 {
     // hTERT in the analytical model: does NOT change N_Hayflick.
     // Reason: hTERT eliminates telomere shortening, which is NOT part of the
     // mito_shield formula. N_Hayflick depends only on centriolar damage rate.
-    // CDATA prediction: N_Hayflick(hTERT+hypoxia) == N_Hayflick(hypoxia) — finite.
+    // CEDAR prediction: N_Hayflick(hTERT+hypoxia) == N_Hayflick(hypoxia) — finite.
 }
 
 // ── Population model layer ────────────────────────────────────────────────────
@@ -109,7 +109,7 @@ fn run_population(cond: &PopCondition, duration: usize) -> PopResult {
 
 fn main() {
     println!("═══════════════════════════════════════════════════════════════════════════════");
-    println!("  CDATA v4.0 — Experiment 3: hTERT + Hypoxia (Critical Test, ¬R Argument)");
+    println!("  CEDAR v4.0 — Experiment 3: hTERT + Hypoxia (Critical Test, ¬R Argument)");
     println!("═══════════════════════════════════════════════════════════════════════════════\n");
 
     // ── Part 1: Analytical N_Hayflick ─────────────────────────────────────────

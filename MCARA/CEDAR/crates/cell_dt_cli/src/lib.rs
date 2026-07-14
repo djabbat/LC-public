@@ -1,6 +1,6 @@
-//! Minimal CDATA CLI wrapper producing MCARA-compliant trajectory CSV.
+//! Minimal CEDAR CLI wrapper producing MCARA-compliant trajectory CSV.
 //!
-//! Parameters calibrated from CDATA meta-analysis (Asymmetric centriole
+//! Parameters calibrated from CEDAR meta-analysis (Asymmetric centriole
 //! inheritance + polyglutamylation aging):
 //!
 //! - α = 0.60 — centriolar polyGlu per division (division-dominant with t component)
@@ -12,7 +12,7 @@
 use serde::{Deserialize, Serialize};
 
 pub const COUNTER_NUMBER: u8 = 1;
-pub const COUNTER_NAME: &str = "CDATA (Centriolar polyglutamylation)";
+pub const COUNTER_NAME: &str = "CEDAR (Centriolar polyglutamylation)";
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub struct CounterParams {

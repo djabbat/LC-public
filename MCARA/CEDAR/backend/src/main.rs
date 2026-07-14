@@ -2,21 +2,21 @@ use axum::{Router, Server};
 use std::net::SocketAddr;
 use tracing::{info, error};
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
-use cdata_backend::config::Config;
-use cdata_backend::db::Database;
-use cdata_backend::routes::app_router;
-use cdata_backend::error::AppError;
+use cedar_backend::config::Config;
+use cedar_backend::db::Database;
+use cedar_backend::routes::app_router;
+use cedar_backend::error::AppError;
 
 #[tokio::main]
 async fn main() -> Result<(), AppError> {
     // Initialize tracing
     tracing_subscriber::registry()
         .with(tracing_subscriber::EnvFilter::try_from_default_env()
-            .unwrap_or_else(|_| "cdata_backend=debug,tower_http=debug,axum=debug".into()))
+            .unwrap_or_else(|_| "cedar_backend=debug,tower_http=debug,axum=debug".into()))
         .with(tracing_subscriber::fmt::layer())
         .init();
 
-    info!("Starting CDATA backend v{}", env!("CARGO_PKG_VERSION"));
+    info!("Starting CEDAR backend v{}", env!("CARGO_PKG_VERSION"));
 
     // Load configuration
     let config = Config::from_env()

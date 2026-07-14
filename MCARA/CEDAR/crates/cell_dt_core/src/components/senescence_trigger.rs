@@ -1,10 +1,10 @@
-/// Dual-clock senescence trigger (CDATA v3.5; updated v4.6).
+/// Dual-clock senescence trigger (CEDAR v3.5; updated v4.6).
 ///
 /// Replicative senescence can be triggered by either molecular clock independently:
-///   1. Centriolar damage: D(t) ≥ D_crit (the primary CDATA clock)
+///   1. Centriolar damage: D(t) ≥ D_crit (the primary CEDAR clock)
 ///   2. Telomere shortening: TL(n) ≤ TL_crit (classical Hayflick mechanism)
 ///
-/// ## Scientific basis (CDATA v4.6)
+/// ## Scientific basis (CEDAR v4.6)
 ///
 /// **C3 — Centriolar dysfunction directly induces p16-senescence:**
 /// - SVBP/VASH pathway: biallelic SVBP variant (p.Leu49Pro) → centrosome cohesion
@@ -19,7 +19,7 @@
 ///   threshold first triggers p16/p21 pathway and permanent cell cycle arrest.
 ///
 /// Reference: Tqemaladze & Chichinadze (2005) proposed centrosome-driven
-/// replicative aging. CDATA v3.5 formalises the dual-clock model.
+/// replicative aging. CEDAR v3.5 formalises the dual-clock model.
 use serde::{Deserialize, Serialize};
 
 /// Which molecular clock triggered senescence onset.
@@ -65,12 +65,12 @@ impl SenescenceTrigger {
     }
 
     /// Returns the dominant clock (for logging/reporting).
-    /// CentriolarDamage is returned for Both (to preserve CDATA primary narrative).
+    /// CentriolarDamage is returned for Both (to preserve CEDAR primary narrative).
     pub fn dominant_clock(&self) -> Option<&'static str> {
         match self {
             SenescenceTrigger::CentriolarDamage => Some("centriolar"),
             SenescenceTrigger::TelomereShortening => Some("telomere"),
-            SenescenceTrigger::Both => Some("centriolar"), // CDATA dominant
+            SenescenceTrigger::Both => Some("centriolar"), // CEDAR dominant
             SenescenceTrigger::None => None,
         }
     }
@@ -122,7 +122,7 @@ mod tests {
         let t = SenescenceTrigger::evaluate(1001.0, D_CRIT, 4.0, TL_CRIT);
         assert_eq!(t, SenescenceTrigger::Both);
         assert!(t.is_senescent());
-        assert_eq!(t.dominant_clock(), Some("centriolar")); // CDATA dominant
+        assert_eq!(t.dominant_clock(), Some("centriolar")); // CEDAR dominant
     }
 
     #[test]

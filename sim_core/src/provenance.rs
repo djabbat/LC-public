@@ -195,10 +195,10 @@ mod tests {
 
     #[test]
     fn cite_produces_human_readable() {
-        let s = Source::pmid(36583780, "CDATA theory");
+        let s = Source::pmid(36583780, "CEDAR theory");
         let cite = s.cite();
         assert!(cite.contains("PMID 36583780"));
-        assert!(cite.contains("CDATA theory"));
+        assert!(cite.contains("CEDAR theory"));
     }
 
     #[test]

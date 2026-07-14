@@ -1,4 +1,4 @@
-//! CDATA v4.0 — The ¬R Argument: Saturable Centriolar Damage Kinetics
+//! CEDAR v4.0 — The ¬R Argument: Saturable Centriolar Damage Kinetics
 //!
 //! Demonstrates two key claims of the ¬R logical argument:
 //!
@@ -60,7 +60,7 @@ fn main() {
     ];
 
     println!("═══════════════════════════════════════════════════════════════════════════════");
-    println!("  CDATA v4.0 — The ¬R Argument: Centriolar Damage is Inevitable");
+    println!("  CEDAR v4.0 — The ¬R Argument: Centriolar Damage is Inevitable");
     println!("  Cell type: EpithelialProgenitor (φ = 1.00, highest protection)");
     println!("  D(n) = 1 − exp(−r·n),  r = α·ν·β·(1 − mito_shield([O₂]))");
     println!("═══════════════════════════════════════════════════════════════════════════════\n");

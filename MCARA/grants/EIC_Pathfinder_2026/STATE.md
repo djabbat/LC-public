@@ -75,7 +75,7 @@
 | Статья | Журнал | ID | Статус |
 |--------|--------|----|--------|
 | MCARA: Multi-Counter Architecture | Biogerontology | `7cc6de62` | 🟡 With Editor |
-| MCARA: Gatekeeper of Cell State | bioRxiv | `BIORXIV/2026/737107` | 🔴 Desk reject — affiliation |
+| MCARA: Gatekeeper of Cell State | Zenodo | `10.5281/zenodo.21299683` | ✅ Опубликован |
 | CEDAR: Centrioles as Entropy Reservoirs | npj Aging | — | 🟢 Under Consideration |
 | ARGUS-LP | RSI | `RSI26-AR-00862R-A` | 🟡 В рецензии |
 | Ze: Formal Axiomatics | Foundations of Physics | `3fab9acb` | 🟢 В очереди редактора |

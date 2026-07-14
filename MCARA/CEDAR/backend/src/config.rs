@@ -18,7 +18,7 @@ impl Config {
             .add_source(File::with_name("config/default").required(false))
             .add_source(File::with_name(&format!("config/{}", env)).required(false))
             .add_source(File::with_name("config/local").required(false))
-            .add_source(Environment::with_prefix("CDATA").separator("__"))
+            .add_source(Environment::with_prefix("CEDAR").separator("__"))
             .build()?;
         
         config.try_deserialize()
@@ -30,7 +30,7 @@ impl Default for Config {
         Self {
             environment: "development".to_string(),
             port: 3003,
-            database_url: "postgres://cn:cn@localhost/cdata_db".to_string(),
+            database_url: "postgres://cn:cn@localhost/cedar_db".to_string(),
             log_level: "debug".to_string(),
         }
     }

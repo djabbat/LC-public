@@ -17,14 +17,14 @@ defmodule CDATAFrontendWeb.Telemetry do
 
   def metrics do
     [
-      counter("cdata.frontend.page_views.total"),
-      counter("cdata.frontend.api_requests.total"),
-      counter("cdata.frontend.api_errors.total"),
-      summary("cdata.frontend.api_response_time.milliseconds",
+      counter("cedar.frontend.page_views.total"),
+      counter("cedar.frontend.api_requests.total"),
+      counter("cedar.frontend.api_errors.total"),
+      summary("cedar.frontend.api_response_time.milliseconds",
         unit: {:native, :millisecond}
       ),
-      summary("cdata.frontend.live_view.mount_time.milliseconds"),
-      last_value("cdata.frontend.memory.total", unit: :byte)
+      summary("cedar.frontend.live_view.mount_time.milliseconds"),
+      last_value("cedar.frontend.memory.total", unit: :byte)
     ]
   end
 
@@ -35,6 +35,6 @@ defmodule CDATAFrontendWeb.Telemetry do
   end
 
   def dispatch_api_metrics do
-    :telemetry.execute([:cdata, :frontend, :periodic], %{status: :ok})
+    :telemetry.execute([:cedar, :frontend, :periodic], %{status: :ok})
   end
 end

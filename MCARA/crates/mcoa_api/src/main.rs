@@ -8,7 +8,7 @@
 //!   GET  /healthz                       — liveness
 //!
 //! Future (v0.2):
-//!   WS   /ws/stream              — stream long simulations + MCARA-vs-CDATA residuals in real time
+//!   WS   /ws/stream              — stream long simulations + MCARA-vs-CEDAR residuals in real time
 
 use axum::{
     extract::{Json, Path, Query},

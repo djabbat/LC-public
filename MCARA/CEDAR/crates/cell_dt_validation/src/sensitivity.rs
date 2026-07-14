@@ -1,7 +1,7 @@
 /// Sensitivity analysis for the operational definition of D(t).
 ///
 /// D(t) = w₁·Δ_structure + w₂·N_amplification + w₃·Φ_cohesion
-/// Default weights: w₁=0.5, w₂=0.3, w₃=0.2 (provisional, PCA-based, CDATA v3.5).
+/// Default weights: w₁=0.5, w₂=0.3, w₃=0.2 (provisional, PCA-based, CEDAR v3.5).
 ///
 /// This module tests whether N_Hayflick predictions are robust to ±20% perturbations
 /// in the weight vector. If R² change < 0.02, weights are declared stable.
@@ -19,7 +19,7 @@ pub struct DamageWeights {
 }
 
 impl Default for DamageWeights {
-    /// Provisional PCA-based weights from CDATA v3.5 §2.4.
+    /// Provisional PCA-based weights from CEDAR v3.5 §2.4.
     /// Pending calibration via Experiment 2 (Prediction 2).
     fn default() -> Self {
         Self { w1: 0.5, w2: 0.3, w3: 0.2 }
@@ -66,7 +66,7 @@ pub fn predicted_hayflick_weighted(
 }
 
 /// A single data point used for sensitivity validation.
-/// Reference values are from the CDATA v3.5 calibration set.
+/// Reference values are from the CEDAR v3.5 calibration set.
 #[derive(Debug, Clone, Copy)]
 pub struct SensitivityPoint {
     pub o2_percent: f64,
@@ -93,7 +93,7 @@ pub struct SensitivityResult {
 /// Run full sensitivity analysis over ±[perturbation_pct]% perturbations on w1.
 ///
 /// Returns a vector of results for each perturbation factor.
-/// Stability criterion: |ΔR²| < 0.02 (pre-registered in CDATA v3.5 CONCEPT.md).
+/// Stability criterion: |ΔR²| < 0.02 (pre-registered in CEDAR v3.5 CONCEPT.md).
 pub fn run_sensitivity_analysis(
     data: &[SensitivityPoint],
     stability_threshold: f64,
@@ -161,7 +161,7 @@ fn pearson_r_squared(predicted: &[f64], observed: &[f64]) -> f64 {
     (1.0 - ss_res / ss_tot).clamp(0.0, 1.0)
 }
 
-/// Calibration data from CDATA v3.5 meta-regression (article Table S1).
+/// Calibration data from CEDAR v3.5 meta-regression (article Table S1).
 pub fn calibration_data() -> Vec<SensitivityPoint> {
     vec![
         // Normoxia: Hayflick & Moorhead (1961) WI-38 fibroblasts, 21% O₂

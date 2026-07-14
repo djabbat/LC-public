@@ -4,11 +4,11 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
-description = "MCARA vs CDATA comparison harness. Rust port of scripts/compare_mcoa_cdata.py."
+description = "MCARA vs CEDAR comparison harness. Rust port of scripts/compare_mcoa_cedar.py."
 
 [[bin]]
-name = "mcoa-compare-cdata"
-path = "src/bin/compare_mcoa_cdata.rs"
+name = "mcoa-compare-cedar"
+path = "src/bin/compare_mcoa_cedar.rs"
 
 [[bin]]
 name = "mcoa-compare-all"

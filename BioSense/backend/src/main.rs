@@ -5,7 +5,7 @@
 //!     POST /chi_ze                      — body {v_eeg,v_hrv,v_resp,v_sleep}
 //!                                          → {chi_ze, components}
 //!     POST /bridge                      — body {d}
-//!                                          → {chi_ze} (CDATA bridge stub)
+//!                                          → {chi_ze} (CEDAR bridge stub)
 //!     POST /exacerbation                — body {age,sex,chi_now,chi_7d}
 //!                                          → {risk, level}
 //!     GET  /api/v_star                  — return canonical v* (Article form)
@@ -159,7 +159,7 @@ struct BridgeResponse {
     note: &'static str,
 }
 
-/// CDATA → χ_Ze bridge — placeholder polynomial stub.
+/// CEDAR → χ_Ze bridge — placeholder polynomial stub.
 /// Real bridge constants (a, b, c, g₀, g₁) live in root PARAMETERS § 3
 /// and are flagged as "underpowered fit (5 params on N=196)". This stub
 /// returns a clamped sigmoid: χ ≈ 1 − tanh(d). Replace when bridge fit

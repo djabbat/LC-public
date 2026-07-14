@@ -50,9 +50,9 @@ pub async fn get_v5_changes() -> Json<V5Disclosures> {
         hypothesis_stage_caveats: vec![
             "All χ_Ze readings exploratory; no clinical action implied",
             "AUC values reported anywhere are subject to multiple-testing inflation (no Bonferroni / BH correction applied)",
-            "CDATA centriolar damage hypothesis: status INCONCLUSIVE; Sobol p=0.12 after correction; full S2/ST decomposition deferred to Cell-DT v4.0 on real GTEx data N=948",
+            "CEDAR centriolar damage hypothesis: status INCONCLUSIVE; Sobol p=0.12 after correction; full S2/ST decomposition deferred to Cell-DT v4.0 on real GTEx data N=948",
             "Ze Theory bridge to biological aging: POSTULATED, not derived; underlying Burgholzer/Pearson results apply to PHYSICAL clocks only",
-            "Bridge to CDATA (5 free parameters on N=196): underpowered (39 obs/param < Harrell 10/param); moved to Supplementary",
+            "Bridge to CEDAR (5 free parameters on N=196): underpowered (39 obs/param < Harrell 10/param); moved to Supplementary",
             "FCLC v13.4 PASS milestone is semi-honest-only secure; NOT secure against active server collusion or malicious server; GDPR Article 9 blocker until FCLC v14 (planned Q1 2027)",
             "MCARA submitted to Nature Aging (NATAGING-P13741) but NOT peer-reviewed at the time of this disclosure",
         ],

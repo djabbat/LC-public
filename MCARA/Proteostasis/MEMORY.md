@@ -1,5 +1,26 @@
 # Proteostasis — Memory
 
+## 2026-07-13 — Анализ Research Feed: ClpP/ClpXP и митохондриальный протеостаз
+
+- **Событие:** Анализ статей из ленты Jaba + PubMed-поиск.
+- **КЛЮЧЕВЫЕ НАХОДКИ ДЛЯ PROTEOSTASIS:**
+
+### Серия ClpP/ClpXP — митохондриальный протеолитический комплекс:
+| PMID | Статья | Год | Суть |
+|------|--------|-----|------|
+| 42281331 | Feng HW et al. ClpP → mitochondrial integrity, meiotic progression — Andrology | 2026 | cKO ClpP в сперматоцитах: дефекты митохондрий, мейотический блок |
+| 37798322 | Guo C et al. ClpP/ClpX → mTORC1 signaling — Commun Biol | 2023 | mTOR-ось: протеостаз митохондрий → mTORC1 |
+| 23851121 | Gispert S et al. Clpp null → infertility, mtDNA accumulation — Hum Mol Genet | 2013 | Первая характеристика Clpp KO |
+| 38927630 | Key J, Gispert S, Auburger G. CLPP/CLPX in IMM matrix condensates — Genes | 2024 | Молекулярный механизм: CLPP/CLPX в конденсатах матрикса |
+| 41655698 | Currie SQW et al. Mitochondrial AAA+ proteases mechanisms — J Biol Chem | 2026 | Обзор молекулярных механизмов AAA+ протеаз |
+| 40903791 | Nandha SR et al. CLPP + LONP1 → proteotoxic stress — Cell Commun Signal | 2025 | Таргетирование CLPP/LONP1 → протеотоксический стресс → подавление опухоли |
+
+- **Значение для Proteostasis:** ClpXP — протеолитический комплекс внутренней мембраны митохондрий. Серия из 6 статей показывает: ClpP дефект → накопление повреждённых белков → UPR^mt → mTORC1 → мейотический блок / infertility.
+- **Связь с aging:** Нарушение митохондриального протеостаза — один из драйверов возрастной дисфункции герм-клеток.
+- **Полный анализ:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
+
+---
+
 ## Goals & Tasks
 
 ### Project Objectives

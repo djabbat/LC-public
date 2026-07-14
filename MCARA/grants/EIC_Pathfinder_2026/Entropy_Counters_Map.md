@@ -285,5 +285,5 @@
 ---
 
 > **Контакт:** jaba@longevity.ge · ORCID: 0000-0001-8651-7243
-> **Препринт MCARA:** bioRxiv, BIORXIV/2026/737107 (8 июл 2026)
+> **Препринт MCARA:** Zenodo, 10.5281/zenodo.21299683 (8 июл 2026)
 > **Ключевая статья:** Tqemaladze J. *Mol Biol Rep.* 2023. PMID: 36583780

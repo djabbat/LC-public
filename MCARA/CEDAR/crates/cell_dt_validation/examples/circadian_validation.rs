@@ -1,4 +1,4 @@
-/// Circadian rhythm validation — M3 mechanism (CDATA v3.0)
+/// Circadian rhythm validation — M3 mechanism (CEDAR v3.0)
 ///
 /// Validates the circadian amplitude → repair efficiency pathway against
 /// cohort data from Dijk et al. 1999 (PMID: 10607049) and
@@ -16,7 +16,7 @@
 use cell_dt_validation::CircadianDataset;
 
 fn main() {
-    println!("=== CDATA v3.0: M3 Circadian Rhythm Validation ===\n");
+    println!("=== CEDAR v3.0: M3 Circadian Rhythm Validation ===\n");
 
     let ds = CircadianDataset::load();
     let ages    = &ds.amplitude.ages;

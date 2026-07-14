@@ -1,5 +1,5 @@
 defmodule CDATAFrontendWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :cdata_frontend
+  use Phoenix.Endpoint, otp_app: :cedar_frontend
 
   socket "/live", Phoenix.LiveView.Socket,
     websocket: [connect_info: [session: @session_options]]
