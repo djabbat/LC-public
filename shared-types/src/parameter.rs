@@ -15,7 +15,7 @@
 //! source: "Round-7 MCMC posterior; calibration.rs"
 //! status: fitted
 //! sensitivity_index_s1: 0.224
-//! subproject: CDATA
+//! subproject: CEDAR
 //! ```
 
 use crate::units::Unit;
@@ -66,7 +66,7 @@ pub struct Parameter {
     /// Sobol first-order sensitivity index (if computed).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub sensitivity_index_s1: Option<f64>,
-    /// Subproject owning this parameter (CDATA, BioSense, ...).
+    /// Subproject owning this parameter (CEDAR, BioSense, ...).
     pub subproject: String,
     /// Module within the subproject (counter name, EEG processing, ...).
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -180,17 +180,17 @@ mod tests {
     #[test]
     fn registry_inserts_and_finds() {
         let mut r = ParameterRegistry::new();
-        r.insert(p("CDATA", "alpha_HSC", 0.0082, Unit::DamagePerDivision));
+        r.insert(p("CEDAR", "alpha_HSC", 0.0082, Unit::DamagePerDivision));
         r.insert(p("Telomere", "alpha2", 100.0, Unit::Bp));
-        assert!(r.get("CDATA", "alpha_HSC").is_some());
+        assert!(r.get("CEDAR", "alpha_HSC").is_some());
         assert!(r.get("Telomere", "alpha2").is_some());
-        assert!(r.get("CDATA", "nope").is_none());
+        assert!(r.get("CEDAR", "nope").is_none());
     }
 
     #[test]
     fn detects_value_drift_for_same_id_and_unit() {
         let mut r = ParameterRegistry::new();
-        r.insert(p("CDATA", "alpha", 0.05, Unit::DamagePerDivision));
+        r.insert(p("CEDAR", "alpha", 0.05, Unit::DamagePerDivision));
         r.insert(p("Telomere", "alpha", 0.10, Unit::DamagePerDivision));
         let drift = r.report_inconsistencies();
         assert_eq!(drift.len(), 1);
@@ -200,7 +200,7 @@ mod tests {
     #[test]
     fn ignores_drift_when_units_differ() {
         let mut r = ParameterRegistry::new();
-        r.insert(p("CDATA", "alpha", 0.05, Unit::DamagePerDivision));
+        r.insert(p("CEDAR", "alpha", 0.05, Unit::DamagePerDivision));
         r.insert(p("Telomere", "alpha", 100.0, Unit::Bp));
         let drift = r.report_inconsistencies();
         assert!(drift.is_empty());
@@ -209,12 +209,12 @@ mod tests {
     #[test]
     fn json_roundtrip() {
         let mut r = ParameterRegistry::new();
-        r.insert(p("CDATA", "alpha_HSC", 0.0082, Unit::DamagePerDivision));
+        r.insert(p("CEDAR", "alpha_HSC", 0.0082, Unit::DamagePerDivision));
         let s = serde_json::to_string_pretty(&r).unwrap();
         let r2: ParameterRegistry = serde_json::from_str(&s).unwrap();
         assert_eq!(
-            r.get("CDATA", "alpha_HSC").unwrap().value,
-            r2.get("CDATA", "alpha_HSC").unwrap().value
+            r.get("CEDAR", "alpha_HSC").unwrap().value,
+            r2.get("CEDAR", "alpha_HSC").unwrap().value
         );
     }
 }

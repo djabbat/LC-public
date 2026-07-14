@@ -1,4 +1,4 @@
-//! CDATA CLI (MCARA Counter #1) — simple trajectory output matching
+//! CEDAR CLI (MCARA Counter #1) — simple trajectory output matching
 //! the interface of telomere-sim, mito_ros-sim, etc.
 
 use std::env;

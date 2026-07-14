@@ -1,4 +1,4 @@
-/// CDATA v3.2.3 — Bayesian MCMC calibration (Metropolis-Hastings)
+/// CEDAR v3.2.3 — Bayesian MCMC calibration (Metropolis-Hastings)
 ///
 /// Calibrates 2 free parameters of FixedParameters against reference datasets
 /// (ROS, telomere, CHIP VAF, MCAI, epigenetic age) using a random-walk

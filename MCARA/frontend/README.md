@@ -22,7 +22,7 @@ Open http://localhost:4000 — dashboard with tissue selector and counter trajec
 
 - `DashboardLive` — tissue × divisions selector, per-counter table.
 - TODO: `ComparisonLive` — MCARA vs CEDAR side-by-side plot, residual panel (consumes the same
- `compare_mcaoa_cdata.py` logic on the server side).
+ `compare_mcaoa_cedar.py` logic on the server side).
 - TODO: LiveView hooks for Chart.js trajectories.
 
 ## Why Phoenix

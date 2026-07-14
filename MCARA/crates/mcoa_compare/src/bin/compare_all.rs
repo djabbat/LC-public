@@ -4,7 +4,7 @@
 //! still depends on `mcoa_simulation` API; this binary computes pairwise Δ
 //! statistics for any pair of CSVs and emits a flat report.
 //!
-//! Per `feedback_mcoa_cdata_comparison v2`: 5 counter simulators (CDATA,
+//! Per `feedback_mcoa_cedar_comparison v2`: 5 counter simulators (CEDAR,
 //! Telomere, MitoROS, EpigeneticDrift, Proteostasis) + MCARA coordinator.
 //! Every full run produces all 15 pairwise counter-vs-counter residuals
 //! across 6 tissues = 90 cells.

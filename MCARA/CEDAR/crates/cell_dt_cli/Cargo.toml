@@ -3,7 +3,7 @@ name = "cell_dt_cli"
 version = "0.1.0"
 edition = "2021"
 authors = ["Jaba Tqemaladze <jaba@longevity.ge>"]
-description = "MCARA Counter #1 (CDATA, Centriolar polyglutamylation) — thin CLI wrapper for comparison harness"
+description = "MCARA Counter #1 (CEDAR, Centriolar polyglutamylation) — thin CLI wrapper for comparison harness"
 license = "MIT"
 
 [[bin]]

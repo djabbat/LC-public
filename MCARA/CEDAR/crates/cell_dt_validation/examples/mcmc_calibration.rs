@@ -1,4 +1,4 @@
-/// CDATA v3.0 — MCMC Calibration example (Task 17 / Task 20)
+/// CEDAR v3.0 — MCMC Calibration example (Task 17 / Task 20)
 ///
 /// Runs Metropolis-Hastings calibration against reference datasets
 /// (ROS, telomere, CHIP VAF, MCAI, epigenetic age) and reports:
@@ -11,7 +11,7 @@ use cell_dt_validation::{
 };
 
 fn main() {
-    println!("=== CDATA v3.0 — MCMC Calibration (Metropolis-Hastings) ===\n");
+    println!("=== CEDAR v3.0 — MCMC Calibration (Metropolis-Hastings) ===\n");
 
     // ── Load reference datasets ───────────────────────────────────────────────
     let ds = ReferenceDatasets::load();

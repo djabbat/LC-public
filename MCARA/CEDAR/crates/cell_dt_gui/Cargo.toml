@@ -2,7 +2,7 @@
 name = "cell_dt_gui"
 version = "0.1.0"
 edition = "2021"
-description = "CDATA v3.0 — egui desktop simulator"
+description = "CEDAR v3.0 — egui desktop simulator"
 
 [[bin]]
 name = "cell_dt_gui"

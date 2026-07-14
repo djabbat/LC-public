@@ -16,7 +16,7 @@ pub struct TissueState {
     /// Ambient O₂ concentration in the stem cell niche (% O₂).
     /// Default: 21.0 (normoxia / standard culture).
     /// HSC niche in vivo: ~1–3%. Set to 2.0 to simulate physiological hypoxia.
-    /// Used by MitochondrialSystem to compute mito_shield_for_o2() (CDATA v3.4).
+    /// Used by MitochondrialSystem to compute mito_shield_for_o2() (CEDAR v3.4).
     pub current_o2_percent: f64,
 }
 

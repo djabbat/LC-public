@@ -2,7 +2,7 @@
 
 ## Срочные
 - [ ] Добавить DOI (Zenodo или CrossRef)
-- [ ] Опубликовать на PyPI (cdata-sim)
+- [ ] Опубликовать на PyPI (cedar-sim)
 - [ ] Создать документацию на ReadTheDocs
 
 ## Технические

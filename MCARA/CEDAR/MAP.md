@@ -27,7 +27,7 @@ CEDAR/
 │
 ├── simulator/          — Python-симулятор CEDAR-v2
 │   ├── _pi.md
-│   ├── cdata_sim/      — Исходный код
+│   ├── cedar_sim/      — Исходный код
 │   ├── tests/          — Тесты
 │   └── pyproject.toml
 │

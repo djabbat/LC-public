@@ -21,7 +21,7 @@ impl InflammagingSystem {
         self.update_with_chip(state, dt, age_years, dna_damage, mtdna_release, 0.0);
     }
 
-    /// Full update with explicit CHIP VAF (CDATA v3.5, L1 link).
+    /// Full update with explicit CHIP VAF (CEDAR v3.5, L1 link).
     ///
     /// `chip_vaf`: CHIP variant allele frequency [0.0, 1.0].
     ///   At age 70: typical VAF ≈ 0.07 (Jaiswal SS et al. 2017 NEJM 377(2):111-121, PMID: 28636844).
@@ -51,7 +51,7 @@ impl InflammagingSystem {
             + state.damps_level * 0.1;
         state.nfkb_activity = (0.05 + nfkb_input).clamp(0.05, 0.95);
 
-        // SASP production with CHIP amplifier (L1 link, CDATA v3.5)
+        // SASP production with CHIP amplifier (L1 link, CEDAR v3.5)
         let chip_amplifier = 1.0 + chip_vaf.clamp(0.0, 1.0) * self.params.chip_sasp_strength;
         let sasp_prod = state.cgas_sting_activity * state.nfkb_activity
             * state.senescent_cell_fraction * chip_amplifier;

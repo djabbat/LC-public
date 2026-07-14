@@ -1,15 +1,15 @@
 [package]
-name = "cdata_backend"
+name = "cedar_backend"
 version = "0.1.0"
 edition = "2021"
 authors = ["LC Team"]
-description = "CDATA subproject backend - Centriolar Damage Accumulation Theory of Aging"
+description = "CEDAR subproject backend - Centriolar Damage Accumulation Theory of Aging"
 license = "MIT"
-repository = "https://github.com/LC/CDATA"
+repository = "https://github.com/LC/CEDAR"
 readme = "README.md"
 
 [[bin]]
-name = "cdata_backend"
+name = "cedar_backend"
 path = "src/main.rs"
 
 [dependencies]

@@ -12,7 +12,7 @@ defmodule CDATAFrontendWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/cdata_frontend_web/templates",
+        root: "lib/cedar_frontend_web/templates",
         namespace: CDATAFrontendWeb
 
       import Phoenix.Controller,

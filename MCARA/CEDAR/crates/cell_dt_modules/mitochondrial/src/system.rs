@@ -1,7 +1,7 @@
 use cell_dt_core::MitochondrialState;
 use crate::params::{MitochondrialParams, sigmoid_ros, compute_mitophagy, accumulate_mtdna};
 
-// ── Hypoxia prediction constants (CDATA v3.4, calibrated vs. Peters-Hall et al. 2020) ──
+// ── Hypoxia prediction constants (CEDAR v3.4, calibrated vs. Peters-Hall et al. 2020) ──
 // Peters-Hall et al. (2020, FASEB J): primary HBECs at 2% O₂ → >200 PD without telomerase.
 // Recalibration: mito_shield_max = 0.99 reproduces >200 PD in the analytical formula.
 // k_o2 = 0.2 /%O₂ from exponential fit to normoxia→hypoxia gradient.
@@ -15,7 +15,7 @@ const K_O2: f64 = 0.2;              // exponential decay constant, units: 1/(%O�
 pub enum CellTypeShield {
     EpithelialProgenitor, // 1.00 × MITO_SHIELD_MAX (Peters-Hall HBECs)
     HematopoieticStem,    // 0.96 × MITO_SHIELD_MAX (HSC bone marrow niche)
-    Fibroblast,           // 0.91 × MITO_SHIELD_MAX (CDATA primary calibration cell)
+    Fibroblast,           // 0.91 × MITO_SHIELD_MAX (CEDAR primary calibration cell)
 }
 
 impl CellTypeShield {
@@ -30,7 +30,7 @@ impl CellTypeShield {
 
 /// Compute mito_shield as a function of ambient O₂ concentration (% atm).
 ///
-/// Formula (CDATA v3.4, article §2):
+/// Formula (CEDAR v3.4, article §2):
 ///   mito_shield([O₂]) = mito_shield_max × cell_modifier × exp(−k_O₂ × [O₂])
 ///
 /// Calibration anchor: 2% O₂, EpithelialProgenitor → mito_shield ≈ 0.980 → >200 PD.
@@ -40,7 +40,7 @@ pub fn mito_shield_for_o2(o2_percent: f64, cell_type: CellTypeShield) -> f64 {
     (max * (-K_O2 * o2_percent).exp()).clamp(0.0, 1.0)
 }
 
-/// Predicted Hayflick limit from CDATA v3.5 analytical formula (article §3).
+/// Predicted Hayflick limit from CEDAR v3.5 analytical formula (article §3).
 ///
 ///   N_Hayflick([O₂]) = D_crit / (alpha_nu_beta × (1 − mito_shield([O₂])))
 ///
@@ -55,7 +55,7 @@ pub fn predicted_hayflick(o2_percent: f64, cell_type: CellTypeShield) -> f64 {
     D_CRIT / denom
 }
 
-/// Predicted Hayflick limit with ROCK inhibitor (CDATA v3.5, Prediction 4).
+/// Predicted Hayflick limit with ROCK inhibitor (CEDAR v3.5, Prediction 4).
 ///
 /// Extended formula (article §5.1):
 ///   N_Hayflick([O₂], [ROCKi]) =
@@ -83,7 +83,7 @@ pub fn predicted_hayflick_with_rocki(
     D_CRIT / denom
 }
 
-/// Default ε coefficient for ROCKi extension formula (CDATA v3.5).
+/// Default ε coefficient for ROCKi extension formula (CEDAR v3.5).
 /// Midpoint of calibration range 0.05–0.07 μM⁻¹.
 /// Update after Experiment 4 (Prediction 4) calibration.
 pub const ROCKI_EPSILON_DEFAULT: f64 = 0.06;
@@ -100,7 +100,7 @@ impl MitochondrialSystem {
     /// Update mitochondrial state for one time-step.
     ///
     /// `o2_percent`: ambient O₂ in the niche (%, default 21.0 = normoxia).
-    /// Uses the combined mito_shield formula (CDATA v3.4):
+    /// Uses the combined mito_shield formula (CEDAR v3.4):
     ///   mito_shield_total = mito_shield_age(age) × mito_shield_O2(o2)
     ///
     /// Backwards-compatible wrapper (without o2) calls update_with_o2(…, 21.0, Fibroblast).
@@ -108,7 +108,7 @@ impl MitochondrialSystem {
         self.update_with_o2(state, dt, age_years, inflammation_level, 21.0, CellTypeShield::Fibroblast);
     }
 
-    /// Full update with explicit O₂ and cell-type (CDATA v3.4).
+    /// Full update with explicit O₂ and cell-type (CEDAR v3.4).
     pub fn update_with_o2(
         &self,
         state: &mut MitochondrialState,
@@ -286,7 +286,7 @@ mod tests {
 
     #[test]
     fn test_mito_shield_minimum_floor() {
-        // Clamp floor is 0.05 (physiological minimum — see CDATA v3.4 constants).
+        // Clamp floor is 0.05 (physiological minimum — see CEDAR v3.4 constants).
         let sys = sys();
         let mut s = state();
         sys.update(&mut s, 0.001, 1000.0, 0.0);  // normoxia: extremely low shield → hits floor
@@ -409,7 +409,7 @@ mod tests {
             "Just below thresholds should not collapse");
     }
 
-    // ── mito_shield_for_o2 (CDATA v3.4 hypoxia prediction) ───────────────────
+    // ── mito_shield_for_o2 (CEDAR v3.4 hypoxia prediction) ───────────────────
 
     #[test]
     fn test_mito_shield_normoxia_low() {

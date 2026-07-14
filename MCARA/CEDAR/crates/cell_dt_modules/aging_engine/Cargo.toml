@@ -2,7 +2,7 @@
 name = "cell_dt_aging_engine"
 version = "0.1.0"
 edition = "2021"
-description = "CDATA v3.0 — integrator: combines all 6 aging subsystems into one step"
+description = "CEDAR v3.0 — integrator: combines all 6 aging subsystems into one step"
 
 [dependencies]
 cell_dt_core = { path = "../../cell_dt_core" }

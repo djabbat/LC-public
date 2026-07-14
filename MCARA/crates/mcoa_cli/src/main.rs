@@ -1,7 +1,7 @@
 //! mcoa-sim — run an MCARA simulation and write per-step records to CSV.
 //!
 //! Per the mandatory comparison rule (see ~/Desktop/LC/MCARA/CLAUDE.md), every simulation
-//! output MUST be paired with an analogous CDATA run via `scripts/compare_mcoa_cdata.py`.
+//! output MUST be paired with an analogous CEDAR run via `scripts/compare_mcoa_cedar.py`.
 
 use clap::Parser;
 use mcoa_core::{Gamma, Tissue};

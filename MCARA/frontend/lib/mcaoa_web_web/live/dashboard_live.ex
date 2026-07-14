@@ -82,7 +82,7 @@ defmodule McoaWebWeb.DashboardLive do
 
       <p class="mt-6 text-xs text-gray-500">
         Every MCAOA run should be paired with a CDATA run via
-        <code>scripts/compare_mcaoa_cdata.py</code> (mandatory rule).
+        <code>scripts/compare_mcaoa_cedar.py</code> (mandatory rule).
       </p>
     </div>
     """
