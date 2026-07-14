@@ -1,4 +1,4 @@
-# The Multi-Counter Architecture of Organismal Aging: A Quantitative Framework for Integrating Mechanistic Theories
+# Four Counters, One Limit: Centriole, Telomere, Mitochondrion, and Epigenome in the Architecture of Replicative Aging
 
 **Jaba Tqemaladze, MD**\
 Georgia Longevity Alliance, Tbilisi, Georgia\
@@ -14,15 +14,17 @@ Here I propose that the centriole is that counter. The centriole and the primary
 
 Four lines of evidence support this. In C. elegans, 551 of 558 cells eliminate their centrioles upon differentiation — a one-way exit from the centrosome-cilium cycle. In Drosophila oocytes, forced retention of the old centrosome breaks totipotency. In planarians, stem cells lack centrioles entirely; the organelles appear only when a cell commits to a fate. In mammals, the older mother centriole segregates asymmetrically at division and helps determine what a daughter becomes — an effector cell or a memory cell, a neuron or a progenitor. A microprotein at the centriole's subdistal appendages, miP-FERMT3, directly triggers p53-independent senescence and increases with age.
 
-I define a single experiment to test the hypothesis: remove centrioles from a fibroblast, add Yamanaka factors, and count the colonies. If the centriole anchors differentiation, removing it should lift the lock. Either outcome — more colonies or fewer — is informative. The design includes the controls that distinguish a centriole effect from stress, from ciliary signaling, and from pericentriolar material.
+I define a single experiment to test the hypothesis: remove centrioles from a fibroblast, add Yamanaka factors, and count the colonies. If the centriole anchors differentiation, removing it should lift the lock.
 
-**Keywords:** centriole, cilium, polyglutamylation, replicative senescence, CEDAR, MCARA, aging, stem cell, reprogramming, differentiation
+**Four counters — centriole, telomere, mitochondrion, and epigenome — run in parallel. When three are protected (hTERT for telomeres, low oxygen for mitochondria, partial reprogramming for the epigenome), the centriole continues to count. MCARA explains why cells still arrest.**
+
+**Keywords:** centriole, cilium, polyglutamylation, telomere, epigenome, mitochondria, replicative senescence, MCARA, aging, reprogramming
 
 ---
 
 ## 1. A Puzzle
 
-Two discoveries frame the problem. Bodnar and colleagues showed that hTERT — the catalytic subunit of telomerase — extends the lifespan of human fibroblasts but does not make them immortal [1]. Parrinello and colleagues showed that growing the same cells in 2% oxygen, which shields mitochondria from oxidative damage, extends lifespan further [2]. Take both precautions together — protect telomeres, shield mitochondria — and BJ fibroblasts still arrest.
+Two discoveries frame the problem. Bodnar and colleagues showed that hTERT — the catalytic subunit of telomerase — extends the lifespan of human fibroblasts but does not make them immortal [1]. Parrinello and colleagues showed that growing the same cells in 2% oxygen, which shields mitochondria from oxidative damage, extends lifespan further [2]. Take both precautions together — protect telomeres, shield mitochondria — and BJ fibroblasts still arrest. Add partial epigenetic reprogramming, and the cells still stop. Three counters are slowed. A fourth continues.
 
 Passanisi and Spencer confirmed this at single-cell resolution in 2026: telomere length, DNA damage foci, and oxidation state do not distinguish cycling cells from arrested ones [3]. Something else marks the limit.
 
@@ -146,23 +148,20 @@ If the centriole is a barrier to reprogramming, centriole elimination should rai
 
 ---
 
-## 4. The Multi-Counter Architecture (MCARA)
+## 4. The Four-Counter Architecture (MCARA)
 
-Aging is not a single process. It is the output of several counters running in parallel, each measuring a different aspect of cellular history. When one counter is silenced, others continue.
+Aging is not a single process. It is the output of four counters running in parallel, each measuring a different aspect of cellular history. When three are silenced, the fourth continues.
 
-Table 2 lists five counters. C1 — the centriole, read out as the centriole-to-cilium ratio indexed by polyE — is the focus of this paper. It is the only counter not addressed by current anti-aging interventions. C2 (epigenetic) can be slowed by partial reprogramming but not stopped. C3 (mitochondrial) can be shielded by low oxygen. C4 (structural) reflects the physical state of the centriole and cilium. C5 (organismal) integrates all counters at the tissue level.
+**Table 2. The Four Counters**
 
-**Table 2. The Five Counters**
+| # | Counter | What it measures | Can it be slowed? | Partner |
+|:--:|---------|------------------|:-----------------:|---------|
+| C1 | **Centriole** | Divisions survived; centriole/cilium ratio via polyE | Unknown | GLA |
+| C2 | **Telomere** | Telomere length, DDR | Yes (hTERT) | — |
+| C3 | **Mitochondrion** | mtDNA mutations, ROS | Yes (2% O₂) | Suomalainen |
+| C4 | **Epigenome** | CpG methylation, Horvath clock | ~30–40% (partial reprogramming) | Wagner |
 
-| # | Counter | What it measures | Can it be slowed? |
-|:--:|---------|------------------|:-----------------:|
-| C1 | Centriole age | Divisions survived; centriole/cilium ratio via polyE | Unknown |
-| C2 | DNA methylation | CpG methylation state | ~30–40% by hypoxia |
-| C3 | Mitochondrial health | mtDNA mutations, ROS | Yes (2% O₂) |
-| C4 | Centriole/cilium morphology | Structural integrity | Late stages only |
-| C5 | Organismal integration | HSC engraftment, lifespan | — (integrates all) |
-
-A cell protected from telomere shortening (hTERT) and oxidative damage (2% O₂) has silenced counters typically associated with replicative senescence. It still arrests. The arrest is accompanied by centriole elongation, polyE accumulation, and cilium shortening — the signature of C1 progression. The multi-counter architecture accounts for this: when C2 and C3 are slowed, C1 continues to count.
+A cell protected by hTERT (C2), low oxygen (C3), and partial reprogramming (C4) has silenced three counters. It still arrests. The arrest is accompanied by centriole elongation, polyE accumulation, and cilium shortening — the signature of C1. The four-counter architecture accounts for this: when three counters are slowed, the fourth continues.
 
 ---
 
