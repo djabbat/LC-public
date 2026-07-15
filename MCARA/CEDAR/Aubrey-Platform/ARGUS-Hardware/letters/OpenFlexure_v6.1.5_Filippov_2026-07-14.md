@@ -1,7 +1,7 @@
-# Письмо Alex F — OpenFlexure v6.1.5 (прямой микроскоп)
+# Письмо Alex — OpenFlexure v6.1.5 (прямой микроскоп)
 
 **Дата:** 2026-07-14
-**Кому:** Alex F (инженерный партнёр ARGUS)
+**Кому:** Alex (инженерный партнёр ARGUS)
 **От:** Джаба Ткемаладзе
 **Контекст:** Ошибочно отправлено в тред Fraunhofer IVV (Max Hesse). Max ответил: «I think you've sent this to the wrong contacts 😉»
 
