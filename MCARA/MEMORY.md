@@ -4,6 +4,36 @@
 
 ---
 
+## 2026-07-15: Апелляция в Biogerontology 🟡
+
+- **Журнал:** Biogerontology | **ID:** `7cc6de62` | **Тип:** Апелляция на решение редактора
+- **Письмо:** Rattan + Yanai. Аргумент: статья полностью переписана — narrative-first, Figure 1 (centriole-cilium ratio), 13-group experiment table, 5 falsifiable hypotheses. Наука не изменена, презентация — новая.
+- **Ключевые изменения:**
+  1. Открывается с парадокса: hTERT + гипоксия → arrest (не абстрактный framework)
+  2. Центриоль — физический объект, не абстрактный счётчик
+  3. Доказательства из 5 phyla ДО multi-counter архитектуры
+  4. Figure 1: centriole-cilium ratio (графический обзор)
+  5. Таблица 13-group эксперимента → 5 falsifiable гипотез
+- **Статус:** 🟡 Ожидание ответа редактора
+
+---
+
+## 2026-07-14: Подача в BioEssays (Problems & Paradigms) 🟢
+
+- **Журнал:** BioEssays (Wiley) | **ID:** `4799098` | **Тип:** Problems & Paradigms
+- **Название:** «Centriole Elimination as a Gateway to a New Differentiation State: A Hypothesis»
+- **Статус:** 🟢 Подана 2026-07-14, ожидание редакционного решения
+
+---
+
+## 2026-07-14: Препринт «Three-Step Strategy to Overcome the Sprouting Paradox» — Research Square 🟢
+
+- **Платформа:** Research Square | **DOI:** `10.21203/rs.3.rs-10320333/v1`
+- **RSID:** rs-10320333
+- **Статус:** ✅ Опубликован, постоянный DOI
+
+---
+
 ## Rejection #1 — 2026-07-13: Biogerontology
 
 **Журнал:** Biogerontology | **ID:** `7cc6de62` | **Дней:** 40 | **Тип:** Section editor (Hagai Yanai)
