@@ -466,7 +466,7 @@ LC/
 │   │       ├── ARGUS-LP_cover_letter_to_Alex_2026-06-29.md
 │   │       ├── ARGUS-LP_v3_final_2026-06-27.md
 │   │       ├── ARGUS_scheme.png
-│   │       ├── email_Aleksei_v1.1_approval.md
+│   │       ├── email_Alex_v1.1_approval.md
 │   │       └── correspondence/
 │   │           ├── ARGUS-LP_v3_final_2026-06-27.md
 │   │           ├── ARGUS_LP_DEEP_AUDIT_2026-06-27.md
@@ -479,9 +479,9 @@ LC/
 │   │           ├── ARGUS_LP_letter_to_Alex_2026-06-27.md
 │   │           ├── ARGUS_LP_proposals_for_Alex.md
 │   │           ├── ARGUS_LP_short_reply_to_Alex.md
-│   │           ├── email_Aleksei_OpenFlexure_2026-07-03.md
-│   │           ├── email_Aleksei_Squid_2026-07-03.md
-│   │           ├── email_Aleksei_Squid_followup_2026-07-03.md
+│   │           ├── email_Alex_OpenFlexure_2026-07-03.md
+│   │           ├── email_Alex_Squid_2026-07-03.md
+│   │           ├── email_Alex_Squid_followup_2026-07-03.md
 │   │           └── strategic_memo_Koln_narrative_2026-07-04.md
 │   ├── Aubrey/
 │   │   ├── CONCEPT.md  ← core
@@ -563,7 +563,7 @@ LC/
 │   │   │   ├── TODO.md  ← core
 │   │   │   └── _pi.md  ← core
 │   │   ├── _archive/
-│   │   │   ├── Aleksei_Filippov.md
+│   │   │   ├── Alex_F.md
 │   │   │   ├── Aubrey_CONCEPT.docx
 │   │   │   ├── Aubrey_CONCEPT.pdf
 │   │   │   ├── Aubrey_articles_status.md
@@ -1829,7 +1829,7 @@ LC/
 │   │   ├── mcoa_hsc_100.csv
 │   │   └── mcoa_neuron_100.csv
 │   └── бизнесмены/
-│       ├── Алекс_Филиппов/
+│       ├── Алекс_F/
 │       └── Джозеф_Джекс/
 │           ├── CEDAR.pdf
 │           ├── Jacks_meeting_prep.docx
