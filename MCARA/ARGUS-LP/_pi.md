@@ -1,6 +1,7 @@
 # _pi.md — ARGUS-LP (подпроект MCARA)
 
 **Parent:** LC/MCARA
+**Инженерный близнец:** Marketing/ARGUS-LP (GitHub-ready, hardware/software/firmware)
 
 > ## 🔴 ЖЕЛЕЗНОЕ ПРАВИЛО: ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
 > 
@@ -25,6 +26,12 @@ ARGUS-LP — AI-Resident Robotic Genealogical Ultra-surveillance for Lineage Pur
 - Код и эксперименты — в `../Aubrey/` и `../CEDAR/`
 - Грантовые заявки — здесь
 
+## Связь с Marketing/ARGUS-LP
+- **Marketing/ARGUS-LP** — инженерная реализация (OpenFlexure, STL, прошивки, софт)
+- **Здесь** — научное обоснование, грантовые заявки, теория
+- Не дублировать: инженерное → в Marketing, научное → здесь
+
 ## Правила
 - Не дублировать техническую документацию из Aubrey/
+- Не дублировать hardware/software из Marketing/ARGUS-LP
 - Все грантовые материалы — здесь
