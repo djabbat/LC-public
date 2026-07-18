@@ -1,18 +1,32 @@
 # STATE — CEDAR
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Статьи и публикации:** см. `~/Desktop/Services/docs/SUBMISSIONS_STATUS.md`
+> **📄 Стратегия переписывания:** `~/Desktop/Services/docs/REWRITE_STRATEGY_2026-07-16.md`
 
-**Purpose:** volatile state, active TODOs, decision log, milestones.
-**Convention:** new entries in Decision Log at the top with date.
+**Purpose:** volatile state, active TODOs, milestones.
+**Convention:** new entries at the top with date.
 
 ---
 
-## 📚 2026-07-10 — Сабмит в BioEssays
+## 📚 2026-07-16 — BioEssays desk reject + стратегия переписывания
 
-- Препринт Research Square `rs-10309814` — screening
-- Сабмит BioEssays `5285ce27` — Problems & Paradigms, ждём решения (~5 дн.)
+- 🔴 **BioEssays `4799098` — desk reject 15 июл (< 24 ч).** Причина: pre-submission inquiry не отправлен, статья слишком большая для Problems & Paradigms.
+- ✅ **Post-mortem записан** в MEMORY.md
+- 📄 **Стратегия переписывания:** Centriole Elimination (792 строки) → разделить на 3 статьи:
+  - **A.** CEDAR hypothesis (3000 слов) → Differentiation
+  - **B.** 13-group experimental design → Cell Cycle
+  - **C.** CAMC molecular model → BioSystems
+- 🟢 **npj Aging `2e8466c7` — Peer Review** (с 12 июн, активность 6 июл) — **ЖДАТЬ.**
+- 🟡 **MCARA Biogerontology `7cc6de62`** — апелляция подана 15 июл.
+- 📄 **Препринты:** v1.0 `rs-10309814`, v2.0 `rs-10320333` — оба на Research Square.
+
+---
+
+## 📚 2026-07-10 — Сабмит в BioEssays (← устарело, см. выше)
+
+- Препринт Research Square `rs-10309814` — ✅ DOI получен
+- Сабмит BioEssays → 🔴 desk reject 15 июл
 - Centrioles в npj Aging `2e8466c7` — Peer Review
-- Ze_Z₂ (Annalen der Physik) — rejection #30 (1 день), удалён из активных
 
 ---
 

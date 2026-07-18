@@ -1,5 +1,21 @@
 # MEMORY — CytogeneticTree
 
+## 🔬 Literature Review 2026-07-18 — Asymmetric Inheritance Evidence
+
+> Полный обзор: `../docs/LITERATURE_REVIEW_2026-07-18.md`
+> Брифинг для MCARA: `../docs/MCARA_BRIEFING_2026-07-18.md`
+
+### Ключевое для CellLineageTree:
+- **CENP-A/CENP-C как маркеры epigenetic age** (Carty 2021 PLoS Genet, PMID 34014920): CENP-C required for CID assembly; CID lost in aged GSC. Измерять alongside GT335.
+- **Ciliary membrane inheritance** (Paridaen 2013 Cell, PMID 24120134): ARL13B/SMO alongside Ninein — второй канал asymmetric readout.
+- **De novo centriole synthesis frequency:** см. Bobinnec 1998 (PMID 9730976), Khodjakov & Rieder 2001 (PMID 11285289). Предсказание D1 → прямое измерение.
+- **Mitotic drive model** (Ranjan & Chen 2022, PMID 35437581) — теоретическая рамка для biased segregation.
+
+### Слабые места, которые платформа должна адресовать:
+- Частота de novo центриолей (<5%? >20%?) — Prediction D1-D3
+- Ninein-needed vs not-needed в разных видах — тест на mammalian cells (BJ-hTERT)
+- Asymmetric histone segregation под вопросом (Li 2025 PNAS) — не полагаться на гистоны как аргумент; фокус на центросомах
+
 ## Permanent rules
 
 - **Literature**: every PMID must be verified via PubMed esummary API before entering any file in this subproject. No DeepSeek for citation search.
