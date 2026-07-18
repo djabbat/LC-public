@@ -1,37 +1,9 @@
-# _pi.md — Organismal Aging
+# _pi.md — Organismal_Aging
 
 **Parent:** LC
 
-**Правила для pi при работе с этим проектом.**
+> RULE: before any action, read MAP.md, MEMORY.md, CONCEPT.md.
 
----
-
-## Язык
-Всё общение, комментарии в коде, документация — **строго на русском**.
-
-## Приоритет
-Organismal Aging — **главный интегратор LC**. Все бывшие подпроекты (CEDAR, MCARA, Ze, BioSense, FCLC, HAP) — компоненты единой системы.
-
-## Архитектура
-- **sim_core/** — ядро на Rust (центриоль → счётчики → ткани → организм)
-- **argus_bridge/** — мост к роботу ARGUS-LP
-- **infogest_bridge/** — мост к INFOGEST
-- **biosense/**, **fclc/**, **hap/** — обеспечивающие компоненты
-
-## Правила расширения
-- Модель должна быть **параметризуемой** под любой вид
-- Все счётчики, ткани, виды — через **traits** (Rust)
-- **Слоты расширения** обязательны в каждом модуле
-- piRNA #6 — исключён из v1.0, слот оставлен
-
-## Лицензия
-Apache 2.0 — весь код, данные CC-BY 4.0.
-
-## Связанные проекты
-- **Aubrey** (~/Desktop/LC/MCARA/Aubrey/) — ARGUS-LP робот
-- **PhD** (~/Desktop/PhD/) — диссертация (CEDAR)
-- **Services/mbpr** — peer review инструмент
-
----
-
-*Organismal Aging _pi.md v1.0 — 2026-06-21.*
+## Rules
+- All core files — ENGLISH only.
+- No extraneous projects in this directory.
