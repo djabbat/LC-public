@@ -1,5 +1,26 @@
 # CEDAR — Memory
 
+## 🔬 Literature Review 2026-07-18 — Asymmetric Inheritance
+
+> Проведён широкий поиск (~60 PMID, 25 детально). Полный обзор: `docs/LITERATURE_REVIEW_2026-07-18.md`
+> Брифинг для MCARA: `docs/MCARA_BRIEFING_2026-07-18.md`
+
+### Ключевые находки:
+- **Asymmetric centrosome inheritance — доказан** (Yamashita 2007 Science; Wang 2009 Nature; Izumi 2012 PNAS; Chen & Yamashita 2021 Open Biol)
+- **CENP-A asymmetry + возраст-зависимая потеря** в GSC (Carty 2021 PLoS Genet, PMID 34014920) — прямая связь с epigenetic age
+- **Asymmetric histone segregation — под вопросом** (Li 2025 PNAS, PMID 41166424 — photoconvertible Dendra2 показал симметричную сегрегацию)
+- **SLABOE MESTO Ninein:** не нужен для ACD у дрозофилы (Zheng 2016 MBoC), но нужен у млекопитающих (Wang 2009 Nature)
+- **De novo centriole synthesis:** частота неизвестна в большинстве систем — нужно измерить (Prediction D1-D3 CellLineageTree)
+
+### Новые контакты:
+- **Xin Chen** (Johns Hopkins/HHMI) — xchen32@jhu.edu — asymmetric histone inheritance, GSC biology
+- **Komeil Razmi** (CSIRO/UTAS) — Komeil.Razmi@csiro.au — PGC teleosts, связь с Jawahar Patil
+- **Elaine Dunleavy** (NUI Galway) — CENP-A asymmetry, epigenetic age
+
+### Новые PMID для отслеживания:
+Обязательные: 17255513, 19829375, 34014920, 42455441, 24120134
+Для адресации контраргументов: 41166424, 27053665
+
 ## 📛 ПЕРЕИМЕНОВАНИЕ: CDATA → CEDAR (2026-07-13)
 
 - **Решение:** Проект CDATA переименован в CEDAR.
@@ -31,6 +52,44 @@
 - hnRNP обзор (Zhou et al., Reproduction) — RNA-binding proteins в сперматогенезе. Связь с HAP.
 
 - **Полный анализ:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
+
+---
+
+## 🔴 POST-MORTEM — Rejection #6: BioEssays (15 июл 2026)
+
+**Журнал:** BioEssays (Wiley)
+**ID:** `4799098`
+**Дней до решения:** 1 (desk reject)
+**Редактор:** Roberto Botelho (Academic Editor, не EIC)
+
+### Причина (письмо редактора)
+> «After careful assessment, we have made the decision not to consider your manuscript for publication in BioEssays.» — без содержательной обратной связи.
+
+### Что мы упустили
+- ❌ **Pre-submission inquiry НЕ БЫЛ ОТПРАВЛЕН.** Написан (INQUIRY_BioEssays_2026-07-10.md), но не отправлен Kerstin Brachhold. Правило PRE-SUBMISSION RULES нарушено.
+- ❌ **Journal-fit не через скрипт.** `journal-fit.sh` не запускался. Ручная оценка: IF 3.3, acceptance 37% — выглядело хорошо, но scope не проверен системно.
+- ❌ **Размер рукописи** — 792 строки (17 стр.) — вероятно, слишком большая для «Problems & Paradigms». Типичная статья BioEssays — 3000–5000 слов. Наша — research proposal с 13-group экспериментом, €3M бюджетом.
+- ❌ **Жанровый mismatch.** BioEssays ожидает компактную концептуальную гипотезу, а получил развёрнутый experimental design. Статья ближе к «Methods & Protocols» чем к «Problems & Paradigms».
+
+### Что изменить перед следующей подачей
+- [ ] **Обязательно pre-submission inquiry** перед любой подачей (Правило №2 PRE-SUBMISSION RULES)
+- [ ] **journal-fit.sh** перед выбором журнала
+- [ ] Для hypothesis-журналов: сократить до 3000–4000 слов, убрать детальный 13-group experimental design в Supplementary или в отдельную статью
+- [ ] Для методов/протоколов: подавать в журналы типа Cell Cycle, Differentiation, Biology Direct
+- [ ] Рассмотреть разделение: (a) короткая гипотеза CEDAR/CAMC → hypothesis journal, (b) полный experimental design → methods journal или как Registered Report
+
+### Следующий журнал (предложения)
+| Журнал | Тип | IF | Почему |
+|--------|-----|----|--------|
+| **Differentiation** (Elsevier) | Research journal | ~2.5 | Журнал про дифференцировку клеток — точный scope |
+| **Cell Cycle** (T&F) | Research/review | ~4.0 | Публикует centrosome biology, hypothesis |
+| **Biology Direct** (BioMed Central) | Open access | ~4.0 | Принимает hypothesis, быстрый review |
+| **F1000Research** | Open platform | ~2.0 | Post-publication peer review, принимает hypothesis |
+
+### Что делаем сейчас
+- [ ] Journal-fit для Differentiation + Cell Cycle (`journal-fit.sh`)
+- [ ] Pre-submission inquiry → ждать ответа → потом подавать
+- [ ] Тем временем: npj Aging (`2e8466c7`) — в Peer Review с 12 июн, ждём
 
 ---
 
