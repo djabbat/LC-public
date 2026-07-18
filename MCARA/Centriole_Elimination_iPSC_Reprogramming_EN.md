@@ -2,13 +2,13 @@
 
 ## Part I: Systematic Literature Review | Part II: Central Experiment
 
-**Date:** 2026-07-10 | **Version:** v3.15 | **60+ PMIDs** | **~16,000 words**
+**Date:** 2026-07-17 | **Version:** v3.16 — Deep Audit corrections | **60+ PMIDs** | **~16,000 words**
 
 **Author:** Jaba Tqemaladze, MD (for CEDAR/MCARA)
 **Databases searched:** PubMed, CrossRef, Semantic Scholar, bioRxiv, PMC
 **Articles analyzed:** 55+
 **Verified PMIDs:** 60+
-**Status:** All references verified via PubMed/CrossRef API. Systematic audit 2026-07-10.
+**Status:** All references verified via PubMed/CrossRef API. **Corrections 2026-07-17:** planarian data corrected (Azimzadeh 2012, PMID 22223737 — PCM loss, not centriole loss), C. elegans mechanism acknowledged as unknown, FERMT3/ALMS1 verified (42343301, 42380124), prediction range 1.5–10×, totipotency group added. Full report: `audits/DEEP_ANALYSIS_MCARA_2026-07-17.md`.
 
 ---
 
@@ -416,7 +416,7 @@ The centrosome cycle in Drosophila GSCs requires Emerin for survival and differe
 | **Mammals** | Centriole ✓ | Centriole ✓ (polyE↑) | polyE accumulation → CAMC |
 | **C. elegans** | Centriole ✓ | Centriole ✗ | Programmed elimination |
 | **Drosophila ♀** | Centriole ✓ | Centriole ✗ | Polo/PCM downregulation |
-| **Planarians** | **Centriole ✗** | **Centriole ✓ (de novo)** | Appears upon differentiation |
+| **Planarians** | **Centriole ✓ (no PCM)** | **Centriole ✓ (amplified)** | PCM loss in neoblasts; centriole amplification upon multiciliation |
 | **CD8+ T cells** | Centriole ✓ | Centriole ✓ (asymmetric) | Mother centrosome → memory vs effector |
 
 ### 3.2. Mammals: Asymmetric Centrosome Inheritance
@@ -513,7 +513,7 @@ reprogrammed (no "carrier" for entropy reset).
 │                                                             │
 │  CELLS: p53-KO BJ (human fibroblasts) + SB203580             │
 │                                                             │
-│  GROUPS (minimum set — 12):                                 │
+│  GROUPS (minimum set — 14):                                 │
 │  1. DMSO (control) → OSKM → count iPSC colonies             │
 │  2. Centrinone 500 nM × 3 d → OSKM (without centrinone)     │
 │  3. Centrinone + p53-KO + SB203580 (p38i) → OSKM            │
@@ -526,14 +526,18 @@ reprogrammed (no "carrier" for entropy reset).
 │  10. Laser ablation (both centrioles) → OSKM                │
 │  11. Laser ablation (mother only) → OSKM                    │
 │  12. Centrinone washout (3 days) → OSKM                     │
+│  13. Centrinone + CEP192-KD → OSKM (PCM vs centriole)       │
+│  14. 🔑 Centrinone + DUX4 + TPRX1 (totipotency test)        │
 │                                                             │
 │  PRIMARY ENDPOINT:                                          │
 │  % TRA-1-60+ colonies / number of input cells               │
+│  Secondary: MERVL+, Zscan4+ cells (Group 14)                │
 │                                                             │
-│  CEDAR PREDICTION:                                          │
+│  CEDAR PREDICTION (range, v9 2026-07-17):                   │
 │  Group 1: 0.1–1% efficiency (baseline)                      │
 │  Group 2: ~0% (p53/p38-dependent block)                     │
-│  Group 3: 0.01–0.1% (partial rescue)                        │
+│  Group 3: 0.2–10% (1.5–10× increase; range depends on       │
+│           completeness of p53/p38 suppression)              │
 │  Group 4 (MLN8237): 0.2–2% (Aurora A inhibitor effect)      │
 │  Group 5 (KIFC3-KD): 0.2–2% (senescence release)           │
 │  Group 6 (Odf2-KO): 0.2–3% (fate switch)                   │

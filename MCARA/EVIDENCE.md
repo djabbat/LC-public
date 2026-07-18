@@ -317,3 +317,27 @@
 
 **Общая оценка CEDAR:** 6.7 → 7.3/10 (уточнена после feed-анализа).
 
+---
+
+## 10. CORRECTIONS — Deep Audit 2026-07-17
+
+### 10.1. Planarians: Centrosome Loss, NOT Centriole Loss
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|----------|---------|
+| Планарии потеряли **центросомы** (PCM/MTOC) эволюционно, но сохранили центриоли в митотических необластах. IF anti-SMED-CEP135 + TEM | 22223737 | Azimzadeh J et al. Centrosome loss in the evolution of planarians. *Science* 335:461-3 (2012) | ✅ 2026-07-17 | **Strong** |
+| Мультицилиогенез: cep152, plk4, sas6 для амплификации (не de novo) | 32776587 | Li Y et al. *Biol Cell* 112:398-408 (2020) | ✅ 2026-07-17 | Strong |
+| Центросомное наследование при оплодотворении | 21509822 | Schatten H, Sun QY. *Dev Dyn* 240:1971-82 (2011) | ✅ 2026-07-17 | Strong |
+
+**Исправление:** «neoblasts have no centrioles» → «planarians lost centrosomes (PCM) but retain centrioles in mitotic neoblasts.»
+
+### 10.2. C. elegans: Mechanism Unknown
+
+Молекулярный механизм элиминации центриолей в соме C. elegans остаётся неизвестным. Трёхстадийная модель феноменологическая.
+
+### 10.3. DID-РНК → Speculative
+
+Гипотеза DID-РНК не имеет экспериментальных данных. Основная CEDAR не зависит от неё.
+
+### 10.4. FERMT3 (42343301) and ALMS1 (42380124): Verified ✅
+
