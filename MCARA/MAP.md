@@ -29,7 +29,7 @@ MCARA/
 ├── Telomere/           — Counter #4: Теломерный
 ├── Proteostasis/       — Counter #5: Протеостаз
 │
-├── ARGUS-LP/           — 🆕 Инструментальная платформа (перенесена из Marketing 2026-07-08)
+├── _archive/ARGUS-LP_v3_2026-06/  — Устаревшая версия ARGUS-LP (июнь 2026). Актуальная: Marketing/ARGUS-LP_OS v49.
 │   ├── CONCEPT.md      —   6 версий микроскопа (V1–V6), AI-агент
 │   ├── docs/           —   Переписка, BOM, аудиты
 │   └── ...
@@ -60,7 +60,7 @@ MCARA/
 | **MitoROS** | Теория + код | Counter #3 — Митохондриальный |
 | **Telomere** | Теория + код | Counter #4 — Теломерный |
 | **Proteostasis** | Теория + код | Counter #5 — Протеостаз |
-| **ARGUS-LP** | Инструменты + гранты | AI-робот для lineage tracking |
+| **ARGUS-LP_OS** | Инструменты + гранты | AI-робот для lineage tracking | → Marketing/ARGUS-LP_OS |
 | **Aubrey** | Научный проект | Центриолярный атлас, BOLD PILOT, консорциум EIC |
 
 ## Зависимости
@@ -70,4 +70,4 @@ MCARA/
 - EIC Pathfinder 2026 (28 окт)
 - MCARA статья (Biogerontology, ID 7cc6de62)
 - CEDAR статья (npj Aging)
-- ARGUS-LP статья (RSI)
+- ARGUS-LP_OS платформа → Marketing/ARGUS-LP_OS v49
