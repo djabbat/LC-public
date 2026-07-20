@@ -4,7 +4,22 @@
 
 ---
 
-## 2026-07-17: Глубокий аудит + критические исправления 🔴
+## 2026-07-19: Обмен с Пьером Гёнчи + Глубокий аудит + 3 новые статьи 🔴
+
+- **Обмен с Гёнчи (18-19 июл):** Три вопроса — три ответа. Пьер подтвердил: (1) скрытой литературы нет, (2) никто не chasing механизм соматической элиминации, (3) поле открыто. Рекомендовал Pimenta-Marques 2023 (ANA1/CEP295) как отправную точку.
+- **Глубокий аудит:** 41 PMID верифицирован через PubMed API + полные тексты. 93% подтверждены (38/41).
+- **🔴 Найдена проблема:** Lindhout 2021 (33835529) — MCARA цитировал как «maturity sensor → пластичность», но статья показывает ПРОТИВОПОЛОЖНОЕ: потеря центриолей *нарушает* развитие. Исправлено в CONCEPT.md и THEORY.md.
+- **⚠️ Исправлены overstatements:** Bodnar 1998 (не «не иммортализует», а «не бесконечно во всех типах»), Parrinello 2003 (экстраполяция на human явно обозначена).
+- **Bradford Hill upgraded:** 5/9 → 6/9. Temporality 🟢 (Robichaud 2024 sinc-MT). Specificity 🟡 (FERMT3 + ALMS1 + ATF5).
+- **Добавлена трёхстадийная модель:** Kalbfuss & Gönczy (2023) — maintenance → priming → execution. Таблица в CONCEPT.md §0.
+- **Новые PMID в EVIDENCE.md §11:** 37963546, 37256957, 37414202, 40475707 + Pimenta-Marques (doi:10.1038/s44319-023-00020-6).
+- **Follow-up письмо Пьеру:** готово (`CEDAR/articles/docs/Gonczy_lab/FOLLOW_UP_Pierre_2026-07-19.md`).
+- **CONCEPT.md v4.7, THEORY.md v4.7, EVIDENCE.md v4.7, STATE.md обновлён.**
+
+### Новые статьи (Semantic Scholar → PubMed verified)
+- **Centriculum (Maheshwari/Cohen-Fix 2023/2026):** PMID 36693370 (Curr Biol), PMID 42283151 (J Cell Sci). Центросома НЕ membraneless — окружена 3D ER-мембранным ретикулумом. Центрикулум = MT-фильтр. Возраст-зависимая деградация → новый механизм Counter #4.
+- **Сперматогенез (Ishida & Shibuya 2026):** PMID 42455439 (Adv Exp Med Biol). 165 refs. Асимметрия гамет: оогенез = Eliminate, сперматогенез = Retain → Rebuild. Усиливает Bradford Hill Analogy.
+- **Tweedell:** не найден на PubMed (вероятно, старая статья без индексации; URL с Sem Scholar был неинформативен).
 
 - **Проведён:** глубокий аудит всех ссылок и верификация PMID (60+)
 - **Ключевые исправления:**
