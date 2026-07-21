@@ -1,4 +1,4 @@
-//! mcoa-api — Axum REST + WebSocket server consumed by the Phoenix LiveView frontend.
+//! mcara-api — Axum REST + WebSocket server consumed by the Phoenix LiveView frontend.
 //!
 //! Endpoints (v0.1 + 2026-05-08 additions):
 //!   POST /api/simulate                  — run a simulation synchronously
@@ -16,10 +16,10 @@ use axum::{
     routing::{get, post},
     Router,
 };
-use mcoa_core::{
+use mcara_core::{
     default_drift_rates, default_reference_scales, Counter, Gamma, Tissue, N_COUNTERS,
 };
-use mcoa_simulation::{run, EdcTarget, SimulationRecord};
+use mcara_simulation::{run, EdcTarget, SimulationRecord};
 use serde::{Deserialize, Serialize};
 use std::net::SocketAddr;
 
@@ -144,7 +144,7 @@ async fn counter_d(
     let d = division_term + time_term + coupling_term;
 
     Ok(Json(DResponse {
-        counter_id:   counter.mcoa_number(),
+        counter_id:   counter.mcara_number(),
         counter_name: counter.as_str(),
         tissue:       tissue_name.to_string(),
         n_divisions:  n,
@@ -171,7 +171,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/v1/counters/:id/D", get(counter_d))
         .route("/healthz", get(healthz));
     let addr = SocketAddr::from(([127, 0, 0, 1], 3030));
-    tracing::info!("mcoa-api listening on http://{}", addr);
+    tracing::info!("mcara-api listening on http://{}", addr);
     let listener = tokio::net::TcpListener::bind(addr).await?;
     axum::serve(listener, app).await?;
     Ok(())

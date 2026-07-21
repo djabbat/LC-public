@@ -66,14 +66,14 @@
 *Data generated within the LC project for MCARA concept validation.*
 
 1. **Sobol sensitivity analysis of CEDAR v5.1:**
- * File: `data/mcoa/sensitivity/sobol_results_2026-04-15.csv`
+ * File: `data/mcara/sensitivity/sobol_results_2026-04-15.csv`
  * Method: Global sensitivity analysis (Sobol method) for the CEDAR model.
  * Sample: N = 16384.
  * Key result: First-order (S1) for parameter `α_cent` (divisions) is 0.68 ± 0.05, for `β_cent` (time) is 0.22 ± 0.04 in epithelial tissue simulation. Confirms dominance of divisions, but significant time contribution.
  * Status: Verified, reproducible.
 
 2. **LOO-CV cross-validation for damage load prediction:** ⚠️ **CORRECTED 2026-05-10**
- * File: `data/mcoa/validation/LOO_CV_2026-04-17.json`
+ * File: `data/mcara/validation/LOO_CV_2026-04-17.json`
  * Method: Leave-One-Out Cross-Validation on a hypothetical dataset of 5 tissues and 3 time points.
  * Result: R² = -0.093 (model does not explain variance better than baseline mean; negative R² is a permissible indicator that the model is invalid for this dataset).
  * Status: ✅ Corrected. Metric reclassified as R² (MSE ≥ 0 by definition, therefore -0.093 could not be MSE). R² < 0 means the model performs worse than a constant prediction — which is honestly documented as a failure of this model version on this dataset.

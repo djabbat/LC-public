@@ -51,7 +51,7 @@ impl Counter {
     /// User-facing 1-indexed number (Counter #1 … #5). Matches
     /// CONCEPT.md numbering and subproject CLAUDE.md / Cargo.toml
     /// descriptions. Decided 2026-05-07.
-    pub fn mcoa_number(self) -> u8 {
+    pub fn mcara_number(self) -> u8 {
         self as u8 + 1
     }
 }

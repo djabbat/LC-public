@@ -155,18 +155,18 @@ def calculate_gamma_from_data(df: pd.DataFrame, counter_cols: list) -> np.ndarra
 Пакет `proteostasis` регистрируется в основном реестре MCARA. Вызов для интеграции:
 
 ```python
-from mcoa.core import MCOA_Model
+from mcara.core import MCOA_Model
 from proteostasis import ProteostasisCounter
 
 # Загрузка общей конфигурации MCARA
-config = load_mcoa_config('mcoa_config.yaml')
+config = load_mcara_config('mcara_config.yaml')
 
 # Создание экземпляра счётчика #5 с его параметрами
 proteostasis_counter = ProteostasisCounter(config['counters']['5']['params'])
 
 # Регистрация в модели MCARA
-mcoa_model = MCOA_Model
-mcoa_model.register_counter(5, proteostasis_counter, weight=config['tissues']['brain']['w5'])
+mcara_model = MCOA_Model
+mcara_model.register_counter(5, proteostasis_counter, weight=config['tissues']['brain']['w5'])
 ```
 
 ---
