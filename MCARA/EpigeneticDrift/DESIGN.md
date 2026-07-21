@@ -45,7 +45,7 @@ EpigeneticDrift/
 │ │ └── visualization.py # Построение графиков
 │ └── interfaces/ # Внешние API
 │ ├── __init__.py
-│ ├── mcoa_api.py # API для интеграции в общую MCARA
+│ ├── mcara_api.py # API для интеграции в общую MCARA
 │ └── cli.py # Командный интерфейс
 ├── data/ # Данные (не коммитить большие файлы)
 │ ├── synthetic/ # Синтетические данные для тестов
@@ -127,7 +127,7 @@ def simulate_tissue_aging(tissue_type: str, time_range: np.ndarray,
  # 6. Возвращает DataFrame.
 ```
 
-### 3.3. API для интеграции в MCARA: Модуль `interfaces.mcoa_api`
+### 3.3. API для интеграции в MCARA: Модуль `interfaces.mcara_api`
 
 ```python
 def get_counter_definition -> Dict:
@@ -140,7 +140,7 @@ def get_counter_definition -> Dict:
  "normalizer": "f4(D4) = (D4 - D4_min) / (D4_max - D4_min)" # Пример
  }
 
-def compute_D4_for_mcoa(t: float, n: float, other_states: Dict[int, float]) -> float:
+def compute_D4_for_mcara(t: float, n: float, other_states: Dict[int, float]) -> float:
  """Функция-обёртка, которую вызывает главный симулятор MCARA."""
  # Преобразует other_states из формата {2: 1.2, 3: 0.8} в {"D2": 1.2, ...}
  # Создает объект EpigeneticDriftCounter с параметрами по умолчанию или загруженными.

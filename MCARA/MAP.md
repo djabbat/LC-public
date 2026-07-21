@@ -41,7 +41,7 @@ MCARA/
 │   ├── Phase-B/        —   Гонка счётчиков
 │   └── ...
 │
-├── crates/             — Rust-код (mcoa_core, mcoa_api, mcoa_cli, mcoa_compare, mcoa_simulation, mcoa_tests)
+├── crates/             — Rust-код (mcara_core, mcara_api, mcara_cli, mcara_compare, mcara_simulation, mcara_tests)
 ├── backend/            — Python-бэкенд
 ├── frontend/           — Веб-интерфейс
 ├── docs/               — Документация

@@ -76,19 +76,19 @@ cargo build --release
 
 ```bash
 # Baseline HSC simulation, 100 division-equivalent steps
-cargo run --release --bin mcoa-sim -- --tissue hsc --divisions 100
+cargo run --release --bin mcara-sim -- --tissue hsc --divisions 100
 
 # With thyroid EDC exposure (0.8 = high)
-cargo run --release --bin mcoa-sim -- \
+cargo run --release --bin mcara-sim -- \
     --tissue hsc --divisions 200 \
     --edc-exposure 0.8 --edc-target thyroid
 
 # Post-mitotic neuron (slow aging)
-cargo run --release --bin mcoa-sim -- \
+cargo run --release --bin mcara-sim -- \
     --tissue neuron --divisions 200 --seconds-per-division 2592000
 
 # All options
-cargo run --release --bin mcoa-sim -- --help
+cargo run --release --bin mcara-sim -- --help
 ```
 
 ### Run Tests
@@ -100,16 +100,16 @@ cargo test
 ### Start API Server
 
 ```bash
-cargo run --release --bin mcoa-api
+cargo run --release --bin mcara-api
 # Server starts at http://localhost:3000
 ```
 
 ## Example Output
 
 ```
-$ cargo run --release --bin mcoa-sim -- --tissue hsc --divisions 100
-mcoa-sim v3.2: 100 steps, tissue=hsc, EDC=0/none, final L_tissue=0.1523 (below L_crit)
-  Output: mcoa_run.csv
+$ cargo run --release --bin mcara-sim -- --tissue hsc --divisions 100
+mcara-sim v3.2: 100 steps, tissue=hsc, EDC=0/none, final L_tissue=0.1523 (below L_crit)
+  Output: mcara_run.csv
 ```
 
 The CSV contains per-step values for all 5 counters + tissue load + EDC parameters.
@@ -124,12 +124,12 @@ LC/MCARA/
 ├── OPEN_PROBLEMS.md        # Open problems + falsifiable tests
 ├── Cargo.toml              # Workspace definition
 ├── crates/
-│   ├── mcoa_core/          # Core types: Counter, Tissue, Gamma, drift equations
-│   ├── mcoa_simulation/    # Simulation engine: step(), run(), EDC module
-│   ├── mcoa_cli/           # CLI binary (mcoa-sim)
-│   ├── mcoa_api/           # HTTP API server (axum)
-│   ├── mcoa_tests/         # Integration tests
-│   └── mcoa_compare/       # Comparison with CEDAR runs
+│   ├── mcara_core/          # Core types: Counter, Tissue, Gamma, drift equations
+│   ├── mcara_simulation/    # Simulation engine: step(), run(), EDC module
+│   ├── mcara_cli/           # CLI binary (mcara-sim)
+│   ├── mcara_api/           # HTTP API server (axum)
+│   ├── mcara_tests/         # Integration tests
+│   └── mcara_compare/       # Comparison with CEDAR runs
 ├── CEDAR/                  # Centriolar Damage Accumulation (Counter #1)
 ├── Telomere/               # Telomere counter (#2)
 ├── MitoROS/                # Mitochondrial counter (#3)
@@ -151,7 +151,7 @@ MIT — see [LICENSE](LICENSE)
 ## Citation
 
 ```bibtex
-@software{mcoa_simulator,
+@software{mcara_simulator,
   author = {Tqemaladze, Jaba},
   title = {MCARA Simulator — Multi-Counter Architecture of Organismal Aging},
   year = {2026},
