@@ -1,12 +1,12 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/mcoa_core",
-    "crates/mcoa_simulation",
-    "crates/mcoa_tests",
-    "crates/mcoa_api",
-    "crates/mcoa_cli",
-    "crates/mcoa_compare",
+    "crates/mcara_core",
+    "crates/mcara_simulation",
+    "crates/mcara_tests",
+    "crates/mcara_api",
+    "crates/mcara_cli",
+    "crates/mcara_compare",
 ]
 
 [workspace.package]

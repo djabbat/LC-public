@@ -1,21 +1,21 @@
-//! mcoa-compare-all — pairwise comparison across all 5 counters × 6 tissues.
+//! mcara-compare-all — pairwise comparison across all 5 counters × 6 tissues.
 //!
 //! Skeleton port of `scripts/compare_all.py`. Full orchestration of 5 simulators
-//! still depends on `mcoa_simulation` API; this binary computes pairwise Δ
+//! still depends on `mcara_simulation` API; this binary computes pairwise Δ
 //! statistics for any pair of CSVs and emits a flat report.
 //!
-//! Per `feedback_mcoa_cedar_comparison v2`: 5 counter simulators (CEDAR,
+//! Per `feedback_mcara_cedar_comparison v2`: 5 counter simulators (CEDAR,
 //! Telomere, MitoROS, EpigeneticDrift, Proteostasis) + MCARA coordinator.
 //! Every full run produces all 15 pairwise counter-vs-counter residuals
 //! across 6 tissues = 90 cells.
 
 use clap::Parser;
-use mcoa_compare::{delta_stats, read_csv};
+use mcara_compare::{delta_stats, read_csv};
 use std::fs;
 use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
-#[command(name = "mcoa-compare-all", about = "Pairwise comparison across counter CSVs")]
+#[command(name = "mcara-compare-all", about = "Pairwise comparison across counter CSVs")]
 struct Cli {
     /// Counter CSV files. Provide ≥2; pairwise Δ is computed for every pair.
     #[arg(long, num_args = 2..)]

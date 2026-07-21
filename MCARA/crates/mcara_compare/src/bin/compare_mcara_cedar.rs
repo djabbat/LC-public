@@ -1,20 +1,20 @@
-//! mcoa-compare-cedar — MANDATORY MCARA vs CEDAR comparison harness.
+//! mcara-compare-cedar — MANDATORY MCARA vs CEDAR comparison harness.
 //!
-//! Rust port of `scripts/compare_mcoa_cedar.py`.
+//! Rust port of `scripts/compare_mcara_cedar.py`.
 //!
-//! Per project rule (`feedback_mcoa_cedar_comparison`): every MCARA simulation run
+//! Per project rule (`feedback_mcara_cedar_comparison`): every MCARA simulation run
 //! MUST be paired with an analogous CEDAR run and a Δ report filed to
 //! `docs/comparisons/YYYY-MM-DD_label.md`.
 
 use clap::Parser;
-use mcoa_compare::{compare_mcoa_cedar, CompareArgs};
+use mcara_compare::{compare_mcara_cedar, CompareArgs};
 use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
-#[command(name = "mcoa-compare-cedar", about = "MCARA vs CEDAR comparison harness")]
+#[command(name = "mcara-compare-cedar", about = "MCARA vs CEDAR comparison harness")]
 struct Cli {
     #[arg(long)]
-    mcoa_csv: PathBuf,
+    mcara_csv: PathBuf,
     #[arg(long)]
     cedar_csv: PathBuf,
     #[arg(long)]
@@ -28,12 +28,12 @@ struct Cli {
 fn main() -> anyhow::Result<()> {
     let c = Cli::parse();
     let args = CompareArgs {
-        mcoa_csv: &c.mcoa_csv,
+        mcara_csv: &c.mcara_csv,
         cedar_csv: &c.cedar_csv,
         tissue: &c.tissue,
         label: &c.label,
         out_dir: &c.out_dir,
     };
-    compare_mcoa_cedar(args)?;
+    compare_mcara_cedar(args)?;
     Ok(())
 }

@@ -38,8 +38,8 @@ pub fn app_router(db: PgPool) -> Router {
         .route("/sensitivity_analyses", get(list_sensitivity_analyses).post(create_sensitivity_analysis))
         .route("/sensitivity_analyses/:id", get(get_sensitivity_analysis).put(update_sensitivity_analysis).delete(delete_sensitivity_analysis))
         // MCARA Computation routes
-        .route("/mcoa_computations", get(list_mcoa_computations).post(create_mcoa_computation))
-        .route("/mcoa_computations/:id", get(get_mcoa_computation).put(update_mcoa_computation).delete(delete_mcoa_computation))
+        .route("/mcara_computations", get(list_mcara_computations).post(create_mcara_computation))
+        .route("/mcara_computations/:id", get(get_mcara_computation).put(update_mcara_computation).delete(delete_mcara_computation))
         // FCLC Data routes
         .route("/fclc_data", get(list_fclc_data).post(create_fclc_data))
         .route("/fclc_data/:id", get(get_fclc_data).put(update_fclc_data).delete(delete_fclc_data))
