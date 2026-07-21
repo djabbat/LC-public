@@ -1,6 +1,6 @@
-//! mcoa_compare — MCARA vs CEDAR comparison and full pairwise comparison harness.
+//! mcara_compare — MCARA vs CEDAR comparison and full pairwise comparison harness.
 //!
-//! Rust port of `scripts/compare_mcoa_cedar.py` and `scripts/compare_all.py`.
+//! Rust port of `scripts/compare_mcara_cedar.py` and `scripts/compare_all.py`.
 //! Plot generation is OUT OF SCOPE for the Rust port — comparison reports are
 //! pure markdown + numeric statistics. Plots can be added later via plotters
 //! crate or external pipeline.
@@ -62,7 +62,7 @@ pub fn delta_stats(a: &[f64], b: &[f64]) -> DeltaStats {
 }
 
 pub struct CompareArgs<'a> {
-    pub mcoa_csv: &'a Path,
+    pub mcara_csv: &'a Path,
     pub cedar_csv: &'a Path,
     pub tissue: &'a str,
     pub label: &'a str,
@@ -70,14 +70,14 @@ pub struct CompareArgs<'a> {
 }
 
 /// MCARA-vs-CEDAR comparison. Returns path to written markdown report.
-pub fn compare_mcoa_cedar(args: CompareArgs) -> Result<PathBuf> {
-    let mcoa = read_csv(args.mcoa_csv)?;
+pub fn compare_mcara_cedar(args: CompareArgs) -> Result<PathBuf> {
+    let mcara = read_csv(args.mcara_csv)?;
     let cedar = read_csv(args.cedar_csv)?;
 
-    let x_col = if mcoa.columns.contains_key("n_cumulative") {
+    let x_col = if mcara.columns.contains_key("n_cumulative") {
         "n_cumulative"
-    } else if mcoa.headers.len() > 1 {
-        &mcoa.headers[1]
+    } else if mcara.headers.len() > 1 {
+        &mcara.headers[1]
     } else {
         return Err(anyhow!("MCARA CSV has no usable x-axis column"));
     };
@@ -90,18 +90,18 @@ pub fn compare_mcoa_cedar(args: CompareArgs) -> Result<PathBuf> {
             .ok_or_else(|| anyhow!("CEDAR CSV has no usable damage column"))?
     };
 
-    let mcoa_col = if mcoa.columns.contains_key("centriolar") {
+    let mcara_col = if mcara.columns.contains_key("centriolar") {
         "centriolar"
     } else {
         "tissue_load"
     };
 
-    let mcoa_data = mcoa.columns.get(mcoa_col)
-        .ok_or_else(|| anyhow!("MCARA missing column {}", mcoa_col))?;
+    let mcara_data = mcara.columns.get(mcara_col)
+        .ok_or_else(|| anyhow!("MCARA missing column {}", mcara_col))?;
     let cedar_data = cedar.columns.get(&cedar_col)
         .ok_or_else(|| anyhow!("CEDAR missing column {}", cedar_col))?;
 
-    let stats = delta_stats(mcoa_data, cedar_data);
+    let stats = delta_stats(mcara_data, cedar_data);
 
     fs::create_dir_all(args.out_dir)?;
     let date = chrono::Local::now().date_naive().format("%Y-%m-%d").to_string();
@@ -111,9 +111,9 @@ pub fn compare_mcoa_cedar(args: CompareArgs) -> Result<PathBuf> {
     s.push_str(&format!("# MCARA vs CEDAR comparison — {}\n\n", args.label));
     s.push_str(&format!("**Date:** {}\n", date));
     s.push_str(&format!("**Tissue:** {}\n", args.tissue));
-    s.push_str(&format!("**MCARA input:** `{}`\n", args.mcoa_csv.display()));
+    s.push_str(&format!("**MCARA input:** `{}`\n", args.mcara_csv.display()));
     s.push_str(&format!("**CEDAR input:** `{}`\n", args.cedar_csv.display()));
-    s.push_str(&format!("**MCARA column compared:** `{}`\n", mcoa_col));
+    s.push_str(&format!("**MCARA column compared:** `{}`\n", mcara_col));
     s.push_str(&format!("**CEDAR column compared:** `{}`\n\n", cedar_col));
     s.push_str("## Summary\n\n");
     s.push_str(&format!("- Samples compared: {}\n", stats.n));

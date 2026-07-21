@@ -1,17 +1,17 @@
 use axum::{routing::get, Router};
 use std::net::SocketAddr;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
-use mcoa_backend::config::Config;
-use mcoa_backend::db::DbPool;
-use mcoa_backend::error::AppResult;
-use mcoa_backend::routes;
+use mcara_backend::config::Config;
+use mcara_backend::db::DbPool;
+use mcara_backend::error::AppResult;
+use mcara_backend::routes;
 
 #[tokio::main]
 async fn main() -> AppResult<()> {
     // Initialize tracing
     tracing_subscriber::registry()
         .with(tracing_subscriber::EnvFilter::try_from_default_env()
-            .unwrap_or_else(|_| "mcoa_backend=debug,tower_http=debug".into()))
+            .unwrap_or_else(|_| "mcara_backend=debug,tower_http=debug".into()))
         .with(tracing_subscriber::fmt::layer())
         .init();
 

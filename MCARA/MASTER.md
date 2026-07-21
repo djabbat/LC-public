@@ -12,7 +12,7 @@ MCARA — зонтичный проект для моделирования мн
 MCARA/
 ├── CONCEPT.md            ← этот документ (зонтичный концепт)
 ├── MASTER.md             ← этот файл (перекрёстные ссылки)
-├── crates/mcoa_*/        ← общие крейты (core, api, cli, simulation, compare, tests)
+├── crates/mcara_*/        ← общие крейты (core, api, cli, simulation, compare, tests)
 ├── CEDAR/                ← Centriolar Damage Accumulation Theory of Aging
 │   ├── CellLineageTree/  ← реконструкция клеточных линий
 │   ├── Aubrey/           ← ARGUS-LP (статья)
@@ -39,12 +39,12 @@ MCARA/
 
 | Крейт | Назначение |
 |-------|-----------|
-| `mcoa_core` | Общие структуры, типы, константы |
-| `mcoa_api` | REST API для MCARA |
-| `mcoa_cli` | CLI-интерфейс |
-| `mcoa_simulation` | Симуляция осцилляций |
-| `mcoa_compare` | Сравнение моделей |
-| `mcoa_tests` | Общие тесты |
+| `mcara_core` | Общие структуры, типы, константы |
+| `mcara_api` | REST API для MCARA |
+| `mcara_cli` | CLI-интерфейс |
+| `mcara_simulation` | Симуляция осцилляций |
+| `mcara_compare` | Сравнение моделей |
+| `mcara_tests` | Общие тесты |
 
 ## Правило ослабления связей
 
@@ -54,7 +54,7 @@ MCARA/
 3. `Proteostasis/CONCEPT.md` (8 ссылок)
 4. `Telomere/CONCEPT.md` (9 ссылок)
 
-Стремиться к минимизации прямых ссылок — использовать `mcoa_core` как промежуточный слой.
+Стремиться к минимизации прямых ссылок — использовать `mcara_core` как промежуточный слой.
 
 ## Статус подпроектов
 
@@ -70,4 +70,4 @@ MCARA/
 ## Ближайшие действия
 - CEDAR: завершить доработку языка, сабмит
 - CellLineageTree: валидация модели
-- Ослабить прямые ссылки на CEDAR → использовать mcoa_core
+- Ослабить прямые ссылки на CEDAR → использовать mcara_core

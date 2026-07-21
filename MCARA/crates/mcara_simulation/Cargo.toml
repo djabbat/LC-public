@@ -1,12 +1,11 @@
 [package]
-name = "mcoa_core"
+name = "mcara_simulation"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
-description = "Multi-Counter Architecture of Organismal Aging — core types, formulas, tissue weights, coupling matrix"
 
 [dependencies]
+mcara_core = { path = "../mcara_core" }
 serde = { workspace = true }
 nalgebra = { workspace = true }
-thiserror = { workspace = true }

@@ -1,16 +1,16 @@
-//! mcoa-sim — run an MCARA simulation and write per-step records to CSV.
+//! mcara-sim — run an MCARA simulation and write per-step records to CSV.
 //!
 //! Per the mandatory comparison rule (see ~/Desktop/LC/MCARA/CLAUDE.md), every simulation
-//! output MUST be paired with an analogous CEDAR run via `scripts/compare_mcoa_cedar.py`.
+//! output MUST be paired with an analogous CEDAR run via `scripts/compare_mcara_cedar.py`.
 
 use clap::Parser;
-use mcoa_core::{Gamma, Tissue};
-use mcoa_simulation::{run, EdcTarget};
+use mcara_core::{Gamma, Tissue};
+use mcara_simulation::{run, EdcTarget};
 use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
 #[command(
-    name = "mcoa-sim",
+    name = "mcara-sim",
     version = "3.2.0",
     about = "Run a Multi-Counter Architecture simulation with optional EDC modulation.",
     long_about = "Runs a discrete-time MCARA simulation for a given tissue, writing per-step counter \
@@ -40,7 +40,7 @@ struct Cli {
     edc_target: String,
 
     /// Output CSV path
-    #[arg(long, default_value = "mcoa_run.csv")]
+    #[arg(long, default_value = "mcara_run.csv")]
     output: PathBuf,
 }
 
@@ -89,7 +89,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let last = records.last().unwrap();
     let l_crit = if last.tissue_load >= 0.60 { "⚠️ ABOVE L_crit" } else { "below L_crit" };
     eprintln!(
-        "mcoa-sim v3.2: {} steps, tissue={}, EDC={}/{}, final L_tissue={:.4} ({})",
+        "mcara-sim v3.2: {} steps, tissue={}, EDC={}/{}, final L_tissue={:.4} ({})",
         records.len() - 1,
         cli.tissue,
         cli.edc_exposure,

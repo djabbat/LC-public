@@ -18,7 +18,7 @@ impl Config {
             .unwrap_or(3002);
 
         let database_url = env::var("DATABASE_URL")
-            .unwrap_or_else(|_| "postgres://cn:cn@localhost/mcoa_db".to_string());
+            .unwrap_or_else(|_| "postgres://cn:cn@localhost/mcara_db".to_string());
 
         Ok(Self {
             port,

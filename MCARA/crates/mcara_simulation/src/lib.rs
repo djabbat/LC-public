@@ -3,7 +3,7 @@
 //! Includes optional EDC (Endocrine Disrupting Chemical) modulation module
 //! for modelling environmental impacts on aging (thyroid disruptors, etc.).
 
-use mcoa_core::{
+use mcara_core::{
     default_drift_rates, default_reference_scales, default_weights, Counter, CounterState, Gamma,
     Tissue, N_COUNTERS,
 };
