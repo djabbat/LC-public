@@ -1,6 +1,58 @@
+## 2026-07-23: ERR GitHub repo + Marketing subproject created
+
+- **ERR repo:** https://github.com/Georgia-Longevity-Alliance/ERR — public, Apache 2.0
+- **Marketing:** MCARA_EIC_Pathfinder renamed to ERR (~/Desktop/Marketing/ERR/)
+- **Content:** README = Cologne 2026 handout text. All 7 PMIDs verified.
+- **Concept:** Eliminate → Reprogram → Rebuild. Centriole reset as 4th counter.
+
+---
+
 # MEMORY — MCARA
 
 > История решений, журнальный путь, ключевые договорённости.
+
+---
+
+---
+
+## 2026-07-22: Deep Review — Shihabi (ооциты) × Maheshwari (центрикулум) 🔴
+
+> Полный анализ: `~/Desktop/Services/docs/REVIEW_Oocyte_Centriculum_2026-07-22.md`
+> Проведён глубочайший перекрёстный анализ двух статей + верификация 22 ключевых ссылок (все реальны).
+
+### Ключевые находки для MCARA:
+1. **PCM-компактизация (новый механизм):** плотность SPD-5 растёт при уменьшении центрикулума (R²=0.26, P=0.0002). PCM — не статичная, а конденсируемая структура. Добавлено в CONCEPT.md §0.
+2. **Избирательная пористость центрикулума:** spindle MTs проходят, astral MTs блокируются. Механизм неизвестен → приоритетная задача.
+3. **10× концентрация тубулина (Baumgart 2019):** модель «фильтра» даёт элегантное объяснение.
+4. **Эволюционная консервация:** Drosophila (Diaz 2019, Rollins 2023), medaka (Kiyomitsu 2024), sea urchin (Xie 2025) — все имеют центрикулум-подобные структуры.
+5. **ER-центросомный crosstalk:** PERK (Sánchez-Álvarez 2025), тубулиновый код (Zheng 2022 Nature), CDR2-динеин (Teixeira 2025 JCB).
+6. **Пересечение с ооцитами (Shihabi 2026):** ацентросомные ооциты → есть ли центрикулум-подобный ER вокруг huoMTOC? Возрастная деградация → новый механизм анеуплоидии.
+
+### Верификация ссылок:
+- Проверено 22 ключевых ссылки Maheshwari et al. (2026) — **все реальны** (100%)
+- Пропущенные статьи для Shihabi: Wu et al. 2022/2024 Science (2000+ ооцитов человека!), Rollins & Blankenship 2023, Araújo et al. 2023
+
+### Новые PMID для EVIDENCE.md:
+- 42283151 (Maheshwari 2026 — центрикулум как MT-фильтр)
+- 42360132 (Shihabi 2026 — механика ооцитов)
+- 40267909 (Sánchez-Álvarez 2025 — PERK-ER-MT crosstalk)
+- 34912111 (Zheng 2022 Nature — ER-белки + тубулиновый код)
+- 40637585 (Teixeira 2025 JCB — CDR2 dynein adaptor for ER)
+- 37971218 (Rollins & Blankenship 2023 — ER дисрегуляция → mitotic failure)
+- 36379670 (Araújo 2023 — ER membranes maintain spindle size)
+- 36395215 (Wu 2022 Science — huoMTOC)
+- 39172836 (Wu 2024 Science — spindle bipolarization)
+- 39024439 (Takenouchi 2024 Science — size-based meiotic errors)
+
+> Идея (Jaba Tqemaladze): центриоль избирательно связывает железо (Heidenhain's iron haematoxylin, Boveri 1900; Scheer 2014 PMID 25047623). После структурной элиминации (потеря GFP) может оставаться iron-positive remnant — коллапсированное железосвязывающее ядро. Никто не проверял. Методы: Heidenhain ($10), Perls' Prussian Blue ($5), DAB-enhanced EM ($50). Добавлено в CONCEPT.md §0.
+
+## 2026-07-21: Ответ Пьера Гёнчи — центриоли сохраняются по причине 🔴
+
+- **Ответ Пьера (21 июл, 16:40):** На вопрос Джабы о foci центриолярных белков в соматической гонаде (из Dev Biology mapping paper, Gönczy & Antonin):
+  > «We suspect (but do not know, since we have no way at present to eliminate centrioles at will as you know) that centrioles remain for a reason, e.g. to be able to build a centrosome or for some signaling function.»
+- **Значение:** Пьер — ведущий эксперт по центриолярной элиминации — прямо говорит: (1) центриоли сохраняются не случайно, а по функциональной причине, (2) одна из возможных причин — сигнальная функция, (3) поле открыто — нет способа избирательно удалить центриоли для проверки.
+- **Поддержка MCARA:** Сигнальная функция центриолей → gatekeeper of cell state. Именно гипотеза CEDAR. Если центриоли = signalling hub, их элиминация = снятие gatekeeper'а → переход в новое дифференцировочное состояние.
+- **Тактика:** Ответ не требует follow-up. Сохранить как evidence в EVIDENCE.md §11.
 
 ---
 
