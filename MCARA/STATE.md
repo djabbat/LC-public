@@ -1,8 +1,13 @@
 # STATE — MCARA
 
-**Date:** 2026-07-19 (конец сессии)
-**Status:** 🟢 Активный. Массированное обновление: обмен с Гёнчи + 3 новых статьи + глубокий аудит.
+**Date:** 2026-07-21
+**Status:** 🟢 Активный. Ответ Пьера Гёнчи получен — центриоли сохраняются по причине (сигнальной или центросомной). 🆕 Гипотеза Iron-Positive Centriole Remnant добавлена в CONCEPT.md §0.
 
+
+## 2026-07-23: ERR repo created
+- GitHub: https://github.com/Georgia-Longevity-Alliance/ERR
+- Marketing folder: ~/Desktop/Marketing/ERR/ (renamed from MCARA_EIC_Pathfinder)
+- README contains Cologne 2026 handout
 ## Counters
 - C1: CEDAR — центриолярный
 - C2: Telomere
@@ -42,6 +47,8 @@
 - Аудит: `audits/MCARA_Evidence_Audit_2026-07-19.md`
 
 ## Следующие шаги
-- [ ] Отправить follow-up Пьеру
+- [x] Follow-up Пьеру отправлен (19 июл)
+- [x] Ответ Пьера получен (21 июл) — центриоли сохраняются по функциональной причине
+- [ ] Интегрировать ответ Пьера в EVIDENCE.md §11
 - [ ] CCP1-KO эксперимент как следующий критический шаг
 - [ ] Обновить статью v8 с новыми данными

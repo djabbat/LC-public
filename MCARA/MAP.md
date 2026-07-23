@@ -66,6 +66,9 @@ MCARA/
 ## Зависимости
 - [LC] — родительский проект
 
+## External Links
+- **ERR:** https://github.com/Georgia-Longevity-Alliance/ERR — Eliminate, Reprogram, Rebuild (grant application in Marketing/ERR/)
+
 ## Выходы
 - EIC Pathfinder 2026 (28 окт)
 - MCARA статья (Biogerontology, ID 7cc6de62)
