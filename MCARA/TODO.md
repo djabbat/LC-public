@@ -50,6 +50,7 @@
 
 ## 🟡 P1 — Технические
 
+- [ ] **🆕 Iron stain pilot:** Perls' Prussian Blue + Heidenhain на C. elegans эмбрионах (wild-type). Проверить: видны ли центриоли без GFP? Есть ли iron-positive точки в «элиминированных» клетках? Бюджет: ~$50. Срок: 1 неделя.
 - [ ] aubrey-core: завершить CEDAR модель
 - [ ] FreeCAD модель оптоволокна
 - [ ] Протокол валидации CellPose
