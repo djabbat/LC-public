@@ -32,7 +32,7 @@
 
 Энтропийный взгляд на старение — не спекуляция, а emerging mainstream:
 
-| Статья | Журнал | Год | PMID | Суть |
+| Article | Journal | Год | PMID | Суть |
 |--------|--------|-----|------|------|
 | **Wu Z et al.** — The entropic view of aging: from thermodynamics to biology | Life Med | 2026 | **42388853** | 🔑 Энтропийная теория старения — обзор |
 | **Cummings SR, Hong N, Cohen AA** — Entropy and Human Aging | Aging Cell | 2025 | **41230623** | Энтропия и старение человека |
@@ -40,7 +40,7 @@
 | **De Man R et al.** — Single-cell atlas of human lung aging identifies increased transcriptional entropy | Nat Commun | 2026 | **41571679** | Рост транскрипционной энтропии с возрастом |
 | **Hong N et al.** — Entropy of Muscle Fiber Histology Predicts Mobility in Older Adults | Aging Cell | 2026 | **41724675** | Гистологическая энтропия → функциональные исходы |
 
-**Значение для CEDAR:** Энтропийная теория старения уже развивается (Wu 2026, Cummings 2025, Hong 2025). CEDAR даёт ей **конкретный клеточный механизм:** центриоль — физический носитель энтропии, polyGlu — её мера, асимметричное наследование — способ распределения энтропии между дочерними клетками.
+**Value для CEDAR:** Энтропийная теория старения уже развивается (Wu 2026, Cummings 2025, Hong 2025). CEDAR даёт ей **конкретный клеточный механизм:** центриоль — физический носитель энтропии, polyGlu — её мера, асимметричное наследование — способ распределения энтропии между дочерними клетками.
 
 ---
 

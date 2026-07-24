@@ -2,7 +2,7 @@
 
 # Theoretical Foundation of MCARA
 
-**Дата:** 2026-07-19 (v4.7 — Centriculum + Spermatogenesis asymmetry)
+**Date:** 2026-07-19 (v4.7 — Centriculum + Spermatogenesis asymmetry)
 
 # THEORY — MCARA: Centriolar Theory of Differentiation and Aging
 
@@ -14,7 +14,7 @@
 
 3. **Старение многоклеточных организмов — цена за необратимо дифференцированные клетки, истинные ткани, органы.** Растения используют модуляцию (обратимую дифференцировку) и не имеют центриолей в соме. Животные приобрели необратимую дифференцировку через центриолярный храповик — и вместе с ней — старение.
 
-### Асимметрия судьбы центриолей в гаметогенезе (Ishida & Shibuya 2026)
+### Asymmetry судьбы центриолей в гаметогенезе (Ishida & Shibuya 2026)
 
 **Фундаментальный контраст (Ishida & Shibuya 2026, PMID 42455439):**
 - **Оогенез:** центриоли элиминируются → сброс hardware → тотипотентность зиготы
@@ -34,6 +34,7 @@
 5. Связывает Counter #4 (Structural) с ER-стрессом — новый меж-счётчиковый coupling
 
 ---
+
 
 ## 0. Hardware/Software Distinction (Jaba Tqemaladze, 2026-07-08)
 
@@ -65,7 +66,7 @@
 
 5. **CAMC-частицы — гипотетический молекулярный счётчик.** Внутри CAMC находятся гипотетические Determinants необратимой дифференцировки (кандидаты: ATF5, FERMT3, ALMS1). При асимметричном делении одна частица отщепляется и уходит с новой центриолью в дифференцирующуюся клетку.
 
-   **Θ-индекс — функциональность центриоли, НЕ статус дифференцировки.** Энтропия и дифференцировка — две разные оси. Θ измеряет, насколько хорошо центриоль выполняет свои функции (центросома + цилия). Статус дифференцировки определяют генные сети (GRN). Высокий Θ = центриоль плохо работает → старение. GRN = какие сети включены → дифференцировка.
+   **Θ-индекс — функциональность центриоли, НЕ статус дифференцировки.** Энтропия и дифференцировка — две разные оси. Θ измеряет, насколько хорошо центриоль выполняет свои функции (центросома + цилия). Status дифференцировки определяют генные сети (GRN). Высокий Θ = центриоль плохо работает → старение. GRN = какие сети включены → дифференцировка.
 
    **Три шага — Eliminate → Reprogram → Rebuild.** Как в природе. (1) ELIMINATE — удаление старой центриоли (Θ → 0). (2) REPROGRAM — OSKM или DUX4+TPRX1. (3) REBUILD — de novo сборка (PLK4, SAS-6, STIL, CPAP). **De novo центриоль — ИНСТРУМЕНТ ПЕРЕКЛЮЧЕНИЯ генных сетей.** С её помощью отключаются сети, поддерживавшие нетотипотентное состояние, и включаются сети, поддерживающие тотипотентное состояние дифференцировки — до следующего переключения. Тотипотентность — такое же состояние дифференцировки, как и любое другое, просто с другим набором включённых генных сетей.
 
@@ -98,6 +99,7 @@
 
 **Эпигеном = software.** Перепрограммируем факторами Яманаки, но неспособен исправить hardware-дефекты. Это объясняет, почему частичное репрограммирование омолаживает метилом, но не восстанавливает полную репликативную способность: центриолярный hardware не заменён.
 
+
 ## 0.1. Totipotency vs Pluripotency: Hardware + Software Reset (2026-07-12)
 
 **Pluripotency factors (OSKM)** reset the software (epigenome) to an ICM-like state (~E4.5). The cell can form all three germ layers but NOT trophectoderm. The centriole — as a physical organelle — is untouched by transcription factors.
@@ -120,6 +122,7 @@
 
 **Key insight:** Partial reprogramming (OSK) rejuvenates the methylome but fails to restore full replicative capacity. The centriole — hardware that transcription factors cannot reset — may be why.
 
+
 ## 0.2. Centriole as Conditional Entropy Carrier (Stress Integrator)
 
 Центриоль — не автономный счётчик делений, а **стресс-интегратор.** Энтропия накапливается, когда центриоль работает как центросома-организатор (стресс-чувствительное состояние); polyE — компенсаторный ответ на эту энтропию. Накопление прекращается, когда центриоль темплатирует цилию. Уровень polyE зависит от функционального состояния и стресс-среды, а не только от хронологического времени.
@@ -127,6 +130,7 @@
 The sinc-MT/KIFC3 pathway (Robichaud 2024, PMID 39266565) — это стресс-ответ, ведущий к cell cycle arrest. Убери стресс — polyE-массивы могут не формироваться, и сенесценс может не наступить несмотря на центриолярный «возраст».
 
 **Это не ослабляет CEDAR:** интегратор, прогрессивно отказывающий при хроническом низкоуровневом стрессе (hTERT + гипоксия), функционально неотличим от автономного счётчика, и экспериментальное предсказание — удаление центриоли повышает эффективность репрограммирования — остаётся идентичным.
+
 
 ## 0.2. Centriole-Specific Kinetic Equations
 
@@ -146,6 +150,7 @@ CAMC(N) = CAMC₀ − λ·N_asym
 S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
 ```
 Критический порог `t½` — точка ускорения накопления polyE, потенциально соответствующая onset репликативного сенесценса.
+
 
 ## 0.3. Three Classes of Centriole Elimination Methods: Disentangling Centriole vs CAMC (2026-07-09)
 
@@ -202,7 +207,8 @@ d[E]/dt = k_E · [Stress] − k_CCP · [CCP] · [E]
 ```
 polyE ([E]) растёт, когда стресс (k_E) превышает ёмкость CCP (k_CCP).
 
-**Гипотеза:** Активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом. Параметры β, λ, η(t), δ не откалиброваны — уравнения представляют тестируемые предсказания.
+**Гипотеза:** Активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом. Parameters β, λ, η(t), δ не откалиброваны — уравнения представляют тестируемые предсказания.
+
 
 ## 0.3. Bradford Hill Analysis (Causal Inference)
 
@@ -222,9 +228,11 @@ polyE ([E]) растёт, когда стресс (k_E) превышает ём�
 
 ---
 
+
 ## 1. Philosophical and Methodological Premises
 
 MCARA is built upon the principles of **mechanism pluralism** and **strict falsifiability**. It rejects the reductionist search for a single "root cause" of aging, recognizing that multiple, partially independent damage accumulation processes can reach critical thresholds in different tissues at different times. The key methodological tenet is the prohibition of post-hoc adjustment of counter weights (`w_i`). All weights and reference scales (`n_i*`, `τ_i`) must be fixed *a priori*, based on independent biological knowledge, prior to model validation on data. This transforms MCARA from a curve-fitting tool into a set of testable predictions.
+
 
 ## 2. Axiomatic Foundation
 
@@ -239,6 +247,7 @@ Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are cons
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCARA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCARA.
 
 **Axiom M5 (Time-Driven Entropy + Asymmetric CAMC — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centrosome-Associated Memory Complex (CAMC). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAMC. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAMC (active, programmatic). Full specification: CEDAR/THEORY.md.
+
 
 ## 3. Formal Definitions
 
@@ -292,6 +301,7 @@ These thresholds are **provisional** and will be refined during the calibration 
 A cell or tissue niche transitions into a state of senescence, apoptosis, or pronounced dysfunction upon fulfillment of one of two conditions:
 1. `L_tissue(n, t) > L_critical(tissue)`, where `L_critical` is a tissue-specific threshold for integrated burden.
 2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, where `D_critical` is a tissue-specific threshold for a specific counter (e.g., critical telomere shortening).
+
 
 ## 4. Canonical Set of MCARA Counters (v4.5 — Gatekeeper article)
 
@@ -380,6 +390,7 @@ A systematic review and meta-analysis (PROSPERO **CRD42026218473**, n=14 studies
 
 See manuscripts "Stem-Cell-Centric Multi-Counter Theory of Organismal Aging" and "Epigenomic Rejuvenation Without Functional Restoration" (both NOT YET PUBLISHED, draft 2026-05-10).
 
+
 ## 5. Coupling Matrix Between Counters (Γ)
 
 The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is the rate at which accumulated damage in counter `j` accelerates damage accumulation in counter `i`.
@@ -394,6 +405,7 @@ The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is 
 
 **Key Rule:** Elements `Γ_{ij}` (and consequently `γ_i` in simplified form) must be **measured** in controlled experiments (see MCARA Test 2), not be free parameters for fitting. This separates causal inference from correlational analysis.
 
+
 ## 6. Predictions of MCARA Theory
 
 1. **Heterogeneity of Dominant Counters:** In different tissues, the same counter will have a different weight `w_i`. For example, in the liver (`low division rate`), the weight of mitochondrial and epigenetic counters will be higher than that of the telomere counter.
@@ -401,6 +413,7 @@ The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is 
 3. **Synergy of Targeted Interventions:** Combined intervention on several counters with high `w_i` in a given tissue will yield a super-additive effect on healthspan extension, whereas intervention on irrelevant counters will not.
 4. **Existence of "Uncoupled" Tissues:** Tissues can be identified where the total burden `L_tissue` remains low, despite high values of one counter (`D_i`), due to compensatorily low weights of other counters.
 5. **Prediction of Aging Trajectories:** Given known *a priori* `w_i(tissue)`, `n_i*`, `τ_i` and initial `D_i₀`, the model predicts the trajectory of burden accumulation `L_tissue(t)` for each tissue, which can be verified in longitudinal studies.
+
 
 ## MCARA Phase III Update (2026-05-15)
 

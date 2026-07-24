@@ -1,73 +1,73 @@
 # MASTER — MCARA (Multi-Component Aging Oscillation Analysis)
 
-**Версия:** 2026-06-15 (аудит pi)
-**Проект:** LC/MCARA
+**Version:** 2026-06-15 (pi audit)
+**Project:** LC/MCARA
 
-## Назначение
-MCARA — зонтичный проект для моделирования многокомпонентных осцилляций старения. Объединяет 5 компонентов (CEDAR, EpigeneticDrift, MitoROS, Proteostasis, Telomere) в единую модель.
+## Purpose
+MCARA — an umbrella project for modeling multi-component aging oscillations. Combines 5 components (CEDAR, EpigeneticDrift, MitoROS, Proteostasis, Telomere) into a single model.
 
-## Структура
+## Structure
 
-```
+
 MCARA/
-├── CONCEPT.md            ← этот документ (зонтичный концепт)
-├── MASTER.md             ← этот файл (перекрёстные ссылки)
-├── crates/mcara_*/        ← общие крейты (core, api, cli, simulation, compare, tests)
+├── CONCEPT.md            ← this document (umbrella concept)
+├── MASTER.md             ← this file (cross-references)
+├── crates/mcara_*/        ← common crates (core, api, cli, simulation, compare, tests)
 ├── CEDAR/                ← Centriolar Damage Accumulation Theory of Aging
-│   ├── CellLineageTree/  ← реконструкция клеточных линий
-│   ├── Aubrey/           ← ARGUS-LP (статья)
-│   └── articles/         ← публикации
-├── EpigeneticDrift/      ← эпигенетический дрейф
-├── MitoROS/              ← митохондриальные АФК
-├── Proteostasis/         ← протеостаз (белковый гомеостаз)
-└── Telomere/             ← теломерная длина
-```
+│   ├── CellLineageTree/  ← cell lineage reconstruction
+│   ├── Aubrey/           ← ARGUS-LP (article)
+│   └── articles/         ← publications
+├── EpigeneticDrift/      ← epigenetic drift
+├── MitoROS/              ← mitochondrial ROS
+├── Proteostasis/         ← proteostasis (protein homeostasis)
+└── Telomere/             ← telomere length
 
-## Перекрёстные связи
 
-| Компонент | Зависит от | Предоставляет |
+## Cross-References
+
+| Component | Depends on | Provides |
 |-----------|-----------|---------------|
-| **CEDAR** | — (корень) | Базовая модель центриолярного старения |
-| **CellLineageTree** | CEDAR | Древо клеточных линий |
-| **ARGUS** | CEDAR + CellLineageTree | ML-модель lineage tracing |
-| **EpigeneticDrift** | CEDAR (8 ссылок) | Эпигенетические часы |
-| **MitoROS** | CEDAR (8 ссылок) | Митохондриальная дисфункция |
-| **Proteostasis** | CEDAR (8 ссылок) | Протеостаз |
-| **Telomere** | CEDAR (9 ссылок) | Теломерная динамика |
+| **CEDAR** | — (root) | Basic centriolar aging model |
+| **CellLineageTree** | CEDAR | Cell lineage tree |
+| **ARGUS** | CEDAR + CellLineageTree | ML model for lineage tracing |
+| **EpigeneticDrift** | CEDAR (8 links) | Epigenetic clock |
+| **MitoROS** | CEDAR (8 links) | Mitochondrial dysfunction |
+| **Proteostasis** | CEDAR (8 links) | Proteostasis |
+| **Telomere** | CEDAR (9 links) | Telomere dynamics |
 
-## Общие крейты
+## Common Crates
 
-| Крейт | Назначение |
+| Crate | Purpose |
 |-------|-----------|
-| `mcara_core` | Общие структуры, типы, константы |
-| `mcara_api` | REST API для MCARA |
-| `mcara_cli` | CLI-интерфейс |
-| `mcara_simulation` | Симуляция осцилляций |
-| `mcara_compare` | Сравнение моделей |
-| `mcara_tests` | Общие тесты |
+| `mcara_core` | Common structures, types, constants |
+| `mcara_api` | REST API for MCARA |
+| `mcara_cli` | CLI interface |
+| `mcara_simulation` | Oscillation simulation |
+| `mcara_compare` | Model comparison |
+| `mcara_tests` | Common tests |
 
-## Правило ослабления связей
+## Weakening Links Rule
 
-При изменении CEDAR проверить:
-1. `EpigeneticDrift/CONCEPT.md` (8 ссылок)
-2. `MitoROS/CONCEPT.md` (8 ссылок)
-3. `Proteostasis/CONCEPT.md` (8 ссылок)
-4. `Telomere/CONCEPT.md` (9 ссылок)
+When changing CEDAR, check:
+1. `EpigeneticDrift/CONCEPT.md` (8 links)
+2. `MitoROS/CONCEPT.md` (8 links)
+3. `Proteostasis/CONCEPT.md` (8 links)
+4. `Telomere/CONCEPT.md` (9 links)
 
-Стремиться к минимизации прямых ссылок — использовать `mcara_core` как промежуточный слой.
+Aim to minimize direct links — use `mcara_core` as an intermediate layer.
 
-## Статус подпроектов
+## Subproject Status
 
-| Подпроект | CONCEPT | Код | Статус |
+| Subproject | CONCEPT | Code | Status |
 |-----------|:-------:|:---:|--------|
-| CEDAR | 2KB | ✅ | 🟡 Готовится к сабмиту |
-| CellLineageTree | 36KB | ✅ | 🟡 Активен |
+| CEDAR | 2KB | ✅ | 🟡 Being prepared for submission |
+| CellLineageTree | 36KB | ✅ | 🟡 Active |
 | EpigeneticDrift | 44KB | ✅ | 🟢 Submitted |
-| MitoROS | 71KB | ✅ | 🟢 Активен |
-| Proteostasis | 45KB | ✅ | 🟢 Активен |
-| Telomere | 49KB | ✅ | 🟢 Активен |
+| MitoROS | 71KB | ✅ | 🟢 Active |
+| Proteostasis | 45KB | ✅ | 🟢 Active |
+| Telomere | 49KB | ✅ | 🟢 Active |
 
-## Ближайшие действия
-- CEDAR: завершить доработку языка, сабмит
-- CellLineageTree: валидация модели
-- Ослабить прямые ссылки на CEDAR → использовать mcara_core
+## Next Steps
+- CEDAR: complete language refinement, submit
+- CellLineageTree: model validation
+- Weaken direct links to CEDAR → use mcara_core

@@ -1,7 +1,6 @@
+> ⚠️ **See [../CORRECTIONS_2026-04-22.md]()** — some statements may be retracted. Canons updated 2026-04-22.
+
 # Proteostasis Collapse as a Quantifiable Counter in the Multi-Counter Architecture of Replicative Aging
-
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md]()** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
-
 
 ## Abstract
 The collapse of protein homeostasis (proteostasis) is a hallmark of aging, characterized by the declining capacity of chaperone, ubiquitin-proteasome, and autophagic systems, leading to the accumulation of misfolded and aggregation-prone proteins. This manuscript formalizes **Proteostasis Collapse** as **Counter #5** within the Multi-Counter Architecture of Organismal Aging (MCARA), a meta-theoretical framework that quantifies distinct, measurable processes contributing to aging. We present a kinetic equation for the proteostatic damage load, *D₅(n, t)*, which integrates replicative history (*n*-linked) and chronological time (*t*-linked) components, reflecting cell-type-specific biology. Each parameter is grounded in evidence from a meta-analysis of peer-reviewed literature, citing specific studies on protein aggregation and proteostasis network decline. The model is explicitly falsifiable through defined quantitative thresholds and is designed to couple with other MCARA counters (e.g., mitochondrial dysfunction, epigenetic drift) via a coupling matrix Γ, with entries either quantified from existing data or marked for empirical measurement. This formalization aims to transition the study of proteostasis in aging from a qualitative hallmark to a quantitative, testable, and integrable component within a unified theory of organismal aging.
@@ -47,7 +46,8 @@ Sample size is calculated using the formula: n = (1.96 + 0.84)² · σ² / δ²,
 5. Single-counter focus: The model isolates Counter #5, but interactions with other counters (e.g., mitochondrial dysfunction) are not yet quantified.
 6. Temporal resolution: The model does not account for acute stress responses (e.g., heat shock) that may transiently alter proteostasis.
 7. Measurement noise: Quantitative assays for chaperone levels and aggregation have inherent variability not fully captured.
-8. Replicative senescence vs. chronological aging: The n-linked and t-linked components are assumed independent, but they may interact in complex ways.
+8. Replicative senescence vs. chronological aging: The n-linked and t-linked components are ass
+umed independent, but they may interact in complex ways.
 
 
 
@@ -529,3 +529,8 @@ Full peer-review-grade resolution: see parent `LC/MCARA/CONCEPT.md` TBPR v2 Reso
 - N ≥ 100: based on typical proteostasis study sample sizes [Klaips 2018]
 - p < 0.001: Bonferroni correction for 5 counters × 5 tissues = 25 tests
 - Effect size d ≥ 0.8: strong effect (power = 0.8 at n = 26 per group)
+
+
+## Hypothesis
+
+*To be specified — see project documentation.*

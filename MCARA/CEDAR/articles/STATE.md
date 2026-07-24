@@ -1,12 +1,12 @@
-**Последнее обновление:** 2026-07-05 (аудит pi — Цикл 6)
+Last update: 2026-07-24
 
 # STATE — CEDAR / Articles
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-**Дата:** 2026-06-15 (аудит pi)
-**Статус:** 🟡 Статьи по CEDAR
+**Date: 2026-07-24
+**Status:** 🟡 Articles on CEDAR
 
-- Подпроект LC/MCARA/CEDAR
-- Коллекция статей и публикаций по CEDAR
-- Git: ✅ (через LC)
+- Subproject LC/MCARA/CEDAR
+- Collection of articles and publications on CEDAR
+- Git: ✅ (via LC)

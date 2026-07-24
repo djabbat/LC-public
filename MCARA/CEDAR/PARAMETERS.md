@@ -1,5 +1,7 @@
 # CEDAR — Parameters
 
+**Version:** 1.0
+
 ## Project Overview
 
 CEDAR is a lightweight data transformation and validation framework designed for modern cloud-native applications. It provides a declarative schema language, runtime validation, and seamless integration with popular data pipelines.

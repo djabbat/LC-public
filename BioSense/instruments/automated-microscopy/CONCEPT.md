@@ -1,26 +1,43 @@
 # CONCEPT — Automated Microscopy (BioSense)
 
-## Назначение
-Автоматизированный пайплайн для микроскопического анализа изображений центриолей.
+**Version:** 1.0
 
-## Контекст
-Часть BioSense — федеративной системы клинического обучения. Микроскопия производит изображения делящихся клеток; automated-microscopy обрабатывает их.
+## Purpose
+Automated pipeline for microscopic image analysis of centrioles.
 
-## Компоненты
-1. **Захват изображений** — управление микроскопом (OpenSPIM, NanoJ-Fluidics)
-2. **Обработка** — сегментация центриолей, трекинг mitotic spindle
-3. **Анализ** — подсчёт центриолей, определение «возраста» по GFP-метке
-4. **Экспорт** — данные в CEDAR/CellLineageTree для lineage reconstruction
+## Context
+Part of BioSense — a federative system for clinical training. Microscopy produces images of dividing cells; automated-microscopy processes them.
 
-## Технологии
-- Python/OpenCV для обработки изображений
-- Связь с BioSense API (Rust backend)
-- Входные данные: .tiff, .czi (Zeiss), .nd2 (Nikon)
+## Components
+1. **Image Capture** — microscope control (OpenSPIM, NanoJ-Fluidics)
+2. **Processing** — centriole segmentation, mitotic spindle tracking
+3. **Analysis** — centriole counting, determination of "age" by GFP label
+4. **Export** — data to CEDAR/CellLineageTree for lineage reconstruction
 
-## Связи
-- **Родитель:** LC/BioSense/instruments
-- **Потребитель:** CEDAR/CellLineageTree, PhD/microscope
-- **Стандарт:** OpenSPIM (Pitrone et al., 2013)
+## Technologies
+- Python/OpenCV for image processing
+- Connection to BioSense API (Rust backend)
+- Input data: .tiff, .czi (Zeiss), .nd2 (Nikon)
 
-## Статус
-🟡 Концепт. Оборудование не приобретено. Требуется доступ к микроскопу.
+## Connections
+- **Parent:** LC/BioSense/instruments
+- **Consumer:** CEDAR/CellLineageTree, PhD/microscope
+- **Standard:** OpenSPIM (Pitrone et al., 2013)
+
+## Status
+🟡 Concept. Equipment not acquired. Access to microscope required.
+
+## Consumables (annual)
+
+| **Cloud/API services** | **$600** |
+| **Office consumables** | **$200** |
+
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

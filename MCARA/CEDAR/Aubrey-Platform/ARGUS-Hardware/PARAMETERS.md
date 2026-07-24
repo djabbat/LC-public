@@ -1,8 +1,9 @@
 # PARAMETERS — ARGUS
 
-## Основные параметры
-| Параметр | Значение |
-|----------|----------|
-| Статус | active |
-| Дата | 2026-06-09 |
+**Version: 
 
+## Main Parameters
+| Parameter | Value |
+|-----------|-------|
+| Status | active |
+| Date | 2026-06-09 |

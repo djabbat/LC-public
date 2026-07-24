@@ -1,5 +1,5 @@
-# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Память решений
+# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Decision Memory
 
-## История решений
+## Decision History
 
-2026-06-21: Аудит — автофикс core-файлов.
+2026-06-21: Audit — auto-fix of core files.

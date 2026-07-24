@@ -1,48 +1,67 @@
 # CONCEPT — Hepato-Affective Primacy (HAP) Theory
 
+**Version:** 1.0
+
 ## Core Claim (Strong Version)
-**Ни одно билатеральное животное не может обладать аффективными состояниями без функционального hepatic органа.**
+**No bilaterian animal can possess affective states without a functional hepatic organ.**
 
-Орган считается hepatic в смысле HAP, если выполняет две функции:
-1. **Секреция стероидных регуляторных молекул** (bile acids, ecdysteroids, или функциональные аналоги), действующих через ядерные рецепторы (FXR, TGR5, EcR, USP)
-2. **Барьерно-детоксикационная функция** — фильтрация циркулирующей жидкости (кровь/гемолимфа)
+An organ is considered hepatic in the sense of HAP if it performs two functions:
+1. **Secretion of steroid regulatory molecules** (bile acids, ecdysteroids, or functional analogs), acting through nuclear receptors (FXR, TGR5, EcR, USP)
+2. **Barrier-detoxification function** — filtration of circulating fluid (blood/hemolymph)
 
-## Эмпирическая база
-- **56 таксонов** Bilateria (12 типов)
-- **Fisher's exact test: p < 0.0001** — идеальная корреляция
-- Все 32 таксона с документированным аффективным поведением имеют hepatic орган
-- Все 24 таксона без такого органа не имеют аффекта
+## Empirical Basis
+- **56 taxa** of Bilateria (12 types)
+- **Fisher's exact test: p < 0.0001** — perfect correlation
+- All 32 taxa with documented affective behavior have a hepatic organ
+- All 24 taxa without such an organ lack affect
 
-## Ключевые case studies
-| Таксон | Hepatic орган | Аффект | Подтверждает HAP? |
+## Key Case Studies
+| Taxon | Hepatic Organ | Affect | Confirms HAP? |
 |--------|--------------|--------|:-----------------:|
-| Позвоночные | liver | ✅ | ✅ |
-| Насекомые (Drosophila) | fat body + nephrocytes | ✅ | ✅ |
-| Головоногие (Octopus) | hepatopancreas | ✅ | ✅ |
-| Кольчатые черви | нет органа | ❌ | ✅ |
-| Нематоды (C. elegans) | нет органа | ❌ | ✅ |
-| Плоские черви (Planaria) | нет органа | ❌ | ✅ |
+| Vertebrates | liver | ✅ | ✅ |
+| Insects (Drosophila) | fat body + nephrocytes | ✅ | ✅ |
+| Cephalopods (Octopus) | hepatopancreas | ✅ | ✅ |
+| Annelids | no organ | ❌ | ✅ |
+| Nematodes (C. elegans) | no organ | ❌ | ✅ |
+| Platyhelminths (Planaria) | no organ | ❌ | ✅ |
 
-## Механизм: Steroid Permissive Hypothesis
-Аффективные цепи требуют базальной стероидной нейромодуляции для развития (критическое окно) и, в меньшей степени, для функционирования.
+## Mechanism: Steroid Permissive Hypothesis
+Affective circuits require basal steroid neuromodulation for development (critical window) and, to a lesser extent, for functioning.
 
-## Формальная модель (математическая)
-```
+## Formal Model (Mathematical)
+
 A = ∫₀^τ f(H(t), N(t)) dt
-```
-- H(t) — наличие функционального hepatic органа
-- N(t) — развитие нейронных аффективных цепей
-- A — взрослая аффективная способность
-- Если H(t) = 0 для всех t < τ_crit, то A = 0
 
-## Nonlinear Dynamics Model (в разработке)
-Совместно с Afaf Elfet: система ODE с 6 переменными состояния (L, B, A, I, S, M) и feedback loops.
+- H(t) — presence of a functional hepatic organ
+- N(t) — development of neural affective circuits
+- A — adult affective ability
+- If H(t) = 0 for all t < τ_crit, then A = 0
 
-## Predictions (falsifiers)
-1. **Cross-species:** любой новый вид с аффектом будет иметь hepatic орган
-2. **Zebrafish conditional knockout:** абляция гепатоцитов после нейруляции → ↓ аффект
-3. **Planarian engineering:** введение стероидогенеза в организм без нейронного субстрата → аффект не появится
-4. **Pharmacological:** блокада стероидогенеза у взрослых → частичное ↓ аффекта (не полное)
+## Nonlinear Dynamics Model (in development)
+In collaboration with Afaf Elfet: a system of ODEs with 6 state variables (L, B, A, I, S, M) and feedback loops.
 
-## Отношение к NHAM
-HAP — **эволюционный necessary condition** (почему). NHAM — **механистическая модель** (как). HAP фундаментальнее.
+## Predictions (Falsifiers)
+1. **Cross-species:** any new species with affect will have a hepatic organ
+2. **Zebrafish conditional knockout:** ablation of hepatocytes after neuralization → ↓ affect
+3. **Planarian engineering:** introduction of steroidogenesis in an organism without neural substrate → affect will not appear
+4. **Pharmacological:** blockade of steroidogenesis in adults → partial ↓ affect (not complete)
+
+## Relation to NHAM
+HAP — **evolutionary necessary condition** (why). NHAM — **mechanistic model** (how). HAP is more fundamental.
+
+## Consumables (annual)
+
+| **C. elegans maintenance** (NGM agar, OP50/NA22 bacteria, cholesterol, Petri dishes) | **$3,500** |
+| **RNAi/strain maintenance** (clones, IPTG, antibiotics, feeding plates) | **$2,000** |
+| **Cell culture** (DMEM/RPMI, FBS, pen/strep, trypsin, plastics) | **$8,000** |
+| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters) | **$3,000** |
+| **Transfection reagents** (Lipofectamine, siRNA oligos) | **$3,000** |
+| **Sequencing consumables** (library prep, flow cells) | **$12,000** |
+| **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
+| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas) | **$8,000** |
+| **Office consumables** (printing, stationery) | **$500** |
+
+
+## References
+
+*See project MEMORY.md for reference history.*

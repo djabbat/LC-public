@@ -1,21 +1,21 @@
-# BioSense — Карта проекта
+# BioSense — Project Map
 
-## Структура
+## Structure
 
-```
+
 BioSense/
-├── _pi.md          — Правила pi
-├── CONCEPT.md      — Концепт
-├── TODO.md         — Задачи
-├── PARAMETERS.md   — Параметры
-├── MAP.md          — Эта карта
-├── STATE.md        — Текущее состояние
-├── MEMORY.md       — История решений
-└── README.md       — Введение
-```
+├── _pi.md          — Pi rules
+├── CONCEPT.md      — Concept
+├── TODO.md         — Tasks
+├── PARAMETERS.md   — Parameters
+├── MAP.md          — This map
+├── STATE.md        — Current state
+├── MEMORY.md       — Decision history
+└── README.md       — Introduction
 
-## Зависимости
-- [Нет]
 
-## Выходы
-- [Нет]
+## Dependencies
+- [None]
+
+## Outputs
+- [None]

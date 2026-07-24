@@ -54,3 +54,5 @@ MitoROS is a project focused on mitochondrial reactive oxygen species (ROS) sign
 | P2 | Create open-source code repository with documentation | after manuscript submission | Not started | Owner: Lead Developer |
 
 *Note: All deadlines are tentative and will be updated in STATE.md as the project progresses.*
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

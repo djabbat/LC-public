@@ -27,7 +27,7 @@
 | Write documentation and user guide | P2 | after previous milestone | Not started |
 | Prepare manuscript for submission | P1 | after previous milestone | Not started |
 | Release v1.0 on GitHub with DOI | P2 | after previous milestone | Not started |
-## 2026-07-09 — Глубокий аудит MCARA
-- **Обновление:** STATE.md переписан (был устаревший от 2025-03-15)
-- **Задача:** Интегрировать Park/Di Stefano (2026) — эпигенетический уровень stem cell exit
-- **Задача:** Добавить asymmetric histone inheritance (Ma 2026, PMID: 41872193)
+## 2026-07-09 — Deep audit of MCARA
+- **Update:** STATE.md rewritten (was outdated from 2025-03-15)
+- **Task:** Integrate Park/Di Stefano (2026) — epigenetic level of stem cell exit
+- **Task:** Add asymmetric histone inheritance (Ma 2026, PMID: 41872193)

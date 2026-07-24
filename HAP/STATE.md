@@ -1,62 +1,62 @@
-**Последнее обновление:** 2026-07-05 (аудит pi — Цикл 6)
+**Last update: 2026-07-24
 
 # STATE — HAP Project
 
-**Date:** 2026-07-02
-**Status:** 🟢 Активный
+**Date: 2026-07-24
+**Status:** 🟢 Active
 
-## ⚠️ BSPC — формальный отказ (1 июл 2026)
+## ⚠️ BSPC — formal rejection (July 1, 2026)
 
-- **1 июл 2026** — получен формальный отказ от BSPC (BSPC-D-26-11119)
-- **Редактор:** Mathias Baumert (Executive Editor)
-- **Причина:** prescreen — «threshold for acceptance is high»
-- **Это 9-й отказ** (JAD, PNEC, BioSystems, CSF, MedHyp, BMB, BBS, BSPC + CSF dual)
-- **Текущая активная подача:** Mathematical Biosciences (MBS-D-26-00817, 27 июн)
+- **July 1, 2026** — received formal rejection from BSPC (BSPC-D-26-11119)
+- **Editor:** Mathias Baumert (Executive Editor)
+- **Reason:** prescreen — «threshold for acceptance is high»
+- **This is the 9th rejection** (JAD, PNEC, BioSystems, CSF, MedHyp, BMB, BBS, BSPC + CSF dual)
+- **Current active submission:** Mathematical Biosciences (MBS-D-26-00817, June 27)
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## Технический статус
+## Technical status
 
-| Компонент | Статус |
+| Component | Status |
 |-----------|:------:|
-| ODE-симуляция (6 переменных) | ✅ Готово |
-| Morris + Sobol sensitivity | ✅ θ_L доминирует (ST=0.75) |
+| ODE simulation (6 variables) | ✅ Done |
+| Morris + Sobol sensitivity | ✅ θ_L dominates (ST=0.75) |
 | Stochastic robustness | ✅ CV<1%, robustness=0.992 |
-| Phase portraits | ✅ Сгенерированы |
-| Bifurcation analysis | ✅ Saddle-node при L_basal≈0 |
-| Графики | ✅ 10 шт. |
-| Доказательная база | ✅ 6 категорий подтверждены |
+| Phase portraits | ✅ Generated |
+| Bifurcation analysis | ✅ Saddle-node at L_basal≈0 |
+| Plots | ✅ 10 plots |
+| Evidence base | ✅ 6 categories confirmed |
 | GitHub | ✅ https://github.com/djabbat/hap-dynamics |
 
-## Сессия 2026-06-15 (итог): Полный цикл ревизии завершён
+## Session 2026-06-15 (outcome): Full revision cycle completed
 
-### Сделано
+### Done
 - [x] Morris + Sobol sensitivity: θ_L dominates (ST=0.75)
 - [x] Stochastic: white noise CV=0.78%, colored (OU) CV=1.59%
 - [x] 2D parameter scan (L_basal × θ_L, 900 runs)
 - [x] Phase portraits (L-A, S-A)
-- [x] Рукопись v3: 471 строка, 26 references (все верифицированы)
-- [x] NHAM → HAP, Afaf удалена, Longevity Horizon скрыт
+- [x] Manuscript v3: 471 lines, 26 references (all verified)
+- [x] NHAM → HAP, Afaf removed, Longevity Horizon hidden
 - [x] El Fettahi disclosure + email correspondence
-- [x] 3 раунда peer review (IF 18+ уровень)
-- [x] Рецензия №3: вердикт ACCEPT (с рекомендациями)
-- [x] Новые референсы: PMID 40362260, 39566821, 41465592, 41459016 + Phytomedicine 2024
+- [x] 3 rounds of peer review (IF 18+ level)
+- [x] Review #3: verdict ACCEPT (with recommendations)
+- [x] New references: PMID 40362260, 39566821, 41465592, 41459016 + Phytomedicine 2024
 
-## Сессия 2026-05-30: Создание проекта + прототип симуляции + evidence search
+## Session 2026-05-30: Project creation + simulation prototype + evidence search
 
-### Что сделано
-- [x] Создан проект с 8 core-файлами
-- [x] Написан прототип ODE симуляции (Python, 6 state variables)
-- [x] Симуляция воспроизводит HAP Predictions (ablation до/после τ_crit)
-- [x] Bifurcation analysis — saddle-node при L_basal≈0, k_A_L≈0
-- [x] Сгенерированы 10 графиков (trajectory, ablation, bifurcation)
-- [x] **PubMed search по 15 запросам** — все категории подтверждают HAP
-- [x] **Evidence report** — docs/evidence_hap_confirmation.md (6 разделов, 20+ новых PMID)
-- [x] Afaf вышла из проекта (Biomarker Review). Решение: заморозить, делать соло при возврате.
+### What's done
+- [x] Project created with 8 core files
+- [x] ODE simulation prototype written (Python, 6 state variables)
+- [x] Simulation reproduces HAP predictions (ablation before/after τ_crit)
+- [x] Bifurcation analysis — saddle-node at L_basal≈0, k_A_L≈0
+- [x] 10 plots generated (trajectory, ablation, bifurcation)
+- [x] **PubMed search with 15 queries** — all categories confirm HAP
+- [x] **Evidence report** — docs/evidence_hap_confirmation.md (6 sections, 20+ new PMIDs)
+- [x] Afaf left the project (Biomarker Review). Decision: freeze, do solo when returning.
 
-### Ключевые находки evidence search
+### Key evidence search findings
 
-| Категория | Статус | Новых статей |
+| Category | Status | New articles |
 |-----------|:------:|:------------:|
 | NAFLD ↔ depression | ✅ Confirmed | 6 (2022-2026) |
 | Bile acid → FXR/TGR5 → mood | ✅ Confirmed | 4 (2024-2026) |

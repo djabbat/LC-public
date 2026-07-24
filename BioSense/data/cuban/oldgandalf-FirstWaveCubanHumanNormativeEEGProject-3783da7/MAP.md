@@ -1,7 +1,7 @@
-# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Карта проекта
+# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Project Map
 
-## Структура
+## Structure
 
-## Компоненты
+## Components
 
-## Связи
+## Connections

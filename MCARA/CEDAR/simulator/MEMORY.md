@@ -1,22 +1,22 @@
 # MEMORY.md — CEDAR-v2 Simulator
 
-## История решений
+## Decision History
 
-### 2026-06-27 — Аудит и создание core-файлов
-- **Решение:** Проведён глубокий аудит всех проектов. CEDAR_simulator обнаружен без core-файлов.
-- **Действие:** Созданы все 10 core-файлов (_pi.md, CONCEPT.md, TODO.md, PARAMETERS.md, MAP.md, STATE.md, MEMORY.md, DESIGN.md, THEORY.md, EVIDENCE.md).
-- **Контекст:** README.md и pyproject.toml уже существовали.
+### 2026-06-27 — Audit and creation of core files
+- **Decision:** A deep audit of all projects was conducted. CEDAR_simulator was found without core files.
+- **Action:** All 10 core files were created (_pi.md, CONCEPT.md, TODO.md, PARAMETERS.md, MAP.md, STATE.md, MEMORY.md, DESIGN.md, THEORY.md, EVIDENCE.md).
+- **Context:** README.md and pyproject.toml already existed.
 
-### Выбор Python (а не Rust)
-- **Решение:** Симулятор написан на Python 3.10+, несмотря на общий тренд Rust в экосистеме.
-- **Причина:** NumPy/SciPy экосистема для научных вычислений, скорость разработки, доступность для научного сообщества.
-- **Последствия:** Портирование на Rust — в бэклоге (низкий приоритет).
+### Choice of Python (instead of Rust)
+- **Decision:** The simulator is written in Python 3.10+, despite the general trend of Rust in the ecosystem.
+- **Reason:** NumPy/SciPy ecosystem for scientific computing, development speed, accessibility for the scientific community.
+- **Consequences:** Porting to Rust is in the backlog (low priority).
 
-### Приватный репозиторий
-- **Решение:** GitHub-репо приватный.
-- **Причина:** Статья не опубликована в рецензируемом журнале.
-- **План:** Открыть после публикации статьи.
+### Private repository
+- **Decision:** GitHub repo is private.
+- **Reason:** The article has not been published in a peer-reviewed journal.
+- **Plan:** Open after publication of the article.
 
-### GPL v3 лицензия
-- **Решение:** GPL v3 вместо Apache 2.0 (как у LC).
-- **Причина:** Научный код — требование воспроизводимости.
+### GPL v3 license
+- **Decision:** GPL v3 instead of Apache 2.0 (as in LC).
+- **Reason:** Scientific code — requirement of reproducibility.

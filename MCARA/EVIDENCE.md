@@ -157,9 +157,9 @@
 | Асимметричное наследование центросом поддерживает свойства стволовых клеток в нейральных прогениторах человека | 37882444 | Royall LN et al. Asymmetric inheritance of centrosomes maintains stem cell properties in human NPCs. *eLife*. 2023;12:e83157 | ✅ 2026-07-05 | **Strong** — C2 в клетках человека |
 | Центросомо-центричный обзор асимметричного деления стволовых клеток | 33435817 | Chen C, Yamashita YM. Centrosome-centric view of asymmetric stem cell division. *Open Biol*. 2021;11(2):200314 | ✅ 2026-07-05 | Strong — обзор от lab Yamashita |
 | Центросомно-зависимое асимметричное наследование midbody ring в GSC Drosophila | 24227883 | Salzmann V, ..., Yamashita YM. Centrosome-dependent asymmetric inheritance of midbody ring in Drosophila GSC. *Mol Biol Cell*. 2014;25(3) | ✅ 2026-07-05 | Strong |
-| Асимметрия центросом в нейральных стволовых клетках Drosophila требует protein phosphatase 4 | 10.1091/mbc.e25-01-0021 | Segura RC et al. Asymmetry of centrosomes in Drosophila neural stem cells requires PP4. *Mol Biol Cell*. 2025 | ✅ 2026-07-05 | Strong — раскрыт механизм |
+| Asymmetry центросом в нейральных стволовых клетках Drosophila требует protein phosphatase 4 | 10.1091/mbc.e25-01-0021 | Segura RC et al. Asymmetry of centrosomes in Drosophila neural stem cells requires PP4. *Mol Biol Cell*. 2025 | ✅ 2026-07-05 | Strong — раскрыт механизм |
 | PCM1 координирует асимметрию центросом с динамикой эндосом для регуляции судьбы дочерних клеток | 10.1038/s41467-025-65756-2 | Zhao X et al. PCM1 coordinates centrosome asymmetry with polarized endosome dynamics. *Nat Commun*. 2025;16:5230 | ✅ 2026-07-05 | Strong |
-| Асимметрия созревания центросом через динамику AIR-1 в эмбрионе C. elegans | 40082489 | Plourde SM et al. Asymmetry in centrosome maturation... *Sci Rep*. 2025;15:8667 | ✅ 2026-07-05 | Moderate |
+| Asymmetry созревания центросом через динамику AIR-1 в эмбрионе C. elegans | 40082489 | Plourde SM et al. Asymmetry in centrosome maturation... *Sci Rep*. 2025;15:8667 | ✅ 2026-07-05 | Moderate |
 | Систематический обзор асимметричного наследования клеточных органелл у эукариот | 28562636 | Collins A et al. A systematic review of asymmetric inheritance of cellular organelles. *PLoS One*. 2017;12(6):e0178645 | ✅ 2026-07-05 | Strong — обзор |
 | Пластичность и строгость: переосмысление режимов деления стволовых клеток | 41626805 | Bener MB, Inaba M. Plasticity and stringency: rethinking stem cell division modes. *Biochem Soc Trans*. 2026;54(2) | ✅ 2026-07-05 | Moderate |
 
@@ -173,7 +173,7 @@
 | Запаздывающие X-хроматиды задают ориентацию асимметричного распределения органелл в XX сперматоцитах | 10.1093/genetics/iyac159 | Al-Yazeedi T et al. Lagging X chromatids specify asymmetric organelle partitioning in XX spermatocytes. *Genetics*. 2022;222(2) | ✅ 2026-07-05 | Strong — прямая асимметрия в мужском мейозе |
 | Инактивация и элиминация центриолей при развитии Drosophila | 40558492 | Bonente D et al. Inactivation and Elimination of Centrioles During Development in Drosophila. *Cells*. 2025;14(12):865 | ✅ 2026-07-05 | Moderate |
 
-### 5.3. Значение для MCARA
+### 5.3. Value для MCARA
 
 1. **Counter #1 (CP — centriolar):** Новые данные Thomas & Meraldi (2024) и Royall et al. (2023) **прямо подтверждают** механизм C2 (асимметричное наследование центросом) в клетках человека.
 2. **Мейотический драйв как модель:** Meng/Baird/Yamashita (2026) показывают, что даже «симметричный» мужской мейоз содержит латентную асимметрию — это **общая парадигма**, применимая и к митотическим делениям стволовых клеток.
@@ -205,7 +205,7 @@
 | Таргетирование асимметричного деления в раковых СК | 41361761 | Latifi M et al. Targeting asymmetric division in cancer stem cells. *Cancer Cell Int*. 2025 | ✅ 2026-07-05 | Moderate |
 | Пластичность и строгость режимов деления СК | 41626805 | Bener MB, Inaba M. Plasticity and stringency. *Biochem Soc Trans*. 2026 | ✅ 2026-07-05 | Moderate |
 
-### 6.3. Значение для MCARA
+### 6.3. Value для MCARA
 
 1. **Counter #4 (Epigenetic):** Park/Di Stefano дают детальную карту эпигенетических механизмов stem cell exit — TET, H3K27me3/H3K4me3, CTCF/TAD, bookmarking. Это прямой reference для механизма эпигенетического счётчика.
 2. **«Точка невозврата»:** Вопрос существования point of no return в дифференцировке — ключевой для MCARA: если точка невозврата существует, то счётчики должны её учитывать.
@@ -219,7 +219,7 @@
 
 ### 7.1. CASID — от гипотезы к evidence (M3 upgraded: 2/10 → 5/10)
 
-| Белок | Связь с центросомой | PMID |
+| Белок | Connection с центросомой | PMID |
 |-------|---------------------|------|
 | **Oct4 (POU5F1)** — мастер плюрипотентности | Физически на центросоме в митозе; нетранскрипционная функция в сборке веретена | **41725553** ✅ |
 | **CEP170** — центросомный белок | Связывает центросому с кортикальным нейрогенезом | **41888776** ✅ |
@@ -228,7 +228,7 @@
 | **NuSAP–CEP57–CEP152** | Защита целостности центриоли для engagement | **41616107** ✅ |
 | **Первичная цилия** — сигнальный хаб | Ворота TGF-β суперсемейства (Herrera-Cid 2026, PMID: **42233350**); хабы сигнальной трансдукции (Li 2025, PMID: **41310849**) | **42233350**, **41310849** ✅ |
 
-### 7.2. Решения проблем
+### 7.2. Decisions проблем
 
 | # | Проблема | Решение |
 |---|----------|--------|
@@ -238,7 +238,7 @@
 | 4 | Tissue-specificity | 🟢 Таблица 8 тканей с n*, α, β |
 | 5 | Γ matrix | 🟡 Метод парных perturbation experiments |
 | 6 | ¬R reversibility | 🟡 iPSC-репрограммирование → тест сброса polyGlu |
-| 7 | D_critical пороги | 🟢 Модель тканевых порогов |
+| 7 | D_critical пороги | 🟢 Model тканевых порогов |
 
 **Оценка MCARA: 6.7 → 7.5/10**
 
@@ -248,7 +248,7 @@
 
 > Контекст: гипотеза о достижении тотипотентности через centriole elimination + тотипотентные факторы (см. THEORY.md §0.1)
 
-| Фактор | Функция | PMID/DOI | Статья |
+| Фактор | Функция | PMID/DOI | Article |
 |--------|--------|----------|--------|
 | **DUX4** (человек) / Dux (мышь) | Pioneer factor ZGA, активация MERVL, master regulator 2C-like state | 28369030 | Hendrickson PG et al. Conserved roles of mouse DUX and human DUX4 in activating cleavage-stage genes and MERVL/HERVL retrotransposons. *Nat Genet*. 2017;49:925-934 |
 | **ZSCAN4** | Теломерное удлинение через рекомбинацию, геномная стабильность в ранних эмбрионах | 20139984 | Zalzman M et al. Zscan4 regulates telomere elongation and genomic stability in ES cells. *Nature*. 2010;464:858-863 |
@@ -266,7 +266,7 @@
 
 **Литературная поддержка (энтропийное старение — emerging mainstream):**
 
-| Статья | Журнал | Год | PMID |
+| Article | Journal | Год | PMID |
 |--------|--------|-----|------|
 | **Wu Z et al.** — The entropic view of aging: from thermodynamics to biology | Life Med | 2026 | **42388853** |
 | **Cummings SR, Hong N, Cohen AA** — Entropy and Human Aging | Aging Cell | 2025 | **41230623** |
@@ -282,7 +282,7 @@
 
 ### НОВЫЕ КРИТИЧЕСКИЕ ОБЗОРЫ
 
-| Статья | Журнал | Год | DOI/PMID | Для Counter |
+| Article | Journal | Год | DOI/PMID | Для Counter |
 |--------|--------|-----|----------|-------------|
 | **Hallmarks of stem cell aging** | Cell Stem Cell | 2025 | 10.1016/j.stem.2025.06.004 | Общая рамка |
 | **Mitochondrial drivers of stem cell aging and inflammaging** | npj Aging | 2026 | 10.1038/s41514-026-00422-5 | #3 |
@@ -293,7 +293,7 @@
 
 ### НОВЫЕ ЭКСПЕРИМЕНТАЛЬНЫЕ СТАТЬИ
 
-| Статья | Журнал | Год | DOI/PMID | Для Counter |
+| Article | Journal | Год | DOI/PMID | Для Counter |
 |--------|--------|-----|----------|-------------|
 | Gilloteaux et al. — Mitochondrial ultrastructure in differentiated SH-SY5Y | Ultrastruct Pathol | 2026 | 42159247 | #3 |
 | Eckhart et al. — Holocrine secretion: final step of epithelial differentiation | Cells | 2026 | 10.3390/cells15121058 | #5 (analogy) |
@@ -325,7 +325,7 @@
 
 | Claim | PMID/DOI | Article | Verified | Strength |
 |-------|----------|---------|----------|---------|
-| Планарии потеряли **центросомы** (PCM/MTOC) эволюционно, но сохранили центриоли в митотических необластах. IF anti-SMED-CEP135 + TEM | 22223737 | Azimzadeh J et al. Centrosome loss in the evolution of planarians. *Science* 335:461-3 (2012) | ✅ 2026-07-17 | **Strong** |
+| Planарии потеряли **центросомы** (PCM/MTOC) эволюционно, но сохранили центриоли в митотических необластах. IF anti-SMED-CEP135 + TEM | 22223737 | Azimzadeh J et al. Centrosome loss in the evolution of planarians. *Science* 335:461-3 (2012) | ✅ 2026-07-17 | **Strong** |
 | Мультицилиогенез: cep152, plk4, sas6 для амплификации (не de novo) | 32776587 | Li Y et al. *Biol Cell* 112:398-408 (2020) | ✅ 2026-07-17 | Strong |
 | Центросомное наследование при оплодотворении | 21509822 | Schatten H, Sun QY. *Dev Dyn* 240:1971-82 (2011) | ✅ 2026-07-17 | Strong |
 
@@ -350,7 +350,7 @@
 
 ### 11.1. Key Publications from Gönczy Lab
 
-| PMID | Статья | Журнал | Год | Ключевой результат |
+| PMID | Article | Journal | Год | Ключевой результат |
 |:----:|--------|--------|:---:|-------------------|
 | **37963546** | Kalbfuss & Gönczy — Towards understanding centriole elimination | Open Biol | 2023 | Обзор: трёхстадийная модель (maintenance → priming → execution) |
 | **37256957** | Kalbfuss & Gönczy — Extensive programmed centriole elimination in C. elegans embryos | Science Advances | 2023 | ~88% клеток теряют центриоли. Cell fate = centriole fate |
@@ -359,13 +359,13 @@
 
 ### 11.2. Article Recommended by Pierre Gönczy
 
-| DOI | Статья | Журнал | Год | Ключевой результат |
+| DOI | Article | Journal | Год | Ключевой результат |
 |:---|--------|--------|:---:|-------------------|
 | 10.1038/s44319-023-00020-6 | Pimenta-Marques et al. — Ana1/CEP295 in centrosome maintenance | EMBO Reports | 2023 | ANA1/CEP295 — ключевой стабилизатор. Оверэкспрессия предотвращает потерю центриолей. Рекомендована Гёнчи |
 
 ### 11.3. Pierre Gönczy's Direct Answers (18 Jul 2026)
 
-| Вопрос | Ответ | Значение |
+| Вопрос | Ответ | Value |
 |--------|-------|---------|
 | Скрытая литература по C. elegans соме? | «Not that I know.» | Поле открыто |
 | Кто-то chasing mechanism? | «Not known to me in C. elegans.» | Нет конкуренции |
@@ -377,18 +377,18 @@
 
 > «We suspect (but do not know, since we have no way at present to eliminate centrioles at will as you know) that centrioles remain for a reason, e.g. to be able to build a centrosome or for some signaling function.»
 
-**Значение для MCARA:**
+**Value для MCARA:**
 
 1. **Центриоли сохраняются не случайно** — Пьер прямо говорит: «remain for a reason». Это не артефакт деградации и не рудимент.
 2. **Сигнальная функция** — одна из двух предложенных причин. Именно гипотеза CEDAR: центриоль = сигнальный хаб, gatekeeper клеточного состояния.
 3. **Нет инструмента для проверки** — «no way at present to eliminate centrioles at will». Это окно для MCARA: CCP1-KO и/или Centrinone — инструменты, которых у поля нет.
 4. **Экспертное свидетельство** — ведущий эксперт по центриолярной элиминации допускает сигнальную роль центриолей.
 
-| Вопрос Джабы | Ответ Пьера | Значение |
+| Вопрос Джабы | Ответ Пьера | Value |
 |-------------|------------|---------|
 | Почему foci центриолярных белков сохраняются в соматической гонаде? | «Remain for a reason — centrosome building or signaling function» | Прямая поддержка гипотезы CEDAR (сигнальная роль центриолей) |
 
-### 11.4. Значение для MCARA
+### 11.4. Value для MCARA
 
 1. **Подтверждение уникальности:** Механизм соматической элиминации неизвестен никому. Наш эксперимент — первый в своём роде.
 2. **Трёхстадийная модель:** Framework для дизайна — мы воздействуем на стадию maintenance (PLK4/CEP295).
@@ -411,18 +411,18 @@
 
 ### 12.1. Key Publications
 
-| PMID | Статья | Журнал | Год | Ключевой результат |
+| PMID | Article | Journal | Год | Ключевой результат |
 |:----:|--------|--------|:---:|-------------------|
 | **36693370** | Maheshwari, Cohen-Fix et al. — A membrane reticulum, the centriculum, affects centrosome size and function | **Current Biology** | 2023 | Первооткрытие: центросома окружена 3D ER-мембранным ретикулумом. vEM/FIB-SEM. Центрикулум влияет на размер PCM и нуклеацию MT |
 | **42283151** | Maheshwari, Cohen-Fix et al. — The centriculum might serve as a microtubule filter | **Journal of Cell Science** | 2026 | Центрикулум = MT-фильтр. При ↓ MT: центрикулум + PCM уменьшаются, SPD-5 плотность ↑ (PCM компактизуется) |
 
-### 12.2. Значение для MCARA
+### 12.2. Value для MCARA
 
 1. **Центросома НЕ membraneless —** новое понимание структурной организации
 2. **Микротрубочковый фильтр —** центрикулум блокирует элонгацию большинства MT. Возраст-зависимая деградация центрикулума → нарушение MT-регуляции
 3. **PCM-компактизация —** клетка может компенсировать уменьшение центрикулума через увеличение плотности SPD-5 (R²=0.26, P=0.0002). Потенциальный механизм, истощающийся с возрастом
 4. **ER-stress → центросомная дисфункция —** новый coupling: Counter #3 (MitoROS/ER-stress) → Counter #4 (Structural)
-5. **Связь с ядерной оболочкой —** центрикулум сливается с NE в метафазе. Нарушение этого процесса → дефекты митоза
+5. **Connection с ядерной оболочкой —** центрикулум сливается с NE в метафазе. Нарушение этого процесса → дефекты митоза
 6. **10× концентрация тубулина (Baumgart 2019):** модель «фильтра» объясняет — столкновение MT→центрикулум → катастрофа → высвобождение тубулина
 7. **Избирательная пористость (2026-07-22):** центрикулум более пористый для spindle MTs, чем для astral MTs — механизм неизвестен
 8. **Эволюционная консервация:** Drosophila (Diaz 2019, Rollins & Blankenship 2023 — Dev), medaka (Kiyomitsu 2024 — JCB), sea urchin (Xie 2025). ER curvature proteins Rtnl1/ReepB — общий механизм
@@ -435,7 +435,7 @@
 
 ### 14.1. Key Publications — ER-Центросомные взаимодействия
 
-| PMID | Статья | Журнал | Год | Ключевой результат |
+| PMID | Article | Journal | Год | Ключевой результат |
 |------|--------|--------|-----|--------------------|
 | **40267909** | Sánchez-Álvarez et al. — PERK-dependent reciprocal crosstalk between ER and non-centrosomal MTs | **Cell Reports** | 2025 | PERK через eIF2α фосфорилирование координирует ER архитектуру с нецентросомальными MT. Нарушение → стабилизация MT, изменение морфогенеза |
 | **34912111** | Zheng et al. — ER proteins decipher the tubulin code to regulate organelle distribution | **Nature** | 2022 | CLIMP63 связывает центросомные MT, KTN1 — перинуклеарные полиглутамилированные MT, p180 — глутамилированные MT. Нокаут → перераспределение ER |
@@ -445,7 +445,7 @@
 
 ### 14.2. Key Publications — Ооциты и механика
 
-| PMID | Статья | Журнал | Год | Ключевой результат |
+| PMID | Article | Journal | Год | Ключевой результат |
 |------|--------|--------|-----|--------------------|
 | **42360132** | Shihabi et al. — From Cytoskeletal Remodeling to Oocyte Quality: The Emerging Role of Mechanics | **Advanced Science** | 2026 | Обзор (175 refs). Механические свойства ооцита — перспективные biomarkers качества в ВРТ. Актомиозин → механика → асимметричные деления |
 | **36395215** | Wu et al. — The mechanism of acentrosomal spindle assembly in human oocytes | **Science** | 2022 | Открытие huoMTOC. >2000 ооцитов человека. TACC3, CCP110, CKAP5, DISC1 — ключевые компоненты. Фрагментация huoMTOC → nucleation на кинетохорах |
@@ -463,7 +463,7 @@
 - Если да: возраст-зависимая деградация этой структуры → нарушение MT-нуклеации/фильтрации → новый механизм анеуплоидии
 - ER-stress (PERK, IRE1) активируется в стареющих ооцитах → потенциальный механизм деградации
 
-**Связь с Counter #4 (Structural):**
+**Connection с Counter #4 (Structural):**
 - Центрикулум = ER-мембранный компонент счётчика #4
 - Его возрастная деградация → нарушение MT-регуляции → ошибки митоза/мейоза
 - В ооцитах (без центриолей) ER может выполнять аналогичную структурную роль через huoMTOC-ассоциированные мембраны
@@ -476,13 +476,13 @@
 
 ### 13.1. Key Publication
 
-| PMID | Статья | Журнал | Год | Ключевой результат |
+| PMID | Article | Journal | Год | Ключевой результат |
 |:----:|--------|--------|:---:|-------------------|
 | **42455439** | Ishida & Shibuya — Centriole Duplication, Maturation, and Transformation During Mammalian Spermatogenesis | Adv Exp Med Biol | 2026 | Обзор (165 refs). Центриоли сохраняются в сперматогенезе (vs элиминация в оогенезе). Дуплицируются дважды независимо от pre-meiotic DNA synthesis |
 
-### 13.2. Значение для MCARA
+### 13.2. Value для MCARA
 
-1. **Асимметрия гамет:** Оогенез = Eliminate, Сперматогенез = Retain → Rebuild. Природа реализует оба принципа
+1. **Asymmetry гамет:** Оогенез = Eliminate, Сперматогенез = Retain → Rebuild. Природа реализует оба принципа
 2. **Спермальные центриоли = seeds, не темплаты —** подтверждает de novo сборку в зиготе
 3. **Усиливает Bradford Hill Analogy:** сброс центриолей — не артефакт, а эволюционно консервативная стратегия
 

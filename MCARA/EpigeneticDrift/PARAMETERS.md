@@ -1,25 +1,30 @@
-# Параметры Epigenetic Drift
+# Epigenetic Drift Parameters
 
-**Статус:** Measured (измерен), Estimated (оценён по данным), Hypothetical (гипотетический, требует проверки), Canonical (каноническое значение по умолчанию).
+**Version:** 1.0
 
-| Параметр | Описание | Значение / Диапазон | Единицы | Статус | Обоснование и источник |
-|----------|----------|---------------------|---------|--------|------------------------|
-| **`D₄,₀`** | Базовое состояние эпигенетического дрейфа в референсный момент (рождение). | 0 (по определению шкалы) | безразмерные (нормировано) | Canonical | Интерсепт в эпигенетических часах калиброван на 0 для новорождённых (Horvath, 2013). |
-| **`β₄`** | Линейный коэффициент времени. Сила дрейфа, происходящего независимо от делений. | 1.0 (референтное) | безразмерные | Canonical | Определяет масштаб. `β₄=1` означает, что за время `τ₄` дрейф увеличивается на 1 условную единицу. |
-| **`τ₄`** | Характерная временная константа эпигенетического старения. | 10 [7, 15] | годы | Estimated | На основе: 1) времени удвоения ускорения эпигенетического возраста при прогерии (~7-10 лет, Horvath et al., 2018). 2) Лонгитудинальные данные DunedinPACE (Belsky et al., 2022), указывающие на заметные изменения за десятилетие. |
-| **`α₄`** | Коэффициент, связанный с делением. Дополнительный дрейф на одно деление. | 0.05 [0.01, 0.15] | безразмерные | Estimated | Оценено на основе: 1) Разницы в эпигенетическом возрасте in vitro между ранними и поздними пассажами (Horvath, 2013). 2) Моделирования истощения ГСК (Adelman et al., 2019). Широкий доверительный интервал отражает неопределённость. |
-| **`n₄*`** | Характерное число делений. Масштабирует вклад `α₄`. | 50 [20, 100] | безразмерные (число делений) | Hypothetical | Гипотеза: соответствует порядку величины числа делений стволовой клетки за время `τ₄` в активно обновляющейся ткани (например, крипта кишечника). Требует прямой экспериментальной проверки. |
-| **`γ₄₃`** | Коэффициент связи: влияние состояния митохондриального ROS (`D₃`) на скорость эпигенетического дрейфа. | 0.12 [0.05, 0.21] (медиана бутстрапа) | безразмерные | Hypothetical | Предварительная бутстрап-оценка, основанная на опубликованных корреляциях между маркерами окислительного стресса и эпигенетическим возрастом. **По умолчанию = 0** (null hypothesis). |
-| **`γ₄₅`** | Коэффициент связи: влияние состояния протеостаза (`D₅`) на скорость эпигенетического дрейфа. | 0.08 [0.02, 0.15] (медиана бутстрапа) | безразмерные | Hypothetical | Предварительная бутстрап-оценка на основе корреляций между маркерами протеостатического стресса и эпигенетическими часами. **По умолчанию = 0**. |
-| **`γ₄₂`** | Коэффициент связи: влияние теломерного счётчика (`D₂`) на скорость эпигенетического дрейфа. | Не оценён | безразмерные | Hypothetical | Механистическая связь известна (теломерная дисфункция → изменения гетерохроматина), но количественная оценка отсутствует. **По умолчанию = 0**. |
-| **`ω_Horvath`** | Вес для нормализации выхода часов Horvath в функцию `f₄(D₄)`. | 0.33 | безразмерные | Estimated (взвешивание) | При использовании композитной меры `D₄` как среднего нескольких часов. Может быть оптимизирован для предсказания конкретного фенотипа. |
-| **`ω_GrimAge`** | Вес для нормализации выхода часов GrimAge в функцию `f₄(D₄)`. | 0.33 | безразмерные | Estimated (взвешивание) | Аналогично. |
-| **`ω_DunedinPACE`** | Вес для нормализации выхода DunedinPACE в функцию `f₄(D₄)`. | 0.33 | безразмерные | Estimated (взвешивание) | Аналогично. |
-| **`w₄(muscle)`** | Вес счётчика #4 в общей сумме `L_tissue` для скелетной мышцы. | 0.25 [0.15, 0.35] | безразмерные | Hypothetical | Предполагаемый вклад на основе: 1) Высокой точности часов в мышцах. 2) Постмитотической природы ткани (доминирует `β₄`). Требует калибровки на данных о возрастном функциональном спаде мышц. |
-| **`w₄(blood)`** | Вес счётчика #4 в общей сумме `L_tissue` для крови/иммунной системы. | 0.40 [0.30, 0.50] | безразмерные | Hypothetical | Предполагается высокий вклад из-за: 1) Чувствительности ГСК к эпигенетическому репрограммированию. 2) Сильной связи эпигенетического возраста крови с системным здоровьем. |
+**Status:** Measured, Estimated, Hypothetical, Canonical
 
-**Примечания:**
-1. Все параметры связи `γ₄ⱼ` по умолчанию равны 0, в соответствии с каноном CORRECTIONS_2026-04-22 (отказ от циклической зависимости с MCARA Test 2).
+| Parameter | Description | Value / Range | Units | Status | Rationale and Source |
+|-----------|-------------|---------------|-------|--------|----------------------|
+| **`D₄,₀`** | Baseline state of epigenetic drift at the reference time (birth). | 0 (by definition of the scale) | dimensionless (normalized) | Canonical | Intercept in epigenetic clocks calibrated to 0 for newborns (Horvath, 2013). |
+| **`β₄`** | Linear time coefficient. Strength of drift occurring independently of divisions. | 1.0 (reference) | dimensionless | Canonical | Defines the scale. `β₄=1` means that over time `τ₄` the drift increases by 1 conventional unit. |
+| **`τ₄`** | Characteristic time constant of epigenetic aging. | 10 [7, 15] | years | Estimated | Based on: 1) doubling time of epigenetic age acceleration in progeria (~7-10 years, Horvath et al., 2018). 2) Longitudinal data from DunedinPACE (Belsky et al., 2022), indicating noticeable changes over a decade. |
+| **`α₄`** | Division-related coefficient. Additional drift per division. | 0.05 [0.01, 0.15] | dimensionless | Estimated | Estimated based on: 1) Difference in epigenetic age in vitro between early and late passages (Horvath, 2013). 2) Modeling of HSC exhaustion (Adelman et al., 2019). Wide confidence interval reflects uncertainty. |
+| **`n₄*`** | Characteristic number of divisions. Scales the contribution of `α₄`. | 50 [20, 100] | dimensionless (number of divisions) | Hypothetical | Hypothesis: corresponds to the order of magnitude of stem cell divisions over time `τ₄` in an actively renewing tissue (e.g., intestinal crypt). Requires direct experimental verification. |
+| **`γ₄₃`** | Coupling coefficient: influence of mitochondrial ROS state (`D₃`) on the rate of epigenetic drift. | 0.12 [0.05, 0.21] (bootstrap median) | dimensionless | Hypothetical | Preliminary bootstrap estimate based on published correlations between oxidative stress markers and epigenetic age. **Default = 0** (null hypothesis). |
+| **`γ₄₅`** | Coupling coefficient: influence of proteostasis state (`D₅`) on the rate of epigenetic drift. | 0.08 [0.02, 0.15] (bootstrap median) | dimensionless | Hypothetical | Preliminary bootstrap estimate based on correlations between proteostatic stress markers and epigenetic clocks. **Default = 0**. |
+| **`γ₄₂`** | Coupling coefficient: influence of telomere counter (`D₂`) on the rate of epigenetic drift. | Not estimated | dimensionless | Hypothetical | Mechanistic link is known (telomere dysfunction → heterochromatin changes), but quantitative estimate is lacking. **Default = 0**. |
+| **`ω_Horvath`** | Weight for normalizing the output of the Horvath clock into function `f₄(D₄)`. | 0.33 | dimensionless | Estimated (weighting) | Used when composite measure `D₄` is the average of several clocks. Can be optimized for predicting a specific phenotype. |
+| **`ω_GrimAge`** | Weight for normalizing the output of the GrimAge clock into function `f₄(D₄)`. | 0.33 | dimensionless | Estimated (weighting) | Similarly. |
+| **`ω_DunedinPACE`** | Weight for normalizing the output of DunedinPACE into function `f₄(D₄)`. | 0.33 | dimensionless | Estimated (weighting) | Similarly. |
+| **`w₄(muscle)`** | Weight of counter #4 in the total sum `L_tissue` for skeletal muscle. | 0.25 [0.15, 0.35] | dimensionless | Hypothetical | Assumed contribution based on: 1) High accuracy of clocks in muscle. 2) Postmitotic nature of the tissue (dominated by `β₄`). Requires calibration on data of age-related functional decline in muscle. |
+| **`w₄(blood)`** | Weight of counter #4 in the total sum `L_tissue` for blood/immune system. | 0.40 [0.30, 0.50] | dimensionless | Hypothetical | Assumed high contribution due to: 1) Sensitivity of HSCs to epigenetic changes.
+to reprogramming. 2) Strong connection of blood epigenetic age with systemic health. |
+
+**Notes:**
+1. All coupling parameters `γ₄ⱼ` by default
+to reprogramming. 2) Strong connection of blood epigenetic age with systemic health. |
+анию равны 0, в соответствии с каноном CORRECTIONS_2026-04-22 (отказ от циклической зависимости с MCARA Test 2).
 2. Значения в квадратных скобках `[a, b]` представляют предполагаемый 90% доверительный или правдоподобный интервал.
 3. Статус **Hypothetical** означает, что параметр введён теорией, но его численное значение не подтверждено контролируемыми экспериментами.
 
@@ -34,3 +39,5 @@ Sample size justification: For the proposed ABL-2 modulation experiment (OPEN_PR
 
 См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
 
+
+| Budget | $60,000 |
