@@ -1,16 +1,16 @@
 # Ze Simulator
 
-Rust-симулятор для **Ze Theory** — квантово-информационная модель коллапса волновой функции и проверка Tsirelson bound.
+Rust simulator for **Ze Theory** — quantum-information model of wave function collapse and verification of Tsirelson bound.
 
-## Структура
-- **ze-core** — библиотека физической модели
-- **ze-runner** — бинарник симуляции
+## Structure
+- **ze-core** — physical model library
+- **ze-runner** — simulation binary
 
-## Быстрый старт
-```bash
+## Quick start
+bash
 ./scripts/build.sh
 cargo run --release
-```
 
-## Родительский проект
-**LC/Ze** — теория, аксиоматика и математический аппарат.
+
+## Parent project
+**LC/Ze** — theory, axiomatics, and mathematical apparatus.

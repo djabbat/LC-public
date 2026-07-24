@@ -1,179 +1,174 @@
 # CEDAR — Memory
 
+
 ## 🔬 Literature Review 2026-07-18 — Asymmetric Inheritance
 
-> Проведён широкий поиск (~60 PMID, 25 детально). Полный обзор: `docs/LITERATURE_REVIEW_2026-07-18.md`
-> Брифинг для MCARA: `docs/MCARA_BRIEFING_2026-07-18.md`
+> A broad search was conducted (~60 PMIDs, 25 in detail). Full review: `docs/LITERATURE_REVIEW_2026-07-18.md`
+> Briefing for MCARA: `docs/MCARA_BRIEFING_2026-07-18.md`
 
-### Ключевые находки:
-- **Asymmetric centrosome inheritance — доказан** (Yamashita 2007 Science; Wang 2009 Nature; Izumi 2012 PNAS; Chen & Yamashita 2021 Open Biol)
-- **CENP-A asymmetry + возраст-зависимая потеря** в GSC (Carty 2021 PLoS Genet, PMID 34014920) — прямая связь с epigenetic age
-- **Asymmetric histone segregation — под вопросом** (Li 2025 PNAS, PMID 41166424 — photoconvertible Dendra2 показал симметричную сегрегацию)
-- **SLABOE MESTO Ninein:** не нужен для ACD у дрозофилы (Zheng 2016 MBoC), но нужен у млекопитающих (Wang 2009 Nature)
-- **De novo centriole synthesis:** частота неизвестна в большинстве систем — нужно измерить (Prediction D1-D3 CellLineageTree)
+### Key findings:
+- **Asymmetric centrosome inheritance — proven** (Yamashita 2007 Science; Wang 2009 Nature; Izumi 2012 PNAS; Chen & Yamashita 2021 Open Biol)
+- **CENP-A asymmetry + age-dependent loss** in GSC (Carty 2021 PLoS Genet, PMID 34014920) — direct link to epigenetic age
+- **Asymmetric histone segregation — questionable** (Li 2025 PNAS, PMID 41166424 — photoconvertible Dendra2 showed symmetric segregation)
+- **SLABOE MESTO Ninein:** not required for ACD in Drosophila (Zheng 2016 MBoC), but required in mammals (Wang 2009 Nature)
+- **De novo centriole synthesis:** frequency unknown in most systems — needs to be measured (Prediction D1-D3 CellLineageTree)
 
-### Новые контакты:
+### New contacts:
 - **Xin Chen** (Johns Hopkins/HHMI) — xchen32@jhu.edu — asymmetric histone inheritance, GSC biology
-- **Komeil Razmi** (CSIRO/UTAS) — Komeil.Razmi@csiro.au — PGC teleosts, связь с Jawahar Patil
+- **Komeil Razmi** (CSIRO/UTAS) — Komeil.Razmi@csiro.au — PGC teleosts, connection with Jawahar Patil
 - **Elaine Dunleavy** (NUI Galway) — CENP-A asymmetry, epigenetic age
 
-### Новые PMID для отслеживания:
-Обязательные: 17255513, 19829375, 34014920, 42455441, 24120134
-Для адресации контраргументов: 41166424, 27053665
+### New PMIDs to track:
+Mandatory: 17255513, 19829375, 34014920, 42455441, 24120134
+For addressing counterarguments: 41166424, 27053665
 
-## 📛 ПЕРЕИМЕНОВАНИЕ: CDATA → CEDAR (2026-07-13)
 
-- **Решение:** Проект CDATA переименован в CEDAR.
-- **Что сделано:**
-  - Директории уже переименованы (LC/MCARA/CEDAR/)
-  - AGENTS.md оба обновлены (корневой и ~/.pi/agent/)
-  - В активных core-файлах CDATA не осталось (проверено grep-ом)
-  - mbpr/results и _archive не трогались (исторические)
+## 📛 RENAME: CDATA → CEDAR (2026-07-13)
 
-## 2026-07-13 — Анализ Research Feed: mRNA-регионализация, mei-P26, цисты герм-клеток
+- **Decision:** Project CDATA renamed to CEDAR.
+- **What was done:**
+  - Directories already renamed (LC/MCARA/CEDAR/)
+  - Both AGENTS.md updated (root and ~/.pi/agent/)
+  - No CDATA remains in active core files (verified by grep)
+  - mbpr/results and _archive left untouched (historical)
 
-- **Событие:** Анализ 7 статей из ленты Jaba + поиск похожих.
-- **КЛЮЧЕВЫЕ НАХОДКИ ДЛЯ CEDAR:**
 
-### mRNA-регионализация в одиночной клетке (Albright et al., PNAS 2026)
-- В гигантской одноклеточной водоросли *Acetabularia* — мРНК разных генов накапливаются в разных регионах.
-- **Значение для CEDAR:** Прямой эмпирический proof, что одиночная клетка способна к пространственному паттернированию экспрессии. Это основа для модели асимметричного деления в CellLineageTree.
+## 2026-07-13 — Research Feed Analysis: mRNA regionalization, mei-P26, germ cell cysts
 
-### mei-P26 — gatekeeper митоз→мейоз перехода (Terry et al., Genetics 2026)
-- Гипоморфная мутация mei-P26 → клетки задерживаются в митозе, входят в мейоз с митотическими сигналами → аберрантная динамика хромосом.
-- **Значение для CEDAR:** mei-P26 — конкретный молекулярный «счётчик» клеточного состояния. Модель для MCARA Gatekeeper of Cell State.
+- **Event:** Analysis of 7 articles from Jaba feed + search for similar.
+- **KEY FINDINGS FOR CEDAR:**
 
-### Цисты герм-клеток (Leite et al., Curr Top Dev Biol 2026)
-- Обзор: от формирования цист до индивидуализации гамет.
-- **Значение для CEDAR:** Структурный контекст — цитоплазматические мостики между клетками цисты позволяют асимметричное распределение мРНК и органелл. Связь с mRNA-регионализацией.
+### mRNA regionalization in a single cell (Albright et al., PNAS 2026)
+- In the giant unicellular alga *Acetabularia* — mRNAs of different genes accumulate in different regions.
+- **Value for CEDAR:** Direct empirical proof that a single cell is capable of spatial patterning of expression. This is the basis for the asymmetric division model in CellLineageTree.
 
-### Дополнительно:
-- SIRT1 haploinsufficiency → age-associated subfertility (PMID: 41882697) — эпигенетический механизм возрастной субфертильности. Связь с EpigeneticDrift.
-- hnRNP обзор (Zhou et al., Reproduction) — RNA-binding proteins в сперматогенезе. Связь с HAP.
+### mei-P26 — gatekeeper of mitosis→meiosis transition (Terry et al., Genetics 2026)
+- Hypomorphic mutation of mei-P26 → cells delay in mitosis, enter meiosis with mitotic signals → aberrant chromosome dynamics.
+- **Value for CEDAR:** mei-P26 is a specific molecular "counter" of cell state. Model for MCARA Gatekeeper of Cell State.
 
-- **Полный анализ:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
+### Germ cell cysts (Leite et al., Curr Top Dev Biol 2026)
+- Review: from cyst formation to gamete individualization.
+- **Value for CEDAR:** Structural context — cytoplasmic bridges between cyst cells allow asymmetric distribution of mRNA and organelles. Connection with mRNA regionalization.
+
+### Additional:
+- SIRT1 haploinsufficiency → age-associated subfertility (PMID: 41882697) — epigenetic mechanism of age-related subfertility. Connection with EpigeneticDrift.
+- hnRNP review (Zhou et al., Reproduction) — RNA-binding proteins in spermatogenesis. Connection with HAP.
+
+- **Full analysis:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
 
 ---
 
-## 🔴 POST-MORTEM — Rejection #6: BioEssays (15 июл 2026)
 
-**Журнал:** BioEssays (Wiley)
+## 🔴 POST-MORTEM — Rejection #6: BioEssays (15 Jul 2026)
+
+**Journal:** BioEssays (Wiley)
 **ID:** `4799098`
-**Дней до решения:** 1 (desk reject)
-**Редактор:** Roberto Botelho (Academic Editor, не EIC)
+**Days to decision:** 1 (desk reject)
+**Editor:** Roberto Botelho (Academic Editor, not EIC)
 
-### Причина (письмо редактора)
-> «After careful assessment, we have made the decision not to consider your manuscript for publication in BioEssays.» — без содержательной обратной связи.
+### Reason (editor letter)
+> «After careful assessment, we have made the decision not to consider your manuscript for publication in BioEssays.» — without substantive feedback.
 
-### Что мы упустили
-- ❌ **Pre-submission inquiry НЕ БЫЛ ОТПРАВЛЕН.** Написан (INQUIRY_BioEssays_2026-07-10.md), но не отправлен Kerstin Brachhold. Правило PRE-SUBMISSION RULES нарушено.
-- ❌ **Journal-fit не через скрипт.** `journal-fit.sh` не запускался. Ручная оценка: IF 3.3, acceptance 37% — выглядело хорошо, но scope не проверен системно.
-- ❌ **Размер рукописи** — 792 строки (17 стр.) — вероятно, слишком большая для «Problems & Paradigms». Типичная статья BioEssays — 3000–5000 слов. Наша — research proposal с 13-group экспериментом, €3M бюджетом.
-- ❌ **Жанровый mismatch.** BioEssays ожидает компактную концептуальную гипотезу, а получил развёрнутый experimental design. Статья ближе к «Methods & Protocols» чем к «Problems & Paradigms».
+### What we missed
+- ❌ **Pre-submission inquiry WAS NOT SENT.** Written (INQUIRY_BioEssays_2026-07-10.md), but not sent to Kerstin Brachhold. Rule PRE-SUBMISSION RULES violated.
+- ❌ **Journal-fit not via script.** `journal-fit.sh` was not run. Manual assessment: IF 3.3, acceptance 37% — looked good, but scope not systematically checked.
+- ❌ **Manuscript size** — 792 lines (17 pp.) — probably too large for «Problems & Paradigms». Typical BioEssays article — 3000–5000 words. Ours — research proposal with 13-group experiment, €3M budget.
+- ❌ **Genre mismatch.** BioEssays expects a compact conceptual hypothesis, but received a detailed experimental design. Article is closer to «Methods & Protocols» than to «Problems & Paradigms».
 
-### Что изменить перед следующей подачей
-- [ ] **Обязательно pre-submission inquiry** перед любой подачей (Правило №2 PRE-SUBMISSION RULES)
-- [ ] **journal-fit.sh** перед выбором журнала
-- [ ] Для hypothesis-журналов: сократить до 3000–4000 слов, убрать детальный 13-group experimental design в Supplementary или в отдельную статью
-- [ ] Для методов/протоколов: подавать в журналы типа Cell Cycle, Differentiation, Biology Direct
-- [ ] Рассмотреть разделение: (a) короткая гипотеза CEDAR/CAMC → hypothesis journal, (b) полный experimental design → methods journal или как Registered Report
+### What to change before the next submission
+- [ ] **Mandatory pre-submission inquiry** before any submission (Rule #2 PRE-SUBMISSION RULES)
+- [ ] **journal-fit.sh** before choosing a journal
+- [ ] For hypothesis journals: shorten to 3000–4000 words, move detailed 13-group experimental design to Supplementary or to a separate article
+- [ ] For methods/protocols: submit to journals like Cell Cycle, Differentiation, Biology Direct
+- [ ] Consider splitting: (a) short CEDAR/CAMC hypothesis → hypothesis journal, (b) full experimental design → methods journal or as Registered Report
 
-### Следующий журнал (предложения)
-| Журнал | Тип | IF | Почему |
+### Next journal (suggestions)
+| Journal | Type | IF | Why |
 |--------|-----|----|--------|
-| **Differentiation** (Elsevier) | Research journal | ~2.5 | Журнал про дифференцировку клеток — точный scope |
-| **Cell Cycle** (T&F) | Research/review | ~4.0 | Публикует centrosome biology, hypothesis |
-| **Biology Direct** (BioMed Central) | Open access | ~4.0 | Принимает hypothesis, быстрый review |
-| **F1000Research** | Open platform | ~2.0 | Post-publication peer review, принимает hypothesis |
+| **Differentiation** (Elsevier) | Research journal | ~2.5 | Journal about cell differentiation — exact scope |
+| **Cell Cycle** (T&F) | Research/review | ~4.0 | Publishes centrosome biology, hypothesis |
+| **Biology Direct** (BioMed Central) | Open access | ~4.0 | Accepts hypothesis, fast review |
+| **F1000Research** | Open platform | ~2.0 | Post-publication peer review, accepts hypothesis |
 
-### Что делаем сейчас
-- [ ] Journal-fit для Differentiation + Cell Cycle (`journal-fit.sh`)
-- [ ] Pre-submission inquiry → ждать ответа → потом подавать
-- [ ] Тем временем: npj Aging (`2e8466c7`) — в Peer Review с 12 июн, ждём
+### What we are doing now
+- [ ] Journal-fit for Differentiation + Cell Cycle (`journal-fit.sh`)
+- [ ] Pre-submission inquiry → wait for response → then submit
+- [ ] Meanwhile: npj Aging (`2e8466c7`) — in Peer Review since June 12, waiting
+## 2026-07-10 — Submission to BioEssays + preprint Research Square
 
----
-
-## 2026-07-10 — Сабмит в BioEssays + препринт Research Square
-
-**События:**
-- Препринт «Centriole Elimination as a Gateway to a New Differentiation State» подан на Research Square: `rs-10309814` (статус: screening, язык 8/10 → Rubriq 10/10)
-- Полный сабмит в BioEssays (Wiley): `5285ce27`, статья «Centriole Elimination as a Gateway to a New Differentiation State: A Hypothesis»
+**Events:**
+- Preprint «Centriole Elimination as a Gateway to a New Differentiation State» submitted to Research Square: `rs-10309814` (status: screening, language 8/10 → Rubriq 10/10)
+- Full submission to BioEssays (Wiley): `5285ce27`, article «Centriole Elimination as a Gateway to a New Differentiation State: A Hypothesis»
 - Article type: Problems & Paradigms
-- IF 3.3, acceptance 37%, median first decision 5 дней, PubMed-индексирован, бесплатно (subscription model)
+- IF 3.3, acceptance 37%, median first decision 5 days, PubMed-indexed, free (subscription model)
 - EIC: Kerstin Brachhold & Emery Bresnick
-- Рукопись: `~/Desktop/Centriole_Elimination_Hypothesis_BioEssays.docx` (Times New Roman 12pt, 17 стр.)
+- Manuscript: `~/Desktop/Centriole_Elimination_Hypothesis_BioEssays.docx` (Times New Roman 12pt, 17 pp.)
 - Cover letter: `~/Desktop/Cover_Letter_BioEssays.docx`
-- Язык вычитан вручную, следы AI убраны
-- 29 верифицированных PMID, включая самоцитирование Tqemaladze 2023 [25]
-- Gönczy подтвердил пробел (personal communication, July 2026) — указано в статье
+- Language proofread manually, AI traces removed
+- 29 verified PMIDs, including self-citation Tqemaladze 2023 [25]
+- Gönczy confirmed the gap (personal communication, July 2026) — stated in the article
 
-**Параллельно:** Centrioles в npj Aging (`2e8466c7`) — Peer Review с 12 июня.
-
+**Concurrently:** Centrioles in npj Aging (`2e8466c7`) — Peer Review since June 12.
 ## 2026-07-05 — FUNDAMENTAL CORRECTION: Time drives entropy, divisions change CAASM
 
-**Джаба:** Центриоли накапливают энтропию со временем, как все вещественные структуры. С делениями изменяется CAASM. Два независимых процесса: (1) время → энтропия (пассивный, термодинамический), (2) деления → CAASM (активный, программируемый).
+**Jaba:** Centrioles accumulate entropy over time, like all material structures. With divisions, CAASM changes. Two independent processes: (1) time → entropy (passive, thermodynamic), (2) divisions → CAASM (active, programmable).
 
-Записано: THEORY.md Axiom C1, CONCEPT.md, workshop_entropy_in_aging_2pages, EVIDENCE.md.
-
+Recorded: THEORY.md Axiom C1, CONCEPT.md, workshop_entropy_in_aging_2pages, EVIDENCE.md.
 ## 2026-07-05 — Peer Review v2 — All 55 PMIDs Audited
 
-**Решение:** Полный аудит 55 уникальных PMID из 8 файлов через PubMed API.
+**Decision:** Full audit of 55 unique PMIDs from 8 files via PubMed API.
 
-**Находки:**
-- ✅ 55/55 PMIDs реальны (0 fabricated)
-- ⚠️ 6 PMIDs — OFF-TOPIC (реальные, но указывают на чужие статьи). Исправлены в MCARA/THEORY.md, MCARA/EVIDENCE.md, MCARA/CONCEPT.md
-- ✅ CEDAR/THEORY.md, CEDAR/EVIDENCE.md, CEDAR/CONCEPT.md, PhD/EVIDENCE.md, PhD/CONCEPT.md — полностью чисты
+**Findings:**
+- ✅ 55/55 PMIDs are real (0 fabricated)
+- ⚠️ 6 PMIDs — OFF-TOPIC (real, but refer to other articles). Corrected in MCARA/THEORY.md, MCARA/EVIDENCE.md, MCARA/CONCEPT.md
+- ✅ CEDAR/THEORY.md, CEDAR/EVIDENCE.md, CEDAR/CONCEPT.md, PhD/EVIDENCE.md, PhD/CONCEPT.md — completely clean
 
-**Исправления:**
-- 12456714 (Plasmodium→должен быть Mitnitski) → ⚠️ UNVERIFIED
-- 18671847 (NEOPEC→должен быть Searle) → ⚠️ UNVERIFIED
-- 30982602 (Mutational Sigs→должен быть Schultz/Sinclair) → ⚠️ UNVERIFIED
-- 22542157 (Aspirin→должен быть Florian Cdc42) → ⚠️ UNVERIFIED
-- 39651989 (Diabetes→должен быть Yang HSC) → ⚠️ UNVERIFIED
-- 40072817 (уже CORRECTED)
+**Corrections:**
+- 12456714 (Plasmodium→should be Mitnitski) → ⚠️ UNVERIFIED
+- 18671847 (NEOPEC→should be Searle) → ⚠️ UNVERIFIED
+- 30982602 (Mutational Sigs→should be Schultz/Sinclair) → ⚠️ UNVERIFIED
+- 22542157 (Aspirin→should be Florian Cdc42) → ⚠️ UNVERIFIED
+- 39651989 (Diabetes→should be Yang HSC) → ⚠️ UNVERIFIED
+- 40072817 (already CORRECTED)
 
-**Оценки:** CEDAR core 7.5/10, MCARA refs 5/10. Создан PEER_REVIEW_v2_2026-07-05.md.
-
+**Ratings:** CEDAR core 7.5/10, MCARA refs 5/10. Created PEER_REVIEW_v2_2026-07-05.md.
 ## 2026-07-05 — CRITICAL: Peer Review & Fabricated PMIDs Removed
 
-**Решение:** Проведён сверхглубокий аудит всех ссылок через PubMed E-utilities API.
+**Decision:** Conducted an ultra-deep audit of all references via the PubMed E-utilities API.
 
-**Находки:**
-- ❌ v5.5 содержала 2 сфабрикованных PMID (28931529 и 37079650) — галлюцинации предыдущих сессий pi
-- ✅ Все 21 PMID в EVIDENCE.md реальны
-- ✅ Найдены реальные замены: Janke 2020 (PMID: 32107477), Pimenta-Marques 2024 (PMID: 38200359), Mercey/Janke 2024 (PMID: 39528655)
+**Findings:**
+- ❌ v5.5 contained 2 fabricated PMIDs (28931529 and 37079650) — hallucinations from previous pi sessions
+- ✅ All 21 PMIDs in EVIDENCE.md are real
+- ✅ Real replacements found: Janke 2020 (PMID: 32107477), Pimenta-Marques 2024 (PMID: 38200359), Mercey/Janke 2024 (PMID: 39528655)
 
-**Исправления:**
-- THEORY.md v5.6 — полный пересмотр: 15 верифицированных references, 9 механизмов (M1-M9), честная оценка слабых мест
-- MCARA/THEORY.md — Axiom M5 расширен до M1-M9
-- Создан `docs/PEER_REVIEW_2026-07-05.md` — полный аудит с оценкой каждого компонента
+**Corrections:**
+- THEORY.md v5.6 — full revision: 15 verified references, 9 mechanisms (M1-M9), honest assessment of weaknesses
+- MCARA/THEORY.md — Axiom M5 expanded to M1-M9
+- Created `docs/PEER_REVIEW_2026-07-05.md` — full audit with evaluation of each component
 
-**Оценка теории после аудита: 6.7/10** (сильные стороны: C1/C2, M1-M2, фальсифицируемость. Слабые: M3/CAASM гипотетичен, Strawbridge-2026 вызов)
-
+**Theory score after audit: 6.7/10** (strengths: C1/C2, M1-M2, falsifiability. Weaknesses: M3/CAASM hypothetical, Strawbridge-2026 challenge)
 ## 2026-07-05 — Jaba Tqemaladze's Rule: Nine Mechanisms (M1-M9)
 
-**Решение:** Сформулировано правило трёх механизмов центриоль-зависимой дифференцировки.
+**Decision:** A rule of three mechanisms of centriole-dependent differentiation is formulated.
 
-**Формулировка:** При обсуждении дифференцировки необходимо учитывать изменения в CAASM — Centriole-Associated Structure of Inducers of Differentiation (ассоциированная с центриолями гипотетическая структура индукторов дифференцировки).
+**Formulation:** When discussing differentiation, it is necessary to consider changes in CAASM — Centriole-Associated Structure of Inducers of Differentiation.
 
-**Три механизма:**
-- **M1:** Хромосомная сегрегация — повреждённая центриоль → дефекты веретена → геномная нестабильность
-- **M2:** Цилиарный сигналинг — центриоль → базальное тельце → нарушение цилии → сбой Hh/Wnt/TGF-β
-- **M3:** CAASM — центриоль/центросома как платформа для индукторов дифференцировки (гипотетический)
+**Three mechanisms:**
+- **M1:** Chromosomal segregation — damaged centriole → spindle defects → genomic instability
+- **M2:** Ciliary signaling — centriole → basal body → ciliary dysfunction → disruption of Hh/Wnt/TGF-β
+- **M3:** CAASM — centriole/centrosome as a platform for differentiation inducers (hypothetical)
 
-**Записано в:** CEDAR/THEORY.md §2.5, CEDAR/CONCEPT.md, MCARA/THEORY.md (Axiom M5), PhD/THEORY.md
+**Recorded in:** CEDAR/THEORY.md §2.5, CEDAR/CONCEPT.md, MCARA/THEORY.md (Axiom M5), PhD/THEORY.md
 
-**Значение:** Три механизма действуют синергично. Это объясняет глубину последствий центриольного повреждения и задаёт программу экспериментальной проверки (M1 и M2 имеют литературную поддержку; M3 — гипотеза, требующая тестирования).
-
+**Value:** The three mechanisms act synergistically. This explains the depth of consequences of centriolar damage and sets a program for experimental verification (M1 and M2 have literature support; M3 is a hypothesis requiring testing).
 ## 2026-07-05 — Literature: Meng/Yamashita + Park/Di Stefano + Strawbridge
 
-**Решение:** Проанализированы 3 ключевые статьи 2026 года. Найдены 30+ релевантных references. Обновлены EVIDENCE.md, CONCEPT.md, STATE.md, THEORY.md в PhD, MCARA и CEDAR.
+**Solution:** Analyzed 3 key articles from 2026. Found 30+ relevant references. Updated EVIDENCE.md, CONCEPT.md, STATE.md, THEORY.md in PhD, MCARA and CEDAR.
 
-**Ключевые находки:**
-- Meng/Baird/Yamashita (2026) — асимметричный мужской мейоз → meiotic drive. PMID: 42097813
-- Park/Di Stefano (2026) — 5 уровней stem cell exit. PMID: 42156139
-- Strawbridge/Smith/Martello (2026) — выход ES-клеток без асимметричного деления (но in vivo траектория каскадно-асимметрична). PMID: 41687620
-
+**Key findings:**
+- Meng/Baird/Yamashita (2026) — asymmetric male meiosis → meiotic drive. PMID: 42097813
+- Park/Di Stefano (2026) — 5 levels of stem cell exit. PMID: 42156139
+- Strawbridge/Smith/Martello (2026) — ES cell exit without asymmetric division (but in vivo trajectory is cascade-asymmetric). PMID: 41687620
 ## 2026-07-05 — CEDAR/CONCEPT.md restoration
 
-**Решение:** CONCEPT.md исправлен. Предыдущая версия содержала ошибочный текст про «data integration platform» (галлюцинация). Восстановлен правильный концепт центриольной теории старения.
+**Solution:** CONCEPT.md has been corrected. The previous version contained erroneous text about a "data integration platform" (hallucination). The correct concept of the centriolar theory of aging has been restored.

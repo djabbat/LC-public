@@ -1,16 +1,16 @@
 # HAP — Hepato-Affective Primacy Theory
 
-**Эволюционный necessary condition для аффективных состояний у Bilateria.**
+**Evolutionary necessary condition for affective states in Bilateria.**
 
-HAP утверждает: ни одно билатеральное животное не может обладать аффективными состояниями (эмоции, чувства) без функционального hepatic органа — печени или её гомолога (fat body + nephrocytes у насекомых, hepatopancreas у моллюсков).
+HAP asserts: no bilaterian animal can possess affective states (emotions, feelings) without a functional hepatic organ — liver or its homolog (fat body + nephrocytes in insects, hepatopancreas in mollusks).
 
-## Публикация
+## Publication
 Tqemaladze, J. (2026). The Hepato-Affective Primacy (HAP) Theory. *Longevity Horizon*, 2(4). DOI: [10.65649/d76f6c48](https://doi.org/10.65649/d76f6c48)
 
-## Вторая статья (в разработке)
-Совместно с Afaf Elfet: nonlinear dynamics модель HAP/NHAM — формализация стероид-пермиссивных feedback loops.
+## Second article (in development)
+In collaboration with Afaf Elfet: nonlinear dynamics model of HAP/NHAM — formalization of steroid-permissive feedback loops.
 
-## Симуляция
+## Simulation
 Python + SciPy, 6-variable ODE system:
 - L — Hepatic steroid output
 - B — Brain steroid sensitivity
@@ -19,14 +19,14 @@ Python + SciPy, 6-variable ODE system:
 - S — HPA / stress activity
 - M — Metabolic state
 
-```bash
+bash
 cd src/
 python3 main.py all   # run simulation + experiments + plots
-```
 
-## Статус
-- ✅ Первая статья опубликована
-- ✅ Прототип симуляции работает (HAP Predictions воспроизводятся)
-- ⏳ Ожидание ответа Afaf
+
+## Status
+- ✅ First article published
+- ✅ Simulation prototype works (HAP Predictions reproduced)
+- ⏳ Waiting for Afaf's response
 - ⏳ Bifurcation analysis
-- 📅 Поиск эмпирических данных — после завершения модели
+- 📅 Search for empirical data — after model completion

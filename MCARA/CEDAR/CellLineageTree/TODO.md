@@ -1,6 +1,6 @@
 # TODO — CytogeneticTree
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
 ## Phase 0 (2026-04 scaffolding)
 
@@ -51,5 +51,4 @@
 
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
-
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.

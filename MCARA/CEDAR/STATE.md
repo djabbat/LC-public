@@ -1,41 +1,41 @@
 # STATE — CEDAR
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/docs/SUBMISSIONS_STATUS.md`
-> **📄 Стратегия переписывания:** `~/Desktop/Services/docs/REWRITE_STRATEGY_2026-07-16.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/docs/SUBMISSIONS_STATUS.md`
+> **📄 Rewrite strategy:** `~/Desktop/Services/docs/REWRITE_STRATEGY_2026-07-16.md`
 
 **Purpose:** volatile state, active TODOs, milestones.
 **Convention:** new entries at the top with date.
 
 ---
 
-## 📚 2026-07-16 — BioEssays desk reject + стратегия переписывания
+## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy
 
-- 🔴 **BioEssays `4799098` — desk reject 15 июл (< 24 ч).** Причина: pre-submission inquiry не отправлен, статья слишком большая для Problems & Paradigms.
-- ✅ **Post-mortem записан** в MEMORY.md
-- 📄 **Стратегия переписывания:** Centriole Elimination (792 строки) → разделить на 3 статьи:
-  - **A.** CEDAR hypothesis (3000 слов) → Differentiation
+- 🔴 **BioEssays `4799098` — desk reject 15 Jul (< 24 h).** Reason: pre-submission inquiry not sent, article too large for Problems & Paradigms.
+- ✅ **Post-mortem recorded** in MEMORY.md
+- 📄 **Rewrite strategy:** Centriole Elimination (792 lines) → split into 3 articles:
+  - **A.** CEDAR hypothesis (3000 words) → Differentiation
   - **B.** 13-group experimental design → Cell Cycle
   - **C.** CAMC molecular model → BioSystems
-- 🟢 **npj Aging `2e8466c7` — Peer Review** (с 12 июн, активность 6 июл) — **ЖДАТЬ.**
-- 🟡 **MCARA Biogerontology `7cc6de62`** — апелляция подана 15 июл.
-- 📄 **Препринты:** v1.0 `rs-10309814`, v2.0 `rs-10320333` — оба на Research Square.
+- 🟢 **npj Aging `2e8466c7` — Peer Review** (from 12 Jun, activity 6 Jul) — **WAIT.**
+- 🟡 **MCARA Biogerontology `7cc6de62`** — appeal filed 15 Jul.
+- 📄 **Preprints:** v1.0 `rs-10309814`, v2.0 `rs-10320333` — both on Research Square.
 
 ---
 
-## 📚 2026-07-10 — Сабмит в BioEssays (← устарело, см. выше)
+## 📚 2026-07-10 — Submission to BioEssays (← outdated, see above)
 
-- Препринт Research Square `rs-10309814` — ✅ DOI получен
-- Сабмит BioEssays → 🔴 desk reject 15 июл
-- Centrioles в npj Aging `2e8466c7` — Peer Review
+- Preprint Research Square `rs-10309814` — ✅ DOI obtained
+- Submission BioEssays → 🔴 desk reject 15 Jul
+- Centrioles in npj Aging `2e8466c7` — Peer Review
 
 ---
 
-## 📚 2026-07-09 — Итог сессии
+## 📚 2026-07-09 — Session summary
 
-- 🔑 **Фундаментальный принцип (Dzhaba):** polyGlu = компенсаторный маркер накопленной энтропии (не её механизм). Асимметричное наследование — элемент механизма необратимой дифференцировки. Накопление энтропии в СК — плата за возможность дифференцировки.
-- 🔴 Peer Review v2: 55 PMID, 6 off-topic исправлены
-- 🧬 M1-M9, M3/CASID (5 evidence), SPEM гипотеза
-- 📊 Оценка: 7.5/10
+- 🔑 **Fundamental principle (Dzhaba):** polyGlu = compensatory marker of accumulated entropy (not its mechanism). Asymmetric inheritance — element of the mechanism of irreversible differentiation. Accumulation of entropy in SC — the price for the possibility of differentiation.
+- 🔴 Peer Review v2: 55 PMID, 6 off-topic fixed
+- 🧬 M1-M9, M3/CASID (5 evidence), SPEM hypothesis
+- 📊 Score: 7.5/10
 
 ---
 
@@ -89,7 +89,8 @@ Unified “Counter #1 (Centriolar)” across all files. ✅
 - [x] TEAM_AND_BUDGET.md created with full budget and PI track record
 - [x] Counter‑argument to “consequence only” alternative added in CONCEPT.md
 - [x] Sobol paradox resolved via coupling model (theoretical)
-- [x] ¬R argument strengthened with deglutamylase decline evidence
+- [x] ¬R argument strengthened wi
+th deglutamylase decline evidence
 - [x] Sample size calculation and risk matrix added to EVIDENCE.md
 - [x] Pre‑registration plan with formal power analysis
 - [x] Confirmation bias section added (no contradictory studies found)

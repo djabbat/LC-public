@@ -1,298 +1,208 @@
 # MCARA — Multi-Counter Architecture of Replicative Aging
 
-**Дата:** 2026-07-19
-**Версия:** v4.7 — Centriculum (Maheshwari 2023/2026) + Сперматогенез (Ishida & Shibuya 2026)
-**Центральный вопрос:** Какой молекулярный счётчик делений достигает финиша первым — и при каких условиях?
-**Грант:** EIC Pathfinder Challenges 2026 · Дедлайн 28 октября 2026
-**Бюджет:** ~€3.2M · 36 месяцев
+
+**Type:** umbrella project — analysis only — see CONCEPT.md for details.
+**Date:** 2026-07-19
+**Version:** v4.7 — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Central question:** What molecular division counter finishes first — and under what conditions?
+**Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
+**Budget:** ~€3.2M · 36 months
 
 ---
 
 ## 0. The Centriole as a Gatekeeper of Cell State
 
-Клетка останавливает деления после ~50 делений (лимит Хейфлика). В условиях гипоксии (2% O₂) и активности теломеразы (hTERT) теломераза сохраняет теломеры длинными, а низкий кислород защищает митохондрии — но всё равно наступает лимит: даже стволовые клетки останавливаются после ~200 делений. Что-то помимо теломер и митохондрий считает деления. **MCARA проверяет, какой молекулярный счётчик приходит к финишу первым.**
+The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA checks which molecular counter finishes first.**
 
-**Ключевое различие Hardware/Software:**
-- **Центриоль = hardware:** неремонтопригодна in situ. Нет координированного механизма quality-control, восстанавливающего всю органеллу до «молодого» состояния. Но её можно **элиминировать и создать de novo** — именно это происходит в мейозе.
-- **Эпигеном = software:** перепрограммируем факторами Яманаки, но неспособен исправить hardware-дефекты.
+**Key Hardware/Software Difference:**
+- **Centriole = hardware:** non-repairable in situ. There is no coordinated quality-control mechanism that restores the entire organelle to a "young" state. But it can be **eliminated and created de novo** — exactly what happens in meiosis.
+- **Epigenome = software:** reprogrammable by Yamanaka factors, but unable to fix hardware defects.
 
-Это объясняет, почему частичное репрограммирование омолаживает метилом, но не восстанавливает полную репликативную способность: центриолярный hardware не заменён.
+This explains why partial reprogramming rejuvenates the methylome, but does not restore full replicative capacity: centriolar hardware is not replaced.
 
-### Центриоль как Stress Integrator (не автономный счётчик)
+### Centriole as Stress Integrator (not an autonomous counter)
 
-Центриоль — **условный носитель энтропии (conditional entropy carrier):** энтропия накапливается, когда центриоль работает как центросома (стресс-чувствительное состояние); polyE — компенсаторный ответ на эту энтропию. Накопление прекращается, когда центриоль темплатирует цилию. Уровень polyE зависит от функционального состояния и стресс-среды, а не только от хронологического времени.
+The centriole is a **conditional entropy carrier:** entropy accumulates when the centriole works as a centrosome (stress-sensitive state); polyE is a compensatory response to this entropy. Accumulation stops when the centriole templates a cilium. The level of polyE depends on the functional state and stress environment, not just chronological time.
 
-Это переосмысление: центриоль не «главный дирижёр старения», а **хаб**, через который разнообразные стресс-сигналы конвергируют для запуска решения о сенесценции.
+This is a rethinking: the centriole is not the "main conductor of aging," but a **hub** through which diverse stress signals converge to trigger a decision on senescence.
 
-### Centriculum: ER-мембранный ретикулум вокруг центросомы (Maheshwari, Cohen-Fix 2023/2026)
+### Centriculum: ER-membrane reticulum around the centrosome (Maheshwari, Cohen-Fix 2023/2026)
 
-**Открытие (Maheshwari et al. 2023 Curr Biol, PMID 36693370; 2026 J Cell Sci, PMID 42283151):** Центросома — НЕ «membraneless organelle». В C. elegans ранних эмбрионах она окружена трёхмерным ER-производным мембранным ретикулумом — **центрикулумом** (centriculum).
+**Discovery (Maheshwari et al. 2023 Curr Biol, PMID 36693370; 2026 J Cell Sci, PMID 42283151):** The centrosome is NOT a "membraneless organelle." In model organism early embryos, it is surrounded by a three-dimensional ER-derived membrane reticulum — the **centriculum**.
 
-| Свойство | Значение |
+| Property | Value |
 |----------|---------|
-| Структура | 3D ER-мембранная сеть, прилегающая к PCM |
-| Формирование | Зависит от центросомы и микротрубочек |
-| Функция | «Микротрубочковый фильтр» — блокирует элонгацию большинства, но не всех MT |
-| Регуляция PCM | Размер центрикулума ↔ размер PCM. Увеличение центрикулума → расширение PCM → ↑ MT-нуклеация |
-| Ключевой белок PCM | SPD-5 — плотность растёт при уменьшении центрикулума (PCM может компактизоваться) |
-| Клеточный цикл | В интерфазе прилегает к ядерной оболочке; в метафазе сливается с фенестрированной ядерной мембраной |
+| Structure | 3D ER-membrane network, adjacent to PCM |
+| Formation | Depends on centrosome and microtubules |
+| Function | "Microtubule filter" — blocks elongation of most, but not all, MT |
+| Regulation of PCM | Centriculum size ↔ PCM size. Centriculum increase → PCM expansion → ↑ MT-nucleation |
+| Key PCM protein | SPD-5 — density increases with centriculum decrease (PCM can compact) |
+| Cell cycle | In interphase, adjacent to nuclear envelope; in metaphase, fuses with fenestrated nuclear membrane |
 
-**Значение для MCARA — гипотеза возраст-зависимой деградации центрикулума:**
-1. Если центрикулум действует как MT-фильтр, его возраст-зависимые изменения могут напрямую влиять на микротрубочковую нуклеацию центросомы
-2. ER-стресс (известный фактор старения) может повреждать центрикулум → нарушение центросомной функции → ошибки митоза
-3. Centriculum = потенциально новый компонент Counter #4 (Structural: Centriole/Cilium) — связывает ER-стресс с центросомной дисфункцией
-4. PCM-компактизация при уменьшении центрикулума — возможный механизм, которым клетка компенсирует возрастные изменения
+**Value for MCARA — hypothesis of age-dependent centriculum degradation:**
+1. If the centriculum acts as an MT filter, its age-dependent changes may directly affect microtubule nucleation of the centrosome
+2. ER stress (a known aging factor) may damage the centriculum → disrupt centrosome function → mitotic errors
+3. Centriculum = potentially new component of Counter #4 (Structural: Centriole/Cilium) — links ER stress to centrosome dysfunction
+4. PCM compaction upon centriculum decrease — possible mechanism by which the cell compensates for age-related changes
 
-**Новые данные (Deep Review 2026-07-22, Maheshwari et al. 2026 J Cell Sci, PMID 42283151):**
+**New data (Deep Review 2026-07-22, Maheshwari et al. 2026 J Cell Sci, PMID 42283151):**
 
-| Свойство | Новые данные |
+| Property | New data |
 |----------|-------------|
-| **PCM-компактизация** | RNAi против ZYG-9/TBG-1 → PCM area ↓, но SPD-5 количество НЕ снижается → **плотность SPD-5 растёт** (P<0.0001). R²=0.26, P=0.0002. PCM — конденсируемая структура |
-| **Избирательная пористость** | Центрикулум более пористый для spindle MTs (проходят к хромосомам), чем для astral MTs (блокируются). Механизм избирательности неизвестен |
-| **10× концентрация тубулина** | Baumgart et al. (2019): растворимый тубулин в центросоме сконцентрирован в 10 раз выше цитоплазмы. Модель «фильтра» объясняет: столкновение MT→центрикулум → катастрофа → высвобождение тубулина |
-| **Эволюционная консервация** | Центрикулум-подобные структуры найдены у: **Drosophila** (Diaz 2019, Rollins & Blankenship 2023 — Dev), **medaka** (Kiyomitsu 2024 — JCB), **sea urchin** (Xie 2025). ER curvature proteins Rtnl1/ReepB — общий механизм |
-| **ER-центросомный crosstalk** | Sánchez-Álvarez et al. (2025) *Cell Rep*: PERK-зависимый crosstalk ER↔MT. Zheng et al. (2022) *Nature*: ER-белки (CLIMP63, KTN1, p180) расшифровывают тубулиновый код. Teixeira et al. (2025) *JCB*: CDR2 — динеиновый адаптер для ER |
+| **PCM compaction** | RNAi against ZYG-9/TBG-1 → PCM area ↓, but SPD-5 amount does not decrease → **SPD-5 density increases** (P<0.0001). R²=0.26, P=0.0002. PCM — condensable structure |
+| **Selective porosity** | Centriculum more porous for spindle MTs (pass to chromosomes), than for astral MTs (blocked). Mechanism of selectivity unknown |
+| **10× concentration of tubulin** | Baumgart et al. (2019): soluble tubulin in centros
+ome concentrated 10 times higher than cytoplasm. "Filter" model explains: MT collision → centriculum → catastrophe → tubulin release |
+| **Evolutionary conservation** | Centriculum-like structures found in: **Drosophila** (Diaz 2019, Rollins & Blankenship 2023 — Dev), **medaka** (Kiyomitsu 2024 — JCB), **sea urchin** (Xie 2025). ER curvature proteins Rtnl1/ReepB — common mechanism |
+| **ER-centrosome crosstalk** | Sánchez-Álvarez et al. (2025) *Cell Rep*: PERK-dependent crosstalk ER↔MT. Zheng et al. (2022) *Nature*: ER proteins (CLIMP63, KTN1, p180) decode tubulin code. Teixeira et al. (2025) *JCB*: CDR2 — dynein adapter for ER |
 
-**Новая гипотеза — связь с ооцитами (Shihabi et al. 2026, Adv Sci, PMID 42360132):**
-- Ооциты млекопитающих ацентросомны, но ER обильно представлен и реорганизуется вокруг веретена
-- Актиновый цитоскелет (тема Shihabi) взаимодействует с ER (тема Maheshwari) — потенциальный механический crosstalk
-- **Открытый вопрос:** существуют ли центрикулум-подобные ER-мембранные структуры вокруг huoMTOC в ооцитах человека? Если да, их возраст-зависимая деградация → новый механизм анеуплоидии
-- **Перекрёстная валидация:** Природа уже использует оба принципа CEDAR при оплодотворении: Eliminate (ооцит элиминирует центриоли) + Rebuild (de novo из спермальных seeds)
+**New hypothesis — connection to oocytes (Shihabi et al. 2026, Adv Sci, PMID 42360132):**
+- Mammalian oocytes are acentrosomal, but ER is abundant and reorganized around the spindle
+- Actin cytoskeleton (Shihabi's topic) interacts with ER (Maheshwari's topic) — potential mechanical crosstalk
+- **Open question:** do centriculum-like ER-membrane structures exist around huoMTOC in human oocytes? If so, their age-dependent degradation → new mechanism of aneuploidy
+- **Cross-validation:** Nature already uses both CEDAR principles during fertilization: Eliminate (oocyte eliminates centrioles) + Rebuild (de novo from sperm seeds)
 
-### Асимметрия гамет: оогенез (элиминация) vs сперматогенез (сохранение)
+### Asymmetry of gametes: oogenesis (elimination) vs spermatogenesis (preservation)
 
-**Ishida & Shibuya (2026, PMID 42455439):** Фундаментальная асимметрия в судьбе центриолей между мужским и женским гаметогенезом:
-- **Оогенез:** центриоли **элиминируются** (режим сброса)
-- **Сперматогенез:** центриоли **сохраняются** через весь мейоз, дуплицируются дважды независимо от пре-S-phase синтеза ДНК, проходят уникальный ремоделинг в сперматидах
-- **Зигота:** сперматозоид приносит центриоли как seeds (затравки), не темплаты. De novo сборка происходит с использованием этих seeds
+**Ishida & Shibuya (2026, PMID 42455439):** Fundamental asymmetry in the fate of centrioles between male and female gametogenesis:
+- **Oogenesis:** centrioles are **eliminated** (reset mode)
+- **Spermatogenesis:** centrioles are **preserved** throughout meiosis, duplicated twice independently of pre-S-phase DNA synthesis, undergo unique remodeling in spermatids
+- **Zygote:** sperm brings centrioles as seeds (templates), not templates. De novo assembly occurs using these seeds
 
-**Значение для MCARA:** При оплодотворении биология реализует оба принципа CEDAR одновременно:
-1. **Eliminate** (ооцит) — очистка материнских центриолей
-2. **Rebuild** (de novo из спермальных seeds) — новые центриоли без эпигенетического груза
-Это УСИЛИВАЕТ analogy-критерий Bradford Hill: природа уже делает то, что мы предлагаем.
+**Value for MCARA:** During fertilization, biology implements both CEDAR principles simultaneously:
+1. **Eliminate** (oocyte) — clearance of maternal centrioles
+2. **Rebuild** (de novo from sperm seeds) — new centrioles without epigenetic burden
+This **STRENGTHENS** the analogy criterion of Bradford Hill: nature already does what we propose.
 
-### CAMC: три конкретных молекулярных reader'а
+## 1. Evidence Base — Bradford Hill Analysis
 
-| Белок | Механизм | PMID |
-|-------|----------|:----:|
-| **ATF5** | Физический мост: PCM ↔ проксимальный конец материнской центриоли. Локализация зависит от возраста центриоли, polyE и фазы клеточного цикла | 26213385 |
-| **FERMT3** (miP-FERMT3) | Локализуется на субдистальных отростках → p53-ассоциированный (но неканонический) сенесценс через деградацию p21. Уровень растёт с возрастом in vivo | 42343301 |
-| **ALMS1** (IDP) | Формирует биомолекулярные конденсаты, состав которых зависит от истории материнской центриоли → структурная основа центриолярной «памяти» | 42380124 |
+Application of Bradford Hill criteria to the hypothesis of asymmetric centriole inheritance in aging:
 
-### sinc-MT/KIFC3 pathway — почти полный молекулярный механизм
-
-Robichaud et al. (2024, PMID 39266565) + Ma et al. (2023, PMID 37019904):
-- Стресс → de novo стресс-индуцированные микротрубочки (sinc-MTs) с необычным polyE
-- ARL13B-ARL3 GTPase каскад → высвобождение FBF1 из цилиарного кончика
-- KIFC3 + CENEXIN1 → транспорт FBF1 в PML-ядерные тельца → **сенесценс**
-- KIFC3 knockout **предотвращает** сенесценс
-
-**Критический вопрос:** polyE-тубулин в sinc-MTs — из центриоли или из цитоплазмы? Bobinnec (1998, PMID 9852152): polyE в интерфазе специфичен для центриолей → центриоль = первичный источник. Гипотеза: активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом.
-
-### Цилия → сенесценс: Jeffries (2019)
-
-Jeffries et al. (2019, PMID 30596512): **невозможность реабсорбировать первичную цилию достаточна для индукции клеточного сенесценса.** Центриоль контролирует и сборку, и разборку цилии → возраст-зависимые изменения CAMC могут нарушать механизм реабсорбции, запирая клетку в реснитчатом, неделящемся состоянии.
-
-### Четыре типа — одна закономерность (Table 1)
-
-Связь статуса центриоли и судьбы клетки прослеживается в четырёх независимых ветвях эволюции:
-
-| Организм | Изменение центриоли/центросомы | Изменение судьбы клетки | PMID |
-|----------|-------------------------------|------------------------|------|
-| C. elegans | Элиминация в ~88% соматических клеток при эмбриогенезе. Стереотипна: cell fate определяет centriole fate. **Механизм неизвестен** — трёхстадийная модель: maintenance → priming → execution. Молекулярные исполнители НЕ Polo/PCM (в отличие от ооцитов) | Выход из клеточного цикла | 37963546, 37256957, 37414202 |
-| Drosophila ♀ | Принудительное удержание материнских центриолей через Polo/PCM | Тотипотентность нарушена, стерильность | 27229142 |
-| Планарии | Эволюционная потеря **центросом** (PCM/MTOC) при сохранении центриолей в митотических необластах. При мультицилиогенезе — каноническая амплификация (Plk4/Sas6/Cep152) | Пластичность необластов; потеря PCM коррелирует с регенеративной способностью | 22223737, 32776587 |
-| Человек (hPSC) | PLK4↓ → потеря центриолей | Плюрипотентность → p53-зависимая дифф-ка | 30197118 |
-
-Каждая запись — корреляция, не демонстрация причины. Но конвергенция в четырёх независимых линиях указывает на фундаментальную связь «центриолярный/центросомный статус ↔ клеточная судьба».
-
-**Важное различие (2026-07-17):** Планарии потеряли PCM (центросому как MTOC), но сохранили центриоли (Azimzadeh 2012, PMID 22223737). У млекопитающих — наоборот: PCM сохраняется даже при элиминации центриолей (центринон). Это поднимает вопрос: что критично для пластичности — отсутствие центриолей или отсутствие PCM? Возможно, именно PCM, а не центриоль per se, является платформой для CAMC.
-
-### Оплодотворение: очистка центриолей для начала с нуля
-
-При оплодотворении **все материнские центриоли исчезают.** Drosophila очищает их через Polo-киназу и разборку PCM. Человеческие ооциты элиминируют центриоли при оогенезе; сперматозоид приносит две центриоли — но они служат лишь затравками (seeds), не темплатами. Новые центриоли строятся de novo. **Когда биологии нужен чистый лист — она сначала очищает центриоли.**
-
-### Трёхстадийная модель элиминации центриолей (Kalbfuss & Gönczy 2023)
-
-Обзор Kalbfuss & Gönczy (2023, PMID 37963546) предлагает трёхстадийную модель:
-
-| Стадия | Механизм | Молекулярные кандидаты |
-|--------|----------|------------------------|
-| **Maintenance** | Стабилизирующее окружение, непрерывный ремонт (обмен повреждённых компонентов), структурные стабилизаторы | ANA1/CEP295, Polo/PLK1, PCM |
-| **Priming** | Изменение окружения, отключение ремонта, убиквитинирование стабилизаторов | ? (неизвестны в соме) |
-| **Execution** | Микротрубочковые силы, необратимое повреждение, протеасомная деградация | ? (неизвестны в соме) |
-
-**КЛЮЧЕВОЙ ФАКТ (подтверждён Пьером Гёнчи 18 июл 2026):** Молекулярные исполнители priming и execution стадий в соматических клетках **НЕИЗВЕСТНЫ.** Известный механизм (Polo/PCM) работает в ооцитах, но сома C. elegans использует другую машинерию. Поле полностью открыто.
-
-**Известное vs неизвестное:**
-- **Ооциты:** Polo-киназа уходит → PCM теряется → центриоль исчезает (Pimenta-Marques 2016)
-- **Сома C. elegans:** ~88% клеток теряют центриоли при эмбриогенезе (Kalbfuss & Gönczy 2023 Sci Adv, PMID 37256957). Механизм НЕ Polo/PCM. **Никто actively не chasing.**
-- **ANA1/CEP295** (Pimenta-Marques 2023, doi:10.1038/s44319-023-00020-6): ключевой стабилизатор центриолярной стенки. Polo требует ANA1 для стабилизации. Оверэкспрессия ANA1 предотвращает потерю центриолей. **Рекомендован Пьером как foothold.**
-
-**Значение для MCARA:** Тот факт, что механизм соматической элиминации неизвестен даже главному эксперту в области, означает что наш эксперимент (Plk4 siRNA → элиминация → OSKM) — первый в своём роде. Мы не дублируем чужую работу.
-
-### 🆕 Iron-Positive Centriole Remnant — гипотеза «железного следа» (2026-07-21)
-
-**Идея (Jaba Tqemaladze):** Центриоль избирательно удерживает железо при окраске железным гематоксилином по Гейденгайну — это известно с 1900 года (Boveri, слайды Scheer 2014 PMID 25047623). При дифференцировке (отмывке) железного гематоксилина центриоль остаётся видимой как точка, когда всё окружающее уже отмыто.
-
-**Гипотеза:** После структурной элиминации центриоли (потеря GFP-сигнала SAS-4/Centrin1) может оставаться **iron-positive remnant** — железосвязывающее ядро, невидимое для флуоресцентных маркеров.
-
-**Методы:**
-| Метод | Мишень | Сложность | Стоимость |
-|-------|--------|:---------:|:---------:|
-| Heidenhain's iron haematoxylin | Fe³⁺-связывающие белки центриоли | Средняя | ~$10 |
-| Perls' Prussian Blue | Fe³⁺ (свободное и слабосвязанное) | Простая | ~$5 |
-| DAB-enhanced Prussian Blue (EM) | Fe³⁺ на ультраструктурном уровне | Высокая | ~$50 |
-
-**Предсказание:** В клетках C. elegans, где центриоль «элиминирована» по GFP-критерию, iron-positive точка остаётся на месте бывшей центриоли. Если да — элиминация не полная, а центриоль коллапсирует в iron-binding core.
-
-**Значение:** Никто не проверял. Все используют GFP. Это потенциально новый класс центриолярных remnant-структур и рутинный метод их обнаружения.
-
-**Референс:** Scheer 2014 (PMID 25047623) — Boveri's original iron haematoxylin slides, Fig. 7b: extensive destaining reveals centriole as minute dot.
-
-### Пять треков репликативного старения
-
-| # | Трек | Механизм | Позиция | Партнёр |
-|:--:|------|----------|:------:|---------|
-| **C1** | Центриолярный | Энтропия + компенсаторный polyE + CAMC → лимит делений. Stress integrator. | 🏃 **Фаворит** — без защиты | GLA |
-| **C2** | Эпигенетический | SA-DNAm trajectory. EPIC arrays (850K CpG). | 🏃 Замедлен гипоксией, но бежит | Wagner |
-| **C3** | Митохондриальный | mtDNA → ROS цикл. ROS повреждает центриоль (η(t)), но не originates from it. | 🛑 Защищён 2% O₂ | Trifunovic |
-| **C4** | Структурный | Центриоль/цилия, tubulin code, тубулиновые модификации (detyrosination — PMID 39412222). | 🏃 Ведомый (следует за C1) | Magiera |
-| **C5** | Теломерный | Теломеры. hTERT активен. | 🛑 Снят с гонки | — |
-
-**👨‍⚖️ Судья гонки:** Geiger (Ulm) — in vivo валидация победителя: HSC трансплантация, lifespan (Kaplan-Meier, мышь).
-
----
-
-## 1. Доказательная база — Bradford Hill Analysis
-
-Применение критериев Bradford Hill к гипотезе асимметричного наследования центриолей в старении:
-
-| Критерий | Оценка | Обоснование |
+| Criterion | Assessment | Rationale |
 |----------|:------:|-------------|
-| Strength | 🟡 Moderate | Plk1-асимметрия, ATF5-связывание — корреляционные |
-| Consistency | 🟢 Supported | 4 типа, конвергентные данные |
-| Specificity | 🟡 Improving | FERMT3 + ALMS1 + ATF5 — три независимых центриолярных reader'а, повышающих specificity |
-| Temporality | 🟢 Supported | sinc-MT: polyE предшествует сенесценсу (Robichaud 2024, PMID 39266565) |
-| Biological gradient | 🟡 Predicted | polyE vs номер пассажа — не измерено |
-| Plausibility | 🟢 Strong | Сигнальный хаб + переключатель цилия + sinc-MT путь |
-| Coherence | 🟢 Strong | Объясняет hTERT + гипоксия парадокс, парадокс Парринелло |
-| Analogy | 🟢 Strong | Элиминация центриолей в зародышевой линии = сброс |
-| Experiment | 🔴 Absent | Центральное предсказание не тестировано |
+| Strength | 🟡 Moderate | Plk1-asymmetry, ATF5-binding — correlative |
+| Consistency | 🟢 Supported | 4 types, convergent data |
+| Specificity | 🟡 Improving | FERMT3 + ALMS1 + ATF5 — three independent centriolar readers, increasing specificity |
+| Temporality | 🟢 Supported | sinc-MT: polyE precedes senescence (Robichaud 2024, PMID 39266565) |
+| Biological gradient | 🟡 Predicted | polyE vs passage number — not measured |
+| Plausibility | 🟢 Strong | Signaling hub + cilia switch + sinc-MT pathway |
+| Coherence | 🟢 Strong | Explains hTERT + hypoxia paradox, Parrinello paradox |
+| Analogy | 🟢 Strong | Centriole elimination in germ line = reset |
+| Experiment | 🔴 Absent | Central prediction not tested |
 
-**Итого: ~6/9 критериев с доказательствами (аудит 2026-07-19).** Класс доказательности II–III. Temporality upgraded до 🟢 (Robichaud 2024). Specificity upgraded до 🟡 (FERMT3 + ALMS1 + ATF5).
+**Total: ~6/9 criteria with evidence (audit 2026-07-19).** Evidence class II–III. Temporality upgraded to 🟢 (Robichaud 2024). Specificity upgraded to 🟡 (FERMT3 + ALMS1 + ATF5).
 
-### Почему single-clock теории недостаточны
+### Why single-clock theories are insufficient
 
-- **Bodnar (1998, PMID 9454332):** hTERT продлевает lifespan ≥20 удвоений с нормальным кариотипом. Но одной теломеразы недостаточно: последующие работы (Morales 1999, Counter 1998) показали, что hTERT не обеспечивает полную иммортализацию во всех типах клеток.
-- **Parrinello (2003, PMID 12855956):** мышиные фибробласты — 20% O₂ → сенесценс, 3% O₂ → иммортализация. Человеческие клетки при 3% O₂ — нет (отдельные данные, экстраполяция из Parrinello + Forsyth 2003 PMID 12730145)
-- **Wagner (2013, PMID 23080539):** TERT НЕ предотвращает SA-DNAm
-- **Passanisi/Spencer (2026, PMID 41816297):** теломеры НЕ предсказывают сенесценс на single-cell уровне
+- **Bodnar (1998, PMID 9454332):** hTERT extends lifespan ≥20 doublings with normal karyotype. But telomerase alone is not enough: subsequent studies (Morales 1999, Counter 1998) showed that hTERT does not provide full immortalization in all cell types.
+- **Parrinello (2003, PMID 12855956):** mouse fibroblasts — 20% O₂ → senescence, 3% O₂ → immortalization. Human cells at 3% O₂ — no (separate data, extrapolation from Parrinello + Forsyth 2003 PMID 12730145)
+- **Wagner (2013, PMID 23080539):** TERT does NOT prevent SA-DNAm
+- **Passanisi/Spencer (2026, PMID 41816297):** telomeres do NOT predict senescence at single-cell level
 
 ---
 
-## 2. Фазы проекта
+## 2. Project Phases
 
-### Фаза 0 — Критический проверочный эксперимент (месяцы 1–6)
+### Phase 0 — Critical Checkpoint Experiment (months 1–6)
 
-**Центральный эксперимент всего MCARA.** Никем не проведён.
+**Central experiment of entire MCARA.** Never conducted.
 
-| Шаг | Действие | Метод |
+| Step | Action | Method |
 |:---:|----------|------|
-| 1 | Элиминация центриолей | Plk4 siRNA (72ч) или centrinone (100 nM, 3 дня) |
-| 2 | Подтверждение | IF: CP110 + Cep135. Цель: >90% ацентриолярных |
-| 3 | OSKM-репрограммирование | Cytotune 2.0 Sendai virus, 21 день |
-| 4 | Считывание | Alkaline phosphatase+ колонии |
-| 5 | Контроль p53 | p53 shRNA + Plk4 siRNA → OSKM |
-| 6 | Контроль цилиогенеза | IFT88 shRNA → OSKM (блокирует цилию, сохраняет центриоль) |
-| 7 | Контроль off-target PLK4 | STIL shRNA → OSKM (альтернативное удаление центриолей) |
-| 8 | 🔑 Тотипотентный контроль | Centrinone + DUX4 + TPRX1 → MERVL/Zscan4 (проверка тотипотентности, не плюрипотентности) |
+| 1 | Centriole elimination | Plk4 siRNA (72h) or centrinone (100 nM, 3 days) |
+| 2 | Confirmation | IF: CP110 + Cep135. Goal: >90% acentriolar |
+| 3 | OSKM reprogramming | Cytotune 2.0 Sendai virus, 21 days |
+| 4 | Reading | Alkaline phosphatase+ colonies |
+| 5 | p53 control | p53 shRNA + Plk4 siRNA → OSKM |
+| 6 | Ciliogenesis control | IFT88 shRNA → OSKM (blocks cilium, preserves centriole) |
+| 7 | Off-target PLK4 control | STIL shRNA → OSKM (alternative centriole removal) |
+| 8 | 🔑 Totipotency control | Centrinone + DUX4 + TPRX1 → MERVL/Zscan4 (checks totipotency, not pluripotency) |
 
-**Предсказание (плюрипотентность, диапазонное):** Элиминация центриолей → эффективность репрограммирования ↑ 1.5–10× vs контроль. Нижняя граница (1.5×): даже скромное превышение указывает на центриолярный вклад в барьер. Верхняя граница (10×): достижима при полном снятии p53/p38-зависимого стресса и оптимальных условиях. Конкретный множитель зависит от типа клеток, метода элиминации и эффективности p53-супрессии.
-**Гипотеза (тотипотентность, 2026-07-12; отредактирована 2026-07-17):** Центриоль = **два режима:** (1) пассивный накопитель энтропии — основа старения многоклеточных животных; (2) активный регулятор дифференцировки — инструмент необратимого переключения генных сетей (CAMC, NANOG, cilium). **Энтропия — не храповик. Храповик — переключение генных сетей.** Центриоль — ИНСТРУМЕНТ этого переключения. OSKM перезагружает software (эпигеном), но не hardware (центриоль). Полная элиминация центриолей снимает физический замок дифференцировки. Три шага: **Eliminate → Reprogram → Rebuild** — как в природе при оплодотворении.
+**Prediction (pluripotency, range):** Centriole elimination → reprogramming efficiency ↑ 1.5–10× vs control. Lower bound (1.5×): even modest excess indicates centriolar contribution to barrier. Upper bound (10×): achievable with complete p53/p38 stress relief and optimal conditions. Specific factor depends on cell type, elimination method, and p53 suppression efficiency.
+**Hypothesis (totipotency, 2026-07-12; edited 2026-07-17):** Centriole = **two modes:** (1) passive entropy accumulator — basis of multicellular animal aging; (2) active differentiation regulator — tool for irreversible gene network switching (CAMC, NANOG, cilium). **Entropy — not a ratchet. Ratchet — gene network switching.** Centriole — instrument of this switching. OSKM reloads software (epigenome), but not hardware (centriole). Complete centriole elimination lifts physical differentiation lock. Three steps: **Eliminate → Reprogram → Rebuild** — as in nature during fertilization.
 
-> **⚠️ DID-РНК — спекулятивная модель (2026-07-17).** Гипотеза о DID как РНК, которая через обратную транскрипцию встраивается в геном, не имеет экспериментальных данных. Основная гипотеза CEDAR (центриоль = hardware-барьер) не зависит от DID-РНК и проверяется независимо. DID-РНК остаётся интересной, но неподтверждённой спекуляцией.
+> **⚠️ DID-RNA — speculative model (2026-07-17).** Hypothesis about DID as RNA that integrates into genome via reverse transcription lacks experimental data. Main CEDAR hypothesis (centriole = hardware barrier) is independent of DID-RNA and tested separately. DID-RNA remains interesting, but unconfirmed speculation.
 
-**Предсказания:**
-1. OSKM после элиминации → 1.5–10× эффективность (диапазон).
-2. Тотипотентные факторы (DUX4 + TPRX1) после элиминации → потенциально тотипотентное состояние с MERVL+, Zscan4+, CDX2+. Маркёры: MERVL, Zscan4, Hhex (мышь); TPRX1, ZSCAN4, DUX4 (человек).
-3. В природе тотипотентность всегда сопровождается элиминацией центриолей — ооцит очищает центриоли, сперматозоид приносит лишь seeds для de novo сборки (Schatten & Sun 2011, PMID 21509822; Avidor-Reiss & Fishman 2022).
-**Фальсификация:** Если ≤ контроля → гипотеза опровергнута.
+**Predictions:**
+1. OSKM after elimination → 1.5–10× efficiency (range).
+2. Totipotency factors (DUX4 + TPRX1) after elimination → potentially totipotent state with MERVL+, Zscan4+, CDX2+. Markers: MERVL, Zscan4, Hhex (mouse); TPRX1, ZSCAN4, DUX4 (human).
+3. In nature, totipotency always accompanies centriole elimination — oocyte clears centrioles, sperm brings seeds for de novo assembly (Schatten & Sun 2011, PMID 21509822; Avidor-Reiss & Fishman 2022).
+**Falsification:** If ≤ control → hypothesis disproven.
 
-**Альтернативная интерпретация (maturity sensor):** Центриоль может быть не «замком» дифференцировки, а «датчиком зрелости» — её потеря снижает компетенцию к дифференцировке неспецифически. Повышение эффективности iPSC после элиминации может быть связано с частичной дедифференцировкой (потерей зрелых функций), а не со сбросом ageing clock. **Примечание (аудит 2026-07-19):** Lindhout 2021 (PMID 33835529) показывает, что потеря центриолей *нарушает* развитие аксона и электрофизиологическое созревание нейронов — это не поддерживает «maturity sensor → plasticity» гипотезу напрямую. Вопрос остаётся открытым.
+**Alternative interpretation (maturity sensor):** Centriole may be not a "differentiation lock," but a "maturity sensor" — its loss reduces differentiation competence nonspecifically. Increased iPSC efficiency after elimination may be related to partial dedifferentiation (loss of mature functions), not aging clock reset. **Note (audit 2026-07-19):** Lindhout 2021 (PMID 33835529) shows that centriole loss *disrupts* axon development and electrophysiological maturation of neurons — this does not directly support "maturity sensor → plasticity" hypothesis. Question remains open.
 
-**Gold-standard эксперимент для различения:** Микроинъекция очищенных старых центриолей (P45) в молодые клетки (P10) → ускоряет ли это сенесценс?
+**Gold-standard experiment for distinction:** Microinjection of purified old centrioles (P45) into young cells (P10) → does it accelerate senescence?
 
-### Фаза 1 — ARGUS (месяцы 1–12)
+### Phase 1 — ARGUS (months 1–12)
 
-Платформа ARGUS-LP: автономный AI-микроскоп. 24/7. CellPose → spotiflow → Decision Engine → 405 nm лазер. Три единицы. Open-source. Подробно: `ARGUS-LP/CONCEPT.md`.
+ARGUS-LP platform: autonomous AI microscope. 24/7. CellPose → spotiflow → Decision Engine → 405 nm laser. Three units. Open-source. Details: `ARGUS-LP/CONCEPT.md`.
 
-### Фаза 2 — Гонка: кто первый? (месяцы 6–24)
+### Phase 2 — Race: who's first? (months 6–24)
 
-BJ-hTERT фибробласты. 2% O₂. ARGUS-LP отслеживает центриоли через 25+ делений.
+BJ-hTERT fibroblasts. 2% O₂. ARGUS-LP tracks centrioles through 25+ divisions.
 
-### Фазы 3–5 — Омоложение и трансплантация (месяцы 18–36)
+### Phases 3–5 — Rejuvenation and Transplantation (months 18–36)
 
-См. полное описание в CONCEPT v4.4. Включает: трек-за-треком интервенции, интегрированное омоложение, HSC трансплантацию.
+See full description in CONCEPT v4.4. Includes: track-by-track intervention, integrated rejuvenation, HSC transplantation.
 
 ---
 
-## 3. Формальная модель
+## 3. Formal Model
 
-> 📐 Полный формализм: [`THEORY.md`](THEORY.md) — аксиомы M1–M5, кинетика счётчиков, матрица coupling Γ, Damage Shadow.
+> 📐 Complete formalism: [`THEORY.md`](THEORY.md) — axioms M1–M5, counter kinetics, coupling matrix Γ, Damage Shadow.
 
-### Кинетика счётчика (линейное приближение)
+### Counter Kinetics (Linear Approximation)
 
-```
+
 S_centriole(t) = S₀ + β·t + η(t) − δ·CCP(t)
 CAMC(N) = CAMC₀ − λ·N_asym
-```
 
-- β·t — время-зависимая энтропия
-- η(t) — окислительные повреждения
-- δ·CCP(t) — активность деглутамилаз (снижается с возрастом)
-- λ·N_asym — ремоделирование CAMC при асимметричных делениях
 
-### Сигмоидальная модель (биологически реалистичнее)
+- β·t — time-dependent entropy
+- η(t) — oxidative damage
+- δ·CCP(t) — deglutamylase activity (decreases with age)
+- λ·N_asym — CAMC remodeling during asymmetric divisions
 
-```
+### Sigmoidal Model (Biologically More Realistic)
+
+
 S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
 d[E]/dt = k_E · [Stress] − k_CCP · [CCP] · [E]
-```
 
-Порог t½ — точка ускорения накопления polyE, потенциально соответствующая onset репликативного сенесценса.
 
-**Параметры не откалиброваны.** Уравнения — тестируемые предсказания.
+Threshold t½ — point of polyE accumulation acceleration, potentially corresponding to the onset of replicative senescence.
 
----
-
-## 4. PolyE баланс: глутамилирование vs деглутамилирование
-
-Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 удаляют polyGlu с тубулина. Мутации CCP1 → нейродегенерация.
-
-**Критическое доказательство патогенности:** CCP1 knockout в BM-MSC ингибирует остеогенную дифференцировку через усиление глутамилирования микротрубочек и укорачивание первичной цилии (PMID 40349688).
-
-**Гипотеза:** Активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом.
+**Parameters are not calibrated.** Equations are testable predictions.
 
 ---
 
-## 5. Консорциум
+## 4. PolyE balance: glutamylation vs deglutamylation
 
-| # | Партнёр | Страна | Роль | Статус |
+Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. Mutations in CCP1 → neurodegeneration.
+
+**Critical evidence of pathogenicity:** CCP1 knockout in BM-MSC inhibits osteogenic differentiation through enhanced glutamylation of microtubules and shortening of the primary cilia (PMID 40349688).
+
+**Hypothesis:** TTLL (glutamylase) activity increases with replicative stress; CCP (degutamylase) activity decreases with age.
+
+---
+
+## 5. Consortium
+
+| # | Partner | Country | Role | Status |
 |:--:|---------|:-----:|------|:------:|
-| 1 | GLA (Джаба) | 🇬🇪 GE | PI, C1 — фаворит гонки, ARGUS-LP, интеграция | ✅ |
+| 1 | GLA (Jaba) | 🇬🇪 GE | PI, C1 — race favorite, ARGUS-LP, integration | ✅ |
 | 2 | Wagner (RWTH) | 🇩🇪 DE | C2 — SA-DNAm, EPIC arrays | 🟢 Zoom |
-| 3 | Trifunovic (Cologne) | 🇩🇪 DE | C3 — Митохондрии | ✅ Вошла |
-| 4 | Magiera (Curie) | 🇫🇷 FR | C4 — U-ExM, tubulin code | 🟡 Ждём |
-| 5 | Geiger (Ulm) | 🇩🇪 DE | 👨‍⚖️ **Судья гонки** — HSC мышь, in vivo валидация | 🟡 LoI |
-| 6 | Jacquemet (Åbo) | 🇫🇮 FI | ARGUS-LP + AI (live-cell tracking, spotiflow) | 🟡 Письмо |
-| 7 | Senescence/Safety | TBD | Контроль безопасности, кариотип, WGS | 🆕 Поиск |
+| 3 | Trifunovic (Cologne) | 🇩🇪 DE | C3 — Mitochondria | ✅ Joined |
+| 4 | Magiera (Curie) | 🇫🇷 FR | C4 — U-ExM, tubulin code | 🟡 Waiting |
+| 5 | Geiger (Ulm) | 🇩🇪 DE | 👨‍⚖️ **Race Judge** — HSC mouse, in vivo validation | 🟡 LoI |
+| 6 | Jacquemet (Åbo) | 🇫🇮 FI | ARGUS-LP + AI (live-cell tracking, spotiflow) | 🟡 Letter |
+| 7 | Senescence/Safety | TBD | Safety control, karyotype, WGS | 🆕 Search |
 
 ---
 
-## 6. Бюджет (~€3.2M)
+## 6. Budget (~€3.2M)
 
-| Партнёр | Бюджет |
+| Partner | Budget |
 |---------|:------:|
 | GLA | €800K |
 | Wagner | €280K |
@@ -301,83 +211,105 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 удаляют polyGlu с т�
 | Geiger | €580K |
 | Jacquemet | €180K |
 | Senescence/Safety | €350K |
-| PM + этика | €150K |
-| Субконтракты | €200K |
-| **Всего** | **~€3.2M** |
+| PM + Ethics | €150K |
+| Subcontracts | €200K |
+| **Total** | **~€3.2M** |
 
 ---
 
-## 7. Testable Predictions (Table 4 из статьи)
+## Consumables (annual)
 
-| Предсказание | Тест |
+| **model organism maintenance** (NGM agar, OP50/NA22 bacteria, cholesterol, Petri dishes) | **$3,500** |
+| **RNAi/strain maintenance** (clones, IPTG, antibiotics, feeding plates) | **$2,000** |
+| **Cell culture** (DMEM/RPMI, FBS, pen/strep, trypsin, plastics) | **$8,000** |
+| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters) | **$3,000** |
+| **Transfection reagents** (Lipofectamine, siRNA oligos) | **$3,000** |
+| **Sequencing consumables** (library prep, flow cells) | **$12,000** |
+| **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
+| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas) | **$8,000** |
+| **Office consumables** (printing, stationery) | **$500** |
+
+
+## 7. Testable Predictions (Table 4 from the article)
+
+| Prediction | Test |
 |-------------|------|
-| Центриолярный polyE растёт со временем, не с делениями | GT335 IF в post-mitotic vs делящихся клетках |
-| CAMC меняется с асимметричными делениями | Центросомный BioID + quantitative proteomics |
-| Падение деглутамилаз → polyE накопление | CCP1 activity assay через пассажи |
-| CCP1 knockout ускоряет stem cell exhaustion | UBC-CreERT2 × CCP1^fl/fl мышь, n ≥ 50 |
-| Центриолярный polyE ↔ single-cell transcriptional entropy | Multiplexed imaging + scRNA-seq |
-| Старая центриоль → ускоренный сенесценс | P45 центриоли → P10 клетки |
-| CCP1 overexpression замедляет ageing | CRISPRa-CCP1 в BJ-hTERT |
-| iPSC из ацентриолярных фибробластов = сниженная дифф-ка | Lindhout protocol: нейрональная дифф-ка + электрофизиология |
+| Centriolar polyE grows over time, not with divisions | GT335 IF in post-mitotic vs dividing cells |
+| CAMC changes with asymmetric divisions | Centrosomal BioID + quantitative proteomics |
+| Deglutamylation decrease → polyE accumulation | CCP1 activity assay across passages |
+| CCP1 knockout accelerates stem cell exhaustion | UBC-CreERT2 × CCP1^fl/fl mouse, n ≥ 50 |
+| Centriolar polyE ↔ single-cell transcriptional entropy | Multiplexed imaging + scRNA-seq |
+| Old centriole → accelerated senescence | P45 centriole → P10 cells |
+| CCP1 overexpression slows ageing | CRISPRa-CCP1 in BJ-hTERT |
+| iPSC from acentriolar fibroblasts = reduced diff-ka | Lindhout protocol: neuronal diff-ka + electrophysiology |
 
 ---
 
-## 8. Ключевые PMID (v4.6 — обновлён 2026-07-19 после обмена с Пьером Гёнчи)
+## 8. Key PMIDs (v4.6 — updated 2026-07-19 after discussion with Pierre Gönczy)
 
-### Центриоль как энтропийный носитель
-| PMID | Автор, год | Ключевой результат |
+### Centriole as an entropy carrier
+| PMID | Author, year | Key result |
 |:----:|------------|-------------------|
-| 36583780 | Tqemaladze (2023) | CEDAR оригинал |
+| 36583780 | Tqemaladze (2023) | CEDAR original |
 | 41230623 | Cummings (2025) | Irreversible damage beyond epigenome |
 | 41571679 | De Man (2026) | Transcriptional entropy ↑ with age |
 | 41299832 | Hong, Cohen (2025) | Entropy-based aging framework |
 | 41724675 | Hong (2026) | Muscle histological entropy → mobility |
 | 40931490 | Hong (2025) | ECG entropy → fractures + mortality |
 
-### Трёхстадийная модель элиминации центриолей (Gönczy lab)
-| PMID | Автор, год | Ключевой результат |
+### Three-stage model of centriole elimination (Gönczy lab)
+| PMID | Author, year | Key result |
 |:----:|------------|-------------------|
-| **37963546** | Kalbfuss & Gönczy (2023) | **Open Biol:** Обзор — maintenance → priming → execution. Таблица всех случаев элиминации |
-| **37256957** | Kalbfuss & Gönczy (2023) | **Science Advances:** ~88% клеток C. elegans теряют центриоли. Cell fate = centriole fate |
-| **37414202** | Kalbfuss, Berger & Gönczy (2023) | **Dev Biol:** Mapping центриолярных белков. Нет diffusible elimination factor |
-| — | Pimenta-Marques et al. (2023) | **EMBO Reports:** ANA1/CEP295 — ключевой стабилизатор. doi: 10.1038/s44319-023-00020-6. **Рекомендован лично Гёнчи** |
+| **37963546** | Kalbfuss & Gönczy (2023) | **Open Biol:** Review — maintenance → priming → execution. Table of all elimination cases |
+| **37256957** | Kalbfuss & Gönczy (2023) | **Science Advances:** ~88% of model organism cells lose centrioles. Cell fate = centriole fate |
+| **37414202** | Kalbfuss, Berger & Gönczy (2023) | **Dev Biol:** Mapping centriolar proteins. No diffusible elimination factor |
+| — | Pimenta-Marques et al. (2023) | **EMBO Reports:** ANA1/CEP295 — key stabilizer. doi: 10.1038/s44319-023-00020-6. **Personally recommended by Gönczy** |
 
-### CAMC и molecular readers
-| 26213385 | Madarampalli (2015) | ATF5 — мост PCM↔центриоль |
-| 42343301 | FERMT3 (2026) | miP-FERMT3 → сенесценс из центриоли |
-| 42380124 | Ozaki/Tsou (2026) | ALMS1 IDP → центриолярная память |
+### CAMC and molecular readers
+| 26213385 | Madarampalli (2015) | ATF5 — bridge PCM↔centriole |
+| 42343301 | FERMT3 (2026) | miP-FERMT3 → senescence from centriole |
+| 42380124 | Ozaki/Tsou (2026) | ALMS1 IDP → centriolar memory |
 | 39012627 | Thomas, Meraldi (2024) | Centrosome age → spindle asymmetry |
 
-### sinc-MT/KIFC3 — полный путь
-| 39266565 | Robichaud (2024) | sinc-MTs → KIFC3 → FBF1 → PML → сенесценс |
+### sinc-MT/KIFC3 — complete pathway
+| 39266565 | Robichaud (2024) | sinc-MTs → KIFC3 → FBF1 → PML → senescence |
 | 37019904 | Ma (2023) | ARL13B-ARL3 → FBF1 release |
-| 9852152 | Bobinnec (1998) | polyE специфичен для центриолей в интерфазе |
+| 9852152 | Bobinnec (1998) | polyE specific to centrioles in interphase |
 
-### PolyE баланс
-| 21074048 | Rogowski (2010) | CCP1–CCP6 деглутамилазы |
+### PolyE balance
+| 21074048 | Rogowski (2010) | CCP1–CCP6 deglutamylases |
 | 40349688 | Pan (2026) | CCP1 KO → impaired osteogenesis |
 
-### Эпигенетика
-| 23080539 | Wagner (2013) | TERT НЕ предотвращает SA-DNAm |
+### Epigenetics
+| 23080539 | Wagner (2013) | TERT does not prevent SA-DNAm |
 | 30332397 | Kabacik/Horvath (2018) | hTERT ≠ epigenetic age arrest |
 | 31113906 | Matsuyama/Horvath (2019) | Hypoxia slows clock 30-40% |
 
-### Мульти-счётчиковая модель
+### Multi-counter model
 | 9454332 | Bodnar (1998) | hTERT extends lifespan significantly but not indefinitely in all cell types |
 | 12855956 | Parrinello (2003) | 3% O₂ immortalizes mouse fibroblasts; human cells require additional evidence |
 | 41816297 | Passanisi/Spencer (2026) | Senescence ≠ telomere length |
 
-### Оплодотворение / гаметогенез и пластичность
+### Fertilization / gametogenesis and plasticity
 | 30596512 | Jeffries (2019) | Cilium resorption failure → senescence |
-| 33835529 | Lindhout (2021) | Центриоль = maturity sensor (НЕ подтверждает plasticity — см. аудит 2026-07-19) |
-| 22223737 | Azimzadeh (2012) | Центросомы (PCM) потеряны у планарий; центриоли сохранены в необластах |
-| 21509822 | Schatten & Sun (2011) | Центросомное наследование при оплодотворении |
-| **42455439** | **Ishida & Shibuya (2026)** | **Сперматогенез: центриоли сохраняются (vs элиминация в оогенезе). 165 refs. RIKEN BDR** |
+| 33835529 | Lindhout (2021) | Centriole = maturity sensor (DOES NOT confirm plasticity — see audit 2026-07-19) |
+| 22223737 | Azimzadeh (2012) | Centrosomes (PCM) lost in planarians; centrioles preserved in neoblasts |
+| 21509822 | Schatten & Sun (2011) | Centrosome inheritance during fertilization |
+| **42455439** | **Ishida & Shibuya (2026)** | **Spermatogenesis: centrioles preserved (vs elimination in oogenesis). 165 refs. RIKEN BDR** |
 
-### Centriculum — ER-мембранный ретикулум вокруг центросомы
-| **36693370** | **Maheshwari, Cohen-Fix (2023)** | **Curr Biol: открытие центрикулума. 3D ER-сеть вокруг центросомы. FIB-SEM** |
-| **42283151** | **Maheshwari, Cohen-Fix (2026)** | **J Cell Sci: центрикулум = микротрубочковый фильтр. PCM-компактизация** |
+### Centriculum — ER-membrane reticulum around centrosome
+| **36693370** | **Maheshwari, Cohen-Fix (2023)** | **Curr Biol: discovery of centriculum. 3D ER-network around centrosome. FIB-SEM** |
+| **42283151** | **Maheshwari, Cohen-Fix (2026)** | **J Cell Sci: centriculum = microtubule filter. PCM-compaction** |
 
 ---
 
-*CONCEPT v4.5 — 2026-07-08. Stress Integrator + Hardware/Software distinction. Синтез из MCARA.docx (Gatekeeper article).*
+*CONCEPT v4.5 — 2026-07-08. Stress Integrator + Hardware/Software distinction. Synthesis from MCARA.docx (Gatekeeper article).*
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

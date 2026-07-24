@@ -61,3 +61,5 @@ Before any action — first read:
 3. `_pi.md` — this file
 
 If files do not exist — create them.
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

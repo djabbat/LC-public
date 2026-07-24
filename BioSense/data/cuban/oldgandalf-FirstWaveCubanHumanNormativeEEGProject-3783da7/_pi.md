@@ -1,18 +1,20 @@
 # pi — Cuban EEG (FirstWave)
 
-> ## 🔴 ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
-> Перед любым действием прочитать: _pi.md
+> ## 🔴 MEMORY BEFORE ACTION
+> Before any action, read: _pi.md
 
 **Parent:** LC/BioSense
 **Created:** 2026-05-18 | **Updated:** 2026-06-11
 
-## Описание
-Кубинский нормативный EEG датасет — репозиторий FirstWaveCubanHumanNormativeEEGProject. ЭЭГ-данные здоровых испытуемых кубинской популяции. Используется для валидации Ze-предсказаний.
+## Description
+Cuban normative EEG dataset — FirstWaveCubanHumanNormativeEEGProject repository. EEG data of healthy subjects of the Cuban population. Used for validating Ze-predictions.
 
-## Правила
-- Данные только для исследовательских целей
-- Не распространять без разрешения
+## Rules
+- Data only for research purposes
+- Do not distribute without permission
 
-## Ключевые файлы
+## Key files
 - README.md, CONCEPT.md, TODO.md, STATE.md
 - EyesOpen/, EyesClose.zip, avr_ref.m, gsf.m
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

@@ -1,50 +1,44 @@
-# Протеостаз: Коллапс протеостаза как счётчик №5 в архитектуре MCARA
+# Proteostasis: Collapse of Proteostasis as Counter #5 in the MCARA Architecture
 
-**Протеостаз** — это подпроект в рамках общей архитектуры LC, формализующий коллапс белкового гомеостаза (протеостаза) как измеримый и количественный процесс старения. В рамках мета-теоретической Multi-Counter Architecture of Replicative Aging (MCARA) этот коллапс определён как **Счётчик №5**.
+**Proteostasis** is a subproject within the overall LC architecture, formalizing the collapse of protein homeostasis (proteostasis) as a measurable and quantitative aging process. Within the meta-theoretical Multi-Counter Architecture of Replicative Aging (MCARA), this collapse is defined as **Counter #5**.
 
-## Краткое содержание
+## Summary
 
-Старение сопровождается прогрессирующей потерей способности клеток поддерживать протеостаз — сложную сеть, отвечающую за синтез, сворачивание, транспорт и деградацию белков. Это приводит к накоплению неправильно свёрнутых, повреждённых и склонных к агрегации белков, что является ключевым признаком старения и основой нейродегенеративных заболеваний (болезнь Альцгеймера, Паркинсона) и саркопении.
+Aging is accompanied by a progressive loss of the cell's ability to maintain proteostasis — a complex network responsible for protein synthesis, folding, transport, and degradation. This leads to the accumulation of misfolded, damaged, and aggregation-prone proteins, which is a key hallmark of aging and the basis of neurodegenerative diseases (Alzheimer's, Parkinson's) and sarcopenia.
 
-Данный проект не просто констатирует этот факт, а предлагает его **формальную количественную модель**. Мы определяем метрику повреждения *D₅(n, t)*, которая растёт в зависимости от количества клеточных делений (*n*) и хронологического времени (*t*). Каждый параметр модели (например, критическое число делений *n₅** или постоянная времени агрегации *τ₅*) имеет чёткое биологическое обоснование и привязку к данным из рецензируемых исследований.
+This project does not merely state this fact but proposes a **formal quantitative model**. We define a damage metric *D₅(n, t)* that increases depending on the number of cell divisions (*n*) and chronological time (*t*). Each model parameter (e.g., critical number of divisions *n₅** or aggregation time constant *τ₅*) has a clear biological rationale and is linked to data from peer-reviewed studies.
 
-Цель — интегрировать этот счётчик в общую систему MCARA, где он взаимодействует с другими счётчиками (митохондриальная дисфункция, эпигенетический дрейф и др.) через матрицу связей **Γ**. Это превращает изучение протеостаза из качественного наблюдения в расчётный, проверяемый и фальсифицируемый компонент единой теории старения организма.
+The goal is to integrate this counter into the overall MCARA system, where it interacts with other counters (mitochondrial dysfunction, epigenetic drift, etc.) through a coupling matrix **Γ**. This transforms the study of proteostasis from a qualitative observation into a calculable, testable, and falsifiable component of a unified theory of organismal aging.
 
-## Ключевые аспекты проекта
+## Key Aspects of the Project
 
-* **Формальная теория:** В [THEORY.md](THEORY.md) представлена аксиоматика, кинетическое уравнение счётчика и его связь с MCARA.
-* **Доказательная база:** Файл [EVIDENCE.md](EVIDENCE.md) содержит таблицы проверенных ссылок (PMID/DOI) на исследования, подтверждающие или опровергающие каждый элемент модели.
-* **Открытые проблемы:** [OPEN_PROBLEMS.md]() описывает ключевые нерешённые вопросы, приоритеты и конкретные фальсификационные тесты для модели.
-* **Количественные параметры:** [PARAMETERS.md](PARAMETERS.md) — это сводная таблица всех параметров модели, их значений, единиц измерения и источников.
-* **Архитектура и дизайн:** [DESIGN.md](DESIGN.md) описывает структурные принципы, API и организацию кода для реализации модели.
-* **Инструкции для ИИ-агентов:** [AGENTS.md]() содержит жёсткие правила и ограничения для LLM, работающих с материалами проекта.
-* **Журнал изменений:** [JOURNAL.md]() — хронологическая запись всех значимых решений и обновлений.
-* **Дорожная карта:** [ROADMAP.md]() определяет этапы будущего развития, приоритеты и зависимости.
+* **Formal Theory:** [THEORY.md](THEORY.md) presents the axiomatics, the counter's kinetic equation, and its connection to MCARA.
+* **Evidence Base:** The file [EVIDENCE.md](EVIDENCE.md) contains tables of verified references (PMID/DOI) to studies that confirm or refute each element of the model.
+* **Open Problems:** [OPEN_PROBLEMS.md]() describes key unresolved questions, priorities, and specific falsification tests for the model.
+* **Quantitative Parameters:** [PARAMETERS.md](PARAMETERS.md) is a summary table of all model parameters, their values, units, and sources.
+* **Architecture and Design:** [DESIGN.md](DESIGN.md) describes the structural principles, API, and code organization for implementing the model.
+* **Instructions for AI Agents:** [AGENTS.md]() contains strict rules and constraints for LLMs working with the project materials.
+* **Change Log:** [JOURNAL.md]() is a chronological record of all significant decisions and updates.
+* **Roadmap:** [ROADMAP.md]() defines future development stages, priorities, and dependencies.
 
-## Связь с другими компонентами LC
+## Relationship with Other LC Components
 
-Протеостаз является одним из **девяти основных счётчиков** в рамках MCARA. Его состояние влияет на общую метрику повреждения тканей *L_tissue(n, t)*. Модель напрямую связана с проектами:
-* **CEDAR (Cellular Damage Theory of Aging):** Коллапс протеостаза является одним из основных источников клеточного повреждения (*D_CELL*) в теории CEDAR.
-* **FCLC (Functional Capacity & LifeCourse):** Снижение протеостатического резерва является драйвером потери функциональной ёмкости в постмитотических тканях (мозг, мышцы).
+Proteostasis is one of the **nine main counters** within MCARA. Its state affects the overall tissue damage metric *L_tissue(n, t)*. The model is directly linked to the projects:
+* **CEDAR (Cellular Damage Theory of Aging):** Proteostasis collapse is one of the main sources of cellular damage (*D_CELL*) in the CEDAR theory.
+* **FCLC (Functional Capacity & LifeCourse):** The decline in proteostatic reserve is a driver of functional capacity loss in post-mitotic tissues (brain, muscle).
 
-## Статус и дальнейшие шаги
+## Status and Next Steps
 
-Модель находится на стадии теоретической разработки и параметризации на основе опубликованных данных. Ключевые ближайшие задачи — валидация параметров на независимых наборах данных и разработка протоколов для экспериментального измерения силы связи *γ₅* с другими счётчиками (см. [ROADMAP.md]().
+The model is at the stage of theoretical development and parameterization based on published data. Key immediate tasks are validation of parameters on independent datasets and development of protocols for experimental measurement of the coupling strength *γ₅* with other counters (see [ROADMAP.md]().
 
-Для углублённого изучения начните с [THEORY.md](THEORY.md) и [EVIDENCE.md](EVIDENCE.md).
+For in-depth study, start with [THEORY.md](THEORY.md) and [EVIDENCE.md](EVIDENCE.md).
 
 ---
-*Этот документ был создан в соответствии с каноном CORRECTIONS_2026-04-22. Все утверждения сверены с актуальной доказательной базой, отозванные тезисы исключены.*
+*This document was created in accordance with the CORRECTIONS_2026-04-22 canon. All statements have been verified against the current evidence base; retracted theses have been excluded.*
 
 ## v3 Update (2026-05-13)
 
 CONCEPT.md updated with TBPR peer-review responses:
 - Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)
 - Removed fabricated references
-- Addressed top blocking/critical reviewer concerns
-- Statistical protocol additions where applicable
-- Honest TODO sections для unmet requirements
-
-See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
-для project-specific changes.
-
+- Address ed top bl

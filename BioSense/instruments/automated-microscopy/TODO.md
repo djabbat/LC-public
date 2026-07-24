@@ -1,10 +1,9 @@
 # TODO — Automated Microscopy
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## Ближайшие задачи
-- [ ] Определить приоритеты
+## Nearest tasks
+- [ ] Determine priorities
 
-## Выполнено
-- [x] Инициализация core-файлов (2026-06-09)
-
+## Done
+- [x] Initialization of core files (2026-06-09)

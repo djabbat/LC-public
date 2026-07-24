@@ -1,5 +1,5 @@
 # MEMORY — Automated Microscopy (BioSense)
 
-**2026-06-16 (аудит pi):** CONCEPT.md наполнен (998 байт). Зависимость: оборудование не приобретено.
-**2026-06-09:** Core-файлы достроены.
-**2026-05-18:** Подпроект инициализирован. Ожидает доступа к микроскопу.
+**2026-06-16 (pi audit):** CONCEPT.md filled (998 bytes). Dependency: equipment not purchased.
+**2026-06-09:** Core files built.
+**2026-05-18:** Subproject initialized. Awaiting access to microscope.

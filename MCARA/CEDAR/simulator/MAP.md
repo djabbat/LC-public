@@ -1,29 +1,20 @@
 # MAP.md — CEDAR-v2 Simulator
 
-```
+
 CEDAR_simulator/
-├── _pi.md                # Правила для pi
-├── CONCEPT.md            # Концепт
-├── TODO.md               # Задачи
-├── PARAMETERS.md         # Параметры модели
-├── MAP.md                # Этот файл
-├── STATE.md              # Текущий статус
-├── MEMORY.md             # История решений
-├── README.md             # README (PyPI-совместимый)
-├── DESIGN.md             # Архитектура
-├── THEORY.md             # Теория
-├── EVIDENCE.md           # Доказательная база
-├── pyproject.toml        # Python-пакет
+├── _pi.md                # Rules for pi
+├── CONCEPT.md            # Concept
+├── TODO.md               # Tasks
+├── PARAMETERS.md         # Model parameters
+├── MAP.md                # This file
+├── STATE.md              # Current status
+├── MEMORY.md             # Decision history
+├── README.md             # README (PyPI-compatible)
+├── DESIGN.md             # Architecture
+├── THEORY.md             # Theory
+├── EVIDENCE.md           # Evidence base
+├── pyproject.toml        # Python package
 ├── LICENSE               # GPL v3
 ├── .gitignore
-├── cedar_sim/            # Исходный код
-│   ├── __init__.py
-│   ├── model.py          # CEDARModel
-│   ├── abc_smc.py        # ABC-SMC калибровка
-│   ├── gsa.py            # Sobol GSA
-│   └── utils.py          # Вспомогательные функции
-└── tests/                # Тесты
-    ├── test_model.py
-    ├── test_abc_smc.py
-    └── test_gsa.py
-```
+├── cedar_sim/            # Source code
+└── tests/                # Tests

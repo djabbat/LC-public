@@ -1,5 +1,7 @@
 # CDLT — Centriole Damage in Lineage Tree
 
+**Version:** 1.0
+
 **Project:** Centriole Damage in Lineage Tree (CDLT)  
 **Position in MCARA:** Counter #1 (Centriolar) of the Multi-Counter Architecture of Organismal Aging  
 **Author:** Tqemaladze (Georgia Longevity Alliance)  
@@ -388,3 +390,8 @@ Full peer-review-grade resolution: see parent `LC/MCARA/CONCEPT.md` TBPR v2 Reso
 | Cross-validation | 5-fold across clones | Error < 15% |
 
 **Falsifiability:** If reconstruction accuracy < 70% OR κ < 0.5, tree model is rejected.
+
+
+## References
+
+*See project MEMORY.md for reference history.*

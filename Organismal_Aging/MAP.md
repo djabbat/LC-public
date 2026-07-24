@@ -1,48 +1,43 @@
 # Organismal Aging — MAP
 
-**Дата:** 2026-06-21
+**Date:** 2026-06-21
 
-## Структура Organismal_Aging/ (в составе LC/)
+## Structure of Organismal_Aging/ (within LC/)
 
-```
+
 Organismal_Aging/
-├── CONCEPT.md                       ← Концепт (v2.0)
-├── THEORY.md                        ← Математический формализм
-├── PARAMETERS.md                    ← Числовые параметры
-├── MAP.md                           ← Этот файл
-├── STATE.md                         ← Текущий статус
-├── MEMORY.md                        ← История решений
-├── TODO.md                          ← Задачи
-├── EVIDENCE.md                      ← Доказательная база
-├── README.md                        ← Описание
-├── _pi.md                           ← Правила для pi
-├── OPEN_PROBLEMS.md                 ← Открытые вопросы
-├── DESIGN.md                        ← Архитектура ПО
+├── CONCEPT.md                       ← Concept (v2.0)
+├── THEORY.md                        ← Mathematical formalism
+├── PARAMETERS.md                    ← Numerical parameters
+├── MAP.md                           ← This file
+├── STATE.md                         ← Current status
+├── MEMORY.md                        ← Decision history
+├── TODO.md                          ← Tasks
+├── EVIDENCE.md                      ← Evidence base
+├── README.md                        ← Description
+├── _pi.md                           ← Rules for pi
+├── OPEN_PROBLEMS.md                 ← Open questions
+├── DESIGN.md                        ← Software architecture
 │
-├── docs/                            ← Документация
-│   ├── ARCHITECTURE.md
-│   ├── EXTENSION_GUIDE.md           ← Как добавить вид/ткань/счётчик
-│   └── GLOSSARY.md
+├── docs/                            ← Documentation
 │
-├── scripts/                         ← Скрипты
-│   ├── run_simulation.sh
-│   └── benchmark.sh
+├── scripts/                         ← Scripts
 │
-└── _archive/                        ← Архив
-```
+└── _archive/                        ← Archive
 
-## Интеграция в LC
 
-Organismal_Aging — **детализированная документация** для компонента-интегратора внутри LC.
+## Integration into LC
 
-LC (корень):
-- `sim_core/` — код ядра (Rust)
-- `argus_bridge/` — мост к ARGUS-LP
-- `infogest_bridge/` — мост к INFOGEST
-- `biosense/` — сенсоры
-- `fclc/` — безопасность
+Organismal_Aging — **detailed documentation** for the integrator component within LC.
+
+LC (root):
+- `sim_core/` — core code (Rust)
+- `argus_bridge/` — bridge to ARGUS-LP
+- `infogest_bridge/` — bridge to INFOGEST
+- `biosense/` — sensors
+- `fclc/` — safety
 - `hap/` — Health-Age Profiling
-- `sim_gui/` — веб-интерфейс
+- `sim_gui/` — web interface
 
 ---
 

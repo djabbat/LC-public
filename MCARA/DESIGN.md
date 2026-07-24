@@ -1,25 +1,24 @@
-# Архитектура и дизайн MCARA
+# MCARA Architecture and Design
 
-*Версия: 2026-04-22. Описывает эталонную реализацию на Rust, файловую структуру и API контракты.*
+*Version: 2026-04-22. Describes the reference implementation on Rust, file structure, and API contracts.*
 
-## 1. Обзор архитектуры
+## 1. Architecture Overview
 
-MCARA реализован как крейт (библиотека) на Rust с чётким разделением на:
-1. **Ядро (`mcara_core`):** Чистые, детерминированные функции, реализующие формализм MCARA (уравнения счётчиков, нагрузка, пороги). Без зависимостей от ввода/вывода.
-2. **Симулятор (`mcara_simulation`):** Модули для проведения симуляций (стохастические процессы, популяции клеток, лонгитюдные траектории). Использует ядро.
-3. **Интерфейсы (`mcara_interfaces`):** Определения типов данных, сериализация (JSON/MessagePack), API для интеграции с другими подпроектами (CEDAR, FCLC).
-4. **Инструменты (`mcara_tools`):** Утилиты командной строки (CLI) для калибровки, анализа чувствительности, визуализации.
+MCARA is implemented as a crate (library) on Rust with a clear separation into:
+1. **Core (`mcara_core`):** Pure, deterministic functions implementing the MCARA formalism (counter equations, load, thresholds). Without input/output dependencies.
+2. **Simulator (`mcara_simulation`):** Modules for conducting simulations (stochastic processes, cell populations, longitudinal trajectories). Uses the core.
+3. **Interfaces (`mcara_interfaces`):** Data type definitions, serialization (JSON/MessagePack), API for integration with other subprojects (CEDAR, FCLC).
+4. **Tools (`mcara_tools`):** Command-line utilities (CLI) for calibration, sensitivity analysis, visualization.
 
-Цель: предоставить проверяемую, производительную и переносимую эталонную реализацию для научного сообщества.
+Goal: to provide a verifiable, efficient, and portable reference implementation for the scientific community.
 
-## 2. Файловая структура проекта
+## 2. Project File Structure
 
-```
+
 mcara_reference_impl/
-├── Cargo.toml # Конфигурация крейта и зависимости
+├── Cargo.toml # Crate configuration and dependencies
 
 ## MCARA Phase III Update (2026-05-15)
 
-CONCEPT.md заменён на MCARA Phase III v2.0 — corrected version с верифицированными PMID.
-См. CONCEPT.md для деталей Phase III дизайна (6 arms, power calculation, budget).
-
+CONCEPT.md replaced with MCARA Phase III v2.0 — corrected version with verified PMID.
+See CONCEPT.md for details of Phase III design (6 arms, power calculation, budget).

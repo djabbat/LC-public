@@ -2,7 +2,7 @@
 
 ## Dependency graph across subfolders
 
-```
+
  ┌──────────────────────────────────┐
  │ CytogeneticTree (umbrella) │
  │ ─────────────────────────── │
@@ -21,11 +21,11 @@ LentiviralTools FluorescentCameras LaserAblation_405
  StatisticalAnalysis
  GenealogyReconstruction
  DifferentiationAnnotation
-```
+
 
 ## Information flow during one experimental run
 
-```
+
  1. RITE pulse (Cre-ERT2 + tamoxifen) — biology
  │
  ▼
@@ -64,11 +64,11 @@ LentiviralTools FluorescentCameras LaserAblation_405
  │
  ▼
  10. Output: Cytogenetic Tree visualization + dataset + manuscript
-```
+
 
 ## Integrations with LC ecosystem
 
-```
+
  CytogeneticTree ──┬──→ CEDAR (theoretical validation data)
  │
  ├──→ MCARA (Counter #1 lineage-level instance)
@@ -78,11 +78,11 @@ LentiviralTools FluorescentCameras LaserAblation_405
  ├──→ BioSense / Ze (orthogonal biomarker context)
  │
  └──→ Impetus LOI (funding vehicle for Phase 1 MVCT)
-```
+
 
 ## External data flow
 
-```
+
  Addgene / Twist Bio
  │
  │ (RITE construct plasmids)
@@ -96,10 +96,9 @@ LentiviralTools FluorescentCameras LaserAblation_405
  │
  ▼
  Companion paper
-```
+
 
 
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
-
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.

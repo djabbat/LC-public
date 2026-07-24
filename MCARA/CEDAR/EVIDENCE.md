@@ -59,7 +59,7 @@ These sample sizes are achievable with the 30+30 mice budgeted (approximately 20
 
 ### Статьи, напрямую релевантные для CEDAR (C1/C2 + центриоли + асимметрия)
 
-| # | Статья (кратко) | Журнал | Год | OA | Значение для CEDAR |
+| # | Article (кратко) | Journal | Год | OA | Value для CEDAR |
 |---|------------------|--------|-----|:--:|---------------------|
 | 1 | **Thomas A, Meraldi P** — Centrosome age breaks spindle size symmetry even in «symmetrically» dividing cells | J Cell Biol | 2024 | ✅ | **Прямое доказательство:** возраст центросомы → асимметрия веретена → поддерживает C2 |
 | 2 | **Royall LN et al.** — Asymmetric inheritance of centrosomes maintains stem cell properties in human NPCs | eLife | 2023 | ✅ | **C2 в нейральных прогениторах человека** — PMID: 37882444 |
@@ -77,7 +77,7 @@ These sample sizes are achievable with the 30+30 mice budgeted (approximately 20
 ### Основная статья (Meng/Baird/Yamashita 2026) — ключевые положения для CEDAR
 
 1. **Мужской мейоз может быть скрыто асимметричным** — даже у видов с «симметричным» сперматогенезом
-2. **Асимметрия мужского мейоза → фундамент для meiotic drive** (нарушение Менделевского расщепления)
+2. **Asymmetry мужского мейоза → фундамент для meiotic drive** (нарушение Менделевского расщепления)
 3. **Полярные тельца** могут формироваться факультативно в мужском мейозе
 4. **Латентная асимметрия** может быть использована для адаптивного смещения наследования
 5. **125 references** — золотая жила для CEDAR (Akera, Chmatal, Lindholm, Pelletier, Herbette...)
@@ -88,7 +88,7 @@ These sample sizes are achievable with the 30+30 mice budgeted (approximately 20
 
 ### 7.1. Ключевые находки
 
-| # | Статья (кратко) | Журнал | Год | OA | PMID | Значение для CEDAR |
+| # | Article (кратко) | Journal | Год | OA | PMID | Value для CEDAR |
 |---|------------------|--------|-----|:--:|------|---------------------|
 | 1 | **Park EJ, Di Stefano B** — Mechanisms coordinating exit from stem cell state | Genes Dev | 2026 | ✅ | 42156139 | 🔑 **Основной обзор:** 5 уровней stem cell exit. «Точка невозврата» — ключевой вопрос |
 | 2 | **Strawbridge SE et al.** — Exit from naive pluripotency WITHOUT asymmetric division | Stem Cell Reports | 2026 | ✅ | 41687620 | ⚠️ **КРИТИЧЕСКОЕ ОГРАНИЧЕНИЕ** — см. подробный анализ ниже |
@@ -97,17 +97,17 @@ These sample sizes are achievable with the 30+30 mice budgeted (approximately 20
 
 **Strawbridge SE, Corridori C, Blanchard GB, Smith A, Kugler H, Martello G** — *Exit from naive pluripotency proceeds with variable latency but without asymmetric division to generate population heterogeneity*
 
-- **Журнал:** Stem Cell Reports, Vol. 21 (2026) | **DOI:** `10.1016/j.stemcr.2026.102813` | **PMCID:** PMC12985371
+- **Journal:** Stem Cell Reports, Vol. 21 (2026) | **DOI:** `10.1016/j.stemcr.2026.102813` | **PMCID:** PMC12985371
 - **Лабы:** Austin Smith (Exeter) — создатель системы 2i/LIF; Graziano Martello (Padua)
 - **Метод:** Rex1-GFPd2 репортёр наивной плюрипотентности + long-term single-cell imaging (LTSCI) + генеалогический анализ
 
 **6 ключевых результатов:**
 
-| # | Результат | Значение для CEDAR |
+| # | Результат | Value для CEDAR |
 |---|----------|---------------------|
 | 1 | **Нет ре-экспрессии репортёра** — дифференцировка необратима | 🟢 Consistent: CEDAR предсказывает необратимость через накопление повреждений |
 | 2 | **Только симметричные деления** — ни одного асимметричного. Сестринские клетки выходят синхронно | 🔴 **Ограничение:** в ES-клетках нет асимметричного наследования → CEDAR не универсальна |
-| 3 | **Коллапс наивной идентичности резкий (abrupt)** — переключатель, не плавный процесс | 🟡 Модель «таймер + переключатель»: центриоль может быть таймером, но не переключателем |
+| 3 | **Коллапс наивной идентичности резкий (abrupt)** — переключатель, не плавный процесс | 🟡 Model «таймер + переключатель»: центриоль может быть таймером, но не переключателем |
 | 4 | **Вариабельная задержка 0–3 поколения** перед abrupt collapse | 🟡 Что определяет задержку? Повреждения центриоли — кандидат |
 | 5 | **Разброс >15 часов** между клетками популяции | 🟡 Асинхронный выход — популяционная стратегия (safeguard pluripotency) |
 | 6 | **Не зависит от клеточного цикла** | 🟡 CEDAR связывает счётчик с делениями; здесь связь с циклом отсутствует |
@@ -132,7 +132,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 | 5 | **Palma LG et al.** — Chromatin activity of IκBα mediates exit from naïve pluripotency | eLife | 2025 | ✅ | 41123589 | Хроматин-опосредованный выход из плюрипотентности |
 | 6 | **Levin-Ferreyra F et al.** — TE activity captures human pluripotent cell states | EMBO Rep | 2025 | ✅ | 39668246 | Тот же автор (Di Stefano lab) — транспозоны как маркеры |
 | 7 | **McCreery KP et al.** — Mechano-osmotic signals control chromatin state in PSCs | Nat Cell Biol | 2025 | ✅ | 41023488 | Механо-осмотическая регуляция хроматина |
-| 8 | **Ma B et al.** — Asymmetric histone inheritance in olfactory stem cells | Nat Commun | 2026 | ✅ | 41872193 | Асимметрия гистонов → судьба клеток |
+| 8 | **Ma B et al.** — Asymmetric histone inheritance in olfactory stem cells | Nat Commun | 2026 | ✅ | 41872193 | Asymmetry гистонов → судьба клеток |
 
 ### 7.2. Ключевые положения Park/Di Stefano (2026) для CEDAR
 
@@ -148,9 +148,9 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 ### 7.4. CAASM Evidence — центросома как платформа индукторов дифференцировки (2026-07-05)
 
-> **Статус:** 🟡→🟢 M3 upgraded from hypothetical (2/10) to plausible with evidence (5/10).
+> **Status:** 🟡→🟢 M3 upgraded from hypothetical (2/10) to plausible with evidence (5/10).
 
-| # | Белок | Роль | Связь с центросомой | PMID | OA |
+| # | Белок | Role | Connection с центросомой | PMID | OA |
 |---|-------|------|---------------------|------|:--:|
 | 1 | **Oct4 (POU5F1)** | Мастер-регулятор плюрипотентности | **Физически локализуется на центросоме в митозе** — нетранскрипционная функция: сборка веретена и сегрегация хромосом | **41725553** | ✅ |
 | 2 | **CEP170** | Центросомный белок | **Связывает центросомную функцию с кортикальным развитием мозга** — новый механизм нейрогенеза | **41888776** | ✅ |
@@ -159,13 +159,13 @@ Strawbridge показал отсутствие асимметрии тольк�
 | 5 | **NuSAP–CEP57–CEP152** | Комплекс центриолярного engagement | NuSAP safeguard — **целостность центриоли → правильный engagement → функция центросомы** | **41616107** | ✅ |
 | 6 | **Первичная цилия** | Сигнальный хаб | **Цилия как ворота TGF-β суперсемейства** — центриоль→базальное тельце→цилия→TGF-β/BMP (Herrera-Cid 2026, PMID: **42233350**); обзор: цилии как хабы сигнальной трансдукции (Li 2025, PMID: **41310849**) | **42233350**, **41310849** | ✅ |
 
-**Значение:** CAASM — не одна структура, а **коллекция белков**, физически ассоциированных с центросомой и контролирующих клеточную судьбу.
+**Value:** CAASM — не одна структура, а **коллекция белков**, физически ассоциированных с центросомой и контролирующих клеточную судьбу.
 
-### 7.5. Решения проблем Peer Review (2026-07-05)
+### 7.5. Decisions проблем Peer Review (2026-07-05)
 
 > Полный документ: `docs/SOLUTIONS_2026-07-05.md`. Аудит: `docs/PEER_REVIEW_2026-07-05.md`.
 
-| Проблема | Решение | Статус |
+| Проблема | Решение | Status |
 |----------|---------|:------:|
 | M3/CAASM — гипотетический | 5 белков + 2 сигнальных обзора с centrosome localization evidence | 🟢 |
 | Strawbridge (2026) — ES без асимметрии | Таксономия: CEDAR для взрослых СК; ES — отдельный механизм | 🟢 |
@@ -173,7 +173,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 | Tissue-specificity | Таблица 8 тканей с n*, α, β | 🟢 |
 | Γ matrix — placeholder | Метод парных perturbation experiments | 🟡 |
 | ¬R reversibility | iPSC-репрограммирование → тест сброса polyGlu | 🟡 |
-| D_critical пороги | Модель тканевых порогов толерантности | 🟢 |
+| D_critical пороги | Model тканевых порогов толерантности | 🟢 |
 
 **Общая оценка CEDAR: 6.7/10 → 7.5/10**
 
@@ -183,7 +183,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **SPEM (Spasmolytic Polypeptide-Expressing Metaplasia):** chief cells желудка обратимо трансдифференцируются в SPEM — это модуляция, а не необратимая дифференцировка. Ключевые статьи:
 
-| Статья | Год | PMID | Суть |
+| Article | Год | PMID | Суть |
 |--------|-----|------|------|
 | **Divenko M, Mills JC** — Stomach at the crossroads: NR signaling | 2026 | **41732976** | Интерфейс модуляции/дифференцировки в желудке |
 | **Cornish SK, Choi E, Mills JC, Goldenring JR** — Origins of pyloric metaplasia | 2026 | **42319154** | Chief cell → SPEM как модель обратимой трансдифференцировки |
@@ -196,7 +196,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **Центросома как сигнальный хаб (усиление M2/M3):**
 
-| Статья | Журнал | Год | Значение |
+| Article | Journal | Год | Value |
 |--------|--------|-----|----------|
 | **Pan M et al.** — Centrosome-Signaling Pathway Crosstalk | Cytoskeleton | 2025 | Центросома ↔ сигнальные пути |
 | **Kiermaier E et al.** — Amplified centrosomes—more than just a threat | EMBO Rep | 2024 | Центросомы как сигнальные хабы |
@@ -206,7 +206,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **Клеточные переходы состояний:**
 
-| Статья | Журнал | Год |
+| Article | Journal | Год |
 |--------|--------|-----|
 | **Kukreja K et al.** — Cell state transitions decoupled from cell division | Nat Cell Biol | 2024 |
 | **González-Suárez P, Smit ME** — Flexibility or commitment: division vs differentiation | J Exp Bot | 2025 |
@@ -214,17 +214,17 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **Центриоли и РНК:**
 
-| Статья | Журнал | Год |
+| Article | Journal | Год |
 |--------|--------|-----|
 | **Fang J et al.** — PCM scaffold enables RNA localization to centrosomes | Mol Biol Cell | 2025 |
 | **Martinez A, Pearson CG** — Centriolar satellites regulate CEP350 mRNA localization | bioRxiv | 2026 |
 | **Pachinger C et al.** — Centriolar satellites: translation of centrosomal/ciliary proteins | J Cell Biol | 2025 |
 
-### 7.11. Маркеры центриолярной энтропии (2026-07-05)
+### 7.11. Markerы центриолярной энтропии (2026-07-05)
 
 > polyGlu — не сама энтропия, а **признак** накопленной энтропии. Более старые центриоли имеют больше polyGlu. Дополнительные маркеры:
 
-| Маркер | Изменение с возрастом | Значение |
+| Marker | Изменение с возрастом | Value |
 |--------|----------------------|----------|
 | **PolyGlu (GT335)** | ↑ | Признак структурной дезорганизации центриолярных микротрубочек |
 | **Длина центриоли** | ↑ | Центриоли удлиняются с возрастом — прогрессирующая структурная дезорганизация |
@@ -240,7 +240,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **Литературная поддержка (энтропийная теория старения — emerging mainstream):**
 
-| Статья | Журнал | Год | PMID |
+| Article | Journal | Год | PMID |
 |--------|--------|-----|------|
 | **Wu Z et al.** — The entropic view of aging: from thermodynamics to biology | Life Med | 2026 | **42388853** |
 | **Cummings SR, Hong N, Cohen AA** — Entropy and Human Aging | Aging Cell | 2025 | **41230623** |
@@ -248,7 +248,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 | **De Man R et al.** — Single-cell atlas: increased transcriptional entropy with age | Nat Commun | 2026 | **41571679** |
 | **Hong N et al.** — Entropy of Muscle Histology Predicts Mobility | Aging Cell | 2026 | **41724675** |
 
-**Значение:** CEDAR даёт энтропийной теории старения конкретный клеточный механизм — центриоль как физический носитель энтропии.
+**Value:** CEDAR даёт энтропийной теории старения конкретный клеточный механизм — центриоль как физический носитель энтропии.
 
 ### 7.8. Асимметричные деления: обе дочерние — стволовые, но с разной прогениторностью (2026-07-05)
 
@@ -256,15 +256,15 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 **Ключевая находка — Bener & Inaba (2026):**
 
-| Статья | Журнал | Год | PMID | Суть |
+| Article | Journal | Год | PMID | Суть |
 |--------|--------|-----|------|------|
 | **Bener MB, Slepchenko BM, Inaba M** — Asymmetric division sustains stem cell heterogeneity in Drosophila testicular niche | Commun Biol | 2026 | **42056503** | 🔑 **Асимметричное деление поддерживает гетерогенность СК** — обе дочерние остаются стволовыми, но с разными свойствами |
 | **Bunel B et al.** — Unequal mitochondrial segregation promotes asymmetric fates during neurogenesis | Nat Commun | 2025 | **41398154** | Неравная сегрегация митохондрий → асимметричные судьбы при нейрогенезе |
 | **Rodríguez-Correa E et al.** — Kinetics-based model of haematopoiesis reveals extrinsic regulation of skewed lineage output from stem cells | Nat Cell Biol | 2026 | **42185517** | HSC производят дочерние клетки с разным lineage bias |
-| **Ma B et al.** — Asymmetric histone inheritance regulates olfactory stem cell fates during regeneration | Nat Commun | 2026 | **41872193** | Асимметрия гистонов → разные судьбы дочерних СК |
+| **Ma B et al.** — Asymmetric histone inheritance regulates olfactory stem cell fates during regeneration | Nat Commun | 2026 | **41872193** | Asymmetry гистонов → разные судьбы дочерних СК |
 | **Bener MB, Inaba M** — Plasticity and stringency: rethinking stem cell division modes | Biochem Soc Trans | 2026 | **41626805** | Обзор: асимметричное деление ≠ всегда СК + диф. клетка |
 
-**Значение для CEDAR:** Это именно тот тип асимметрии, который предсказывает CEDAR. **polyGlu — не «повреждение», а маркер зрелости/функциональности центриоли.** Материнская центриоль (polyGlu-high) = более стабильная платформа для сборки CAASM (гипотетической структуры индукторов необратимой дифференцировки) → на ней собрано больше индукторов → дочерняя клетка получает более ограниченный прогениторный потенциал (готова к дифференцировке). Дочерняя центриоль (polyGlu-low) = меньше CAASM → дочерняя клетка сохраняет полный потенциал (более «стволовая»). **Обе — стволовые, но с разной степенью коммитированности.** Проблема возникает при ГИПЕР-глутамилировании в старости: избыточный polyGlu нарушает функцию центриоли — тогда обе дочерние клетки страдают.
+**Value для CEDAR:** Это именно тот тип асимметрии, который предсказывает CEDAR. **polyGlu — не «повреждение», а маркер зрелости/функциональности центриоли.** Материнская центриоль (polyGlu-high) = более стабильная платформа для сборки CAASM (гипотетической структуры индукторов необратимой дифференцировки) → на ней собрано больше индукторов → дочерняя клетка получает более ограниченный прогениторный потенциал (готова к дифференцировке). Дочерняя центриоль (polyGlu-low) = меньше CAASM → дочерняя клетка сохраняет полный потенциал (более «стволовая»). **Обе — стволовые, но с разной степенью коммитированности.** Проблема возникает при ГИПЕР-глутамилировании в старости: избыточный polyGlu нарушает функцию центриоли — тогда обе дочерние клетки страдают.
 
 **Предсказание CEDAR (исправленное):** В делениях GSC дрозофилы (модель Bener/Inaba) материнская центриоль (Ninein+, GT335-high) должна нести БОЛЬШЕ белков-индукторов дифференцировки (CAASM) и наследоваться дочерней СК с более ограниченным потенциалом. Дочерняя центриоль (GT335-low) — меньше CAASM → полный потенциал.
 
@@ -272,7 +272,7 @@ Strawbridge показал отсутствие асимметрии тольк�
 
 > Полный документ: `docs/EXPERIMENTAL_DESIGNS_2026-07-05.md`
 
-| Эксперимент | Цель | Модель | Бюджет | Статус |
+| Эксперимент | Цель | Model | Budget | Status |
 |-------------|------|--------|:------:|:------:|
 | **CCP1-KO** | Causality: polyGlu → HSC aging? | Vav-iCre × CCP1^fl/fl, n=50 мышей | ~$35K | Дизайн готов |
 | **Центросомный IP-MS** | CAASM: белки на центросоме при дифференцировке | HSC/MPP/Lin+, молодые vs старые, TMT-MS | ~$34K | Дизайн готов |
@@ -342,7 +342,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 ### 9.8. Additional Supporting References
 
-| Статья | Журнал | Год | DOI/PMID |
+| Article | Journal | Год | DOI/PMID |
 |--------|--------|-----|----------|
 | Gilloteaux et al. — Mitochondrial ultrastructure in differentiated SH-SY5Y | Ultrastruct Pathol | 2026 | 42159247 |
 | Eckhart et al. — Holocrine secretion | Cells | 2026 | 10.3390/cells15121058 |
@@ -366,27 +366,27 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 ## 10. SPERMIOGENESIS & MITOCHONDRIAL PROTEASES — New Evidence (2026-07-09)
 
-> **Дата анализа:** 2026-07-09 | **Источник:** 4 статьи из фида Джабы + широкий поиск по CrossRef/PubMed (20+ дополнительных статей)
+> **Date анализа:** 2026-07-09 | **Источник:** 4 статьи из фида Джабы + широкий поиск по CrossRef/PubMed (20+ дополнительных статей)
 > **Метод:** Верификация DOI через CrossRef API, абстрактов через PubMed/CrossRef, поиск родственной литературы.
 
 ---
 
 ### 10.1. ЧЕТЫРЕ ОСНОВНЫЕ СТАТЬИ
 
-| # | Статья | Журнал | DOI | Тип | Ссылок |
+| # | Article | Journal | DOI | Type | Ссылок |
 |---|--------|--------|-----|-----|--------|
 | 1 | **Zhou K, Ren K, An Y, Xia L, Cheng X** — The role of heterogeneous nuclear ribonucleoproteins in mammalian spermatogenesis: mechanisms and clinical implications | *Reproduction* (2026) | `10.1093/reprod/xaag066` | REVIEW | 66 |
 | 2 | **Mao B, Li SY, Dong WY, Wang YF** — *Slmap* Is Required For Spermiogenesis in *Drosophila melanogaster* | *Arch Insect Biochem Physiol* (2026) | `10.1002/arch.70186` | RESEARCH | 39 |
 | 3 | **Dominicci-Cotto C, Jenny A** — From syncytium to sperm: Coordinated membrane and cytoskeletal remodeling in *Drosophila* spermiogenesis | *Curr Top Dev Biol* (2026) 168:317–370 | `10.1016/bs.ctdb.2026.03.005` | REVIEW | 232 |
 | 4 | **Feng HW, Gao YL, Jiang BJ, Zubair M, Liu DT, …, Huo LJ** — ClpP Ensures Mitochondrial Integrity and Spermatocyte Meiotic Progression in Mice | *Andrology* (2026) | `10.1111/andr.70274` | RESEARCH | 17 |
 
-**Верификация:** Все 4 DOI подтверждены через CrossRef API + Semantic Scholar. Статья №3 имеет PubMed ID: 42097816. Все статьи реальны, 2026 года.
+**Верификация:** Все 4 DOI подтверждены через CrossRef API + Semantic Scholar. Article №3 имеет PubMed ID: 42097816. Все статьи реальны, 2026 года.
 
 ---
 
 ### 10.2. АНАЛИЗ ПО СТАТЬЯМ
 
-#### 🔴 Статья №4 — Feng et al. (2026): ClpP → митохондриальная целостность → мейоз
+#### 🔴 Article №4 — Feng et al. (2026): ClpP → митохондриальная целостность → мейоз
 
 **Суть:** ClpP (казеинолитическая пептидаза P) — митохондриальная протеаза контроля качества. Conditional KO (*Ddx4*-Cre^ERT2) в сперматоцитах мыши вызывает:
 - Уменьшение размера семенников, отсутствие зрелых сперматозоидов
@@ -394,9 +394,9 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 - Нормальный мейотический синапсис НО нарушенная рекомбинация: **↓RAD51 фокусов, аномальная локализация MLH1**
 - Элиминация пахитенных/диплотенных сперматоцитов и сперматид
 
-**Значение для MCARA/CEDAR:**
+**Value для MCARA/CEDAR:**
 
-| Аспект | Значение | Counter |
+| Аспект | Value | Counter |
 |--------|----------|--------|
 | **ClpP = митохондриальный протеостаз** | Митохондриальная протеаза контролирует cell fate (мейотическую рекомбинацию). Прямая демонстрация: **митохондриальный протеостаз → судьба клетки.** | Counter #3 + #5 |
 | **«Гигантские митохондрии»** | Морфологический фенотип, идентичный стареющим митохондриям в HSC. ClpP deficiency → mitochondrial swelling. | Counter #3 |
@@ -405,7 +405,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 **🔥 КЛЮЧЕВОЙ ВЫВОД:** ClpP — первый конкретный пример mitochondrial protease, чья потеря вызывает: (а) морфологические дефекты митохондрий, (б) нарушение ядерных процессов (рекомбинация), (в) клеточную гибель. **Прямая аналогия с MCARA Counter #3**: потеря митохондриального протеостаза → функциональный дефицит стволовых клеток.
 
-#### 🟡 Статья №2 — Mao et al. (2026): Slmap → спермиогенез → аксонема + митохондрии
+#### 🟡 Article №2 — Mao et al. (2026): Slmap → спермиогенез → аксонема + митохондрии
 
 **Суть:** Slmap (sarcolemma-associated protein) knockdown в ранней зародышевой линии дрозофилы →:
 - Аберрантные паракристаллические отложения в обоих митохондриальных дериватах
@@ -416,29 +416,29 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 - Транскриптомика: затронуты гены cuticle development, oxidative phosphorylation
 - **Апоптоз через Hid-Diap1 путь**
 
-**Значение для MCARA/CEDAR:**
+**Value для MCARA/CEDAR:**
 
-| Аспект | Значение | Связь |
+| Аспект | Value | Connection |
 |--------|----------|------|
 | **Мембранный белок → митохондрии + центриоли** | Slmap влияет на митохондриальные дериваты И на аксонему. Межкомпартментная связь. | **Counter #1 ↔ #3 crosstalk** |
 | **Паракристаллические отложения** | Сбой протеостаза в митохондриях → структурная патология. | Counter #3 + #5 |
 | **Потеря центральной пары аксонемы** | Прямой центриолярный дефект. | **Counter #1** |
 | **Hid-Diap1 апоптоз** | Структурные дефекты → caspase-зависимая клеточная смерть. | CEDAR: D_c → apoptosis |
 
-#### 🟡 Статья №3 — Dominicci-Cotto & Jenny (2026): Синцитий → сперматозоиды
+#### 🟡 Article №3 — Dominicci-Cotto & Jenny (2026): Синцитий → сперматозоиды
 
 **Суть:** Капитальный обзор (232 ссылки) мембранного и цитоскелетного ремоделирования при Drosophila спермиогенезе: от синцития до индивидуальных сперматозоидов. Coordinated membrane remodeling + actin dynamics + microtubule reorganization.
 
-**Значение для CEDAR:**
+**Value для CEDAR:**
 - Синцитий → индивидуальные клетки — аналогия: СК в нише → дифференцированные клетки.
 - Актиновый цитоскелет (Arp2/3, WASp) — regulated by centrosomes through Cdc42/Rac1/RhoA.
 - **232 references** — золотая жила. Рекомендуется ручной просмотр при доступе к полному тексту.
 
-#### 🟠 Статья №1 — Zhou et al. (2026): hnRNPs в сперматогенезе
+#### 🟠 Article №1 — Zhou et al. (2026): hnRNPs в сперматогенезе
 
 **Суть:** Обзор роли hnRNPs (РНК-связывающих белков) в сперматогенезе млекопитающих. 66 ссылок.
 
-**Значение:** Умеренная косвенная поддержка Counter #4 (эпигенетический/РНК-метаболизм).
+**Value:** Умеренная косвенная поддержка Counter #4 (эпигенетический/РНК-метаболизм).
 
 ---
 
@@ -446,7 +446,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 #### 🔴 КРИТИЧЕСКИ ВАЖНЫЕ
 
-| # | Статья | Журнал | Год | DOI/PMID | Значение |
+| # | Article | Journal | Год | DOI/PMID | Value |
 |---|--------|--------|-----|----------|----------|
 | 1 | **Yamada Y et al.** — Non-necroptotic MLKL function damages mitochondria and promotes HSC aging | *Nat Commun* | 2026 | `10.1038/s41467-026-71060-4` | 🔥 **Прямая связь: митохондриальные повреждения → HSC aging.** MLKL → mitochondria → impaired self-renewal. RIPK3-MLKL = ключевой медиатор HSC-старения. |
 | 2 | **Wani GA et al.** — Metabolic control of adult NSC self-renewal by mitochondrial protease YME1L | *Cell Rep* | 2022 | `10.1016/j.celrep.2022.110370` | 🔥 **YME1L → NSC self-renewal.** Параллель с ClpP: mitochondrial protease → stem cell fate — УНИВЕРСАЛЬНЫЙ ПРИНЦИП. |
@@ -456,7 +456,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 #### 🟡 ВАЖНЫЕ
 
-| # | Статья | Журнал | Год | DOI | Значение |
+| # | Article | Journal | Год | DOI | Value |
 |---|--------|--------|-----|-----|----------|
 | 6 | **Schumacher S et al.** — PARL is required for spermatogenesis | *Commun Biol* | 2024 | `10.1038/s42003-023-05703-3` | Третья митохондриальная протеаза → сперматогенез. PARL → PINK1. |
 | 7 | **Morganti C, Ito K** — Mitochondrial Contributions to HSC Aging | *Int J Mol Sci* | 2021 | `10.3390/ijms222011117` | Обзор митохондрий в старении HSC. |
@@ -472,7 +472,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 **Наблюдение:** Четыре митохондриальные протеазы независимо показаны как критические для cell fate:
 
-| Протеаза | Локализация | Модель | Фенотип потери | Ссылка |
+| Протеаза | Локализация | Model | Фенотип потери | Ссылка |
 |----------|-------------|--------|----------------|--------|
 | **ClpP** | Матрикс | Сперматоциты мыши | Гигантские митохондрии, ↓RAD51, гибель | Feng 2026 |
 | **YME1L** | Внутр. мембрана (i-AAA) | Нейральные СК | Нарушение self-renewal | Wani 2022 |
@@ -481,7 +481,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 **🔥 ГИПОТЕЗА ДЛЯ MCARA:** Митохондриальные протеазы (ClpP, YME1L, LONP1, PARL) образуют **протеостатическую ось**, чья дисфункция при старении → накопление повреждённых белков → mitochondrial dysfunction → нарушение cell fate. Универсальный механизм: HSC (Yamada 2026), NSC (Wani 2022, Wang 2023), сперматоциты (Feng 2026), лейкемические СК (Tcheng 2026).
 
-**Связь с CEDAR:** Два компартмента, где протеостаз критичен для cell fate:
+**Connection с CEDAR:** Два компартмента, где протеостаз критичен для cell fate:
 - **Центриоль:** polyGlu — признак энтропии; нет механизма ремонта
 - **Митохондрии:** ClpP/YME1L/LONP1 — протеостатический контроль; дисфункция → потеря cell fate control
 
@@ -491,7 +491,7 @@ PIWI expressed in Hydra, planarians, BMSCs — but no functional data in human H
 
 ### 10.5. СВЯЗЬ С CEDAR (Cell Death And Tissue Architecture)
 
-> **Примечание:** CEDAR — отдельный концепт (Cell Death And Tissue Architecture), не CEDAR. Связь через апоптотические пути.
+> **Примечание:** CEDAR — отдельный концепт (Cell Death And Tissue Architecture), не CEDAR. Connection через апоптотические пути.
 
 **Mao et al. (2026):** Slmap → Hid-Diap1 апоптоз. Структурная патология → programmed cell death.
 

@@ -1,5 +1,5 @@
 # MEMORY — ARGUS (CEDAR/Aubrey)
 
-**2026-06-16 (аудит pi):** CONCEPT.md наполнен (прочитан — 8.7KB существующий). ARGUS-LP сабмитнут в RSI.
-**2026-06-12:** Получен ответ от редактора RSI. Готовится ревизия.
-**2026-06-09:** Core-файлы достроены. STATE.md наполнен (171 байт → 187 байт).
+**2026-06-16 (audit pi):** CONCEPT.md filled (read — 8.7KB existing). ARGUS-LP submitted to RSI.
+**2026-06-12:** Received response from RSI editor. Revision being prepared.
+**2026-06-09:** Core files completed. STATE.md filled (171 bytes → 187 bytes).

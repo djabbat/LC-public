@@ -1,22 +1,22 @@
-# Ze_D — Ze-Дискордантность
+# Ze_D — Ze-Discordance
 
-**Родитель:** Ze → LC
-**Концепт:** Конфликт между Ze-подсистемами с разными моделями мира как универсальная мера болезни, старения и эволюционной сложности
+**Parent:** Ze → LC
+**Concept:** Conflict between Ze-subsystems with different world models as a universal measure of disease, aging, and evolutionary complexity
 
-D_Ze — нормированное расстояние Манхэттена между Ze-параметрами (v, τ, Z) двух подсистем.
+D_Ze — normalized Manhattan distance between Ze-parameters (v, τ, Z) of two subsystems.
 
-## Ключевые гипотезы
+## Key Hypotheses
 
-- **H₁:** D_Ze > 0.1 → избыток T-событий (Ze-трение) на границе
-- **H₂:** Биологический возраст = Σ w_ij · D_Ze(i, j)
-- **H₃:** D_Ze(гиппокамп, неокортекс) ≈ 0.22 — механизм обучения
-- **H₄:** D_Ze растёт с эволюционной сложностью
+- **H₁:** D_Ze > 0.1 → excess of T-events (Ze-friction) at the boundary
+- **H₂:** Biological age = Σ w_ij · D_Ze(i, j)
+- **H₃:** D_Ze(hippocampus, neocortex) ≈ 0.22 — learning mechanism
+- **H₄:** D_Ze increases with evolutionary complexity
 
-## Пороги
+## Thresholds
 
-| Состояние | D_Ze | F_Ze |
+| State | D_Ze | F_Ze |
 |-----------|:----:|:----:|
-| Здоровье | < 0.1 | < 0.05 |
-| Трение | 0.1–0.3 | 0.05–0.15 |
-| Конфликт | 0.3–0.5 | 0.15–0.3 |
-| Десинхроноз | > 0.5 | > 0.3 |
+| Health | < 0.1 | < 0.05 |
+| Friction | 0.1–0.3 | 0.05–0.15 |
+| Conflict | 0.3–0.5 | 0.15–0.3 |
+| Desynchronosis | > 0.5 | > 0.3 |

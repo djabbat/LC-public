@@ -1,5 +1,7 @@
 # PARAMETERS — CytogeneticTree
 
+**Version:** 1.0
+
 ## Experimental parameters
 
 | Parameter | Value | Units | Source | Status |
@@ -19,7 +21,7 @@
 | Biological replicates | ≥3 | clonal founder lines | per arm, per Impetus power calc | required |
 | Experimental arms | 6 | (Arm 0/1/2/3/4/4b + Rescue) | per Impetus LOI v25.1 | required |
 
-## Budget line items (from Impetus LOI v25.1 Phase A $92,000)
+## Budget line items (from Impetus LOI v135,600.1 Phase A $92,000)
 
 | Line | Amount | Notes |
 |------|--------|-------|
@@ -60,8 +62,6 @@
 
 The previously cited "Parrinello 2003" has been removed due to unresolved DOI/PMID. The O₂ value (3.0% ± 0.3%) is standard physiological hypoxia commonly used in cultured cell senescence studies (e.g., Packer & Fuehr 1977, J Gerontol; reviewed in Parrinello et al. 2003, but original source not essential for parameter). No uncited references remain.
 
-
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
-
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.
