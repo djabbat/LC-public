@@ -1,20 +1,20 @@
-# Aubrey — Карта проекта
+# Aubrey — Project Map
 
-## Структура
-- `CONCEPT.md` — концепция
-- `THEORY.md` — теория
-- `EVIDENCE.md` — доказательная база
-- `KNOWLEDGE.md` — накопленные знания
-- `DESIGN.md` — дизайн эксперимента
-- `STATE.md` — состояние проекта
-- `PARAMETERS.md` — параметры
-- `OPEN_PROBLEMS.md` — открытые вопросы
-- `README.md` — описание
-- `TODO.md` — задачи
-- `MAP.md` — карта (этот файл)
-- `MEMORY.md` — контекстная память
-- `refs/` — библиография (PMID)
-- `ARGUS/` — подпроект ARGUS (Centriolar Nano-Dissection Microscope)
+## Structure
+- `CONCEPT.md` — concept
+- `THEORY.md` — theory
+- `EVIDENCE.md` — evidence base
+- `KNOWLEDGE.md` — accumulated knowledge
+- `DESIGN.md` — experiment design
+- `STATE.md` — project state
+- `PARAMETERS.md` — parameters
+- `OPEN_PROBLEMS.md` — open questions
+- `README.md` — description
+- `TODO.md` — tasks
+- `MAP.md` — map (this file)
+- `MEMORY.md` — context memory
+- `refs/` — bibliography (PMID)
+- `ARGUS/` — subproject ARGUS (Centriolar Nano-Dissection Microscope)
 
-## Зависимости
+## Dependencies
 - CEDAR → CellLineageTree → Aubrey → ARGUS

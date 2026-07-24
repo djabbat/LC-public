@@ -1,3 +1,3 @@
 # STATE — Telomere
-**Date:** 2026-07-18
-**Status:** 🟡 Counter #2 MCARA. В разработке.
+**Date: 2026-07-24
+**Status:** 🟡 Counter #2 MCARA. Under development.

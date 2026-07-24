@@ -1,10 +1,9 @@
 # TODO — CEDAR Articles
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## Ближайшие задачи
-- [ ] Определить приоритеты
+## Upcoming tasks
+- [ ] Define priorities
 
-## Выполнено
-- [x] Инициализация core-файлов (2026-06-09)
-
+## Completed
+- [x] Initialization of core files (2026-06-09)

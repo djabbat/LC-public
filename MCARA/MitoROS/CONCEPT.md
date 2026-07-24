@@ -1,11 +1,15 @@
 # Mitochondrial ROS and mtDNA Damage as a Quantifiable Counter in a Multi-Counter Architecture of Replicative Aging
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md]()** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+
+**Type:** analysis only — see CONCEPT.md for details.
+> ⚠️ **See [../CORRECTIONS_2026-04-22.md]()** — some statements may be retracted. Canons updated 2026-04-22.
 
 
 **Authors:** [Author List — TBD]
 **Correspondence:** [Corresponding Author Email — TBD]
 **Date:** April 2026
+
+**Version:** 1.0
 **Pre-registration:** osf.io/TBD (planned 2026-07-01)
 
 **Pre-registration plan:** The pre-registration will be filed on the Open Science Framework (OSF) prior to data collection. The registered protocol will specify: (1) the primary hypothesis that the composite measure D₃(n,t) explains ≥90% of variance in mtDNA damage accumulation (R² ≥ 0.9); (2) the secondary hypothesis that tissue-specific weights w₃ differ significantly between muscle, heart, and liver; (3) the exact statistical tests (linear regression with F-test for primary, two-way ANOVA for secondary); (4) the sample sizes (N=15 per condition for pilot, N=30 per tissue for validation); (5) the stopping rule (data collection ceases when target N is reached, no interim analyses); (6) the exclusion criteria (outliers >3 SD from mean, technical failures in sequencing). The OSF registration ID will be `osf.io/TBD`, with a planned registration date of 2026-07-01. **Note:** This is a placeholder pre-registration plan. The actual pre-registration will be completed and registered on OSF prior to data collection, with the ID updated from `osf.io/TBD` to a permanent DOI.
@@ -19,16 +23,17 @@ Aging is characterized by the progressive accumulation of molecular and cellular
 
 
 
-## Статус
-🟡 В разработке. Полный текст статьи — см. `docs/MitoROS_full_paper_draft.md`.
+## Status
+🟡 In development. Full text of the article — see `docs/MitoROS_full_paper_draft.md`.
 
-## Суть
-Counter #3 в архитектуре MCARA: митохондриальный ROS и повреждение mtDNA как количественный счётчик репликативного старения. Кинетическое уравнение D₃(n,t) с тканеспецифичными весами.
+## Essence
+Counter #3 in the MCARA architecture: mitochondrial ROS and mtDNA damage as a quantitative counter of replicative aging. Kinetic equation D₃(n,t) with tissue-specific weights.
 
-## Связь с другими счётчиками
-- **Counter #1 (Centriolar/CEDAR):** Γ₁₃ — окислительный стресс → повреждение центриолей
-- **Counter #2 (Telomere):** Γ₂₃ — mtROS ускоряет укорочение теломер
-- **Counter #4 (EpigeneticDrift):** Γ₄₃ — mtDNA повреждения коррелируют с эпигенетическим дрейфом
+## Relationship with other counters
+- **Counter #1 (Centriolar/CEDAR):** Γ₁₃ — oxidative stress → damage to centrioles
+- **Counter #2 (Telomere):** Γ₂₃ — mtROS accelerates telomere shortening
+- **Counter #4 (EpigeneticDrift):** Γ₄₃ — mtDNA po
+вреждения коррелируют с эпигенетическим дрейфом
 - **Counter #5 (Proteostasis):** Γ₅₃ — окислительное повреждение белков
 
 ## Параметры
@@ -45,3 +50,25 @@ Counter #3 в архитектуре MCARA: митохондриальный ROS
 2. Пороговый эффект гетероплазмии
 3. Роль митофагии
 4. Межтканевая вариабельность
+
+## Consumables (annual)
+
+| **C. elegans maintenance** (NGM agar, OP50/NA22 bacteria, cholesterol, Petri dishes) | **$3,500** |
+| **RNAi/strain maintenance** (clones, IPTG, antibiotics, feeding plates) | **$2,000** |
+| **Cell culture** (DMEM/RPMI, FBS, pen/strep, trypsin, plastics) | **$8,000** |
+| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters) | **$3,000** |
+| **Transfection reagents** (Lipofectamine, siRNA oligos) | **$3,000** |
+| **Sequencing consumables** (library prep, flow cells) | **$12,000** |
+| **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
+| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas) | **$8,000** |
+| **Office consumables** (printing, stationery) | **$500** |
+
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

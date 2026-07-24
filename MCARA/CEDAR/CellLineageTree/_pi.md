@@ -1,33 +1,36 @@
 # pi — LC/MCARA/CEDAR/CellLineageTree
 
-> ## 🔴 ЖЕЛЕЗНОЕ ПРАВИЛО: ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
+> ## 🔴 IRON RULE: MEMORY BEFORE ACTION
 > 
-> **Перед любым действием (чтение файла, запуск команды, конвертация, ответ пользователю) — ОБЯЗАТЕЛЬНО прочитать:**
-> 1. `_pi.md` — этот файл (правила, структура, команды)
-> 2. `MAP.md` — карта проекта
-> 3. `MEMORY.md` — история решений, запреты, токены
+> **Before any action (reading a file, running a command, converting, responding to the user) — MANDATORY to read:**
+> 1. `_pi.md` — this file (rules, structure, commands)
+> 2. `MAP.md` — project map
+> 3. `MEMORY.md` — history of decisions, prohibitions, tokens
 > 
-> Нарушение → игнорирование памяти → потеря контекста → ошибки.
+> Violation → ignoring memory → loss of context → errors.
 > 
 > ---
 > 
-> **ПРАВИЛО PR:**
-> 1. Жанр ревью — **project** (не manuscript, не article).
-> 2. Каждый проект требует **нового состава рецензентов** при каждом цикле peer review. Reviewer пул ротируется принудительно.
-> 3. Состав рецензентов определяется **исходя из CONCEPT.md** проекта — темы, дисциплин, методов, упомянутых экспертов. Рецензенты подбираются под конкретный CONCEPT, не по шаблону.
+> **PR RULE:**
+> 1. Review genre — **project** (not manuscript, not article).
+> 2. Each project requires a **new set of reviewers** for each peer review cycle. The reviewer pool is forcibly rotated.
+> 3. The composition of reviewers is determined **based on the project's CONCEPT.md** — topics, disciplines, methods, mentioned experts. Reviewers are selected for the specific CONCEPT, not by template.
 
 
 **Parent:** LC/MCARA/CEDAR
 **CONCEPT.md:** CONCEPT.md
 **Created:** 2026-05-17
 
-## Описание
+## Description
 (no description available)
 
-## Ключевые файлы
-- CONCEPT.md — основной документ
-- STATE.md — статус
-- TODO.md — задачи
+## Key files
+- CONCEPT.md — main document
+- STATE.md — status
+- TODO.md — tasks
 
-## Связи
-- Родительский проект: LC/MCARA/CEDAR
+## Links
+- Parent project: LC/MCARA/CEDAR
+
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

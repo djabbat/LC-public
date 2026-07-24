@@ -2,38 +2,40 @@
 
 **Parent:** LC/MCARA/CEDAR
 
-> 🔴 **ПРАВИЛО: перед любым действием — прочитать этот файл.**
+> 🔴 **RULE: before any action — read this file.**
 
-## Идентификация
-- **Проект:** CEDAR-v2 Simulator
-- **Родительский проект:** LC (LongevityCommon) → MCARA → CEDAR
-- **Тип:** Python-пакет (pyproject.toml, setuptools)
-- **GitHub:** https://github.com/djabbat/CEDAR-sim (публичный, Apache 2.0 / GPL v3)
-- **Язык:** Python 3.10+
-- **Лицензия:** GPL v3
+## Identification
+- **Project:** CEDAR-v2 Simulator
+- **Parent project:** LC (LongevityCommon) → MCARA → CEDAR
+- **Type:** Python package (pyproject.toml, setuptools)
+- **GitHub:** https://github.com/djabbat/CEDAR-sim (public, Apache 2.0 / GPL v3)
+- **Language:** Python 3.10+
+- **License:** GPL v3
 
-## Назначение
-Стохастическая симуляционная модель истощения стволовых клеток через динамику центриолярного аппарата. Калибровка ABC-SMC, глобальный анализ чувствительности (Sobol GSA).
+## Purpose
+Stochastic simulation model of stem cell depletion through centriolar apparatus dynamics. Calibration ABC-SMC, global sensitivity analysis (Sobol GSA).
 
-## Связи
-- **LC/MCARA/CEDAR** — научная теория и концепт
-- **LC/MCARA/CEDAR/Aubrey** — применение модели в грантовых заявках
-- **PhD** — часть диссертационной работы
+## Links
+- **LC/MCARA/CEDAR** — scientific theory and concept
+- **LC/MCARA/CEDAR/Aubrey** — application of the model in grant proposals
+- **PhD** — part of dissertation work
 
-## Правила для pi
-1. Все изменения — через git
-2. Тесты перед коммитом: `python -m pytest tests/`
-3. Не менять сигнатуры публичного API без обновления README
-4. Python-стиль: black + isort
+## Rules for pi
+1. All changes — via git
+2. Tests before commit: `python -m pytest tests/`
+3. Do not change public API signatures without updating README
+4. Python style: black + isort
 
-## Быстрые команды
-```bash
-# Запуск тестов
+## Quick commands
+bash
+# Run tests
 cd ~/Desktop/LC/MCARA/CEDAR/simulator && python3 -m pytest tests/ -v
 
-# Установка в dev-режиме
+# Install in dev mode
 cd ~/Desktop/LC/MCARA/CEDAR/simulator && python3 -m pip install -e ".[dev]"
 
-# Запуск симуляции
+# Run simulation
 cd ~/Desktop/LC/MCARA/CEDAR/simulator && python3 -c "from cedar_sim import CEDARModel; m = CEDARModel(seed=42); trees = m.simulate_tree(max_generations=60, n_cells=200); print(m.compute_statistics(trees))"
-```
+
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

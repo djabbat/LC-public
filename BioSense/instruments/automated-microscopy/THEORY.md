@@ -1,28 +1,29 @@
 # THEORY — AutomatedMicroscopy
 
-## Формальная теоретическая основа
 
-### 1. Проблема — human shift overhead в live-cell microscopy
+## Formal Theoretical Foundation
 
-Traditional time-lapse microscopy требует continuous human oversight: ручная focus adjustment, manual field-of-view selection, visual inspection of cultures, media changes, intervention at anomalies.
+### 1. Problem — Human Shift Overhead in Live-Cell Microscopy
 
-В condiciях single-PI labs (as Georgia Longevity Alliance), 24/7 continuous supervision невозможно. Результат: **либо эксперименты ограничены рабочими часами (8-12h/day), либо закупается дорогое автоматизированное оборудование ($25-50k+)**.
+Traditional time-lapse microscopy requires continuous human oversight: manual focus adjustment, manual field-of-view selection, visual inspection of cultures, media changes, intervention at anomalies.
 
-### 2. Гипотеза
+In conditions of single-PI labs (as Georgia Longevity Alliance), 24/7 continuous supervision is impossible. Result: **either experiments are limited to working hours (8-12h/day), or expensive automated equipment is purchased ($25-50k+)**.
 
-**Теза:** Low-cost retrofit ($4,500) + AI agent в роли "night-shift lab technician" позволяет достичь industrial-grade 24/7 imaging без capital-intensive hardware.
+### 2. Hypothesis
 
-**Формальная аксиома M1 (Feasibility):**
-> Для class CEDAR-type experiments (time-lapse polyGlu intensity measurement on mother centrioles в BJ-hTERT fibroblasts), а AI agent (Claude Code в `/overnight` режиме) может выполнять supervisory function eq. quality к trained technician, при условиях:
+**Thesis:** Low-cost retrofit ($4,500) + AI agent in the role of "night-shift lab technician" allows achieving industrial-grade 24/7 imaging without capital-intensive hardware.
+
+**Formal Axiom M1 (Feasibility):**
+> For class CEDAR-type experiments (time-lapse polyGlu intensity measurement on mother centrioles in BJ-hTERT fibroblasts), an AI agent (Claude Code in `/overnight` mode) can perform a supervisory function equal in quality to a trained technician, under the conditions:
 > - **Well-defined PROMPT** (natural-language protocol)
-> - **Bounded autonomy** (pre-authorized routine actions + require-human-approval для strategic decisions)
-> - **Full journaling** (every decision logged с rationale, reproducible after-the-fact)
+> - **Bounded autonomy** (pre-authorized routine actions + require-human-approval for strategic decisions)
+> - **Full journaling** (every decision logged with rationale, reproducible after-the-fact)
 
-### 3. Prompt-driven supervision model
+### 3. Prompt-Driven Supervision Model
 
 Formalization of experimenter-AI interaction:
 
-```
+
 PROMPT: natural-language description of experiment goals
  ↓ parsed by Claude Code
 CRITERIA: concrete thresholds, metrics, conditions
@@ -31,24 +32,24 @@ OBSERVATIONS: image data, environmental sensors
  ↓ comparison to CRITERIA
 SIGNAL: INFO / WARN / CRIT → human
  OR continue_schedule autonomously
-```
+
 
 Bayesian decision-theoretic framing:
 
-```
-P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action | prompt)
-```
 
-где:
+P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action | prompt)
+
+
+where:
 - **prior P(action|prompt)** = "what would a trained technician do here"
 - **likelihood P(observation|action, prompt)** = expected outcome given protocol compliance
 - Decision: select action maximizing expected reward (experiment success ∩ biosafety ∩ human trust)
 
-### 4. Аксиомы subproject
+### 4. Axioms of Subproject
 
-**M1 (Feasibility):** AI-operated microscopy achieves ≥80% of trained-technician supervision quality для routine protocols, at <20% cost.
+**M1 (Feasibility):** AI-operated microscopy achieves ≥80% of trained-technician supervision quality for routine protocols, at <20% cost.
 
-**M2 (Interpretability):** Every AI decision must link к explicit PROMPT.md line + measurable observations. No "black-box" автономных actions без traceable rationale.
+**M2 (Interpretability):** Every AI decision must link to an explicit PROMPT.md line + measurable observations. No "black-box" autonomous actions without traceable rationale.
 
 **M3 (Bounded autonomy):** AI acts only within `auto_allow` policy list; `require_human_approval` gates preserve human strategic control; `forbidden` gates preserve biosafety.
 
@@ -65,13 +66,13 @@ P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action 
 - Signal generation to human experimenter per PROMPT.md
 
 **Out of scope (for Phase A):**
-- Physical cell manipulation (no liquid handling robot в Phase A)
-- Chamber opening для media change (manual, human task)
+- Physical cell manipulation (no liquid handling robot in Phase A)
+- Chamber opening for media change (manual, human task)
 - Novel imaging modalities (only standard epifluorescence)
 - Cross-lab federated coordination (that's FCLC scope)
 - Therapeutic intervention decisions (outside AI policy)
 
-### 6. Interfaces с другими подпроектами LC
+### 6. Interfaces with Other Subprojects LC
 
 | Subproject | Interface |
 |------------|-----------|
@@ -87,17 +88,17 @@ P(action | observation, prompt) ∝ P(observation | action, prompt) · P(action 
 3. **Cost per experiment:** ~$5k equipment amortization + ~$20 AI subscription per 6-month run = ~$5,020 per experimental cycle
 4. **Reliability:** 95%+ uptime target (UPS + redundant sensors + fail-safe policies)
 
-### 8. Falsification conditions
+### 8. Falsification Conditions
 
-Platform is **falsified / not-suitable** если:
-- Claude Code decisions deviate from trained-technician judgment >20% случаев (measured post-hoc blind review by independent scientist)
+Platform is **falsified / not-suitable** if:
+- Claude Code decisions deviate from trained-technician judgment >20% of cases (measured post-hoc blind review by independent scientist)
 - Hardware uptime <80% over first 60 days
 - Contamination rate >10% per experimental run (vs typical 1-3% in standard microscopy)
 - User (Jaba) abandons autonomous mode after 1 month (too stressful, too much supervision needed)
 
-### 9. Связь с MCARA framework
+### 9. Connection to MCARA Framework
 
-AutomatedMicroscopy — **instrumental layer** не theoretical counter. Но сам факт его существования enables MCARA framework operationally: без 24/7 imaging infrastructure невозможно собрать данные для temporal dynamics D_i(n, t) разных counter'ов.
+AutomatedMicroscopy — **instrumental layer** not theoretical counter. But the fact of its existence enables MCARA framework operationally: without 24/7 imaging infrastructure, it is impossible to collect data for temporal dynamics D_i(n, t) of different counters.
 
-Без AutomatedMicroscopy → MCARA остаётся теоретической абстракцией.
-С AutomatedMicroscopy → MCARA получает эмпирический substrate.
+Without AutomatedMicroscopy → MCARA remains a theoretical abstraction.
+With AutomatedMicroscopy → MCARA gets an empirical substrate.

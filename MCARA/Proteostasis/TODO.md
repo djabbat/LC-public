@@ -1,20 +1,20 @@
 # Proteostasis — TODO
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
-> ⚠️ **2026-07-12:** Предыдущий TODO.md был шаблонным (с вымышленными именами и датами 2025 г.). Заменён на актуальный.
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> ⚠️ **2026-07-12:** The previous TODO.md was a template (with fictitious names and dates from 2025). Replaced with the current one.
 
-## Статус
-🟡 In Development (MCARA Counter #5). Приостановлен по 90-DAY RECOVERY PLAN до 8 окт 2026.
+## Status
+🟡 In Development (MCARA Counter #5). Suspended under the 90-DAY RECOVERY PLAN until Oct 8, 2026.
 
-## Актуальные задачи
+## Current Tasks
 
 | Priority | Task | Deadline | Owner |
 |----------|------|----------|-------|
-| P1 | Обзор литературы: протеостаз и старение | 2026-10-15 | Джаба |
-| P1 | Формализация Counter #5 в MCARA | 2026-11-01 | Джаба |
-| P2 | Экспериментальный дизайн | 2026-12-01 | TBD |
+| P1 | Literature review: proteostasis and aging | 2026-10-15 | Jaba |
+| P1 | Formalization of Counter #5 in MCARA | 2026-11-01 | Jaba |
+| P2 | Experimental design | 2026-12-01 | TBD |
 
-## Заморожено
-- Экспериментальные протоколы (до Q1 2027)
-- База данных (до Q1 2027)
-- ML-модели (до Q2 2027)
+## Frozen
+- Experimental protocols (until Q1 2027)
+- Database (until Q1 2027)
+- ML models (until Q2 2027)

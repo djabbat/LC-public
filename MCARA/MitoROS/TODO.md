@@ -1,6 +1,6 @@
 # MitoROS — TODO
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
 ## Goals & Tasks
 

@@ -40,3 +40,5 @@ EpigeneticDrift investigates age-related changes in DNA methylation patterns acr
 ### P0 — Critical (must be completed after previous milestone)
 - [ ] **Define core epigenetic drift markers** — identify top 50 CpG sites consistently associated with age across at least 3 independent blood datasets. (P0, due after project initiation)
 - [
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

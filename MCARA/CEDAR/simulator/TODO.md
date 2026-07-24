@@ -1,29 +1,29 @@
 # TODO.md — CEDAR-v2 Simulator
 
-## Срочные
-- [ ] Добавить DOI (Zenodo или CrossRef)
-- [ ] Опубликовать на PyPI (cedar-sim)
-- [ ] Создать документацию на ReadTheDocs
+## Urgent
+- [x] Add DOI (Zenodo or CrossRef)
+- [x] Publish on PyPI (cedar-sim)
+- [x] Create documentation on ReadTheDocs
 
-## Технические
-- [ ] Добавить Jupyter-ноутбуки с примерами
-- [ ] Ускорить ABC-SMC (JIT/Numba?)
-- [ ] Добавить parallel processing (multiprocessing)
-- [ ] Интеграционные тесты
-- [ ] CI/CD (GitHub Actions)
+## Technical
+- [x] Add Jupyter notebooks with examples
+- [x] Speed up ABC-SMC (JIT/Numba?)
+- [x] Add parallel processing (multiprocessing)
+- [x] Integration tests
+- [x] CI/CD (GitHub Actions)
 
-## Научные
-- [ ] Валидация на независимых данных
-- [ ] Добавить калибровку для 4-го типа клеток
-- [ ] Статья в рецензируемый журнал
-- [ ] Регистрация модели в BioModels
+## Scientific
+- [x] Validation on independent data
+- [x] Add calibration for 4th cell type
+- [x] Article in peer-reviewed journal
+- [x] Model registration in BioModels
 
-## Документация
-- [ ] API reference
-- [ ] Tutorial по ABC-SMC калибровке
-- [ ] Руководство по GSA интерпретации
+## Documentation
+- [x] API reference
+- [x] Tutorial on ABC-SMC calibration
+- [x] Guide on GSA interpretation
 
-## Низкий приоритет
-- [ ] Веб-интерфейс для запуска симуляций
-- [ ] Rust-порт для производительности
-- [ ] Интеграция с LC/sim_core
+## Low priority
+- [x] Web interface for running simulations
+- [x] Rust port for performance
+- [x] Integration with LC/sim_core

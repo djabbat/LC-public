@@ -1,82 +1,84 @@
 # PARAMETERS — Aubrey (ARGUS-LP)
 
-> **⚠️ ОБНОВЛЕНО 2026-06-27:** версия 2.0. Иммерсия — водяная (не масляная). Управление — RasPi 5 снаружи. BSL-1.
-> **Предыдущая версия (v1.0, 2026-05-15):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, BSL-2. Архив: `ARGUS/_archive/`.
-> **Актуальный BOM:** `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md`
+**Version:** 1.0
 
-## Оптический тракт (v2.0, V1/V2)
+> **⚠️ UPDATED 2026-06-27:** version 2.0. Immersion — water (not oil). Control — RasPi 5 outside. BSL-1.
+> **Previous version (v1.0, 2026-05-15):** 100× Oil, sCMOS ORCA-Flash4, RTX 4090, BSL-2. Archive: `ARGUS/_archive/`.
+> **Current BOM:** `~/Desktop/Marketing/ARGUS-LP/docs/correspondence/ARGUS_LP_components_attachment_2026-06-27.md`
 
-| Параметр | V1 (без лазеров) | V2 (с лазерами) |
+## Optical Path (v2.0, V1/V2)
+
+| Parameter | V1 (without lasers) | V2 (with lasers) |
 |----------|:---:|:---:|
-| Объектив | 40×/0.95 NA Plan Apo сухой | 60×/1.2 NA Plan Apo Water Immersion |
-| Иммерсия | Воздух | Вода (collar + шприцевой насос 0.1 мл/ч) |
-| Камера | RasPi HQ (Sony IMX477) | sCMOS (PCO.panda 4.2 / ZWO ASI183MM Pro) |
-| Флуорофоры | Centrin1-GFP (488/525), Cep164-RFP (561/605) | То же + mEos3.2 (405 photoconversion) |
-| Дихроик | GFP/RFP dual-band (Semrock Di01-R488/561) | 405/488/561 combiner |
-| Эмиссия GFP | 525/50 bandpass | То же |
-| Эмиссия RFP | 605/70 bandpass | То же |
-| Возбуждение | LED 488 + LED 561 | Лазер 488 CW 50 mW + 561 DPSS 50 mW |
-| Фотоконверсия | — | 405 nm pulsed 100 mW + гальво-сканер |
+| Objective | 40×/0.95 NA Plan Apo dry | 60×/1.2 NA Plan Apo Water Immersion |
+| Immersion | Air | Water (collar + syringe pump 0.1 ml/h) |
+| Camera | RasPi HQ (Sony IMX477) | sCMOS (PCO.panda 4.2 / ZWO ASI183MM Pro) |
+| Fluorophores | Centrin1-GFP (488/525), Cep164-RFP (561/605) | Same + mEos3.2 (405 photoconversion) |
+| Dichroic | GFP/RFP dual-band (Semrock Di01-R488/561) | 405/488/561 combiner |
+| GFP emission | 525/50 bandpass | Same |
+| RFP emission | 605/70 bandpass | Same |
+| Excitation | LED 488 + LED 561 | Laser 488 CW 50 mW + 561 DPSS 50 mW |
+| Photoconversion | — | 405 nm pulsed 100 mW + galvo-scanner |
 
-## Столик
+## Stage
 
-| Параметр | Значение |
+| Parameter | Value |
 |----------|----------|
-| Тип | XY моторизованный, NEMA 11 ×2 + TMC2208 |
-| Ход | 50×50 мм |
-| Z-фокус | NEMA 11 stepper + lead screw, автофокус (Laplacian variance) |
-| Повторяемость | ≤1 μm RMS (цель) |
+| Type | XY motorized, NEMA 11 ×2 + TMC2208 |
+| Travel | 50×50 mm |
+| Z-focus | NEMA 11 stepper + lead screw, autofocus (Laplacian variance) |
+| Repeatability | ≤1 μm RMS (target) |
 
-## Среда
+## Environment
 
-| Параметр | Значение |
+| Parameter | Value |
 |----------|----------|
-| O₂ | 2% (LuminOx сенсор + N₂ продувка) |
-| CO₂ | 5% (Sensirion SCD30 + баллончик 16g) |
-| Температура | 37±0.3°C (Peltier TEC1-12706 ×2 + PID) |
-| Влажность | >95% RH (испарительный поддон) |
-| Корпус | Алюминий 40×30×30 см, герметичный, лазерозащищённый (V2: OD6+ Class 3B) |
+| O₂ | 2% (LuminOx sensor + N₂ purge) |
+| CO₂ | 5% (Sensirion SCD30 + 16g cartridge) |
+| Temperature | 37±0.3°C (Peltier TEC1-12706 ×2 + PID) |
+| Humidity | >95% RH (evaporative tray) |
+| Enclosure | Aluminum 40×30×30 cm, sealed, laser-protected (V2: OD6+ Class 3B) |
 
-## Управление и хранение (снаружи корпуса)
+## Control and Storage (outside enclosure)
 
-| Параметр | Значение |
+| Parameter | Value |
 |----------|----------|
-| Компьютер | Raspberry Pi 5 (8 GB) |
-| Хранилище | SSD 1 TB USB3 (Samsung T7) |
-| Софт | Python + picamera2, CellPose v3, spotiflow |
-| AI | Rule-based классификатор (red/green ratio). Без LLM, без API. |
+| Computer | Raspberry Pi 5 (8 GB) |
+| Storage | SSD 1 TB USB3 (Samsung T7) |
+| Software | Python + picamera2, CellPose v3, spotiflow |
+| AI | Rule-based classifier (red/green ratio). No LLM, no API. |
 
-## Защита (V2)
+## Protection (V2)
 
-| Параметр | Значение |
+| Parameter | Value |
 |----------|----------|
-| Научная камера | Эмиссионный фильтр OD6+ + дихроик OD4+ + механический затвор (Uniblitz LS2) |
-| Камеры наблюдения | Notch-фильтры 405/488/561 OD4+ ×2 |
-| Лазерная безопасность | Class 3B: интерлок на крышку, ключ-выключатель, защитные очки OD6+ |
+| Scientific camera | Emission filter OD6+ + dichroic OD4+ + mechanical shutter (Uniblitz LS2) |
+| Surveillance cameras | Notch filters 405/488/561 OD4+ ×2 |
+| Laser safety | Class 3B: lid interlock, key switch, safety goggles OD6+ |
 
-## Биология
+## Biology
 
-| Параметр | Значение |
+| Parameter | Value |
 |----------|----------|
-| Клетки | BJ-hTERT (ATCC CRL-4001), P25→P50 |
-| O₂ при культивировании | 2% (физиологическая гипоксия) |
-| Маркеры | Centrin1-GFP + Cep164-RFP (аденовирус, BSL-1) |
+| Cells | BJ-hTERT (ATCC CRL-4001), P25→P50 |
+| O₂ during cultivation | 2% (physiological hypoxia) |
+| Markers | Centrin1-GFP + Cep164-RFP (adenovirus, BSL-1) |
 
-## Приёмочные критерии
+## Acceptance Criteria
 
-| Критерий | Порог |
+| Criterion | Threshold |
 |----------|:----:|
-| SNR на бусах | ≥5× фон |
-| Z-дрейф | ≤100 nm за 24 ч |
-| Температура | 37±0.3°C за 48 ч |
-| CO₂ | 5±0.5% за 48 ч |
-| Viability (48 ч) | ≥90% от unilluminated control |
-| Деления за 48 ч | ≥2 на клетку |
-| Asymmetry Ratio (цель) | A ≥ 0.6 → Phase 2 / A < 0.6 → null result публикация |
+| SNR on beads | ≥5× background |
+| Z-drift | ≤100 nm over 24 h |
+| Temperature | 37±0.3°C over 48 h |
+| CO₂ | 5±0.5% over 48 h |
+| Viability (48 h) | ≥90% of unilluminated control |
+| Divisions per 48 h | ≥2 per cell |
+| Asymmetry Ratio (target) | A ≥ 0.6 → Phase 2 / A < 0.6 → null result publication |
 
-## Бюджет
+## Budget
 
-| Версия | Сумма |
+| Version | Amount |
 |--------|:----:|
-| V1 (без лазеров, 35 позиций) | ~$2,045 |
-| V2 (с лазерами, 54 позиции) | ~$5,945–6,540 |
+| V1 (without lasers, 35 items) | ~$2,045 |
+| V2 (with lasers, 54 items) | ~$5,945–6,540 |

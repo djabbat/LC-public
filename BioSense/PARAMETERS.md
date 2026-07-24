@@ -1,5 +1,7 @@
 # BioSense — Parameters
 
+**Version:** 2.0
+
 ## General Parameters
 | Parameter | Value | Description |
 |-----------|-------|-------------|

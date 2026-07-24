@@ -1,39 +1,39 @@
 # Organismal Aging — MEMORY
 
-**Дата:** 2026-06-21
+**Date:** 2026-06-21
 
 ---
 
-## Решение #1: Создание проекта Organismal Aging
+## Decision #1: Creating the Organismal Aging Project
 
-**Дата:** 2026-06-21
-**Инициатор:** Джаба
-**Контекст:** Рабочая сессия с pi
+**Date:** 2026-06-21
+**Initiator:** Dzhaba
+**Context:** Working session with pi
 
-**Решения:**
-1. Название: **Organismal Aging** (не Organizmal)
-2. Место: в составе **LC** как единый интегратор
-3. Старение — **основа всех заболеваний** (aging-driven, не age-associated)
-4. **Самообучающийся 4D-симулятор** (3D + время) с физическим роботом ARGUS-LP
-5. **Три уровня:** Центриоль → 5 счётчиков MCARA → Ткани + Ze-конфликты
-6. **8 базовых тканей** с возможностью расширения
-7. **Универсальность видов:** человек, мышь, C. elegans, одноклеточные
-8. **piRNA (#6) исключён из v1.0** — оставлен как слот расширения
-9. **Лицензия:** Apache 2.0
-10. **Открытый проект** — весь код, данные, железо (ARGUS-LP)
+**Decisions:**
+1. Name: **Organismal Aging** (not Organizmal)
+2. Location: within **LC** as a single integrator
+3. Aging — **the basis of all diseases** (aging-driven, not age-associated)
+4. **Self-learning 4D simulator** (3D + time) with physical robot ARGUS-LP
+5. **Three levels:** Centriole → 5 MCARA counters → Tissues + Ze conflicts
+6. **8 basic tissues** with expansion capability
+7. **Species universality:** human, mouse, C. elegans, unicellular organisms
+8. **piRNA (#6) excluded from v1.0** — left as an expansion slot
+9. **License:** Apache 2.0
+10. **Open project** — all code, data, hardware (ARGUS-LP)
 
-**Джаба дословно:** «Симулятор с роботом, который тестирует гипотезы на физических симуляторах типа INFOGEST, самообучается, создаёт модель организма во времени и пространстве, его развитие с зиготы и возрастными изменениями, возможными травмами, другими заболеваниями, микробиомом и макробиомом.»
+**Dzhaba verbatim:** "A simulator with a robot that tests hypotheses on physical simulators like INFOGEST, self-learns, creates a model of the organism in time and space, its development from zygote and age-related changes, possible injuries, other diseases, microbiome and macrobioime."
 
 ---
 
-## Решение #2: Объединение LC в единый проект
+## Decision #2: Merging LC into a Single Project
 
-**Дата:** 2026-06-21
-**Инициатор:** Джаба
+**Date:** 2026-06-21
+**Initiator:** Dzhaba
 
-**Решение:** LC перестаёт быть «экосистемой подпроектов». Все бывшие подпроекты (CEDAR, MCARA, Ze, BioSense, FCLC, HAP) — компоненты единой системы Organismal Aging. Старые CONCEPT.md → архив.
+**Decision:** LC ceases to be an "ecosystem of subprojects." All former subprojects (CEDAR, MCARA, Ze, BioSense, FCLC, HAP) — components of the unified Organismal Aging system. Old CONCEPT.md → archive.
 
-**Структура:** `sim_core/` (Rust) — ядро. `argus_bridge/`, `infogest_bridge/` — физические мосты. `biosense/`, `fclc/`, `hap/` — обеспечивающие компоненты.
+**Structure:** `sim_core/` (Rust) — core. `argus_bridge/`, `infogest_bridge/` — physical bridges. `biosense/`, `fclc/`, `hap/` — supporting components.
 
 ---
 

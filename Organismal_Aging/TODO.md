@@ -1,12 +1,12 @@
 # Organismal Aging — TODO
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-**Дата:** 2026-06-21
+**Date:** 2026-06-21
 
 ---
 
-## 🔴 Phase 0: Core-файлы + Архитектура (Q3 2026)
+## 🔴 Phase 0: Core files + Architecture (Q3 2026)
 
 - [x] CONCEPT.md v2.0 ✅
 - [x] THEORY.md v1.0 ✅
@@ -19,49 +19,49 @@
 - [ ] _pi.md
 - [ ] OPEN_PROBLEMS.md
 - [ ] DESIGN.md
-- [ ] Архивация старых CONCEPT.md подпроектов → `_archive/subprojects_concepts/`
-- [ ] Архитектурное решение: миграция cell_dt + mcoa → sim_core
+- [ ] Archiving old CONCEPT.md subprojects → `_archive/subprojects_concepts/`
+- [ ] Architectural decision: migration cell_dt + mcoa → sim_core
 
-## 🟡 Phase 1: Ядро sim_core (Q4 2026)
+## 🟡 Phase 1: sim_core core (Q4 2026)
 
-- [ ] `sim_core/Cargo.toml` + структура крейта
-- [ ] `centriole/` — Уровень #1: энтропия, деление, polyGlu
-- [ ] `counters/` — Уровень #2: 5 счётчиков + агрегатор L_tissue
-- [ ] Интеграция с существующим кодом cell_dt + mcoa
-- [ ] Тесты: центриоль, счётчики, интеграция
-- [ ] Бенчмарк: 120 лет за < 10 минут
+- [ ] `sim_core/Cargo.toml` + crate structure
+- [ ] `centriole/` — Level #1: entropy, division, polyGlu
+- [ ] `counters/` — Level #2: 5 counters + L_tissue aggregator
+- [ ] Integration with existing cell_dt + mcoa code
+- [ ] Tests: centriole, counters, integration
+- [ ] Benchmark: 120 years in < 10 minutes
 
-## 🟡 Phase 2: Ткани + Ze + Онтогенез (Q1 2027)
+## 🟡 Phase 2: Tissues + Ze + Ontogenesis (Q1 2027)
 
-- [ ] `tissue/` — 8 тканей с τ_renewal, w_i, L_crit
+- [ ] `tissue/` — 8 tissues with τ_renewal, w_i, L_crit
 - [ ] `tissue/ze_conflict.rs` — Z_conflict(i,j,t)
-- [ ] `organism/development.rs` — зигота → эмбрион → взрослый
-- [ ] `microbiome/` — кишечник, кожа, рот
-- [ ] `macrobiome/` — INFOGEST-совместимая модель
-- [ ] `spatial/` — 3D-анатомия (базовая)
+- [ ] `organism/development.rs` — zygote → embryo → adult
+- [ ] `microbiome/` — gut, skin, mouth
+- [ ] `macrobiome/` — INFOGEST-compatible model
+- [ ] `spatial/` — 3D anatomy (basic)
 
-## 🟡 Phase 3: Самообучение + ARGUS (Q2 2027)
+## 🟡 Phase 3: Self-learning + ARGUS (Q2 2027)
 
-- [ ] `learning/bayesian.rs` — MCMC обновление параметров
-- [ ] `argus_bridge/` — протокол, команды, парсинг
-- [ ] `infogest_bridge/` — стандартный протокол INFOGEST
-- [ ] Цикл: гипотеза → ARGUS → результат → обновление
+- [ ] `learning/bayesian.rs` — MCMC parameter update
+- [ ] `argus_bridge/` — protocol, commands, parsing
+- [ ] `infogest_bridge/` — standard INFOGEST protocol
+- [ ] Cycle: hypothesis → ARGUS → result → update
 
-## 🟢 Phase 4: Виды + Веб (Q3 2027)
+## 🟢 Phase 4: Species + Web (Q3 2027)
 
-- [ ] `species/human.rs` — базовая параметризация
-- [ ] `species/mouse.rs` — мышь
+- [ ] `species/human.rs` — basic parameterization
+- [ ] `species/mouse.rs` — mouse
 - [ ] `species/celegans.rs` — C. elegans
-- [ ] `species/unicellular.rs` — одноклеточные (без центриолей)
-- [ ] `sim_gui/` — Phoenix LiveView, 4D-визуализация
+- [ ] `species/unicellular.rs` — unicellular (without centrioles)
+- [ ] `sim_gui/` — Phoenix LiveView, 4D visualization
 - [ ] `sim_py/` — Python bindings
 
-## 🔵 Phase 5: Валидация + Публикация (Q4 2027)
+## 🔵 Phase 5: Validation + Publication (Q4 2027)
 
-- [ ] Калибровка на GTEx
-- [ ] Валидация Z_conflict
-- [ ] Статья → *Nature Computational Science*
-- [ ] Открытый релиз v1.0
+- [ ] Calibration on GTEx
+- [ ] Validation of Z_conflict
+- [ ] Article → *Nature Computational Science*
+- [ ] Open release v1.0
 
 ---
 

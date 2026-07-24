@@ -1,11 +1,10 @@
 # Epigenetic Drift as a Quantifiable Counter in the Multi-Counter Architecture of Organismal Aging (MCARA): Counter #4
 
-> ⚠️ **См. [../CORRECTIONS_2026-04-22.md]()** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
+**Version:** 1.0
 
+> ⚠️ **See [../CORRECTIONS_2026-04-22.md]()** — some statements may be retracted. Canons updated 2026-04-22.
 
 **Authors:** [Author List]
-
-
 
 ## Abstract
 
@@ -22,7 +21,8 @@ This document provides the formal conceptual definition, kinetic model, and vali
 ## 2. Counter Identity and Biological Foundations
 
 **2.1. Definition of the Counter**
-Counter #4, Epigenetic Drift, quantifies the progressive, age-associated deviation from a youthful epigenetic state. Its readout (*D₄*) is a composite metric of epigenetic integrity, where an increase signifies greater drift and biological age. The primary molecular layers captured include:
+Counter #4, Epigenetic Drift, quantifies the progressive, age-associated deviation from a youthful epigenetic state. Its readout (*D₄*) is a composite metric of epigenetic integrity, where an increase sign
+ifies greater drift and biological age. The primary molecular layers captured include:
 * **DNA Methylation:** The most established layer, characterized by hypermethylation at specific CpG islands (often polycomb group target genes) and hypomethylation at others, forming the basis of most epigenetic clocks (Horvath 2013, PMID: 24138928; Lu et al. 2019, PMID: 30669119).
 * **Chromatin Accessibility and Architecture:** Age-related changes in the opening and closing of chromatin regions, which can be quantified independently of methylation (e.g., ATAC-clock) and may offer more direct functional insights (Morandini et al. 2024, PMID: 37924441).
 * **Histone Modification Landscapes:** Drift in the genomic distribution of activating (e.g., H3K4me3, H3K27ac) and repressive (e.g., H3K9me3, H3K27me3) histone marks, which is particularly pronounced in aging stem cells (Adelman et al. 2019, PMID: 31085557; Deng et al. 2021, PMID: 33571444).
@@ -438,3 +438,13 @@ Brief responses к key reviewer concerns. Full implementation in 2026 Q3 grant s
 - **DMP:** All raw data → GEO/Zenodo deposits with DOI. Analysis code → GitHub (private during writing, public on publication).
 
 Full peer-review-grade resolution: see parent `LC/MCARA/CONCEPT.md` TBPR v2 Resolution Map.
+
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

@@ -90,3 +90,5 @@ BioSense is a biosensor data analysis platform that ingests real-time physiologi
 - `MAP.md` and `MEMORY.md` are optional; if they exist, they must be read before any action.
 - All changes to the pipeline must be reflected in `MEMORY.md` to maintain context.
 - For questions, refer to `CONCEPT.md` or contact the project lead.
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

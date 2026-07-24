@@ -1,12 +1,12 @@
-**Последнее обновление:** 2026-07-05 (аудит pi — Цикл 6)
+**Last update: 2026-07-24
 
 # STATE — BioSense / Automated Microscopy
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-**Дата:** 2026-06-15 (аудит pi)
-**Статус:** 🟡 Инструмент
+**Date: 2026-07-24
+**Status:** 🟡 Instrument
 
-- Подпроект LC/BioSense/instruments
-- Автоматизированная микроскопия
-- Git: ✅ (через LC)
+- Subproject LC/BioSense/instruments
+- Automated microscopy
+- Git: ✅ (through LC)
