@@ -95,7 +95,7 @@ Application of Bradford Hill criteria to the hypothesis of asymmetric centriole 
 ### Why single-clock theories are insufficient
 
 - **Bodnar (1998, PMID 9454332):** hTERT extends lifespan ≥20 doublings with normal karyotype. But telomerase alone is not enough: subsequent studies (Morales 1999, Counter 1998) showed that hTERT does not provide full immortalization in all cell types.
-- **Parrinello (2003, PMID 12855956):** mouse fibroblasts — 20% O₂ → senescence, 3% O₂ → immortalization. Human cells at 3% O₂ — no (separate data, extrapolation from Parrinello + Forsyth 2003 PMID 12730145)
+- **Parrinello (2003, PMID 12855956):** mouse fibroblasts — 20% O₂ → senescence, 3% O₂ → immortalization. Human cells at 3% O₂ — no (separate data, estimate based on Parrinello + Forsyth 2003 PMID 12730145)
 - **Wagner (2013, PMID 23080539):** TERT does NOT prevent SA-DNAm
 - **Passanisi/Spencer (2026, PMID 41816297):** telomeres do NOT predict senescence at single-cell level
 
