@@ -534,3 +534,8 @@ Full peer-review-grade resolution: see parent `LC/MCARA/CONCEPT.md` TBPR v2 Reso
 ## Hypothesis
 
 *To be specified — see project documentation.*
+
+
+## Budget
+
+*See PARAMETERS.md.*
