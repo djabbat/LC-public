@@ -70,7 +70,7 @@ We acknowledge the following limitations of the current model and framework:
 
 1. **Lack of empirical calibration:** All parameters in the kinetic equation for D₅(n, t) (α₅, β₅, τ₅, n₅*) are derived from literature. No experimental data have been used to fit or validate these values. The model remains qualitative until such calibration is performed.
 2. **Assumption of zero coupling by default:** The coupling matrix Γ is assumed to have zero off-diagonal entries unless explicitly quantified. This may underestimate interactions between proteostasis collapse and other aging counters (e.g., mitochondrial dysfunction, epigenetic drift).
-3. **Tissue specificity is underdetermined:** The model predicts tissue-specific weights, but we lack systematic data across human tissues. Extrapolation from mouse models may not fully capture human biology.
+3. **Tissue specificity is underdetermined:** The model predicts tissue-specific weights, but we lack systematic data across human tissues. Estimation from mouse models may not fully capture human biology.
 4. **No clinical validation:** The framework has not been tested in human clinical cohorts. Predictions about disease progression or intervention outcomes are speculative.
 5. **Simplified kinetics:** The equation assumes a single critical threshold n₅* and a single time constant τ₅, whereas real proteostasis networks involve multiple interacting components with distinct dynamics.
 6. **Neglect of stochasticity:** The model is deterministic and does not account for cell-to-cell variability or stochastic fluctuations in protein homeostasis.
