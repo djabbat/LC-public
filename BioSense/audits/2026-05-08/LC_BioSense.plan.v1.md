@@ -1,86 +1,86 @@
-# План улучшений BioSense
+# BioSense Improvement Plan
 
-## P0 — Блокеры (без них проект неприемлем для production)
+## P0 — Blockers (without them the project is unacceptable for production)
 
-### P0.1 Единый источник истины для v* и констант
-- Создать `config/constants.toml` с v*_active, f_opt, параметрами датасетов.
-- Rust: генерировать `src/constants.rs` через `build.rs` (или читать `.toml` через `serde`).
-- Python: читать тот же файл или импортировать из `constants.py`, который парсит `.toml`.
-- Удалить дубликаты из `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`, `main.rs`, скриптов.
-- **Затронутые файлы:** `backend/src/main.rs`, `src/eeg_ze_processor.py`, `src/*.py`, `config/constants.toml` (новый), `backend/build.rs` (новый), `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`.
-- **Оценка:** M (2 дня); **Риск:** M (необходимо синхронизировать все ссылки).
+### P0.1 Single Source of Truth for v* and Constants
+- Create `config/constants.toml` with v*_active, f_opt, dataset parameters.
+- Rust: generate `src/constants.rs` through `build.rs` (or read `.toml` through `serde`).
+- Python: read the same file or import from `constants.py`, which parses `.toml`.
+- Remove duplicates from `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`, `main.rs`, scripts.
+- **Affected files:** `backend/src/main.rs`, `src/eeg_ze_processor.py`, `src/*.py`, `config/constants.toml` (new), `backend/build.rs` (new), `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`.
+- **Estimation:** M (2 days); **Risk:** M (necessary to synchronize all links).
 
-### P0.2 Полное покрытие тестами (Rust + Python)
-- Rust backend: unit-тесты для core-логики (например, `compute_chi_ze`), integration-тесты через `axum::test`, coverage >80%.
-- Python: unit-тесты для `eeg_ze_processor.py` (`ze_cheating_index`, `narrowband_ze`, `group_statistics`), mock для загрузки данных.
-- CI: `cargo test`, `pytest` обязательны перед мержем.
-- **Затронутые файлы:** `backend/src/main.rs` (добавить `#[cfg(test)]` модули), `backend/tests/` (новый), `src/tests/` (новый), `.github/workflows/ci.yml` (новый).
-- **Оценка:** M (3 дня); **Риск:** M (выявит существующие баги).
+### P0.2 Full Test Coverage (Rust + Python)
+- Rust backend: unit tests for core logic (e.g., `compute_chi_ze`), integration tests through `axum::test`, coverage >80%.
+- Python: unit tests for `eeg_ze_processor.py` (`ze_cheating_index`, `narrowband_ze`, `group_statistics`), mock for data loading.
+- CI: `cargo test`, `pytest` are mandatory before merge.
+- **Affected files:** `backend/src/main.rs` (add `#[cfg(test)]` modules), `backend/tests/` (new), `src/tests/` (new), `.github/workflows/ci.yml` (new).
+- **Estimation:** M (3 days); **Risk:** M (will reveal existing bugs).
 
-### P0.3 Валидация входных данных в Rust-эндпоинтах
-- Добавить десериализацию с проверкой: `NaN`, `Inf`, диапазоны (например, `v` ∈ [0,1], `age` ∈ [0,150]).
-- Возвращать `422 Unprocessable Entity` с описанием ошибки.
-- **Затронутые файлы:** `backend/src/main.rs` (добавить `#[derive(Deserialize)]` с `#[serde(deny_unknown_fields)]` и кастомные `deserialize_with`).
-- **Оценка:** S (0.5 дня); **Риск:** L (изолированное изменение).
+### P0.3 Input Validation in Rust Endpoints
+- Add deserialization with validation: `NaN`, `Inf`, ranges (e.g., `v` ∈ [0,1], `age` ∈ [0,150]).
+- Return `422 Unprocessable Entity` with error description.
+- **Affected files:** `backend/src/main.rs` (add `#[derive(Deserialize)]` with `#[serde(deny_unknown_fields)]` and custom `deserialize_with`).
+- **Estimation:** S (0.5 days); **Risk:** L (isolated change).
 
-### P0.4 Структурирование Python-кода в пакет
-- Создать `src/biosense/` с подпапками `core/` (eeg_ze_processor), `analysis/` (ze_cuban_analysis и т.д.), `utils/` (загрузка данных).
-- Добавить `__init__.py` в каждую папку; импорты — через `from biosense.core import ...`.
-- Обновить все скрипты и `biosense.sh`.
-- **Затронутые файлы:** `src/` (переименовать и переместить), `README.md` (обновить структуру), `MAP.md`.
-- **Оценка:** M (1 день); **Риск:** L (изоляция, регрессия маловероятна).
+### P0.4 Structuring Python Code into a Package
+- Create `src/biosense/` with subfolders `core/` (eeg_ze_processor), `analysis/` (ze_cuban_analysis, etc.), `utils/` (data loading).
+- Add `__init__.py` to each folder; imports — through `from biosense.core import ...`.
+- Update all scripts and `biosense.sh`.
+- **Affected files:** `src/` (rename and move), `README.md` (update structure), `MAP.md`.
+- **Estimation:** M (1 day); **Risk:** L (isolation, regression unlikely).
 
-### P0.5 Чёткое правило исключения для Python в TODO.md
-- В `TODO.md` изменить «если нет явного указания — Rust» на «Python допустим ТОЛЬКО для анализа EEG/HRV (научные скрипты) и для AIM ML-роутера. Весь production-код (backend, деплой) — Rust.»
-- **Затронутые файлы:** `TODO.md`, `CLAUDE.md`.
-- **Оценка:** S (0.1 дня); **Риск:** L.
+### P0.5 Clear Exclusion Rule for Python in TODO.md
+- In `TODO.md` change "if not explicitly stated — Rust" to "Python is allowed ONLY for EEG/HRV analysis (scientific scripts) and for AIM ML router. All production code (backend, deployment) — Rust."
+- **Affected files:** `TODO.md`, `CLAUDE.md`.
+- **Estimation:** S (0.1 days); **Risk:** L.
 
-### P0.6 Исправление ChiZeRequest и `/api/v_star` конвертации
-- Добавить в `backend/src/main.rs` структуру `ChiZeRequest` с `#[serde(alias)]` для legacy полей.
-- Реализовать `/chi_ze`: вычислять χ_Ze по формуле (Python form), но возвращать в Article form (умножать? по PARAMETERS.md: Article = 2·Python − 1). Уточнить с автором.
-- Гарантировать, что `/api/v_star` возвращает Article form `-0.08738` и документация `CLAUDE.md` явно указывает формат.
-- **Затронутые файлы:** `backend/src/main.rs` (добавить `ChiZeRequest`, реализацию), `CLAUDE.md`.
-- **Оценка:** S (1 день); **Риск:** M (высока вероятность несоответствия ожиданиям клиентов).
+### P0.6 Fixing ChiZeRequest and `/api/v_star` Conversion
+- Add to `backend/src/main.rs` the `ChiZeRequest` structure with `#[serde(alias)]` for legacy fields.
+- Implement `/chi_ze`: calculate χ_Ze by the formula (Python form), but return in Article form (multiply? according to PARAMETERS.md: Article = 2·Python − 1). Clarify with the author.
+- Ensure that `/api/v_star` returns Article form `-0.08738` and the documentation `CLAUDE.md` explicitly indicates the format.
+- **Affected files:** `backend/src/main.rs` (add `ChiZeRequest`, implementation), `CLAUDE.md`.
+- **Estimation:** S (1 day); **Risk:** M (high probability of mismatch with client expectations).
 
 ---
 
-## P1 — Важно (существенно влияет на разработку и поддержку)
+## P1 — Important (significantly affects development and maintenance)
 
 ### P1.1 .gitignore
-- Добавить `data/`, `__pycache__/`, `*.pyc`, `*.egg-info`, `target/`, `*.mat`, `.env`.
-- **Затронутые файлы:** `.gitignore` (новый).
-- **Трудоёмкость:** S (0.1 дня).
+- Add `data/`, `__pycache__/`, `*.pyc`, `*.egg-info`, `target/`, `*.mat`, `.env`.
+- **Affected files:** `.gitignore` (new).
+- **Effort:** S (0.1 days).
 
-### P1.2 Фиксация версий зависимостей
-- `src/requirements.txt`: заменить `>=` на `==` с конкретными версиями (например, `mne==1.6.1`). Использовать `pip freeze`.
-- `backend/Cargo.toml`: зафиксировать версии через `major.minor.patch` (но уже достаточно).
-- **Затронутые файлы:** `src/requirements.txt`, возможно `backend/Cargo.lock` (уже lock).
-- **Трудоёмкость:** S (0.5 дня).
+### P1.2 Dependency Version Fixation
+- `src/requirements.txt`: replace `>=` with `==` with specific versions (e.g., `mne==1.6.1`). Use `pip freeze`.
+- `backend/Cargo.toml`: fix versions through `major.minor.patch` (but already sufficient).
+- **Affected files:** `src/requirements.txt`, possibly `backend/Cargo.lock` (already lock).
+- **Effort:** S (0.5 days).
 
-### P1.3 Перенос организационных правил из TODO.md
-- Из `TODO.md` переместить раздел «📌 Правило: язык…» и «📌 Правило: DeepSeek…» в `CLAUDE.md`.
-- В `TODO.md` оставить только задачи, а правила — вынести в `RULES.md` или `CLAUDE.md`.
-- **Затронутые файлы:** `TODO.md`, `CLAUDE.md`.
-- **Трудоёмкость:** S (0.2 дня).
+### P1.3 Moving Organizational Rules from TODO.md
+- From `TODO.md` move the section "📌 Rule: language..." and "📌 Rule: DeepSeek..." to `CLAUDE.md`.
+- In `TODO.md` leave only tasks, and rules — move to `RULES.md` or `CLAUDE.md`.
+- **Affected files:** `TODO.md`, `CLAUDE.md`.
+- **Effort:** S (0.2 days).
 
-### P1.4 CI-пайплайн
-- GitHub Actions: `cargo build`, `cargo test`, `cargo clippy`, `pytest`, `flake8` (или `ruff`).
-- Добавить badge в `README.md`.
-- **Затронутые файлы:** `.github/workflows/ci.yml` (новый), `README.md`.
-- **Трудоёмкость:** M (1 день).
+### P1.4 CI Pipeline
+- GitHub Actions: `cargo build`, `cargo test`, `cargo clippy`, `pytest`, `flake8` (or `ruff`).
+- Add badge to `README.md`.
+- **Affected files:** `.github/workflows/ci.yml` (new), `README.md`.
+- **Effort:** M (1 day).
 
-### P1.5 Управление JSON-результатами
-- Переместить все `.json` (кроме служебных) в `results/` (уже частично). Проверить, что не закоммичены лишние `.json` в корень.
-- Добавить `results/*.json` в `.gitignore`, если они генерируются; иначе оставить, но добавить `**/results/*.json` в `git lfs` или ограничить размер.
-- **Затронутые файлы:** `.gitignore`, возможно `results/`.
-- **Трудоёмкость:** S (0.5 дня).
+### P1.5 JSON Result Management
+- Move all `.json` (except service ones) to `results/` (already partially). Check that no extra `.json` are committed to the root.
+- Add `results/*.json` to `.gitignore`, if they are generated; otherwise, leave, but add `**/results/*.json` to `git lfs` or limit the size.
+- **Affected files:** `.gitignore`, possibly `results/`.
+- **Effort:** S (0.5 days).
 
 ---
 
-## P2 — Nice-to-have (улучшения, которые можно отложить)
+## P2 — Nice-to-have (improvements that can be postponed)
 
-### P2.1 OpenAPI-спецификация
-- Создать `openapi.yaml` для Rust backend с описанием всех эндпоинтов.
+### P2.1 OpenAPI Specification
+- Create `openapi.yaml` for Rust backendс описанием всех эндпоинтов.
 - **Затронутые файлы:** `docs/openapi.yaml` (новый).
 - **Трудоёмкость:** M (1-2 дня).
 

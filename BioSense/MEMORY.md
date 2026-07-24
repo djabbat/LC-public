@@ -1,7 +1,7 @@
 # BioSense — Memory
 
-## 2026-07-06 — Mahalanobis distance как метод замера χ_Ze
+## 2026-07-06 — Mahalanobis distance as a method for measuring χ_Ze
 
-ECG Mahalanobis distance (Cummings/Hong 2025, PMID: 41230623) добавлен как валидированный метод замера χ_Ze. aHR 1.28 (переломы), aHR 1.44 (смертность). Кросс-системная предсказательность → обоснование мульти-сигнального подхода BioSense.
+ECG Mahalanobis distance (Cummings/Hong 2025, PMID: 41230623) has been added as a validated method for measuring χ_Ze. aHR 1.28 (fractures), aHR 1.44 (mortality). Cross-system predictability → justification of the multi-signal approach BioSense.
 
-Добавлены методы замера χ_Ze: EEG, ECG Mahalanobis, микроскопия (GT335), HDIM. Записано в CONCEPT.md.
+Methods for measuring χ_Ze have been added: EEG, ECG Mahalanobis, microscopy (GT335), HDIM. Recorded in CONCEPT.md.

@@ -1,10 +1,10 @@
 # LC — Project Context
 
-## Описание
+## Description
 Georgia Longevity Alliance — research ecosystem
 
-## Структура
-```
+## Structure
+
 .
 ./services
 ./deploy
@@ -25,9 +25,9 @@ Georgia Longevity Alliance — research ecosystem
 ./MCARA/CEDAR
 ./MCARA/results
 ./MCARA/audits
-```
 
-## Команды
-- `!status` — статус проекта
-- `!todo` — показать TODO
-- `!deploy` — задеплоить (если применимо)
+
+## Teams
+- `!status` — project status
+- `!todo` — show TODO
+- `!deploy` — deploy (if applicable)

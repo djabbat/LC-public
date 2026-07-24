@@ -1,20 +1,37 @@
 # CONCEPT — CEDAR Articles
 
-## Назначение
-Коллекция статей, препринтов и сабмитов по CEDAR (Centriolar Damage Accumulation Theory of Aging).
+**Version:** 1.0
 
-## Статьи (текущие)
+## Purpose
+Collection of articles, preprints, and submissions on CEDAR (Centriolar Damage Accumulation Theory of Aging).
+
+## Articles (current)
 1. **Tqemaladze 2023** — Mol Biol Rep: «Reduction, proliferation and differentiation defects of stem cells» (PMID 36583780)
-2. **CEDAR основной** — готовится к сабмиту (Nature Aging / npj Aging)
-3. **ARGUS-LP** — сабмит в Robotic Surgery International
-4. **Entropy in Aging** — готовится к сабмиту (npj Aging)
+2. **CEDAR main** — in preparation for submission (Nature Aging / npj Aging)
+3. **ARGUS-LP** — submitted to Robotic Surgery International
+4. **Entropy in Aging** — in preparation for submission (npj Aging)
 
-## Процесс
-- Написание → Внутреннее ревью (MBPR) → Сабмит → Рецензия → Ревизия → Публикация
+## Process
+- Writing → Internal review (MBPR) → Submission → Review → Revision → Publication
 
-## Связи
-- **Родитель:** LC/MCARA/CEDAR
-- **Связан:** CEDAR/CellLineageTree, CEDAR/Aubrey, Aubrey/Entropy_in_Aging
+## Links
+- **Parent:** LC/MCARA/CEDAR
+- **Related:** CEDAR/CellLineageTree, CEDAR/Aubrey, Aubrey/Entropy_in_Aging
 
-## Статус
-🟡 Активен. HAP сабмитнут в Psychoneuroendocrinology. CEDAR готовится.
+## Status
+🟡 Active. HAP submitted to Psychoneuroendocrinology. CEDAR in preparation.
+
+## Consumables (annual)
+
+| **Cloud/API services** (AI model API keys, hosting) | **$1,000** |
+| **Office consumables** (printing, stationery) | **$300** |
+
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

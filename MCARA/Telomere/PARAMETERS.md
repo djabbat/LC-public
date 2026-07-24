@@ -1,45 +1,34 @@
 # Quantitative Parameters for the Telomere Shortening Counter
 
-**Дата генерации:** 2026-04-22
-**Статус параметров:** COMPILED_FROM_LITERATURE. Требует экспериментальной калибровки in vivo для конкретных приложений.
-**Единицы:** Длина — пары оснований [bp], время — годы [yr] или дни [day], деления — популяционные удвоения [PD], веса — безразмерные.
+**Version:** 1.0
 
-| Parameter | Symbol | Canonical Value & Range | Units | Provenance (PMID/DOI) | Status | Примечание |
+**Generation date:** 2026-04-22
+**Parameter status:** COMPILED_FROM_LITERATURE. Requires experimental in vivo calibration for specific applications.
+**Units:** Length — base pairs [bp], time — years [yr] or days [day], divisions — population doublings [PD], weights — dimensionless.
+
+| Parameter | Symbol | Canonical Value & Range | Units | Provenance (PMID/DOI) | Status | Note |
 |-----------|--------|--------------------------|-------|------------------------|--------|------------|
-| **Initial Length (Baseline)** | `D₂,₀` | -10,000 to -15,000 (дефицит относительно 0) | [bp] | PMID: 24374808 (диапазон для фибробластов) | **Fixed (Range)** | Отрицательное значение, так как `D₂ = current_length - initial_length`. initial_length ~ 10-15 kbp. |
-| **Division-Dependent Erosion Coefficient** | `α₂` | 50 — 200 | [bp / PD] | PMID: 24374808, PMID: 30650660 | **Fixed (Range)** | Потеря за одно популяционное удвоение в условиях низкого стресса. |
-| **Critical Replicative Limit (Scale Factor)** | `n₂*` | 40 — 60 | [PD] (безразмерный) | Hayflick & Moorhead, 1961; PMID: 38581556 | **Fixed (Range)** | Лимит Хейфлика. Зависит от условий (кислород). Значение для стандартных условий культивирования. |
-| **Stress-Dependent Erosion Amplitude** | `β₂` | 20 — 50 | [bp] | Выведено из: PMID: 30472697 (укорочение в нейронах), PMID: 25612739 (укорочение в лейкоцитах ~30 bp/год) | **Estimated (Poor)** | Амплитуда потери за время `τ₂`. Оценка очень грубая, так как зависит от неизвестного `τ₂`. Фактически, `β₂/τ₂` оценивается в ~20-50 bp/год. |
-
+| **Initial Length (Baseline)** | `D₂,₀` | -10,000 to -15,000 (deficit relative to 0) | [bp] | PMID: 24374808 (range for fibroblasts) | **Fixed (Range)** | Negative value because `D₂ = current_length - initial_length`. initial_length ~ 10-15 kbp. |
+| **Division-Dependent Erosion Coefficient** | `α₂` | 50 — 200 | [bp / PD] | PMID: 24374808, PMID: 30650660 | **Fixed (Range)** | Loss per population doubling under low stress conditions. |
+| **Critical Replicative Limit (Scale Factor)** | `n₂*` | 40 — 60 | [PD] (dimensionless) | Hayflick & Moorhead, 1961; PMID: 38581556 | **Fixed (Range)** | Hayflick limit. Depends on conditions (oxygen). Value for standard culture conditions. |
+| **Stress-Dependent Erosion Amplitude** | `β₂` | 20 — 50 | [bp] | Derived from: PMID: 30472697 (shortening in neurons), PMID: 25612739 (shortening in leukocytes ~30 bp/yr) | **Estimated (Poor)** | Amplitude of loss over time `τ₂`. Estimate is very rough, as it depends on unknown `τ₂`. In fact, `β₂/τ₂` is estimated at ~20-50 bp/yr. |
 
 **Note:** τ₂ is currently labeled as "Hypothesized (Very Poor)". A concrete plan for its estimation is provided in OP-T1, with a target timeline of within the first 12 months of the project.
 
+| **Telomere Turnover Timescale Constant** | `τ₂` | 0.083 — 0.25 (1-3 months) | [yr] | Indirectly from PMID: 33347069 (dynamics in astronauts) | **Hypothesized (Very Poor)** | Critically uncertain parameter. Hypothesis based on observed changes on a scale of weeks to months. |
+| **Effective Shortening Rate (Composite, Leukocytes)** | `dD₂/dt` (composite) | -30 ± 10 | [bp / yr] | PMID: 25612739, review data | **Observed (Composite)** | Measured in vivo rate. It is the sum: `(α₂ / n₂*) * (dn/dt) + (β₂ / τ₂)`. |
+| **Tissue Weight (e.g., Blood/Leukocytes)** | `w₂(blood)` | 0.15 (presumed) | dimensionless | No direct data. Assumed based on contribution to immune system aging. | **To Be Calibrated** | Should be determined by calibrating the MCARA model on phenotypic data of tissue aging. |
+| **Tissue Weight (e.g., Fibroblasts/Skin)** | `w₂(skin)` | 0.10 (presumed) | dimensionless | No direct data. | **To Be Calibrated** | |
+| **Tissue Weight (e.g., Post-mitotic Neurons)** | `w₂(neuron)` | 0.02 (presumed) | dimensionless | No direct data. Expected to be low, as telomere-induced senescence is unlikely. | **To Be Calibrated** | |
+| **Coupling Coefficient (MitoROS → Telomere)** | `Γ_{2,3}` | 0 (default) | [bp·yr⁻¹·(unit of D₃)⁻¹] | CORRECTIONS_2026-04-22 Canon | **Default (Null Hypothesis)** | By default, no coupling is assumed. A non-zero value should be obtained from statistical analysis of data. |
+| **Coupling Coefficient (Proteostasis → Telomere)** | `Γ_{2,5}` | 0 (default) | [bp·yr⁻¹·(unit of D₅)⁻¹] | CORRECTIONS_2026-04-22 Canon | **Default (Null Hypothesis)** |
+Candidate) | dimensionless | Theoretical construct | **To Be Defined** | Function mapping length deficit to "load". `D₂_critical` is the threshold at which load becomes significant (e.g., ~5000 bp lost). |
 
-| **Telomere Turnover Timescale Constant** | `τ₂` | 0.083 — 0.25 (1-3 месяца) | [yr] | Косвенно по PMID: 33347069 (динамика у астронавтов) | **Hypothesized (Very Poor)** | Критически неопределённый параметр. Гипотеза основана на наблюдаемых изменениях в масштабе недель-месяцев. |
-| **Effective Shortening Rate (Composite, Leukocytes)** | `dD₂/dt` (composite) | -30 ± 10 | [bp / yr] | PMID: 25612739, обзорные данные | **Observed (Composite)** | Измеряемая in vivo скорость. Является суммой: `(α₂ / n₂*) * (dn/dt) + (β₂ / τ₂)`. |
-| **Tissue Weight (e.g., Blood/Leukocytes)** | `w₂(blood)` | 0.15 (предположительно) | dimensionless | Нет прямых данных. Предполагается на основе вклада в старение иммунной системы. | **To Be Calibrated** | Должен определяться путём калибровки модели MCARA на фенотипических данных старения тканей. |
-| **Tissue Weight (e.g., Fibroblasts/Skin)** | `w₂(skin)` | 0.10 (предположительно) | dimensionless | Нет прямых данных. | **To Be Calibrated** | |
-| **Tissue Weight (e.g., Post-mitotic Neurons)** | `w₂(neuron)` | 0.02 (предположительно) | dimensionless | Нет прямых данных. Ожидается низким, так как сенесценция, вызванная теломерами, маловероятна. | **To Be Calibrated** | |
-| **Coupling Coefficient (MitoROS → Telomere)** | `Γ_{2,3}` | 0 (по умолчанию) | [bp·yr⁻¹·(unit of D₃)⁻¹] | CORRECTIONS_2026-04-22 Canon | **Default (Null Hypothesis)** | По умолчанию предполагается отсутствие связи. Ненулевое значение должно быть получено из статистического анализа данных. |
-| **Coupling Coefficient (Proteostasis → Telomere)** | `Γ_{2,5}` | 0 (по умолчанию) | [bp·yr⁻¹·(unit of D₅)⁻¹] | CORRECTIONS_2026-04-22 Canon | **Default (Null Hypothesis)** | См. выше. Механистическая основа есть (PMID: 39164231), но количественная связь не установлена. |
-
-
-| Parameter | Value | Uncertainty (CI or SD) | Source |
-|-----------|-------|------------------------|--------|
-| Γ_{2,3} | TBD | TBD (placeholder; to be estimated from perturbation experiments in OP-T3) | TBD |
-| Γ_{2,5} | TBD | TBD (placeholder; to be estimated from perturbation experiments in OP-T3) | TBD |
-
-| **Scaling Function (Deficit to Load)** | `f₂(D₂)` | `max(0, D₂) / D₂_critical` (кандидат) | dimensionless | Теоретическая конструкция | **To Be Defined** | Функция, отображающая дефицит длины в "нагрузку". `D₂_critical` — порог, при котором нагрузка становится значимой (например, ~5000 bp потеряно). |
-
-**Ключ к Status:**
-* **Fixed:** Значение надежно установлено в литературе и используется как константа.
-* **Estimated:** Значение выведено из данных с допущениями, имеет значительную неопределённость.
-* **Hypothesized:** Значение является интуитивной догадкой, основанной на косвенных данных, требует прямой проверки.
-* **Observed:** Значение является прямым измерением in vivo, но представляет собой сумму нескольких эффектов модели.
-* **To Be Calibrated:** Значение должно быть подобрано в процессе калибровки полной модели MCARA на экспериментальных данных.
-* **Default (Null Hypothesis):** Значение устанавливается в 0 в соответствии с каноном CORRECTIONS_2026-04-22 до тех пор, пока данные не опровергнут гипотезу независимости.
-* **To Be Defined:** Концепция необходима, но её конкретная математическая форма ещё не определена.
-
+**Key to Status:**
+* **Fixed:** Value reliably established in literature and used as a constant.
+* **Estimated:** Value derived from data with assumptions, has significant uncertainty.
+* **Hypothesized:** Value is an intuitive guess based on indirect data, requires direct verification.
+* **Observed:** Value is a direct in vivo measurement, but represents the sum of several
 ## Parameter Uncertainty
 
 The following table adds uncertainty estimates (confidence intervals or standard deviations) for key parameters, where available from meta-analyses or experimental data.
@@ -51,6 +40,7 @@ The following table adds uncertainty estimates (confidence intervals or standard
 | n₂* (Hayflick limit) | 40–60 PD | 95% CI: [38, 62] PD (from fibroblast studies, PMID:17938250) | Dependent on donor age and culture conditions |
 | τ₂ (stress erosion timescale) | TBD | TBD | To be estimated from OP-T1; placeholder until experimental data available |
 | Γ (coupling matrix entries) | 0 (default) | TBD | To be estimated from pairwise perturbation experiments; placeholder |
+
 
 ## Suggested Measurement Protocols for Uncertain Parameters
 
@@ -76,12 +66,13 @@ The following table adds uncertainty estimates (confidence intervals or standard
 - Protocol: For each counter i (e.g., MitoROS #3), measure both D₂ and Dᵢ in same cells under perturbation (e.g., mitochondrial stress). Compute correlation coefficient or fit linear model D₂ = Γ₂,ᵢ·Dᵢ + ε.
 - Reference: DESIGN.md §4 for coupling matrix estimation.
 
+
 ## Uncertainty estimates
 
 For τ₂: placeholder range 0.1–0.5 yr based on literature (e.g., PMID:24374808). For Γ entries: null hypothesis value 0; 95% CI will be estimated from OP‑T3. All estimates are preliminary and will be updated upon experimental validation.
 
 
+
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
-
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.

@@ -1,76 +1,86 @@
 # BioSense — CONCEPT
 
-**Версия:** 2.0 | **Дата:** 2026-06-11
+**Version:** 2.0 | **Date:** 2026-06-11
 
 ---
 
-## Описание
+## Description
 
-BioSense — платформа федеративного клинического обучения (federated clinical learning) в составе экосистемы LongevityCommon (LC). Обеспечивает сбор, хранение и анализ биомедицинских данных (ЭЭГ, микроскопия, биомаркеры) для валидации теоретических моделей старения (CEDAR, MCARA, Ze Theory).
+BioSense — a federated clinical learning platform within the LongevityCommon (LC) ecosystem. It provides collection, storage, and analysis of biomedical data (EEG, microscopy, biomarkers) for validation of theoretical aging models (CEDAR, MCARA, Ze Theory).
 
-## Цель
+## Goal
 
-Создать распределённую систему сбора и анализа биомедицинских данных, способную:
-1. Валидировать Ze-метрики на клинических данных (ЭЭГ)
-2. Автоматизировать микроскопический анализ (centriole imaging)
-3. Предоставлять федеративный доступ к датасетам (12+ реестров)
+To create a distributed system for collecting and analyzing biomedical data, capable of:
+1. Validating Ze metrics on clinical data (EEG)
+2. Automating microscopic analysis (centriole imaging)
+3. Providing federated access to datasets (12+ registries)
 
-## Архитектура
+## Architecture
 
-- **Бэкенд:** Rust (Actix-web), порт :4101
-- **Фронтенд:** Phoenix LiveView, порт :4100
-- **Датасеты:** Статический реестр на :4100/datasets (12+ наборов)
-- **Инструменты:** Automated microscopy pipeline (instruments/)
+- **Backend:** Rust (Actix-web), port :4101
+- **Frontend:** Phoenix LiveView, port :4100
+- **Datasets:** Static registry on :4100/datasets (12+ sets)
+- **Tools:** Automated microscopy pipeline (instruments/)
 
-## Ключевые компоненты
+## Key Components
 
-| Компонент | Назначение | Статус |
+| Component | Purpose | Status |
 |-----------|------------|:------:|
-| EEG data pipeline | Кубинский нормативный EEG датасет | ✅ |
-| Ze EEG validation | Валидация Ze-предсказаний на EEG | 🔄 |
-| Automated microscopy | Микроскопия центриолей | 🔄 |
-| Phoenix dashboard | Веб-интерфейс мониторинга | ✅ |
+| EEG data pipeline | Cuban normative EEG dataset | 
+| Ze EEG validation | Validation of Ze predictions on EEG | 
+| Automated microscopy | Centriole microscopy | 
+| Phoenix dashboard | Web interface for monitoring | 
 
-## Статус гипотезы
+## Hypothesis Status
 
-⚠ **Hypothesis-stage research platform.** Все метрики являются исследовательскими (exploratory), не валидированы на N≥2000 пререгистрированной когорте. Не являются клиническими биомаркерами.
+ **Hypothesis-stage research platform.** All metrics are exploratory, not validated on N≥2000 pre-registered cohort. Not clinical biomarkers.
 
-## Энтропийные биомаркеры — доказательная база (2026-07-06)
+## Entropic Biomarkers — Evidence Base (2026-07-06)
 
-**Кросс-системная предсказательность энтропии:**
+**Cross-system entropy predictability:**
 
-| Сигнал | Мера энтропии | Предсказывает | Эффект | Источник |
+| Signal | Entropy Measure | Predicts | Effect | Source |
 |--------|--------------|---------------|:------:|----------|
-| **ЭКГ** | Mahalanobis distance (DM) | Переломы | aHR 1.28 | Cummings/Hong 2025, PMID: 41230623 |
-| **ЭКГ** | Mahalanobis distance (DM) | Смертность от всех причин | aHR 1.44 | Cummings/Hong 2025, PMID: 41230623 |
-| **Гистология мышц** | HDIM | Мобильность, VO₂ max, OXPHOS | n=299 | Hong 2026, PMID: 41724675 |
-| **Транскриптом лёгких** | Транскрипционная энтропия (scRNA-seq) | Возраст (независимо от сенесценции) | — | De Man 2026, PMID: 41571679 |
+| **ECG** | Mahalanobis distance (DM) | Fractures | aHR 1.28 | Cummings/Hong 2025, PMID: 41230623 |
+| **ECG** | Mahalanobis distance (DM) | All-cause mortality | aHR 1.44 | Cummings/Hong 2025, PMID: 41230623 |
+| **Muscle histology** | HDIM | Mobility, VO₂ max, OXPHOS | n=299 | Hong 2026, PMID: 41724675 |
+| **Lung transcriptome** | Transcriptional entropy (scRNA-seq) | Age (independent of senescence) | — | De Man 2026, PMID: 41571679 |
 
-**Значение для BioSense:** Энтропия, измеренная в одной системе (ЭКГ), предсказывает исходы в другой (переломы). Это фундаментальное обоснование для платформы, измеряющей энтропию через множественные физиологические сигналы (ЭЭГ, ЭКГ, микроскопия). BioSense реализует этот подход: сбор множественных энтропийных прокси → интегральный биомаркер старения.
+**Relevance to BioSense:** Entropy measured in one system (ECG) predicts outcomes in another (fractures). This is fundamental justification for a platform measuring entropy through multiple physiological signals (EEG, ECG, microscopy). BioSense implements this approach: collection of multiple entropic proxies → integral biomarker of aging.
 
-## Ограничения
+## Limitations
 
-- Данные EEG — с кубинской популяции (может не генерализоваться)
-- Микроскопия — в разработке, не автоматизирована полностью
-- Нет FDA/CE/регуляторного approval (не требуется для исследовательской платформы)
+- EEG data — from Cuban population (may not generalize)
+- Microscopy — under development, not fully automated
+- No FDA/CE/regulatory approval (not required for research platform)
 
-## Методы замера χ_Ze
+## Methods for Measuring χ_Ze
 
-| Метод | Сигнал | Мера | Валидация |
+| Method | Signal | Measure | Validation |
 |-------|--------|------|:--------:|
-| **EEG** | Электрическая активность мозга | Ze-метрики | 🔄 Кубинская когорта |
-| **ECG Mahalanobis** | ЭКГ | Mahalanobis distance (DM) | ✅ aHR 1.28–1.44, PMID: 41230623 |
-| **Микроскопия** | Центриоли (GT335) | polyGlu-паттерны | 🔄 В разработке |
-| **HDIM** | Гистология мышц | Homeostatic Dysregulation Index | ✅ n=299, PMID: 41724675 |
+| **EEG** | Brain electrical activity | Ze metrics |  Cuban cohort |
+| **ECG Mahalanobis** | ECG | Mahalanobis distance (DM) |  aHR 1.28–1.44, PMID: 41230623 |
+| **Microscopy** | Centrioles (GT335) | polyGlu patterns |  Under development |
+| **HDIM** | Muscle histology | Homeostatic Dysregulation Index |  n=299, PMID: 41724675 |
 
-**Принцип:** χ_Ze — интегральный биомаркер старения, агрегирующий энтропийные прокси из разных систем. Энтропия ЭКГ предсказывает переломы — кросс-системная предсказательность доказывает универсальность энтропии.
+**Principle:** χ_Ze — an integral biomarker of aging, aggregating entropic proxies from different systems. ECG entropy predicts fractures — cross-system predictability proves entropy's universality.
 
-## Метрики
+## Metrics
 
-- Датасетов в реестре: 12
-- Сервисов: 2 (backend + Phoenix)
-- Тестов: в составе workspace
+- Datasets in registry: 12
+- Services: 2 (backend + Phoenix)
+- Tests: within workspace
 
 ---
 
-*Предыдущая версия CONCEPT.md (пустой шаблон) заменена 2026-06-11.*
+*Previous version of CONCEPT.md (empty template) replaced on 2026-06-11.*
+
+## Consumables (annual)
+
+| **Cloud/API services** | **$600** |
+| **Office consumables** | **$200** |
+
+
+## References
+
+*See project MEMORY.md for reference history.*

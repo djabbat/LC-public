@@ -1,93 +1,83 @@
 # MEMORY.md — HAP Project
 
-**Назначение:** Что нужно помнить между сессиями. Новое сверху.
+**Purpose:** What needs to be remembered between sessions. New on top.
+## 2026-07-01 — BSPC formal rejection (9th rejection)
 
-## 2026-07-01 — BSPC формальный отказ (9-й отказ)
+- **July 1, 2026** — formal rejection of BSPC (BSPC-D-26-11119), Executive Editor Mathias Baumert
+- **Reason:** prescreen — high acceptance threshold, does not fit the scope
+- **Submitted:** June 19 through Elsevier Article Transfer from BioSystems
+- **Total 9 rejections:** JAD → PNEC → BioSystems → CSF → MedHyp → BMB → BBS → BSPC → (CSF dual)
+- **Current:** Mathematical Biosciences (MBS-D-26-00817, June 27) — With Editor
+- **Next options in case of rejection:** Discover Aging (Springer), J. Biological Dynamics (T&F)
+## 2026-06-19 — Submitted to Biomedical Signal Processing and Control (7th attempt)
 
-- **1 июл 2026** — формальный отказ BSPC (BSPC-D-26-11119), Executive Editor Mathias Baumert
-- **Причина:** prescreen — high acceptance threshold, не подходит по скоупу
-- **Подана:** 19 июн через Elsevier Article Transfer из BioSystems
-- **Итого 9 отказов:** JAD → PNEC → BioSystems → CSF → MedHyp → BMB → BBS → BSPC → (CSF dual)
-- **Текущая:** Mathematical Biosciences (MBS-D-26-00817, 27 июн) — With Editor
-- **Следующие варианты при отказе:** Discover Aging (Springer), J. Biological Dynamics (T&F)
-
-## 2026-06-19 — Подано в Biomedical Signal Processing and Control (7-я попытка)
-
-- **19 июн 2026, 21:40** — BSPC-D-26-11119 подтверждён, Submitted to Journal
-- **Журнал:** Biomedical Signal Processing and Control (Elsevier)
-- **Путь:** Трансфер Elsevier из BioSystems (BIOSYS-D-26-00840 desk reject 16 июн) → BSPC
-- **Cover letter:** адаптирован под biomedical signal processing
-- **Файлы:** HAP_Dynamics.docx + highlights + title_page + declaration + 20 figures
-- **Это 7-я попытка после 6 отказов (все desk reject по скоупу, не по качеству)**
-
+- **19 Jun 2026, 21:40** — BSPC-D-26-11119 confirmed, Submitted to Journal
+- **Journal:** Biomedical Signal Processing and Control (Elsevier)
+- **Path:** Transferred from Elsevier's BioSystems (BIOSYS-D-26-00840 desk reject on 16 Jun) → BSPC
+- **Cover letter:** Adapted for biomedical signal processing
+- **Files:** HAP_Dynamics.docx + highlights + title_page + declaration + 20 figures
+- **This is the 7th attempt after 6 rejections (all desk rejects due to scope, not quality)**
 ## 2026-06-18 — Medical Hypotheses: Handling Editor → Instant Reject
 
-- **18 июн 2026, 14:57** — YMEHY-D-26-00985: Editor-in-Chief Dr Sachin Sarode назначен handling editor
-- **18 июн 2026, 15:00** — Rejected (через 3 минуты!), desk reject без рецензий
-- **Причина:** Стандартная формулировка («reviewers recommend against publishing»), но reviewers не назначались → desk reject
-- **Ирония:** Отзыв был запрошен 17.06, но не обработан — рукопись всё равно получила отказ
-- **5-й отказ подряд** (JAD, PNEC, BioSystems, CSF, Medical Hypotheses) — все по скоупу/формату
-- **Следующий:** Journal of Biological Dynamics (T&F, subscription, IF ~2.8, не Elsevier)
-- **Cover letter:** `~/Desktop/cover_letter_JBD.md` уже готов
-
+- **18 Jun 2026, 14:57** — YMEHY-D-26-00985: Editor-in-Chief Dr Sachin Sarode appointed handling editor
+- **18 Jun 2026, 15:00** — Rejected (in 3 minutes!), desk reject without reviews
+- **Reason:** Standard wording ("reviewers recommend against publishing"), but reviewers were not assigned → desk reject
+- **Irony:** Review was requested on 17.06, but not processed — manuscript still received a rejection
+- **5th rejection in a row** (JAD, PNEC, BioSystems, CSF, Medical Hypotheses) — all due to scope/format
+- **Next:** Journal of Biological Dynamics (T&F, subscription, IF ~2.8, not Elsevier)
+- **Cover letter:** `~/Desktop/cover_letter_JBD.md` is already ready
 ## 2026-06-17 — CSF Rejected (dual submission) + Medical Hypotheses withdrawal
 
-- **17 июн 2026** — CSF (CHAOS-D-26-05728) rejected: Elsevier обнаружил dual submission
-- **Причина:** Medical Hypotheses (YMEHY-D-26-00985) не закрыл рукопись при трансфере в Psychoneuroendocrinology
-- **Medical Hypotheses** отзыв отправлен (17.06) через Editorial Manager
-- **Apology letter** отправлен Marcel Clerc (CSF Editor-in-Chief)
-- **Урок:** При трансфере внутри Elsevier всегда проверять, что рукопись закрыта в исходном журнале
-- **Решение:** Подача в Journal of Biological Dynamics (T&F, не Elsevier, subscription, IF ~2.8)
+- **17 Jun 2026** — CSF (CHAOS-D-26-05728) rejected: Elsevier discovered dual submission
+- **Reason:** Medical Hypotheses (YMEHY-D-26-00985) did not close the manuscript during transfer to Psychoneuroendocrinology
+- **Medical Hypotheses** withdrawal sent (17.06) via Editorial Manager
+- **Apology letter** sent to Marcel Clerc (CSF Editor-in-Chief)
+- **Lesson:** When transferring within Elsevier, always check that the manuscript is closed in the original journal
+- **Decision:** Submission to Journal of Biological Dynamics (T&F, not Elsevier, subscription, IF ~2.8)
 - **Cover letter:** `~/Desktop/cover_letter_JBD.md`
-- **BBS:** «Sensation, Feeling, Abstraction» (BBS-D-26-00814) — тоже rejected 17.06 (scope)
+- **BBS:** «Sensation, Feeling, Abstraction» (BBS-D-26-00814) — also rejected 17.06 (scope)
+## 2026-06-16 — Third desk reject: Psychoneuroendocrinology
 
-## 2026-06-16 — Третий desk reject: Psychoneuroendocrinology
+- **16 Jun 2026** — rejection from Psychoneuroendocrinology (PNEC-D-26-00481)
+- **Editor:** Elizabeth (Birdie) Shirtcliff (Editor-in-Chief)
+- **Reason:** «falls outside of the scope of this journal»
+- **This is the 3rd desk reject in a row** (J. Affective Disorders → Medical Hypotheses → Psychoneuroendocrinology)
+- **All three — due to scope, not quality** (the article passed 3 rounds of internal revision, verdict ACCEPT)
+- **Problem:** HAP — interdisciplinary work (evolutionary biology + mathematical modeling + affective neuroscience), it's hard to fit it into a narrow journal scope
+- **Solution:** look for journals that specifically accept theoretical/mathematical works (J. Theoretical Biology, Biosystems) or multidisciplinary ones (PLOS ONE, PeerJ)
+## 2026-06-15 — Afaf withdrew from Biomarker Review
 
-- **16 июн 2026** — отказ Psychoneuroendocrinology (PNEC-D-26-00481)
-- **Редактор:** Elizabeth (Birdie) Shirtcliff (Editor-in-Chief)
-- **Причина:** «falls outside of the scope of this journal»
-- **Это 3-й desk reject подряд** (J. Affective Disorders → Medical Hypotheses → Psychoneuroendocrinology)
-- **Все три — по скоупу, не по качеству** (статья прошла 3 раунда внутренней ревизии, вердикт ACCEPT)
-- **Проблема:** HAP — междисциплинарная работа (эволюционная биология + математическое моделирование + аффективная нейронаука), её трудно уместить в узкий журнальный скоуп
-- **Решение:** искать журналы, специально принимающие теоретические/математические работы (J. Theoretical Biology, Biosystems) или мультидисциплинарные (PLOS ONE, PeerJ)
-
-## 2026-06-15 — Afaf отказалась от Biomarker Review
-
-- **15 июн 2026** — Afaf El Fettahi вышла из Biomarker Review (Dynamic Biomarkers Systematic Map)
-- **Причина:** протокол (v2.4) стал слишком масштабным для дуэта: 3,499 hits → ~350-500 eligible → 5 biomarker domains → много баз данных → quality assessment → synthesis
-- **Рекомендация:** найти методиста по systematic reviews или лабораторию
-- **Письмо:** `Biomarker_Review/email_from_Afaf_2026-06-15.md`
-- **Следствия:**
-  - Удалить имя Afaf из протокола, OSF регистрации, всех документов
-  - Нужен новый коллаборатор ИЛИ сузить протокол до 1-2 biomarker domains
-  - Embase access теперь нужно искать самостоятельно
-
+- **15 Jun 2026** — Afaf El Fettahi stepped down from Biomarker Review (Dynamic Biomarkers Systematic Map)
+- **Reason:** the protocol (v2.4) became too extensive for a duo: 3,499 hits → ~350-500 eligible → 5 biomarker domains → many databases → quality assessment → synthesis
+- **Recommendation:** find a systematic review methodologist or laboratory
+- **Letter:** `Biomarker_Review/email_from_Afaf_2026-06-15.md`
+- **Consequences:**
+  - Remove Afaf's name from the protocol, OSF registration, all documents
+  - Need a new collaborator OR narrow down the protocol to 1-2 biomarker domains
+  - Embase access now needs to be sought independently
 ## 2026-06-15 — J. Affective Disorders Rejected → Medical Hypotheses
 
-- **15 июн 2026, 7:31 AM** — отказ J. Affective Disorders (JAFD-D-26-06247)
-- **Редактор:** Benjamin Goldstein (Deputy Editor)
-- **Причина:** «Lack of sufficient novelty» (desk reject, без рецензий)
-- **Причина отказа:** Несовпадение тематики — J. Affective Disorders клинический журнал, не для ODE-моделей
-- **Решение:** Подать в **Medical Hypotheses** (Elsevier, IF ~4.7) — журнал специально для смелых теорий
-- **Cover letter подготовлен:** `~/Desktop/LC/HAP/docs/cover_letter_Medical_Hypotheses.md`
+- **15 Jun 2026, 7:31 AM** — rejection from J. Affective Disorders (JAFD-D-26-06247)
+- **Editor:** Benjamin Goldstein (Deputy Editor)
+- **Reason:** "Lack of sufficient novelty" (desk reject, without reviews)
+- **Rejection reason:** Mismatch of topic — J. Affective Disorders is a clinical journal, not for ODE models
+- **Decision:** Submit to **Medical Hypotheses** (Elsevier, IF ~4.7) — a journal specifically for bold theories
+- **Cover letter prepared:** `~/Desktop/LC/HAP/docs/cover_letter_Medical_Hypotheses.md`
+## 2026-05-30 — Creation of HAP project
 
-## 2026-05-30 — Создание проекта HAP
+- HAP separated from PhD into an independent project (~/Desktop/HAP/)
+- Simulation (src/) and documentation (docs/) have been transferred
+- All core files have been created
+- Simulation prototype is working and reproduces HAP Predictions
+## 2026-05-30 — Afaf's letter sent
 
-- HAP отделён от PhD в самостоятельный проект (~/Desktop/HAP/)
-- Перенесена симуляция (src/) и документация (docs/)
-- Созданы все core-файлы
-- Прототип симуляции работает и воспроизводит HAP Predictions
+- Afaf suggested: nonlinear dynamics, allostasis, feedback loops (not quantum)
+- Plan: simulation → data (not the other way around)
+- Response letter sent: agreement on direction, proposal to start with simulation
+- Response expected
+## Permanent Rules
 
-## 2026-05-30 — Письмо Afaf отправлено
-
-- Afaf предложила: nonlinear dynamics, allostasis, feedback loops (не quantum)
-- План: симуляция → данные (не наоборот)
-- Письмо-ответ отправлено: согласие на direction, предложение начать с симуляции
-- Ожидается ответ
-
-## Постоянные правила
-
-- **HAP Strong Version** уже опубликован (DOI: 10.65649/d76f6c48) — это фундамент
-- **HAP фундаментальнее NHAM** — HAP даёт necessary condition, NHAM — механизм
-- **Симуляция прежде данных** — не искать данные, пока модель не готова
-- **Afaf** — главный коллаборатор по второй статье
+- **HAP Strong Version** has already been published (DOI: 10.65649/d76f6c48) — this is the foundation
+- **HAP is more fundamental than NHAM** — HAP gives a necessary condition, NHAM — a mechanism
+- **Simulation before data** — do not look for data until the model is ready
+- **Afaf** — the main collaborator on the second article

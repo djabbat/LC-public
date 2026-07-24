@@ -1,56 +1,57 @@
-# MitoROS: Митохондриальные ROS и повреждение мтДНК как счётчик #3 в архитектуре множественных счётчиков старения (MCARA)
+# MitoROS: Mitochondrial ROS and mtDNA Damage as Counter #3 in the Multi-Counter Architecture of Replicative Aging (MCARA)
 
-**MitoROS** — это подпроект в рамках экосистемы LC, формализующий накопление повреждений митохондриальной ДНК (мтДНК) и продукции активных форм кислорода (АФК) как дискретного, измеримого «счётчика» старения в рамках формальной теории MCARA (Multi-Counter Architecture of Replicative Aging).
+**MitoROS** is a subproject within the LC ecosystem, formalizing the accumulation of mitochondrial DNA (mtDNA) damage and reactive oxygen species (ROS) production as a discrete, measurable “counter” of aging within the formal theory MCARA (Multi-Counter Architecture of Replicative Aging).
 
-## Краткое содержание
+## Abstract
 
-Старение — это процесс накопления различных типов молекулярных повреждений. Хотя роль митохондриальной дисфункции хорошо известна, её точный количественный вклад в траекторию старения остаётся предметом дискуссий. Данный проект представляет **MitoROS Counter #3** — математическую формализацию, которая описывает кинетику накопления повреждений мтДНК (гетероплазмия, делеции, окислительные повреждения) как функцию числа клеточных делений (n) и хронологического времени (t). Этот счётчик интегрирован в основное уравнение MCARA, что позволяет оценивать его тканеспецифичный вклад в общий фенотип старения.
+Aging is a process of accumulation of various types of molecular damage. Although the role of mitochondrial dysfunction is well known, its precise quantitative contribution to the aging trajectory remains a subject of debate. This project presents **MitoROS Counter #3** — a mathematical formalization that describes the kinetics of mtDNA damage accumulation (heteroplasmy, deletions, oxidative damage) as a function of the number of cell divisions (n) and chronological time (t). This counter is integrated into the master equation of MCARA, allowing assessment of its tissue-specific contribution to the overall aging phenotype.
 
-Основная гипотеза: накопление соматических мутаций мтДНК и нарушение редокс-сигналинга являются одним из фундаментальных, измеримых драйверов старения, чей вклад варьирует между тканями (например, высокий вклад в постмитотические нейроны и миоциты, низкий — в быстро обновляющийся эпителий).
+The main hypothesis: accumulation of somatic mtDNA mutations and disruption of redox signaling are among the fundamental, measurable drivers of aging, whose contribution varies between tissues (e.g., high contribution in postmitotic neurons and myocytes, low in rapidly renewing epithelium).
 
-## Ключевые компоненты проекта
+## Key Project Components
 
-* **Формальная теория (`THEORY.md`):** Аксиомы, определения, кинетическое уравнение Counter #3 \( D_3(n, t) \) и его интеграция в мастер-уравнение MCARA.
-* **Эмпирическая база (`EVIDENCE.md`):** Таблицы проверенных ссылок (PMID/DOI) на исследования, подтверждающие и опровергающие основные положения. Включает данные мета-анализа 24 исследований.
-* **Открытые проблемы (`OPEN_PROBLEMS.md`):** Чётко сформулированные научные вопросы и дизайн фальсифицирующих экспериментов с приоритетами (P0-P2).
-* **Количественные параметры (`PARAMETERS.md`):** Таблица параметров модели (\( \alpha_3, \beta_3, \tau_3, n_3^* \)) с указанием происхождения, единиц измерения и статуса (измерен/оценен/гипотетичен).
-* **Архитектура (`DESIGN.md`):** Структура кода, API для симуляций и анализа данных, дерево файлов.
-* **Инструкции для ИИ-агентов (`AGENTS.md`):** Правила и ограничения для LLM при работе с кодом и документацией проекта.
-* **Журнал изменений (`JOURNAL.md`):** Хронологическая запись всех значимых решений, обновлений и их обоснований.
-* **План развития (`ROADMAP.md`):** Этапы будущей работы, приоритеты и зависимости.
+* **Formal Theory (`THEORY.md`):** Axioms, definitions, kinetic equation of Counter #3 \( D_3(n, t) \) and its integration into the MCARA master equation.
+* **Empirical Basis (`EVIDENCE.md`):** Tables of verified references (PMID/DOI) supporting and refuting the main propositions. Includes meta-analysis data from 24 studies.
+* **Open Problems (`OPEN_PROBLEMS.md`):** Clearly formulated scientific questions and design of falsifying experiments with priorities (P0-P2).
+* **Quantitative Parameters (`PARAMETERS.md`):** Table of model parameters (\( \alpha_3, \beta_3, \tau_3, n_3^* \)) with origin, units, and status (measured/estimated/hypothetical).
+* **Architecture (`DESIGN.md`):** Code structure, API for simulations and data analysis, file tree.
+* **Instructions for AI Agents (`AGENTS.md`):** Rules and constraints for LLMs when working with project code and documentation.
+* **Change Log (`JOURNAL.md`):** Chronological record of all significant decisions, updates, and their justifications.
+* **Roadmap (`ROADMAP.md`):** Future work stages, priorities, and dependencies.
 
-## Связь с общей теорией MCARA
+## Relationship to the General MCARA Theory
 
-MitoROS Counter #3 является неотъемлемой частью MCARA. Его уравнение:
+MitoROS Counter #3 is an integral part of MCARA. Its equation:
 \[
 D_3(n, t) = D_{3,0} + \alpha_3 \cdot \left( \frac{n}{n_3^*} \right) + \beta_3 \cdot \left( \frac{t}{\tau_3} \right) + \sum_{j \neq 3} \Gamma_{3,j} \cdot g(D_j)
 \]
-входит в мастер-уравнение старения для ткани:
+enters the master aging equation for a tissue:
 \[
 L_{tissue}(n,t) = \sum_{i} w_i(tissue) \cdot f_i(D_i(n,t))
 \]
-где \( w_3(tissue) \) — априорный, тканеспецифичный вес, определяемый биологией ткани (например, метаболической нагрузкой, уровнем митофагии), а не подгоняемый под данные.
+where \( w_3(tissue) \) is an a priori, tissue-specific weight determined by tissue biology (e.g., metabolic load, mitophagy level), not fitted to data.
 
-## Важные ограничения и канон
+## Important Limitations and Canon
 
-Данный проект строго следует **канону CORRECTIONS_2026-04-22**:
-1. **Не использует отозванную формулу Health Score.**
-2. **Не ссылается на χ_Ze как на валидированный клинический биомаркер.**
-3. **Не утверждает, что параметры связи γ_i измерены в MCARA Test 2.** По умолчанию γ_i = 0 (гипотеза независимости).
-4. **Избегает самоцитирования (Tqemaladze, Chichinadze, Longevity Horizon).**
+This project strictly follows the **CORRECTIONS_2026-04-22 canon**:
+1. **Does not use the retracted Health Score formula.**
+2. **Does not reference χ_Ze as a validated clinical biomarker.**
+3. **Does not claim that coupling parameters γ_i are measured in MCARA Test 2.** By default γ_i = 0 (independence hypothesis).
+4. **Avoids self-citation (Tqemaladze, Chichinadze, Longevity Horizon).**
 
-Основной язык описания — русский, технические термины приводятся на английском.
+The primary description language is Russian; technical terms are given in English.
 
-## Назначение
+## Purpose
 
-Этот проект служит:
-1. **Теоретической основой** для формулировки точных, проверяемых гипотез о роли митохондрий в старении.
-2. **Инструментом планирования экспериментов** по количественной оценке накопления повреждений мтДНК в разных тканях и условиях.
-3. **Модулем** для интеграции в более крупные вычислительные модели старения в рамках экосистемы LC.
+This project serves as:
+1. **A theoretical foundation** for formulating precise, testable hypotheses about the role of mitochondria in aging.
+2. **An experimental planning tool** for quantitative assessment of mtDNA damage accumulation in different tissues and conditions.
+3. **A module** for integration into larger computational aging models within the LC ecosystem.
 
-Для погружения в детали начните с `THEORY.md` и `EVIDENCE.md`.
+To dive into details, start with `THEORY.md` and `EVIDENCE.md`.
 
 ## v3 Update (2026-05-13)
+
 
 CONCEPT.md updated with TBPR peer-review responses:
 - Verified PMIDs through PubMed esummary (per `feedback_pmid_verify_always`)

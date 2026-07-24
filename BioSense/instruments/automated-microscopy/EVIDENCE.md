@@ -1,18 +1,17 @@
 # EVIDENCE — AutomatedMicroscopy
 
 <!-- [Audit note: fabrication markers removed 2026-05-08. All references below are verified.]
-Маркеры:
- [Reference needed — placeholder: replace with DOI or PMID before submission] — DOI был фабрикованным или указывал на чужую статью; нужен ручной поиск замены.
- [Reference removed during audit — placeholder: verify and restore or delete sentence] — PMID указывал на чужую статью; удалён.
-Источник решений: ~/Desktop/AUDIT_FUNDS_2026-05-08/patches/triage_decisions.json
+Markers:
+ [Reference needed — placeholder: replace with DOI or PMID before submission] — DOI was fabricated or pointed to someone else's article; manual search for replacement is needed.
+ [Reference removed during audit — placeholder: verify and restore or delete sentence] — PMID pointed to someone else's article; deleted.
+Source of decisions: ~/Desktop/AUDIT_FUNDS_2026-05-08/patches/triage_decisions.json
 Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 -->
 
 
-Верифицированные facts, references и internal data, поддерживающие design choices в этом subproject.
+Verified facts, references, and internal data supporting design choices in this subproject.
 
 ---
-
 ## Verified Literature
 
 ### Foundational — imaging hardware
@@ -28,7 +27,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 
 | Claim | Source | PMID / DOI | Verified | Strength |
 |-------|--------|------------|----------|----------|
-| 37°C + 5% CO₂ environment необходимо для BJ-hTERT fibroblast long-term culture | Hayflick 1965; standard ATCC protocols | 10.1016/0014-4827(65)90211-9 | ✅ 2026-04-21 (Hayflick 1965 PMID 14315085) | Strong |
+| 37°C + 5% CO₂ environment is necessary for BJ-hTERT fibroblast long-term culture | Hayflick 1965; standard ATCC protocols | 10.1016/0014-4827(65)90211-9 | ✅ 2026-04-21 (Hayflick 1965 PMID 14315085) | Strong |
 | Humidity 80-95% RH prevents media evaporation over 3-week contact-inhibition protocol | standard cell culture practice [standard practice; no peer-reviewed source] | — | ✅ 2026-04-21 | Moderate |
 | Peltier heater + PID controller achieves ±0.3°C stability | Inkbird ITC-100 spec; DIY community [manufacturer specification; community documentation] | — | ✅ 2026-04-21 | Moderate |
 
@@ -48,10 +47,7 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 | GPT-4 driving chemical synthesis planning (Boiko et al. 2023 Nature) | Boiko et al. 2023 | DOI: 10.1038/s41586-023-06792-0; PMID: 38123806 | ✅ 2026-04-21 | Strong |
 | ChemCrow — LLM with chemistry tools (Bran et al. 2024 Nat Machine Intell) | Bran et al. 2024 | 10.1038/s42256-024-00832-8 | ✅ 2026-04-21 | Strong |
 
-**Note:** до настоящего момента no published precedent of **LLM agent (Claude-class) operating microscopy в `/overnight` mode для aging biology experiments**. This subproject would be among first. Novel, but not unprecedented (follows chemistry lab automation paradigm).
-
----
-
+**Note:** As of now, there is no published precedent of **LLM agent (Claude-class) operating microscopy in `/overnight` mode for aging biology experiments**. This subproject would be among the first. Novel, but not unprecedented (follows chemistry lab automation paradigm).
 ## Internal Data / Artifacts
 
 - `AUTOMATED_MICROSCOPY_SETUP.md` — full engineering specification (this subproject)
@@ -61,6 +57,8 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 - Future: bill-of-materials spreadsheet с актуальными 2026 prices
 
 ---
+
+
 
 ## Limitations & Known Biases (honest)
 
@@ -105,14 +103,11 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 
 - **LED bleaching:** Continuous LED illumination over 3 weeks may degrade sample (phototoxicity, photobleaching). Mitigation: exposure ≤500ms, imaging interval ≥30min, low LED intensity (50% max).
 
-- **AI hallucination risk:** Claude Code может misinterpret image features и принять неверное routine decision. Mitigation: `auto_allow` список узкий; `require_human_approval` для strategic; all decisions journaled for post-hoc audit.
+- **AI hallucination risk:** AI may misinterpret image features and make incorrect routine decisions. Mitigation: `auto_allow` list is narrow; `require_human_approval` for strategic; all decisions journaled for post-hoc audit.
 
-- **Biosafety blind spot:** AI cannot detect contamination visually as reliably as trained human (microbial turbidity subtle in early stages). Mitigation: Claude flags `cell_density_drop` as WARN, human checks visually at 8 AM daily.
+- **Biosafety blind spot:** AI cannot detect contamination visually as reliably as a trained human (microbial turbidity is subtle in early stages). Mitigation: AI flags `cell_density_drop` as WARN, human checks visually at 8 AM daily.
 
-- **No precedent in aging biology:** First project using Claude-class LLM for continuous microscopy supervision. Unknown failure modes. Mitigation: 48h validation period в Phase A Month 1 before full autonomy.
-
----
-
+- **No precedent in aging biology:** First project using Claude-class LLM for continuous microscopy supervision. Unknown failure modes. Mitigation: 48h validation period in Phase A Month 1 before full autonomy.
 ## Cross-references
 
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision
@@ -124,11 +119,13 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 
 *Last verified: 2026-04-21. Literature refs checked via PubMed esummary API on this date.*
 
+
+
 ## Evidence base & meta-analysis
 
 Key claims are supported by the following verified sources:
-1. **AI-assisted microscopy:** [REF_PLACEHOLDER — пенding publication; не цитировать как established].
-2. **Low-cost microscope retrofit:** [REF_PLACEHOLDER — pending publication; не цитировать как established].
+1. **AI-assisted microscopy:** [REF_PLACEHOLDER — pending publication; do not cite as established].
+2. **Low-cost microscope retrofit:** [REF_PLACEHOLDER — pending publication; do not cite as established].
 3. **CEDAR protocol:** Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (foundation paper, real DOI 10.1007/s11033-022-08203-5).
 
 **Systematic review:** A Cochrane/PRISMA-style review of AI in automated microscopy is not yet available; a scoping review is planned.
@@ -136,7 +133,6 @@ Key claims are supported by the following verified sources:
 **Contradicting results:** Some studies report higher error rates for AI-based focus adjustment in low-contrast samples; this will be addressed in pilot testing.
 
 **State-of-the-art:** Current industrial systems (e.g., Nikon BioStation, Zeiss Celldiscoverer) achieve >95% uptime but cost >$50k. Our approach targets comparable uptime at <10% cost.
-
 ## Methodology depth
 
 ### Step-by-step protocol
@@ -163,6 +159,8 @@ Key claims are supported by the following verified sources:
 ### Blinding and randomization
 - Evaluators blinded to AI vs. human origin of decisions.
 - Order of evaluation randomized.
+
+
 
 ## Reproducibility & open science
 

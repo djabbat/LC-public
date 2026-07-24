@@ -1,24 +1,40 @@
 # FirstWave Cuban Human Normative EEG Project — CONCEPT
 
-**Дата:** 2026-06-11
+**Date:** 2026-06-11
 
-## Описание
+**Version:** 1.0
 
-Кубинский нормативный EEG датасет (FirstWave) — репозиторий данных ЭЭГ здоровых испытуемых кубинской популяции.
+## Description
 
-## Назначение
+The Cuban normative EEG dataset (FirstWave) — a repository of EEG data from healthy subjects of the Cuban population.
 
-- Валидация Ze-предсказаний на EEG-данных
-- Нормативные данные для BioSense
-- Оригинальный репозиторий: oldgandalf/FirstWaveCubanHumanNormativeEEGProject
+## Purpose
 
-## Структура
+- Validation of Ze-predictions on EEG data
+- Normative data for BioSense
+- Original repository: oldgandalf/FirstWaveCubanHumanNormativeEEGProject
 
-- `EyesOpen/` — ЭЭГ с открытыми глазами
-- `EyesClose.zip` — ЭЭГ с закрытыми глазами
-- `avr_ref.m`, `gsf.m` — MATLAB-скрипты обработки
-- `data_description.xls` — описание данных
+## Structure
 
-## Статус
+- `EyesOpen/` — EEG with open eyes
+- `EyesClose.zip` — EEG with closed eyes
+- `avr_ref.m`, `gsf.m` — MATLAB processing scripts
+- `data_description.xls` — data description
 
-🟢 Данные загружены. Используются для Ze EEG validation.
+## Status
+
+🟢 Data uploaded. Used for Ze EEG validation.
+
+## Consumables (annual)
+
+| **Office consumables** (printing, stationery, toner) | **$300** |
+
+
+## Hypothesis
+
+*To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## References
+
+*See project MEMORY.md for reference history.*

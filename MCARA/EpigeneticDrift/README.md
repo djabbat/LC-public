@@ -1,45 +1,45 @@
-# Epigenetic Drift: Счётчик #4 в MCARA
+# Epigenetic Drift: Counter #4 in MCARA
 
-**Epigenetic Drift** — это формализация эрозии эпигенетической информации как дискретного, измеримого процесса старения в рамках Мультисчётной Архитектуры Организменного Старения (Multi-Counter Architecture of Organismal Aging, MCARA). Проект определяет эпигенетический дрейф не просто как биомаркер, а как динамический счётчик с собственной кинетикой, драйверами и взаимодействиями с другими процессами старения.
+**Epigenetic Drift** is a formalization of the erosion of epigenetic information as a discrete, measurable aging process within the Multi-Counter Architecture of Organismal Aging (MCARA). The project defines epigenetic drift not merely as a biomarker, but as a dynamic counter with its own kinetics, drivers, and interactions with other aging processes.
 
-## Основная концепция
+## Core Concept
 
-Эпигенетический дрейф — это кумулятивное отклонение эпигенетического ландшафта (метилирование ДНК, модификации гистонов, доступность хроматина) от ювенильного, тканеспецифического состояния. В MCARA он формализован как **Счётчик #4** с уравнением состояния:
+Epigenetic drift is the cumulative deviation of the epigenetic landscape (DNA methylation, histone modifications, chromatin accessibility) from the juvenile, tissue-specific state. In MCARA, it is formalized as **Counter #4** with the state equation:
 `D₄(n, t) = D₄,₀ + β₄·(t / τ₄) + α₄·(n / n₄*) + γ₄ · I(others)`
 
-Где:
-* `D₄` — состояние дрейфа.
-* `β₄` — линейный коэффициент, зависимый от хронологического времени.
-* `α₄` — коэффициент, связанный с клеточными делениями.
-* `γ₄` — параметр связи с другими счётчиками MCARA.
+Where:
+* `D₄` — drift state.
+* `β₄` — linear coefficient dependent on chronological time.
+* `α₄` — coefficient associated with cell divisions.
+* `γ₄` — coupling parameter with other MCARA counters.
 
-## Ключевые особенности
+## Key Features
 
-* **Количественная формализация:** Параметры уравнения обоснованы данными мета-анализов эпигенетических часов (Horvath, GrimAge, DunedinPACE) и исследований старения стволовых клеток.
-* **Измеряемость:** Основной метод измерения — массивы метилирования ДНК (Illumina EPIC) и анализ доступности хроматина (ATAC-seq). Состояние счётчика проксируется через алгоритмы эпигенетических часов.
-* **Взаимодействия:** Счётчик связан с другими процессами старения (укорочение теломер, митохондриальный ROS, протеостаз), что отражено в матрице связей Γ MCARA.
-* **Фальсифицируемость:** В проекте чётко определены [критические нерешённые вопросы]() и тесты для их проверки, включая парадокс ABL-2 и причинно-следственные связи.
+* **Quantitative formalization:** Equation parameters are justified by meta-analysis data from epigenetic clocks (Horvath, GrimAge, DunedinPACE) and stem cell aging studies.
+* **Measurability:** The primary measurement method is DNA methylation arrays (Illumina EPIC) and chromatin accessibility analysis (ATAC-seq). The counter state is proxied via epigenetic clock algorithms.
+* **Interactions:** The counter is linked to other aging processes (telomere shortening, mitochondrial ROS, proteostasis), reflected in the MCARA coupling matrix Γ.
+* **Falsifiability:** The project clearly defines [critical unresolved questions]() and tests to verify them, including the ABL-2 paradox and causal relationships.
 
-## Связи с другими файлами проекта
+## Links to Other Project Files
 
-* **[THEORY.md](THEORY.md):** Полная формальная теория, аксиомы, вывод уравнения и прогнозы.
-* **[EVIDENCE.md](EVIDENCE.md):** Проверенные ссылки на литературу (PMID/DOI), внутренние данные и опровергающие свидетельства.
-* **[OPEN_PROBLEMS.md]():** Приоритизированный список открытых научных проблем с тестами фальсификации.
-* **[PARAMETERS.md](PARAMETERS.md):** Таблица всех количественных параметров, их происхождение, единицы измерения и статус.
-* **[DESIGN.md](DESIGN.md):** Архитектура кода, дерево файлов и API контракты для симуляций и анализа.
-* **[AGENTS.md]():** Инструкции для LLM (таких как Claude) по работе с проектом, включая жёсткие правила и ограничения безопасности.
-* **[JOURNAL.md]():** Хронологический журнал изменений, решений и их обоснований.
-* **[ROADMAP.md]():** План будущих улучшений, приоритеты и зависимости.
+* **[THEORY.md](THEORY.md):** Complete formal theory, axioms, equation derivation, and predictions.
+* **[EVIDENCE.md](EVIDENCE.md):** Verified literature references (PMID/DOI), internal data, and refuting evidence.
+* **[OPEN_PROBLEMS.md]():** Prioritized list of open scientific problems with falsification tests.
+* **[PARAMETERS.md](PARAMETERS.md):** Table of all quantitative parameters, their origin, units, and status.
+* **[DESIGN.md](DESIGN.md):** Code architecture, file tree, and API contracts for simulations and analysis.
+* **[AGENTS.md]():** Instructions for LLMs (such as Claude) on working with the project, including strict rules and safety constraints.
+* **[JOURNAL.md]():** Chronological log of changes, decisions, and their justifications.
+* **[ROADMAP.md]():** Plan for future improvements, priorities, and dependencies.
 
-## Цель проекта
+## Project Goal
 
-Создать строгую, основанную на данных вычислительную модель эпигенетического дрейфа как ядра старения, которая может:
-1. Интегрировать данные различных эпигенетических платформ.
-2. Количественно оценивать вклад времени и клеточных делений.
-3. Моделировать взаимодействия с другими повреждениями.
-4. Формулировать проверяемые прогнозы для экспериментов и интервенций.
+To create a rigorous, data-driven computational model of epigenetic drift as a core of aging that can:
+1. Integrate data from various epigenetic platforms.
+2. Quantitatively assess the contribution of time and cell divisions.
+3. Model interactions with other damages.
+4. Formulate testable predictions for experiments and interventions.
 
-Проект является частью более широкой экосистемы LC и следует канонам, установленным в документе **CORRECTIONS_2026-04-22**. Все утверждения, отозванные в этом документе (например, о формуле Health Score или χ_Ze как валидированном биомаркере), здесь не используются.
+The project is part of the broader LC ecosystem and follows the canons established in the document **CORRECTIONS_2026-04-22**. Any claims retracted in that document (e.g., about the Health Score formula or χ_Ze as a validated biomarker) are not used here.
 
 ---
 
@@ -50,8 +50,7 @@ CONCEPT.md updated with TBPR peer-review responses:
 - Removed fabricated references
 - Addressed top blocking/critical reviewer concerns
 - Statistical protocol additions where applicable
-- Honest TODO sections для unmet requirements
+- Honest TODO sections for unmet requirements
 
-See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
-для project-specific changes.
-
+See `CONCEPT.md` Section marked "v3" / "Address peer-review concerns"
+for project-specific changes.

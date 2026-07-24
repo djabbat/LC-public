@@ -1,7 +1,9 @@
-# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Параметры
+# oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7 — Parameters
 
-## Технические
+**Version:** 1.0
 
-## Бюджет
+## Technical
 
-## Сроки
+## Budget
+
+## Deadlines

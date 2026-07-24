@@ -1,6 +1,5 @@
 # MAP — ARGUS
 
-## Структура проекта
-- `docs/` — документация
-- `_archive/` — архив
-
+## Project structure
+- `docs/` — documentation
+- `_archive/` — archive

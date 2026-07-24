@@ -16,55 +16,55 @@ MAJOR_REVISION
 
 ## CRITICAL ISSUES
 
-1. **Расхождение константы v\* между модулями и документацией**  
-   `PARAMETERS.md` требует Article form (`-0.08738`) для API, но `backend/src/main.rs` использует Python form (`0.45631`) для вычисления `/chi_ze`, а эндпоинт `/api/v_star` возвращает Article form. Отсутствует явная конвертация или единый источник истины. Это гарантирует ошибочные результаты при интеграции с `biosense-web` и другими клиентами.
+1. **Discrepancy in the v\* constant between modules and documentation**  
+   `PARAMETERS.md` requires Article form (`-0.08738`) for API, but `backend/src/main.rs` uses Python form (`0.45631`) for calculating `/chi_ze`, and the `/api/v_star` endpoint returns Article form. There is no explicit conversion or single source of truth. This guarantees incorrect results when integrating with `biosense-web` and other clients.
 
-2. **Полное отсутствие тестов**  
-   В `backend/Cargo.toml` присутствуют `dev-dependencies` (tower, http‑body‑util, hyper), но в предоставленном коде нет ни одного модульного или интеграционного теста. Python‑скрипты (`src/`) также не содержат тестов. Для production‑сервиса, претендующего на клиническое использование, это недопустимо.
+2. **Complete lack of tests**  
+   In `backend/Cargo.toml`, there are `dev-dependencies` (tower, http‑body‑util, hyper), but there is not a single module or integration test in the provided code. Python scripts (`src/`) also do not contain tests. For a production service claiming clinical use, this is unacceptable.
 
-3. **Дублирование ключевых констант в разрозненных файлах**  
-   `v*`, `f_opt`, параметры датасетов повторяются в `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`, `README.md`, `main.rs` и Python‑скриптах. Любое изменение требует правки в каждом файле. Нет единого конфигурационного файла или библиотеки констант.
+3. **Duplication of key constants in scattered files**  
+   `v*`, `f_opt`, dataset parameters are repeated in `PARAMETERS.md`, `KNOWLEDGE.md`, `MEMORY.md`, `README.md`, `main.rs`, and Python scripts. Any change requires editing each file. There is no single configuration file or library of constants.
 
-4. **Отсутствие валидации входных данных в Rust‑бэкенде**  
-   Хендлеры `/chi_ze`, `/bridge`, `/exacerbation` принимают `Json` без проверки на `NaN`, `Inf`, выход за допустимые диапазоны. Это приводит к потенциальным паникам или некорректным ответам.
+4. **Lack of input validation in the Rust backend**  
+   Handlers for `/chi_ze`, `/bridge`, `/exacerbation` accept `Json` without checking for `NaN`, `Inf`, or exceeding valid ranges. This leads to potential panics or incorrect responses.
 
-5. **Неструктурированная Python‑кодовая база**  
-   Все 8 `.py` файлов лежат в `src/` без пакетной структуры (`__init__.py` отсутствует). Модули импортируют друг друга напрямую (например, `eeg_ze_processor.py`). Нет разделения на core, analysis, utils. Это затрудняет тестирование и повторное использование.
+5. **Unstructured Python codebase**  
+   All 8 `.py` files are in `src/` without a package structure (`__init__.py` is missing). Modules import each other directly (e.g., `eeg_ze_processor.py`). There is no separation into core, analysis, utils. This makes testing and reuse difficult.
 
-6. **Нарушение заявленного стека («Rust+Phoenix only»)**  
-   Правило из `TODO.md` явно предписывает писать код на Rust, если не указано иное. Фактически проект содержит значительный объём Python (8 скриптов, ~96 КБ). Хотя это оправдано научными задачами, правило не документирует исключение, что вводит в заблуждение разработчиков.
+6. **Violation of the declared stack ("Rust+Phoenix only")**  
+   The rule from `TODO.md` explicitly prescribes writing code in Rust unless otherwise specified. In fact, the project contains a significant amount of Python (8 scripts, ~96 KB). While this is justified by scientific tasks, the rule does not document the exception, which misleads developers.
 
-7. **Неполная реализация API и документации**  
-   `CLAUDE.md` утверждает, что `ChiZeRequest` поддерживает оба соглашения через `serde(alias)`, но в предоставленном `main.rs` отсутствует определение этой структуры. Код не показывает, как именно обрабатываются legacy поля. Также не видно, как `/chi_ze` вычисляет χ_Ze — фрагмент обрывается.
+7. **Incomplete implementation of API and documentation**  
+   `CLAUDE.md` claims that `ChiZeRequest` supports both conventions via `serde(alias)`, but in the provided `main.rs`, the definition of this structure is missing. The code does not show how legacy fields are handled. Also, it is not clear how `/chi_ze` calculates χ_Ze — the fragment is truncated.
 
 ---
 
 ## MINOR ISSUES
 
-1. `requirements.txt` содержит только минимальные версии зависимостей. Для воспроизводимости следует указать точные версии (или зафиксировать через `pip freeze`).
-2. Отсутствует `.gitignore` — в `README.md` сказано, что `data/` не должен коммититься, но файл не создан.
-3. В корне проекта 99 `.json`‑файлов (результаты анализов). Их следует либо генерировать скриптами, либо вынести в отдельную директорию с собственным `.gitignore`.
-4. `TODO.md` содержит организационные правила (DeepSeek для текста) — лучше перенести в `CLAUDE.md` или отдельный файл `RULES.md`.
-5. `MAP.md` описывает feedback loop, но не упоминает CI/CD, мониторинг или план отказоустойчивости.
+1. `requirements.txt` contains only minimal versions of dependencies. For reproducibility, it is recommended to specify exact versions (or fix them using `pip freeze`).
+2. There is no `.gitignore` — in `README.md`, it is stated that `data/` should not be committed, but the file is not created.
+3. In the project root, there are 99 `.json` files (analysis results). They should either be generated by scripts or moved to a separate directory with their own `.gitignore`.
+4. `TODO.md` contains organizational rules (DeepSeek for text) — it is better to move them to `CLAUDE.md` or a separate file `RULES.md`.
+5. `MAP.md` describes a feedback loop but does not mention CI/CD, monitoring, or a plan for fault tolerance.
 
 ---
 
 ## STRENGTHES
 
-- **Глубокая документация:** 9 корневых `.md` файлов детально описывают архитектуру, параметры, принятые решения и результаты валидации. Это редкий уровень проработки для исследовательского проекта.
-- **Продуманная модульная архитектура:** чёткое разделение на модули EEG (активный), HRV и Olfaction (планируемые) с явными связями и планом развития.
-- **Обоснованный стек:** Rust (axum, tokio) для высоконагруженного API, Python (MNE, numpy) для научных вычислений, Phoenix LiveView для веб‑интерфейса — выбор оправдан задачами каждого компонента.
-- **Валидация на открытых датасетах:** четыре независимых датасета (N до 196) с публикацией статистик (Cohen’s d, AUC, p‑value) повышают доверие к теории.
-- **Использование современных версий библиотек:** Rust 2021 edition, axum 0.7, tokio 1.x, serde 1.x — проект технически актуален.
+- **In-depth documentation:** 9 root `.md` files detail the architecture, parameters, decisions made, and validation results. This is a rare level of elaboration for a research project.
+- **Well-thought-out modular architecture:** clear separation into EEG (active), HRV, and Olfaction (planned) modules with explicit connections and a development plan.
+- **Justified stack:** Rust (axum, tokio) for high-load API, Python (MNE, numpy) for scientific calculations, Phoenix LiveView for the web interface — the choice is justified by the tasks of each component.
+- **Validation on open datasets:** four independent datasets (N up to 196) with publication of statistics (Cohen’s d, AUC, p-value) increase confidence in the theory.
+- **Use of modern library versions:** Rust 2021 edition, axum 0.7, tokio 1.x, serde 1.x — the project is technically up-to-date.
 
 ---
 
 ## ROOT CAUSES
 
-- **Итеративное расширение без синхронизации:** проект начинался как Python‑прототип для EEG, затем были добавлены Rust‑бэкенд, веб‑интерфейс и модули HRV/olfaction. Константы и API‑контракты не были единообразно пересмотрены.
-- **Отсутствие инженерной культуры на ранних этапах:** нет тестов, CI, линтеров, единого источника конфигурации. Это типично для исследовательских проектов, но критично при переходе в production.
-- **Неполная ревизия документации после изменений:** `PARAMETERS.md`, `README.md` и `backend/main.rs` содержат устаревшие или противоречивые сведения (v*, форматы запросов).
+- **Iterative expansion without synchronization:** the project started as a Python prototype for EEG, then Rust backend, web interface, and HRV/olfaction modules were added. Constants and API contracts were not uniformly revised.
+- **Lack of engineering culture in the early stages:** there are no tests, CI, linters, or a single source of configuration. This is typical for research projects but critical when transitioning to production.
+- **Incomplete revision of documentation after changes:** `PARAMETERS.md`, `README.md`, and `backend/main.rs` contain outdated or contradictory information (v*, request formats).
 
 ---
 
-**Резюме:** Проект имеет сильную концептуальную базу и хорошо документирован, но страдает от критических инженерных дефектов: расхождение ключевых констант, отсутствие тестов, неструктурированный Python‑код и нарушение заявленного стека. Для принятия требуется мажорная доработка этих аспектов.
+**Summary:** The project has a strong conceptual basis and is well-documented, but it suffers from critical engineering defects: discrepancies in key constants, lack of tests, and duplication of constants in multiple files.е тестов, неструктурированный Python‑код и нарушение заявленного стека. Для принятия требуется мажорная доработка этих аспектов.

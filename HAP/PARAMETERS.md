@@ -1,6 +1,8 @@
 # PARAMETERS — HAP Project
 
-## Модель симуляции
+**Version:** 1.0
+
+## Simulation Model
 
 ### State variables
 | Symbol | Variable | Default | Range | Unit |
@@ -12,31 +14,31 @@
 | S | HPA / stress activity | 0.2 | [0, ∞) | nM |
 | M | Metabolic state | 1.0 | [0.3, ∞) | mM |
 
-### Ключевые параметры
-| Параметр | Значение | Описание |
+### Key Parameters
+| Parameter | Value | Description |
 |----------|---------|----------|
-| τ_crit | 72 hpf | Конец критического developmental window |
-| L_basal | 1.0 nM | Базальный стероидный выход печени |
-| k_A_L | 0.3 | Зависимость аффективных цепей от L |
-| k_A_B | 0.4 | Зависимость от B |
-| I_suppress_L | 0.3 | Подавление L воспалением |
-| S_enhance_L | 0.2 | Усиление L стрессом (аллостаз) |
+| τ_crit | 72 hpf | End of critical developmental window |
+| L_basal | 1.0 nM | Basal hepatic steroid output |
+| k_A_L | 0.3 | Dependence of affective circuits on L |
+| k_A_B | 0.4 | Dependence on B |
+| I_suppress_L | 0.3 | Suppression of L by inflammation |
+| S_enhance_L | 0.2 | Enhancement of L by stress (allostasis) |
 
-## Параметры проекта
+## Project Parameters
 
-### Бюджет
-- Нет внешнего финансирования (на данный момент)
-- Время: свободное (работа с Afaf — коллаборация)
+### Budget
+- No external funding (at the moment)
+- Time: free (collaboration with Afaf)
 
-### Контакты
+### Contacts
 - Jaba Tqemaladze: jaba@longevity.ge
-- Afaf Elfet: через email
+- Afaf Elfet: via email
 
-### Инструменты
-- Python 3.10 + SciPy/NumPy/Matplotlib (симуляция)
-- Rust (Cargo) — если потребуется производительность
+### Tools
+- Python 3.10 + SciPy/NumPy/Matplotlib (simulation)
+- Rust (Cargo) — if performance is required
 - GitHub: djabbat/HAP (TODO)
 
-### Лицензия
-- Публикация: открытый доступ (Longevity Horizon, Gold OA)
-- Код: MIT / CC-BY (TODO)
+### License
+- Publication: open access (Longevity Horizon, Gold OA)
+- Code: MIT / CC-BY (TODO)

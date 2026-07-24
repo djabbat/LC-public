@@ -1,44 +1,43 @@
 # MAP.md — CEDAR
 
-## Структура
+## Structure
 
-```
+
 CEDAR/
-├── _pi.md              — Правила pi
-├── CONCEPT.md          — Концепт CEDAR
-├── TODO.md             — Задачи
-├── PARAMETERS.md       — Параметры модели
-├── MAP.md              — Эта карта
-├── STATE.md            — Текущее состояние
-├── MEMORY.md           — История решений
-├── README.md           — Введение
-├── DESIGN.md           — Архитектура
-├── THEORY.md           — Теория
-├── EVIDENCE.md         — Доказательная база
-├── Cargo.toml          — Rust-проект
+├── _pi.md              — pi rules
+├── CONCEPT.md          — CEDAR concept
+├── TODO.md             — Tasks
+├── PARAMETERS.md       — Model parameters
+├── MAP.md              — This map
+├── STATE.md            — Current state
+├── MEMORY.md           — Decision History
+├── README.md           — Introduction
+├── DESIGN.md           — Architecture
+├── THEORY.md           — Theory
+├── EVIDENCE.md         — Evidence base
+├── Cargo.toml          — Rust project
 │
-├── crates/             — Rust-крейты
-├── backend/            — Серверная часть
-├── frontend/           — Веб-интерфейс
-├── gui/                — Десктоп GUI
-├── scripts/            — Скрипты
-├── docs/               — Документация
-├── refs/               — Референсы
+├── crates/             — Rust crates
+├── backend/            — Server side
+├── frontend/           — Web interface
+├── gui/                — Desktop GUI
+├── scripts/            — Scripts
+├── docs/               — Documentation
+├── refs/               — References
 │
-├── simulator/          — Python-симулятор CEDAR-v2
+├── simulator/          — Python simulator CEDAR-v2
 │   ├── _pi.md
-│   ├── cedar_sim/      — Исходный код
-│   ├── tests/          — Тесты
-│   └── pyproject.toml
+│   ├── cedar_sim/      — Source code
+│   ├── tests/          — Tests
 │
-├── articles/           — Статьи
-├── Aubrey/             — Применение в Aubrey
-├── CellLineageTree/    — Деревья клеточных линий
-├── _archive/           — Архив
-└── audits/             — Аудиты
-```
+├── articles/           — Articles
+├── Aubrey/             — Application in Aubrey
+├── CellLineageTree/    — Cell lineage trees
+├── _archive/           — Archive
+└── audits/             — Audits
 
-## Связи
-- **Родитель:** LC/MCARA
-- **Дочерние:** simulator, Aubrey, CellLineageTree, articles
-- **Внешние:** Marketing/CEDAR, PhD
+
+## Relationships
+- **Parent:** LC/MCARA
+- **Children:** simulator, Aubrey, CellLineageTree, articles
+- **External:** Marketing/CEDAR, PhD

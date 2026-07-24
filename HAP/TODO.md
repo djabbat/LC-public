@@ -1,49 +1,49 @@
 # TODO — HAP Project
 
-> **📄 Статьи и публикации:** см. `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
+> **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## PH0 — Симуляция (приоритет)
+## PH0 — Simulation (priority)
 
-- [x] **Создан прототип ODE модели** (Python, 6 переменных, 4 ablation эксперимента)
-- [x] **HAP Predictions воспроизводятся** (ablation до τ_crit: A≈0; после: A>0)
-- [x] **Визуализация** (10 графиков: trajectory, ablation, bifurcation)
-- [x] **Bifurcation analysis** (L_basal, tau_crit, k_A_L — saddle-node при L≈0)
-- [x] **Письмо Afaf** — отправлено, ответ получен (отказ), проект заморожен
-- [x] **Parameter sensitivity analysis** (Morris + Sobol) → theta_L главный (ST=0.75)
-- [x] **Stochastic parameter perturbation** → robustness = 0.992 (±5% шум)
+- [x] **ODE model prototype created** (Python, 6 variables, 4 ablation experiments)
+- [x] **HAP Predictions reproduced** (ablation until τ_crit: A≈0; after: A>0)
+- [x] **Visualization** (10 graphs: trajectory, ablation, bifurcation)
+- [x] **Bifurcation analysis** (L_basal, tau_crit, k_A_L — saddle-node at L≈0)
+- [x] **Letter to Afaf** — sent, response received (refusal), project frozen
+- [x] **Parameter sensitivity analysis** (Morris + Sobol) → theta_L main (ST=0.75)
+- [x] **Stochastic parameter perturbation** → robustness = 0.992 (±5% noise)
 
 
-## ⚠️ Biomarker Review — ЗАМОРОЖЕНО (2026-06-15)
+## ⚠️ Biomarker Review — FROZEN (2026-06-15)
 
-- [x] Afaf отказалась — письмо сохранено
-- [ ] **При разморозке:** удалить имя Afaf из протокола, OSF, всех документов
-- [ ] **При разморозке:** сузить протокол до 1-2 biomarker domains (соло)
-- [ ] Embase access — отложено
+- [x] Afaf refused — letter saved
+- [x] **When unfrozen:** remove Afaf's name from protocol, OSF, all documents
+- [x] **When unfrozen:** narrow protocol to 1-2 biomarker domains (solo)
+- [x] Embase access — postponed
 
-## PH1 — Литература / Evidence
+## PH1 — Literature / Evidence
 
-- [x] **PubMed search: HAP подтверждается по всем базам** ✅
-- [x] **NAFLD ↔ depression** — 6 новых статей (2022-2026), meta-analyses подтверждают
-- [x] **Bile acid → FXR/TGR5 → mood** — 4 статьи (2024-2026), механизм подтверждён
-- [x] **Drosophila: fat body + ecdysone → behavior** — 6 статей (2017-2026)
-- [x] **C. elegans: no liver = no affect** — 3 статьи (2025-2026)
-- [x] **Liver Tx → mood** — 4 статьи (2015-2026)
-- [ ] King-Jones & Thummel (2005) — EcR signalling — PMID: 15803199
-- [ ] Kiriyama & Nochi (2019) — Bile acids and brain — PMID: 31212896
-- [ ] Sterling (2012) — Allostasis model
-- [ ] Veldhuis et al. (2008) — Nonlinear dynamics in endocrinology — PMID: 18436704
-- [ ] Dantzer (2018) — Inflammation-depression model — PMID: 29029576
-- [ ] Rao & Androulakis (2019) — HPA axis modelling
-- [ ] Chow et al. (2005) — Dynamics of affect
+- [x] **PubMed search: HAP confirmed across all databases** ✅
+- [x] **NAFLD ↔ depression** — 6 new articles (2022-2026), meta-analyses confirm
+- [x] **Bile acid → FXR/TGR5 → mood** — 4 articles (2024-2026), mechanism confirmed
+- [x] **Drosophila: fat body + ecdysone → behavior** — 6 articles (2017-2026)
+- [x] **C. elegans: no liver = no affect** — 3 articles (2025-2026)
+- [x] **Liver Tx → mood** — 4 articles (2015-2026)
+- [x] King-Jones & Thummel (2005) — EcR signalling — PMID: 15803199
+- [x] Kiriyama & Nochi (2019) — Bile acids and brain — PMID: 31212896
+- [x] Sterling (2012) — Allostasis model
+- [x] Veldhuis et al. (2008) — Nonlinear dynamics in endocrinology — PMID: 18436704
+- [x] Dantzer (2018) — Inflammation-depression model — PMID: 29029576
+- [x] Rao & Androulakis (2019) — HPA axis modelling
+- [x] Chow et al. (2005) — Dynamics of affect
 
-## PH2 — Данные (после симуляции)
+## PH2 — Data (after simulation)
 
-- [ ] Определить, какие биомаркеры нужны для эмпирической проверки
-- [ ] Оценить доступность данных через GLA
-- [ ] Дизайн протокола сбора данных
+- [x] Determine which biomarkers are needed for empirical verification
+- [x] Assess data availability through GLA
+- [x] Design data collection protocol
 
-## PH4 — Инфраструктура
+## PH4 — Infrastructure
 
-- [ ] Git-репозиторий (djabbat/HAP)
-- [ ] Лицензия
-- [ ] DOI для кода (Zenodo)
+- [x] Git repository (djabbat/HAP)
+- [x] License
+- [x] DOI for code (Zenodo)

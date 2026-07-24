@@ -1,6 +1,5 @@
 # MAP — Automated Microscopy
 
-## Структура проекта
-- `docs/` — документация
-- `_archive/` — архив
-
+## Project Structure
+- `docs/` — documentation
+- `_archive/` — archive

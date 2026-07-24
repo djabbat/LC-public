@@ -1,36 +1,36 @@
 # Organismal Aging
 
-**Самообучающийся 4D-симулятор организма (3D + время).**
+**Self-learning 4D simulator of the organism (3D + time).**
 
-Моделирует развитие с зиготы через онтогенез к старению и смерти.
-Старение — основа всех заболеваний.
+Simulates development from zygote through ontogenesis to aging and death.
+Aging is the basis of all diseases.
 
-## Три уровня
+## Three levels
 
-1. **Центриоль** — накопитель энтропии, первопричина старения
-2. **5 треков MCARA** — теломеры, митохондрии, эпигенетика, протеостаз
-3. **8 тканей + Ze-конфликты** — межтканевые рассогласования → болезни
+1. **Centriole** — entropy accumulator, root cause of aging
+2. **5 MCARA tracks** — telomeres, mitochondria, epigenetics, proteostasis
+3. **8 tissues + Ze-conflicts** — inter-tissue mismatches → diseases
 
-## Ключевые возможности
+## Key features
 
-- Самообучение через физического робота ARGUS-LP
-- INFOGEST-интеграция (микробиом/макробиом)
-- Универсальность видов (человек, мышь, C. elegans, одноклеточные)
-- Травмы, заболевания, интервенции
-- 4D-визуализация (Phoenix LiveView)
+- Self-learning through physical robot ARGUS-LP
+- INFOGEST integration (microbiome/macrobiome)
+- Species universality (human, mouse, C. elegans, unicellular organisms)
+- Injuries, diseases, interventions
+- 4D visualization (Phoenix LiveView)
 
-## Технологии
+## Technologies
 
 Rust | Python (PyO3) | Phoenix/Elixir | Apache 2.0
 
-## Статус
+## Status
 
-🟡 Pre-Alpha — проектирование архитектуры (Q3 2026)
+🟡 Pre-Alpha — architecture design (Q3 2026)
 
-## Автор
+## Author
 
 Jaba Tqemaladze, MD — Georgia Longevity Alliance
 
 ---
 
-*Organismal Aging — часть единого проекта LC (LongevityCommon).*
+*Organismal Aging — part of the unified LC project (LongevityCommon).*

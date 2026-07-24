@@ -1,18 +1,21 @@
 # pi — CEDAR/articles
 
-> ## 🔴 ПАМЯТЬ ПРЕЖДЕ ДЕЙСТВИЯ
-> Перед любым действием прочитать: _pi.md, MAP.md, MEMORY.md
+> ## 🔴 MEMORY BEFORE ACTION
+> Before any action read: _pi.md, MAP.md, MEMORY.md
 
 **Parent:** LC/MCARA/CEDAR
 **Created:** 2026-05-18 | **Updated:** 2026-06-11
 
-## Описание
-Статьи по CEDAR (Centriolar Damage Accumulation Theory of Aging). Сабмиты в журналы, препринты, ревизии.
+## Description
+Articles on CEDAR (Centriolar Damage Accumulation Theory of Aging). Submissions to journals, preprints, revisions.
 
-## Правила
-- Статьи подаются в бесплатные журналы (diamond OA / no APC)
-- Каскад: Aging Cell → JTB → другой журнал
-- Не публиковать дважды
+## Rules
+- Articles are submitted to free journals (diamond OA / no APC)
+- Cascade: Aging Cell → JTB → another journal
+- Do not publish twice
 
-## Ключевые файлы
+## Key files
 - CONCEPT.md (CEDAR)
+
+## English-only
+All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.

@@ -5,19 +5,18 @@ description: Georgia Longevity Alliance — research ecosystem. Project manageme
 
 # LC
 
-## Команды
+## Teams
 
-### `!status` — статус проекта
-```bash
+### `!status` — project status
+bash
 ./scripts/status.sh
-```
 
-### `!todo` — показать TODO
-```bash
+
+### `!todo` — show TODO
+bash
 cat .pi/context.md
-```
 
-## Deploy (если нужно)
-```bash
+
+## Deploy (if needed)
+bash
 echo "deploy steps here"
-```
