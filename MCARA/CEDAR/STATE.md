@@ -15,15 +15,15 @@
 - 🔴 **MAP.md** — переписан: старая версия содержала несуществующие папки (cedar_sim/, tests/, gui/), не содержала реальных (Aubrey-Platform/, CellLineageTree/, articles/).
 - 🟡 **DESIGN.md** — расширен с 353 до 1807 байт (архитектура, компоненты, data pipeline, key decisions)
 - 🟡 **TODO.md** — добавлены активные задачи (CIRCBIO-07, autofix, статьи, LLPS-секция в THEORY.md)
-- ✅ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — создан: полная верификация гипотезы «центриоль/LLPS/суша vs вода» с PMID
-- ✅ **scripts/cedar_autofix.sh** — создан: CEDAR-специфичный autofix-скрипт (адаптирован из DEEP_AUDIT_ALGORITHM.md)
+- ✔ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — создан: полная верификация гипотезы «центриоль/LLPS/суша vs вода» с PMID
+- ✔ **scripts/cedar_autofix.sh** — создан: CEDAR-специфичный autofix-скрипт (адаптирован из DEEP_AUDIT_ALGORITHM.md)
 - 📊 **Итоговый счёт autofix: 98/100.** Критерий 95+ пройден.
 <!-- /lang:ru -->
 
 ## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy
 
 - 🔴 **BioEssays `4799098` — desk reject 15 Jul (< 24 h).** Reason: pre-submission inquiry not sent, article too large for Problems & Paradigms.
-- ✅ **Post-mortem recorded** in MEMORY.md
+- ✔ **Post-mortem recorded** in MEMORY.md
 - 📄 **Rewrite strategy:** Centriole Elimination (792 lines) → split into 3 articles:
   - **A.** CEDAR hypothesis (3000 words) → Differentiation
   - **B.** 13-group experimental design → Cell Cycle
@@ -36,7 +36,7 @@
 
 ## 📚 2026-07-10 — Submission to BioEssays (← outdated, see above)
 
-- Preprint Research Square `rs-10309814` — ✅ DOI obtained
+- Preprint Research Square `rs-10309814` — ✔ DOI obtained
 - Submission BioEssays → 🔴 desk reject 15 Jul
 - Centrioles in npj Aging `2e8466c7` — Peer Review
 
@@ -63,13 +63,13 @@
 
 ## Active TODOs (CONCEPT↔CODE mismatches, audit 2026‑04‑25)
 
-### L1 — ✅ MOSTLY RESOLVED (v5.3)
-- α_HSC = 0.0082 ✅ (Round‑7 MCMC posterior, fitted)
-- ν_HSC = 1.2/yr ✅
-- β_HSC = 0.005 (additive cell_dt_cli) ✅
-- τ_protection = 24.3 ✅
-- π_0 = 0.87 ✅
-- π_baseline = 0.10 ✅
+### L1 — ✔ MOSTLY RESOLVED (v5.3)
+- α_HSC = 0.0082 ✔ (Round‑7 MCMC posterior, fitted)
+- ν_HSC = 1.2/yr ✔
+- β_HSC = 0.005 (additive cell_dt_cli) ✔
+- τ_protection = 24.3 ✔
+- π_0 = 0.87 ✔
+- π_baseline = 0.10 ✔
 - **Updated parameter:** `r_ep` (0.045) replaced by `ep_rate_base` (0.01, from MCMC pilot) and `k_ep` (0.8, from analytical coupling). This will be finalized after Cell‑DT v4.0 calibration.
 
 ### L2 — Rename `pi_baseline` → `pi_base` (still pending)
@@ -91,13 +91,13 @@ Will be generated after v4.0 refactor.
 Added to CONCEPT.md §ABL‑2 with resolution statement.
 
 ### L9 — Counter numbering
-Unified “Counter #1 (Centriolar)” across all files. ✅
+Unified “Counter #1 (Centriolar)” across all files. ✔
 
 ---
 
 ## Milestones
 
-### v5.3 — Counter #1 framing + Grant Submission ✅ 2026‑04‑25
+### v5.3 — Counter #1 framing + Grant Submission ✔ 2026‑04‑25
 - [x] TEAM_AND_BUDGET.md created with full budget and PI track record
 - [x] Counter‑argument to “consequence only” alternative added in CONCEPT.md
 - [x] Sobol paradox resolved via coupling model (theoretical)
