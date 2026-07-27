@@ -1,44 +1,72 @@
 # CEDAR — Memory
 
+<!-- lang:ru -->
 ## 2026-07-26: 📚 Wenner (мейотическая инициация) + Miller (апоптоз/оогенез) 🔴
+<!-- /lang:ru -->
 
 ### Wenner et al. (2026) — Biology of Reproduction — PMID 42479652
+<!-- lang:ru -->
 **«Molecular genetics of meiotic initiation in mammals»** — обзор перехода митоз→мейоз.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Три прямых попадания в CEDAR:**
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 1. **Центриоли элиминируются в оогенезе млекопитающих.** Где в каскаде STRA8/MEIOSIN/MEIOC? В обзоре НЕ упомянуто — это gap в литературе, который мы можем занять.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 2. **MEIOC–YTHDC2–RBM46 (♂) vs MEIOC соло (♀).** Разница в механизмах может объяснять, почему центриоли сохраняются в сперматогенезе, но теряются в оогенезе. YTHDC2 — m⁶A reader → центриолярные РНК могут быть m⁶A-модифицированы (связь с гипотезой Zernicka-Goetz).
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 3. **Ключевые похожие:** MEIOSIN (Ishiguro 2020, PMID 32032549), RBM46 (2022, PMID 36001654), STRA8 (2008, PMID 18799751).
+<!-- /lang:ru -->
 
 ### Miller et al. (2026) — bioRxiv — PMID 42465240
+<!-- lang:ru -->
 **«Regulated apoptosis is a conserved mechanism pausing female reproduction»** — апоптоз как консервативный механизм паузы оогенеза (Drosophila → Polistes).
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Связь с CEDAR:** окислительный стресс → повреждение центриоли → апоптоз в оогенезе? Эволюционно консервативная связь стресс-пауза-апоптоз.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 📄 Полный анализ: `docs/literature_analysis_26_jul.md` (скопирован из Entropy_in_Aging)
+<!-- /lang:ru -->
 
 ---
 
+<!-- lang:ru -->
 ## 2026-07-25: Chk1 — молекулярный механизм M1 🔴
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 > **Находка:** Chk1 фосфорилирует β-tubulin-T285 на центросоме — неканоническая роль DNA damage киназы как регулятора качества веретена.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ### Детали:
+<!-- /lang:ru -->
 - Boutakoglou/…/Zachos 2026, *Commun Biol* (Nature), PMID 41844775
+<!-- lang:ru -->
 - ATRIP→ATR→TopBP1→Chk1 — весь каскад на центросоме, не в ядре
 - T285A phospho-dead → плохое веретено, ошибки сегрегации, неравные дочерние клетки
 - Замыкает цепь: «DNA damage kinase → centrosome → mitotic fidelity»
 - Лаба Zachos — 19 лет на Chk1 в митозе (Dev Cell 2007 → Commun Biol 2026)
 - Дополнительно: Chk1→AHSA1-HSP90→mitophagy (Jing P et al. 2026, PMID 42229233) — Counter #3
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ### Что обновлено:
 - ✅ CEDAR/CONCEPT.md — M1 с молекулярным механизмом
 - ✅ CEDAR/EVIDENCE.md — таблицы Chk1→β-tubulin + Chk1→mitophagy
 - ✅ EIC Pathfinder Response — ссылка PMID 41844775
 - ✅ Контакты Zachos lab: `docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
+<!-- /lang:ru -->
 
 ---
 
