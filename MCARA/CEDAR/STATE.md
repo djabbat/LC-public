@@ -10,6 +10,7 @@
 
 ## 🟢 2026-07-26 — Autofix CEDAR: 98/100
 
+<!-- lang:ru -->
 - 🔴 **PARAMETERS.md** — исправлен: был шаблонный текст «data validation framework», заменён на реальные центриолярные параметры (Cell‑DT, LLPS, эволюция, грант)
 - 🔴 **MAP.md** — переписан: старая версия содержала несуществующие папки (cedar_sim/, tests/, gui/), не содержала реальных (Aubrey-Platform/, CellLineageTree/, articles/).
 - 🟡 **DESIGN.md** — расширен с 353 до 1807 байт (архитектура, компоненты, data pipeline, key decisions)
@@ -17,6 +18,7 @@
 - ✅ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — создан: полная верификация гипотезы «центриоль/LLPS/суша vs вода» с PMID
 - ✅ **scripts/cedar_autofix.sh** — создан: CEDAR-специфичный autofix-скрипт (адаптирован из DEEP_AUDIT_ALGORITHM.md)
 - 📊 **Итоговый счёт autofix: 98/100.** Критерий 95+ пройден.
+<!-- /lang:ru -->
 
 ## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy
 
