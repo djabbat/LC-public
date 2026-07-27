@@ -1,25 +1,37 @@
 
 
 
+<!-- lang:ru -->
 ## 2026-07-25: Chk1 — две неканонические роли в старении 🔴
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 > **Находка:** Chk1 (Checkpoint kinase 1) — DNA damage киназа — имеет две неканонические роли, напрямую связанные со счётчиками MCARA.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ### Что обнаружено:
 1. **Counter #1 (Centriolar):** Chk1-P→β-tubulin-T285 на центросоме → качество веретена. Boutakoglou/…/Zachos 2026, *Commun Biol*, PMID 41844775.
 2. **Counter #3 (MitoROS):** Chk1→AHSA1-HSP90→митофагия → кардиопротекция. Jing P et al. 2026, *Redox Biol*, PMID 42229233.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ### Что сделано:
 - ✅ EVIDENCE.md §15 — полный анализ с историей лабы Zachos (2007–2026)
 - ✅ CEDAR/EVIDENCE.md — Chk1→β-tubulin для M1 + Chk1→mitophagy
 - ✅ CEDAR/CONCEPT.md — M1 обновлён: молекулярный механизм
+<!-- /lang:ru -->
 - ✅ MitoROS/EVIDENCE.md + CONCEPT.md — Chk1→mitophagy
+<!-- lang:ru -->
 - ✅ EIC Pathfinder Response — ссылка PMID 41844775 в Механизм A
 - ✅ Контакты: `CEDAR/docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ### Стратегия:
 - George Zachos (gzachos@uoc.gr) — потенциальный партнёр CIRCBIO-07/EIC
 - Chk1 = master regulator двух счётчиков MCARA → strong grant narrative
+<!-- /lang:ru -->
 
 ---
 
