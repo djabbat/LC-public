@@ -93,7 +93,7 @@ IF both methods give the SAME result
 Accumulation of damage in the centriole (D_c) causes 9 mechanisms of pathology:
 
 **Core (M1-M3):**
-- **M1 — Chromosomal segregation:** spindle defects → genomic instability
+- **M1 — Chromosomal segregation:** spindle defects → genomic instability. **Molecular mechanism:** Chk1 (ATR→ATRIP→TopBP1→Chk1 on centrosome) phosphorylates β-tubulin-T285 → required for spindle MT density and nucleation (Boutakoglou/…/Zachos 2026, PMID 41844775). Chk1 decline with age → impaired spindle quality → segregation errors.
 - **M2 — Ciliary signaling:** centriole → basal body → ciliary disruption → Hh/Wnt/TGF-β failure
 - **M3 — CAMC:** 🟡→🟢 UPGRADED. centrosome as a platform: Oct4 on the centrosome (
 ## 📚 New Literature (2026-07-05) + Meta-analysis (2026-07-06)
