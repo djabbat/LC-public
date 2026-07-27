@@ -1,5 +1,15 @@
 # MitoROS — Memory
 
+## 2026-07-25: Chk1→AHSA1-HSP90→Mitophagy 🔴
+
+> **Находка:** Chk1 (PMID 42229233) активирует митофагию через AHSA1-HSP90 — вторая неканоническая роль той же киназы, что контролирует качество веретена (Counter #1).
+
+- Jing P et al. *Redox Biology* 2026;95:104242
+- Chk1↓ с возрастом в сердце; overexpression → митофагия → кардиопротекция
+- Chk1→AHSA1→TRIM8→HSP90 ATPase — молекулярный механизм
+- Одна киназа — два счётчика MCARA: Counter #1 (β-tubulin/spindle) + Counter #3 (AHSA1/mitophagy)
+- ✅ Обновлены MitoROS/EVIDENCE.md + CONCEPT.md
+
 ## 2026-07-13 — Research Feed Analysis: ClpP Series and Mitochondrial UPR
 
 - **Event:** From Jaba feed — Feng et al. (Andrology 2026): ClpP ensures mitochondrial integrity and meiotic progression. Plus PubMed search for similar.
