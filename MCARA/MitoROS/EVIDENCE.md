@@ -113,3 +113,15 @@
 | Утверждение | PMID | Проверено | Сила |
 |-------------|------|:---:|:---:|
 | SIRT1↓ → α-tubulin hyperacetylation в midpiece → mitochondrial dysfunction + ROS↑ | 41882697 | ✅ 2026-07-13 | Strong |
+
+---
+
+## Chk1→Mitophagy (2026-07-25)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|----------|----------|
+| CHK1 overexpression → HSP90-митофагия → замедление кардиального старения | **42229233** | Jing P et al. CHK1 activates mitophagy to attenuate cardiac aging. *Redox Biol*. 2026;95:104242 | ✅ 2026-07-25 | **Strong** |
+| CHK1 ↓ с возрастом; Chk1-cKO → ухудшение функции сердца in vivo + hiPSC-CMs | (ibid.) | (ibid.) | ✅ 2026-07-25 | Strong |
+| Chk1→AHSA1→TRIM8→HSP90 — молекулярный механизм активации митофагии | (ibid.) | (ibid.) — IP-MS, Co-IP | ✅ 2026-07-25 | Strong |
+
+**Value:** Chk1 — та же киназа, что контролирует качество веретена (Counter #1 через β-tubulin-T285, PMID 41844775), также активирует митофагию (Counter #3). Одна киназа — два счётчика MCARA.

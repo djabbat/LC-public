@@ -486,3 +486,57 @@
 2. **Спермальные центриоли = seeds, не темплаты —** подтверждает de novo сборку в зиготе
 3. **Усиливает Bradford Hill Analogy:** сброс центриолей — не артефакт, а эволюционно консервативная стратегия
 
+---
+
+## 15. Chk1 Non-Canonical Roles — Spindle Quality & Mitophagy (2026-07-25)
+
+> **Ключевая находка:** Chk1 (Checkpoint kinase 1) — ДВЕ неканонические роли в старении: (1) фосфорилирование β-tubulin на центросоме → качество веретена; (2) активация митофагии → кардиопротекция. Оба пути связывают DNA damage киназу с независимыми счётчиками MCARA.
+
+### 15.1. Chk1 → β-tubulin-T285 → spindle quality (Counter #1 — Centriolar)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|----------|----------|
+| Chk1 фосфорилирует β-tubulin T285 на митотических центросомах в прометафазе/метафазе; необходимо для плотности и нуклеации MT веретена | **41844775** | Boutakoglou N, Petsalaki E, Balafouti S, Efthymiou D, Lilla S, Giatagana EM, Zanivan S, Zachos G. β-tubulin phosphorylation by Chk1 is required for normal spindle formation during cell division. *Commun Biol*. 2026;9(1):608 | ✅ 2026-07-25 | **Strong** |
+| ATRIP→ATR→TopBP1→Chk1 на центросоме активирует фосфорилирование β-tubulin-T285; НЕ ЯДЕРНЫЙ DNA damage путь | (ibid.) | (ibid.) — Fig. 7-8, механизм | ✅ 2026-07-25 | Strong |
+| Нарушение T285-P → неправильное веретено, задержка анафазы, ошибки alignment/segregation хромосом, неравный размер дочерних клеток, ↓ пролиферация | (ibid.) | (ibid.) — T285A phospho-dead mutant, rescue experiments | ✅ 2026-07-25 | Strong |
+| Chk1 фосфорилирует Aurora B S331 → активация Aurora B в митозе | DOI: `10.1083/jcb.201104023` | Petsalaki E, Akoumianaki T, Black EJ, Gillespie DAF, **Zachos G**. Phosphorylation at serine 331 is required for Aurora B activation. *J Cell Biol*. 2011;195(3):449-466 | ✅ 2026-07-25 | **Strong** — та же лаба, третий неканонический субстрат Chk1 |
+| Chk1 необходим для функции spindle assembly checkpoint | DOI: `10.1016/j.devcel.2007.01.003` | **Zachos G**, Black EJ, Walker M, Scott MT, Vagnarelli P, Earnshaw WC, Gillespie DAF. Chk1 Is Required for Spindle Checkpoint Function. *Dev Cell*. 2007;12(2):247-260 | ✅ 2026-07-25 | **Strong** — первооткрытие неканонической роли Chk1 в митозе |
+
+### 15.2. Chk1 → AHSA1-HSP90 → mitophagy (Counter #3 — MitoROS)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|----------|----------|
+| CHK1 overexpression активирует HSP90-опосредованную митофагию, замедляет кардиальное старение | **42229233** | Jing P, Zhou LH, Chen SX, …, Wang H. CHK1 activates mitophagy to attenuate cardiac aging via inhibiting AHSA1-ubiquitination. *Redox Biol*. 2026;95:104242 | ✅ 2026-07-25 | **Strong** |
+| CHK1 ↓ с возрастом в сердце; нокаут ухудшает функцию; overexpression → protection (in vivo + hiPSC-CMs) | (ibid.) | (ibid.) — Fig. 1-6, Chk1-cKO мыши | ✅ 2026-07-25 | Strong |
+| Chk1 напрямую связывает AHSA1 → подавляет TRIM8-опосредованную убиквитинацию → стабилизирует AHSA1-HSP90 комплекс → ↑ HSP90 ATPase | (ibid.) | (ibid.) — IP-MS, Co-IP, ubiquitination assays | ✅ 2026-07-25 | Strong |
+
+### 15.3. Value для MCARA
+
+1. **Counter #1 (Centriolar):** Chk1→β-tubulin-T285 — молекулярный механизм M1 (spindle defects → genomic instability). Chk1 — не ядерная DNA damage киназа на центросоме, а прямой регулятор качества веретена через модификацию тубулина. **Эволюция «перепрофилировала» DNA damage киназу для контроля митоза прямо на центросоме.**
+
+2. **Counter #3 (MitoROS):** Chk1→AHSA1-HSP90→mitophagy — второй неканонический путь той же киназы. Chk1 одновременно контролирует качество веретена (центросома) и качество митохондрий (митофагия). **Одна киназа — два счётчика MCARA.**
+
+3. **Cross-talk между счётчиками:** Chk1 — кандидат в «master regulator» клеточного старения через множественные неканонические субстраты:
+   - β-tubulin (Counter #1 — spindle quality)
+   - AHSA1/HSP90 (Counter #3 — mitophagy)
+   - Aurora B (митотический checkpoint)
+   - (возможно) другие центросомные и митохондриальные мишени
+
+4. **Старение Chk1:** Обе статьи показывают: Chk1 ↓ с возрастом (сердце — PMID 42229233; предсказание: в стволовых клетках тоже). Возрастное снижение Chk1 → параллельное ухудшение и веретена (Counter #1) и митохондрий (Counter #3) → two-hit модель клеточного старения.
+
+5. **EIC Pathfinder:** Подтверждает Механизм A (центросома как сигнальный хаб — CHEK1 упомянут на стр. 18 Response to Peer Review) свежей (март 2026) экспериментальной статьёй из лабы Zachos (Communications Biology — Nature). Добавляет конкретный молекулярный механизм: Chk1-P→β-tubulin-T285 на центросоме.
+
+6. **Лаб Zachos (University of Crete):** Потенциальный партнёр для CIRCBIO-07/EIC Pathfinder. Экспертиза: Chk1 в митозе (2007 → 2026, 19 лет), неканонические субстраты, центросомная биология. Гранты: Worldwide Cancer Research, Fondation Santé, HFRI.
+
+### 15.4. Связанные работы лабы Zachos (Chk1 в митозе)
+
+| Год | PMID/DOI | Находка |
+|:---:|----------|--------|
+| 2007 | `10.1016/j.devcel.2007.01.003` | **Первооткрытие:** Chk1 необходим для spindle assembly checkpoint (Dev Cell) |
+| 2008 | `10.1074/jbc.R800021200` | Обзор: Chk1-зависимый S-M checkpoint (J Biol Chem) |
+| 2011 | `10.1083/jcb.201104023` | Chk1-P→Aurora B S331 → активация Aurora B (J Cell Biol) |
+| 2018 | `10.1083/jcb.201709005` | Chmp4c → spindle checkpoint через Aurora B (J Cell Biol) |
+| 2026 | **41844775** | Chk1-P→β-tubulin-T285 → spindle quality (Commun Biol) |
+
+> **Вывод:** Лаб Zachos систематически документирует неканонические роли Chk1 в митозе с 2007 года. Текущая статья — кульминация: идентификация прямого субстрата на центросоме (β-tubulin), что замыкает цепь «DNA damage kinase → centrosome → mitotic fidelity.»
+

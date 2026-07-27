@@ -2,32 +2,45 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## Goals & Tasks
-
-### Project Objectives
-- **Goal 1:** Establish a robust data model and ingestion pipeline for CEDAR.
-- **Goal 2:** Define clear state management and transition rules.
-- **Goal 3:** Create comprehensive documentation and testing framework.
-- **Goal 4:** Deliver a minimum viable product (MVP) after previous milestone.
-
-### Key Tasks
-- [x] Finalize project scope and milestones (P0, deadline: after completion of prerequisite tasks)
-- [x] Draft CONCEPT.md with architecture overview (P1, deadline: after completion of prerequisite tasks)
-- [x] Create MAP.md with data flow diagram (P1, deadline: after completion of prerequisite tasks)
-- [x] Define STATE.md with state transition rules (P1, deadline: after completion of prerequisite tasks)
-- [x] Write unit tests for core modules (P2, deadline: after completion of prerequisite tasks)
-- [x] Write API documentation (P2, deadline: after completion of prerequisite tasks)
-
-## Current Priority
+## Active Tasks (2026-07-26)
 
 ### 🔴 P0 — Critical
-- [x] Finalize project scope and milestones (deadline: after completion of prerequisite tasks)
+- [ ] **Fix PARAMETERS.md** — replace generic template with centriole aging parameters (autofix cycle 1) — done 2026-07-26
+- [ ] **Fix MAP.md** — update to match current directory structure (autofix cycle 1) — done 2026-07-26
+- [ ] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md
+- [ ] **CIRCBIO-07 Part B** — draft due 1 Aug 2026 (5 days)
 
 ### 🟡 P1 — Important
-- [x] Draft CONCEPT.md with architecture overview (deadline: after completion of prerequisite tasks)
-- [x] Create MAP.md with data flow diagram (deadline: after completion of prerequisite tasks)
-- [x] Define STATE.md with state transition rules (deadline: after completion of prerequisite tasks)
+- [ ] **LLPS section in THEORY.md** — add centrosome LLPS mechanisms (6 PMIDs verified)
+- [ ] **PARAMETERS.md** — add LLPS/centrosome section (done 2026-07-26)
+- [ ] **npj Aging `2e8466c7`** — wait for peer review decision (since 12 Jun)
+- [ ] **Article split** — CEDAR hypothesis (3000 words) → Differentiation
+- [ ] **DESIGN.md expansion** — architecture overview (done 2026-07-26)
 
 ### 🟢 P2 — If Possible
-- [x] Write unit tests for core modules (deadline: after completion of prerequisite tasks)
-- [x] Write API documentation (deadline: after completion of prerequisite tasks)
+- [ ] **Git commit** — commit all autofix changes
+- [ ] **Update STATE.md** — reflect PARAMETERS.md fix and MAP.md update
+- [ ] **Dictyostelium note** — add to THEORY.md as centrosome-without-centriole model
+- [ ] **Autofix script** — re-run until 95+ (currently 81, target 95)
+- [ ] **Cell‑DT v4.0 calibration** — ep_age(t) coupling model
+
+### 🟣 P3 — Future
+- [ ] **Experimental design** — 13-group centriole elimination + reprogramming
+- [ ] **Moss (Physcomitrella) centriole genomics** — comparative analysis
+- [ ] **Ca²⁺/centrin → centriole** — literature review for THEORY.md
+
+## Completed
+
+### 2026-07-26
+- [x] VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md — scientific verification of LLPS/centriole/land-water hypothesis
+- [x] PARAMETERS.md — rewritten with centriole aging parameters (was: generic template)
+- [x] MAP.md — updated to match current structure
+- [x] DESIGN.md — expanded from 353 → 1700+ bytes
+- [x] cedar_autofix.sh — CEDAR-specific autofix script created
+
+### Earlier
+- [x] BioEssays post-mortem analysis (MEMORY.md, 2026-07-15)
+- [x] Peer Review v2 — 55 PMIDs verified (2026-07-05)
+- [x] C1/C2 axioms + M1-M9 mechanisms (THEORY.md v5.6)
+- [x] Chk1 molecular mechanism for M1 (PMID 41844775, 2026-07-25)
+- [x] MCARA Biogerontology appeal filed (2026-07-15)

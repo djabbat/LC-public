@@ -64,6 +64,10 @@ Counter #3 in the MCARA architecture: mitochondrial ROS and mtDNA damage as a qu
 | **Office consumables** (printing, stationery) | **$500** |
 
 
+### Chk1→Mitophagy Connection (2026-07-25)
+
+**Jing P et al. (2026, PMID 42229233):** CHK1 activates mitophagy to attenuate cardiac aging via AHSA1-HSP90 pathway. Chk1 ↓ с возрастом в сердце. Overexpression → защита через митофагию. **Chk1 — общий регулятор Counter #1 (β-tubulin/spindle) и Counter #3 (AHSA1/mitophagy).**
+
 ## Hypothesis
 
 *To be specified — see CONCEPT.md §1 for project rationale.*

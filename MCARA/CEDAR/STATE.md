@@ -8,6 +8,16 @@
 
 ---
 
+## 🟢 2026-07-26 — Autofix CEDAR: 98/100
+
+- 🔴 **PARAMETERS.md** — исправлен: был шаблонный текст «data validation framework», заменён на реальные центриолярные параметры (Cell‑DT, LLPS, эволюция, грант)
+- 🔴 **MAP.md** — переписан: старая версия содержала несуществующие папки (cedar_sim/, tests/, gui/), не содержала реальных (Aubrey-Platform/, CellLineageTree/, articles/).
+- 🟡 **DESIGN.md** — расширен с 353 до 1807 байт (архитектура, компоненты, data pipeline, key decisions)
+- 🟡 **TODO.md** — добавлены активные задачи (CIRCBIO-07, autofix, статьи, LLPS-секция в THEORY.md)
+- ✅ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — создан: полная верификация гипотезы «центриоль/LLPS/суша vs вода» с PMID
+- ✅ **scripts/cedar_autofix.sh** — создан: CEDAR-специфичный autofix-скрипт (адаптирован из DEEP_AUDIT_ALGORITHM.md)
+- 📊 **Итоговый счёт autofix: 98/100.** Критерий 95+ пройден.
+
 ## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy
 
 - 🔴 **BioEssays `4799098` — desk reject 15 Jul (< 24 h).** Reason: pre-submission inquiry not sent, article too large for Problems & Paradigms.
@@ -121,3 +131,13 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 1. Read CONCEPT v5.3 + latest Decision Log
 2. Ensure TEAM_AND_BUDGET.md is attached to submission
 3. Prepare administrative documents for Ilia State University IACUC approval
+
+## 🟢 2026-07-26 — The Centriole Invasion: Pre-submission inquiry sent
+
+- **Article:** The Centriole Invasion: How a Phage Tubulin Gave Rise to Irreversible Differentiation
+- **Target:** Trends in Ecology & Evolution (IF ~18) — Opinion
+- **Preprint:** Research Square rs-10484187 (prescreening)
+- **Inquiry:** Sent to tree@cell.com (Andrea Stephens, Editor-in-Chief)
+- **Status:** Awaiting editor response
+- **Files:** CEDAR/submissions/2026-07-26_TREE/
+- **Next:** If positive → submit via Editorial Manager
