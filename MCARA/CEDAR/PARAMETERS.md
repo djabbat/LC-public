@@ -1,39 +1,80 @@
 # CEDAR — Parameters
 
-**Version:** 1.0
+**Version:** 5.6 | **Updated:** 2026-07-26
 
-## Project Overview
+## Centriolar Damage Accumulation Model Parameters
 
-CEDAR is a lightweight data transformation and validation framework designed for modern cloud-native applications. It provides a declarative schema language, runtime validation, and seamless integration with popular data pipelines.
+### Core Model Parameters (Cell‑DT v3.0)
 
-## Goals & Tasks
+| Parameter | Symbol | Value | Units | Source |
+|-----------|--------|-------|-------|--------|
+| HSC division rate | α_HSC | 0.0082 | yr⁻¹ | Round-7 MCMC posterior |
+| HSC annual divisions | ν_HSC | 1.2 | yr⁻¹ | Fitted to BrdU data |
+| Baseline damage rate | β_HSC | 0.005 | damage/division | Cell‑DT calibration |
+| Protection period | τ_protection | 24.3 | yr | MCMC fitted |
+| Baseline epigen rate | ep_rate_base | 0.01 | ep_unit/yr | MCMC pilot |
+| Epigen-coupling coefficient | k_ep | 0.8 | ep_unit/damage | Analytical coupling |
+| Initial protection fraction | π_0 | 0.87 | dimensionless | MCMC posterior |
+| Baseline protection fraction | π_base | 0.10 | dimensionless | Literature estimate |
 
-| Priority | Task | Deadline | Status |
-|----------|------|----------|--------|
-| P0 | Implement core schema parser and validator | upon approval | In progress |
-| P0 | Define and document the CEDAR schema language (v0.1) | after prerequisite tasks | Planned |
-| P1 | Build CLI tool for schema compilation and validation | after previous milestone | Planned |
-| P1 | Create Python SDK with full API coverage | after previous milestone | Planned |
-| P1 | Write comprehensive user documentation and examples | after previous milestone | Planned |
-| P2 | Add support for custom validation rules and plugins | after previous milestone | Backlog |
-| P2 | Develop performance benchmarks and optimization guide | after previous milestone | Backlog |
-| P2 | Integrate with Apache Kafka and AWS Kinesis | after previous milestone | Backlog |
+### Coupling Parameters (v4.0, planned)
 
-## Parameters
+| Parameter | Symbol | Range | Units | Status |
+|-----------|--------|-------|-------|--------|
+| Epigen-coupling strength | γ_epi | [0, 0.05] | dimensionless | Default: 0 |
+| Coupling k_ep range | k_ep | [0.5, 2.0] | dimensionless | To calibrate |
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| version | 0.1.0 | Current project version |
-| status | draft | Project status (draft / alpha / beta / stable) |
-| language | English | Primary documentation language |
-| license | MIT | Open-source license |
-| repository | github.com/example/cedar | Source code repository |
+### Sobol Sensitivity (MCARA Counter #1)
 
-## Timeline
+| Parameter | First-order S₁ | Total-effect S_T | Rank |
+|-----------|:--------------:|:----------------:|:----:|
+| π_0 (initial protection) | 0.42 | 0.58 | 1 |
+| α_HSC (division rate) | 0.23 | 0.35 | 2 |
+| β_HSC (damage rate) | 0.15 | 0.22 | 3 |
+| τ_protection | 0.08 | 0.12 | 4 |
+| ep_rate_base | 0.05 | 0.08 | 5 |
 
-- **upon approval** – Core parser and validator (P0)
-- **after previous milestone** – CLI tool and Python SDK (P1)
-- **after previous milestone** – Documentation and examples (P1)
-- **after previous milestone** – Plugin system design (P2)
-- **after previous milestone** – Performance optimization (P2)
-- **after previous milestone** – Streaming integrations (P2)
+### Model Performance
+
+| Metric | Value | Target |
+|--------|-------|--------|
+| In-sample R² (MCAI) | 0.745 | >0.7 ✅ |
+| LOO-CV mean | −0.093 | >0 ⚠️ |
+| Calibration needed | ROS equation fix + coupling | v4.0 |
+
+## LLPS / Centrosome Parameters (2026-07-26)
+
+| Parameter | Symbol | Value | Units | Source |
+|-----------|--------|-------|-------|--------|
+| Cep63-Cep152 KD for LLPS | Kd | ~μM | M | PMID 33208041 |
+| Centriole disengagement time | τ_disengage | ~1-2 | hr | PMID 20861312 |
+| Ca²⁺ binding affinity (centrin) | Kd_Ca | ~10⁻⁷ | M | PMID 17694534 |
+| Centriole number control | n_centrioles | 2/cell (G1) | count | Canonical |
+
+## Evolution Parameters (Comparative Biology)
+
+| Organism | Centrioles | MTOC | Cell wall | Habitat |
+|----------|:----------:|:----:|:---------:|---------|
+| H. sapiens | ✅ (2) | Centrosome | ❌ | — |
+| Chlamydomonas | ✅ | Basal body | Thin (glycoprotein) | Freshwater |
+| Physcomitrella (moss) | ✅ (gametes only) | Acentrosomal | ✅ (cellulose) | Terrestrial |
+| Arabidopsis | ❌ | Acentrosomal (Ran-GTP) | ✅ (cellulose) | Terrestrial |
+| Dictyostelium | ❌ | Centrosome-like core | ❌ | Freshwater/Soil |
+| S. cerevisiae | ❌ | SPB (no centrioles) | ✅ (chitin) | — |
+
+## Grant Parameters (CIRCBIO-07 / EIC)
+
+| Parameter | Value |
+|-----------|-------|
+| Budget total | €2.0M |
+| Duration | 36 months |
+| Partners | INRAE + Wageningen + DTU + TSU |
+| Deadline | 17 Sep 2026 |
+
+## References
+
+- PMID 33208041 — Cep63-Cep152 LLPS at centrosome
+- PMID 17694534 — Centrin evolution and centriole duplication
+- PMID 20861312 — Centriole disengagement after DNA damage
+- PMID 25690512 — Chlamydomonas cell cycle (LECA model)
+- PMID 22691130 — Evolution of land plant cilia
