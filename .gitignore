@@ -22,3 +22,5 @@ test_*.db
 
 # Runtime files (аудит 2026-07-12)
 *.sqlite
+realtime/deps/
+erl_crash.dump
