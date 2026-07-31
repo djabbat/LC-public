@@ -1,7 +1,18 @@
-# Organismal Aging — EVIDENCE (v2.0, post-peer-review)
+# Organismal Aging — EVIDENCE (v2.1, Jul 2026)
 
-**Date:** 2026-06-21
-**Version:** 2.0 — усиленная, с новыми PMID из систематического поиска
+**Date:** 2026-07-29
+**Version:** 2.1 — +Hydra stemness ultrastructure (Seybold et al. 2026)
+
+---
+
+## §0. NEW: Hydra Epithelial Multifunctionality (2026)
+
+### Seybold, Salvenmoser et al. (2026) — Ультраструктура стволовости в Hydra
+- **DOI:** `10.64898/2026.07.20.739505` | bioRxiv, Innsbruck
+- Эпителиальные клетки Hydra совмещают стволовое деление + дифференцированные функции
+- Ядерные маркеры стволовости: эухроматин, крупные ядрышки, nuage
+- Многофункциональный эпителий — возможный предковый паттерн до сегрегации stem/differentiated у Bilateria
+- **Вывод:** Hydra — модель пренебрежимого старения; многофункциональность эпителия как ancestral condition
 
 ---
 

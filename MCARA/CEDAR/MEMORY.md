@@ -1,6 +1,96 @@
 # CEDAR — Memory
 
 <!-- lang:ru -->
+## 2026-07-31: Инкубатор — контроль влажности
+- **Решение:** Активный контроль влажности ±2% RH с осушителем в инкубаторе.
+- **Обновлено:** CONCEPT.md (бюджет +$1,500).
+<!-- /lang:ru -->
+
+<!-- lang:ru -->
+## 2026-07-29: 📚 Обзор литературы — TIAM1/центриоли/аутофагия (Coelho, Yu & Glover, Caltech)
+<!-- /lang:ru -->
+
+**Статья:** Coelho PA, Yu C, Glover DM. "Functions of TIAM1 at the interface of centriole assembly and autolysosome cycling." bioRxiv 2026-07-03. DOI: `10.64898/2026.07.02.735969`
+
+**Суть:** TIAM1 (RAC1 GEF) связывает сборку центриолей с аутофаголизосомальной системой. PLK4 + LC3B/LAMP1. TIAM1 depletion → abnormal PLK4 distribution + enlarged lysosomes. Центриоли и лизосомальный контроль качества — единый механизм.
+
+**Значение для CEDAR/MCARA:**
+- Центриоли ↔ лизосомы — новый интерфейс контроля качества
+- PLK4 — master-регулятор центриольной дупликации — чувствителен к TIAM1
+- Потенциальный счётный механизм: число центриолей регулируется через аутофагию
+- David Glover (Caltech) — легенда поля, возможный контакт
+
+**Похожие статьи (наиболее релевантные):**
+1. PMID `42324259` — "Sensing centrosome amplification: the interface between centriole duplication and autophagy." Nat Commun, 2026 Jun 21. 🔥 СВЕЖАЯ
+2. PMID `28209922` — "Autophagy controls centrosome number." Oncotarget, 2017
+3. PMID `40257113` — "PLK4: Master Regulator of Centriole Duplication and Its Therapeutic Potential." Cytoskeleton, 2025 Nov
+4. PMID `39406735` — "Centrioles are frequently amplified in early B cell development but dispensable for humoral immunity." Nat Commun, 2024 Oct
+5. PMID `23199753` — "Building a centriole." Curr Opin Cell Biol, 2013
+
+**✅ 2026-07-29: Письмо David Glover отправлено** — ARGUS-OS1 + proposal Foresight. Ждём ответа.
+
+---
+
+<!-- lang:ru -->
+## 2026-07-30: 🔴 Post-mortem — Medical Hypotheses desk reject (Centrioles as Structural Damage Reservoirs)
+<!-- /lang:ru -->
+
+**Журнал:** Medical Hypotheses (Elsevier)
+**ID:** `YMEHY-D-26-01286`
+**Дата отправки:** 26 июл 2026
+**Дата ответа:** 30 июл 2026 (~4 дня)
+**Редактор:** Sachin Sarode (Editor-in-Chief)
+**Результат:** 🔴 Desk reject (7 минут после назначения редактора)
+
+**Причина (цитата редактора):** «While your hypothesis is unique and has not been proposed before, we must evaluate it in comparison with other submitted manuscripts. We receive a large number of submissions for limited space availability and must make priority decisions accordingly.»
+
+**Анализ:**
+- Отказ не по науке. Редактор прямо называет гипотезу «unique and has not been proposed before».
+- Medical Hypotheses после скандала с AIDS-диссидентами крайне консервативен. Берут только звёзд.
+- Limited space — редакционная отмазка. На деле: хищный журнал под маской легитимного.
+- 7 минут от назначения редактора до reject — никто не читал.
+
+**Что мы упустили:**
+- Journal-fit не проверяли перед отправкой.
+- Medical Hypotheses сейчас — не тот журнал, что был 10 лет назад.
+
+**Что изменить перед следующей подачей:**
+- [ ] Проверить journal-fit скриптом
+- [ ] Отправить pre-submission inquiry перед подачей
+- [ ] Рассмотреть BioEssays (гипотезы приветствуются) или BioSystems
+
+**Следующий журнал:** TBD. Варианты: BioEssays, BioSystems, Journal of Theoretical Biology.
+
+---
+
+<!-- lang:ru -->
+## 2026-07-28: 🔴 Post-mortem — TREE desk reject (Centriole Invasion)
+<!-- /lang:ru -->
+
+**Журнал:** Trends in Ecology & Evolution (Cell Press)
+**Редактор:** Andrea E. A. Stephens
+**Дата отправки:** 27 июл 2026
+**Дата ответа:** 28 июл 2026 (~19 часов)
+**Результат:** 🔴 Desk reject
+
+**Причина (цитата редактора):** «We currently have a large volume of commissioned articles in the pipeline and are significantly oversubscribed with proposals, as such we are accepting very few new proposals.»
+
+**Анализ:**
+- Отказ не по науке. Редактор прямо пишет: «I intend no adverse comment on your work.»
+- TREE — top-tier, в основном commissioned. Неудивительно.
+- Статья 4800 слов, Opinion, кросс-дисциплинарная — формат подходит.
+- Причина: загрузка журнала, а не scope mismatch. Это лучше, чем desk reject по теме.
+
+**Что мы упустили:**
+- Не проверили journal-fit перед отправкой (скрипт не знает TREE).
+- Стоило ли слать inquiry в журнал, который берёт в основном commissioned? Возможно, да — редактор ответила быстро и вежливо.
+
+**Следующий шаг:**
+- Подобрать журнал. Варианты: Evolution & Development, BioEssays, Journal of Molecular Evolution, BioSystems.
+- Отправить новый inquiry в течение 48 часов.
+
+---
+
 ## 2026-07-26: 📚 Wenner (мейотическая инициация) + Miller (апоптоз/оогенез) 🔴
 <!-- /lang:ru -->
 
