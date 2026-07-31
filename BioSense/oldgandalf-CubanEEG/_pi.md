@@ -3,7 +3,7 @@
 > ## 🔴 MEMORY BEFORE ACTION
 > Before any action, read: _pi.md
 
-**Parent:** LC/BioSense
+**Parent: BioSense
 **Created:** 2026-05-18 | **Updated:** 2026-06-11
 
 ## Description

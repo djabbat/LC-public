@@ -1,0 +1,22 @@
+albertson@bio.umass.eduTo: R. Craig Albertson, Editor-in-Chief — Evolution & Development
+(ищи email через UMass: https://www.umass.edu/biology/about/directory/r-craig-albertson
+ или editorial office: evodevoeditor@wiley.com)
+
+Subject: Pre-submission inquiry: The Centriole Invasion — a phage-derived innovation that enabled irreversible cell differentiation in animals
+
+Dear Dr Albertson,
+
+I am writing to ask whether Evolution & Development might consider an Opinion/Hypothesis piece at the intersection of cellular evolution and developmental biology.
+
+The core argument is that the centriole — acquired horizontally from a phage tubulin ancestor — was the structural innovation that made irreversible cell differentiation possible in metazoans. Bacteria have walls instead of centrioles, and cannot terminally differentiate. Amoeboid forms, once freed from the wall, can modulate but not commit. What turned modulating cells into tissues? I propose the centriole, through polyglutamylation patterns and asymmetric inheritance, evolved into a cell-fate memory device — and that animals are the lineage that perfected it.
+
+The manuscript weaves together evidence that has not been connected before: the PhuZ tubulin spindle of Pseudomonas phages (proving phage-derived tubulins form functional spindles), the acentriolar centrosome of Dictyostelium (a transitional state between walled and committed cells), the UNIMOD hypothesis, and deglutamylase reversibility data. Five alternative models are discussed. Three testable predictions with concrete protocols are proposed.
+
+~4800 words, 47 references. Cross-disciplinary, hypothesis-driven. I believe it fits the journal's interest in theoretical biology and the mechanistic origins of developmental processes.
+
+I would be grateful to know whether this falls within the journal's scope.
+
+Respectfully,
+Jaba Tqemaladze, MD
+Georgia Longevity Alliance, Tbilisi
+jaba@longevity.ge

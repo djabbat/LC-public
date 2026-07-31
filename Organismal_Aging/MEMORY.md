@@ -1,6 +1,44 @@
 # Organismal Aging — MEMORY
 
-**Date:** 2026-06-21
+**Date:** 2026-07-29
+
+---
+
+## 📚 2026-07-29: Обзор — Hydra: ультраструктура стволовости (Seybold, Salvenmoser et al., Innsbruck)
+
+**Статья:** Seybold A, Salvenmoser W, Pfaller K, Redl S, Hess MW, Hobmayer B. "Ultrastructure of stemness and differentiated state in *Hydra* epithelial cells." bioRxiv 2026-07-23. DOI: `10.64898/2026.07.20.739505`
+
+**Суть:** Эпителиальные клетки Hydra одновременно делятся и выполняют дифференцированные функции. Ядерные маркеры стволовости vs полярность/секреция. Cryofixation.
+
+**Значение для Organismal_Aging:** Hydra — пренебрежимое старение; многофункциональный эпителий — ancestral condition.
+
+**✅ 2026-07-29: Письмо Bert Hobmayer отправлено** — вопрос про центриоли в Hydra. Ждём ответа.
+
+---
+
+## 🔴 2026-07-27: Post-Mortem — Research Square отказ (rs-10483434)
+
+**Тип:** Отказ препринт-платформы.
+**Дней до решения:** 3 (24 июл → 27 июл).
+**Причина:** «the manuscript type or its content is not suitable for posting as a preprint on Research Square.»
+
+### Что сказали
+> «Our screeners have determined that the manuscript type or its content is not suitable for posting as a preprint on Research Square. This decision does not reflect the quality or importance of the work and is made on the basis of our editorial policies with respect to content type and screening.»
+
+### Что мы упустили
+1. **Research Square — не для hypothesis papers.** Они принимают research articles с данными. Чистая гипотеза без экспериментальных результатов — не их формат.
+2. **Объём.** ~11,000 слов — слишком много для препринта. Многие платформы имеют лимиты.
+3. **Упоминание предыдущего отказа.** В Acknowledgments: «the four reviewers of the original manuscript (npj Aging, ID 2e8466c7)» — это красный флаг для скринеров.
+4. **Research Square — не лучший выбор для этой статьи.** bioRxiv, arXiv (q-bio), Zenodo или OSF Preprints принимают hypothesis/theory papers.
+
+### Что изменить
+- [ ] Для препринта: **Zenodo** (уже есть MCARA там — 10.5281/zenodo.21299683) или **bioRxiv**
+- [ ] Убрать из Acknowledgments упоминание npj Aging rejection — не для публичного препринта
+- [ ] Medical Hypotheses — ждать решения (подана 24 июл)
+
+### Следующий шаг
+1. **Medical Hypotheses** — журнал специально для hypothesis papers. Это правильная цель. Ждать.
+2. **Препринт:** залить на Zenodo (как MCARA) или bioRxiv. Не Research Square.
 
 ---
 

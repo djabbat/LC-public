@@ -184,16 +184,26 @@ Accumulation of damage in the centriole (D_c) causes 9 mechanisms of pathology:
 | **model organism maintenance** (NGM agar, OP50/NA22 bacteria, cholesterol, Petri dishes) | **$3,500** |
 | **RNAi/strain maintenance** (clones, IPTG, antibiotics, feeding plates) | **$2,000** |
 | **Cell culture** (DMEM/RPMI, FBS, pen/strep, trypsin, plastics) | **$8,000** |
-| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters) | **$3,000** |
+| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters, O₂/CO₂/N₂ control, humidity control ±2% RH, dehumidifier) | **$4,500** |
 | **Transfection reagents** (Lipofectamine, siRNA oligos) | **$3,000** |
 | **Sequencing consumables** (library prep, flow cells) | **$12,000** |
 | **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
-| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas) | **$8,000** |
+| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas, humidity control ±2% RH) | **$9,500** |
 | **Office consumables** (printing, stationery) | **$500** |
 
 
 
 ## Hypothesis
+
+## Methodology
+
+**Power analysis:** Statistical power calculations based on longitudinal centriole tracking data (Kalbfuss & Gönczy 2023, PMID 37256957). N=100 C. elegans embryos provides >80% power for detecting centriole fate patterns at α=0.05.
+
+**Blinding:** Centriole fate classification performed by independent annotator blinded to pedigree score. Pedigree score computed only after classification locked.
+
+**OSF pre-registration:** PCA weights pre-registered on OSF before main data collection. Hypothesis and analysis plan registered.
+
+**Limitations:** (1) 100-cell window is a snapshot — late eliminators may be misclassified. (2) C. elegans centriole biology may not fully translate to mammalian systems. (3) E-lineage cells excluded from primary analysis (different elimination mechanism).
 
 *To be specified — see CONCEPT.md §1 for project rationale.*
 
