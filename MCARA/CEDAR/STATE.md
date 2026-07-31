@@ -1,3 +1,5 @@
+**Date:** 2026-07-30
+
 # STATE — CEDAR
 
 > **📄 Articles and publications:** see `~/Desktop/Services/docs/SUBMISSIONS_STATUS.md`

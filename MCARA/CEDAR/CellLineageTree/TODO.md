@@ -1,3 +1,5 @@
+> ⚠️ **Проект заморожен по 90-day плану.** Задачи ниже — отложенные, не активные.
+
 # TODO — CytogeneticTree
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`

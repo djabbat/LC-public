@@ -1,7 +1,25 @@
 # CEDAR — Empirical Foundations
 
-**Last verification date:** 2026‑04‑25
-**Status:** Current as per CORRECTIONS_2026‑04‑22 and update 2026‑04‑25.
+**Last verification date:** 2026‑07‑29
+**Status:** Current as per CORRECTIONS_2026‑04‑22, update 2026‑04‑25, and 2026-07-29 literature review.
+
+## 🔥 NEW: Centriole–Autophagy Interface (2026)
+
+### Coelho, Yu & Glover (2026) — TIAM1/PLK4/центриоли/аутофагия
+- **DOI:** `10.64898/2026.07.02.735969` | bioRxiv, Caltech
+- TIAM1 (RAC1 GEF) — интерфейс между сборкой центриолей и аутофаголизосомальной системой
+- TIAM1 depletion → abnormal PLK4 distribution + enlarged LAMP1 compartments
+- **Вывод:** контроль качества центриолей через лизосомы — новый механизм для MCARA
+
+### Sensing Centrosome Amplification (2026)
+- **PMID:** `42324259` | Nat Commun, 2026 Jun 21
+- Интерфейс между центриольной дупликацией и аутофагией
+
+### Autophagy Controls Centrosome Number (2017)
+- **PMID:** `28209922` | Oncotarget, 2017
+- Аутофагия регулирует число центросом
+
+---
 
 ## 1. Supporting Evidence (support for axioms and mechanisms)
 

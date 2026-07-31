@@ -222,11 +222,11 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 | **model organism maintenance** (NGM agar, OP50/NA22 bacteria, cholesterol, Petri dishes) | **$3,500** |
 | **RNAi/strain maintenance** (clones, IPTG, antibiotics, feeding plates) | **$2,000** |
 | **Cell culture** (DMEM/RPMI, FBS, pen/strep, trypsin, plastics) | **$8,000** |
-| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters) | **$3,000** |
+| **CO₂ gas + incubator supplies** (cylinders, rental, HEPA filters, O₂/CO₂/N₂ control, humidity control ±2% RH, dehumidifier) | **$4,500** |
 | **Transfection reagents** (Lipofectamine, siRNA oligos) | **$3,000** |
 | **Sequencing consumables** (library prep, flow cells) | **$12,000** |
 | **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
-| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas) | **$8,000** |
+| **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas, humidity control ±2% RH) | **$9,500** |
 | **Office consumables** (printing, stationery) | **$500** |
 
 
@@ -308,6 +308,17 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 ## Hypothesis
 
 *To be specified — see CONCEPT.md §1 for project rationale.*
+
+
+## Methodology
+
+**Power analysis:** Multi-counter architecture simulation power validated through Monte Carlo sampling (n≥10,000 iterations). Effect size detectable at Cohen's d ≥0.3 with α=0.05.
+
+**Blinding:** Simulation runs blinded to counter configuration. Independent validation of output by second analyst.
+
+**OSF pre-registration:** Simulation protocols and parameter sets pre-registered on OSF.
+
+**Limitations:** (1) In silico only — experimental validation pending. (2) Counter interactions simplified to pairwise — higher-order interactions not modelled. (3) Parameter space exploration limited to biologically plausible ranges.
 
 
 ## References

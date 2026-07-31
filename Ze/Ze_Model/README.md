@@ -17,6 +17,7 @@ A foundational model in which spacetime and quantum correlations emerge from glo
 - Barrett's memory loophole avoided (nonlocal, not local memory)
 - Yang's trichotomy: violates ODL, preserves MI, rejects classical ontology
 - Falsifiable predictions: non-equilibrium Born rule deviations (γ/√N)
+- **NEW (2026-07-28): Proper Time Synchrony Principle (PTSP)** — entropy is conserved iff all subsystems share the same proper time; dS/dt = κ · Var(τ)
 
 ## Status
 
@@ -26,6 +27,7 @@ A foundational model in which spacetime and quantum correlations emerge from glo
 
 - `CONCEPT.md` — concept and axiomatics (Russian)
 - `PARAMETERS.md` — model parameters (γ, τ_knowledge, S_max)
+- `PROPER_TIME_ENTROPY.md` — **NEW** PTSP theorem: entropy, proper time, gravity, hierarchy, aging
 - `TODO.md` — task list
 - `STATE.md` — current status
 - `MEMORY.md` — decision history
