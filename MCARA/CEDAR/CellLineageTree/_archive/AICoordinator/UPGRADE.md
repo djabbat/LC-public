@@ -16,9 +16,9 @@
 - Dr. Tqemaladze labels "good" vs "bad" decisions on replayed runs
 - Use DPO to refine the decision policy
 
-## U5. Integration with CDATA
-- AIC queries CDATA's biological-age model in real time to tag cells as "old-centriole equivalents"
-- Closes loop between theory (CDATA) and experimental observation (tree)
+## U5. Integration with CEDAR
+- AIC queries CEDAR's biological-age model in real time to tag cells as "old-centriole equivalents"
+- Closes loop between theory (CEDAR) and experimental observation (tree)
 
 ## U6. Natural-language interface for lab staff
 - Staff can type "next experiment: knock out CEP152, track for 48 h, abort if division rate < 0.3/day"

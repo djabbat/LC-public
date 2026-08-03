@@ -1,7 +1,7 @@
-# CDATA CONCEPT ↔ CODE Audit — 2026-04-21
+# CEDAR CONCEPT ↔ CODE Audit — 2026-04-21
 
 **Auditor:** Claude Opus 4.7 (1M)
-**Scope:** `/home/oem/Desktop/CommonHealth/CDATA/`
+**Scope:** `/home/oem/Desktop/CommonHealth/CEDAR/`
 **Method:** Read CONCEPT.md (excerpts) + README.md + PARAMETERS.md + THEORY.md + DESIGN.md + OPEN_PROBLEMS.md + EVIDENCE.md; cross-check against Rust crates (`cell_dt_core`, `cell_dt_cli`, `cell_dt_modules/*`, `cell_dt_validation`, `cell_dt_python`, `cell_dt_gui`), Python scripts (`scripts/`), backend (`backend/src`), frontend (`frontend/lib`), and root-level CORRECTIONS_2026-04-22.md.
 
 ---
@@ -90,7 +90,7 @@ Documented in:
 THEORY.md §4 states 10 predictions (P1–P10). Examples dir (`cell_dt_validation/examples/`) has `htert_hypoxia_test.rs`, `o2_dose_response.rs`, `centenarian_prediction.rs`, `circadian_validation.rs`, `not_r_argument.rs` — each touches one facet, but no systematic P1..P10 mapping. No `tests/predictions_P1_to_P10.rs` harness. P2 (>70 % asymmetric HSC inheritance), P6 (CCP1 KO), P7 (TTLL6 inhibition), P8 (DunedinPACE correlation), P9 (CCP1 overexpression), P10 (cytoplasmic-ROS specificity) have no code test.
 
 ### M6. **Missing core project files**
-Per `feedback_project_core`, every project must have a 10-file core. CDATA has 7 documents (README, CONCEPT, THEORY, EVIDENCE, PARAMETERS, OPEN_PROBLEMS, DESIGN). Missing: CLAUDE, TODO, UPGRADE, KNOWLEDGE, MAP, MEMORY, LINKS. README advertises AGENTS, JOURNAL, ROADMAP — also absent.
+Per `feedback_project_core`, every project must have a 10-file core. CEDAR has 7 documents (README, CONCEPT, THEORY, EVIDENCE, PARAMETERS, OPEN_PROBLEMS, DESIGN). Missing: CLAUDE, TODO, UPGRADE, KNOWLEDGE, MAP, MEMORY, LINKS. README advertises AGENTS, JOURNAL, ROADMAP — also absent.
 
 ### M7. **Counter numbering inconsistency**
 - README.md L3 + THEORY.md L4: "Counter #1"
@@ -125,7 +125,7 @@ Code says #1; docs contradict themselves.
 
 ## 5. Summary verdict
 
-CDATA documentation and code are in substantial drift. THEORY.md + cell_dt_cli define a single clean additive equation that is mathematically consistent and parameter-documented. The main simulator (`cell_dt_modules/aging_engine`) has diverged into a richer multiplicative form with its own 32-field `FixedParameters` whose default numerical values do **not** match PARAMETERS.md. Until L1 is resolved, any figure or paper quoting PARAMETERS.md values cannot be reproduced from the engine defaults.
+CEDAR documentation and code are in substantial drift. THEORY.md + cell_dt_cli define a single clean additive equation that is mathematically consistent and parameter-documented. The main simulator (`cell_dt_modules/aging_engine`) has diverged into a richer multiplicative form with its own 32-field `FixedParameters` whose default numerical values do **not** match PARAMETERS.md. Until L1 is resolved, any figure or paper quoting PARAMETERS.md values cannot be reproduced from the engine defaults.
 
 ABL-2 Sobol paradox is disclosed in OPEN_PROBLEMS.md and the Python script but is missing from THEORY.md body and (per grep) from the main CONCEPT.md body — CORRECTIONS §1.6 requires it to appear in `CONCEPT.md Appendix B`, which the audit could not verify due to CONCEPT.md size. A full CONCEPT.md offset read is left as follow-up (L8 in TODO).
 

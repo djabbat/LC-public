@@ -3,10 +3,10 @@
 **Date:** 2026-04-21
 **Scope:** Audit of `cell_dt_cli::CounterParams` additive form relative to MCAOA manuscript and Impetus LOI.
 **Files of interest:**
-- `/home/oem/Desktop/CommonHealth/CDATA/crates/cell_dt_cli/src/lib.rs` (lines 28–47)
-- `/home/oem/Desktop/CommonHealth/CDATA/PARAMETERS.md` (line 19 footnote, line 27)
+- `/home/oem/Desktop/CommonHealth/CEDAR/crates/cell_dt_cli/src/lib.rs` (lines 28–47)
+- `/home/oem/Desktop/CommonHealth/CEDAR/PARAMETERS.md` (line 19 footnote, line 27)
 - `/home/oem/Documents/Submissions/2026-04-25_NatureAging_MCOA/MCOA_v5_NatureAging_2026-04-21.md` (Box 1, §3, §6)
-- `/home/oem/Documents/Grants/CommonHealth/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v25-1_AI_2026-04-21.md` (§Background, Aim A.1)
+- `/home/oem/Documents/Grants/CommonHealth/CEDAR/docs/IMPETUS_2026-04-25/LOI_Impetus_v25-1_AI_2026-04-21.md` (§Background, Aim A.1)
 
 ---
 
@@ -34,7 +34,7 @@ So α=0.60, β=0.15 in `CounterParams` are **not directly comparable** to the mu
 
 ## 3. Calibration Status
 
-**Placeholders, not calibrated.** Lib.rs header claims values are "calibrated from CDATA meta-analysis," but:
+**Placeholders, not calibrated.** Lib.rs header claims values are "calibrated from CEDAR meta-analysis," but:
 - No MCMC/bootstrap posterior CI given (unlike α_HSC=0.0082 in PARAMETERS.md).
 - Values are round numbers (0.60, 0.15, 50, 30).
 - No citation with those numerics anywhere in MCAOA v5 or Impetus LOI.
@@ -48,7 +48,7 @@ So α=0.60, β=0.15 in `CounterParams` are **not directly comparable** to the mu
 
 ## 5. Inconsistencies Identified
 
-1. **Docstring overstatement.** lib.rs:3 says "Parameters calibrated from CDATA meta-analysis." They are not calibrated — they are illustrative defaults. Fix: rephrase to "illustrative defaults consistent with MCAOA tissue ordering."
+1. **Docstring overstatement.** lib.rs:3 says "Parameters calibrated from CEDAR meta-analysis." They are not calibrated — they are illustrative defaults. Fix: rephrase to "illustrative defaults consistent with MCAOA tissue ordering."
 2. **Form mismatch with MCAOA/Impetus.** `compute_damage` uses normalized `(n/n*)` and `(t/τ)`; both papers use raw `n` and `t`. These are equivalent modulo reparametrization (k^div = α/n*, k^time = β/τ), but the relationship must be documented to prevent a reviewer concluding α_HSC=0.0082 (multiplicative engine) and α=0.60 (CLI) contradict each other.
 3. **β_HSC in dual-form section of PARAMETERS.md line 27** says "0.005 additive cell_dt_cli"; actual code has β=0.15 (global default). The 0.005 figure likely came from an earlier unnormalized draft. Needs reconciliation.
 

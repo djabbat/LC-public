@@ -8,14 +8,14 @@
 
 - `project_cdata_copi_candidates.md` — Impetus Phase A co-PI candidates (rig будет использован в Phase A)
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
-- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CDATA (context)
+- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CEDAR (context)
 - `project_academic_upgrade.md` — академический upgrade pathway
 - `project_eic_umbrella.md` — EIC Pathfinder consortium (Experiment 0 → WP3)
 
 ### Feedback (правила работы в проекте)
 
 - `feedback_bradford_hill_rule.md` — Bradford Hill criteria для causality claims
-- `feedback_mcaoa_cdata_comparison.md` — MCAOA vs CDATA comparison methodology
+- `feedback_mcaoa_cdata_comparison.md` — MCAOA vs CEDAR comparison methodology
 - `feedback_deepseek_primary.md` — DeepSeek как primary LLM
 - `feedback_verify_references.md` — правило проверки reference перед claim
 
@@ -41,7 +41,7 @@ Before starting any substantive work on этом проекте — прочит
 - Score: 49/55 — APPROVED with MINOR REVISIONS
 - All PMIDs verified through PubMed esummary (feedback_pmid_verify_always)
 - Removed fabricated PMIDs: 38015348, 38353211
-- Added 6 PI publications 2024-2026 (Tqemaladze CDATA series)
+- Added 6 PI publications 2024-2026 (Tqemaladze CEDAR series)
 - Tissue-specific inheritance accepted as evolutionary evidence, не contradiction
 - Modern motor stack adopted (replaces Arduino Nano)
 - AI brain stack: DeepSeek + pi + Gemini 2.5 Flash vision

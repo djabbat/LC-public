@@ -8,6 +8,27 @@
 > **Status:** PhD dissertation (UNED tesis-por-compendio) + article in Biogerontology (ID 7cc6de62, peer review)
 
 
+## The Centriole as a Morphogenetic Lock
+
+> **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
+
+**Evidence:**
+- **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
+- **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
+- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+
+**Resolution of the differentiation paradox:**
+A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
+
+- **No signal → chaotic drift (Renzova 2018).** Cells lose self-renewal and differentiate randomly.
+- **DUX4 + EZH2i + DPPA3 → totipotency.** The same malleable state, directed by totipotency factors.
+- **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
+
+The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+**Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
 ## Essence
 
 CEDAR is a theory according to which **centrioles accumulate entropy over time, like all material structures.** With divisions, the associated hypothetical structures of irreversible differentiation induction (CAMC) change. Additional structural disturbances are added to the centriole's entropy randomly. **Two independent processes:** time → entropy (passive); **asymmetric** divisions → CAMC change (active). Detachment of the irreversible differentiation inducer — only during asymmetric divisions.
@@ -215,3 +236,20 @@ Accumulation of damage in the centriole (D_c) causes 9 mechanisms of pathology:
 
 ## Linked subproject
 - **ERR/wp1_cedar** — EIC Pathfinder WP1 grant proposal
+
+## 2026-08-02: New Evidence Integration
+
+### Two-Level QC in Spermatogenesis (Kitaoka 2026 + Chen 2026)
+
+Recent back-to-back papers reveal a **two-tier quality control system** in haploid spermatids:
+
+1. **Nuclear QC** (Kitaoka & Yamashita 2026, bioRxiv): H2Av(S137)-dependent elimination of damaged nuclei via "trailing" and defective individualization
+2. **Centriolar QC** (Chen et al. 2026, EMBO Rep): CEP164-dependent centriole retention; docking failure → clustering → elimination via residual bodies
+
+**Critical Gap:** No one has connected these two pathways. CEDAR predicts they are linked: centriole damage → docking failure → BOTH nuclear mispositioning AND centriole elimination.
+
+**Falsifiable Predictions:**
+- Polyglutamylated centrioles should show CEP164 mislocalization
+- H2Av foci should correlate with centriole damage markers
+- Double knockout (H2Av + CEP164) should show additive fertility defects
+- The centriolar "tu bulin code" determines whether a spermatid nucleus is retained or eliminated

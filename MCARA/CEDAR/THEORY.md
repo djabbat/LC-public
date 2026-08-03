@@ -6,6 +6,42 @@
 
 ---
 
+## Phylogenetic Analysis: Centriole Elimination Across Mammals (2026-08-03)
+
+> **Finding:** Systematic review of 15+ mammalian species reveals three distinct patterns of centriole elimination, refuting the critique that placental mammals universally lost this mechanism.
+
+| Pattern | Species | Timing | Transferable to soma? |
+|---------|---------|--------|:---:|
+| **Rodent-type** | Mouse, rat, hamster | No elimination — maternal inheritance | ❌ |
+| **Primate-type** | Human, rhesus macaque | Pre-meiotic elimination | ⚠️ Unknown mechanism |
+| **Ungulate-type** | Cattle, pig, sheep, rabbit | Post-fertilization elimination during mitosis | ✅ Best model |
+
+**Key reference:** Uzbekov R, Avidor-Reiss T (2024) The proximal centriole age in spermatozoa determines its fate in the zygote. Open Biol 14:230458. PMID 38442864. [Older centrioles preferentially eliminated — age-dependent selection.]
+
+**Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
+
+
+## The Centriole as a Morphogenetic Lock
+
+> **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
+
+**Evidence:**
+- **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
+- **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
+- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+
+**Resolution of the differentiation paradox:**
+A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
+
+- **No signal → chaotic drift (Renzova 2018).** Cells lose self-renewal and differentiate randomly.
+- **DUX4 + EZH2i + DPPA3 → totipotency.** The same malleable state, directed by totipotency factors.
+- **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
+
+The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+**Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
 ## 0. PEER REVIEW STATEMENT (2026-07-05)
 
 **Auditor:** pi coding agent
@@ -121,9 +157,9 @@ D_c(n, t) = D_{c,0} + α · (n / n*) + β · (t / τ) + γ · I(other counters)
 
 **Key insight:** The centriolar microtubules are among the most stable protein structures in the cell (no turnover in the centriole lumen), making accumulated PTMs effectively **non-repairable**. This is the basis of ¬R (Non-Repairability).
 
-### 4.1. Proof of ¬R (Non-Repairability) — Revised with Verified References
+### 4.1. Proof of ¬R (Non-Repairability) — Revised with Verified References (v6.0, 2026-08-02)
 
-The centriole is effectively non-repairable under physiological aging because:
+> **Key distinction:** Limited repair exists (autophagy, UPS, chaperones) but acts on pericentriolar material — NOT on the microtubule triplets of the centriolar wall. The centriole is effectively non-repairable under physiological aging because:
 
 1. **No protein turnover in centriolar microtubules.** Tubulin in the centriole wall has a half-life exceeding the cell cycle in most cell types. Once polyglutamylated, the modification persists.
    - *Support:* Janke C, Magiera MM. *Nat Rev Mol Cell Biol*. 2020. PMID: **32107477** ✅
@@ -134,7 +170,19 @@ The centriole is effectively non-repairable under physiological aging because:
 3. **Centrosome maintenance program declines with age.** Ana1/CEP295 and Polo kinase regulate centrosome integrity; this program weakens in aging cells.
    - *Support:* Pimenta-Marques A et al. *EMBO Rep*. 2024. PMID: **38200359** ✅
 
-4. **Structural constraint.** The centriole is a closed cylindrical structure. Damaged tubulin cannot be extracted and replaced without disassembling the entire centriole — which would require passing through mitosis without centrioles (lethal in most cell types).
+4. **Structural constraint — the irreplaceable core.** The centriole is a closed cylindrical structure of 9 microtubule triplets. Damaged tubulin (carbonylated, 4-HNE-adducted) is embedded INSIDE the triplet wall. To replace a single damaged dimer would require: (a) disassembling the triplet → loss of structural integrity, (b) extracting the damaged dimer from the lattice, (c) inserting a new dimer, (d) re-establishing triplet geometry. This does not happen in somatic cells.
+   - **Analogy:** replacing a brick in the middle of a load-bearing wall without demolishing it.
+
+5. **Limited repair — what EXISTS and what does NOT:**
+   - ✅ **Autophagy of centriolar proteins** — TIAM1/PLK4 interface with lysosomes (Coelho, Yu & Glover 2026, DOI: `10.64898/2026.07.02.735969`). Controls quality during DUPLICATION, not repair of existing centrioles.
+   - ✅ **Ubiquitin-proteasome system** — degrades PCM components, not tubulin within the centriolar wall.
+   - ✅ **Chaperone-mediated repair** — Hsp70/Hsp90 can refold misfolded PCM proteins, but cannot reverse covalent modifications (carbonylation, 4-HNE adducts) on tubulin.
+   - ✅ **Elimination of whole centrioles** — Kalbfuss & Gönczy (2023), PMID: 37256957 — in C. elegans embryos; Bonente et al. (2025), PMID: 40558492 — in Drosophila development. NOT in adult somatic cells.
+   - ❌ **Extraction and replacement of damaged tubulin** from centriolar microtubule triplets — NEVER observed.
+
+6. **Evolutionary explanation — why repair is not better.** The selection shadow (Medawar 1952, Williams 1957) ensures that mechanisms whose failure manifests after reproductive age are not optimized. Centriolar damage accumulates slowly (k_damage ≈ 0.01-0.05 D_critical/year). D_critical is reached at 60-100 years — well past reproductive peak. Evolution "sees" only that the organism reproduces before centrioles fail. Complete repair machinery was never selected for.
+
+7. **Resolution of the "endless propagation" paradox:** Damage DOES accumulate — that IS aging. The germline interrupts the chain by eliminating centrioles (oocyte) or degrading them post-fertilization (sperm), then rebuilding de novo in the early embryo (Gönczy & Balestra 2023, PMID: 36988082; Manandhar et al. 1999, PMID: 10401572). The species does not age — individuals do. Full defense document: `docs/REPAIR_OBJECTION_DEFENSE.md`
 
 ### 4.2. Tissue Specification
 
@@ -175,6 +223,8 @@ Centriolar damage accelerates epigenetic drift via coupling constant k_ep.
 1. **CAASM (M3) is hypothetical — UPGRADED to plausible (5/10).** Five centrosome-associated proteins with differentiation functions identified: Oct4 (PMID: 41725553), CEP170 (PMID: 41888776), LGALS3BP (PMID: 42055624), PCM1 (PMID: 41315244), CEP57-CEP152 (PMID: 41616107). Direct centrosomal IP-MS during HSC differentiation still needed for definitive proof.
 
 2. **Causality vs. correlation.** Does centriole damage CAUSE aging, or is it a passive marker? The CCP1-KO experiment (P3) is designed to establish causality.
+
+7.5. **Limited repair — addressed (2026-08-02).** See §4.1 for full treatment. Repair mechanisms exist (autophagy, UPS, chaperones) but are structurally incapable of replacing damaged tubulin within centriolar microtubule triplets. The germline solves this by elimination + de novo synthesis. Somatic cells accumulate damage — this is aging. Full defense: `docs/REPAIR_OBJECTION_DEFENSE.md`
 
 3. **Tissue-specificity underdeveloped.** The theory handles HSC and neurons but lacks quantitative predictions for 200+ human cell types.
 

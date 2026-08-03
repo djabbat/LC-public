@@ -1,9 +1,9 @@
-# CDATA Parameter Reconciliation Analysis — 2026-04-21
+# CEDAR Parameter Reconciliation Analysis — 2026-04-21
 
 **Auditor:** Claude Opus 4.7 (1M)
 **Scope:** Docs ↔ Code divergence for 5 parameters flagged in 2026-04-21 audit.
-**Canonical doc:** `/home/oem/Desktop/CommonHealth/CDATA/PARAMETERS.md` (v3.0, 32 params, CORRECTIONS-2026-04-22 canon).
-**Canonical code:** `/home/oem/Desktop/CommonHealth/CDATA/crates/cell_dt_core/src/parameters/fixed_params.rs` (`FixedParameters::default()`).
+**Canonical doc:** `/home/oem/Desktop/CommonHealth/CEDAR/PARAMETERS.md` (v3.0, 32 params, CORRECTIONS-2026-04-22 canon).
+**Canonical code:** `/home/oem/Desktop/CommonHealth/CEDAR/crates/cell_dt_core/src/parameters/fixed_params.rs` (`FixedParameters::default()`).
 
 Cross-verified via:
 - `crates/cell_dt_validation/src/calibration.rs` — MCMC Round-7 posterior documentation
@@ -38,7 +38,7 @@ Cross-verified via:
 | Code default | `alpha: 0.0082` — `fixed_params.rs:69` |
 | Test pins value | `fixed_params.rs:190` `assert!((p.alpha - 0.0082).abs() < 1e-6)` |
 | Calibration doc | `calibration.rs:61` — "fixed at literature value (PMID: 36583780); collinear with tau_protection (posterior r = 0.858)" |
-| Python scripts | `cdata_ablation_sobol.py:215` comment: `# Use best-fit parameters (CDATA PARAMETERS.md: alpha=0.0082, tau=24.3, pi0=0.87)` — **scripts believe 0.0082 IS the PARAMETERS.md value.** |
+| Python scripts | `cdata_ablation_sobol.py:215` comment: `# Use best-fit parameters (CEDAR PARAMETERS.md: alpha=0.0082, tau=24.3, pi0=0.87)` — **scripts believe 0.0082 IS the PARAMETERS.md value.** |
 | Usage in engine | `aging_engine/src/lib.rs:341` `let damage_rate = self.params.alpha * division_rate * (1.0 - protection) * …` |
 | Usage in CLI | `cell_dt_cli/src/lib.rs:44` `D = d₀ + α·(n/n*) + β·(t/τ) + γ·coupling` with `alpha: 0.60` default (completely different α!) |
 

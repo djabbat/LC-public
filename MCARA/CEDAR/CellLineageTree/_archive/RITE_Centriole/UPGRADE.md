@@ -13,7 +13,7 @@
 
 ## U4. In vivo extension
 - Deliver to mouse bone marrow HSCs via lentivirus or AAV
-- Pulse in vivo, sort cells, image ex vivo — validates HSC centriole asymmetry prediction from CDATA
+- Pulse in vivo, sort cells, image ex vivo — validates HSC centriole asymmetry prediction from CEDAR
 
 ## U5. Multi-organelle RITE
 - Parallel RITE cassettes on mitochondria, basal body, cilium — multi-organelle age atlas

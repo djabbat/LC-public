@@ -1,5 +1,9 @@
 # EpigeneticDrift — Memory
 
+## 2026-08-02: Why iPSC Fails — The Correct Target
+
+> See `../docs/WHY_IPSC_FAILS.md` for full rationale. Key insight: partial reprogramming target = **adult stem cells with young division tempo**, not iPSC. EpigeneticDrift counter is the feedback sensor that prevents overshooting past the adult stem cell state into pluripotency/teratoma territory.
+
 ## Decision History
 
 ### Upon Project Initialization — Project Initialization

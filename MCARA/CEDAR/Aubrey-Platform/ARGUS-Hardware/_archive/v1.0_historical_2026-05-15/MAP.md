@@ -44,7 +44,7 @@
 
 | Внешний ресурс | Связь |
 |---|---|
-| `~/Desktop/LC/CDATA/` | Научная основа (CDATA theory) |
+| `~/Desktop/LC/CEDAR/` | Научная основа (CEDAR theory) |
 | `~/Desktop/LC/AutomatedMicroscopy/` | Параллельный project про AI microscopy |
 | `~/Desktop/LC/MCAOA/` | Multi-Counter Architecture of Organismal Aging — meta-framework, Counter frameworks |
 | `~/Desktop/LC/AIM/llm.py` | LLM router (DeepSeek primary) для Claude agent |
@@ -53,7 +53,7 @@
 
 ## Что НЕ в E0 (external dependencies)
 
-- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CDATA/` (NOT here, отдельный grant submission)
+- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CEDAR/` (NOT here, отдельный grant submission)
 - **MCAOA submission** → `~/Documents/Submissions/2026-04-25_NatureAging_MCAOA/`
 - **PhD dissertation** → `~/Desktop/PhD/dissertation/`
 
@@ -66,7 +66,7 @@
 - ARGUS = construction phase (simulator-only)
 - Parent: Aubrey = biological pilot (BJ-hTERT + hypoxia + Centrin1-Kaede)
 - Grandparent: CellLineageTree = methodology umbrella
-- Theory: CDATA Counter #1 (centriolar damage accumulation)
+- Theory: CEDAR Counter #1 (centriolar damage accumulation)
 - Meta: MCAOA (Multi-Counter Architecture of Organismal Aging)
 - Application: Impetus Phase A grant ($80K)
 - Phase B: Geiger lab Ulm (€100K, conditional на Phase A Go)

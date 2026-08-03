@@ -1,4 +1,39 @@
-# LC · MEMORY (v7.5)  **Date:** 2026-07-12  ---  ## 2026-07-26: 📚 Wenner (meiosis) + Miller (apoptosis/oogenesis) — recorded in CEDAR
+# LC · MEMORY (v7.6)  **Date:** 2026-08-02  ---
+
+## 2026-08-02: 🔴 Статус подач — проверка портала Springer
+
+**Ze_CHSH → PEER REVIEW на QIP!** (обновлён 1 нед. назад)
+**MCARA → апелляция отклонена** Biogerontology. Трансфер → Scientific Reports.
+**Centrioles (npj Aging) →** трансфер → Scientific Reports.
+**Ze_Model → 9 недель With Editor** (Found. of Physics, 3fab9acb). Послан email.
+**Einstein & Bohr →** подан в Found. of Physics (37cc83c2), technical checks.
+**Entropy of Age →** With Editor (Discover Aging, 0c32d5ad).
+**4 новых статьи:** Three-Step Strategy (JTB), Activatus (LWT), Centriole Invasion (BioEssays), Ze+Centrioles (BioSystems).
+
+## 2026-08-02: 🔴 Находки из autofix — ChemCrow, Coscientist, multi-agent frameworks
+
+**Источник:** Циклы autofix статьи «Agentic AI for Scientific Discovery» (журнал IF 18+).
+
+**ChemCrow (Bran et al., 2024)** — Nature Machine Intelligence 6, 525-535.
+- LLM + chemistry tools (молекулярный докинг, synthesis planning, safety).
+- Прямое применение к LC drug discovery pipeline: поиск senolytics через инструменты молекулярного докинга, превосходит GPT-4.
+- Архитектурный паттерн: внешние валидированные инструменты предотвращают hallucination.
+
+**Coscientist (Boiko et al., 2023)** — Nature 624, 570-578.
+- Autonomous chemical experimentation с GPT-4.
+- Применение к LC: autonomous optimization биохимических assays (NAD+, ROS, mitochondrial function).
+- Интеграция с cloud labs (Emerald Cloud Lab) + liquid handlers (Opentrons).
+
+**Multi-Agent LLM Survey (Guo et al., 2024)** — arXiv:2402.01680.
+- Comprehensive survey по LLM-based multi-agent systems.
+- Архитектурные паттерны: profiling, communication, capability growth.
+- Основа для проектирования multi-agent CEDAR/HAP/MCARA pipeline.
+
+**Другие находки (см. CEDAR/MEMORY.md):**
+- LLM-SR, LaSR, ICSR — symbolic regression для aging biomarker discovery.
+- Hu et al. — multi-agent physical laws discovery (шаблон для CEDAR).
+
+## 2026-07-26: 📚 Wenner (meiosis) + Miller (apoptosis/oogenesis) — recorded in CEDAR
 
 > Full analysis: `~/Desktop/Marketing/Entropy_in_Aging/docs/literature_analysis_26_jul.md`
 > Key findings recorded in LC/MCARA/CEDAR/MEMORY.md and Marketing/Entropy_in_Aging/MEMORY.md

@@ -47,7 +47,7 @@ Centriole inheritance is tissue-specific, motivating the need for a precision ab
 
 | # | PMID | Article | Key finding for ARGUS |
 |---|------|---------|----------------------|
-| 1 | **36583780** | Tqemaladze J. *Mol Biol Rep* 2023 | CDATA Counter #1 — selective inheritance of old centrioles by stem cells |
+| 1 | **36583780** | Tqemaladze J. *Mol Biol Rep* 2023 | CEDAR Counter #1 — selective inheritance of old centrioles by stem cells |
 | 2 | **37882444** | Royall LN et al. *eLife* 2023 | Asymmetric centriole inheritance in human neural progenitors |
 | 3 | **16336191** | Tqemaladze & Chichinadze 2005 *Biochemistry (Mosc)* | Centriolar mechanisms of morphogenesis |
 | 4 | **15886028** | Tqemaladze J. 2005 *Cell Biol Int* | Determination of morphogenetic status |
@@ -68,7 +68,7 @@ Centriole inheritance is tissue-specific, motivating the need for a precision ab
 ## 4. PI publications — scope of self-citation
 
 The PI's own work is referenced only where directly relevant:
-- **PMID 36583780** — CDATA Counter #1 conceptual framework (used for biological motivation in §2)
+- **PMID 36583780** — CEDAR Counter #1 conceptual framework (used for biological motivation in §2)
 - **MCAOA preprint** (Zenodo DOI: 10.5281/zenodo.20055806) — acronym definition only (§0), no experimental claims
 - All other references are independent third-party publications (see §3)
 

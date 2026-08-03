@@ -36,6 +36,42 @@
 ---
 
 
+## Phylogenetic Analysis: Centriole Elimination Across Mammals (2026-08-03)
+
+> **Finding:** Systematic review of 15+ mammalian species reveals three distinct patterns of centriole elimination, refuting the critique that placental mammals universally lost this mechanism.
+
+| Pattern | Species | Timing | Transferable to soma? |
+|---------|---------|--------|:---:|
+| **Rodent-type** | Mouse, rat, hamster | No elimination — maternal inheritance | ❌ |
+| **Primate-type** | Human, rhesus macaque | Pre-meiotic elimination | ⚠️ Unknown mechanism |
+| **Ungulate-type** | Cattle, pig, sheep, rabbit | Post-fertilization elimination during mitosis | ✅ Best model |
+
+**Key reference:** Uzbekov R, Avidor-Reiss T (2024) The proximal centriole age in spermatozoa determines its fate in the zygote. Open Biol 14:230458. PMID 38442864. [Older centrioles preferentially eliminated — age-dependent selection.]
+
+**Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
+
+
+## The Centriole as a Morphogenetic Lock
+
+> **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
+
+**Evidence:**
+- **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
+- **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
+- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+
+**Resolution of the differentiation paradox:**
+A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
+
+- **No signal → chaotic drift (Renzova 2018).** Cells lose self-renewal and differentiate randomly.
+- **DUX4 + EZH2i + DPPA3 → totipotency.** The same malleable state, directed by totipotency factors.
+- **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
+
+The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+**Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
 ## 0. Hardware/Software Distinction (Jaba Tqemaladze, 2026-07-08)
 
 **Барьер для тотипотентности — три компонента:** (1) **старая центриоль** с включёнными генными сетями в нетотипотентном режиме; (2) **CAMC** — центросомно-ассоциированный комплекс памяти (ATF5, FERMT3, ALMS1); (3) **момент начала синтеза центриолей de novo** — ключевой переключатель: отключение старых генных сетей и включение генной сети, характерной для тотипотентности.
@@ -303,21 +339,20 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, where `D_critical` is a tissue-specific threshold for a specific counter (e.g., critical telomere shortening).
 
 
-## 4. Canonical Set of MCARA Counters (v4.5 — Gatekeeper article)
+## 4. Canonical Set of MCARA Counters (v5.0 — 4 counters)
 
-> 🔄 **Нумерация обновлена 2026-07-08** для соответствия MCARA.docx (Gatekeeper article).
-> Старая нумерация (v1.0): #1=CP, #2=Telomere, #3=MitoROS, #4=Epigenetic, #5=Proteostasis.
-> Новая нумерация (v4.5): #1=Centriolar, #2=Epigenetic, #3=Mitochondrial, #4=Structural, #5=Telomeric.
+> 🔴 **Нумерация обновлена 2026-08-02.** 4 счётчика: центриоли, митохондрии, теломеры, эпигенетика.
+> Старая нумерация (v4.5): #1=CP, #2=Epigenetic, #3=Mitochondrial, #4=Structural, #5=Telomeric.
+> Новая нумерация (v5.0): #1=Centriolar, #2=Epigenetic, #3=Mitochondrial, #4=Telomeric.
 
 | # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
 |---|------|--------|---------|----------------|---------------|---------|
-| 1 | **Centriolar Polyglutamylation (CP)** | CEDAR | Divisions + Time | ~50–80 (HSC), ~30–50 (epithelium) | Months–Years (mass spectrometry) | Stress integrator. polyE accumulation + CAMC. `α_i` significant, `β_i` driven by tubulin turnover. **Фаворит гонки** — без защиты. |
-| 2 | **Epigenetic Drift (SA-DNAm)** | EpigeneticDrift | Dominantly Time + Divisions | `α_i → 0` for most cells; `α_i > 0` in proliferating compartments | Doubling time of epigenetic age (~3.6 years DunedinPACE) | SA-DNAm trajectory (Wagner 2013). TERT does NOT prevent. EPIC arrays (850K CpG). Замедлен гипоксией на ~30-40%, но тикает. |
-| 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (mtDNA damage turnover) | ROS повреждает центриоль (η(t)), но не originates from it. **Защищён 2% O₂.** |
-| 4 | **Structural (Centriole/Cilium)** | CEDAR | Divisions + Time | ~50–80 (follows C1) | Months–Years | Tubulin code (polyE, detyrosination). Цилия ↔ центриоль переключатель. **Ведомый** — следует за C1. |
-| 5 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit (~50 for fibroblasts) | Weeks (telomeric repeat turnover) | Классический репликативный счётчик. **Снят с гонки** теломеразой (hTERT). `β_i ≈ 0` для большинства соматических клеток. |
+| 1 | **Centriolar (polyGlu + Structural)** | CEDAR | Divisions + Time | ~50–80 (HSC), ~30–50 (epithelium) | Months–Years (mass spectrometry) | Stress integrator. polyE accumulation + CAMC + tubulin code. **Фаворит гонки** — без защиты. |
+| 2 | **Epigenetic Drift (SA-DNAm)** | EpigeneticDrift | Dominantly Time + Divisions | `α_i → 0` for most cells; `α_i > 0` in proliferating compartments | Doubling time of epigenetic age (~3.6 years DunedinPACE) | SA-DNAm trajectory (Wagner 2013). TERT does NOT prevent. EPIC arrays (850K CpG). Замедлен гипоксией на ~30-40%. |
+| 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (mtDNA damage turnover) | ROS повреждает центриоль (η(t)). **Защищён 2% O₂.** |
+| 4 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit (~50 for fibroblasts) | Weeks (telomeric repeat turnover) | Классический репликативный счётчик. **Снят с гонки** теломеразой (hTERT). `β_i ≈ 0` для большинства соматических клеток. |
 
-**Order and Rationale:** Counter CP (#1) = фаворит гонки — stress integrator без защиты. C2 (эпигенетический) бежит независимо, замедлен гипоксией. C3 (митохондриальный) защищён 2% O₂. C4 (структурный) следует за C1. C5 (теломерный) снят с гонки теломеразой. **Судья гонки:** Geiger (Ulm) — HSC трансплантация, in vivo валидация победителя.
+**Order and Rationale:** Counter #1 (центриолярный) = фаворит гонки — stress integrator без защиты. C2 (эпигенетический) бежит независимо, замедлен гипоксией. C3 (митохондриальный) защищён 2% O₂. C4 (теломерный) снят с гонки теломеразой. **Судья гонки:** Geiger (Ulm) — HSC трансплантация, in vivo валидация победителя.
 
 ### 4.1. Candidate counter #6 — piRNA (placeholder, NOT canonical in v1.0)
 
@@ -329,7 +364,7 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 
 **Therapeutic relevance:** 9 piRNA identified as potential therapeutic targets (Kraus 2026); GLP-1-induced shifts in piRNA profiles and lifestyle-interventions (exercise) are actively studied. Require independent confirmation prior to operationalization in MCARA protocol.
 
-### 4.2. Supporting Evidence for Counter #5 (Proteostasis) — VEXAS Syndrome (with caveats)
+### 4.2. Supporting Evidence for Proteostasis in Aging — VEXAS Syndrome (with caveats) [NOT a separate MCARA counter]
 
 **VEXAS** (Vacuoles, E1 enzyme, X-linked, Autoinflammatory, Somatic) is an acquired syndrome caused by a somatic mutation in *UBA1* (Met41) in HSC. Prevalence ~1:4,000 in men >50 years, 50% 5-year mortality. Molteni et al. *Nature Medicine* 2025 (DOI 10.1038/s41591-025-03623-9) demonstrated:
 1. Dysfunctional UBA1c isoform → loss of protein ubiquitination
@@ -338,12 +373,12 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 4. Clonal dominance of mutant cells; depletion of wild-type
 5. Progressive bone marrow failure
 
-**Critically:** VEXAS patients have no telomerase mutations and telomeres are **not shortened**. This suggests that proteostatic disruption alone can drive HSC failure independently of telomere shortening — consistent with counter #5 operating as an independent axis.
+**Critically:** VEXAS patients have no telomerase mutations and telomeres are **not shortened**. This suggests that proteostatic disruption alone can drive HSC failure independently of telomere shortening — consistent with proteostatic disruption as a contributor to aging.
 
 **CRITICAL CAVEAT:** VEXAS is a **monogenic pathology** (somatic UBA1 mutation), not a model of physiological aging. Extrapolating from VEXAS to normal gerontogenesis requires caution: 
 - The mechanism is acute (proteotoxic crisis driven by a single mutation), not the gradual, multi-factorial decline seen in aging.
 - VEXAS involves clonal dominance and autoinflammation, which are not typical of the proteostatic counter in normal aging.
-- Therefore, VEXAS is **illustrative but not definitive** proof of counter #5 independence. It supports the plausibility of the axis but does not replace direct gerontological evidence.
+- Therefore, VEXAS is **illustrative but not definitive** proof of proteostatic independence. It supports the plausibility of the axis but does not replace direct gerontological evidence.
 
 **Additional Support (not dependent on VEXAS):** Keyvani Chahi et al. *Blood* 2022 (DOI 10.1182/blood.2021014602) — overexpression PLAG1 → **15.6-fold** enhancement of functional HSC frequency via suppression of translation (4EBP1↑, miR-127↑) independently of c-MYC. Catic *Trends Cell Biol* 2025 — HSC maintain low translation rates; increased translation without autophagy compensation → toxic aggregation.
 

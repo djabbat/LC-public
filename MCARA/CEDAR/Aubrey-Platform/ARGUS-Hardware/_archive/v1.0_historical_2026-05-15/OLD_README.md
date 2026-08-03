@@ -25,7 +25,7 @@
 
 - ❌ Живые клетки (BJ-hTERT, iPSC, Elodea)
 - ❌ Центриолярная биология
-- ❌ Translational claims к mammalian CDATA
+- ❌ Translational claims к mammalian CEDAR
 - ❌ Impetus / EIC Pathfinder грантовое позиционирование
 
 ## Архитектура (v4.0)

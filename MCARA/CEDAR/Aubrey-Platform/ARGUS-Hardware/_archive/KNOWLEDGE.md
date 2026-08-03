@@ -27,7 +27,7 @@
 
 | # | PMID | Year | Journal | Key finding |
 |---|------|:----:|---------|-------------|
-| 1 | **36583780** | 2023 | *Mol Biol Rep* | CDATA Counter #1 — selective inheritance of old centrioles by stem cells |
+| 1 | **36583780** | 2023 | *Mol Biol Rep* | CEDAR Counter #1 — selective inheritance of old centrioles by stem cells |
 | 2 | **37882444** | 2023 | *eLife* | Asymmetric centriole inheritance in human neural progenitors (RITE markers) |
 | 3 | **16336191** | 2005 | *Biochemistry (Mosc)* | Centriolar mechanisms of morphogenesis |
 | 4 | **15886028** | 2005 | *Cell Biol Int* | Determination of morphogenetic status |
@@ -58,7 +58,7 @@
 
 - **MCAOA** = Multi-Counter Architecture of Organismal Aging (Tqemaladze J. 2026, Zenodo DOI: 10.5281/zenodo.20055806)
 - ARGUS targets empirical validation of **centriolar counter (#1)** predictions
-- CDATA = Centriolar Damage Accumulation Theory of Aging [PMID: 36583780] — theoretical basis for counter #1
+- CEDAR = Centriolar Damage Accumulation Theory of Aging [PMID: 36583780] — theoretical basis for counter #1
 - MCAOA (Multi-Counter Architecture of Organismal Aging, formerly MCAOA) — renamed to avoid confusion with bioinformatics abbreviations. Zenodo DOI: 10.5281/zenodo.20055806
 
 ## Key experimental precedent: ablation validation

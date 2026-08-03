@@ -27,7 +27,6 @@ MCARA/
 ├── EpigeneticDrift/    — Counter #2: Epigenetic Clock
 ├── MitoROS/            — Counter #3: Mitochondrial
 ├── Telomere/           — Counter #4: Telomeric
-├── Proteostasis/       — Counter #5: Proteostasis
 │
 ├── _archive/ARGUS-LP_v3_2026-06/  — Outdated ARGUS-LP version (June 2026). Current: Marketing/ARGUS-LP_OS v49.
 │   ├── CONCEPT.md      —   6 Microscope Versions (V1–V6), AI Agent
@@ -59,7 +58,6 @@ MCARA/
 | **EpigeneticDrift** | Theory | Counter #2 — Epigenetic |
 | **MitoROS** | Theory + Code | Counter #3 — Mitochondrial |
 | **Telomere** | Theory + Code | Counter #4 — Telomeric |
-| **Proteostasis** | Theory + Code | Counter #5 — Proteostasis |
 | **ARGUS-LP_OS** | Tools + Grants | AI Robot for Lineage Tracking | → Marketing/ARGUS-LP_OS |
 | **Aubrey** | Scientific Project | Centriolar Atlas, BOLD PILOT, EIC Consortium |
 

@@ -71,6 +71,26 @@
 | Partners | INRAE + Wageningen + DTU + TSU |
 | Deadline | 17 Sep 2026 |
 
+## Repair/Elimination Kinetic Parameters (2026-08-02)
+
+> Added in response to Julia Mahamid objection. Full model: `docs/REPAIR_OBJECTION_DEFENSE.md` §3.2
+
+| Parameter | Symbol | Value | Units | Source/Note |
+|-----------|--------|-------|-------|-------------|
+| Oxidative damage rate (basal) | k_damage_basal | 0.005-0.01 | D_critical/yr | Time-dependent, post-mitotic cells |
+| Replication-coupled damage rate | k_damage_rep | 0.0005-0.002 | D_critical/division | per division |
+| Autophagy repair rate | k_autophagy | 0.001-0.01 | fraction/yr | Only during duplication (~1-2% cell cycle) |
+| UPS repair rate (PCM only) | k_UPS | 0.003-0.008 | fraction/yr | ~10-20% PCM accessible |
+| Chaperone refolding rate | k_chaperone | ~0.01 | fraction/yr | PCM only, not covalent modifications |
+| Elimination rate (germline) | k_elim_germ | ~1.0 | per generation | Complete reset oocyte/early embryo |
+| Elimination rate (somatic) | k_elim_som | ≈ 0 | per year | No centriole elimination in adult somatic cells |
+| Critical damage threshold | D_critical | 1.0 | dimensionless | Functional failure threshold |
+| Time to D_critical (human) | τ_critical | 60-100 | years | D₀ ≈ 0.05-0.10 D_critical |
+| Cartwheel radius | r_cartwheel | ~25 | nm | SAS-6 ring, 9-fold symmetry |
+| Expected radius variation (late passage) | Δr_aged | 2-5 | nm | Carbonylation → surface distortion |
+| Carbonylated tubulin (aged) | f_carbonyl | 2-5 | % of total | Stadtman ER (2006), PMID: 16756493 |
+| Damaged dimers per centriole (aged) | N_damaged | ~36-90 | dimers | 1800 total × 2-5% carbonylation |
+
 ## References
 
 - PMID 33208041 — Cep63-Cep152 LLPS at centrosome
