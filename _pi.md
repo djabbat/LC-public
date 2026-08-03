@@ -7,3 +7,6 @@
 ## Rules
 - All core files — ENGLISH only.
 - No extraneous projects in this directory.
+
+## Related projects
+Marketing (CEDAR, MCARA branding), PhD (HAP), Services (AIM, BioSense)
