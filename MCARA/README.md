@@ -12,7 +12,7 @@
 
 ## Overview
 
-MCARA (Multi-Counter Architecture of Organismal Aging) is a formal, falsifiable framework that models aging as the parallel accumulation of damage across **5 independent molecular counters** in different tissues:
+MCARA (Multi-Counter Architecture of Organismal Aging) is a formal, falsifiable framework that models aging as the parallel accumulation of damage across **4 independent molecular counters** in different tissues:
 
 | # | Counter | Mechanism | Project |
 |---|---------|-----------|---------|
@@ -112,7 +112,7 @@ mcara-sim v3.2: 100 steps, tissue=hsc, EDC=0/none, final L_tissue=0.1523 (below 
   Output: mcara_run.csv
 ```
 
-The CSV contains per-step values for all 5 counters + tissue load + EDC parameters.
+The CSV contains per-step values for all 4 counters + tissue load + EDC parameters.
 
 ## Project Structure
 

@@ -10,6 +10,27 @@
 
 ---
 
+## The Centriole as a Morphogenetic Lock
+
+> **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
+
+**Evidence:**
+- **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
+- **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
+- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+
+**Resolution of the differentiation paradox:**
+A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
+
+- **No signal → chaotic drift (Renzova 2018).** Cells lose self-renewal and differentiate randomly.
+- **DUX4 + EZH2i + DPPA3 → totipotency.** The same malleable state, directed by totipotency factors.
+- **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
+
+The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+**Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
 ## 0. The Centriole as a Gatekeeper of Cell State
 
 The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA checks which molecular counter finishes first.**

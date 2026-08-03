@@ -1,4 +1,4 @@
-**Date:** 2026-07-30
+**Date:** 2026-08-02
 
 # STATE — CEDAR
 
@@ -10,16 +10,30 @@
 
 ---
 
+## 🟢 2026-08-02 — Julia Mahamid response + Gönczy/Guichard letters SENT
+
+- 📨 **Julia Mahamid** — ответил (поблагодарил, Tollervey — да, идея elimination/de novo, иду к Gönczy/Guichard)
+- 📨 **Pierre Gönczy** — письмо отправлено (гипотеза CEDAR + elimination + cryo-ET, Mahamid рекомендовала)
+- 📨 **Paul Guichard** — письмо отправлено (`paul.guichard@unige.ch`, expansion microscopy, Mahamid рекомендовала)
+- 🔬 **Анализ Tollervey et al. (2025) Dev Cell** — проведён. Mother vs daughter УЖЕ структурно различны. НЕТ сравнения young vs aged.
+- 🔬 **Анализ Guichard lab:** Laporte 2024 Cell (U-ExM карта, 24 белка), Bournonville 2025 Nat Commun (A-C linker), Brunet 2025 EMBO J (Alms1→cartwheel). Поле методологически готово.
+- 🛡️ **Defence document:** `docs/REPAIR_OBJECTION_DEFENSE.md` — 5-уровневая защита от возражения «должны быть механизмы репарации»
+- 📊 **Обновлены:** EVIDENCE.md (+§11, §12), THEORY.md (¬R v6.0), MEMORY.md (+2 записи), PARAMETERS.md (+13 кинетических параметров)
+
+**Следующий шаг:** ждать ответа Gönczy/Guichard. Follow-up через 2 недели если нет ответа.
+
+---
+
 ## 🟢 2026-07-26 — Autofix CEDAR: 98/100
 
 <!-- lang:ru -->
-- 🔴 **PARAMETERS.md** — исправлен: был шаблонный текст «data validation framework», заменён на реальные центриолярные параметры (Cell‑DT, LLPS, эволюция, грант)
-- 🔴 **MAP.md** — переписан: старая версия содержала несуществующие папки (cedar_sim/, tests/, gui/), не содержала реальных (Aubrey-Platform/, CellLineageTree/, articles/).
-- 🟡 **DESIGN.md** — расширен с 353 до 1807 байт (архитектура, компоненты, data pipeline, key decisions)
-- 🟡 **TODO.md** — добавлены активные задачи (CIRCBIO-07, autofix, статьи, LLPS-секция в THEORY.md)
-- ✔ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — создан: полная верификация гипотезы «центриоль/LLPS/суша vs вода» с PMID
-- ✔ **scripts/cedar_autofix.sh** — создан: CEDAR-специфичный autofix-скрипт (адаптирован из DEEP_AUDIT_ALGORITHM.md)
-- 📊 **Итоговый счёт autofix: 98/100.** Критерий 95+ пройден.
+- 🔴 **PARAMETERS.md** — fixed: was template text "data validation framework", replaced with real centriolar parameters (Cell‑DT, LLPS, evolution, grant)
+- 🔴 **MAP.md** — rewritten: old version contained non-existent folders (cedar_sim/, tests/, gui/), did not contain real ones (Aubrey-Platform/, CellLineageTree/, articles/).
+- 🟡 **DESIGN.md** — expanded from 353 to 1807 bytes (architecture, components, data pipeline, key decisions)
+- 🟡 **TODO.md** — added active tasks (CIRCBIO-07, autofix, articles, LLPS section in THEORY.md)
+- ✔ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — created: full verification of hypothesis "centriole/LLPS/land vs water" with PMID
+- ✔ **scripts/cedar_autofix.sh** — created: CEDAR-specific autofix script (adapted from DEEP_AUDIT_ALGORITHM.md)
+- 📊 **Final autofix score: 98/100.** Criterion 95+ passed.
 <!-- /lang:ru -->
 
 ## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy

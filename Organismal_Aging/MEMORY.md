@@ -4,42 +4,40 @@
 
 ---
 
-## 📚 2026-07-29: Обзор — Hydra: ультраструктура стволовости (Seybold, Salvenmoser et al., Innsbruck)
+## 📚 2026-07-29: Review — Hydra: Ultrastructure of Stemness (Seybold, Salvenmoser et al., Innsbruck)
 
-**Статья:** Seybold A, Salvenmoser W, Pfaller K, Redl S, Hess MW, Hobmayer B. "Ultrastructure of stemness and differentiated state in *Hydra* epithelial cells." bioRxiv 2026-07-23. DOI: `10.64898/2026.07.20.739505`
+**Article:** Seybold A, Salvenmoser W, Pfaller K, Redl S, Hess MW, Hobmayer B. "Ultrastructure of stemness and differentiated state in *Hydra* epithelial cells." bioRxiv 2026-07-23. DOI: `10.64898/2026.07.20.739505`
 
-**Суть:** Эпителиальные клетки Hydra одновременно делятся и выполняют дифференцированные функции. Ядерные маркеры стволовости vs полярность/секреция. Cryofixation.
+**Essence:** Hydra epithelial cells simultaneously divide and perform differentiated functions. Nuclear markers of stemness vs polarity/secretion. Cryofixation.
 
-**Значение для Organismal_Aging:** Hydra — пренебрежимое старение; многофункциональный эпителий — ancestral condition.
+**Significance for Organismal_Aging:** Hydra — negligible senescence; multifunctional epithelium — ancestral condition.
 
-**✅ 2026-07-29: Письмо Bert Hobmayer отправлено** — вопрос про центриоли в Hydra. Ждём ответа.
-
+**✅ 2026-07-29: Letter to Bert Hobmayer sent** — question about centrioles in Hydra. Awaiting reply.
 ---
 
-## 🔴 2026-07-27: Post-Mortem — Research Square отказ (rs-10483434)
+## 🔴 2026-07-27: Post-Mortem — Research Square rejection (rs-10483434)
 
-**Тип:** Отказ препринт-платформы.
-**Дней до решения:** 3 (24 июл → 27 июл).
-**Причина:** «the manuscript type or its content is not suitable for posting as a preprint on Research Square.»
+**Type:** Preprint platform rejection.
+**Days to decision:** 3 (24 Jul → 27 Jul).
+**Reason:** «the manuscript type or its content is not suitable for posting as a preprint on Research Square.»
 
-### Что сказали
+### What they said
 > «Our screeners have determined that the manuscript type or its content is not suitable for posting as a preprint on Research Square. This decision does not reflect the quality or importance of the work and is made on the basis of our editorial policies with respect to content type and screening.»
 
-### Что мы упустили
-1. **Research Square — не для hypothesis papers.** Они принимают research articles с данными. Чистая гипотеза без экспериментальных результатов — не их формат.
-2. **Объём.** ~11,000 слов — слишком много для препринта. Многие платформы имеют лимиты.
-3. **Упоминание предыдущего отказа.** В Acknowledgments: «the four reviewers of the original manuscript (npj Aging, ID 2e8466c7)» — это красный флаг для скринеров.
-4. **Research Square — не лучший выбор для этой статьи.** bioRxiv, arXiv (q-bio), Zenodo или OSF Preprints принимают hypothesis/theory papers.
+### What We Missed
+1. **Research Square — not for hypothesis papers.** They accept research articles with data. A pure hypothesis without experimental results is not their format.
+2. **Length.** ~11,000 words is too long for a preprint. Many platforms have limits.
+3. **Mentioning the previous rejection.** In Acknowledgments: “the four reviewers of the original manuscript (npj Aging, ID 2e8466c7)” — this is a red flag for screeners.
+4. **Research Square is not the best choice for this paper.** bioRxiv, arXiv (q-bio), Zenodo, or OSF Preprints accept hypothesis/theory papers.
 
-### Что изменить
-- [ ] Для препринта: **Zenodo** (уже есть MCARA там — 10.5281/zenodo.21299683) или **bioRxiv**
-- [ ] Убрать из Acknowledgments упоминание npj Aging rejection — не для публичного препринта
-- [ ] Medical Hypotheses — ждать решения (подана 24 июл)
+### What to Change
+- [ ] For preprint: **Zenodo** (MCARA already there — 10.5281/zenodo.21299683) or **bioRxiv**
+- [ ] Remove mention of npj Aging rejection from Acknowledgments — not for a public preprint
+- [ ] Medical Hypotheses — wait for decision (submitted Jul 24)
 
-### Следующий шаг
-1. **Medical Hypotheses** — журнал специально для hypothesis papers. Это правильная цель. Ждать.
-2. **Препринт:** залить на Zenodo (как MCARA) или bioRxiv. Не Research Square.
-
+### Next Step
+1. **Medical Hypotheses** — a journal specifically for hypothesis papers. This is the right target. Wait.
+2. **Preprint:** upload to Zenodo (like MCARA) or bioRxiv. Not Research Square.
 ---
 
 ## Decision #1: Creating the Organismal Aging Project

@@ -4,7 +4,7 @@
 **Project:** LC/MCARA
 
 ## Purpose
-MCARA — an umbrella project for modeling multi-component aging oscillations. Combines 5 components (CEDAR, EpigeneticDrift, MitoROS, Proteostasis, Telomere) into a single model.
+MCARA — an umbrella project for modeling multi-component aging oscillations. Combines 4 components (CEDAR, EpigeneticDrift, MitoROS, Telomere) into a single model.
 
 ## Structure
 
