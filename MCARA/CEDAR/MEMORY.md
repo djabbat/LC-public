@@ -6,35 +6,57 @@
 **Full analysis:** `~/Desktop/Services/docs/literature/Royle_2026_Secret_Mitotic_Life_of_Clathrin.md`
 **Ref file:** `refs/Royle_2026_Clathrin_Mitotic_Life.md`
 
+<!-- lang:ru -->
 **Мета-анализ:** Все 9 ключевых ссылок Royle lab верифицированы через 4 базы (OpenAlex + PubMed + Semantic Scholar + Europe PMC). Критических опровержений модели не обнаружено. Модель консенсусная.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **🔴🔴🔴 КЛЮЧЕВАЯ НАХОДКА ДЛЯ CEDAR:**
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Foraker et al., 2012, J Cell Biol (PMID 22891263):** Clathrin stabilises CENTROSOME через стабилизацию centrosomal ch-TOG. Clathrin depletion → centrosome amplification + multipolar spindles. Acute clathrin inactivation в S phase → fragmentation centrosome. Это ПРЯМАЯ экспериментальная связь клатрина с целостностью центросомы!
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Yabuno et al., 2019, Cell Cycle (PMID 31272276):** CHC фосфорилируется по T606 киназой GAK. CHC-pT606 локализуется в ядре и на ЦЕНТРОСОМЕ в интерфазе. Комплекс GAK→CHC-pT606→PLK1→Kiz-pT379.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489):**
+<!-- /lang:ru -->
 - CORE: TACC3 + CHC (clathrin heavy chain)
 - ANCILLARY: chTOG/CKAP5 (binds TACC3), GTSE1 (binds CHC)
+<!-- lang:ru -->
 - ❌ NOT in complex: PI3K-C2α (опровергнуто Ryan 2021)
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **4 механизма действия клатрина в митозе:**
+<!-- /lang:ru -->
 1. Inter-microtubule bridging (Booth 2011 EMBO J, Nixon 2015 eLife)
+<!-- lang:ru -->
 2. GTSE1 recruitment → MCAK inhibition на astral MTs (Rondelet 2020 JCB)
 3. Centrosome integrity через ch-TOG (Foraker 2012 JCB) 🔴
+<!-- /lang:ru -->
 4. CHC-pT606 → PLK1 → Kiz signaling (Yabuno 2019 Cell Cycle) 🔴
 
+<!-- lang:ru -->
 **Drug development против TACC3-CHC:**
+<!-- /lang:ru -->
 - SP TACC3 — hydrocarbon-stapled peptide, 400× affinity (Gunning 2026, Structure, PMID 42049022)
 - AK306 — small molecule CLTC binder, selective for cancer (Bond 2018, Mol Cancer Res, PMID 29769406)
 
+<!-- lang:ru -->
 **Тестируемое предсказание для CEDAR:** CHC-pT606 levels at centrosomes should decrease with cellular aging → centrosome instability → multipolar spindles → aneuploidy.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Слабые места:**
 1. In vivo значимость — большинство данных из cultured cells
 2. Прямая демонстрация возраст-зависимого нарушения комплекса отсутствует
 3. TACC3-ch-TOG частично независимы от клатрина (Gutiérrez-Caballero 2015)
+<!-- /lang:ru -->
 
 ---
 
@@ -45,80 +67,114 @@
 
 <!-- lang:ru -->
 ## 2026-08-02 (Цикл 4): 🔴 Критические находки 2026 года
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Источник:** Глубокая переработка статьи после сверхстрогого рецензирования.
+<!-- /lang:ru -->
 
 **MEDA (Krongauz et al., 2026)** — arXiv:2607.13608.
+<!-- lang:ru -->
 - ODE discovery для biological systems с LLM-powered agentic system!
 - Прямое применение к CEDAR: autonomous discovery of ODE models для aging dynamics.
 - Система: retrieves background knowledge → defines admissible variables → generates mechanistic constraints → proposes candidate ODEs → fits and evaluates.
 - Показала strong structural recovery в retrieval и extrapolation tasks.
 - Критически важно: knowledge-guided formalization и mechanistic constraints — load-bearing components. Без них numerical fitting preserves trajectory-compatible but biologically incorrect equations → прямая аналогия с CEDAR!
+<!-- /lang:ru -->
 
 **Baker et al. (2026) — Octopus** — arXiv:2607.16262.
+<!-- lang:ru -->
 - Multi-Scale Autonomous Discovery Engine: neuro-symbolic architecture с LLM swarms + mechanistic interpretability.
 - Ключевое: rigorous Benjamini-Hochberg FDR correction (q=0.0292)!
 - Показал autonomous discovery IGF2 как vulnerability к 5-FU resistance в colorectal cancer.
+<!-- /lang:ru -->
 - Validated in vivo (mouse cohort, Mann-Whitney p=0.0373).
+<!-- lang:ru -->
 - Шаблон для CEDAR: как делать autonomous discovery С statistical rigor.
+<!-- /lang:ru -->
 
 **FEV Framework (Pham & Hy, 2026)** — arXiv:2607.27556.
+<!-- lang:ru -->
 - Function–Evidence–Validation framework для evaluating agentic bioinformatics.
 - 109 systems surveyed, 128 publications. Основной вывод: planning и execution advanced быстрее чем replayability, provenance, validation.
 - Ключевая метрика для CEDAR: workflow correctness вместо final-answer correctness.
-
 <!-- /lang:ru -->
 
+
+<!-- lang:ru -->
 **Источник:** Циклы autofix статьи для журнала IF 18+. Найдены работы, прямо применимые к CEDAR:
+<!-- /lang:ru -->
 
 1. **LLM-SR (Shojaee et al., 2024)** — arXiv:2404.18400, ICLR 2025 Oral.
+<!-- lang:ru -->
    - Symbolic regression с LLM: обнаружение уравнений из данных.
    - Прямое применение к CEDAR: поиск математических законов старения (зависимость mortality rate от числа broken counters, формула вероятности отказа multi-counter системы).
    - Превосходит традиционные genetic programming methods. LLM предлагает equation skeletons → evolutionary search оптимизирует параметры.
    - Код: github.com/deep-symbolic-mathematics/LLM-SR
+<!-- /lang:ru -->
 
 2. **LaSR (Grayeli et al., 2024)** — arXiv:2409.09359, NeurIPS 2024.
    - Symbolic Regression with Learned Concept Library. LLM-guided + evolutionary algorithms.
+<!-- lang:ru -->
    - Авторы показали discovery новых scaling laws для LLMs — метод применим к discovery scaling laws в aging (Gompertz, Weibull, и более сложные).
    - Ключевая фича: zero-shot LLM queries для evolution of abstract concepts.
+<!-- /lang:ru -->
 
 3. **Multi-Agent Physical Laws Discovery (Hu et al., 2024)** — arXiv:2411.16416.
    - Multi-agent framework: literature → variable selection → hypothesis → symbolic regression → formula derivation → mechanistic explanation.
+<!-- lang:ru -->
    - Валидирован на materials science (GFA, hardness, Young's modulus). Архитектура прямо переносима на CEDAR: литература по aging → выбор biomarkers → symbolic regression → mechanistic model of counter failure.
    - Correlation coefficients до 0.94. Формулы generalizable на unseen data.
+<!-- /lang:ru -->
 
 4. **ICSR (Merler et al., 2024)** — arXiv:2404.19094, ACL 2024.
+<!-- lang:ru -->
    - In-Context Symbolic Regression: LLM итеративно предлагает functional forms → external optimizer fitting → feedback → refinement.
    - Даёт simpler equations с лучшей out-of-distribution generalization.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **План действий для CEDAR:**
 - Применить LLM-SR к synthetic данным из CEDAR simulator для discovery законов mortality.
 - Применить LaSR для поиска scaling laws в aging (cross-species comparison).
 - Использовать Hu et al. multi-agent framework как архитектурный шаблон для CEDAR agentic pipeline.
 - Все методы open-source, можно запускать локально.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ## 2026-08-02: 🔴 Системный ответ на возражение «должны быть механизмы репарации»
 <!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Trigger:** Julia Mahamid (EMBL) ответила на письмо о гипотезе CEDAR: «I also suspect there may be repair mechanisms, as such damage cannot propagates endlessly in an organisms lifetime.»
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Решение:** Проведён исчерпывающий анализ. Создана система защиты из 5 уровней:
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 1. **Ограниченная репарация существует** (аутофагия — Coelho 2026, UPS, шапероны) — но действует на PCM, не на microtubule triplets центриолярной стенки.
 2. **Structural constraint:** центриоль — закрытая цилиндрическая структура; повреждённый тубулин внутри triplets не может быть извлечён без разбора всей центриоли.
 3. **Элиминация + de novo синтез** — сброс в зародышевой линии между поколениями (Gönczy & Balestra 2023, Manandhar 1999).
 4. **Эволюционное объяснение:** selection shadow (Medawar 1952, Williams 1957) — давление отбора падает после репродуктивного возраста → полная репарация не отбиралась.
 5. **Количественная модель:** k_damage ≈ 0.01-0.05 D_critical/год → D_critical достигается за 60-100 лет — соответствует человеческой продолжительности жизни.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Обновлены файлы:**
 - ✅ `docs/REPAIR_OBJECTION_DEFENSE.md` — полный документ защиты (10 разделов, 6 предсказаний, количественная модель)
 - ✅ `THEORY.md` §4.1 — усилена аксиома ¬R с учётом limited repair (v6.0)
 - ✅ `EVIDENCE.md` §11 — новый раздел «Repair Mechanisms & Their Limitations»
 - ✅ `MEMORY.md` — данная запись
 - ✅ `PARAMETERS.md` — добавлены кинетические параметры k_damage, k_repair, k_elim
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Оценка защиты:** 9/10. Единственное слабое место — отсутствие прямых экспериментальных данных по distortion cartwheel (для этого и пишем Gönczy/Guichard).
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Письма:**
 - Julia Mahamid — ответ отправлен (Desktop: `2026-08-02_julia_mahamid_reply.txt`)
 - Pierre Gönczy — письмо готово (Desktop: `2026-08-02_pierre_gonczy.txt`)
@@ -129,40 +185,49 @@
 ## 2026-08-02: 🔴 Анализ Tollervey et al. (2025) + похожие статьи
 <!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Статья:** Tollervey F, Rios MU, Zagoriy E, Woodruff JB, Mahamid J. *Molecular architectures of centrosomes in C. elegans embryos visualized by cryo-electron tomography.* Dev Cell. 2025. PMID: **39721584**.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Действие:** Julia Mahamid поправила — правильная статья Tollervey et al., не Fung et al. Проведён глубокий анализ статьи + поиск похожих.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Ключевые находки Tollervey 2025:**
 1. Mother vs daughter centriole — already structurally distinct (в cryo-ET!)
+<!-- /lang:ru -->
 2. 13 protofilaments (centriolar) vs 11 (PCM) MT
+<!-- lang:ru -->
 3. Atypical γ-TuRC с 11-fold симметрией
 4. PCM = пористый, неупорядоченный network
 5. ⚠️ НЕТ сравнения young vs aged — это и есть наш эксперимент
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Родственные статьи (Guichard lab — ключевые):**
 - **Laporte et al. (2024) Cell** PMID: **38604175** — U-ExM карта сборки человеческой центриоли (24 белка, 6 модулей). 🔥 Guichard lab УЖЕ имеет метод.
 - **Bournonville et al. (2025) Nat Commun** PMID: **40707486** — A-C linker (CCDC77, WDR67, MIIP) — конкретная молекулярная мишень окисления.
 - **Brunet et al. (2025) EMBO J** PMID: **40021845** — Alms1 → Plk4 → Sas-6 — молекулярный путь cartwheel assembly.
 - **Mercey et al. (2025) J Cell Sci** PMID: **41147396** — обзор методов: cryo-ET, U-ExM, super-resolution.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Мета-вывод:** Поле методологически готово. Все методы (U-ExM) и молекулярные карты существуют. Guichard lab — идеальный адресат: у них всё готово для эксперимента, кроме гипотезы. Гипотеза — у нас.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Обновлены файлы:**
 - ✅ `docs/TOLLERVEY_2025_ANALYSIS.md` — полный анализ (7 разделов, мета-анализ, 4 новых предсказания)
 - ✅ `EVIDENCE.md` §12 — новый раздел
 - ✅ `MEMORY.md` — данная запись
 <!-- /lang:ru -->
 
-<!-- lang:ru -->
 ## 2026-07-31: Incubator — humidity control
 - **Solution:** Active humidity control ±2% RH with dehumidifier in the incubator.
 - **Updated:** CONCEPT.md (budget +$1,500).
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 ## 2026-07-29: 📚 Literature review — TIAM1/centrioles/autophagy (Coelho, Yu & Glover, Caltech)
-<!-- /lang:ru -->
 
 **Article:** Coelho PA, Yu C, Glover DM. "Functions of TIAM1 at the interface of centriole assembly and autolysosome cycling." bioRxiv 2026-07-03. DOI: `10.64898/2026.07.02.735969`
 
@@ -184,9 +249,7 @@
 **✅ 2026-07-29: Letter to David Glover sent** — ARGUS-OS1 + proposal Foresight. Waiting for a reply.
 ---
 
-<!-- lang:ru -->
 ## 2026-07-30: 🔴 Post-mortem — Medical Hypotheses desk reject (Centrioles as Structural Damage Reservoirs)
-<!-- /lang:ru -->
 
 Journal: Medical Hypotheses (Elsevier)
 **Journal:** Medical Hypotheses (Elsevier)
@@ -215,9 +278,7 @@ Journal: Medical Hypotheses (Elsevier)
 
 **Next journal:** TBD. Options: BioEssays, BioSystems, Journal of Theoretical Biology.
 
-<!-- lang:ru -->
 ## 2026-07-28: 🔴 Post-mortem — TREE desk reject (Centriole Invasion)
-<!-- /lang:ru -->
 
 Journal: Trends in Ecology & Evolution (Cell Press)
 Editor: Andrea E. A. Stephens
@@ -243,55 +304,36 @@ Editor: Andrea E. A. Stephens
 - Select a journal. Options: Evolution & Development, BioEssays, Journal of Molecular Evolution, BioSystems.
 - Send a new inquiry within 48 hours.
 ## 2026-07-26: 📚 Wenner (meiotic initiation) + Miller (apoptosis/oogenesis) 🔴
-<!-- /lang:ru -->
 
 ## 2026-07-26: 📚 Wenner (meiotic initiation) + Miller (apoptosis/oogenesis) 🔴
-<!-- lang:ru -->
 «Molecular genetics of meiotic initiation in mammals» — a review of the mitosis→meiosis transition.
-<!-- /lang:ru -->
 
 «Molecular genetics of meiotic initiation in mammals» — review of the mitosis→meiosis transition.
 Three direct hits on CEDAR:
-<!-- /lang:ru -->
 
 Three direct hits in CEDAR:
 1. **Centrioles are eliminated in mammalian oogenesis.** Where in the STRA8/MEIOSIN/MEIOC cascade? Not mentioned in the review — this is a gap in the literature that we can fill.
-<!-- /lang:ru -->
 
 1. **Centrioles are eliminated in mammalian oogenesis.** Where in the STRA8/MEIOSIN/MEIOC cascade? NOT mentioned in the review — this is a gap in the literature that we can fill.
 2. **MEIOC–YTHDC2–RBM46 (♂) vs MEIOC solo (♀).** The difference in mechanisms may explain why centrioles are retained in spermatogenesis but lost in oogenesis. YTHDC2 — m⁶A reader → centriolar RNAs may be m⁶A-modified (link to Zernicka-Goetz hypothesis).
-<!-- /lang:ru -->
-
-<!-- lang:ru -->
-3. **Key similar:** MEIOSIN (Ishiguro 2020, PMID 32032549), RBM46 (2022, PMID 36001654), STRA8 (2008, PMID 18799751).
-<!-- /lang:ru -->
 
 3. **Key similar:** MEIOSIN (Ishiguro 2020, PMID 32032549), RBM46 (2022, PMID 36001654), STRA8 (2008, PMID 18799751).
-<!-- lang:ru -->
+
+3. **Key similar:** MEIOSIN (Ishiguro 2020, PMID 32032549), RBM46 (2022, PMID 36001654), STRA8 (2008, PMID 18799751).
 «Regulated apoptosis is a conserved mechanism pausing female reproduction» — apoptosis as a conserved mechanism of oogenesis pause (Drosophila → Polistes).
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 **Connection with CEDAR:** oxidative stress → centriole damage → apoptosis in oogenesis? Evolutionarily conserved stress-pause-apoptosis connection.
-<!-- /lang:ru -->
 
 **Connection with CEDAR:** oxidative stress → centriole damage → apoptosis in oogenesis? Evolutionarily conserved stress-pause-apoptosis connection.
 📄 Full analysis: `docs/literature_analysis_26_jul.md` (copied from Entropy_in_Aging)
-<!-- /lang:ru -->
 
 ---
 
-<!-- lang:ru -->
 ## 2026-07-25: Chk1 — molecular mechanism M1 🔴
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 > **Finding:** Chk1 phosphorylates β-tubulin-T285 at the centrosome — a non-canonical role of DNA damage kinase as a regulator of spindle quality.
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 ### Details:
-<!-- /lang:ru -->
 - Boutakoglou/…/Zachos 2026, *Commun Biol* (Nature), PMID 41844775
 ### Details:
 - ATRIP→ATR→TopBP1→Chk1 — the entire cascade at the centrosome, not in the nucleus
@@ -307,7 +349,6 @@ Three direct hits in CEDAR:
 - ✅ CEDAR/EVIDENCE.md — tables Chk1→β-tubulin + Chk1→mitophagy
 - ✅ EIC Pathfinder Response — link PMID 41844775
 - ✅ Contacts Zachos lab: `docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
-<!-- /lang:ru -->
 
 ---
 

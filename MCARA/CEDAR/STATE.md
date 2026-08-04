@@ -12,6 +12,7 @@
 
 ## 🟢 2026-08-02 — Julia Mahamid response + Gönczy/Guichard letters SENT
 
+<!-- lang:ru -->
 - 📨 **Julia Mahamid** — ответил (поблагодарил, Tollervey — да, идея elimination/de novo, иду к Gönczy/Guichard)
 - 📨 **Pierre Gönczy** — письмо отправлено (гипотеза CEDAR + elimination + cryo-ET, Mahamid рекомендовала)
 - 📨 **Paul Guichard** — письмо отправлено (`paul.guichard@unige.ch`, expansion microscopy, Mahamid рекомендовала)
@@ -19,14 +20,16 @@
 - 🔬 **Анализ Guichard lab:** Laporte 2024 Cell (U-ExM карта, 24 белка), Bournonville 2025 Nat Commun (A-C linker), Brunet 2025 EMBO J (Alms1→cartwheel). Поле методологически готово.
 - 🛡️ **Defence document:** `docs/REPAIR_OBJECTION_DEFENSE.md` — 5-уровневая защита от возражения «должны быть механизмы репарации»
 - 📊 **Обновлены:** EVIDENCE.md (+§11, §12), THEORY.md (¬R v6.0), MEMORY.md (+2 записи), PARAMETERS.md (+13 кинетических параметров)
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Следующий шаг:** ждать ответа Gönczy/Guichard. Follow-up через 2 недели если нет ответа.
+<!-- /lang:ru -->
 
 ---
 
 ## 🟢 2026-07-26 — Autofix CEDAR: 98/100
 
-<!-- lang:ru -->
 - 🔴 **PARAMETERS.md** — fixed: was template text "data validation framework", replaced with real centriolar parameters (Cell‑DT, LLPS, evolution, grant)
 - 🔴 **MAP.md** — rewritten: old version contained non-existent folders (cedar_sim/, tests/, gui/), did not contain real ones (Aubrey-Platform/, CellLineageTree/, articles/).
 - 🟡 **DESIGN.md** — expanded from 353 to 1807 bytes (architecture, components, data pipeline, key decisions)
@@ -34,7 +37,6 @@
 - ✔ **VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md** — created: full verification of hypothesis "centriole/LLPS/land vs water" with PMID
 - ✔ **scripts/cedar_autofix.sh** — created: CEDAR-specific autofix script (adapted from DEEP_AUDIT_ALGORITHM.md)
 - 📊 **Final autofix score: 98/100.** Criterion 95+ passed.
-<!-- /lang:ru -->
 
 ## 📚 2026-07-16 — BioEssays desk reject + rewrite strategy
 

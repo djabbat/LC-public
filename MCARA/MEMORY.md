@@ -5,33 +5,47 @@
 > **Full analysis:** `~/Desktop/Services/docs/literature/Royle_2026_Secret_Mitotic_Life_of_Clathrin.md`
 > **Ref:** `refs/Royle_2026_Clathrin_Moonlighting.md`
 
+<!-- lang:ru -->
 **Мета-анализ (4 базы):** Все 9 ключевых ссылок Royle lab верифицированы. 24 дополнительных статьи найдены и проанализированы. Модель консенсусная, опровержений нет.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Клатрин — paradigmatic moonlighting protein для MCARA:**
 Один белок → 4+ независимых механизма в митозе:
+<!-- /lang:ru -->
 1. Inter-microtubule bridging (TACC3/chTOG/clathrin) — Booth 2011 EMBO J, Nixon 2015 eLife
+<!-- lang:ru -->
 2. GTSE1 recruitment → MCAK inhibition на astral MTs — Rondelet 2020 JCB
 3. Centrosome integrity через ch-TOG stabilization — Foraker 2012 JCB 🔴
+<!-- /lang:ru -->
 4. CHC-pT606 → GAK → PLK1 → Kiz signaling axis — Yabuno 2019 Cell Cycle 🔴
 
+<!-- lang:ru -->
 **Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489 — CRISPR + induced relocalization):**
+<!-- /lang:ru -->
 - CORE: TACC3 + CHC
 - ANCILLARY: chTOG (binds TACC3), GTSE1 (binds CHC → inhibits MCAK)
 - ❌ NOT: PI3K-C2α (disproven by Ryan 2021)
 
+<!-- lang:ru -->
 **Drug development (уже идёт!):**
+<!-- /lang:ru -->
 - SP TACC3 stapled peptide — 400× affinity over native, disrupts TACC3-CHC (Gunning 2026, Structure, PMID 42049022)
 - AK306 small molecule CLTC binder — selective cancer apoptosis in mice (Bond 2018, Mol Cancer Res, PMID 29769406)
 - TACC3 degraders via ubiquitin-proteasome (Ohoka 2014, Cell Death Dis)
 
+<!-- lang:ru -->
 **Другие moonlighting белки (параллели для MCARA):**
+<!-- /lang:ru -->
 - GRP75: mitochondrial chaperone → cell cycle + endocytosis control (Gao 2017, PMID 28938577)
 - Megalin: endocytic receptor → mTORC1 switches to cell cycle (Dahlke 2026, PMID 42174246)
 
+<!-- lang:ru -->
 **Открытые вопросы для MCARA:**
 1. Возраст-зависимое нарушение функции клатрина не показано (testable prediction)
 2. Можно ли SP TACC3/AK306 использовать для anti-aging interventions?
 3. Какой из 4 механизмов наиболее значим для ageing — centrosomal (Foraker 2012) или spindle (Booth 2011)?
+<!-- /lang:ru -->
 
 ---
 
@@ -101,7 +115,9 @@
 
 <!-- lang:ru -->
 ## 2026-08-02: 🔴 Статус подач — портал Springer
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Ze_CHSH → PEER REVIEW на QIP!** 
 **MCARA → апелляция отклонена.** Biogerontology → Scientific Reports.
 **Centrioles (npj Aging) →** трансфер → Scientific Reports.
@@ -109,37 +125,25 @@
 **4 новых статьи:** Three-Step Strategy (JTB), Activatus (LWT), Centriole Invasion (BioEssays), Ze+Centrioles (BioSystems). Inquiries: `INQUIRIES_2026-08-03.md`
 <!-- /lang:ru -->
 
-<!-- lang:ru -->
 ## 2026-07-25: Chk1 — two non-canonical roles in aging 🔴
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 > **Finding:** Chk1 (Checkpoint kinase 1) — a DNA damage kinase — has two non-canonical roles directly related to MCARA counters.
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 ### What was discovered:
 1. **Counter #1 (Centriolar):** Chk1-P→β-tubulin-T285 at the centrosome → spindle quality. Boutakoglou/…/Zachos 2026, *Commun Biol*, PMID 41844775.
 2. **Counter #3 (MitoROS):** Chk1→AHSA1-HSP90→mitophagy → cardioprotection. Jing P et al. 2026, *Redox Biol*, PMID 42229233.
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 ### What has been done:
 - ✅ EVIDENCE.md §15 — full analysis with history of Zachos lab (2007–2026)
 - ✅ CEDAR/EVIDENCE.md — Chk1→β-tubulin for M1 + Chk1→mitophagy
 - ✅ CEDAR/CONCEPT.md — M1 updated: molecular mechanism
-<!-- /lang:ru -->
 - ✅ MitoROS/EVIDENCE.md + CONCEPT.md — Chk1→mitophagy
-<!-- lang:ru -->
 - ✅ EIC Pathfinder Response — link PMID 41844775 in Mechanism A
 - ✅ Contacts: `CEDAR/docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
-<!-- /lang:ru -->
 
-<!-- lang:ru -->
 ### Strategy:
 - George Zachos (gzachos@uoc.gr) — potential partner CIRCBIO-07/EIC
 - Chk1 = master regulator of two MCARA counters → strong grant narrative
-<!-- /lang:ru -->
 
 ---
 
