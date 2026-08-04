@@ -1,37 +1,55 @@
 # LC · MEMORY (v7.6)  **Date:** 2026-08-02  ---
 
+<!-- lang:ru -->
 ## 2026-08-02: 🔴 Статус подач — проверка портала Springer
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Ze_CHSH → PEER REVIEW на QIP!** (обновлён 1 нед. назад)
 **MCARA → апелляция отклонена** Biogerontology. Трансфер → Scientific Reports.
 **Centrioles (npj Aging) →** трансфер → Scientific Reports.
 **Ze_Model → 9 недель With Editor** (Found. of Physics, 3fab9acb). Послан email.
 **Einstein & Bohr →** подан в Found. of Physics (37cc83c2), technical checks.
+<!-- /lang:ru -->
 **Entropy of Age →** With Editor (Discover Aging, 0c32d5ad).
+<!-- lang:ru -->
 **4 новых статьи:** Three-Step Strategy (JTB), Activatus (LWT), Centriole Invasion (BioEssays), Ze+Centrioles (BioSystems).
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 ## 2026-08-02: 🔴 Находки из autofix — ChemCrow, Coscientist, multi-agent frameworks
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Источник:** Циклы autofix статьи «Agentic AI for Scientific Discovery» (журнал IF 18+).
+<!-- /lang:ru -->
 
 **ChemCrow (Bran et al., 2024)** — Nature Machine Intelligence 6, 525-535.
+<!-- lang:ru -->
 - LLM + chemistry tools (молекулярный докинг, synthesis planning, safety).
 - Прямое применение к LC drug discovery pipeline: поиск senolytics через инструменты молекулярного докинга, превосходит GPT-4.
 - Архитектурный паттерн: внешние валидированные инструменты предотвращают hallucination.
+<!-- /lang:ru -->
 
 **Coscientist (Boiko et al., 2023)** — Nature 624, 570-578.
+<!-- lang:ru -->
 - Autonomous chemical experimentation с GPT-4.
 - Применение к LC: autonomous optimization биохимических assays (NAD+, ROS, mitochondrial function).
 - Интеграция с cloud labs (Emerald Cloud Lab) + liquid handlers (Opentrons).
+<!-- /lang:ru -->
 
 **Multi-Agent LLM Survey (Guo et al., 2024)** — arXiv:2402.01680.
+<!-- lang:ru -->
 - Comprehensive survey по LLM-based multi-agent systems.
 - Архитектурные паттерны: profiling, communication, capability growth.
 - Основа для проектирования multi-agent CEDAR/HAP/MCARA pipeline.
+<!-- /lang:ru -->
 
+<!-- lang:ru -->
 **Другие находки (см. CEDAR/MEMORY.md):**
 - LLM-SR, LaSR, ICSR — symbolic regression для aging biomarker discovery.
 - Hu et al. — multi-agent physical laws discovery (шаблон для CEDAR).
+<!-- /lang:ru -->
 
 ## 2026-07-26: 📚 Wenner (meiosis) + Miller (apoptosis/oogenesis) — recorded in CEDAR
 
