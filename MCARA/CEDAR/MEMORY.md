@@ -1,5 +1,43 @@
 # CEDAR — Memory
 
+## 2026-08-04: Royle (2026) — Clathrin Moonlighting in Mitosis [COMPREHENSIVE REVIEW]
+
+**Paper:** Royle S, Traffic, DOI: 10.1111/tra.70047 | PMID: 42498517 | OA: Yes
+**Full analysis:** `~/Desktop/Services/docs/literature/Royle_2026_Secret_Mitotic_Life_of_Clathrin.md`
+**Ref file:** `refs/Royle_2026_Clathrin_Mitotic_Life.md`
+
+**Мета-анализ:** Все 9 ключевых ссылок Royle lab верифицированы через 4 базы (OpenAlex + PubMed + Semantic Scholar + Europe PMC). Критических опровержений модели не обнаружено. Модель консенсусная.
+
+**🔴🔴🔴 КЛЮЧЕВАЯ НАХОДКА ДЛЯ CEDAR:**
+
+**Foraker et al., 2012, J Cell Biol (PMID 22891263):** Clathrin stabilises CENTROSOME через стабилизацию centrosomal ch-TOG. Clathrin depletion → centrosome amplification + multipolar spindles. Acute clathrin inactivation в S phase → fragmentation centrosome. Это ПРЯМАЯ экспериментальная связь клатрина с целостностью центросомы!
+
+**Yabuno et al., 2019, Cell Cycle (PMID 31272276):** CHC фосфорилируется по T606 киназой GAK. CHC-pT606 локализуется в ядре и на ЦЕНТРОСОМЕ в интерфазе. Комплекс GAK→CHC-pT606→PLK1→Kiz-pT379.
+
+**Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489):**
+- CORE: TACC3 + CHC (clathrin heavy chain)
+- ANCILLARY: chTOG/CKAP5 (binds TACC3), GTSE1 (binds CHC)
+- ❌ NOT in complex: PI3K-C2α (опровергнуто Ryan 2021)
+
+**4 механизма действия клатрина в митозе:**
+1. Inter-microtubule bridging (Booth 2011 EMBO J, Nixon 2015 eLife)
+2. GTSE1 recruitment → MCAK inhibition на astral MTs (Rondelet 2020 JCB)
+3. Centrosome integrity через ch-TOG (Foraker 2012 JCB) 🔴
+4. CHC-pT606 → PLK1 → Kiz signaling (Yabuno 2019 Cell Cycle) 🔴
+
+**Drug development против TACC3-CHC:**
+- SP TACC3 — hydrocarbon-stapled peptide, 400× affinity (Gunning 2026, Structure, PMID 42049022)
+- AK306 — small molecule CLTC binder, selective for cancer (Bond 2018, Mol Cancer Res, PMID 29769406)
+
+**Тестируемое предсказание для CEDAR:** CHC-pT606 levels at centrosomes should decrease with cellular aging → centrosome instability → multipolar spindles → aneuploidy.
+
+**Слабые места:**
+1. In vivo значимость — большинство данных из cultured cells
+2. Прямая демонстрация возраст-зависимого нарушения комплекса отсутствует
+3. TACC3-ch-TOG частично независимы от клатрина (Gutiérrez-Caballero 2015)
+
+---
+
 ## 2026-08-02: Why iPSC Fails — Clarification of Target Cell State
 
 > **Full document:** `../docs/WHY_IPSC_FAILS.md`

@@ -1,4 +1,40 @@
 
+## Royle (2026): Clathrin Moonlighting — Comprehensive Metareview (2026-08-04)
+
+> **Paper:** Royle S, Traffic, DOI: 10.1111/tra.70047 | PMID: 42498517
+> **Full analysis:** `~/Desktop/Services/docs/literature/Royle_2026_Secret_Mitotic_Life_of_Clathrin.md`
+> **Ref:** `refs/Royle_2026_Clathrin_Moonlighting.md`
+
+**Мета-анализ (4 базы):** Все 9 ключевых ссылок Royle lab верифицированы. 24 дополнительных статьи найдены и проанализированы. Модель консенсусная, опровержений нет.
+
+**Клатрин — paradigmatic moonlighting protein для MCARA:**
+Один белок → 4+ независимых механизма в митозе:
+1. Inter-microtubule bridging (TACC3/chTOG/clathrin) — Booth 2011 EMBO J, Nixon 2015 eLife
+2. GTSE1 recruitment → MCAK inhibition на astral MTs — Rondelet 2020 JCB
+3. Centrosome integrity через ch-TOG stabilization — Foraker 2012 JCB 🔴
+4. CHC-pT606 → GAK → PLK1 → Kiz signaling axis — Yabuno 2019 Cell Cycle 🔴
+
+**Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489 — CRISPR + induced relocalization):**
+- CORE: TACC3 + CHC
+- ANCILLARY: chTOG (binds TACC3), GTSE1 (binds CHC → inhibits MCAK)
+- ❌ NOT: PI3K-C2α (disproven by Ryan 2021)
+
+**Drug development (уже идёт!):**
+- SP TACC3 stapled peptide — 400× affinity over native, disrupts TACC3-CHC (Gunning 2026, Structure, PMID 42049022)
+- AK306 small molecule CLTC binder — selective cancer apoptosis in mice (Bond 2018, Mol Cancer Res, PMID 29769406)
+- TACC3 degraders via ubiquitin-proteasome (Ohoka 2014, Cell Death Dis)
+
+**Другие moonlighting белки (параллели для MCARA):**
+- GRP75: mitochondrial chaperone → cell cycle + endocytosis control (Gao 2017, PMID 28938577)
+- Megalin: endocytic receptor → mTORC1 switches to cell cycle (Dahlke 2026, PMID 42174246)
+
+**Открытые вопросы для MCARA:**
+1. Возраст-зависимое нарушение функции клатрина не показано (testable prediction)
+2. Можно ли SP TACC3/AK306 использовать для anti-aging interventions?
+3. Какой из 4 механизмов наиболее значим для ageing — centrosomal (Foraker 2012) или spindle (Booth 2011)?
+
+---
+
 ## Phylogenetic Analysis: Centriole Elimination Across Mammals (2026-08-03)
 
 > **Finding:** Systematic review of 15+ mammalian species reveals three distinct patterns of centriole elimination, refuting the critique that placental mammals universally lost this mechanism.
