@@ -371,15 +371,19 @@
 
 ## 10. CORRECTIONS — Deep Audit 2026-07-17
 
-### 10.1. Planarians: Centrosome Loss, NOT Centriole Loss
+### 10.1. Planarians: Loss of BOTH Centrosomes AND Centrioles (2026-08-06 CORRECTED)
+
+> 🔴 **CRITICAL CORRECTION (2026-08-06):** The 2026-07-17 audit INCORRECTLY stated that planarian neoblasts retain centrioles. Azimzadeh 2012 explicitly states the opposite.
 
 | Claim | PMID/DOI | Article | Verified | Strength |
 |-------|----------|---------|----------|---------|
-| Planарии потеряли **центросомы** (PCM/MTOC) эволюционно, но сохранили центриоли в митотических необластах. IF anti-SMED-CEP135 + TEM | 22223737 | Azimzadeh J et al. Centrosome loss in the evolution of planarians. *Science* 335:461-3 (2012) | ✅ 2026-07-17 | **Strong** |
-| Мультицилиогенез: cep152, plk4, sas6 для амплификации (не de novo) | 32776587 | Li Y et al. *Biol Cell* 112:398-408 (2020) | ✅ 2026-07-17 | Strong |
-| Центросомное наследование при оплодотворении | 21509822 | Schatten H, Sun QY. *Dev Dyn* 240:1971-82 (2011) | ✅ 2026-07-17 | Strong |
+| 🔴 Планарии потеряли **и центросомы (PCM), и центриоли.** Центриоли отсутствуют в необластах (IF + TEM) и эмбриональных клетках. Собираются ТОЛЬКО de novo при дифференцировке в мультицилированные клетки и при спермиогенезе. | 22223737 | Azimzadeh J et al. Centrosome loss in the evolution of planarians. *Science* 335:461-3 (2012). PMC3347778. | ✅ 2026-08-06 | **Strong** |
+| Мультицилиогенез: de novo сборка центриолей через Plk4/Sas6/Cep152. Клетки планарий «изначально без центриолей» | 32776587 | Li Y et al. *Biol Cell* 112:398-408 (2020) | ✅ 2026-07-17 | Strong |
+| 🔴 **NEW:** Эмбриональные клетки S. mediterranea HE имеют центриолей (IF, Fig. S4). «Planarians do not require centrioles at any stage of development.» | 22223737 | Azimzadeh 2012 (same as above, Fig. S4) | ✅ 2026-08-06 | Strong |
+| 🔴 **NEW:** Спермиогенез планарий: de novo сборка центриолей для жгутиков (предположительно). | 34542855 | Rouhana L et al. Analysis of morphogenesis and flagellar assembly during spermatogenesis. *Methods Mol Biol* 2364:199-216 (2022) | ✅ 2026-08-06 | Moderate ("likely involves") |
+| Macrostomum lignano (базальная планария): центриоли на полюсах митотических клеток эмбриона — ПОДТВЕРЖДАЕТ вторичную утрату. | 22223737 | Azimzadeh 2012 ref. 20 | ✅ 2026-08-06 | Strong |
 
-**Исправление:** «neoblasts have no centrioles» → «planarians lost centrosomes (PCM) but retain centrioles in mitotic neoblasts.»
+**Исправление:** «neoblasts have no centrioles» → «planarians lost BOTH centrosomes (PCM) AND centrioles from proliferating cells. Centrioles appear ONLY de novo during terminal differentiation into ciliated cells and during spermiogenesis. Embryonic cells also lack centrioles.»
 
 ### 10.2. C. elegans: Mechanism Unknown
 
