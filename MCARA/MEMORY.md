@@ -822,3 +822,15 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 - Write hypothesis paper connecting Kitaoka + Chen + CEDAR
 - Propose experiment: polyglutamylation → docking failure → trailing
 - Target journal: BioEssays or Medical Hypotheses (hypothesis format)
+
+### format-pdf.py — все исправления (2026-08-06)
+
+Скрипт `~/Desktop/Services/scripts/format-pdf.py` — багфикс-сессия. 7 исправлений:
+1. **LibreOffice outdir:** `/tmp/` → `os.path.dirname(tmp_docx)`
+2. **Abstract body deleted:** `to_delete` фильтр на «data availability» в тексте → `len(p.text) < 80 and low.startswith(w)`
+3. **heading_found:** `UnboundLocalError` → `heading_found = False`
+4. **Heading false match:** «Background — ...» → `len(p.text) < 100`
+5. **Self-cite duplicates:** DOI `\s*:\s*`, PMID+DOI ключи параллельно
+6. **Line spacing:** Title 1.2, H1 1.15
+7. **Alignment:** H1/H2 LEFT, metadata LEFT, body JUSTIFY
+Результат: 10 самоцитирований без дубликатов, Abstract на месте, References по алфавиту.
