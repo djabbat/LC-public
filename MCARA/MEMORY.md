@@ -1,4 +1,28 @@
 
+## 🔴 CRITICAL CORRECTION: Planarian Centriole Data (2026-08-06)
+
+> **Finding:** Deep PubMed search confirmed that Azimzadeh 2012 explicitly states planarian neoblasts and embryonic cells DO NOT have centrioles. The 2026-07-17 audit correction went in the wrong direction.
+> **Fixed files:** EVIDENCE.md §10.1, CONCEPT.md, MCARA_BiologyOpen_v2.md, MCARA_MedicalHypotheses_v1.md.
+> **Key facts:** (1) Planarian neoblasts have no centrioles (IF+TEM), (2) Embryonic cells have no centrioles (IF Fig. S4), (3) Centrioles appear ONLY de novo in ciliated cells + spermiogenesis, (4) Spermiogenesis de novo centriole assembly from Rouhana 2022 PMID 34542855, (5) This STRENGTHENS the CEDAR hypothesis: the most plastic cells in the animal kingdom are permanently centriole-free.
+> **Gap:** Fate of sperm centriole in zygote — never studied. Oogenesis centriole status — no data.
+> **Letters sent (2026-08-06):** Juliette Azimzadeh (CNRS/IJM Paris) ✅, Jochen Rink (MPI-NAT Göttingen) ✅, Phillip Newmark (Morgridge/UW–Madison) ✅. Asking: (1) centriole status in planarian oocytes, (2) fate of sperm centriole in zygote, (3) embryonic centriole data.
+> **File:** `~/Desktop/letters_planarian_centrioles_2026-08-06.md`
+
+### Gönczy responds (2026-08-05) — "Tantalizing" but no manpower
+
+> Pierre replied to the Aug 2 letter (SAS-6 cartwheel damage hypothesis). Key: he finds the idea "tantalizing" and confirms SAS-6 as good readout. Suggests stem cell→differentiation system OR "compare indeed the zygote to later stages of embryogenesis." Has equipment (expansion microscopy + EM) but **no manpower.**
+> This is a soft yes to the science, no to execution right now. Path forward: joint grant for postdoc. His mention of zygote vs embryo is directly aligned with the planarian question.
+> **Full exchange:** update `~/Desktop/LC/MCARA/letters/` with this thread.
+> 🔔 **НАПОМНИТЬ 2026-08-07:** Ответить Гёнчи. Письмо короткое, 3 абзаца:
+> 
+> 1. Поблагодарить за ответ. Подтвердить понимание — «manpower constraint понятен».
+> 2. Reframe: «Если бы финансирование на постдока появилось — имело бы смысл подаваться вместе? Я беру на себя написание гранта (EIC Pathfinder / MSCA).»
+> 3. Ни слова про отсутствие аффилиации. Не жаловаться. Это деловое предложение: ты даёшь руки за свой счёт.
+> 
+> **Тон:** не \«помогите мне\», а \«давайте решим вашу проблему с manpower вместе\».
+
+---
+
 ## Royle (2026): Clathrin Moonlighting — Comprehensive Metareview (2026-08-04)
 
 > **Paper:** Royle S, Traffic, DOI: 10.1111/tra.70047 | PMID: 42498517
@@ -159,6 +183,41 @@
 # MEMORY — MCARA
 
 > Decision History, journal path, key agreements.
+
+## Rejection #30 — 2026-08-05 — Biology Open (Four Counters)
+
+**Журнал:** Biology Open (Company of Biologists)
+**ID:** `bio.062853`
+**Дней до решения:** <1 (desk reject)
+**Тип решения:** Desk reject — scope mismatch
+
+### Причина (что сказал редактор)
+> «BiO does not consider hypothesis papers or narrative reviews. For more information on the article types considered by our journal please see https://journals.biologists.com/bio/pages/article-types»
+> — Alejandra Clark, Managing Editor
+
+### Что мы упустили
+- [x] Не отправили pre-submission inquiry. 🔴 Правило: pi блокирует сабмит, если inquiry не отправлен.
+- [x] BiO — журнал экспериментальный (Research Articles, Methods & Techniques, First Person). Hypothesis не принимают.
+- [x] Journal-fit.sh показал «Hypothesis-friendly» — ошибка в скрипте. BiO таковым не является.
+- [x] Статья подана как Research Article, но по жанру это hypothesis paper.
+
+### Что изменить перед следующей подачей
+- [ ] Abstract переписать — убрать hypothesis-маркеры, добавить quantitative framework angle
+- [ ] Сменить жанр: не hypothesis, а **quantitative model / theoretical framework**
+- [ ] Добавить Figure 1 (обязательна для hypothesis journal)
+- [ ] Отправить pre-submission inquiry ДО сабмита
+
+### Следующий журнал
+**Варианты:**
+1. **GeroScience** — принимает hypothesis/theory, IF высокий, но уже подана Centrioles: Hypothesis (JAAA-D-26-02347)
+2. **npj Aging** — был трансфер из npj Systems Biology, не использован
+3. **BioEssays** — Problems & Paradigms (hypothesis-friendly, но уже подана Centriole Invasion)
+4. **Medical Hypotheses** (Elsevier) — специально для hypothesis papers, без экспериментальных данных
+5. **Journal of Theoretical Biology** — quantitative models, hypothesis-friendly
+
+**Journal-fit check:** НУЖЕН для выбранного журнала.
+
+---
 
 ## 2026-07-31: Incubator — humidity control
 - **Solution:** In the incubator, in addition to O₂/CO₂/N₂, there must be active humidity control ±2% RH with a dehumidifier.

@@ -314,7 +314,7 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 ### Fertilization / gametogenesis and plasticity
 | 30596512 | Jeffries (2019) | Cilium resorption failure → senescence |
 | 33835529 | Lindhout (2021) | Centriole = maturity sensor (DOES NOT confirm plasticity — see audit 2026-07-19) |
-| 22223737 | Azimzadeh (2012) | Centrosomes (PCM) lost in planarians; centrioles preserved in neoblasts |
+| 22223737 | Azimzadeh (2012) | **Planarians lost centrosomes (PCM) AND centrioles** from proliferating cells + embryos. Centrioles appear ONLY de novo in ciliated cells + spermiogenesis. Fig. S4: embryonic cells centriole-free. |
 | 21509822 | Schatten & Sun (2011) | Centrosome inheritance during fertilization |
 | **42455439** | **Ishida & Shibuya (2026)** | **Spermatogenesis: centrioles preserved (vs elimination in oogenesis). 165 refs. RIKEN BDR** |
 

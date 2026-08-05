@@ -1,12 +1,14 @@
-# Four Counters, One Limit: Centriole, Telomere, Mitochondrion, and Epigenome in the Architecture of Replicative Aging
+# Four Counters, One Limit: Centriole, Telomere, Mitochondrion, and Epigenome in the Architecture of Replicative Aging: A Hypothesis
 
 **Running title:** Four Counters of Aging
 
-**Jaba Tqemaladze, MD**\
-Georgia Longevity Alliance, Tbilisi, Georgia\
+**Jaba Tqemaladze, MD**
+Georgia Longevity Alliance, Tbilisi, Georgia
 jaba@longevity.ge | ORCID: 0000-0001-8651-7243
 
-**Keywords:** centriole, cilium, polyglutamylation, telomere, epigenome, mitochondria, replicative senescence, MCARA, aging, reprogramming
+**Article type:** Hypothesis
+
+**Keywords:** centriole, cilium, polyglutamylation, telomere, epigenome, mitochondria, replicative senescence, MCARA, aging, reprogramming, asymmetric cell division
 
 ---
 
@@ -16,11 +18,7 @@ Cells have brakes. Remove two of them — short telomeres and mitochondrial dama
 
 Here I propose that the centriole is that counter. The centriole and the primary cilium are the same organelle in two states. In its cilium state the centriole is short, sits at the membrane, and receives developmental signals. In its centrosome state the cilium is gone, the centriole elongates, and the cell divides. With every division cycle the centriole spends time in each state, but the balance may tip. The cumulative ratio is written into the centriole as polyglutamylation, a post-translational mark that accumulates during the centrosome phase and not during the ciliary phase. When three counters are protected (hTERT for telomeres, low oxygen for mitochondria, partial reprogramming for the epigenome), the centriole continues to count. I define a testable experiment: centriole removal followed by Yamanaka factor reprogramming, with a predicted 1.5–10-fold increase in colony formation.
 
----
-
-## Summary statement
-
-The centriole acts as a fourth replicative counter, alongside telomeres, mitochondria, and the epigenome, explaining why fibroblasts still arrest when all three known counters are protected.
+**Figure 1** presents the four-counter architecture and the centriole–cilium cycle.
 
 ---
 
@@ -52,7 +50,7 @@ In young cells with a plastic phenotype, the cilium is long, the centriole is sh
 
 ---
 
-## Results
+## The Hypothesis
 
 ### Evidence from Five Phyla
 
@@ -96,11 +94,9 @@ These are the first molecular chains traced from specific centriole substructure
 
 ---
 
-## Discussion
-
 ### The Four-Counter Architecture (MCARA)
 
-Aging is not a single process. It is the output of four counters running in parallel, each measuring a different aspect of cellular history. When three are silenced, the fourth continues (Table 1).
+Aging is not a single process. It is the output of four counters running in parallel, each measuring a different aspect of cellular history. When three are silenced, the fourth continues (Table 1, Figure 1).
 
 **Table 1. The Four Counters**
 
@@ -127,9 +123,9 @@ No direct experimental data exist for the central prediction. The polyE-to-ratio
 
 ---
 
-## Materials and Methods
+## Falsifiable Predictions and Experimental Design
 
-### Experimental Design
+### Central Experiment
 
 The basic experiment uses p53-knockout BJ human fibroblasts with SB203580 to block p38 stress kinase. Wild-type cells arrest after centriole loss; the double blockade lets them continue dividing through the reprogramming window. Sendai virus delivers OCT4, SOX2, KLF4, and c-MYC. The primary endpoint is the number of TRA-1-60-positive colonies at day 21.
 
@@ -138,7 +134,7 @@ Fourteen groups are required to distinguish five competing hypotheses (Table 2).
 **Table 2. The Fourteen Groups**
 
 | Group | Treatment | What it tests |
-|:---:|-----------|---------------|
+|:-----:|-----------|---------------|
 | 1 | DMSO → OSKM | Baseline reprogramming |
 | 2 | Centrinone 500 nM × 3d → OSKM | Centriole loss effect |
 | 3 | Centrinone + p53-KO + p38i → OSKM | p53/p38 independence |
@@ -174,10 +170,6 @@ If Group 14 (centriole elimination + DUX4 + TPRX1) produces MERVL-positive, Zsca
 
 Every outcome is informative.
 
-### AI Declaration
-
-No AI tools were used in the research process or during manuscript preparation.
-
 ---
 
 ## Conclusion
@@ -197,6 +189,10 @@ This research received no specific grant from any funding agency in the public, 
 ## Data and resource availability
 
 All relevant data and details of resources can be found within the article and its supplementary information.
+
+## AI Declaration
+
+No AI tools were used in the research process or during manuscript preparation.
 
 ---
 
@@ -236,7 +232,7 @@ All relevant data and details of resources can be found within the article and i
 
 [17] Izumi H, Kaneko Y. Evidence of asymmetric cell division and centrosome inheritance in human neuroblastoma cells. *Proc Natl Acad Sci USA* 109:18048–18053 (2012). PMID: 23064640.
 
-[18] Zhao X et al. PCM1 conveys centrosome asymmetry to polarized endosome dynamics in regulating daughter cell fate. *Nat Commun* 16:10728 (2025). PMID: 41315244.
+[17] Zhao X et al. PCM1 conveys centrosome asymmetry to polarized endosome dynamics in regulating daughter cell fate. *Nat Commun* 16:10728 (2025). PMID: 41315244.
 
 [18] Tran V et al. Asymmetric division of Drosophila male germline stem cell shows asymmetric histone distribution. *Science* 338:679–682 (2012). PMID: 23118191.
 
