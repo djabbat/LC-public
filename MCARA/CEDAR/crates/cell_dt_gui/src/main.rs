@@ -417,6 +417,7 @@ mod tests {
             mcai: fi,
             telomere_length: tl,
             differentiated_telomere_length: 1.0,
+            rdna_copy_number: 1.0,
             epigenetic_age: ea,
             nk_efficiency: nk,
             fibrosis_level: fib,
