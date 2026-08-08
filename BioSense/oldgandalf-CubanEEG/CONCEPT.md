@@ -41,8 +41,10 @@ The Cuban normative EEG dataset (FirstWave) — a repository of EEG data from he
 
 ## What is this
 
-> TODO (deep review): one-paragraph description of the project.
+oldgandalf-CubanEEG is a data-analysis subproject of BioSense: it applies Ze-theory complexity metrics to the Cuban EEG dataset to test whether hierarchical dynamical measures discriminate age groups and neurological states better than standard spectral features.
 
 ## How it works
 
-> TODO (deep review): key components and workflow.
+- **Input:** Cuban EEG dataset (BioSense registry, 12+ datasets).
+- **Pipeline:** preprocessing (filtering, artifact removal) → feature extraction (Ze metrics: permutation entropy, hierarchy score, synchrony) → classification (age/state groups) with cross-validation.
+- **Output:** benchmark table Ze-metrics vs spectral baselines; report for BioSense registry.

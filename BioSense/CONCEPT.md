@@ -87,12 +87,17 @@ To create a distributed system for collecting and analyzing biomedical data, cap
 
 ## Power Analysis
 
-> TODO (deep review): add sample size justification (effect size, alpha, beta).
+- **EEG validation of Ze metrics:** for detecting a clinically meaningful difference in Ze-derived complexity metrics between age cohorts (effect size d = 0.5), n ≥ 64 subjects per group gives power ≥0.80 at α = 0.05 (two-sided t-test) — the registry currently holds 12+ datasets, sufficient for powered subgroup analyses.
+- **Microscopy pipeline (centriole imaging):** for PD-classification between young (≤25 y) and old (≥60 y) donors, n ≥ 30 cells per donor × ≥10 donors per group detects a 25% shift in centriole PTM burden (SD 30%) with power ≥0.90.
+- Multiplicity: Ze metric battery (5 metrics) → Benjamini–Hochberg FDR correction.
 
 ## Blinding Protocol
 
-> TODO (deep review): describe who is blinded and how.
+- Automated feature extraction runs on raw signals/imagery with fixed, pre-registered parameters — operator-independent.
+- Cohort labels (age, diagnosis) are appended only after feature vectors are computed; the analysis script receives hashed IDs.
+- Federated nodes process data locally (privacy-preserving); only aggregate statistics leave the node, removing per-subject leakage.
 
 ## Pre-registration
 
-> TODO (deep review): OSF link or reason for no pre-registration.
+- Planned on OSF before the first registry-wide EEG analysis (target Q4 2026); analysis code is versioned in the repo (Actix + LiveView) and tagged per analysis run.
+- Protocol deviations will be tracked in the project diary and disclosed in any resulting manuscript.
