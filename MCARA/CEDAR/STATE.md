@@ -174,3 +174,16 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 <!-- /lang:ru -->
 
 **Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim; опубликовать код (GitHub + Zenodo).
+
+---
+
+## 🟢 2026-08-08 — Zenodo DOI получен для CEDAR v4.7
+
+<!-- lang:ru -->
+- 📦 **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388) — релиз v0.4.8-rdna-clock, djabbat/LC-public
+- 🏷️ Бейдж DOI добавлен в README репозитория (коммит 99c8263)
+- 🔁 Zenodo-интеграция GitHub активна — следующие релизы получают DOI автоматически
+- 📌 Цитата кода: Tqemaladze J. (2026). CEDAR v4.7. Zenodo. https://doi.org/10.5281/zenodo.21852388
+<!-- /lang:ru -->
+
+**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim (в TODO симулятора); перегенерировать PDF CDATA-v2 из исправленного md (OJS article 188).
