@@ -57,10 +57,10 @@ No reviewer comments. Standard wording — the editor assessed it himself, did n
 **Foundations of Physics** or **Int. J. Theor. Phys.** — theoretical journals.
 **Why:** Ze_Model is already at Found. Physics (5 weeks). If accepted — Ze_Z₂ will go there as a companion paper.
 
-### 2026-08-08 — Zenodo DOI для ze-theory и Hyperbola-public
-- **ze-theory: DOI 10.5281/zenodo.21852561** (релиз v1.0.0) → https://doi.org/10.5281/zenodo.21852561
-- **Hyperbola-public: DOI 10.5281/zenodo.21852559** (релиз v1.0.0) → https://doi.org/10.5281/zenodo.21852559
-- Zenodo подхватил метаданные ze-theory из CITATION.cff (название, авторы, ORCID, аннотация, Apache-2.0)
-- Бейджи DOI добавлены в README обоих репо. Webhook'и активны — следующие релизы получают DOI автоматически.
-- Полезно: DOI ze-theory можно цитировать в Ze-статьях (Foundations of Physics, Annalen der Physik) как «code availability».
-- Связанная статья: «Z₂ Gauge Theory as a Predictive Agent...» Longevity Horizon 2026, DOI 10.65649/kxibzi6e.
+### 2026-08-08 — Zenodo DOI for ze-theory and Hyperbola-public
+- **ze-theory: DOI 10.5281/zenodo.21852561** (release v1.0.0) → https://doi.org/10.5281/zenodo.21852561
+- **Hyperbola-public: DOI 10.5281/zenodo.21852559** (release v1.0.0) → https://doi.org/10.5281/zenodo.21852559
+- Zenodo picked up ze-theory metadata from CITATION.cff (title, authors, ORCID, abstract, Apache-2.0)
+- DOI badges added to README of both repos. Webhooks active — future releases get DOI automatically.
+- Note: ze-theory DOI can be cited in Ze articles (Foundations of Physics, Annalen der Physik) as «code availability».
+- Related article: «Z₂ Gauge Theory as a Predictive Agent...» Longevity Horizon 2026, DOI 10.65649/kxibzi6e.
