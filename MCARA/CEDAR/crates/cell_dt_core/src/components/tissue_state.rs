@@ -18,6 +18,13 @@ pub struct TissueState {
     /// HSC niche in vivo: ~1–3%. Set to 2.0 to simulate physiological hypoxia.
     /// Used by MitochondrialSystem to compute mito_shield_for_o2() (CEDAR v3.4).
     pub current_o2_percent: f64,
+    /// 45S rDNA copy number (normalised: 1.0 = young adult, ~300–400 copies in human).
+    /// TRCS (Huang 2026): rDNA arrays are a second nuclear countdown substance —
+    /// unlike telomeres they ARE lost in dividing stem cells (telomerase does not
+    /// restore rDNA). Falling below R_crit (default 0.5) elevates p53 → senescence.
+    /// Senescent cells show significantly decreased 45S rDNA copy number;
+    /// hESCs/iPSCs — significantly increased (rejuvenation = rDNA lengthening).
+    pub rdna_copy_number: f64,
 }
 
 impl Default for TissueState {
@@ -32,6 +39,7 @@ impl Default for TissueState {
             telomere_length: 1.0,
             differentiated_telomere_length: 1.0,
             current_o2_percent: 21.0,
+            rdna_copy_number: 1.0,
         }
     }
 }
@@ -255,6 +263,32 @@ mod tests {
     }
 
     // ── Clone / Debug ─────────────────────────────────────────────────────────
+
+    #[test]
+    fn test_default_rdna_full() {
+        let s = TissueState::default();
+        assert!((s.rdna_copy_number - 1.0).abs() < 1e-9,
+            "Default rDNA copy number must be 1.0 (young adult)");
+    }
+
+    #[test]
+    fn test_new_rdna_full() {
+        let s = TissueState::new(70.0);
+        assert!((s.rdna_copy_number - 1.0).abs() < 1e-9);
+    }
+
+    #[test]
+    fn test_rdna_non_negative_default() {
+        let s = TissueState::default();
+        assert!(s.rdna_copy_number >= 0.0);
+    }
+
+    #[test]
+    fn test_rdna_can_be_set_directly() {
+        let mut s = TissueState::default();
+        s.rdna_copy_number = 0.4; // ниже TRCS-порога 0.5
+        assert!((s.rdna_copy_number - 0.4).abs() < 1e-9);
+    }
 
     #[test]
     fn test_clone_is_independent() {

@@ -50,6 +50,27 @@ pub const DIFF_TELOMERE_LOSS_PER_DIVISION: f64 = 0.012;
 /// Minimum differentiated-cell telomere (Hayflick limit, normalised).
 pub const DIFF_TELOMERE_MIN: f64 = 0.12;
 
+// ── rDNA clock (TRCS, Huang 2026; v4.7) ───────────────────────────────────────
+
+/// 45S rDNA copy loss per stem-cell division (normalised units/division).
+/// Human young-adult ~300–400 copies (≈ 1.0 normalised). TRCS: rDNA arrays ARE
+/// lost in dividing stem cells (unlike telomeres, which are maintained by
+/// constitutive telomerase). HSC ~12 divisions/yr → reaching the 0.5 threshold
+/// from 1.0 over ~70 yr ≈ 0.5/(12×70) ≈ 0.0006/division (Huang 2026, TRCS).
+pub const RDNA_LOSS_PER_DIVISION: f64 = 0.0006;
+
+/// rDNA senescence threshold (normalised copy number). Falling below triggers
+/// p53-driven senescence (TRCS: knockdown of 45S rDNA → p53/p21/p16/SA-β-GAL up).
+pub const RDNA_CRIT: f64 = 0.5;
+
+/// rDNA floor (normalised). TRCS: cells senesce before complete rDNA loss.
+pub const RDNA_MIN: f64 = 0.2;
+
+/// rDNA restoration rate per year (intervention, TRCS strategy: lengthen the
+/// telomere and rDNA arrays of adult stem cells → rejuvenation).
+/// Default 0.02 → +2%/yr of missing copies restored (modest, conservative).
+pub const RDNA_RESTORATION_RATE: f64 = 0.02;
+
 // ── Presets ───────────────────────────────────────────────────────────────────
 
 /// Biological scenario presets that modify FixedParameters at engine creation.
@@ -147,6 +168,10 @@ pub struct InterventionSet {
     pub stem_cell_therapy: bool,
     /// Epigenetic reprogramming (OSK): reset epigenetic overshoot by 30%/yr
     pub epigenetic_reprogramming: bool,
+    /// rDNA restoration (TRCS strategy, Huang 2026): lengthen 45S rDNA arrays of
+    /// adult stem cells — the proposed route to true rejuvenation (analogous to
+    /// hTERT for telomeres). Restores +2%/yr of missing rDNA copies.
+    pub rdna_restoration: bool,
     /// Effect multiplier: 0.0 = all interventions off, 1.0 = full effect
     pub strength: f64,
 }
@@ -163,6 +188,7 @@ impl Default for InterventionSet {
             nk_boost:                 false,
             stem_cell_therapy:        false,
             epigenetic_reprogramming: false,
+            rdna_restoration:         false,
             strength: 1.0,
         }
     }
@@ -173,6 +199,7 @@ impl InterventionSet {
         self.caloric_restriction || self.senolytics || self.antioxidants
         || self.mtor_inhibition || self.telomerase || self.htert
         || self.nk_boost || self.stem_cell_therapy || self.epigenetic_reprogramming
+        || self.rdna_restoration
     }
 }
 
@@ -225,6 +252,9 @@ pub struct AgeSnapshot {
     pub telomere_length: f64,
     /// Differentiated progeny telomere (shortens ~40 bp/yr, floor 0.12).
     pub differentiated_telomere_length: f64,
+    /// 45S rDNA copy number (normalised: 1.0 = young, 0.5 = TRCS senescence threshold).
+    /// TRCS second countdown substance (Huang 2026).
+    pub rdna_copy_number: f64,
     pub epigenetic_age: f64,
     pub nk_efficiency: f64,
     pub fibrosis_level: f64,
@@ -304,6 +334,7 @@ impl AgingEngine {
 
         // Dual-clock senescence check: if D(t) >= D_crit, division stops entirely (→ 0).
         // SenescenceTrigger::CentriolarDamage is the primary CEDAR mechanism in stem cells.
+        // v4.7: rDNA clock added (TRCS) — R(t) <= R_crit also triggers senescence.
         const D_CRIT_NORM: f64 = 1.0;  // damage is normalised to [0, 1]; D_crit = 1.0
         const TL_CRIT: f64 = 0.12;     // differentiated telomere Hayflick floor
         let senescence = SenescenceTrigger::evaluate(
@@ -311,6 +342,8 @@ impl AgingEngine {
             D_CRIT_NORM,
             self.tissue.differentiated_telomere_length,
             TL_CRIT,
+            self.tissue.rdna_copy_number,
+            RDNA_CRIT,
         );
         let senescence_block = if senescence.is_senescent() { 0.0 } else { 1.0 };
 
@@ -383,6 +416,19 @@ impl AgingEngine {
         self.tissue.differentiated_telomere_length =
             (self.tissue.differentiated_telomere_length - diff_telo_loss)
             .max(DIFF_TELOMERE_MIN);
+
+        // M1c: 45S rDNA copy number — SECOND nuclear countdown substance (TRCS, Huang 2026).
+        // Unlike telomeres, rDNA arrays ARE lost in dividing stem cells (constitutive
+        // telomerase does not restore rDNA). Loss scales with stem-cell division rate.
+        // rdna_restoration intervention (TRCS rejuvenation strategy): restores +2%/yr
+        // of missing copies. rDNA loss → p53 upregulation → senescence (RdnDnaShortening).
+        let rdna_loss = division_rate * RDNA_LOSS_PER_DIVISION * dt;
+        let mut rdna_new = self.tissue.rdna_copy_number - rdna_loss;
+        if ivs.rdna_restoration {
+            let deficit = (1.0 - rdna_new).max(0.0);
+            rdna_new += deficit * RDNA_RESTORATION_RATE * ivs.strength * dt;
+        }
+        self.tissue.rdna_copy_number = rdna_new.clamp(RDNA_MIN, 1.0);
 
         // M2: Epigenetic clock with age-dependent acceleration (Horvath 2013, PMID: 24138928).
         // Multiplier 0.3 + 0.02×age gives: ×0.7 at 20yr, ×1.3 at 50yr, ×1.9 at 80yr.
@@ -485,6 +531,7 @@ impl AgingEngine {
             mcai:                           self.tissue.mcai,
             telomere_length:                self.tissue.telomere_length,
             differentiated_telomere_length: self.tissue.differentiated_telomere_length,
+            rdna_copy_number:               self.tissue.rdna_copy_number,
             epigenetic_age:                 self.tissue.epigenetic_age,
             nk_efficiency:                  self.inflamm.nk_efficiency,
             fibrosis_level:                 self.inflamm.fibrosis_level,
@@ -624,6 +671,75 @@ mod tests {
         assert!(e.tissue.differentiated_telomere_length < 1.0,
             "Differentiated telomere must shorten after 5 steps: {:.4}",
             e.tissue.differentiated_telomere_length);
+    }
+
+    // ── rDNA clock (TRCS, Huang 2026) ────────────────────────────────────────
+
+    #[test]
+    fn test_rdna_decreases_with_age() {
+        // rDNA arrays ARE lost in dividing stem cells (unlike telomeres).
+        let mut e = engine();
+        let initial = e.tissue.rdna_copy_number;
+        for age in 1..=50usize { e.step(age as f64); }
+        assert!(e.tissue.rdna_copy_number < initial,
+            "rDNA must decrease with age: start={:.4} now={:.4}",
+            initial, e.tissue.rdna_copy_number);
+    }
+
+    #[test]
+    fn test_rdna_floor_respected() {
+        let mut e = engine();
+        for age in 1..=300usize { e.step(age as f64); }
+        assert!(e.tissue.rdna_copy_number >= RDNA_MIN - 1e-9,
+            "rDNA must not go below floor {}: {:.4}", RDNA_MIN, e.tissue.rdna_copy_number);
+    }
+
+    #[test]
+    fn test_rdna_restoration_slows_loss() {
+        let mut base = engine();
+        let mut rst_e = AgingEngine::new(SimulationConfig {
+            interventions: InterventionSet { rdna_restoration: true, ..Default::default() },
+            ..Default::default()
+        }).unwrap();
+        for age in 1..=100usize {
+            base.step(age as f64);
+            rst_e.step(age as f64);
+        }
+        assert!(rst_e.tissue.rdna_copy_number >= base.tissue.rdna_copy_number - 1e-9,
+            "rDNA restoration must slow copy loss: base={:.4} rst={:.4}",
+            base.tissue.rdna_copy_number, rst_e.tissue.rdna_copy_number);
+    }
+
+    #[test]
+    fn test_rdna_triggers_senescence_after_long_run() {
+        // TRCS: падение 45S rDNA ниже R_CRIT вызывает сенесценцию.
+        // Ускоряем убыль напрямую, чтобы проверить триггер в интеграции.
+        let mut e = engine();
+        e.tissue.rdna_copy_number = RDNA_CRIT; // на пороге
+        e.step(30.0);
+        // После шага rDNA <= порога → сенесценция → деления блокированы → rDNA не падает дальше
+        assert!(e.tissue.rdna_copy_number <= RDNA_CRIT + 1e-9);
+    }
+
+    #[test]
+    fn test_rdna_snapshot_field_present() {
+        let mut e = engine();
+        let history = e.run(10);
+        for snap in history {
+            assert!(snap.rdna_copy_number >= 0.0, "rDNA snapshot must be >= 0");
+        }
+    }
+
+    #[test]
+    fn test_rdna_restoration_bounded() {
+        // С восстановлением rDNA не должен превышать 1.0
+        let mut e = AgingEngine::new(SimulationConfig {
+            interventions: InterventionSet { rdna_restoration: true, ..Default::default() },
+            ..Default::default()
+        }).unwrap();
+        for age in 1..=100usize { e.step(age as f64); }
+        assert!(e.tissue.rdna_copy_number <= 1.0 + 1e-9,
+            "rDNA must not exceed 1.0: {:.4}", e.tissue.rdna_copy_number);
     }
 
     #[test]
@@ -863,6 +979,7 @@ mod tests {
             assert!(snap.mcai                           >= 0.0);
             assert!(snap.telomere_length                >= 0.0);
             assert!(snap.differentiated_telomere_length >= 0.0);
+            assert!(snap.rdna_copy_number >= 0.0);
             assert!(snap.epigenetic_age                 >= 0.0);
             assert!(snap.nk_efficiency                  >= 0.0);
             assert!(snap.fibrosis_level                 >= 0.0);
