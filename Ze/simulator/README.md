@@ -14,3 +14,11 @@ cargo run --release
 
 ## Parent project
 **LC/Ze** — theory, axiomatics, and mathematical apparatus.
+
+## Overview
+
+> TODO (deep review): one-sentence project summary.
+
+## Links
+
+- [CONCEPT.md](CONCEPT.md) — concept\n- [MAP.md](MAP.md) — structure\n- [TODO.md](TODO.md) — tasks

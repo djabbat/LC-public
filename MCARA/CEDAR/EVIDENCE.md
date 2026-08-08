@@ -689,7 +689,67 @@ The species does not age. Individuals do.
 
 ---
 
-## 12. Tollervey et al. (2025) — Cryo-ET Centrosome Atlas & Related Literature (2026-08-02)
+## 12. Planarian Centriole Evidence — Gene Loss vs Organelle Loss (2026-08-06)
+
+> **Trigger:** Jochen Rink (MPI-NAT) response to CEDAR inquiry + pointer to Martín-Durán et al. (2017)
+> **Key question:** Does the discovery of hidden orthologs of centrosome genes refute Azimzadeh's finding that planarian neoblasts lack centrioles?
+
+### 12.0. The Original Evidence — Azimzadeh et al. (2012)
+
+**Azimzadeh J, Wong ML, Downhour DM, Sánchez Alvarado A, Marshall WF** — *Centrosome loss in the evolution of planarians.* Science. 2012;335(6067):461-463. PMID: **22223737**.
+
+Two distinct claims made in this paper:
+
+| Claim | Type | Method | Status after Martín-Durán 2017 |
+|-------|------|--------|------|
+| **Claim A:** Centrosome-related genes are absent in planarian genomes | Genomic | BLAST against human centrosome gene set | ⚠️ **Weakened** — hidden orthologs exist |
+| **Claim B:** Neoblasts and dividing embryonic cells lack centrioles | Structural | TEM, immunofluorescence (γ-tubulin, centrin) | ✅ **Stands** — no genomic finding refutes TEM |
+
+### 12.1. The Challenge — Martín-Durán et al. (2017)
+
+**Martín-Durán JM, Ryan JF, Vellutini BC, Pang K, Hejnol A** — *Increased taxon sampling reveals thousands of hidden orthologs in flatworms.* Genome Res. 2017;27(7):1263-1272. PMID: **28400424**. PMCID: PMC5495077.
+
+**Method:** Leapfrog pipeline — transitive homology BLAST using intermediate «bridge» species to detect orthologs invisible to direct BLAST due to rapid sequence evolution.
+
+**Key findings relevant to CEDAR:**
+
+| Finding | Detail |
+|---------|--------|
+| 3427 hidden orthologs recovered | From 35 flatworm transcriptomes |
+| Centrosome-related genes found | Including **SDCCAG8** in *S. mediterranea* (Fig. 2C) |
+| Standard tools miss them | OrthoFinder recovered only 75-83%; HaMStR recovered only 2-4 of 75 |
+| **Authors' caveat** | «…which suggests that they might not be coexpressed on those planarian cells that assemble centrosomes and thus might have evolved alternative functions.» |
+
+### 12.2. Resolution — Two Separate Questions
+
+| Question | Answer | Evidence |
+|----------|--------|----------|
+| **Are centrosome genes present in the planarian genome?** | Yes, as hidden orthologs | Martín-Durán 2017 — Leapfrog pipeline |
+| **Do planarian neoblasts have centrioles?** | No | Azimzadeh 2012 — TEM (structural, not genomic) |
+
+**Principle:** Gene presence ≠ organelle presence. Hidden orthologs may have been co-opted for non-centrosomal functions over ~500 Myr of planarian evolution. The genomic argument (Claim A) is weakened; the structural argument (Claim B) is unchanged.
+
+### 12.3. What This Means for CEDAR
+
+| Aspect | Impact |
+|--------|--------|
+| **Loss of centrosome genes as evidence** | Can no longer be cited as support without qualification. Must cite Martín-Durán 2017 alongside Azimzadeh 2012. |
+| **TEM evidence of acentriolar neoblasts** | Remains the strongest direct evidence. Unaffected by hidden ortholog discovery. |
+| **Hidden orthologs as alternative-function genes** | Consistent with CEDAR: if centrioles were lost evolutionarily, centrosome genes would either degrade or adapt to new roles. Hidden orthologs with alternative functions support rather than refute this. |
+| **Planarian embryogenesis** | Rink confirms: nobody has looked at centrioles in zygotes/cleavage-stage embryos. Gap remains open. |
+
+### 12.4. Jochen Rink — Personal Communication (2026-08-05)
+
+**Three questions answered:**
+1. **Centriole from sperm in zygote?** — No published data. Fertilisation inside parent; specific efforts needed.
+2. **Sex/asex centriole gene expression?** — Fissiparous reproduction bypasses embryos entirely; no single-cell bottleneck.
+3. **TEM of zygotes/early embryos?** — No. Zygotes are «needles in the haystack» among yolk cells. Serial sectioning required.
+
+**Rink also flagged:** Martín-Durán et al. (2017) questions the centrosome component loss reported in Azimzadeh. See above analysis.
+
+---
+
+## 13. Tollervey et al. (2025) — Cryo-ET Centrosome Atlas & Related Literature (2026-08-02)
 
 > **Full analysis:** `docs/TOLLERVEY_2025_ANALYSIS.md`
 > **Trigger:** Julia Mahamid correction — правильная статья Tollervey et al. Dev Cell 2025, не Fung et al.

@@ -84,3 +84,15 @@ To create a distributed system for collecting and analyzing biomedical data, cap
 ## References
 
 *See project MEMORY.md for reference history.*
+
+## Power Analysis
+
+> TODO (deep review): add sample size justification (effect size, alpha, beta).
+
+## Blinding Protocol
+
+> TODO (deep review): describe who is blinded and how.
+
+## Pre-registration
+
+> TODO (deep review): OSF link or reason for no pre-registration.

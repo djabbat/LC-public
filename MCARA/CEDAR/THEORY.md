@@ -233,6 +233,7 @@ Centriolar damage accelerates epigenetic drift via coupling constant k_ep.
 5. **Strawbridge et al. (2026) challenge.** ES cells exit pluripotency without asymmetric division. CEDAR limits its scope to adult stem cells — but the boundary between "adult" and "embryonic" stem cell programs is blurry.
 
 6. **Centriole elimination in some species.** Planarians, Naegleria, and early mouse embryos eliminate centrioles. How do these organisms age? Tqemaladze J (2025) preprint addresses this.
+   - **Gene loss vs organelle loss (2026-08-06):** Martín-Durán et al. (2017, PMID 28400424) recovered centrosome-related genes as hidden orthologs in *S. mediterranea*, weakening Azimzadeh's genomic claim. However, this does NOT refute the TEM evidence that neoblasts lack centrioles. Presence of a gene does not imply presence of the organelle — hidden orthologs may have alternative functions. CEDAR must distinguish: (a) genomic argument (centrosome genes «lost») — weakened; (b) structural argument (centrioles absent by TEM) — stands. Both should be cited together, with qualification.
 
 7. **Reversibility question.** If centriole damage is truly non-repairable (¬R), then cellular reprogramming (iPSC) should NOT reset centriolar damage. This is testable.
 

@@ -11,15 +11,14 @@
 ### Gönczy responds (2026-08-05) — "Tantalizing" but no manpower
 
 > Pierre replied to the Aug 2 letter (SAS-6 cartwheel damage hypothesis). Key: he finds the idea "tantalizing" and confirms SAS-6 as good readout. Suggests stem cell→differentiation system OR "compare indeed the zygote to later stages of embryogenesis." Has equipment (expansion microscopy + EM) but **no manpower.**
-> This is a soft yes to the science, no to execution right now. Path forward: joint grant for postdoc. His mention of zygote vs embryo is directly aligned with the planarian question.
-> **Full exchange:** update `~/Desktop/LC/MCARA/letters/` with this thread.
-> 🔔 **НАПОМНИТЬ 2026-08-07:** Ответить Гёнчи. Письмо короткое, 3 абзаца:
-> 
-> 1. Поблагодарить за ответ. Подтвердить понимание — «manpower constraint понятен».
-> 2. Reframe: «Если бы финансирование на постдока появилось — имело бы смысл подаваться вместе? Я беру на себя написание гранта (EIC Pathfinder / MSCA).»
-> 3. Ни слова про отсутствие аффилиации. Не жаловаться. Это деловое предложение: ты даёшь руки за свой счёт.
-> 
-> **Тон:** не \«помогите мне\», а \«давайте решим вашу проблему с manpower вместе\».
+
+### 🔴 Pierre declined consortium participation (2026-08-07)
+
+> Jaba invited Pierre to join as consortium partner. Pierre declined. Revised approach: short reply — thank him, ask for recommendation of a younger PI with U-ExM pipeline. Mention Cologne trip (late Aug, consortium meeting with de Grey + David Meyer).
+> **Reply sent:** ✅ `~/Desktop/LC/MCARA/letters/sent/2026-08-07_Pierre_Gonczy_reply.txt` — Aug 7, 21:50 Tbilisi.
+> **Auto-reply received:** Pierre away until Aug 13. Follow up Aug 14.
+> **Next:** Wait for Pierre's recommendation. Parallel: Guichard letter.
+> **File:** `~/Desktop/LC/MCARA/letters/sent/2026-08-07_Pierre_Gonczy_reply.txt`
 
 ---
 
@@ -834,3 +833,13 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 6. **Line spacing:** Title 1.2, H1 1.15
 7. **Alignment:** H1/H2 LEFT, metadata LEFT, body JUSTIFY
 Результат: 10 самоцитирований без дубликатов, Abstract на месте, References по алфавиту.
+
+### 2026-08-08 — Анализ CDATA-v2 vs Huang TRCS (проверка ссылок)
+- **Анализ:** `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
+- **Статья 1:** Tqemaladze «A Stochastic Model of Centriole-Driven Stem Cell Exhaustion» (CDATA-v2), Longevity Horizon 2(5), DOI 10.65649/wjtcf387
+- **Статья 2:** Huang «Programmed Aging Theory Defeats Damage Accumulation», Ageing Longev Res 2(1), DOI 10.53941/alr.2026.100002
+- **🔴 Критично для CDATA-v2:** ссылки [12] (Cell Biol Int 2005), [13] («CDATA» Mol Biol Rep 2023), [14] (Protoplasma 2012) — НЕ существуют с указанными названиями; у [9],[10],[11] неверные названия (PMID верны); сдвиг нумерации в разделе 1.1 (Liu→[2] вместо [6], Tritarelli→[3] вместо [27], Ohshima→[4] вместо [8]). Исправить до пересылки рецензентам.
+- **Реальные аналоги:** [12]→PMID 15886028 «Potential role of centrioles...» Cell Biol Int 2005;29(5):370-4; [13]→дубль [15] PMID 36583780 «Reduction, proliferation...» Mol Biol Rep 2023;50(3):2751-61; [14]→PMID 22684578 «RNA in centrosomes» Protoplasma 2013;250(1):397-405.
+- **Ключевые новые источники для усиления:** Fukasawa 1996 Science 271:1744 (p53↔центросома, 796 цит.); Passos 2007 PLoS Biol 5:e0110 (стохастичность теломер-сенесценции); Wagner 2008 PLoS ONE 3:e2213 (МСК 30–50 PD); Aurora B-p53 PNAS 2012 (10.1073/pnas.1110287109); Defossez 1999 MCB (rDNA circles + репарация + lifespan); Kobayashi 2014 PJA 90:119 (rDNA-стабильность↔сенесценция).
+- **Синтез:** TRCS (Huang) = макро-часы (теломеры+rDNA→p53-градиент); CDATA-v2 = микро-механика (центриоли, Aurora A, Ser215/315/15). Комплементарны; вместе = «multi-counter» архитектура (MCARA). Рекомендовано: встроить rDNA-часы вторым счётчиком в CEDAR/MCARA-симулятор.
+- **Решение:** опубликовать код CDATA-v2 (GitHub LC, Apache 2.0) + Zenodo DOI.
