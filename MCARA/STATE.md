@@ -52,3 +52,9 @@
 - [ ] Integrate Pierre's response into EVIDENCE.md §11
 - [ ] CCP1-KO experiment as the next critical step
 - [ ] Update article v8 with new data
+## Simulator v0.5 — 2026-08-08
+- Эпигенетический счётчик калиброван: τ=100 лет, β=1.0, d_critical=0.75 (EpigeneticDrift).
+- Геометрический счётчик центриоли: модель Орнштейна–Уленбека (α≈0.97), наследование геометрии мать→дочь (Wang 2014; Panda 2024).
+- Асимметричное деление в стволовых тканях: старейшая центриоль остаётся в СК → retention_boost ×1.6, α_eff=0.985.
+- Функции цилии (порог damage 0.30) и центросомы (порог 0.60) деградируют с накоплением.
+- Тесты: 18/18 проходят (mcara_core 6, mcara_simulation 9, mcara_compare 3).

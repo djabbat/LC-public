@@ -10,6 +10,27 @@
 
 ---
 
+## The Centriole as a Morphogenetic Lock
+
+> **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
+
+**Evidence:**
+- **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
+- **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
+- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+
+**Resolution of the differentiation paradox:**
+A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
+
+- **No signal → chaotic drift (Renzova 2018).** Cells lose self-renewal and differentiate randomly.
+- **DUX4 + EZH2i + DPPA3 → totipotency.** The same malleable state, directed by totipotency factors.
+- **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
+
+The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+**Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
 ## 0. The Centriole as a Gatekeeper of Cell State
 
 The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA checks which molecular counter finishes first.**
@@ -293,7 +314,7 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 ### Fertilization / gametogenesis and plasticity
 | 30596512 | Jeffries (2019) | Cilium resorption failure → senescence |
 | 33835529 | Lindhout (2021) | Centriole = maturity sensor (DOES NOT confirm plasticity — see audit 2026-07-19) |
-| 22223737 | Azimzadeh (2012) | Centrosomes (PCM) lost in planarians; centrioles preserved in neoblasts |
+| 22223737 | Azimzadeh (2012) | **Planarians lost centrosomes (PCM) AND centrioles** from proliferating cells + embryos. Centrioles appear ONLY de novo in ciliated cells + spermiogenesis. Fig. S4: embryonic cells centriole-free. |
 | 21509822 | Schatten & Sun (2011) | Centrosome inheritance during fertilization |
 | **42455439** | **Ishida & Shibuya (2026)** | **Spermatogenesis: centrioles preserved (vs elimination in oogenesis). 165 refs. RIKEN BDR** |
 
@@ -324,3 +345,11 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 ## References
 
 *See project MEMORY.md for reference history.*
+
+## Geometric centriole counter (v0.5, 2026-08-08)
+
+Centriole damage accumulates by TWO parallel mechanisms:
+1. **Chemical (PTM):** Δ2-tubulin, C-terminal truncation, excess polyglutamylation — no functional reverse enzyme (provisional; TTL cannot re-tyrosinate Δ2; Szyk 2011; Aillaud 2017).
+2. **Geometric (spatial):** daughter centrioles assemble at the mother's proximal surface; geometry is inherited as a boundary condition WITHOUT proofreading (Wang 2014; Albrecht-Buehler 1990; Panda 2024). Ornstein–Uhlenbeck transmission α≈0.97; steady-state variance σ²/(1−α²).
+
+**Asymmetric-division amplifier:** in stem-cell compartments (HSC, fibroblast, CD8 T-memory), the OLDEST centriole is retained by the stem daughter (Yamashita 2007; Wang 2009). Retained centrioles accumulate faster (α_eff→0.985, retention boost ×1.6), degrading primary-cilium competence (threshold 0.30; Ishikawa 2005) and centrosome/MTOC function (threshold 0.60; Manning 2010) — driving stem-cell exhaustion. The two mechanisms are captured in `mcara_simulation::CentrioleGeometry` (OU model) plus the existing PTM drift.

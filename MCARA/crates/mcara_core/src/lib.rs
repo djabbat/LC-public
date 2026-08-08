@@ -14,6 +14,16 @@ use thiserror::Error;
 
 pub const N_COUNTERS: usize = 5;
 
+/// Epigenetic counter critical threshold, from EpigeneticDrift crate
+/// (CounterParams::default().d_critical). Crossing D_epi >= 0.75 corresponds to
+/// ~75 years of time-driven drift at τ = 100 years.
+pub const EPIGENETIC_D_CRITICAL: f64 = 0.75;
+
+/// Has the epigenetic counter crossed its critical threshold?
+pub fn is_epigenetic_above_critical(value: f64) -> bool {
+    value >= EPIGENETIC_D_CRITICAL
+}
+
 /// MCARA counter numbering aligned with user decision 2026-05-07:
 ///   #1 = Centriolar (CEDAR), #2 = Telomere, #3 = Mitochondrial,
 ///   #4 = Epigenetic, #5 = Proteostasis.
@@ -172,8 +182,9 @@ pub fn default_drift_rates(c: Counter, t: Tissue) -> DriftRates {
         (Counter::Centriolar,   _)                   => (0.012, 0.004),
         // Mitochondrial (mostly time-driven)
         (Counter::Mitochondrial, _)                  => (0.000, 0.010),
-        // Epigenetic drift (time-driven)
-        (Counter::Epigenetic,   _)                   => (0.000, 0.008),
+        // Epigenetic drift (time-driven) — calibrated to EpigeneticDrift crate:
+        // D(n,t) = D0 + β·(t/τ) with β = 1.0, τ = 100 years (36500 days), d_critical = 0.75
+        (Counter::Epigenetic,   _)                   => (0.000, 1.000),
         // Proteostasis
         (Counter::Proteostasis, _)                   => (0.005, 0.006),
     };
@@ -196,7 +207,7 @@ pub fn default_reference_scales(c: Counter, t: Tissue) -> ReferenceScales {
         (Counter::Mitochondrial, Tissue::Neuron) => ReferenceScales { n_star: None,        tau_seconds: 30.0 * 86400.0 },
         (Counter::Mitochondrial, _)              => ReferenceScales { n_star: None,        tau_seconds: 14.0 * 86400.0 },
 
-        (Counter::Epigenetic, _)                 => ReferenceScales { n_star: None,        tau_seconds: YR },
+        (Counter::Epigenetic, _)                 => ReferenceScales { n_star: None, tau_seconds: 100.0 * YR },
 
         (Counter::Proteostasis, _)               => ReferenceScales { n_star: Some(80.0),  tau_seconds: YR },
     }
