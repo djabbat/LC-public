@@ -6,7 +6,7 @@
 
 ### 🔴 P0 — Critical
 - [x] **rDNA clock (TRCS) integrated** — SenescenceTrigger::RdnDnaShortening + rdna_copy_number (v4.7, 2026-08-08, 547 tests pass)
-- [ ] **Publish CEDAR code** — GitHub + Zenodo DOI (for CDATA-v2/MCARA reproducibility)
+- [x] **Publish CEDAR code** — GitHub (LC-public, тег v0.4.8-rdna-clock) + Zenodo DOI 10.5281/zenodo.21852388 (2026-08-08)
 - [ ] **Fix PARAMETERS.md** — replace generic template with centriole aging parameters (autofix cycle 1) — done 2026-07-26
 - [ ] **Fix MAP.md** — update to match current directory structure (autofix cycle 1) — done 2026-07-26
 - [ ] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md
