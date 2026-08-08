@@ -1,5 +1,76 @@
 # CEDAR — Memory
 
+## 2026-08-07: 🔴🔴 Post-mortem — Research Square ×2 (препринты по центриолям)
+
+**Платформа:** Research Square (препринт-сервер)
+**Дата сабмита:** ~6 авг 2026
+**Дата ответа:** 7 авг 2026 (~1 день)
+**Результат:** 🔴🔴 ДВА desk reject одновременно
+
+### Статья 1 — RSID: rs-10619029
+**Название:** «A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction»
+**Файл:** `~/Desktop/Services/publications/A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction.docx`
+**Тип контента:** Experimental protocol / methods paper
+
+### Статья 2
+**Название:** «The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency»
+**Файл:** `~/Desktop/Services/publications/The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency.docx`
+**Тип контента:** Theoretical hypothesis paper
+
+### Причина (что сказали)
+> «Unfortunately, our screeners have determined that the manuscript type or its content is not suitable for posting as a preprint on Research Square. Please note that this decision does not reflect the quality or importance of the work and is made on the basis of our editorial policies with respect to content type and screening.»
+
+### Анализ
+- Обе статьи отклонены по policy, не по качеству. Research Square explicitly says «does not reflect the quality.»
+- Research Square стал более строгим к типам контента: не принимает чистые гипотезы без экспериментальных данных и чистые протоколы без результатов.
+- Это НЕ научный rejection — это платформенное ограничение.
+- Статьи могут быть совершенно нормальными для журналов.
+
+### Что мы упустили
+- Research Square ≠ Zenodo. Zenodo принимает всё. Research Square имеет редакционный скрининг.
+- Для чисто теоретических/гипотетических статей: Zenodo, arXiv, bioRxiv (через аффилиацию).
+- Для protocols: protocols.io, Bio-Protocol, Nature Protocols.
+
+### Что изменить
+- [ ] Препринты гипотез → Zenodo (уже работает: 2 препринта опубликованы)
+- [ ] Препринты protocols → Zenodo или protocols.io
+- [ ] Research Square — только для статей с экспериментальными данными
+
+### Следующий шаг
+- Статья 1 (Protocol): отправить как препринт на Zenodo. Журнал: JCS (уже inquiry), Biology Open, или Cell Cycle.
+- Статья 2 (Structural Ratchet): отправить как препринт на Zenodo. Журнал: BioEssays (уже inquiry), BioSystems, JTB.
+
+### Общий счёт отказов: 36 + 2 = 38
+
+---
+
+## 2026-08-06: Jochen Rink (MPI-NAT) — Planarian embryogenesis & centrioles + Martín-Durán et al. (2017)
+
+**Trigger:** Email inquiry to Jochen Rink about planarian embryonic centrioles (Azimzadeh 2012 footnote).
+
+**Rink's response:**
+- Q1 (centriole from sperm in zygote?) — «Nobody has looked.» Fertilisation + early embryogenesis inside parent → specific efforts needed.
+- Q2 (sex/asex centriole gene expression?) — Fissiparous reproduction bypasses embryonic state entirely; no single-cell bottleneck between generations.
+- Q3 (TEM of zygotes/cleavage-stage?) — «Unfortunately, no.» Zygotes are «needles in the haystack» among millions of yolk cells in cocoons. Serial sectioning would be required.
+- 🔴 **Flagged:** «A more recent publication has questioned the apparent loss of the centrosome components reported in the Azimzadeh paper — https://pmc.ncbi.nlm.nih.gov/articles/PMC5495077/»
+
+**Follow-up analysis — Martín-Durán et al. 2017 (Genome Research, PMID 28400424):**
+- Developed «Leapfrog» pipeline for recovering hidden orthologs (genes undetectable by standard BLAST due to rapid evolution)
+- Applied to 35 flatworm transcriptomes; recovered 3427 hidden orthologs
+- **Key finding:** «By using Leapfrog, we identify key centrosome-related genes and homeodomain classes previously reported as absent in free-living flatworms, e.g., planarians.»
+- Specific example: SDCCAG8 (centrosomal protein) recovered as hidden ortholog in *S. mediterranea* (Fig. 2C)
+- **CRITICAL CAVEAT from authors themselves:** «…which suggests that they might not be coexpressed on those planarian cells that assemble centrosomes and thus might have evolved alternative functions.»
+
+**Assessment for CEDAR:**
+- ⚠️ **Genomic argument (Azimzadeh) weakened:** centrosome genes are not «lost» — they exist as fast-evolving hidden orthologs
+- ✅ **Structural argument (Azimzadeh TEM) stands:** centrioles are physically absent in neoblasts regardless of gene presence
+- ✅ **Alternative functions likely:** genes may have non-centrosomal roles; presence of gene ≠ presence of organelle
+- 🔴 **Action:** Need to carefully update EVIDENCE.md and THEORY.md to distinguish «gene loss» from «organelle loss» — these are separate claims
+
+**Rink reply saved:** `~/Desktop/2026-08-06_rink_reply.txt`
+
+---
+
 ## 2026-08-04: Royle (2026) — Clathrin Moonlighting in Mitosis [COMPREHENSIVE REVIEW]
 
 **Paper:** Royle S, Traffic, DOI: 10.1111/tra.70047 | PMID: 42498517 | OA: Yes

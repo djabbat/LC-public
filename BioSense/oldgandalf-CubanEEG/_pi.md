@@ -18,3 +18,4 @@ Cuban normative EEG dataset — FirstWaveCubanHumanNormativeEEGProject repositor
 - EyesOpen/, EyesClose.zip, avr_ref.m, gsf.m
 ## English-only
 All core files — ENGLISH only. Non-English text must be wrapped in `<!-- lang:XX -->...<!-- /lang:XX -->`. Autofix auto-translates unwrapped non-English text.
+**Parent:** BioSense

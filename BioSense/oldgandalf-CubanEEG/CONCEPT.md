@@ -38,3 +38,11 @@ The Cuban normative EEG dataset (FirstWave) — a repository of EEG data from he
 ## References
 
 *See project MEMORY.md for reference history.*
+
+## What is this
+
+> TODO (deep review): one-paragraph description of the project.
+
+## How it works
+
+> TODO (deep review): key components and workflow.
