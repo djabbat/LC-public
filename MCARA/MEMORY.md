@@ -843,3 +843,7 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 - **Ключевые новые источники для усиления:** Fukasawa 1996 Science 271:1744 (p53↔центросома, 796 цит.); Passos 2007 PLoS Biol 5:e0110 (стохастичность теломер-сенесценции); Wagner 2008 PLoS ONE 3:e2213 (МСК 30–50 PD); Aurora B-p53 PNAS 2012 (10.1073/pnas.1110287109); Defossez 1999 MCB (rDNA circles + репарация + lifespan); Kobayashi 2014 PJA 90:119 (rDNA-стабильность↔сенесценция).
 - **Синтез:** TRCS (Huang) = макро-часы (теломеры+rDNA→p53-градиент); CDATA-v2 = микро-механика (центриоли, Aurora A, Ser215/315/15). Комплементарны; вместе = «multi-counter» архитектура (MCARA). Рекомендовано: встроить rDNA-часы вторым счётчиком в CEDAR/MCARA-симулятор.
 - **Решение:** опубликовать код CDATA-v2 (GitHub LC, Apache 2.0) + Zenodo DOI.
+### 2026-08-08 — Zenodo DOI для CEDAR v4.7
+- **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388)
+- Релиз: v0.4.8-rdna-clock (djabbat/LC-public). Zenodo-интеграция GitHub включена — следующие релизы получат DOI автоматически.
+- Бейдж в README репо.

@@ -17,7 +17,7 @@ cargo run --release
 
 ## Overview
 
-> TODO (deep review): one-sentence project summary.
+Ze simulator — numerical simulation of the Ze (Z₂ gauge / hierarchy) model dynamics: convergence, CHSH and Born-rule tests in the Ze framework.
 
 ## Links
 
