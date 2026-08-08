@@ -161,3 +161,16 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 - **Status:** Awaiting editor response
 - **Files:** CEDAR/submissions/2026-07-26_TREE/
 - **Next:** If positive → submit via Editorial Manager
+
+---
+
+## 🟢 2026-08-08 — rDNA clock (TRCS) integrated — CEDAR v4.7
+
+<!-- lang:ru -->
+- ⏱️ **Третий счётчик — rDNA-часы (TRCS, Huang 2026):** `SenescenceTrigger::RdnDnaShortening` + `rdna_copy_number` в AgingEngine. 45S rDNA убывает с делениями стволовых клеток (в отличие от теломер), падение ниже 0.5 → p53-сенесценция.
+- 🧮 **Параметры:** RDNA_LOSS_PER_DIVISION=0.0006 (HSC 12 дел/год → порог ~70 лет), RDNA_CRIT=0.5, RDNA_MIN=0.2, интервенция `rdna_restoration` (+2%/год, TRCS-стратегия омоложения).
+- ✅ **Тесты:** 547 pass (workspace); добавлены тесты rDNA (убывание, порог, restoration, snapshot).
+- 🔗 **Мост:** центриоли (CEDAR) + теломеры + rDNA (TRCS) = multi-counter архитектура (MCARA). Анализ: `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
+<!-- /lang:ru -->
+
+**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim; опубликовать код (GitHub + Zenodo).

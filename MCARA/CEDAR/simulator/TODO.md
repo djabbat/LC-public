@@ -27,3 +27,7 @@
 - [x] Web interface for running simulations
 - [x] Rust port for performance
 - [x] Integration with LC/sim_core
+
+## rDNA clock (2026-08-08)
+- [x] Rust AgingEngine: SenescenceTrigger::RdnDnaShortening + rdna_copy_number (v4.7) — DONE, 547 tests pass
+- [ ] Python cedar-sim: mirror rDNA clock (RDNA_LOSS_PER_DIVISION etc.) — next
