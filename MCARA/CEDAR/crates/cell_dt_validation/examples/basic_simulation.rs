@@ -43,6 +43,7 @@ fn main() {
         caloric_restriction: true, senolytics: true, antioxidants: true,
         mtor_inhibition: true,     telomerase: true,  htert: false, nk_boost: true,
         stem_cell_therapy: true,   epigenetic_reprogramming: true,
+        rdna_restoration: false,
         strength: 1.0,
     };
     let mut ivs_engine = AgingEngine::new(SimulationConfig {
