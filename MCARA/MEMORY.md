@@ -1,37 +1,172 @@
 
+## 🔴 CRITICAL CORRECTION: Planarian Centriole Data (2026-08-06)
 
+> **Finding:** Deep PubMed search confirmed that Azimzadeh 2012 explicitly states planarian neoblasts and embryonic cells DO NOT have centrioles. The 2026-07-17 audit correction went in the wrong direction.
+> **Fixed files:** EVIDENCE.md §10.1, CONCEPT.md, MCARA_BiologyOpen_v2.md, MCARA_MedicalHypotheses_v1.md.
+> **Key facts:** (1) Planarian neoblasts have no centrioles (IF+TEM), (2) Embryonic cells have no centrioles (IF Fig. S4), (3) Centrioles appear ONLY de novo in ciliated cells + spermiogenesis, (4) Spermiogenesis de novo centriole assembly from Rouhana 2022 PMID 34542855, (5) This STRENGTHENS the CEDAR hypothesis: the most plastic cells in the animal kingdom are permanently centriole-free.
+> **Gap:** Fate of sperm centriole in zygote — never studied. Oogenesis centriole status — no data.
+> **Letters sent (2026-08-06):** Juliette Azimzadeh (CNRS/IJM Paris) ✅, Jochen Rink (MPI-NAT Göttingen) ✅, Phillip Newmark (Morgridge/UW–Madison) ✅. Asking: (1) centriole status in planarian oocytes, (2) fate of sperm centriole in zygote, (3) embryonic centriole data.
+> **File:** `~/Desktop/letters_planarian_centrioles_2026-08-06.md`
+
+### Gönczy responds (2026-08-05) — "Tantalizing" but no manpower
+
+> Pierre replied to the Aug 2 letter (SAS-6 cartwheel damage hypothesis). Key: he finds the idea "tantalizing" and confirms SAS-6 as good readout. Suggests stem cell→differentiation system OR "compare indeed the zygote to later stages of embryogenesis." Has equipment (expansion microscopy + EM) but **no manpower.**
+
+### 🔴 Pierre declined consortium participation (2026-08-07)
+
+> Jaba invited Pierre to join as consortium partner. Pierre declined. Revised approach: short reply — thank him, ask for recommendation of a younger PI with U-ExM pipeline. Mention Cologne trip (late Aug, consortium meeting with de Grey + David Meyer).
+> **Reply sent:** ✅ `~/Desktop/LC/MCARA/letters/sent/2026-08-07_Pierre_Gonczy_reply.txt` — Aug 7, 21:50 Tbilisi.
+> **Auto-reply received:** Pierre away until Aug 13. Follow up Aug 14.
+> **Next:** Wait for Pierre's recommendation. Parallel: Guichard letter.
+> **File:** `~/Desktop/LC/MCARA/letters/sent/2026-08-07_Pierre_Gonczy_reply.txt`
+
+---
+
+## Royle (2026): Clathrin Moonlighting — Comprehensive Metareview (2026-08-04)
+
+> **Paper:** Royle S, Traffic, DOI: 10.1111/tra.70047 | PMID: 42498517
+> **Full analysis:** `~/Desktop/Services/docs/literature/Royle_2026_Secret_Mitotic_Life_of_Clathrin.md`
+> **Ref:** `refs/Royle_2026_Clathrin_Moonlighting.md`
 
 <!-- lang:ru -->
-## 2026-07-25: Chk1 — две неканонические роли в старении 🔴
+**Мета-анализ (4 базы):** Все 9 ключевых ссылок Royle lab верифицированы. 24 дополнительных статьи найдены и проанализированы. Модель консенсусная, опровержений нет.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-> **Находка:** Chk1 (Checkpoint kinase 1) — DNA damage киназа — имеет две неканонические роли, напрямую связанные со счётчиками MCARA.
+**Клатрин — paradigmatic moonlighting protein для MCARA:**
+Один белок → 4+ независимых механизма в митозе:
+<!-- /lang:ru -->
+1. Inter-microtubule bridging (TACC3/chTOG/clathrin) — Booth 2011 EMBO J, Nixon 2015 eLife
+<!-- lang:ru -->
+2. GTSE1 recruitment → MCAK inhibition на astral MTs — Rondelet 2020 JCB
+3. Centrosome integrity через ch-TOG stabilization — Foraker 2012 JCB 🔴
+<!-- /lang:ru -->
+4. CHC-pT606 → GAK → PLK1 → Kiz signaling axis — Yabuno 2019 Cell Cycle 🔴
+
+<!-- lang:ru -->
+**Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489 — CRISPR + induced relocalization):**
+<!-- /lang:ru -->
+- CORE: TACC3 + CHC
+- ANCILLARY: chTOG (binds TACC3), GTSE1 (binds CHC → inhibits MCAK)
+- ❌ NOT: PI3K-C2α (disproven by Ryan 2021)
+
+<!-- lang:ru -->
+**Drug development (уже идёт!):**
+<!-- /lang:ru -->
+- SP TACC3 stapled peptide — 400× affinity over native, disrupts TACC3-CHC (Gunning 2026, Structure, PMID 42049022)
+- AK306 small molecule CLTC binder — selective cancer apoptosis in mice (Bond 2018, Mol Cancer Res, PMID 29769406)
+- TACC3 degraders via ubiquitin-proteasome (Ohoka 2014, Cell Death Dis)
+
+<!-- lang:ru -->
+**Другие moonlighting белки (параллели для MCARA):**
+<!-- /lang:ru -->
+- GRP75: mitochondrial chaperone → cell cycle + endocytosis control (Gao 2017, PMID 28938577)
+- Megalin: endocytic receptor → mTORC1 switches to cell cycle (Dahlke 2026, PMID 42174246)
+
+<!-- lang:ru -->
+**Открытые вопросы для MCARA:**
+1. Возраст-зависимое нарушение функции клатрина не показано (testable prediction)
+2. Можно ли SP TACC3/AK306 использовать для anti-aging interventions?
+3. Какой из 4 механизмов наиболее значим для ageing — centrosomal (Foraker 2012) или spindle (Booth 2011)?
+<!-- /lang:ru -->
+
+---
+
+## Phylogenetic Analysis: Centriole Elimination Across Mammals (2026-08-03)
+
+> **Finding:** Systematic review of 15+ mammalian species reveals three distinct patterns of centriole elimination, refuting the critique that placental mammals universally lost this mechanism.
+
+| Pattern | Species | Timing | Transferable to soma? |
+|---------|---------|--------|:---:|
+| **Rodent-type** | Mouse, rat, hamster | No elimination — maternal inheritance | ❌ |
+| **Primate-type** | Human, rhesus macaque | Pre-meiotic elimination | ⚠️ Unknown mechanism |
+| **Ungulate-type** | Cattle, pig, sheep, rabbit | Post-fertilization elimination during mitosis | ✅ Best model |
+
+**Key reference:** Uzbekov R, Avidor-Reiss T (2024) The proximal centriole age in spermatozoa determines its fate in the zygote. Open Biol 14:230458. PMID 38442864. [Older centrioles preferentially eliminated — age-dependent selection.]
+
+**Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
+
+
+## 2026-08-03: Simerly 2018 + Madarampalli 2015 — oocyte centriole loss is gradual, ATF5 binds polyE
+
+> **Finding 1 (Simerly 2018, PMID 30143724):** Mouse centrioles are gradually lost from PGCs through mature oocytes — a developmental process spanning days to weeks during meiotic maturation. This is NOT a molecular switch that can be flipped in a somatic cell. Centrioles progressively dissociate from PCM and lose organizational capacity. The oocyte does not undergo mitotic divisions during this process — a unique context not reproducible in cycling somatic cells.
+
+> **Finding 2 (Madarampalli 2015, PMID 26213385):** ATF5 binds specifically to polyglutamylated tubulin on the mother centriole and connects PCM to the centriole. This means PTM stripping (CCP1 → remove polyE) would remove ATF5 binding sites → PCM detachment → centriole cannot organize spindles. PTM stripping = functional elimination without structural removal. Not a solution.
+
+> **Implication:** These two findings further strengthen the case for centriole elimination over PTM stripping, but also highlight the complexity of the oocyte pathway. The oocyte uses gradual dissolution during a unique cell cycle — not transferable to somatic cells by simple factor expression.
+
+> **Recorded in:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
+## 2026-08-03: The centriole as a morphogenetic lock — resolution of the differentiation paradox
+
+> **Finding:** Renzova et al. (2018, PMID 30197118) showed centrinone-induced centriole loss in hPSC triggers spontaneous differentiation. Kalbfuss & Gönczy (2023, PMID 37256957) showed 88% of C. elegans cells eliminate centrioles during terminal differentiation. A superficial reading suggests: "centriole elimination drives differentiation, therefore it cannot enable totipotency."
+
+> **Resolution:** The centriole is a morphogenetic status lock, not a fate determinant. An old centriole locks cells into their current (aged) identity. Removing it breaks the lock — cells lose controlled self-renewal and drift. Without centrioles + no signal (Renzova): chaotic differentiation. Without centrioles + DUX4/EZH2i: totipotency program. Then de novo young centrioles restore controlled asymmetric division and lock in the new desired identity.
+
+> **Implication:** Renzova 2018 does not contradict the protocol — it confirms its premise. The centriole controls the *capacity to maintain identity*, not the identity itself. This is the core of the Threshold Stand model.
+
+> **Recorded in:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
+## 2026-08-03: Why centriole elimination is mandatory — the geometric argument
+
+> **Decision:** PTM stripping (CCP1) is insufficient. Centriole aging has three modes: chemical (polyglutamylation), geometric (over-elongation), and structural (cartwheel deformation, oxidized tubulin). Köhrer et al. (2023, *Leukemia*, PMID 37821581) provides direct quantitative evidence: 1,386 centrioles from 8 healthy donors, over-elongated centrioles rise from 45% (age 24) to 76% (age 67), ρ = 0.67, p < 0.01. Geometry is templated during duplication — an over-elongated mother produces an over-elongated daughter. CCP1 fixes only chemistry. Only elimination + de novo resets all three. Nature agrees: every species eliminates centrioles during oogenesis, not strips them.
+
+> **Wong 2015 barrier:** Centrinone causes passive centriole dilution → p53 senescence. But the oocyte uses active proteolytic elimination without senescence. Finding the mammalian oocyte elimination factors is the central challenge. Until then, the protocol acknowledges this as an unsolved problem.
+
+> **Full argument:** `docs/WHY_IPSC_FAILS.md` §4.1
+
+
+## 2026-08-02: Why iPSC Fails — The Correct Target Is Young Adult Stem Cells
+
+> **Strategic note.** iPSC (full reprogramming to pluripotency) is a dead end for organism-level rejuvenation. The field — including Altos Labs ($3B) — has pivoted to partial reprogramming. **The correct target: tissue-specific adult stem cells with youthful division tempo and intact lineage commitment.** Not iPSC, not just "younger somatic cell" — adult stem cells that divide like young cells.
+> 
+> **Technological pipeline:** `docs/MCARA_TECHNOLOGICAL_PIPELINE.md` — complete 4-step chain from aged somatic cell to safe young adult stem cell.
+
+**Key points:**
+1. **iPSC → teratomas.** Even a few undifferentiated cells form tumors. c-Myc is an oncogene.
+2. **Identity erasure.** A neuron becomes an iPSC, not a "young neuron" — synaptic connections lost.
+3. **Correct target: adult stem cells.** Tissue-specific, lineage-committed, multipotent (not pluripotent). Young division tempo. Safe by design.
+4. **Narrow therapeutic window.** OSK: too little = no effect; too much = teratomas + mortality. MCARA counters solve this.
+5. **Altos Labs pivoted** from iPSC to partial reprogramming de facto. $3B, 4+ years, still basic research.
+6. **The missing piece nobody sees:** the mother centriole as a physical carrier of age — cannot be reprogrammed, must be eliminated and rebuilt de novo.
+7. **4-step pipeline:** (1) Centrinone → centriole elimination, (2) PLK4 pulse → de novo young centrioles, (3) OSK+NANOG+LIN28 mRNA → deep epigenetic reset to epiblast, (4) Tissue-specific master regulators → adult stem cell. All with MCARA counter checkpoints.
+
+**Full documents:** `docs/WHY_IPSC_FAILS.md` | `docs/MCARA_TECHNOLOGICAL_PIPELINE.md`
+
+
+<!-- lang:ru -->
+## 2026-08-02: 🔴 Статус подач — портал Springer
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-### Что обнаружено:
-1. **Counter #1 (Centriolar):** Chk1-P→β-tubulin-T285 на центросоме → качество веретена. Boutakoglou/…/Zachos 2026, *Commun Biol*, PMID 41844775.
-2. **Counter #3 (MitoROS):** Chk1→AHSA1-HSP90→митофагия → кардиопротекция. Jing P et al. 2026, *Redox Biol*, PMID 42229233.
+**Ze_CHSH → PEER REVIEW на QIP!** 
+**MCARA → апелляция отклонена.** Biogerontology → Scientific Reports.
+**Centrioles (npj Aging) →** трансфер → Scientific Reports.
+**Ze_Model → 9 недель With Editor.** Послан email редактору Found. of Physics (3fab9acb).
+**4 новых статьи:** Three-Step Strategy (JTB), Activatus (LWT), Centriole Invasion (BioEssays), Ze+Centrioles (BioSystems). Inquiries: `INQUIRIES_2026-08-03.md`
 <!-- /lang:ru -->
 
-<!-- lang:ru -->
-### Что сделано:
-- ✅ EVIDENCE.md §15 — полный анализ с историей лабы Zachos (2007–2026)
-- ✅ CEDAR/EVIDENCE.md — Chk1→β-tubulin для M1 + Chk1→mitophagy
-- ✅ CEDAR/CONCEPT.md — M1 обновлён: молекулярный механизм
-<!-- /lang:ru -->
+## 2026-07-25: Chk1 — two non-canonical roles in aging 🔴
+
+> **Finding:** Chk1 (Checkpoint kinase 1) — a DNA damage kinase — has two non-canonical roles directly related to MCARA counters.
+
+### What was discovered:
+1. **Counter #1 (Centriolar):** Chk1-P→β-tubulin-T285 at the centrosome → spindle quality. Boutakoglou/…/Zachos 2026, *Commun Biol*, PMID 41844775.
+2. **Counter #3 (MitoROS):** Chk1→AHSA1-HSP90→mitophagy → cardioprotection. Jing P et al. 2026, *Redox Biol*, PMID 42229233.
+
+### What has been done:
+- ✅ EVIDENCE.md §15 — full analysis with history of Zachos lab (2007–2026)
+- ✅ CEDAR/EVIDENCE.md — Chk1→β-tubulin for M1 + Chk1→mitophagy
+- ✅ CEDAR/CONCEPT.md — M1 updated: molecular mechanism
 - ✅ MitoROS/EVIDENCE.md + CONCEPT.md — Chk1→mitophagy
-<!-- lang:ru -->
-- ✅ EIC Pathfinder Response — ссылка PMID 41844775 в Механизм A
-- ✅ Контакты: `CEDAR/docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
-<!-- /lang:ru -->
+- ✅ EIC Pathfinder Response — link PMID 41844775 in Mechanism A
+- ✅ Contacts: `CEDAR/docs/CONTACTS_Chk1_Zachos_2026-07-25.md`
 
-<!-- lang:ru -->
-### Стратегия:
-- George Zachos (gzachos@uoc.gr) — потенциальный партнёр CIRCBIO-07/EIC
-- Chk1 = master regulator двух счётчиков MCARA → strong grant narrative
-<!-- /lang:ru -->
+### Strategy:
+- George Zachos (gzachos@uoc.gr) — potential partner CIRCBIO-07/EIC
+- Chk1 = master regulator of two MCARA counters → strong grant narrative
 
 ---
 
@@ -48,11 +183,45 @@
 
 > Decision History, journal path, key agreements.
 
-## 2026-07-31: Инкубатор — контроль влажности
-- **Решение:** В инкубаторе помимо O₂/CO₂/N₂ должен быть активный контроль влажности ±2% RH с осушителем.
-- **Зачем:** Снижение влажности критично для ARGUS (конденсат на оптике), CEDAR (стабильность пластин), MCARA (клеточная культура).
-- **Обновлено:** CONCEPT.md (бюджет +$1,500).
+## Rejection #30 — 2026-08-05 — Biology Open (Four Counters)
 
+**Журнал:** Biology Open (Company of Biologists)
+**ID:** `bio.062853`
+**Дней до решения:** <1 (desk reject)
+**Тип решения:** Desk reject — scope mismatch
+
+### Причина (что сказал редактор)
+> «BiO does not consider hypothesis papers or narrative reviews. For more information on the article types considered by our journal please see https://journals.biologists.com/bio/pages/article-types»
+> — Alejandra Clark, Managing Editor
+
+### Что мы упустили
+- [x] Не отправили pre-submission inquiry. 🔴 Правило: pi блокирует сабмит, если inquiry не отправлен.
+- [x] BiO — журнал экспериментальный (Research Articles, Methods & Techniques, First Person). Hypothesis не принимают.
+- [x] Journal-fit.sh показал «Hypothesis-friendly» — ошибка в скрипте. BiO таковым не является.
+- [x] Статья подана как Research Article, но по жанру это hypothesis paper.
+
+### Что изменить перед следующей подачей
+- [ ] Abstract переписать — убрать hypothesis-маркеры, добавить quantitative framework angle
+- [ ] Сменить жанр: не hypothesis, а **quantitative model / theoretical framework**
+- [ ] Добавить Figure 1 (обязательна для hypothesis journal)
+- [ ] Отправить pre-submission inquiry ДО сабмита
+
+### Следующий журнал
+**Варианты:**
+1. **GeroScience** — принимает hypothesis/theory, IF высокий, но уже подана Centrioles: Hypothesis (JAAA-D-26-02347)
+2. **npj Aging** — был трансфер из npj Systems Biology, не использован
+3. **BioEssays** — Problems & Paradigms (hypothesis-friendly, но уже подана Centriole Invasion)
+4. **Medical Hypotheses** (Elsevier) — специально для hypothesis papers, без экспериментальных данных
+5. **Journal of Theoretical Biology** — quantitative models, hypothesis-friendly
+
+**Journal-fit check:** НУЖЕН для выбранного журнала.
+
+---
+
+## 2026-07-31: Incubator — humidity control
+- **Solution:** In the incubator, in addition to O₂/CO₂/N₂, there must be active humidity control ±2% RH with a dehumidifier.
+- **Why:** Reducing humidity is critical for ARGUS (condensation on optics), CEDAR (plate stability), MCARA (cell culture).
+- **Updated:** CONCEPT.md (budget +$1,500).
 ---
 
 ---
@@ -187,7 +356,7 @@
 
 - **Event:** Analysis of 7 articles from Jaba feed + PubMed search for similar articles (mitochondrial QC, ClpP/LONP1, mRNA localization).
 - **Result:** 4 categories of articles (TOP-3 + 4 additional from feed, 5 from mitochondrial QC search, 5 from ClpP/LONP1 search). Total of ~20 highly relevant PMIDs.
-- **KEY:** CDATA renamed to CEDAR — replaced in AGENTS.md, directories already renamed.
+- **KEY:** CEDAR renamed to CEDAR — replaced in AGENTS.md, directories already renamed.
 - **KEY FINDINGS FOR MCARA:**
 
 ### 1. ClpP Series — Mitochondrial Proteostasis and Meiosis
@@ -507,9 +676,9 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 ---
 ## 2026-07-06: MCARA v4.0 — Rejuvenation Platform
 
-**Solution:** The MCARA concept has been completely revamped. Instead of an observational model (measuring counters) — an active Rejuvenation Platform: obtaining young, safe adult stem cells from the patient's own cells, rejuvenated across all 5 tracks of replicative aging.
+**Solution:** The MCARA concept has been completely revamped. Instead of an observational model (measuring counters) — an active Rejuvenation Platform: obtaining young, safe adult stem cells from the patient's own cells, rejuvenated across all 4 tracks of replicative aging.
 
-**5 phases:** ARGUS (tool) → Aubrey (proof of counters) → Rejuvenation (track by track) → Integration (all 5 together) → Transplantation (mouse).
+**5 phases:** ARGUS (tool) → Aubrey (proof of counters) → Rejuvenation (track by track) → Integration (all 4 together) → Transplantation (mouse).
 
 **Budget:** ~€3.5M, 36 months, real EU prices.
 
@@ -639,6 +808,49 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 
 ### Estimates (updated)
 - Counter #3 (Mitochondrial): 8.5 → 9.0/10 (ClpP series 2013-2026 strengthens the mechanism)
-- Counter #5 (Proteostasis): 7.5 → 8.5/10 (ClpP/ClpXP + AAA+ protease reviews 2026)
+-  (ClpP/ClpXP + AAA+ protease reviews 2026)
 - Counter #1 (Centriolar): 7.5 → 8.0/10
 - Overall MCARA/CEDAR: 7.3 → 7.8/10
+## 2026-08-02: Discovery — Two-tier haploid QC
+
+**Finding:** Back-to-back papers (Kitaoka 2026, Chen 2026) reveal nuclear and centriolar QC in spermatids. The field is essentially empty — only 1 prior paper on centriole elimination in spermatogenesis.
+
+**Strategic Implication:** CEDAR is positioned at the intersection of these two newly discovered pathways. The connection between nuclear and centriolar QC is an unexplored niche.
+
+**Next Steps:**
+- Write hypothesis paper connecting Kitaoka + Chen + CEDAR
+- Propose experiment: polyglutamylation → docking failure → trailing
+- Target journal: BioEssays or Medical Hypotheses (hypothesis format)
+
+### format-pdf.py — все исправления (2026-08-06)
+
+Скрипт `~/Desktop/Services/scripts/format-pdf.py` — багфикс-сессия. 7 исправлений:
+1. **LibreOffice outdir:** `/tmp/` → `os.path.dirname(tmp_docx)`
+2. **Abstract body deleted:** `to_delete` фильтр на «data availability» в тексте → `len(p.text) < 80 and low.startswith(w)`
+3. **heading_found:** `UnboundLocalError` → `heading_found = False`
+4. **Heading false match:** «Background — ...» → `len(p.text) < 100`
+5. **Self-cite duplicates:** DOI `\s*:\s*`, PMID+DOI ключи параллельно
+6. **Line spacing:** Title 1.2, H1 1.15
+7. **Alignment:** H1/H2 LEFT, metadata LEFT, body JUSTIFY
+Результат: 10 самоцитирований без дубликатов, Abstract на месте, References по алфавиту.
+
+### 2026-08-08 — Анализ CDATA-v2 vs Huang TRCS (проверка ссылок)
+- **Анализ:** `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
+- **Статья 1:** Tqemaladze «A Stochastic Model of Centriole-Driven Stem Cell Exhaustion» (CDATA-v2), Longevity Horizon 2(5), DOI 10.65649/wjtcf387
+- **Статья 2:** Huang «Programmed Aging Theory Defeats Damage Accumulation», Ageing Longev Res 2(1), DOI 10.53941/alr.2026.100002
+- **🔴 Критично для CDATA-v2:** ссылки [12] (Cell Biol Int 2005), [13] («CDATA» Mol Biol Rep 2023), [14] (Protoplasma 2012) — НЕ существуют с указанными названиями; у [9],[10],[11] неверные названия (PMID верны); сдвиг нумерации в разделе 1.1 (Liu→[2] вместо [6], Tritarelli→[3] вместо [27], Ohshima→[4] вместо [8]). Исправить до пересылки рецензентам.
+- **Реальные аналоги:** [12]→PMID 15886028 «Potential role of centrioles...» Cell Biol Int 2005;29(5):370-4; [13]→дубль [15] PMID 36583780 «Reduction, proliferation...» Mol Biol Rep 2023;50(3):2751-61; [14]→PMID 22684578 «RNA in centrosomes» Protoplasma 2013;250(1):397-405.
+- **Ключевые новые источники для усиления:** Fukasawa 1996 Science 271:1744 (p53↔центросома, 796 цит.); Passos 2007 PLoS Biol 5:e0110 (стохастичность теломер-сенесценции); Wagner 2008 PLoS ONE 3:e2213 (МСК 30–50 PD); Aurora B-p53 PNAS 2012 (10.1073/pnas.1110287109); Defossez 1999 MCB (rDNA circles + репарация + lifespan); Kobayashi 2014 PJA 90:119 (rDNA-стабильность↔сенесценция).
+- **Синтез:** TRCS (Huang) = макро-часы (теломеры+rDNA→p53-градиент); CDATA-v2 = микро-механика (центриоли, Aurora A, Ser215/315/15). Комплементарны; вместе = «multi-counter» архитектура (MCARA). Рекомендовано: встроить rDNA-часы вторым счётчиком в CEDAR/MCARA-симулятор.
+- **Решение:** опубликовать код CDATA-v2 (GitHub LC, Apache 2.0) + Zenodo DOI.
+### 2026-08-08 — Zenodo DOI для CEDAR v4.7
+- **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388)
+- Релиз: v0.4.8-rdna-clock (djabbat/LC-public). Zenodo-интеграция GitHub включена — следующие релизы получат DOI автоматически.
+- Бейдж в README репо.
+
+## 2026-08-08 — Simulator v0.5: геометрия центриоли + калибровка эпигенетического счётчика
+- Решение: внести геометрический механизм центриоли (пространственное наследование, не химическое копирование) и калиброванную эпигенетическую модель в симулятор MCARA.
+- Обоснование: две статьи — "Four Counters" (PTM-терминальность) и "Spatially Constrained, Not Chemically Copied" (геометрия, α≈0.97).
+- Реализация: mcara_core (эпигенетический τ=100 лет, β=1, d_critical=0.75; функция is_epigenetic_above_critical), mcara_simulation (CentrioleGeometry OU-модель, асимметричное наследование, cilia/centrosome функции).
+- Ошибка: coupling Γ[epi][mito] доминирует при долгих симуляциях — принято (существующая особенность, будущая калибровка Γ).
+- Следующий шаг: релиз в LC-public → Zenodo DOI.

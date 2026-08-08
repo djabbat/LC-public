@@ -39,6 +39,10 @@ struct Cli {
     #[arg(long, default_value = "none")]
     edc_target: String,
 
+    /// RNG seed for the geometric (Ornstein–Uhlenbeck) centriole model
+    #[arg(long, default_value_t = 42)]
+    seed: u64,
+
     /// Output CSV path
     #[arg(long, default_value = "mcara_run.csv")]
     output: PathBuf,
@@ -78,6 +82,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         &gamma,
         cli.edc_exposure,
         edc_target,
+        cli.seed,
     );
 
     let mut writer = csv::Writer::from_path(&cli.output)?;
