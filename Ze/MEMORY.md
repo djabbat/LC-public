@@ -1,0 +1,58 @@
+# Rejection Log — Ze
+
+## Rejection #31 — 2026-08-04 — Foundations of Physics
+**Journal:** Foundations of Physics (Springer)
+**ID:** `3fab9acb`
+**Article:** Formal Axiomatics, Born Rule, and Tsirelson Bound from Global Knowledge: The Ze Model
+**Days to decision:** 57 (1 Jun → 4 Aug)
+**Decision type:** Editorial reject (after 9 weeks With Editor, no review)
+
+### Reason (what the editor said)
+> «Your manuscript has now been assessed. Regrettably, your manuscript has been rejected for publication in Foundations of Physics.»
+
+No reviewer comments. Standard wording — the editor assessed it himself, did not send for review.
+
+### What we missed
+- **9 weeks «With Editor» is a signal.** If the editor does not send for review within 2–3 weeks, it means he does not see a fit.
+- **Foundations of Physics has a very narrow scope.** Formal axiomatics + Born rule + Tsirelson are three different topics in one article. For FoP — too broad a frame.
+- **The article is too multi-layered.** Three major results in one article = none is perceived as the main one.
+- Pre-submission inquiry was not sent (the rule was introduced later — after 8 Jul).
+
+### What to change before the next submission
+- [ ] Split the article into 2–3: (1) Ze axiomatics, (2) Born rule, (3) Tsirelson bound
+- [ ] Or pick ONE focus and one journal for it
+- [ ] Rewrite Abstract for the specific journal scope
+- [ ] Journal-fit check BEFORE submission: `bash ~/Desktop/Services/scripts/journal-fit.sh`
+- [ ] Pre-submission inquiry to the editor
+
+### Next journal
+- **Quantum Information Processing** (Ze_CHSH is already in peer review there) — for the Tsirelson-bound version
+- **Int. J. Theoretical Physics** — for the axiomatics
+- **Quantum** — if Born rule stays as the central result
+
+---
+
+## Rejection #30 — 2026-07-09 — Annalen der Physik
+**Journal:** Annalen der Physik (Wiley)
+**ID:** `1948620`
+**Article:** Z₂ Gauge Theory as a Predictive Agent, with a Structural Relation for the Fine-Structure Constant
+**Days to decision:** 1 (desk reject)
+**Decision type:** Desk reject — editor did not send for review
+
+### Reason (what the editor said)
+⚠️ Unknown — need to find the rejection email in the mailbox (djabbat@gmail.com). Probable reason: scope mismatch or mismatch with the Research Article genre.
+
+### What we missed
+- **This is the second attempt for Ze_Z₂.** Entropy (MDPI) rejected on July 7 — "thematic mismatch". The problem is not the journal, but the positioning of the article.
+- **Research Article without experimental data** — Annalen der Physik expects either experiment or pure mathematical physics. "Predictive Agent" sounds like AI/ML, which is not their topic.
+- **1 day = the editor didn't even read it.** The title and abstract did not pass the first filter.
+
+### What to change before the next submission
+- [ ] Rename: remove "Predictive Agent", leave "Z₂ Gauge Theory and the Fine-Structure Constant"
+- [ ] Change genre: not Research Article → Hypothesis / Theory / Letter
+- [ ] Target journal: **Foundations of Physics** (Springer) — Ze_Model (3fab9acb) is already there. Or **International Journal of Theoretical Physics**.
+- [ ] Journal-fit check BEFORE submission
+
+### Next journal
+**Foundations of Physics** or **Int. J. Theor. Phys.** — theoretical journals.
+**Why:** Ze_Model is already at Found. Physics (5 weeks). If accepted — Ze_Z₂ will go there as a companion paper.
