@@ -5,6 +5,8 @@
 ## Active Tasks (2026-07-26)
 
 ### 🔴 P0 — Critical
+- [x] **rDNA clock (TRCS) integrated** — SenescenceTrigger::RdnDnaShortening + rdna_copy_number (v4.7, 2026-08-08, 547 tests pass)
+- [ ] **Publish CEDAR code** — GitHub + Zenodo DOI (для воспроизводимости CDATA-v2/MCARA)
 - [ ] **Fix PARAMETERS.md** — replace generic template with centriole aging parameters (autofix cycle 1) — done 2026-07-26
 - [ ] **Fix MAP.md** — update to match current directory structure (autofix cycle 1) — done 2026-07-26
 - [ ] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md
