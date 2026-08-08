@@ -1,46 +1,46 @@
 # CEDAR — Memory
 
-## 2026-08-07: 🔴🔴 Post-mortem — Research Square ×2 (препринты по центриолям)
+## 2026-08-07: 🔴🔴 Post-mortem — Research Square ×2 (centriole preprints)
 
-**Платформа:** Research Square (препринт-сервер)
-**Дата сабмита:** ~6 авг 2026
-**Дата ответа:** 7 авг 2026 (~1 день)
-**Результат:** 🔴🔴 ДВА desk reject одновременно
+**Platform:** Research Square (preprint server)
+**Submission date:** ~6 Aug 2026
+**Response date:** 7 Aug 2026 (~1 day)
+**Result:** 🔴🔴 TWO desk rejects simultaneously
 
-### Статья 1 — RSID: rs-10619029
-**Название:** «A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction»
-**Файл:** `~/Desktop/Services/publications/A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction.docx`
-**Тип контента:** Experimental protocol / methods paper
+### Article 1 — RSID: rs-10619029
+**Title:** «A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction»
+**File:** `~/Desktop/Services/publications/A Proposed Experimental Protocol for Testing Centriole-Mediated Somatic Totipotency Induction.docx`
+**Content type:** Experimental protocol / methods paper
 
-### Статья 2
-**Название:** «The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency»
-**Файл:** `~/Desktop/Services/publications/The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency.docx`
-**Тип контента:** Theoretical hypothesis paper
+### Article 2
+**Title:** «The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency»
+**File:** `~/Desktop/Services/publications/The Centriole as a Structural Ratchet That Restricts Cellular Reprogramming to Totipotency.docx`
+**Content type:** Theoretical hypothesis paper
 
-### Причина (что сказали)
+### Reason (what they said)
 > «Unfortunately, our screeners have determined that the manuscript type or its content is not suitable for posting as a preprint on Research Square. Please note that this decision does not reflect the quality or importance of the work and is made on the basis of our editorial policies with respect to content type and screening.»
 
-### Анализ
-- Обе статьи отклонены по policy, не по качеству. Research Square explicitly says «does not reflect the quality.»
-- Research Square стал более строгим к типам контента: не принимает чистые гипотезы без экспериментальных данных и чистые протоколы без результатов.
-- Это НЕ научный rejection — это платформенное ограничение.
-- Статьи могут быть совершенно нормальными для журналов.
+### Analysis
+- Both articles rejected on policy, not quality. Research Square explicitly says «does not reflect the quality.»
+- Research Square has become stricter on content types: no pure hypotheses without experimental data, no pure protocols without results.
+- This is NOT a scientific rejection — it is a platform restriction.
+- The articles may be perfectly fine for journals.
 
-### Что мы упустили
-- Research Square ≠ Zenodo. Zenodo принимает всё. Research Square имеет редакционный скрининг.
-- Для чисто теоретических/гипотетических статей: Zenodo, arXiv, bioRxiv (через аффилиацию).
-- Для protocols: protocols.io, Bio-Protocol, Nature Protocols.
+### What we missed
+- Research Square ≠ Zenodo. Zenodo accepts everything. Research Square has editorial screening.
+- For purely theoretical/hypothetical articles: Zenodo, arXiv, bioRxiv (via affiliation).
+- For protocols: protocols.io, Bio-Protocol, Nature Protocols.
 
-### Что изменить
-- [ ] Препринты гипотез → Zenodo (уже работает: 2 препринта опубликованы)
-- [ ] Препринты protocols → Zenodo или protocols.io
-- [ ] Research Square — только для статей с экспериментальными данными
+### What to change
+- [ ] Hypothesis preprints → Zenodo (already works: 2 preprints published)
+- [ ] Protocol preprints → Zenodo or protocols.io
+- [ ] Research Square — only for articles with experimental data
 
-### Следующий шаг
-- Статья 1 (Protocol): отправить как препринт на Zenodo. Журнал: JCS (уже inquiry), Biology Open, или Cell Cycle.
-- Статья 2 (Structural Ratchet): отправить как препринт на Zenodo. Журнал: BioEssays (уже inquiry), BioSystems, JTB.
+### Next step
+- Article 1 (Protocol): submit as preprint to Zenodo. Journal: JCS (inquiry already sent), Biology Open, or Cell Cycle.
+- Article 2 (Structural Ratchet): submit as preprint to Zenodo. Journal: BioEssays (inquiry already sent), BioSystems, JTB.
 
-### Общий счёт отказов: 36 + 2 = 38
+### Total rejection count: 36 + 2 = 38
 
 ---
 
