@@ -7,6 +7,30 @@
 
 **Purpose:** volatile state, active TODOs, milestones.
 **Convention:** new entries at the top with date.
+---
+
+## 🟢 2026-08-09 — bioRxiv submission: BIORXIV/2026/743702 (Version 1)
+
+<!-- lang:ru -->
+- 📄 **Статья:** «The Centriole as a Candidate Division Counter in Stem-Cell Aging: A Falsifiable Hypothesis with a Pre-Registered Protocol»
+- 🚀 **Подача на bioRxiv:** BIORXIV/2026/743702 — Version 1 SUBMITTED (подтверждение получено). Ожидание скрининга (1–3 дня) → препринт + DOI 10.1101/...
+- 📁 **Файлы:** `CEDAR/articles/centriole-division-counter-biorxiv/` (md, docx, pdf, bioRxiv pdf, Abstract версии)
+- 📄 **Формат:** Research Article — гипотеза + систематический синтез + пререгистрированный протокол P1–P9 (Stage 1); References в APA 7 (128 записей, все авторы раскрыты)
+- 🔄 **Полный цикл:** 18 peer-review рецензий обработано (42–68/100), все правки внесены; эмодзи/CDATA удалены; следы AI убраны
+- ✅ **Конвертер md2docx:** добавлен флаг `--apa` (автор-год цитаты, References без нумерации), `##`→H2 (без Subtitle), Title 22pt — закоммичено (ff2cb7b5, 4eee16b4)
+- 📌 **Следующий шаг:** ждать скрининг bioRxiv; после выхода препринта — journal-fit + pre-submission inquiry (правила: inquiry ОБЯЗАТЕЛЕН перед сабмитом)
+<!-- /lang:ru -->
+
+---
+
+
+---
+
+<!-- lang:ru -->
+- Де-риск-лестница L1–L5 (замедлить счётчик; сегрегировать повреждения; геми-элиминация материнской центриоли; кондиционирование; селекция) предшествует любой элиминации
+- Полная элиминация — только при исчерпании L1–L5; прогноз: ≥80% выживаемость (геми) vs <50% (полная), Meitinger 2016
+- Встроено в статью MCARA_Four_Counters_Research.md (Rev 82, §4)
+<!-- /lang:ru -->
 
 ---
 
@@ -170,7 +194,7 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 - ⏱️ **Третий счётчик — rDNA-часы (TRCS, Huang 2026):** `SenescenceTrigger::RdnDnaShortening` + `rdna_copy_number` в AgingEngine. 45S rDNA убывает с делениями стволовых клеток (в отличие от теломер), падение ниже 0.5 → p53-сенесценция.
 - 🧮 **Параметры:** RDNA_LOSS_PER_DIVISION=0.0006 (HSC 12 дел/год → порог ~70 лет), RDNA_CRIT=0.5, RDNA_MIN=0.2, интервенция `rdna_restoration` (+2%/год, TRCS-стратегия омоложения).
 - ✅ **Тесты:** 547 pass (workspace); добавлены тесты rDNA (убывание, порог, restoration, snapshot).
-- 🔗 **Мост:** центриоли (CEDAR) + теломеры + rDNA (TRCS) = multi-counter архитектура (MCARA). Анализ: `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
+- 🔗 **Мост:** центриоли (CEDAR) + теломеры + rDNA (TRCS) = multi-counter архитектура (MCARA). Анализ: `~/Desktop/Services/docs/ANALYSIS_CEDAR_v2_vs_Huang_TRCS_2026-08-08.md`
 <!-- /lang:ru -->
 
 **Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim; опубликовать код (GitHub + Zenodo).
@@ -186,4 +210,22 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 - 📌 Цитата кода: Tqemaladze J. (2026). CEDAR v4.7. Zenodo. https://doi.org/10.5281/zenodo.21852388
 <!-- /lang:ru -->
 
-**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim (в TODO симулятора); перегенерировать PDF CDATA-v2 из исправленного md (OJS article 188).
+**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim (в TODO симулятора); перегенерировать PDF CEDAR-v2 из исправленного md (OJS article 188).
+
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** Де-риск перед элиминацией по текущим данным: замедлить счётчик (NAC-антиоксидант; обратимые PTM: TTL-ре-тирозинирование, CCP5/6-деглутамилирование); сегрегировать повреждения асимметричным наследованием материнской центриоли в дифференцирующееся потомство (Yamashita, 2007; Royall, 2023 — человеческие NPC); геми-элиминировать только материнскую центриоль (лазер/PROTAC), сохраняя контроль дупликации и избегая p53-зависимого G1-ареста (Meitinger, 2016); кондиционировать клетку (запасные PLK4-центриоли, синхронизация G1/S, протеостаз); отобрать наименее повреждённый пул (FACS по низкому Δ2/полиGlu).
+**Step 2 (Eliminate).** Убрать старую повреждённую центриоль; восстановить теломеры (теломераза/ZSCAN4 через H3K14ac/H3K18ac; Meltzer, 2024); стереть эпигенетические метки (OSK/TET1-TET2-TDG; Lu, 2020 — частично, остаётся линейная память); отобрать здоровые митохондрии (PINK1-зависимая митофагия; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3 — DUX4 открывает cleavage-стадийные гены (Hendrickson, 2017), KDM4D снимает H3K9me3-барьер репрограммирования, DPPA3 (Stella) стабилизирует тотипотентное (2C-подобное) состояние.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) после полной элиминации (Khodjakov, 2002; Uetake, 2007); контроль геометрии (9-кратная симметрия, триплеты, длина); получить безопасные молодые взрослые стволовые клетки (проверка кариотипа, восстановление p53).
+**Step 1 (Ladder).** Де-риск перед элиминацией: замедлить счётчик, сегрегировать повреждения, геми-элиминировать материнскую центриоль, кондиционировать клетку, отобрать наименее повреждённый пул.
+**Step 2 (Eliminate).** Убрать старую центриоль; восстановить теломеры; стереть эпигенетические метки; отобрать здоровые митохондрии.
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo; получить безопасные молодые взрослые стволовые клетки.

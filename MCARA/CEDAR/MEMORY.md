@@ -1,5 +1,28 @@
 # CEDAR — Memory
 
+## 2026-08-09: 🟢 bioRxiv submission — BIORXIV/2026/743702 (V1)
+
+**Platform:** bioRxiv
+**Status:** Submitted (confirmation received)
+**Article:** «The Centriole as a Candidate Division Counter in Stem-Cell Aging: A Falsifiable Hypothesis with a Pre-Registered Protocol»
+**Files:** `articles/centriole-division-counter-biorxiv/` (md + docx + pdf + bioRxiv pdf)
+**DOI:** pending (10.1101/... after screening)
+
+### Key facts
+- Format: Research Article — hypothesis + systematic synthesis + pre-registered protocol P1–P9 (Stage 1); no primary HSC data (declared).
+- References: APA 7, 128 entries, all authors expanded (35 entries fixed via PubMed API), 0 duplicates.
+- md2docx: new `--apa` flag (author–year citations, unnumbered refs), `##`→H2 (no Subtitle), Title 22pt — commits ff2cb7b5, 4eee16b4.
+- 18 peer-review cycles processed (scores 42–68/100); every actionable point implemented; emoji/AI markers/CDATA removed.
+
+### Lesson (context: two Research Square desk rejects 2026-08-07)
+- Research Square rejected pure-hypothesis/preprints (policy, not quality). bioRxiv accepts hypotheses with abstracts and manuscripts — submission went through.
+- Preprint-first strategy works; next: journal-fit + pre-submission inquiry BEFORE journal submission (per global rules).
+
+### Next steps
+- Wait screening → confirm DOI → optionally update SUBMISSIONS_STATUS.md.
+- Target journals for full article after Stage 2 (P1 PLA data): Aging Cell, Cell Reports, Stem Cell Reports (IF 9–15); IF 18+ requires Stage 2 data.
+
+
 ## 2026-08-07: 🔴🔴 Post-mortem — Research Square ×2 (centriole preprints)
 
 **Platform:** Research Square (preprint server)
@@ -170,7 +193,6 @@
 - 109 systems surveyed, 128 publications. Основной вывод: planning и execution advanced быстрее чем replayability, provenance, validation.
 - Ключевая метрика для CEDAR: workflow correctness вместо final-answer correctness.
 <!-- /lang:ru -->
-
 
 <!-- lang:ru -->
 **Источник:** Циклы autofix статьи для журнала IF 18+. Найдены работы, прямо применимые к CEDAR:
@@ -444,7 +466,6 @@ Three direct hits in CEDAR:
 Mandatory: 17255513, 19829375, 34014920, 42455441, 24120134
 For addressing counterarguments: 41166424, 27053665
 
-
 ## 📛 RENAME: CEDAR → CEDAR (2026-07-13)
 
 - **Decision:** Project CEDAR renamed to CEDAR.
@@ -453,7 +474,6 @@ For addressing counterarguments: 41166424, 27053665
   - Both AGENTS.md updated (root and ~/.pi/agent/)
   - No CEDAR remains in active core files (verified by grep)
   - mbpr/results and _archive left untouched (historical)
-
 
 ## 2026-07-13 — Research Feed Analysis: mRNA regionalization, mei-P26, germ cell cysts
 
@@ -479,7 +499,6 @@ For addressing counterarguments: 41166424, 27053665
 - **Full analysis:** `~/Desktop/Services/docs/RESEARCH_FEED_ANALYSIS_2026-07-13.md`
 
 ---
-
 
 ## 🔴 POST-MORTEM — Rejection #6: BioEssays (15 Jul 2026)
 
@@ -594,3 +613,23 @@ Recorded: THEORY.md Axiom C1, CONCEPT.md, workshop_entropy_in_aging_2pages, EVID
 ## 2026-07-05 — CEDAR/CONCEPT.md restoration
 
 **Solution:** CONCEPT.md has been corrected. The previous version contained erroneous text about a "data integration platform" (hallucination). The correct concept of the centriolar theory of aging has been restored.
+
+- Де-риск-лестница L1–L5 предшествует элиминации; прогноз ≥80% (геми) vs <50% (полная), Meitinger 2016
+
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** De-risk before elimination, based on current evidence: slow the counter with NAC (antioxidant) and reversible-PTM re-cleaning (TTL re-tyrosination, CCP5/6 deglutamylation); segregate damage via asymmetric inheritance of the mother centriole into differentiating progeny (Yamashita, 2007; Royall, 2023—human NPCs); hemi-eliminate only the mother centriole (laser/PROTAC) to preserve duplication control and avoid p53-dependent G1 arrest (Meitinger, 2016); condition the cell (spare PLK4 centrioles, G1/S synchronization, proteostasis); select the least-damaged pool (FACS by low Δ2/polyGlu).
+**Step 2 (Eliminate).** Clear the old, damage-bearing centriole; restore telomeres (telomerase/ZSCAN4 via H3K14ac/H3K18ac; Meltzer, 2024); strip epigenetic marks (OSK/TET1-TET2-TDG; Lu, 2020—partial, lineage memory remains); select healthy mitochondria (PINK1-dependent mitophagy; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3: DUX4 opens cleavage-stage genes (Hendrickson, 2017), KDM4D removes the H3K9me3 reprogramming barrier, DPPA3 (Stella) stabilizes the totipotent (2C-like) state.
+**Step 4 (Rebuild).** Reassemble young centrioles de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) after full elimination (Khodjakov, 2002; Uetake, 2007); quality-control geometry (9-fold symmetry, triplets, length); derive safe, young adult stem cells (karyotype-verified, p53-restored).
+**Step 1 (Ladder).** De-risk before elimination: slow the counter, segregate damage, hemi-eliminate the mother centriole, condition the cell, select the least-damaged pool.
+**Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.
