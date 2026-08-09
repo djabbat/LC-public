@@ -5,7 +5,9 @@
 ## Active Tasks (2026-07-26)
 ### 🟢 2026-08-09 — bioRxiv preprint submitted
 - [x] **bioRxiv BIORXIV/2026/743702** — Version 1 submitted (files: `articles/centriole-division-counter-biorxiv/`)
-- [ ] Wait for bioRxiv screening (1–3 days) → confirm preprint + DOI
+- [x] bioRxiv acknowledgment received (9 Aug, screening 24–72 h)
+- [ ] Wait for bioRxiv screening → preprint + DOI 10.1101/...
+- [ ] Consider bioRxiv → journal/Review Commons transfer (send_paper_away queue)
 - [ ] After preprint: journal-fit.sh + pre-submission inquiry (MANDATORY) + journal submission
 
 
