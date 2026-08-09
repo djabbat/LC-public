@@ -3,6 +3,12 @@
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
 ## Active Tasks (2026-07-26)
+### 🟢 2026-08-09 — bioRxiv preprint submitted
+- [x] **bioRxiv BIORXIV/2026/743702** — Version 1 submitted (files: `articles/centriole-division-counter-biorxiv/`)
+- [ ] Wait for bioRxiv screening (1–3 days) → confirm preprint + DOI
+- [ ] After preprint: journal-fit.sh + pre-submission inquiry (MANDATORY) + journal submission
+
+
 
 ### 🔴 P0 — Critical
 - [x] **rDNA clock (TRCS) integrated** — SenescenceTrigger::RdnDnaShortening + rdna_copy_number (v4.7, 2026-08-08, 547 tests pass)
