@@ -1,15 +1,15 @@
 import Config
 
-config :cdata_frontend, CDATAFrontendWeb.Endpoint,
+config :cdata_frontend, CEDARFrontendWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: CDATAFrontendWeb.ErrorHTML, json: CDATAFrontendWeb.ErrorJSON],
+    formats: [html: CEDARFrontendWeb.ErrorHTML, json: CEDARFrontendWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: CDATAFrontend.PubSub,
+  pubsub_server: CEDARFrontend.PubSub,
   live_view: [signing_salt: "vzN0EABV"]
 
-config :cdata_frontend, CDATAFrontendWeb.Clients.BackendClient,
+config :cdata_frontend, CEDARFrontendWeb.Clients.BackendClient,
   base_url: System.get_env("BACKEND_URL", "http://localhost:3003"),
   timeout: 30_000,
   pool_size: 10
@@ -43,7 +43,7 @@ config :tailwind,
     cd: Path.expand("../assets", __DIR__)
   ]
 
-config :cdata_frontend, CDATAFrontend.Repo,
+config :cdata_frontend, CEDARFrontend.Repo,
   database: "cdata_frontend_dev",
   username: "postgres",
   password: "postgres",

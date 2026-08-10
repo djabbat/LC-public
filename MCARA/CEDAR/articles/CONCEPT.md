@@ -3,7 +3,7 @@
 **Version:** 1.0
 
 ## Purpose
-Collection of articles, preprints, and submissions on CEDAR (Centriolar Damage Accumulation Theory of Aging).
+Collection of articles, preprints, and submissions on CEDAR (Centriolar Entropy-Damage Accumulation Ratchet).
 
 ## Articles (current)
 1. **Tqemaladze 2023** — Mol Biol Rep: «Reduction, proliferation and differentiation defects of stem cells» (PMID 36583780)

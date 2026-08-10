@@ -231,7 +231,7 @@ defmodule BiosenseWebWeb.SimulatorLive do
 
     <div class="row">
       <div class="card">
-        <h2>CDATA bridge</h2>
+        <h2>CEDAR bridge</h2>
         <p class="formula">A(D) = a + b·D + c·D² ; χ_Ze = g₀ − g₁·A</p>
         <%= if is_map(@bridge) and Map.has_key?(@bridge, "a") do %>
           <div class="row-stats" style="margin-top: 8px;">

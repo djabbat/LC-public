@@ -8,7 +8,7 @@ if config_env() == :prod do
       For example: ecto://USER:PASS@HOST/DATABASE
       """
 
-  config :cdata_frontend, CDATAFrontend.Repo,
+  config :cdata_frontend, CEDARFrontend.Repo,
     url: database_url,
     pool_size: String.to_integer(System.get_env("POOL_SIZE", "10"))
 
@@ -21,11 +21,11 @@ if config_env() == :prod do
 
   host = System.get_env("PHX_HOST", "example.com")
 
-  config :cdata_frontend, CDATAFrontendWeb.Endpoint,
+  config :cdata_frontend, CEDARFrontendWeb.Endpoint,
     secret_key_base: secret_key_base,
     url: [host: host, port: 4003]
 
-  config :cdata_frontend, CDATAFrontendWeb.Clients.BackendClient,
+  config :cdata_frontend, CEDARFrontendWeb.Clients.BackendClient,
     base_url: System.fetch_env!("BACKEND_URL"),
     timeout: 45_000
 end

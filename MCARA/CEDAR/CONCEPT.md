@@ -1,4 +1,4 @@
-# CEDAR — Centriolar Damage Accumulation Theory of Aging
+# CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
 **Version:** 1.0
@@ -6,7 +6,6 @@
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
 > **Status:** PhD dissertation (UNED tesis-por-compendio) + article in Biogerontology (ID 7cc6de62, peer review)
-
 
 ## The Centriole as a Morphogenetic Lock
 
@@ -28,7 +27,6 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
-
 ## Essence
 
 CEDAR is a theory according to which **centrioles accumulate entropy over time, like all material structures.** With divisions, the associated hypothetical structures of irreversible differentiation induction (CAMC) change. Additional structural disturbances are added to the centriole's entropy randomly. **Two independent processes:** time → entropy (passive); **asymmetric** divisions → CAMC change (active). Detachment of the irreversible differentiation inducer — only during asymmetric divisions.
@@ -36,7 +34,6 @@ CEDAR is a theory according to which **centrioles accumulate entropy over time, 
 ### Key components (C1/C2)
 - **C1:** The level of polyGlu (GT335) on the centriole correlates with the number of divisions
 - **C2:** The mother centriole is asymmetrically inherited (Ninein+ remains in the stem cell)
-
 
 ## 🔴 FUNDAMENTAL DISTINCTION: PHYSICAL vs CHEMICAL ELIMINATION OF CENTRIOLES (2026-07-09)
 
@@ -52,7 +49,6 @@ CEDAR is a theory according to which **centrioles accumulate entropy over time, 
 | **GENETIC** (AID-Plk4) | Degradation of Plk4 → no duplication | ✅ Similar to chemical | Hours-days |
 
 ### Experimental logic for separating "centriole vs CAMC":
-
 
 If PHYSICAL removal (laser)
    → cell reprograms (iPSC) =
@@ -71,7 +67,6 @@ If CHEMICAL elimination (centrinone)
 IF both methods give the SAME result
    → the centriole itself (its microtubules, organization) is important
    → CAMC is secondary
-
 
 ### CEDAR predictions:
 
@@ -212,8 +207,6 @@ Accumulation of damage in the centriole (D_c) causes 9 mechanisms of pathology:
 | **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas, humidity control ±2% RH) | **$9,500** |
 | **Office consumables** (printing, stationery) | **$500** |
 
-
-
 ## Hypothesis
 
 ## Methodology
@@ -228,14 +221,11 @@ Accumulation of damage in the centriole (D_c) causes 9 mechanisms of pathology:
 
 *To be specified — see CONCEPT.md §1 for project rationale.*
 
-
-
 ## References
 
 *See project MEMORY.md for reference history.*
 
 ## Linked subproject
-- **ERR/wp1_cedar** — EIC Pathfinder WP1 grant proposal
 
 ## 2026-08-02: New Evidence Integration
 
@@ -253,3 +243,21 @@ Recent back-to-back papers reveal a **two-tier quality control system** in haplo
 - H2Av foci should correlate with centriole damage markers
 - Double knockout (H2Av + CEP164) should show additive fertility defects
 - The centriolar "tu bulin code" determines whether a spermatid nucleus is retained or eliminated
+
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** De-risk before elimination, based on current evidence: slow the counter with NAC (antioxidant) and reversible-PTM re-cleaning (TTL re-tyrosination, CCP5/6 deglutamylation); segregate damage via asymmetric inheritance of the mother centriole into differentiating progeny (Yamashita, 2007; Royall, 2023—human NPCs); hemi-eliminate only the mother centriole (laser/PROTAC) to preserve duplication control and avoid p53-dependent G1 arrest (Meitinger, 2016); condition the cell (spare PLK4 centrioles, G1/S synchronization, proteostasis); select the least-damaged pool (FACS by low Δ2/polyGlu).
+**Step 2 (Eliminate).** Clear the old, damage-bearing centriole; restore telomeres (telomerase/ZSCAN4 via H3K14ac/H3K18ac; Meltzer, 2024); strip epigenetic marks (OSK/TET1-TET2-TDG; Lu, 2020—partial, lineage memory remains); select healthy mitochondria (PINK1-dependent mitophagy; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3: DUX4 opens cleavage-stage genes (Hendrickson, 2017), KDM4D removes the H3K9me3 reprogramming barrier, DPPA3 (Stella) stabilizes the totipotent (2C-like) state.
+**Step 4 (Rebuild).** Reassemble young centrioles de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) after full elimination (Khodjakov, 2002; Uetake, 2007); quality-control geometry (9-fold symmetry, triplets, length); derive safe, young adult stem cells (karyotype-verified, p53-restored).
+**Step 1 (Ladder).** De-risk before elimination: slow the counter, segregate damage, hemi-eliminate the mother centriole, condition the cell, select the least-damaged pool.
+**Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.

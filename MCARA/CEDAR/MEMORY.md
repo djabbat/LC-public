@@ -12,7 +12,7 @@
 - Format: Research Article — hypothesis + systematic synthesis + pre-registered protocol P1–P9 (Stage 1); no primary HSC data (declared).
 - References: APA 7, 128 entries, all authors expanded (35 entries fixed via PubMed API), 0 duplicates.
 - md2docx: new `--apa` flag (author–year citations, unnumbered refs), `##`→H2 (no Subtitle), Title 22pt — commits ff2cb7b5, 4eee16b4.
-- 18 peer-review cycles processed (scores 42–68/100); every actionable point implemented; emoji/AI markers/CDATA removed.
+- 18 peer-review cycles processed (scores 42–68/100); every actionable point implemented; emoji/AI markers/CEDAR removed.
 
 ### Lesson (context: two Research Square desk rejects 2026-08-07)
 - Research Square rejected pure-hypothesis/preprints (policy, not quality). bioRxiv accepts hypotheses with abstracts and manuscripts — submission went through.

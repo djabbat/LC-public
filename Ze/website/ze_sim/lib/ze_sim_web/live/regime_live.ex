@@ -1,6 +1,6 @@
 defmodule ZeSimWeb.RegimeLive do
   @moduledoc """
-  Ze Vectors Theory — v* Regime Selector (CDATA v6, 2026-04-06).
+  Ze Vectors Theory — v* Regime Selector (CEDAR v6, 2026-04-06).
 
   Allows the user to classify a system as passive or active, then displays
   the corresponding optimal Ze-velocity v* and explains the decision.
@@ -150,7 +150,7 @@ defmodule ZeSimWeb.RegimeLive do
   end
 
   defp active_examples("physical"),     do: ["Quantum measurement device", "Particle detector with threshold", "Interferometer"]
-  defp active_examples("biological"),   do: ["Human brain (HRV data: v*≈0.456)", "Immune system (antigen recognition)", "Stem cell niche (CDATA: τ_Z ≡ D_crit − D(t))"]
+  defp active_examples("biological"),   do: ["Human brain (HRV data: v*≈0.456)", "Immune system (antigen recognition)", "Stem cell niche (CEDAR: τ_Z ≡ D_crit − D(t))"]
   defp active_examples("computational"),do: ["Reinforcement learning agent", "Ze-Competition winner (Born rule)", "Bayesian predictor with resource constraint"]
   defp active_examples(_),              do: []
 

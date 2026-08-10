@@ -1,6 +1,6 @@
 # CEDAR Articles
 
-This directory contains scientific manuscripts, drafts, and publications related to the **Centriolar Damage Accumulation Theory (CEDAR)** and associated research lines.
+This directory contains scientific manuscripts, drafts, and publications related to the **Centriolar Entropy-Damage Accumulation Ratchet (CEDAR)** and associated research lines.
 
 ## Contents
 

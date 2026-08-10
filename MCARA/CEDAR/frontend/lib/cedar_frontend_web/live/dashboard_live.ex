@@ -1,7 +1,7 @@
-defmodule CDATAFrontendWeb.DashboardLive do
-  use CDATAFrontendWeb, :live_view
-  alias CDATAFrontendWeb.Clients.BackendClient
-  alias CDATAFrontendWeb.CoreComponents
+defmodule CEDARFrontendWeb.DashboardLive do
+  use CEDARFrontendWeb, :live_view
+  alias CEDARFrontendWeb.Clients.BackendClient
+  alias CEDARFrontendWeb.CoreComponents
 
   @impl true
   def mount(_params, _session, socket) do
@@ -12,7 +12,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
     socket =
       socket
       |> assign(
-        page_title: "CDATA Dashboard",
+        page_title: "CEDAR Dashboard",
         loading: true,
         concept: nil,
         parameters: [],
@@ -94,7 +94,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
     <CoreComponents.section title="Impact Statement">
       <div class="prose max-w-none">
         <p class="text-lg text-gray-700">
-          All existing clinical tools of biological age (GrimAge, DunedinPACE, PhenoAge) are diagnostic, not therapeutic. They answer "how fast are you aging?" but not "what exactly to stop?". CDATA is the only theory answering the second question through logical necessity: PTM degradation of centrioles. This transforms CDATA from an academic theory into a roadmap for developing the first class of anti-aging drugs with a specific molecular target—deglutamylases—which would not be identified by any empirical screening, as they are not part of any of the 12 Hallmarks of Aging and are not predicted by any existing aging theory.
+          All existing clinical tools of biological age (GrimAge, DunedinPACE, PhenoAge) are diagnostic, not therapeutic. They answer "how fast are you aging?" but not "what exactly to stop?". CEDAR is the only theory answering the second question through logical necessity: PTM degradation of centrioles. This transforms CEDAR from an academic theory into a roadmap for developing the first class of anti-aging drugs with a specific molecular target—deglutamylases—which would not be identified by any empirical screening, as they are not part of any of the 12 Hallmarks of Aging and are not predicted by any existing aging theory.
         </p>
       </div>
     </CoreComponents.section>
@@ -109,7 +109,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
           <p><%= @summary %></p>
         <% else %>
           <p>
-            CDATA (Centriolar Damage Accumulation Theory of Aging) is a mechanistic aging theory explaining organismal degradation as an inevitable consequence of PTM damage accumulation in stem cell mother centrioles.
+            CEDAR (Centriolar Entropy-Damage Accumulation Ratchet) is a mechanistic aging theory explaining organismal degradation as an inevitable consequence of PTM damage accumulation in stem cell mother centrioles.
           </p>
           <ul>
             <li><strong>32 parameters</strong> (reduced from 120)</li>
@@ -126,10 +126,10 @@ defmodule CDATAFrontendWeb.DashboardLive do
 
   defp axioms_section(assigns) do
     ~H"""
-    <CoreComponents.section title="CDATA Axioms — DO NOT MODIFY WITHOUT SPECIAL COMMAND">
+    <CoreComponents.section title="CEDAR Axioms — DO NOT MODIFY WITHOUT SPECIAL COMMAND">
       <div class="space-y-6">
         <p class="text-sm text-red-600 italic">
-          These three statements are the foundation of CDATA theory. They must not be changed, revised, or removed without explicit user command. They must be present in all LOIs, grants, papers, and public CDATA materials.
+          These three statements are the foundation of CEDAR theory. They must not be changed, revised, or removed without explicit user command. They must be present in all LOIs, grants, papers, and public CEDAR materials.
         </p>
         <div :for={axiom <- @axioms} class="space-y-4">
           <CoreComponents.axiom_card
@@ -186,7 +186,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
             <div class="ml-3">
               <h3 class="text-sm font-medium text-blue-800">MCAOA Framework</h3>
               <div class="mt-2 text-sm text-blue-700">
-                <p>CDATA is Counter #2 (Centriolar) in the Multi-Counter Architecture of Organismal Aging. Connection coefficient γ_CDATA = 0 (null hypothesis per CORRECTIONS §1.3).</p>
+                <p>CEDAR is Counter #2 (Centriolar) in the Multi-Counter Architecture of Organismal Aging. Connection coefficient γ_CEDAR = 0 (null hypothesis per CORRECTIONS §1.3).</p>
               </div>
             </div>
           </div>
@@ -225,7 +225,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
         </footer>
       </blockquote>
       <p class="mt-3 text-gray-600">
-        CDATA provides the first quantitative molecular mechanism for this hallmark: PTM accumulation in the mother centriole is the upstream driver of centrosome misorientation.
+        CEDAR provides the first quantitative molecular mechanism for this hallmark: PTM accumulation in the mother centriole is the upstream driver of centrosome misorientation.
       </p>
     </div>
     """
@@ -275,7 +275,7 @@ defmodule CDATAFrontendWeb.DashboardLive do
   defp mcoa_counters do
     [
       %{name: "Counter #1 (Telomeric)", weight: "w₁(tissue)", status: "Validated", status_type: "success"},
-      %{name: "Counter #2 (Centriolar) - CDATA", weight: "w₂(tissue)", status: "Phase 0", status_type: "warning"},
+      %{name: "Counter #2 (Centriolar) - CEDAR", weight: "w₂(tissue)", status: "Phase 0", status_type: "warning"},
       %{name: "Counter #3 (Epigenetic)", weight: "w₃(tissue)", status: "Planned", status_type: "info"},
       %{name: "Counter #4 (Proteostatic)", weight: "w₄(tissue)", status: "Planned", status_type: "info"}
     ]

@@ -167,7 +167,7 @@ De novo centriole assembly could, in principle, erase the damage clock. The CEDA
 
 ## §4 Team and capabilities
 
-**Principal Investigator:** Dr. Jaba Tqemaladze, MD (ORCID 0000-0001-8651-7243). Founder & President of the Georgia Longevity Alliance (NGO, reg. №404506520); originator of the Centriolar Damage Accumulation Theory of Aging (CEDAR, Counter #1 in MCARA). PubMed-verified self-citation foundation: Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (selective accumulation of old centrioles in stem cells over time; the conceptual parent of the present experiment).
+**Principal Investigator:** Dr. Jaba Tqemaladze, MD (ORCID 0000-0001-8651-7243). Founder & President of the Georgia Longevity Alliance (NGO, reg. №404506520); originator of the Centriolar Entropy-Damage Accumulation Ratchet (CEDAR, Counter #1 in MCARA). PubMed-verified self-citation foundation: Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 (selective accumulation of old centrioles in stem cells over time; the conceptual parent of the present experiment).
 
 **Architecture (revised 2026-05-12, integrated platform):** The experimental pipeline is described in full in the **Aubrey / ARGUS-LP** subproject document at `Aubrey/CONCEPT.md`. ARGUS-LP (AI-Resident Robotic Genealogical Ultra-surveillance for Lineage Purification) is the Phase A capital instrument — a retrofit of the PI's existing Zeiss IM 35 microscope at the GLA Abastumani host facility, operated 24/7 by a Claude-class AI agent in operator-approved mode (every 405 nm ablation shot confirmed by the human operator). The previously-separate sibling subprojects `ImagingControl` and `AnalysisStack` have been merged into the Aubrey CONCEPT and archived under `_archive/merged-into-Aubrey-2026-05-12/`.
 
@@ -360,7 +360,7 @@ Before data collection:
 | **Address** | 42 Rustaveli, Resort Abastumani, Georgia |
 | **Email** | jaba@longevity.ge |
 | **Background** | MD Tbilisi State Medical University; clinical residency Institute of Psychiatry Tbilisi |
-| **Theoretical contribution** | Originator of CEDAR (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
+| **Theoretical contribution** | Originator of CEDAR (Centriolar Entropy-Damage Accumulation Ratchet), Counter #1 в MCARA |
 
 **Note:** This PI applies к ALL projects under GLA/LC umbrella unless explicitly overridden. Replace any `[TODO: PI name]`, `Lead PI: TBD`, `Principal Investigator: TBD` placeholders с этим блоком.
 

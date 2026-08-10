@@ -1,6 +1,6 @@
 # CEDAR Backend
 
-Centriolar Damage Accumulation Theory of Aging backend implementation for LC project.
+Centriolar Entropy-Damage Accumulation Ratchet backend implementation for LC project.
 
 ## Overview
 

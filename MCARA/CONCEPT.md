@@ -1,6 +1,5 @@
 # MCARA — Multi-Counter Architecture of Replicative Aging
 
-
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
 **Version:** v4.7 — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
@@ -29,7 +28,6 @@ A critic might argue: centriole elimination drives differentiation (Renzova 2018
 The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
-
 
 ## 0. The Centriole as a Gatekeeper of Cell State
 
@@ -137,16 +135,15 @@ Application of Bradford Hill criteria to the hypothesis of asymmetric centriole 
 | 5 | p53 control | p53 shRNA + Plk4 siRNA → OSKM |
 | 6 | Ciliogenesis control | IFT88 shRNA → OSKM (blocks cilium, preserves centriole) |
 | 7 | Off-target PLK4 control | STIL shRNA → OSKM (alternative centriole removal) |
-| 8 | 🔑 Totipotency control | Centrinone + DUX4 + TPRX1 → MERVL/Zscan4 (checks totipotency, not pluripotency) |
+| 8 | 🔑 Totipotency control | Centrinone + DUX4 + KDM4D + DPPA3 → MERVL/Zscan4 (checks totipotency, not pluripotency) |
 
 **Prediction (pluripotency, range):** Centriole elimination → reprogramming efficiency ↑ 1.5–10× vs control. Lower bound (1.5×): even modest excess indicates centriolar contribution to barrier. Upper bound (10×): achievable with complete p53/p38 stress relief and optimal conditions. Specific factor depends on cell type, elimination method, and p53 suppression efficiency.
-**Hypothesis (totipotency, 2026-07-12; edited 2026-07-17):** Centriole = **two modes:** (1) passive entropy accumulator — basis of multicellular animal aging; (2) active differentiation regulator — tool for irreversible gene network switching (CAMC, NANOG, cilium). **Entropy — not a ratchet. Ratchet — gene network switching.** Centriole — instrument of this switching. OSKM reloads software (epigenome), but not hardware (centriole). Complete centriole elimination lifts physical differentiation lock. Three steps: **Eliminate → Reprogram → Rebuild** — as in nature during fertilization.
 
 > **⚠️ DID-RNA — speculative model (2026-07-17).** Hypothesis about DID as RNA that integrates into genome via reverse transcription lacks experimental data. Main CEDAR hypothesis (centriole = hardware barrier) is independent of DID-RNA and tested separately. DID-RNA remains interesting, but unconfirmed speculation.
 
 **Predictions:**
 1. OSKM after elimination → 1.5–10× efficiency (range).
-2. Totipotency factors (DUX4 + TPRX1) after elimination → potentially totipotent state with MERVL+, Zscan4+, CDX2+. Markers: MERVL, Zscan4, Hhex (mouse); TPRX1, ZSCAN4, DUX4 (human).
+2. Totipotency factors (DUX4 + KDM4D + DPPA3) after elimination → potentially totipotent state with MERVL+, Zscan4+, CDX2+. Markers: MERVL, Zscan4, Hhex (mouse); TPRX1, ZSCAN4, DUX4 (human).
 3. In nature, totipotency always accompanies centriole elimination — oocyte clears centrioles, sperm brings seeds for de novo assembly (Schatten & Sun 2011, PMID 21509822; Avidor-Reiss & Fishman 2022).
 **Falsification:** If ≤ control → hypothesis disproven.
 
@@ -174,10 +171,8 @@ See full description in CONCEPT v4.4. Includes: track-by-track intervention, int
 
 ### Counter Kinetics (Linear Approximation)
 
-
 S_centriole(t) = S₀ + β·t + η(t) − δ·CCP(t)
 CAMC(N) = CAMC₀ − λ·N_asym
-
 
 - β·t — time-dependent entropy
 - η(t) — oxidative damage
@@ -186,10 +181,8 @@ CAMC(N) = CAMC₀ − λ·N_asym
 
 ### Sigmoidal Model (Biologically More Realistic)
 
-
 S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
 d[E]/dt = k_E · [Stress] − k_CCP · [CCP] · [E]
-
 
 Threshold t½ — point of polyE accumulation acceleration, potentially corresponding to the onset of replicative senescence.
 
@@ -249,7 +242,6 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 | **Microscopy** (immersion oil, coverslips, lens cleaning) | **$2,000** |
 | **Glove-box/Enclosure** (HEPA H13 filters, UV-C lamps, gloves, seals, N₂ gas, humidity control ±2% RH) | **$9,500** |
 | **Office consumables** (printing, stationery) | **$500** |
-
 
 ## 7. Testable Predictions (Table 4 from the article)
 
@@ -330,7 +322,6 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 
 *To be specified — see CONCEPT.md §1 for project rationale.*
 
-
 ## Methodology
 
 **Power analysis:** Multi-counter architecture simulation power validated through Monte Carlo sampling (n≥10,000 iterations). Effect size detectable at Cohen's d ≥0.3 with α=0.05.
@@ -341,7 +332,32 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 
 **Limitations:** (1) In silico only — experimental validation pending. (2) Counter interactions simplified to pairwise — higher-order interactions not modelled. (3) Parameter space exploration limited to biologically plausible ranges.
 
-
 ## References
 
 *See project MEMORY.md for reference history.*
+
+## Geometric centriole counter (v0.5, 2026-08-08)
+
+Centriole damage accumulates by TWO parallel mechanisms:
+1. **Chemical (PTM):** Δ2-tubulin, C-terminal truncation, excess polyglutamylation — no functional reverse enzyme (provisional; TTL cannot re-tyrosinate Δ2; Szyk 2011; Aillaud 2017).
+2. **Geometric (spatial):** daughter centrioles assemble at the mother's proximal surface; geometry is inherited as a boundary condition WITHOUT proofreading (Wang 2014; Albrecht-Buehler 1990; Panda 2024). Ornstein–Uhlenbeck transmission α≈0.97; steady-state variance σ²/(1−α²).
+
+**Asymmetric-division amplifier:** in stem-cell compartments (HSC, fibroblast, CD8 T-memory), the OLDEST centriole is retained by the stem daughter (Yamashita 2007; Wang 2009). Retained centrioles accumulate faster (α_eff→0.985, retention boost ×1.6), degrading primary-cilium competence (threshold 0.30; Ishikawa 2005) and centrosome/MTOC function (threshold 0.60; Manning 2010) — driving stem-cell exhaustion. The two mechanisms are captured in `mcara_simulation::CentrioleGeometry` (OU model) plus the existing PTM drift.
+
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** De-risk before elimination, based on current evidence: slow the counter with NAC (antioxidant) and reversible-PTM re-cleaning (TTL re-tyrosination, CCP5/6 deglutamylation); segregate damage via asymmetric inheritance of the mother centriole into differentiating progeny (Yamashita, 2007; Royall, 2023—human NPCs); hemi-eliminate only the mother centriole (laser/PROTAC) to preserve duplication control and avoid p53-dependent G1 arrest (Meitinger, 2016); condition the cell (spare PLK4 centrioles, G1/S synchronization, proteostasis); select the least-damaged pool (FACS by low Δ2/polyGlu).
+**Step 2 (Eliminate).** Clear the old, damage-bearing centriole; restore telomeres (telomerase/ZSCAN4 via H3K14ac/H3K18ac; Meltzer, 2024); strip epigenetic marks (OSK/TET1-TET2-TDG; Lu, 2020—partial, lineage memory remains); select healthy mitochondria (PINK1-dependent mitophagy; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3: DUX4 opens cleavage-stage genes (Hendrickson, 2017), KDM4D removes the H3K9me3 reprogramming barrier, DPPA3 (Stella) stabilizes the totipotent (2C-like) state.
+**Step 4 (Rebuild).** Reassemble young centrioles de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) after full elimination (Khodjakov, 2002; Uetake, 2007); quality-control geometry (9-fold symmetry, triplets, length); derive safe, young adult stem cells (karyotype-verified, p53-restored).
+**Step 1 (Ladder).** De-risk before elimination: slow the counter, segregate damage, hemi-eliminate the mother centriole, condition the cell, select the least-damaged pool.
+**Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
+**Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.

@@ -1,4 +1,4 @@
-defmodule CDATAFrontendWeb.CoreComponents do
+defmodule CEDARFrontendWeb.CoreComponents do
   use Phoenix.Component
 
   attr :type, :string, default: nil

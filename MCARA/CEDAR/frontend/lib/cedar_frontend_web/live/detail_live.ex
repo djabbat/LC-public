@@ -1,7 +1,7 @@
-defmodule CDATAFrontendWeb.DetailLive do
-  use CDATAFrontendWeb, :live_view
-  alias CDATAFrontendWeb.Clients.BackendClient
-  alias CDATAFrontendWeb.CoreComponents
+defmodule CEDARFrontendWeb.DetailLive do
+  use CEDARFrontendWeb, :live_view
+  alias CEDARFrontendWeb.Clients.BackendClient
+  alias CEDARFrontendWeb.CoreComponents
 
   @impl true
   def mount(%{"entity_type" => "parameters", "entity_id" => "all"}, _session, socket) do
@@ -116,7 +116,7 @@ defmodule CDATAFrontendWeb.DetailLive do
       <div class="md:flex md:items-center md:justify-between">
         <div class="flex-1 min-w-0">
           <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-            All CDATA Parameters (32 parameters)
+            All CEDAR Parameters (32 parameters)
           </h2>
           <p class="mt-2 text-sm text-gray-600">
             Reduced model from 120 parameters via identifiability, sensitivity, and biological plausibility criteria
@@ -179,7 +179,7 @@ defmodule CDATAFrontendWeb.DetailLive do
                 </div>
                 <div class="mt-6 pt-6 border-t border-yellow-200">
                   <p class="text-sm text-yellow-700 italic">
-                    This axiom must not be changed, revised, or removed without explicit user command. It must be present in all LOIs, grants, papers, and public CDATA materials.
+                    This axiom must not be changed, revised, or removed without explicit user command. It must be present in all LOIs, grants, papers, and public CEDAR materials.
                   </p>
                 </div>
               </div>
@@ -237,7 +237,7 @@ defmodule CDATAFrontendWeb.DetailLive do
           </p>
           <p class="mt-2">
             <strong>Key findings:</strong> Parameters with Sᵢ > 0.1 are primary drivers of model behavior.
-            CDATA model reduction preserved parameters with highest total-order indices.
+            CEDAR model reduction preserved parameters with highest total-order indices.
           </p>
         </div>
       </div>

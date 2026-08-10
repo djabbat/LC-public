@@ -13,7 +13,7 @@ MCARA/
 ├── CONCEPT.md            ← this document (umbrella concept)
 ├── MASTER.md             ← this file (cross-references)
 ├── crates/mcara_*/        ← common crates (core, api, cli, simulation, compare, tests)
-├── CEDAR/                ← Centriolar Damage Accumulation Theory of Aging
+├── CEDAR/                ← Centriolar Entropy-Damage Accumulation Ratchet
 │   ├── CellLineageTree/  ← cell lineage reconstruction
 │   ├── Aubrey/           ← ARGUS-LP (article)
 │   └── articles/         ← publications
