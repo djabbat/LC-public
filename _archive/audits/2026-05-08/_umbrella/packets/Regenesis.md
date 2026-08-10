@@ -154,7 +154,7 @@ A luxury integrative medicine brand built on:
 - 14 phytomedicinal protocols (`Materials/Recepturae/`, Latin names)
 - Clinical device protocols (CO2 laser, RF micro-needling)
 - Nutrition and breathing protocols
-- Stem cell rejuvenation theory (connected to CDATA)
+- Stem cell rejuvenation theory (connected to CEDAR)
 
 ---
 
@@ -256,7 +256,7 @@ Pinekan — функциональный фитобальзам ручного �
 - Нутрициологические протоколы
 - Косметологические и антивозрастные процедуры
 
-Бренд работает на пересечении древней природной медицины и передовых исследований клеточной биологии (CDATA — центриолярная теория старения). Все протоколы разработаны д-ром Ткемаладзе и предназначены для клинического применения.
+Бренд работает на пересечении древней природной медицины и передовых исследований клеточной биологии (CEDAR — центриолярная теория старения). Все протоколы разработаны д-ром Ткемаладзе и предназначены для клинического применения.
 
 ---
 
@@ -278,7 +278,7 @@ Pinekan — функциональный фитобальзам ручного �
 
 ### Трек B — Интегративные протоколы (авторская методика)
 
-Практики, разработанные д-ром Ткемаладзе на основе клинического опыта, традиционных знаний и новых научных гипотез (CDATA). Эти методы предлагаются как дополнительные подходы, а не замена стандартной медицинской помощи.
+Практики, разработанные д-ром Ткемаладзе на основе клинического опыта, традиционных знаний и новых научных гипотез (CEDAR). Эти методы предлагаются как дополнительные подходы, а не замена стандартной медицинской помощи.
 
 | Файл | Протокол | Ключевое действие |
 |------|----------|-------------------|
@@ -355,9 +355,9 @@ Pinekan — функциональный фитобальзам ручного �
 
 ---
 
-## CDATA и исследования стволовых клеток — раскрытие статуса
+## CEDAR и исследования стволовых клеток — раскрытие статуса
 
-Научный фундамент Regenesis включает текущие исследования центриолярной теории старения (CDATA) и трансплантации молодых стволовых клеток (YSSC).
+Научный фундамент Regenesis включает текущие исследования центриолярной теории старения (CEDAR) и трансплантации молодых стволовых клеток (YSSC).
 
 **Текущий статус:**
 - **Исследования in vitro:** Активны
@@ -505,7 +505,7 @@ Regenesis (protocols hub)
     |   Nutrition protocol          → dietary recommendations in patient records
     |   108 Spirationes             → Ze biofeedback integration (planned)
     |
-    |--[centrosomal aging theory]--> CDATA
+    |--[centrosomal aging theory]--> CEDAR
     |   Young stem cell basis        → scientific foundation for rejuvenation claims
     |   Centriole biology            → aging biomarkers
     |
@@ -602,7 +602,7 @@ Regenesis (бренд)
 └── Pinekan (фитоаптека)
     ├── WLRAbastumani (клиника, точка продаж)
     ├── drjaba.com (интернет-магазин)
-    └── CDATA (научный контекст: Ze-статус, антивозрастной трек)
+    └── CEDAR (научный контекст: Ze-статус, антивозрастной трек)
 ```
 
 ---
@@ -946,7 +946,7 @@ Connection to ZeAnastasis: this breathing protocol is a candidate for the Ze bio
 
 ## Stem Cell Theory (Regenesis Scientific Foundation)
 
-Based on Tqemaladze's centriole aging theory (CDATA):
+Based on Tqemaladze's centriole aging theory (CEDAR):
 - Stem cells accumulate old centrioles with each division (asymmetric inheritance)
 - Old centrioles → impaired spindle function → asymmetric division defects
 - Net effect: stem cell pool ages → organ regeneration capacity declines
@@ -1183,7 +1183,7 @@ Version tracking: Protocollum_Nutritionis is v. 09.03.2026 (expanded).
 
 1. PMID 36583780 — https://pubmed.ncbi.nlm.nih.gov/36583780/
 2. PMID 20480236 — https://pubmed.ncbi.nlm.nih.gov/20480236/
-3. Zenodo CDATA — https://doi.org/10.5281/zenodo.19174506
+3. Zenodo CEDAR — https://doi.org/10.5281/zenodo.19174506
 4. Zenodo Ze — https://doi.org/10.5281/zenodo.19174630
 
 ---

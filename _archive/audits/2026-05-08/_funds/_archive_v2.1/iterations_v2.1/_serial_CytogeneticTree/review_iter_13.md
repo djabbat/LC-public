@@ -6,7 +6,7 @@
 ## Scores (1-5)
 - **Premise:** 4 – Ambitious and scientifically interesting, but reliance on unproven centriole-age universality weakens the foundation.
 - **Method:** 3 – RITE construct does not exist; closed-loop pipeline is aspirational; some components are off-the-shelf but integration risk is high.
-- **Evidence:** 2 – Literature base is broad but contaminated with unverified/fabricated references; internal evidence (CDATA) is not independently validated.
+- **Evidence:** 2 – Literature base is broad but contaminated with unverified/fabricated references; internal evidence (CEDAR) is not independently validated.
 - **Falsifiability:** 3 – Numeric thresholds present but incoherent across sections (N=24 vs N=43, α=0.001 vs α=0.05). After cleaning, could be strong.
 - **Deliv:** 2 – Timeline is optimistic (6-month RITE cloning, 6-month main experiment); consortium is >80% placeholder; budget appears insufficient for stated scope.
 - **Novelty:** 5 – Intersection of centriole-age labelling, full-lineage DAG reconstruction, and RITE-on-centrioles is genuinely first.

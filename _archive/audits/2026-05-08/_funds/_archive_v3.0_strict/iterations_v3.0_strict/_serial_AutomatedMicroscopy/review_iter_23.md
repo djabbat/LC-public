@@ -100,7 +100,7 @@
 | 13 | Bran et al. (2024) Nat Mach Intell | 10.1038/s42256-024-00832-8 | Да | Да | OK |
 | 14 | [Author(s), Year, Journal, DOI TBD] — AI-assisted microscopy | TBD | Нет | Нет | **FABRICATION MARKER** |
 | 15 | [Author(s), Year, Journal, DOI TBD] — Low-cost retrofit | TBD | Нет | Нет | **FABRICATION MARKER** |
-| 16 | [Author(s), Year, Journal, DOI TBD] — CDATA protocol | TBD | Нет | Нет | **FABRICATION MARKER** |
+| 16 | [Author(s), Year, Journal, DOI TBD] — CEDAR protocol | TBD | Нет | Нет | **FABRICATION MARKER** |
 | 17 | Placeholder: OpenTrons, µManager | — | Нет | Нет | **PLACEHOLDER** |
 
 ## Evidence depth audit (новое v3.0)

@@ -156,7 +156,7 @@ Placeholder list потенциальных партнёров с указани
 | Plateau guard | ❌ отключён (до v2.0 был 6 итераций) |
 | Safety cap | 50 итераций на компонент |
 | UNKNOWN verdict | auto-retry той же итерации |
-| Порядок | AutomatedMicroscopy → AIM → CytogeneticTree → BioSense → Telomere → MitoROS → EpigeneticDrift → Proteostasis → CDATA → MCAOA → Ze → HAP → UMBRELLA |
+| Порядок | AutomatedMicroscopy → AIM → CytogeneticTree → BioSense → Telomere → MitoROS → EpigeneticDrift → Proteostasis → CEDAR → MCAOA → Ze → HAP → UMBRELLA |
 
 Watcher (`/tmp/audit_funds_overnight.sh`) циклит проходы 1 → 2 → 3 → ... до `touch /tmp/STOP_AUDIT_FUNDS`.
 

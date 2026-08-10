@@ -1,6 +1,6 @@
 import Config
 
-config :cdata_frontend, CDATAFrontendWeb.Endpoint,
+config :cdata_frontend, CEDARFrontendWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -9,7 +9,7 @@ config :cdata_frontend, CDATAFrontendWeb.Endpoint,
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
-config :cdata_frontend, CDATAFrontendWeb.Endpoint,
+config :cdata_frontend, CEDARFrontendWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
@@ -17,7 +17,7 @@ config :cdata_frontend, CDATAFrontendWeb.Endpoint,
     ]
   ]
 
-config :cdata_frontend, CDATAFrontend.Repo,
+config :cdata_frontend, CEDARFrontend.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

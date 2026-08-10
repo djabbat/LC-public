@@ -1,7 +1,7 @@
 defmodule McoaWebWeb.DashboardLive do
   @moduledoc """
   MCAOA counter dashboard. Selects a tissue, runs a simulation via the mcaoa-api backend, and shows
-  per-counter trajectories with a live MCAOA-vs-CDATA residual panel (per project comparison rule).
+  per-counter trajectories with a live MCAOA-vs-CEDAR residual panel (per project comparison rule).
   """
   use McoaWebWeb, :live_view
 
@@ -29,7 +29,7 @@ defmodule McoaWebWeb.DashboardLive do
          |> assign(:records, records)
          |> assign(:tissue, tissue)
          |> assign(:divisions, n_int)
-         |> assign(:residual_label, "MCAOA run complete — pair with CDATA for Δ")}
+         |> assign(:residual_label, "MCAOA run complete — pair with CEDAR for Δ")}
 
       {:error, reason} ->
         {:noreply, put_flash(socket, :error, "Simulation failed: #{reason}")}
@@ -81,7 +81,7 @@ defmodule McoaWebWeb.DashboardLive do
       <% end %>
 
       <p class="mt-6 text-xs text-gray-500">
-        Every MCAOA run should be paired with a CDATA run via
+        Every MCAOA run should be paired with a CEDAR run via
         <code>scripts/compare_mcaoa_cedar.py</code> (mandatory rule).
       </p>
     </div>

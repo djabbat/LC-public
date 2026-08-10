@@ -100,7 +100,7 @@ Path: `/home/oem/Desktop/LC/MCAOA`  Date: 2026-05-08
 
 | # | Name | Subproject | Status |
 |---|---|---|---|
-| 1 | Centriolar | `CDATA/` | Counter #1 (active) — only counter с experimental data; C2 подтверждена у двух типов клеток |
+| 1 | Centriolar | `CEDAR/` | Counter #1 (active) — only counter с experimental data; C2 подтверждена у двух типов клеток |
 | 2 | Telomere | `Telomere/` | active-development; concept-stage код, Rust crate scaffolded |
 | 3 | MitoROS | `MitoROS/` | active-development; concept-stage код, Rust crate scaffolded |
 | 4 | EpigeneticDrift | `EpigeneticDrift/` | active-development; concept-stage код, Rust crate scaffolded |
@@ -140,7 +140,7 @@ Path: `/home/oem/Desktop/LC/MCAOA`  Date: 2026-05-08
 ```md
 # MCAOA — Мультисчётная Архитектура Старения Организма
 
-**MCAOA** — это теоретический мета-фреймворк, формализующий старение организма как взвешенную сумму нескольких параллельных процессов накопления повреждений («счётчиков»). Каждый счётчик имеет собственную кинетику, зависящую от делений клеток и хронологического времени, и фиксированные *априорные* весовые коэффициенты для каждой ткани, что обеспечивает фальсифицируемость. MCAOA не заменяет специфические подпроекты (CDATA, Ze, BioSense), а предоставляет общий формальный язык и архитектуру для их интеграции.
+**MCAOA** — это теоретический мета-фреймворк, формализующий старение организма как взвешенную сумму нескольких параллельных процессов накопления повреждений («счётчиков»). Каждый счётчик имеет собственную кинетику, зависящую от делений клеток и хронологического времени, и фиксированные *априорные* весовые коэффициенты для каждой ткани, что обеспечивает фальсифицируемость. MCAOA не заменяет специфические подпроекты (CEDAR, Ze, BioSense), а предоставляет общий формальный язык и архитектуру для их интеграции.
 
 ## Основные принципы
 
@@ -151,7 +151,7 @@ Path: `/home/oem/Desktop/LC/MCAOA`  Date: 2026-05-08
 
 ## Ключевые компоненты
 
-1.  **Канонические счётчики:** MCAOA определяет пять основных счётчиков: (1) центриолярная полиглутамилизация (CDATA), (2) теломеры, (3) митохондриальные ROS/мтДНК, (4) эпигенетический дрейф, (5) коллапс протеостаза.
+1.  **Канонические счётчики:** MCAOA определяет пять основных счётчиков: (1) центриолярная полиглутамилизация (CEDAR), (2) теломеры, (3) митохондриальные ROS/мтДНК, (4) эпигенетический дрейф, (5) коллапс протеостаза.
 2.  **Формализм:** Повреждение для счётчика `i` описывается как `D_i(n, t) = D_i₀ + α_i·(n/n_i*) + β_i·(t/τ_i) + γ_i·I(others)`. Общая нагрузка на ткань: `L_tissue = Σ_i [ w_i(tissue) · f_i(D_i(n, t)) ]`.
 3.  **Матрица связей (Γ):** Определяет, как один счётчик ускоряет другой (например, окислительный стресс ускоряет укорочение теломер). Элементы Γ должны измеряться, а не подгоняться. По умолчанию `γ_i = 0` (гипотеза независимости).
 4.  **Функциональный переход:** Клетка входит в состояние сенесценции, апоптоза или дисфункции при превышении `L_tissue > L_critical(tissue)` или `D_i > D_critical(i, tissue)`.
@@ -201,7 +201,7 @@ Open http://localhost:4000 — dashboard with tissue selector and counter trajec
 ## Scope (v0.2)
 
 - `DashboardLive` — tissue × divisions selector, per-counter table.
-- TODO: `ComparisonLive` — MCAOA vs CDATA side-by-side plot, residual panel (consumes the same
+- TODO: `ComparisonLive` — MCAOA vs CEDAR side-by-side plot, residual panel (consumes the same
   `compare_mcoa_cdata.py` logic on the server side).
 - TODO: LiveView hooks for Chart.js trajectories.
 
@@ -250,7 +250,7 @@ This is the backend service for the MCAOA (Multi-Counter Architecture of Organis
 
 MCAOA is the theoretical mother-project of the LC aging-science stack. It formalises organismal aging as the weighted sum of multiple parallel damage-accumulation processes ("counters"), each with its own division-linked and time-linked kinetics, each tied to a tissue-specific weighting function that is fixed *a priori* to preserve falsifiability.
 
-MCAOA is **not** a replacement for CDATA, Ze, or BioSense; it is the meta-framework in which they live as specialised counters or measurement layers.
+MCAOA is **not** a replacement for CEDAR, Ze, or BioSense; it is the meta-framework in which they live as specialised counters or measurement layers.
 
 ---
 
@@ -305,7 +305,7 @@ A cell enters senescence, apoptosis, or dysfunction when:
 
 | # | Name | Subproject | Nature | *n_i\** anchor | *τ_i* anchor |
 |---|------|------------|--------|----------------|--------------|
-| **1** | **Centriolar polyglutamylation** | CDATA | division + time | ~50–80 for HSC, ~30–50 for epithelial | months–years (mass-spec to calibrate) |
+| **1** | **Centriolar polyglutamylation** | CEDAR | division + time | ~50–80 for HSC, ~30–50 for epithelial | months–years (mass-spec to calibrate) |
 | **2** | **Telomere** | Telomere (new subproject) | division-dominant | Hayflick limit per cell type (~50 for human fibroblasts) | turnover of telomeric repeats |
 | **3** | **Mitochondrial ROS / mtDNA** | MitoROS (new subproject) | time-dominant | α → 0 for post-mitotic | days–weeks for mtDNA lesion turnover |
 | **4** | **Epigenetic drift** | EpigeneticDrift (new subproject) | time-dominant | α → 0 for post-mitotic | Horvath clock / DunedinPACE doubling time |
@@ -348,7 +348,7 @@ Test 4 is the near-term priority.
 
 | Subproject | MCAOA role |
 |------------|-----------|
-| CDATA | Counter #1 (centriolar polyglutamylation) — specialised instance |
+| CEDAR | Counter #1 (centriolar polyglutamylation) — specialised instance |
 | Ze | Counter "S" — dimensionless χ_Ze synchronisation index computed from an ODE model of the plasma/SASP feedback loop (see `Ze/CONCEPT.md` §4, rewritten 2026-04-23 on Argentieri 2024 / Jeon 2022 basis) |
 | BioSense | Measurement layer for *D_autonomic*, *D_neural*, *D_olfactory* |
 | FCLC | Federated calibration of *w_i(tissue)* across clinics |
@@ -361,7 +361,7 @@ Test 4 is the near-term priority.
 
 - [x] Nature Aging Perspective manuscript ready (`~/Documents/MCOA_NatureAging_submission/`)
 - [ ] Rust reference implementation (`mcoa_core`, `mcoa_simulation`) compiling and tested
-- [ ] At least one MCAOA Test 4 simulation run, output comparable to CDATA v5.1
+- [ ] At least one MCAOA Test 4 simulation run, output comparable to CEDAR v5.1
 - [ ] 3-figure visualisation (Fig 1–3 already produced for Perspective)
 - [ ] Submission to *Nature Aging* by 2026-04-25
 
@@ -387,15 +387,15 @@ Test 4 is the near-term priority.
 
 MCAOA является **WP1 MCAOA Framework** в текущей заявке EIC Pathfinder Open.
 
-**Цель WP1:** формализовать MCAOA как операциональный стандарт для интеграции моделей клеточного/организменного старения. Результат — software library + community white paper + dimensional transformation functions `f_i(D_i)` для ключевых counters (CDATA, telomere, epigenetic clock drift).
+**Цель WP1:** формализовать MCAOA как операциональный стандарт для интеграции моделей клеточного/организменного старения. Результат — software library + community white paper + dimensional transformation functions `f_i(D_i)` для ключевых counters (CEDAR, telomere, epigenetic clock drift).
 
 **Duration:** M1-M12 (первые 12 месяцев проекта)
 **Budget:** €0.3M (1 postdoc + 0.5 PhD)
 **TRL target:** 2 → 3
 
 **Связь с другими WP:**
-- **WP2 CDATA Experimental:** использует MCAOA dimensional framework для интерпретации in vivo результатов
-- **WP3 CDATA Computational:** использует MCAOA coupling параметры для Bayesian model comparison (ABL-2 resolution)
+- **WP2 CEDAR Experimental:** использует MCAOA dimensional framework для интерпретации in vivo результатов
+- **WP3 CEDAR Computational:** использует MCAOA coupling параметры для Bayesian model comparison (ABL-2 resolution)
 - **WP4 FCLC Platform:** использует MCAOA counter registry для federated model aggregation schema
 
 **Обязательства (после WP1 завершения):**
@@ -421,9 +421,9 @@ MCAOA строится на принципах **плюрализма механ
 
 **Аксиома M2 (Размерная согласованность).** В кинетическом уравнении счётчика недопустимо прямое сложение членов, зависящих от числа делений (`n`) и хронологического времени (`t`), без приведения к общей безразмерной форме. Каноническая форма:
 `D_i(n, t) = D_i₀ + α_i · (n / n_i*) + β_i · (t / τ_i) + γ_i · I(other counters)`.
-Здесь `n_i*` (референтное число делений) и `τ_i` (референтное время) — константы, *априорно* фиксируемые для каждого счётчика на основе клеточной биологии (например, `n_i*` = лимит Хейфлика для теломерного счётчика в фибробластах; `τ_i` = период полураспада тубулина для CDATA). Это гарантирует, что `α_i` и `β_i` становятся безразмерными *интенсивностями* повреждения на одну единицу нормированной шкалы.
+Здесь `n_i*` (референтное число делений) и `τ_i` (референтное время) — константы, *априорно* фиксируемые для каждого счётчика на основе клеточной биологии (например, `n_i*` = лимит Хейфлика для теломерного счётчика в фибробластах; `τ_i` = период полураспада тубулина для CEDAR). Это гарантирует, что `α_i` и `β_i` становятся безразмерными *интенсивностями* повреждения на одну единицу нормированной шкалы.
 
-**Аксиома M3 (Априорное весовое взвешивание тканей).** Вес `w_i(tissue)`, определяющий вклад счётчика `i` в общую нагрузку ткани, должен быть предсказан ДО процедуры фиттинга модели к экспериментальным данным по старению. Прогноз основывается на независимых клеточно-тканевых параметрах: базальная скорость делений, метаболическая интенсивность, время полужизни основного субстрата счётчика, экспрессия релевантных генов (напр., TERT для теломер, TTLL/CCP для CDATA), содержание митохондрий. Любая пост-фактумная корректировка `w_i` для улучшения согласия с данными рассматривается как корректировка модели, а не её предсказание, и должна быть явно задекларирована как гипотеза для следующего цикла проверки.
+**Аксиома M3 (Априорное весовое взвешивание тканей).** Вес `w_i(tissue)`, определяющий вклад счётчика `i` в общую нагрузку ткани, должен быть предсказан ДО процедуры фиттинга модели к экспериментальным данным по старению. Прогноз основывается на независимых клеточно-тканевых параметрах: базальная скорость делений, метаболическая интенсивность, время полужизни основного субстрата счётчика, экспрессия релевантных генов (напр., TERT для теломер, TTLL/CCP для CEDAR), содержание митохондрий. Любая пост-фактумная корректировка `w_i` для улучшения согласия с данными рассматривается как корректировка модели, а не её предсказание, и должна быть явно задекларирована как гипотеза для следующего цикла проверки.
 
 **Аксиома M4 (Фальсифицируемость как принцип первого порядка).** Любое утверждение, дедуктивно выведенное из MCAOA, должно сопровождаться описанием практически выполнимого экспериментального теста, результат которого может это утверждение опровергнуть. Наличие таких тестов является обязательным атрибутом завершённой теоретической конструкции в рамках MCAOA.
 
@@ -442,7 +442,7 @@ MCAOA строится на принципах **плюрализма механ
 *   `γ_i`: Скаляр связи. Определяет силу влияния других счётчиков на скорость накопления повреждения в счётчике `i`. `γ_i ∈ ℝ`. **Каноническое значение по умолчанию:** `γ_i = 0` (гипотеза независимости). Отклонение от нуля требует статистического обоснования на данных.
 *   `I(other counters)`: Функция влияния. Простейшая линейная форма: `I = Σ_{j≠i} (Γ_{ij} · D_j / D_j_crit)`, где `Γ_{ij}` — безразмерный элемент матрицы связей, `D_j_crit` — критическое значение повреждения для счётчика `j`. Могут быть предложены нелинейные формы.
 *   `n_i*`: Референтное число делений для счётчика `i`. Фиксируется *априорно* (напр., лимит Хейфлика для данного типа клеток).
-*   `τ_i`: Референтная временная шкала для счётчика `i`. Фиксируется *априорно* (напр., время полужизни тубулина для CDATA, константа дрейфа эпигенетических часов).
+*   `τ_i`: Референтная временная шкала для счётчика `i`. Фиксируется *априорно* (напр., время полужизни тубулина для CEDAR, константа дрейфа эпигенетических часов).
 
 ### 3.2. Интегрированная нагрузка на ткань
 
@@ -463,7 +463,7 @@ MCAOA строится на принципах **плюрализма механ
 
 | # | Название | Проект | Природа | `n_i*` (якорь) | `τ_i` (якорь) | Комментарий |
 |---|----------|--------|---------|----------------|---------------|-------------|
-| 1 | **Центриолярная полиглутамилизация (CP)** | CDATA | Деления + Время | ~50–80 (для HSC), ~30–50 (для эпителия) | Месяцы–годы (калибруется по масс-спектрометрии) | Структурный счётчик асимметричного наследования. `α_i` значим, `β_i` обусловлен оборотом тубулина. |
+| 1 | **Центриолярная полиглутамилизация (CP)** | CEDAR | Деления + Время | ~50–80 (для HSC), ~30–50 (для эпителия) | Месяцы–годы (калибруется по масс-спектрометрии) | Структурный счётчик асимметричного наследования. `α_i` значим, `β_i` обусловлен оборотом тубулина. |
 | 2 | **Укорочение теломер / теломерный стресс** | Telomere | Доминантно деления | Лимит Хейфлика для типа клеток (напр., ~50 для фибробластов человека) | Время оборота теломерных повторов (недели) | Классический репликативный счётчик. `β_i ≈ 0` для большинства соматических клеток. |
 | 3 | **Митохондриальный ROS / повреждение мтДНК** | MitoROS | Доминантно время | `α_i → 0` для постмитотических клеток | Дни–недели (оборот повреждений мтДНК) | Метаболический/временной счётчик. `β_i` значим, может усиливаться при дисфункции. |
 | 4 | **Эпигенетический дрейф (метилирование ДНК)** | EpigeneticDrift | Доминантно время | `α_i → 0` для большинства клеток | Время удвоения эпигенетического возраста (напр., ~3.6 года по DunedinPACE) | «Молекулярные часы». Вклад делений (`α_i`) мал, но может быть ненулевым в стволовых/пролиферирующих компартментах. |
@@ -515,12 +515,12 @@ MCAOA строится на принципах **плюрализма механ
 
 *Общие символы: `D_i₀`, `α_i`, `β_i`, `γ_i`, `n_i*`, `τ_i`.*
 
-### Счётчик 1: Центриолярная полиглутамилизация (CP) — проект CDATA
+### Счётчик 1: Центриолярная полиглутамилизация (CP) — проект CEDAR
 | Символ | Описание | Значение/Диапазон | Единицы | Источник / Обоснование | Статус |
 |--------|----------|-------------------|---------|------------------------|--------|
 | `D_CP₀` | Базовое повреждение CP при рождении | 0.0 – 0.1 | безразмерн. | Гипотеза: минимальный уровень у новорождённых | **Placeholder** |
-| `α_CP` | Интенсивность повреждения от делений | 0.01 – 0.05 | безразмерн. на (`n / n_CP*`) | Оценка на основе данных CDATA v5.1 симуляций | **To be calibrated** |
-| `β_CP` | Интенсивность повреждения от времени | 0.001 – 0.01 | безразмерн. на (`t / τ_CP`) | Оценка на основе данных CDATA v5.1 симуляций | **To be calibrated** |
+| `α_CP` | Интенсивность повреждения от делений | 0.01 – 0.05 | безразмерн. на (`n / n_CP*`) | Оценка на основе данных CEDAR v5.1 симуляций | **To be calibrated** |
+| `β_CP` | Интенсивность повреждения от времени | 0.001 – 0.01 | безразмерн. на (`t / τ_CP`) | Оценка на основе данных CEDAR v5.1 симуляций | **To be calibrated** |
 | `γ_CP` | Скаляр связи для CP | 0.0 | безразмерн. | Канон: по умолчанию `γ_i = 0` (независимость) | **Default 0** |
 | `n_CP*` | Референтное число делений для CP | 50 (для фибробластов), 80 (для HSC) | деления | *Априорная* оценка на основе лимита пролиферации клеток | **Fixed (Canonical)** |
 | `τ_CP` | Референтное время для CP | 1.0 год (3.1536e7 с) | секунды | *Априорная* оценка: характерное время обновления тубулинового пула | **Fixed (Canonical)** |
@@ -618,7 +618,7 @@ MCAOA строится на принципах **плюрализма механ
 - [ ] Дождаться решения Nature Aging editorial decision
 - [ ] Подготовить response к reviewer comments (если будут)
 - [ ] Backup: secondary target (npj Aging, eLife) если reject
-- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CDATA L1
+- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CEDAR L1
 - [ ] Tissue-specific weights калибровка против реальных данных HSC/skin/neural
 
 ---
@@ -662,7 +662,7 @@ Created `crates/mcoa_compare/`:
 Добавлены CLAUDE + STATE. Существующие 7 файлов (CONCEPT/DESIGN/EVIDENCE/OPEN_PROBLEMS/PARAMETERS/README/THEORY) уже соответствуют новой схеме.
 
 ### 2026-04-19 — Nature Aging submission
-MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CDATA), и формализует общую multi-counter архитектуру.
+MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CEDAR), и формализует общую multi-counter архитектуру.
 
 ---
 
@@ -690,7 +690,7 @@ MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. �
 MCAOA реализован как крейт (библиотека) на Rust с чётким разделением на:
 1.  **Ядро (`mcoa_core`):** Чистые, детерминированные функции, реализующие формализм MCAOA (уравнения счётчиков, нагрузка, пороги). Без зависимостей от ввода/вывода.
 2.  **Симулятор (`mcoa_simulation`):** Модули для проведения симуляций (стохастические процессы, популяции клеток, лонгитюдные траектории). Использует ядро.
-3.  **Интерфейсы (`mcoa_interfaces`):** Определения типов данных, сериализация (JSON/MessagePack), API для интеграции с другими подпроектами (CDATA, FCLC).
+3.  **Интерфейсы (`mcoa_interfaces`):** Определения типов данных, сериализация (JSON/MessagePack), API для интеграции с другими подпроектами (CEDAR, FCLC).
 4.  **Инструменты (`mcoa_tools`):** Утилиты командной строки (CLI) для калибровки, анализа чувствительности, визуализации.
 
 Цель: предоставить проверяемую, производительную и переносимую эталонную реализацию для научного сообщества.
@@ -733,9 +733,9 @@ mcoa_reference_impl/
 
 *Данные, сгенерированные в рамках проекта LC для валидации концепций MCAOA.*
 
-1.  **Соболь-анализ чувствительности CDATA v5.1:**
+1.  **Соболь-анализ чувствительности CEDAR v5.1:**
     *   Файл: `data/mcoa/sensitivity/sobol_results_2026-04-15.csv`
-    *   Метод: Глобальный анализ чувствительности (метод Соболя) для модели CDATA.
+    *   Метод: Глобальный анализ чувствительности (метод Соболя) для модели CEDAR.
     *   Выборка: N = 16384.
     *   Ключевой результат: Первый порядок (S1) для параметра `α_cent` (деления) составляет 0.68 ± 0.05, для `β_cent` (время) — 0.22 ± 0.04 в симуляции эпителиальной ткани. Подтверждает доминирование делений, но значимый вклад времени.
     *   Статус: Проверено, воспроизводимо.
@@ -762,8 +762,8 @@ mcoa_reference_impl/
         - При epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
         - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
     *   **Разрешение:** Individual epigenetic_rate dominance объясняется linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). На group-level центриолярная механика **доминирует**.
-    *   **Следствие:** Counter #1 (CP) сохраняет canonical position, переформулирован как «structural age-tracker» per `CDATA/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
-    *   **Источник:** `~/Desktop/LC/CDATA/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
+    *   **Следствие:** Counter #1 (CP) сохраняет canonical position, переформулирован как «structural age-tracker» per `CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+    *   **Источник:** `~/Desktop/LC/CEDAR/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
 
 3.  **Слабая экспериментальная база для матрицы связей Γ.**
     *   **Свидетельство:** Большинство предполагаемых связей между счётчиками (например, `Γ_{cent, epigenetic}`) основаны на косвенных корреляциях или исследованиях in vitro, а не на прямых причинно-следственных экспериментах in vivo.
@@ -807,7 +807,7 @@ mcoa_reference_impl/
 
 ## Проблема 2: Разрешение парадокса ABL-2 и позиционирование CP-счётчика
 
-**Описание:** Высокая корреляция уровней белка ABL-2 с эпигенетическим возрастом в данных CDATA ставит под вопрос причинно-следственную связь. Является ли центриолярная полиглутамилизация (CP) upstream-драйвером старения, downstream-эффектом или параллельным процессом?
+**Описание:** Высокая корреляция уровней белка ABL-2 с эпигенетическим возрастом в данных CEDAR ставит под вопрос причинно-следственную связь. Является ли центриолярная полиглутамилизация (CP) upstream-драйвером старения, downstream-эффектом или параллельным процессом?
 
 **Приоритет:** **Высокий** (P1). Касается обоснованности выбора CP как счётчика #1.
 
@@ -1001,7 +1001,7 @@ end
 //! mcoa-sim — run an MCAOA simulation and write per-step records to CSV.
 //!
 //! Per the mandatory comparison rule (see ~/Desktop/LC/MCAOA/CLAUDE.md), every simulation
-//! output MUST be paired with an analogous CDATA run via `scripts/compare_mcoa_cdata.py`.
+//! output MUST be paired with an analogous CEDAR run via `scripts/compare_mcoa_cdata.py`.
 
 use clap::Parser;
 use mcoa_core::{Gamma, Tissue};
@@ -1014,7 +1014,7 @@ use std::path::PathBuf;
     version,
     about = "Run a Multi-Counter Architecture simulation.",
     long_about = "Runs a discrete-time MCAOA simulation for a given tissue, writing per-step counter \
-                   states and tissue load to CSV. Pair each output with a matching CDATA run (see \
+                   states and tissue load to CSV. Pair each output with a matching CEDAR run (see \
                    scripts/compare_mcoa_cdata.py)."
 )]
 struct Cli {
@@ -1060,7 +1060,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         cli.tissue,
         cli.output.display()
     );
-    eprintln!("REMINDER: pair this output with CDATA via scripts/compare_mcoa_cdata.py");
+    eprintln!("REMINDER: pair this output with CEDAR via scripts/compare_mcoa_cdata.py");
     Ok(())
 }
 
@@ -1077,7 +1077,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 //!   GET  /healthz                       — liveness
 //!
 //! Future (v0.2):
-//!   WS   /ws/stream              — stream long simulations + MCAOA-vs-CDATA residuals in real time
+//!   WS   /ws/stream              — stream long simulations + MCAOA-vs-CEDAR residuals in real time
 
 use axum::{
     extract::{Json, Path, Query},
@@ -1217,7 +1217,7 @@ async fn shutdown_signal() {
 ```
 ### code `crates/mcoa_compare/src/lib.rs`
 ```
-//! mcoa_compare — MCAOA vs CDATA comparison and full pairwise comparison harness.
+//! mcoa_compare — MCAOA vs CEDAR comparison and full pairwise comparison harness.
 //!
 //! Rust port of `scripts/compare_mcoa_cdata.py` and `scripts/compare_all.py`.
 //! Plot generation is OUT OF SCOPE for the Rust port — comparison reports are
@@ -1288,7 +1288,7 @@ pub struct CompareArgs<'a> {
     pub out_dir: &'a Path,
 }
 
-/// MCAOA-vs-CDATA comparison. Returns path to written markdown report.
+/// MCAOA-vs-CEDAR comparison. Returns path to written markdown report.
 pub fn compare_mcoa_cdata(args: CompareArgs) -> Result<PathBuf> {
     let mcoa = read_csv(args.mcoa_csv)?;
     let cdata = read_csv(args.cdata_csv)?;
@@ -1318,14 +1318,14 @@ use thiserror::Error;
 pub const N_COUNTERS: usize = 5;
 
 /// MCAOA counter numbering aligned with user decision 2026-05-07:
-///   #1 = Centriolar (CDATA), #2 = Telomere, #3 = Mitochondrial,
+///   #1 = Centriolar (CEDAR), #2 = Telomere, #3 = Mitochondrial,
 ///   #4 = Epigenetic, #5 = Proteostasis.
 ///
 /// The discriminant is 0-indexed for zero-cost array indexing
 /// (`c as usize`); the user-facing number is `as u8 + 1`.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum Counter {
-    Centriolar = 0,    // MCAOA #1 — CDATA
+    Centriolar = 0,    // MCAOA #1 — CEDAR
     Telomere = 1,      // MCAOA #2
     Mitochondrial = 2, // MCAOA #3 — MitoROS
     Epigenetic = 3,    // MCAOA #4 — EpigeneticDrift

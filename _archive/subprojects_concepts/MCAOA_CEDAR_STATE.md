@@ -1,4 +1,4 @@
-# STATE — CDATA
+# STATE — CEDAR
 
 **Purpose:** volatile state, active TODOs, decision log, milestones.
 **Convention:** new entries in Decision Log at the top with date.

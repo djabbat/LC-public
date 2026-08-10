@@ -51,7 +51,7 @@ Path: `/home/oem/Desktop/GLA/Annals`  Date: 2026-05-08
 
 Альтернативы:
 - Georgian Longevity Research (GLR)
-- CDATA Journal of Cellular Aging
+- CEDAR Journal of Cellular Aging
 
 ⚠️ **Финальное название утверждается до подачи на ISSN.**
 
@@ -68,7 +68,7 @@ Path: `/home/oem/Desktop/GLA/Annals`  Date: 2026-05-08
 | 3. Подать заявку на ISSN | apr-may 2026 | — |
 | 4. Editorial board invitations: Eric Klien + 2-3 грузинских биолога | apr-may 2026 | 📨 драфт Klien готов |
 | 5. Установить OJS на VPS ($5-10/мес Hetzner/DigitalOcean) | may 2026 | — |
-| 6. Шаблон сайта (логотип GLA, рубрикатор CDATA, политики) | may 2026 | — |
+| 6. Шаблон сайта (логотип GLA, рубрикатор CEDAR, политики) | may 2026 | — |
 | 7. Сбор 5-7 статей для Volume 1 Issue 1 | may-jun 2026 | — |
 | 8. Архивирование через PKP PN | jul 2026 | — |
 | 9. Подача в DOAJ | oct-dec 2026 | — |
@@ -112,14 +112,14 @@ Path: `/home/oem/Desktop/GLA/Annals`  Date: 2026-05-08
 Renames during setup phase (do NOT use historical variants):
 - ❌ "Journal of Centriolar Aging and Longevity (JCAL)" — early working name
 - ❌ "Georgian Longevity Research (GLR)" — alternative considered
-- ❌ "CDATA Journal of Cellular Aging" — alternative considered
+- ❌ "CEDAR Journal of Cellular Aging" — alternative considered
 - ✅ **Annals of Rejuvenation Science** — final, ISSN-registered
 
 ## Scope
 
 Molecular and cellular mechanisms of aging-related dysfunction, centriologenesis,
 centrosome biology, regenerative medicine, healthspan-extending therapies. Strong
-overlap with CDATA (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
+overlap with CEDAR (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
 Architecture of Organismal Aging).
 
 ## Twin-journal split (canonical strategy 2026-04-26)
@@ -130,7 +130,7 @@ GLA hosts **two journals**, separated by selectivity vs inclusivity:
 |---|---|---|
 | Selectivity | high (DOAJ-bound, peer review-strict) | broader, inclusive |
 | Reject rate target | ≥40% | ≥10% |
-| Use case | flagship CDATA / MCAOA papers | early-career, niche, conference |
+| Use case | flagship CEDAR / MCAOA papers | early-career, niche, conference |
 
 **Don't trim Longevity Horizon to be like Annals** — they exist in tension on purpose.
 

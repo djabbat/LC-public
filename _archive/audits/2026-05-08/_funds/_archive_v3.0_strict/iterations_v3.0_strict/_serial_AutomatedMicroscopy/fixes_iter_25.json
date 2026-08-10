@@ -27,13 +27,13 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "- **Sample size:** All N values are placeholders pending pilot data. Final sample sizes may differ.\n- **Generalizability:** Results are specific to the Zeiss IM 35 retrofit and CDATA-class protocols. Extrapolation to other microscopes or protocols requires validation.\n- **Environmental stability:** The DIY chamber may not achieve the ±0.1°C stability of commercial incubators.\n- **AI autonomy:** The AI operates only within predefined policies; unexpected edge cases may require human intervention.\n- **Contamination detection:** The contamination criterion (H₀: contamination ≥ 0.03) is based on expert opinion, not empirical data.\n- **Long-term reliability:** System has not been tested for continuous operation beyond 3 weeks."
+    "body": "- **Sample size:** All N values are placeholders pending pilot data. Final sample sizes may differ.\n- **Generalizability:** Results are specific to the Zeiss IM 35 retrofit and CEDAR-class protocols. Extrapolation to other microscopes or protocols requires validation.\n- **Environmental stability:** The DIY chamber may not achieve the ±0.1°C stability of commercial incubators.\n- **AI autonomy:** The AI operates only within predefined policies; unexpected edge cases may require human intervention.\n- **Contamination detection:** The contamination criterion (H₀: contamination ≥ 0.03) is based on expert opinion, not empirical data.\n- **Long-term reliability:** System has not been tested for continuous operation beyond 3 weeks."
   },
   {
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "- **LC:** Infrastructure and coordination.\n- **CDATA Phase A:** First user and validation partner.\n- **TBD (placeholder):** Additional partners for replication and extension studies."
+    "body": "- **LC:** Infrastructure and coordination.\n- **CEDAR Phase A:** First user and validation partner.\n- **TBD (placeholder):** Additional partners for replication and extension studies."
   },
   {
     "file": "/CONCEPT.md",

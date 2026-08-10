@@ -132,7 +132,7 @@ SKIP exists: CONCEPT.md :: ## Consortium / partners
 ## iter 6
 SKIP exists: CONCEPT.md :: ## Falsifiability
 SKIP exists: CONCEPT.md :: ## Pre-registration plan
-REPLACED: CONCEPT.md :: ### Sample size calculation for CDATA ex
+REPLACED: CONCEPT.md :: ### Sample size calculation for CEDAR ex
 SKIP exists: CONCEPT.md :: ## Consortium / partners
 
 ## iter 7

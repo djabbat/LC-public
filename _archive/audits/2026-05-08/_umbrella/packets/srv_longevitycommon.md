@@ -253,7 +253,7 @@ Host: `server`  Path: `/home/jaba/web/longevitycommon`  Date: 2026-05-08
 ## Project Identity
 
 **LC** — центральная платформа экосистемы долголетия + **umbrella для EIC Pathfinder заявки**.
-**Подпроекты (подпапки):** MCAOA · Ze · CDATA · BioSense · Ontogenesis · HAP (+ Activated из Iqalto как WP5). **MCAOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCAOA как счётчики или измерительные слои.
+**Подпроекты (подпапки):** MCAOA · Ze · CEDAR · BioSense · Ontogenesis · HAP (+ Activated из Iqalto как WP5). **MCAOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCAOA как счётчики или измерительные слои.
 **Версия:** CONCEPT v4.0 (Ecosystem Edition) | **Status: CONCEPT APPROVED**
 **Location:** `~/Desktop/LC/`
 
@@ -271,7 +271,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 **Architecture (Variant C, decided 2026-04-17, ACTIVE):**
 - WP1 FCLC (€0.6M, 12 mo) — federated learning
 - WP2 Ze (€0.5M, 12 mo) — biomarker
-- WP3 CDATA (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
+- WP3 CEDAR (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
 - WP4 BioSense (€0.6M, 18 mo) — wearable hardware
 - WP5 Activatus/Korkoti (€0.5M, 12 mo) — clinical pilot anaemia
 - **Total: €3.0M, 36 mo** (revisable up to €4M ceiling)
@@ -285,7 +285,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 
 **Outstanding blockers from 2026-04-21 audit (must resolve before submission):**
 1. PATE demo implementation (ε≈0.63 path) — target Sep 2026
-2. CDATA ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
+2. CEDAR ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
 3. HAP/Ontogenesis fabricated PMIDs — already halted; rebuilt before any inclusion in proposal
 
 **Concept Note preprint:** Tqemaladze, J. (2026) "LongevityHealth", Zenodo v3, DOI 10.5281/zenodo.19849384 (28 April 2026; supersedes earlier "LC" preprint 19546679).
@@ -302,7 +302,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 LC/        ← этот проект (социальный слой)
 ├── MCAOA/               ← Multi-Counter Architecture of Organismal Aging — мета-теория (добавлен 2026-04-21)
 ├── Ze/                 ← Ze Theory — Entropic-Geometric Theory of Everything. Канон: Ze Theory.pdf + Ze Теория.pdf (2026-04-25). Rust simulator покрывает 3 блока: импеданс-ODE, CHSH-деформация, cheating autowaves.
-├── CDATA/              ← теория повреждения центриолей, MCAI (Counter #2 в MCAOA)
+├── CEDAR/              ← теория повреждения центриолей, MCAI (Counter #2 в MCAOA)
 ├── BioSense/           ← EEG+HRV+обоняние (измерительный слой MCAOA)
 ├── Ontogenesis/        ← платформа онтогенеза 0–25 лет
 ├── HAP/                ← Hepato-Affective Primacy Theory (нейро-гепатология)
@@ -311,7 +311,7 @@ LC/        ← этот проект (социальный слой)
 └── realtime/           ← Elixir/Phoenix Channels
 ```
 
-**Правило:** LC — thin social layer over Ze+CDATA+BioSense+Ontogenesis+HAP. Никакой новой науки, никакой новой privacy-инфраструктуры. Новое: UX сообщества, ранжирование ленты, Ze·Guide AI.
+**Правило:** LC — thin social layer over Ze+CEDAR+BioSense+Ontogenesis+HAP. Никакой новой науки, никакой новой privacy-инфраструктуры. Новое: UX сообщества, ранжирование ленты, Ze·Guide AI.
 
 **FCLC — отдельный проект** (extracted 2026-04-26). Server-resident: `jaba@server:/home/jaba/web/fclc/`. Repos: `djabbat/FCLC` (private) + `djabbat/FCLC-public`. См. `~/.claude/projects/-home-oem/memory/project_fclc_server_workflow.md`.
 
@@ -399,11 +399,11 @@ ARCHITECTURE не существует отдельно — его содерж�
 **Файлы ядра (полный список — в .gitignore для public):**
 `CONCEPT.md` · `KNOWLEDGE.md` · `PARAMETERS.md` · `MAP.md` · `MEMORY.md` · `LINKS.md` · `UPGRADE.md` · `TODO.md` · `CLAUDE.md` · `STRATEGY.md` · `REMINDER.md`
 
-**`STRATEGY.md`** — гибридная грантовая стратегия (4 трека: CDATA/Ze/BioSense/Ontogenesis; FCLC — отдельный проект).
+**`STRATEGY.md`** — гибридная грантовая стратегия (4 трека: CEDAR/Ze/BioSense/Ontogenesis; FCLC — отдельный проект).
 Читать первым делом в каждой сессии перед работой с любым подпроектом.
 
 **Git (монорепозиторий):**
-- **Единый репозиторий:** `djabbat/LC` (объединяет LC + Ze + CDATA + BioSense + Ontogenesis + HAP). FCLC = отдельный repo `djabbat/FCLC`.
+- **Единый репозиторий:** `djabbat/LC` (объединяет LC + Ze + CEDAR + BioSense + Ontogenesis + HAP). FCLC = отдельный repo `djabbat/FCLC`.
 - Private: все файлы включая .md ядра
 - Public: только код + README (core .md в .gitignore)
 
@@ -415,7 +415,7 @@ ARCHITECTURE не существует отдельно — его содерж�
 |-----------|-----------|----------------------|
 | ~~FCLC~~ | extracted 2026-04-26 | server-resident, `djabbat/FCLC` repo |
 | Ze | `Ze/CLAUDE.md` | `Ze/CONCEPT.md` |
-| CDATA | `CDATA/CLAUDE.md` | `CDATA/CONCEPT.md` |
+| CEDAR | `CEDAR/CLAUDE.md` | `CEDAR/CONCEPT.md` |
 | BioSense | `BioSense/CLAUDE.md` | `BioSense/CONCEPT.md` |
 | Ontogenesis | `Ontogenesis/CLAUDE.md` | `Ontogenesis/CONCEPT.md` |
 | HAP | `HAP/CLAUDE.md` | `HAP/CONCEPT.md` |
@@ -432,7 +432,7 @@ LC — это hypothesis-stage framework, объединяющий 5 научн�
 | Подпроект | Уровень | Что делает |
 |-----------|---------|------------|
 | **MCAOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
-| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
+| **CEDAR** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
 | **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
@@ -468,7 +468,7 @@ LC/
 ├── _archive/                    # старые версии
 ├── _audits/                     # audit reports
 │
-└── <subprojects>/               # MCAOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/               # MCAOA, CEDAR, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)
@@ -532,7 +532,7 @@ LC — это **умбрелла-экосистема** из 5 взаимосв�
 | # | Подпроект | Уровень | Status | Auth doc |
 |---|-----------|---------|--------|----------|
 | 1 | **MCAOA** | Theoretical (meta-теория счётчиков) | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | `MCAOA/CONCEPT.md` |
-| 2 | **CDATA** | Molecular-cellular (centriolar PTM hypothesis) | **Inconclusive** — preliminary issue ABL-2 (R²_no_α=0.833 > full=0.778) НЕ statistically significant after nested CV (p=0.12); Sobol full decomp deferred to Cell-DT v4.0 | `CDATA/CONCEPT.md` |
+| 2 | **CEDAR** | Molecular-cellular (centriolar PTM hypothesis) | **Inconclusive** — preliminary issue ABL-2 (R²_no_α=0.833 > full=0.778) НЕ statistically significant after nested CV (p=0.12); Sobol full decomp deferred to Cell-DT v4.0 | `CEDAR/CONCEPT.md` |
 | 3 | **Ze Theory** | Mathematical (entropy-geometric) | `dτ_Ze/dt = −α·I(Z)` — **POSTULATED ansatz** (НЕ derivation) by analogy with Burgholzer 2015 + Pearson 2021 (physical clocks, не биология) | `Ze/CONCEPT.md` |
 | 4 | **BioSense** | Applied (wearable, χ_Ze) | Theoretical fixed point `v* = 0.45631` at `k_λ=1`; sensitivity range `v* ∈ [0.32, 0.58]` for `k_λ ∈ [0.5, 2.0]`. Empirically tested via swept-v* search on All-of-Us N=500: `v*_optimal = 0.451 (95% CI 0.443-0.459)` consistent with theory. | `BioSense/CONCEPT.md` |
 | 5 | **FCLC** | Infrastructure (federated learning, privacy) | v13.4 PASS milestone; ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5); RDP composition Wang/Mironov 2017-2019. **Threat model (v5):** semi-honest server + Byzantine-robust ≤25% (Krum); NOT secure against active server collusion or malicious server. **GDPR Art. 9 blocker** до FCLC v14 (planned Q1 2027). | `FCLC/CONCEPT.md` |
@@ -546,7 +546,7 @@ Plus 1 supporting: **Activated** (clinical pilot via Шашвиашвили — 
 ```
 Theoretical level         MCAOA (counter-sum framework, axioms M1-M4)
                               ↓ (counter #1 candidate)
-Molecular-cellular level  CDATA (centriolar PTM hypothesis, status inconclusive)
+Molecular-cellular level  CEDAR (centriolar PTM hypothesis, status inconclusive)
                               ↓ (instantiates one D_i mechanism)
 Mathematical level        Ze Theory (entropy-geometric ansatz dτ/dt = −α·I)
                               ↓ (gives χ_Ze formal foundation)
@@ -576,7 +576,7 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 ├── deploy/                      # docker-compose-all.yml для production
 │
 ├── MCAOA/                        # подпроект theoretical
-├── CDATA/                       # подпроект molecular
+├── CEDAR/                       # подпроект molecular
 ├── Ze/                          # подпроект mathematical (regenerated 2026-04-28)
 ├── BioSense/                    # подпроект applied (regenerated 2026-04-28)
 ├── FCLC/                        # подпроект infrastructure (server-resident, отдельный repo)
@@ -624,7 +624,7 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 
 ### 8.4 Что не реализовано (но было обещано в article)
 - Swept-v* falsification protocol на All-of-Us → требует data access (DUA pending).
-- Cell-DT v4.0 для full Sobol decomposition → отдельный subproject (CDATA область).
+- Cell-DT v4.0 для full Sobol decomposition → отдельный subproject (CEDAR область).
 - FCLC v14 malicious-secure migration → planned Q1 2027.
 
 ## 9. Иерархия authority при конфликте между файлами
@@ -666,7 +666,7 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 | `L_tissue(n,t)` | Tissue-level aging burden, MCAOA aggregator | `MCAOA/THEORY.md` |
 | `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCAOA/THEORY.md` |
 | `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCAOA/THEORY.md` |
-| `D(t)` | Centriolar damage (CDATA hypothetical counter) | `CDATA/THEORY.md` |
+| `D(t)` | Centriolar damage (CEDAR hypothetical counter) | `CEDAR/THEORY.md` |
 | `I(Z)` | Impedance / KL-divergence between actual and modeled state | `Ze/THEORY.md` |
 | `τ_Ze` | Proper-time budget | `Ze/THEORY.md` |
 | `α, β, λ` | Coupling constants (Ze) | `Ze/THEORY.md` |
@@ -682,9 +682,9 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 ```
 MCAOA            L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
                                     ↑
-                                 один из Dᵢ — CDATA (hypothetical)
+                                 один из Dᵢ — CEDAR (hypothetical)
 
-CDATA           A(t) = a + b·D(t) + c·D(t)²       (status: inconclusive)
+CEDAR           A(t) = a + b·D(t) + c·D(t)²       (status: inconclusive)
                 χ_Ze = g₀ − g₁·A(t)                (linear bridge, 5 free params, underpowered)
 
 Ze              I(Z) = S(Z_real ‖ Z_model)        (KL divergence)
@@ -714,7 +714,7 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Variational principle `F = E − T·S − λ·I_pred` | `BioSense/THEORY.md §3.1` | Friston 2010 framework |
 | `λ` from thermodynamics | `BioSense/THEORY.md §3.2` | Lemma C (Wallace 2015 inferential argument) |
 | `v* = 0.45631` fixed point | `BioSense/THEORY.md §3.3` | Theorem 1 (numerical extremum at `k_λ=1`) |
-| CDATA bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
+| CEDAR bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
 | RDP composition for DP-SGD | `FCLC/THEORY.md` | Mironov 2017 + Wang/Balle/Kasiviswanathan 2019 |
 
 ## §4. Что **не** теорема, а ansatz / hypothesis
@@ -724,15 +724,15 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Claim | Old framing | New framing |
 |-------|-------------|-------------|
 | `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy с physical clocks; биология не валидирована |
-| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
+| Bridge between `D(t)` (CEDAR) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
 | `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
 | Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
-| CDATA "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
+| CEDAR "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
 
 ## §5. Falsifiability (operational)
 
 - **MCAOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
-- **CDATA**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
+- **CEDAR**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
 - **Ze fixed point v***: falsified if swept-v* search на All-of-Us N≥500 показывает `v*_optimal` за пределами `[0.32, 0.58]` (sensitivity range для `k_λ ∈ [0.5, 2.0]`). **Test status:** done на N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent с theory.
 - **FCLC**: falsified as GDPR-compliant infrastructure if active server attack succeeds. Текущий статус: semi-honest secure only; известный блокер; v14 planned Q1 2027.
 
@@ -742,7 +742,7 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 - Все 5 канонических BioSense computations → `BioSense/biosense-simulator/` (Rust)
 - FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
 - MCAOA aggregator → `MCAOA/CellDT_v4/` (planned, не реализован полностью)
-- CDATA bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
+- CEDAR bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
 
 ```
 ### `STATE.md` (head 200 lines)
@@ -766,7 +766,7 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
 | **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
-| **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
+| **CEDAR** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
@@ -826,7 +826,7 @@ Per `DESIGN.md §5`:
 - [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
 - [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
 - [ ] `MCAOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
-- [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
+- [ ] `CEDAR/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
 **None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
 
@@ -872,7 +872,7 @@ md5sum ~/Desktop/LC.md
 ├── realtime/                      # social-layer Phoenix Channels
 │
 ├── MCAOA/                          # subproject: theoretical
-├── CDATA/                         # subproject: molecular hypothesis
+├── CEDAR/                         # subproject: molecular hypothesis
 ├── Ze/                            # subproject: math + simulator (regenerated 2026-04-28)
 ├── BioSense/                      # subproject: applied + simulator + datasets (regenerated 2026-04-28)
 ├── FCLC/                          # subproject: federated infra (server-resident, separate repo)
@@ -1053,7 +1053,7 @@ cd ~/Desktop/LC/deploy && docker compose -f docker-compose-all.yml up -d
 | Proteomic Aging Clock | Argentieri et al. 2024 | PMID **39117878** ✅ |
 | Free-energy principle | Friston 2010 *Nat Rev Neurosci* 11 | PMID **20068583** ✅ |
 | Predictive information (binary Markov) | Bialek/Nemenman/Tishby 2001 *Neural Computation* 13 | DOI 10.1162/089976601753195969 ✅ |
-| CDATA original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
+| CEDAR original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
 | Tqemaladze 2005 early centriole work | *Cell Biol Int* 29 | PMID **15886028** ✅ |
 | ATF5-centriole link | Madarampalli 2015 *Cell* 162 | PMID **26213385** ✅ |
 | Ioannidis on false-positive findings | Ioannidis JPA 2005 *PLOS Med* | PMID **16060722** ✅ |
@@ -1088,7 +1088,7 @@ After v3 removal of Editorial, total references: **36** (peer-reviewed external)
 
 Tqemaladze peer-reviewed self-citations retained:
 - Tqemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work
-- Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship
+- Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CEDAR flagship
 - 3 others from `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`
 
 Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer-reviewed; moved to Supplementary as "internal manuscript sources".
@@ -1105,12 +1105,12 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 | `v* = 0.45631` empirical (BioSense) | ✅ Pilot (All-of-Us N=500, 95% CI 0.443-0.459) | — | consistent with theory; full pre-registered test pending |
 | χ_Ze correlates with PhenoAge r=0.67 | ⚠ Exploratory (post-hoc, not pre-registered) | — | Bonferroni / replication required |
 | AUC=0.81 accelerated aging detection | ⚠ Exploratory | — | winner's curse risk; pre-reg N≥2000 required |
-| CDATA causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
+| CEDAR causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
 | MCAOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
 
 ## §5. What is deliberately NOT cited
 
-- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CDATA bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
+- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CEDAR bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
 - **HAP** (any reference) — failed PMID audit.
 - **Ontogenesis** (any reference) — failed PMID audit.
 - **Self-citations counted as peer-reviewed** — only the 5 PubMed-indexed Tqemaladze entries.
@@ -1143,9 +1143,9 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 **Status:** open. **Largest blocker for Nature Aging-tier submission.**
 **Path forward:** UK Biobank wearable subset DUA + cost (years), All-of-Us Researcher Workbench DUA (months), or new prospective cohort via Аqtивиребули clinical pilot.
 
-### §1.2 CDATA inconclusive (Sobol nested CV)
-**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CDATA contributes uniquely.
-**Status:** open. Tracked in `CDATA/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
+### §1.2 CEDAR inconclusive (Sobol nested CV)
+**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CEDAR contributes uniquely.
+**Status:** open. Tracked in `CEDAR/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
 **Path forward:** Cell-DT v4.0 (planned, not started); GTEx access already available.
 
 ### §1.3 Ze Theory → biology bridge (formal)
@@ -1163,7 +1163,7 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 **Status:** open. Weights need re-fit on pre-registered cohort.
 **Path forward:** lock weights via blinded fit on hold-out portion of N≥500 cohort before any unblinding.
 
-### §1.6 Bridge to CDATA (5 free params)
+### §1.6 Bridge to CEDAR (5 free params)
 **Problem:** `A(D) = a + bD + cD²; χ_Ze = g₀ − g₁A` has 5 free params on N=196 → 39 obs/param; below Harrell standard 10/param for stable fit.
 **Status:** moved to Supplementary in article v5; remains open.
 **Path forward:** simpler 2-param linear bridge OR theory-derived constraints.

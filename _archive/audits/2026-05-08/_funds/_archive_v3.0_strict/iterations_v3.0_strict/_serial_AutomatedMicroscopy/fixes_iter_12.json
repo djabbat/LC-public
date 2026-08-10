@@ -21,13 +21,13 @@
     "file": "/CONCEPT.md",
     "action": "replace_text",
     "find": "## Limitations\n\n",
-    "replace": "## Limitations\n\n1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics not captured.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂ tolerance; deviations outside this range not tested.\n4. **AI generalizability:** Prompt-driven supervision validated only for CDATA Phase A protocol; other protocols may require retraining.\n5. **Hardware reproducibility:** Retrofit relies on specific Zeiss IM 35 model; other microscopes may need adaptation.\n6. **Sample size:** Power analysis placeholder; final N depends on pilot data.\n7. **Contamination risk:** No automated contamination detection; human inspection required.\n8. **Cost estimate:** $4,500 BOM excludes labor and consumables; actual cost may vary."
+    "replace": "## Limitations\n\n1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics not captured.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂ tolerance; deviations outside this range not tested.\n4. **AI generalizability:** Prompt-driven supervision validated only for CEDAR Phase A protocol; other protocols may require retraining.\n5. **Hardware reproducibility:** Retrofit relies on specific Zeiss IM 35 model; other microscopes may need adaptation.\n6. **Sample size:** Power analysis placeholder; final N depends on pilot data.\n7. **Contamination risk:** No automated contamination detection; human inspection required.\n8. **Cost estimate:** $4,500 BOM excludes labor and consumables; actual cost may vary."
   },
   {
     "file": "/CONCEPT.md",
     "action": "replace_text",
     "find": "## Consortium / collaboration plan",
-    "replace": "## Consortium / collaboration plan\n\n| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, funding, coordination | Confirmed |\n| University of Bristol | Biological validation, CDATA expertise | Confirmed |\n| Zeiss | Hardware support, microscope donation | In negotiation |\n| FLIR | Camera technical support | Confirmed |\n| ThorLabs | LED illuminator discount | Confirmed |\n| OpenTrons | Liquid handling automation (future) | In discussion |\n| TBD (additional partner) | AI/ML expertise | To be identified |\n| TBD (additional partner) | Data management | To be identified |"
+    "replace": "## Consortium / collaboration plan\n\n| Partner | Role | Status |\n|---------|------|--------|\n| LC | Lead, funding, coordination | Confirmed |\n| University of Bristol | Biological validation, CEDAR expertise | Confirmed |\n| Zeiss | Hardware support, microscope donation | In negotiation |\n| FLIR | Camera technical support | Confirmed |\n| ThorLabs | LED illuminator discount | Confirmed |\n| OpenTrons | Liquid handling automation (future) | In discussion |\n| TBD (additional partner) | AI/ML expertise | To be identified |\n| TBD (additional partner) | Data management | To be identified |"
   },
   {
     "file": "/CONCEPT.md",

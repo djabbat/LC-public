@@ -1,4 +1,4 @@
-# Review of CDATA
+# Review of CEDAR
 
 ## Verdict
 **REVISE_MINOR**
@@ -30,4 +30,4 @@
 5. `STATE.md: L1.2 status` — обновить запись, явно указав, что PARAMETERS.md обновлён для tissue nu (или поставить дату запланированного обновления, если ещё не сделано).
 
 ## PACKET
-# CDATA
+# CEDAR

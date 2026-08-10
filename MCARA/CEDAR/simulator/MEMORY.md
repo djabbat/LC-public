@@ -28,4 +28,4 @@
 - **Parameters:** RDNA_LOSS_PER_DIVISION=0.0006 (calibrated: HSC 12 div/yr → 0.5 threshold ~70 yr); RDNA_CRIT=0.5; RDNA_MIN=0.2; RDNA_RESTORATION_RATE=0.02 (intervention `rdna_restoration`).
 - **Priority in SenescenceTrigger::evaluate:** centriolar > telomere > rDNA; `Both` preserved (centriolar+telomere).
 - **Tests:** 547 pass (workspace). New: rDNA decreases with age, floor, restoration slows loss, snapshot field, trigger boundary.
-- **Docs:** analysis `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
+- **Docs:** analysis `~/Desktop/Services/docs/ANALYSIS_CEDAR_v2_vs_Huang_TRCS_2026-08-08.md`

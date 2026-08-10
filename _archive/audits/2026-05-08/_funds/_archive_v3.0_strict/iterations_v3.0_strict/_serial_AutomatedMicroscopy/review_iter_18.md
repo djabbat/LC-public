@@ -25,7 +25,7 @@
    OSF ID: `osf.io/TBD` (или `osf.io/automicroscopy_cdata`), дата 2026-06-01. План включён. Формально присутствует. OK.
 
 3. **Sample size calc (power analysis)** ✗  
-   Есть расчёт для CDATA (n=30/group, Cohen's d=0.75) и для concordance (n=286, one-proportion test). Но:  
+   Есть расчёт для CEDAR (n=30/group, Cohen's d=0.75) и для concordance (n=286, one-proportion test). Но:  
    - Расчёт для concordance использует δ=0.05, σ² не указана — формула для пропорции, не для среднего.  
    - Для contamination N=TBD.  
    - В разделе «Sample size calculation» (CONCEPT.md) есть противоречащая формула с TBD для σ² и δ.  

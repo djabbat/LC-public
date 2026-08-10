@@ -1,5 +1,5 @@
-defmodule CDATAFrontendWeb.Layouts do
-  use CDATAFrontendWeb, :html
+defmodule CEDARFrontendWeb.Layouts do
+  use CEDARFrontendWeb, :html
 
   embed_templates "layouts/*"
 end

@@ -22,7 +22,7 @@
    Указан OSF ID `osf.io/automicroscopy_cdata` (placeholder), дата 2026-06-01. Выполнено.
 
 3. **✓ Sample size calc (power analysis)**  
-   Для CDATA эксперимента приведён расчёт: Cohen’s d=0.75, α=0.05, power=0.80, n=30/group, формула с подстановкой. Есть также расчёт для concordance (n=286) и uptime (180 дней). Выполнено.
+   Для CEDAR эксперимента приведён расчёт: Cohen’s d=0.75, α=0.05, power=0.80, n=30/group, формула с подстановкой. Есть также расчёт для concordance (n=286) и uptime (180 дней). Выполнено.
 
 4. **✓ Risk matrix ≥5 rows**  
    В CONCEPT.md таблица из 6 строк (AI misinterpretation, chamber failure, camera degradation, network outage, contamination, stepper drift). Количество строк выполнено.

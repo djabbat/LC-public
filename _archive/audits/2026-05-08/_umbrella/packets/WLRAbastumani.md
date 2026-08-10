@@ -549,26 +549,26 @@ Suggestions for resort/wellness platform development from external analysis and 
 
 ## Pending proposals
 
-### [ ] CDATA aging biomarkers as wellness assessment
-**Source:** CDATA project (cross-project analysis 2026-03-29)
+### [ ] CEDAR aging biomarkers as wellness assessment
+**Source:** CEDAR project (cross-project analysis 2026-03-29)
 **Status:** [ ] proposed
 
-Offer guests an "aging trajectory" assessment based on CDATA model parameters.
+Offer guests an "aging trajectory" assessment based on CEDAR model parameters.
 Input: lifestyle questionnaire + basic labs.
 Output: personalized aging score + recommended therapies.
 
 ### [ ] Scientific validation of Abastumani factors
-**Source:** CDATA validation methodology (cross-project analysis 2026-03-29)
+**Source:** CEDAR validation methodology (cross-project analysis 2026-03-29)
 **Status:** [ ] proposed
 
-Apply CDATA-style R² validation to Abastumani's therapeutic factors:
+Apply CEDAR-style R² validation to Abastumani's therapeutic factors:
 - Ionized mountain air + ROS reduction
 - Altitude + mitochondrial adaptation
 - Solar radiation + circadian rhythm restoration
 Build evidence base for international medical tourism marketing.
 
 ### [ ] Multilingual guest portal
-**Source:** CDATA GUI 7-language support (cross-project analysis 2026-03-29)
+**Source:** CEDAR GUI 7-language support (cross-project analysis 2026-03-29)
 **Status:** [ ] proposed
 
 Guest portal in 6 UN languages + Georgian. Same T[lang][key] architecture.
@@ -663,8 +663,8 @@ Guest portal in 6 UN languages + Georgian. Same T[lang][key] architecture.
 ## 3. Медицинские технологии (целевые)
 
 ### Омоложение на клеточном уровне
-- CDATA-обоснованные протоколы (связь с теорией д-ра Ткемаладзе)
-- Стволовоклеточная терапия (нишевая терапия из CDATA)
+- CEDAR-обоснованные протоколы (связь с теорией д-ра Ткемаладзе)
+- Стволовоклеточная терапия (нишевая терапия из CEDAR)
 - NAD+ терапия, сенолитики, mTOR-ингибиторы
 - Эпигенетическое тестирование (Horvath clock)
 
@@ -696,7 +696,7 @@ Guest portal in 6 UN languages + Georgian. Same T[lang][key] architecture.
 ## 5. Конкурентные преимущества
 
 1. Уникальная природа Абастумани (нет аналогов в регионе)
-2. Научная основа — CDATA теория (связь с CDATA Research)
+2. Научная основа — CEDAR теория (связь с CEDAR Research)
 3. Интеграция традиционных грузинских методов + современных технологий
 4. Астрофизическая обсерватория = уникальный wellness-опыт
 
@@ -722,7 +722,7 @@ Guest portal in 6 UN languages + Georgian. Same T[lang][key] architecture.
 
 ## 7. Связь с экосистемой AIM
 
-- **CDATA** — научная основа протоколов омоложения
+- **CEDAR** — научная основа протоколов омоложения
 - **Regenesis** — клинические протоколы; реализуются в курорте
 - **AIM** — медицинский AI-ассистент для гостей курорта
 - **DrJaba** — онлайн-платформа; курорт = офлайн-ветвь DrJaba
@@ -806,7 +806,7 @@ Running log of decisions, context, and key facts across sessions.
 ## Open issues (audit 2026-05-07)
 
 - **THEORY.md** — отсутствует (system-wide gap, см. ecosystem audit). Решение по правилу `feedback_project_core` отдельным action.
-- **UPGRADE.md proposals** (3 шт., датированы 2026-03-29: CDATA biomarkers / научная валидация Abastumani / multilingual portal) — статус [ ] proposed; требуют peer review перед approve/reject (правило `feedback_upgrade_peer_review_first`).
+- **UPGRADE.md proposals** (3 шт., датированы 2026-03-29: CEDAR biomarkers / научная валидация Abastumani / multilingual portal) — статус [ ] proposed; требуют peer review перед approve/reject (правило `feedback_upgrade_peer_review_first`).
 - **Целевые даты для Фаз 1–4 инвестиций** — не установлены, активируются при появлении инвестора (триггер-событие, не календарный срок).
 
 ```
@@ -843,9 +843,9 @@ Running log of decisions, context, and key facts across sessions.
 
 | Resource | URL / ID |
 |----------|---------|
-| PMID 36583780 — Tqemaladze J. *Mol Biol Rep* 2023 (CDATA) | https://pubmed.ncbi.nlm.nih.gov/36583780/ |
+| PMID 36583780 — Tqemaladze J. *Mol Biol Rep* 2023 (CEDAR) | https://pubmed.ncbi.nlm.nih.gov/36583780/ |
 | PMID 20480236 — Lezhava T. et al. *Biogerontology* 2011 | https://pubmed.ncbi.nlm.nih.gov/20480236/ |
-| Zenodo CDATA | https://doi.org/10.5281/zenodo.19174506 |
+| Zenodo CEDAR | https://doi.org/10.5281/zenodo.19174506 |
 
 ---
 
@@ -874,7 +874,7 @@ Running log of decisions, context, and key facts across sessions.
 | Project | Path |
 |---------|------|
 | Regenesis (regeneration protocols) | ~/Desktop/Regenesis/ |
-| CDATA (aging theory) | ~/Desktop/CDATA/ |
+| CEDAR (aging theory) | ~/Desktop/CEDAR/ |
 | AIM (integrative medicine assistant) | ~/Desktop/AIM/ |
 | DrJaba (fundraising platform) | ~/Desktop/DrJaba/ |
 

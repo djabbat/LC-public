@@ -17,7 +17,7 @@
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
 | **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
-| **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
+| **CEDAR** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
@@ -77,7 +77,7 @@ Per `DESIGN.md §5`:
 - [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
 - [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
 - [ ] `MCAOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
-- [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
+- [ ] `CEDAR/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
 **None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
 

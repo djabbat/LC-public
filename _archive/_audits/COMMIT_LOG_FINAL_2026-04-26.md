@@ -4,7 +4,7 @@
 
 3 Wave 1 agents completed:
 - ✅ aec7a74d (CommonHealth top + MCAOA + Ze) → `_audits/PEER_REVIEW_v2_TopMCOAZe_2026-04-26.md`
-- ✅ ab87c710 (CommonHealth empirical FCLC+CDATA+BioSense+Ontogenesis+HAP) → `_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
+- ✅ ab87c710 (CommonHealth empirical FCLC+CEDAR+BioSense+Ontogenesis+HAP) → `_audits/PEER_REVIEW_v2_Empirical_2026-04-26.md`
 - ✅ a9e4f36e (PhD audit refresh) → `/home/oem/Desktop/PhD/docs/PEER_REVIEW_v2_PhD_2026-04-26.md`
 
 ## Critical Findings
@@ -15,9 +15,9 @@
 ### Ze Theory — 1 fabricated arXiv
 arXiv:2501.12345 attributed to "Kerenidis & Cherrat 2025 quantum agents" was actually Malhotra & Ito doubly librating Plutinos (астрофизика).
 
-### CDATA — 1 wrong DOI + Sobol paradox
+### CEDAR — 1 wrong DOI + Sobol paradox
 - Goetz & Anderson 2010 DOI was wrong
-- Internal Sobol-paradox: S1(epigenetic)=0.403 > S1(centriolar)=0.224 — central CDATA thesis self-refuted by own data
+- Internal Sobol-paradox: S1(epigenetic)=0.403 > S1(centriolar)=0.224 — central CEDAR thesis self-refuted by own data
 
 ### BioSense — 4 wrong PMIDs
 4/9 PMIDs off (Voytek, Iyengar, Kleiger, Task Force) — corrected.
@@ -28,7 +28,7 @@ Hypothetical DOI 10.1016/j.dcn.2021.100971 removed; "Smith J. 2025 Nat Commun" f
 ### HAP — stub state, halt sustained
 10/10 prior fabrications replaced with stub. Single non-PubMed-indexed citation only.
 
-### CDATA reformulation — wrong Salzmann PMID
+### CEDAR reformulation — wrong Salzmann PMID
 PMID 24258025 → 24227883 corrected (24258025 was Nakamoto retinal ganglion cells, not Salzmann).
 
 ### PhD — 5 misattributions in chapters 02/08/09
@@ -57,7 +57,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 ### Ze/EVIDENCE.md
 - arXiv:2501.12345 (fabricated Kerenidis) flagged + removed from evidence
 
-### CDATA/EVIDENCE.md
+### CEDAR/EVIDENCE.md
 - Goetz & Anderson 2010 DOI: 10.1038/nature08117 → 10.1038/nrg2774 (PMID 20395968)
 
 ### BioSense/EVIDENCE.md
@@ -70,7 +70,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 - "Smith J. 2025 Nat Commun" flagged for fabrication risk
 - Hypothetical DOI 10.1016/j.dcn.2021.100971 removed
 
-### CDATA/docs/CDATA_REFORMULATION_2026-04-26.md
+### CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md
 - Salzmann PMID 24258025 → 24227883 (corrected везде в файле)
 
 ### E0/docs/PEER_REVIEW_v2_2026-04-26.md
@@ -87,7 +87,7 @@ Per agent report — chapters need PMID corrections (not yet applied — PhD age
 - **PhD KNOWLEDGE.md §3 Wang 2009 attribution** — wrongly listed as Drosophila when actually mammalian neocortex. Pending fix.
 - **HAP rebuild** — stub state cannot be auto-fixed; full literature search needed.
 - **Ontogenesis rebuild** — quarantine sustained; full re-verification needed.
-- **CDATA Sobol paradox** — structural issue, requires counter-factual analysis + reformulation (already partially in CDATA_REFORMULATION).
+- **CEDAR Sobol paradox** — structural issue, requires counter-factual analysis + reformulation (already partially in CEDAR_REFORMULATION).
 - **MCAOA Aksioma M3 a-priori weights** — all w_i still placeholder; needs RNA-seq-based prediction protocol.
 - **FCLC PATE prototype + ε≤1.0 + EU LoIs** — structural deliverables, not citation fixes.
 
@@ -116,7 +116,7 @@ Reviewers see **already-corrected** documents (Wave 1 fixes applied), so Wave 2 
 ### LICENSE files created (EIC mandate compliance)
 10 MIT LICENSE files created в:
 - /home/oem/Desktop/LC/LICENSE
-- /home/oem/Desktop/LC/{MCAOA,FCLC,Ze,CDATA,BioSense,Ontogenesis,HAP}/LICENSE
+- /home/oem/Desktop/LC/{MCAOA,FCLC,Ze,CEDAR,BioSense,Ontogenesis,HAP}/LICENSE
 - /home/oem/Desktop/E0/LICENSE
 - /home/oem/Desktop/PhD/LICENSE
 
@@ -131,7 +131,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 5. **GNBC ethics approval** для iPSC в Абастумани (3-6 месяцев timeline).
 6. **Citation validation signed PI statement** для Wellcome 2025 fraud-detection pilot.
 7. **HAP and Ontogenesis full literature rebuild** — fabrication-flagged subprojects need ground-up verification.
-8. **CDATA Sobol-paradox resolution** — counter-factual analysis with only-centriolar features.
+8. **CEDAR Sobol-paradox resolution** — counter-factual analysis with only-centriolar features.
 9. **MCAOA априорные w_i weights** — RNA-seq based prediction on Tabula Muris/Sapiens.
 10. **FCLC PATE prototype implementation** — currently stub.
 
@@ -148,7 +148,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 **Choice:** Option A — wait для встречи 2026-05-02 в 15:00 Tbilisi с Илья
 **No proactive action** до субботы. К субботе подготовить (per существующее обещание Илья):
 - Verified bibliography
-- Biological constraints (3-5 для CDATA-relevant rig design)
+- Biological constraints (3-5 для CEDAR-relevant rig design)
 - Software stack schema (architecture diagram + serial protocol)
 - Jaiswal/Kowalczyk datasets URLs
 - Universal rig spec для его Claude-критики
@@ -166,12 +166,12 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 2. Direct ask Eric Klien — possibility Lifeboat Foundation как fiscal sponsor
 3. Compare overhead/admin burden и выбрать
 
-### Decision #4 — CDATA Sobol Counter-Factual ✅ RESOLVED (F)
+### Decision #4 — CEDAR Sobol Counter-Factual ✅ RESOLVED (F)
 **Choice:** Counter-factual analysis (script `cdata_ablation_sobol.py` уже существует) + reframe Counter #1 как "structural age-tracker" (не "dominant determinant").
 **Status:** Script paused (overnight rename + FCLC priority took precedence). SALib installed. To resume — run `python3 scripts/cdata_ablation_sobol.py` после FCLC deployment complete.
 
 ### Decision #5 — MCAOA Априорные w_i ✅ RESOLVED (F)
-**Choice:** Hybrid pilot — Tabula Muris/Sapiens ridge prediction для 3 best-characterized counters (CDATA centriolar, telomere, mitoROS) перед Impetus LOI; остальные 3 (epigenetic_drift, proteostasis, autophagy/mitophagy) explicitly помечены как «to-be-derived in Phase II».
+**Choice:** Hybrid pilot — Tabula Muris/Sapiens ridge prediction для 3 best-characterized counters (CEDAR centriolar, telomere, mitoROS) перед Impetus LOI; остальные 3 (epigenetic_drift, proteostasis, autophagy/mitophagy) explicitly помечены как «to-be-derived in Phase II».
 **Implementation plan:**
 1. Download Tabula Muris/Sapiens RNA-seq counts data
 2. Define gene panels per counter:
@@ -221,7 +221,7 @@ Reasoning: Wave 2 CommonHealth fund-perspective review identified IP gap as stru
 | 1 | Trademark | LC (option C) | ✅ Applied (161 brand replacements + directory + GitHub repos + 408 path refs) |
 | 2 | Co-PI letter | Wait Saturday 2026-05-02 (option A) | ✅ No proactive action |
 | 3 | NGO grants office | Phased: self → uni/Lifeboat (option G) | ✅ Documented |
-| 4 | CDATA Sobol counter-factual | Counter-factual + structural reframe (option F) | 🟡 Script ready, pending execution |
+| 4 | CEDAR Sobol counter-factual | Counter-factual + structural reframe (option F) | 🟡 Script ready, pending execution |
 | 5 | MCAOA априорные w_i | Hybrid pilot Tabula Muris ridge (option F) | 🟡 Pending implementation |
 | 6 | FCLC PATE | RDP + PATE classic local dev (option D) | 🟡 Pending implementation |
 | 7 | HAP + Ontogenesis | Punt + demote to conceptual (option G) | 🟡 Pending demote disclaimer |

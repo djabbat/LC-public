@@ -487,8 +487,8 @@ defmodule ZeSimWeb.DynamicsLive do
               <li>Stressed / aging subject (low τ_Z): high T-event rate, low HRV</li>
               <li>Quantitative mapping: τ_Z_depletion_rate = α · (1/HRV) with α fitted to age+stress data</li>
             </ul>
-            <p><strong>Connection to CDATA:</strong> Aging Ze-systems (centrioles) have reduced τ_Z;
-            this should manifest as reduced HRV in CDATA-predicted aging trajectory.</p>
+            <p><strong>Connection to CEDAR:</strong> Aging Ze-systems (centrioles) have reduced τ_Z;
+            this should manifest as reduced HRV in CEDAR-predicted aging trajectory.</p>
             <p><strong>Data needed:</strong> Longitudinal HRV from wearables (Garmin/Apple Watch) in
             100 subjects aged 20–80, aligned with AIM health indicators.</p>
           `

@@ -24,7 +24,7 @@
 3. **Sample size calc (power analysis)** ✓  
    Два полных расчёта с формулами и подстановками:  
    • AI–human concordance: N = (1.645+0.84)²×0.85×0.15/0.05² ≈ 286.  
-   • CDATA experiment (divisions per day): n = (1.96+0.84)²×(0.4²+0.4²)/0.3² → 30/group.  
+   • CEDAR experiment (divisions per day): n = (1.96+0.84)²×(0.4²+0.4²)/0.3² → 30/group.  
    Для contamination rate — TBD (обосновано необходимостью пилота). Формально расчёт есть; TBD во вторичном анализе допустим на стадии proposal.
 
 4. **Risk matrix ≥5 rows** ✓  
@@ -43,7 +43,7 @@
    В тексте обнаружены только допустимые placeholder’ы: `osf.io/TBD`, `DE = TBD`, `Required N = TBD` (в контексте contamination – пилот ещё не проведён). Никаких `[REF_NEEDED]`, `[PMID_REMOVED]` или `TBD` там, где должны стоять конкретные данные. Fabrication markers удалены при подготовке (подтверждено комментарием в EVIDENCE.md).
 
 9. **Internal consistency core docs** ✓  
-   THEORY.md, CONCEPT.md, EVIDENCE.md и README.md описывают один и тот же проект с согласованными параметрами: budget $4,500, stage accuracy ±2 µm, Claude Code agent, etc. Методы (Arduino, FLIR, CellPose) соответствуют заявленным знаниям. Цели (CDATA Phase A) вытекают из концепции. Противоречий между файлами нет. Дублирование разделов в CONCEPT.md (sample size, risk matrix) не является противоречием, лишь незначительная неаккуратность.
+   THEORY.md, CONCEPT.md, EVIDENCE.md и README.md описывают один и тот же проект с согласованными параметрами: budget $4,500, stage accuracy ±2 µm, Claude Code agent, etc. Методы (Arduino, FLIR, CellPose) соответствуют заявленным знаниям. Цели (CEDAR Phase A) вытекают из концепции. Противоречий между файлами нет. Дублирование разделов в CONCEPT.md (sample size, risk matrix) не является противоречием, лишь незначительная неаккуратность.
 
 ## Reference audit
 

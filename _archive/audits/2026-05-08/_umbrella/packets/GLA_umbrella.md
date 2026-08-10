@@ -113,7 +113,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 
 Альтернативы:
 - Georgian Longevity Research (GLR)
-- CDATA Journal of Cellular Aging
+- CEDAR Journal of Cellular Aging
 
 ⚠️ **Финальное название утверждается до подачи на ISSN.**
 
@@ -130,7 +130,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 | 3. Подать заявку на ISSN | apr-may 2026 | — |
 | 4. Editorial board invitations: Eric Klien + 2-3 грузинских биолога | apr-may 2026 | 📨 драфт Klien готов |
 | 5. Установить OJS на VPS ($5-10/мес Hetzner/DigitalOcean) | may 2026 | — |
-| 6. Шаблон сайта (логотип GLA, рубрикатор CDATA, политики) | may 2026 | — |
+| 6. Шаблон сайта (логотип GLA, рубрикатор CEDAR, политики) | may 2026 | — |
 | 7. Сбор 5-7 статей для Volume 1 Issue 1 | may-jun 2026 | — |
 | 8. Архивирование через PKP PN | jul 2026 | — |
 | 9. Подача в DOAJ | oct-dec 2026 | — |
@@ -192,7 +192,7 @@ Public git push excludes all `.md` core files (CONCEPT.md, CLAUDE.md, charter do
 
 | Charter objective | Current manifestation (2026) |
 |---|---|
-| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CDATA, MCAOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Activatus/Korkoti. |
+| **1.8.1** Support, advancement and assistance for human rejuvenation and life-extension | Host Institution for EIC Pathfinder Challenges 2026; research umbrella for CEDAR, MCAOA, FCLC, BioSense, Ze Theory, Ontogenesis, HAP, Activatus/Korkoti. |
 | **1.8.2** Engaging people in life-extension activities | Public outreach via longevity.ge; collaboration with sister NGO Sulkalmakhi for local workshops; open-access publishing. |
 | **1.8.3** Helping people with employment in line with their interests | Not yet operationalised as a standalone programme — to be developed in Pillar 2.4 (community & networking). |
 | **1.8.4** Searching and establishing contacts with other longevity organisations in Georgia and abroad | ILA node; co-PI links with Ulm, Curie, UPF, COSIC/KU Leuven, BioViva; EIC consortium building. |
@@ -226,8 +226,8 @@ All auxiliary economic activity (Art. 1.9) shall serve this mission; profit dist
 
 The theory-and-evidence portfolio is organised into **three pillars** so that every active subproject can be traced to a methodological role:
 
-- **TF — Theoretical Foundation.** Core hypotheses and conceptual frameworks. Lead artefact: **Centriolar Damage Theory (CDATA)** + its umbrella **MCAOA** (Multi-Counter Architecture of Organismal Aging, submitted to eLife since 2026-04-30).
-- **ISE — In-Silico Experimentation.** Computational simulation, modelling, and theoretical validation. Lead artefacts: **Ze Theory** (predictive coding model), **CDATA Rust simulator**, **Ontogenesis simulator**, **HAP** computational pipeline.
+- **TF — Theoretical Foundation.** Core hypotheses and conceptual frameworks. Lead artefact: **Centriolar Damage Theory (CEDAR)** + its umbrella **MCAOA** (Multi-Counter Architecture of Organismal Aging, submitted to eLife since 2026-04-30).
+- **ISE — In-Silico Experimentation.** Computational simulation, modelling, and theoretical validation. Lead artefacts: **Ze Theory** (predictive coding model), **CEDAR Rust simulator**, **Ontogenesis simulator**, **HAP** computational pipeline.
 - **IR — In-Real (empirical) Research.** Wet-lab and field-data validation. Lead artefacts: **BioSense** (federated clinical learning), **FCLC** (consortium proposal, server-resident), **Activatus-Korkoti** (heritage-anchored nutrition, PNAS 2026 anchor).
 
 Subprojects move along TF → ISE → IR as they mature. New theory enters at TF; only when ISE simulation supports it does it justify IR experimental investment.
@@ -309,7 +309,7 @@ Art. 1.9 permits auxiliary entrepreneurial activity provided:
 | 2027 | DOAJ submission (Annals) | Q1 2027 |
 | 2027 | Impetus grant submission (if eligible) | Deadlines as per Impetus |
 | 2027 | Employment-help programme launched (Art. 1.8.3 pilot) | Q3 2027 |
-| 2027 | Number of active research subprojects (CDATA, MCAOA, FCLC, etc.) | ≥ 4 with public outputs |
+| 2027 | Number of active research subprojects (CEDAR, MCAOA, FCLC, etc.) | ≥ 4 with public outputs |
 | 2028 | Horizon Europe proposal (Cluster 1) | Submitted (if call opens) |
 | 2028 | Annals IF tracking (first partial year) | Indexed in at least 1 major database |
 | 2029 | Board mid-term check | Compliance audit of governance |
@@ -378,14 +378,14 @@ Art. 1.9 permits auxiliary entrepreneurial activity provided:
 Renames during setup phase (do NOT use historical variants):
 - ❌ "Journal of Centriolar Aging and Longevity (JCAL)" — early working name
 - ❌ "Georgian Longevity Research (GLR)" — alternative considered
-- ❌ "CDATA Journal of Cellular Aging" — alternative considered
+- ❌ "CEDAR Journal of Cellular Aging" — alternative considered
 - ✅ **Annals of Rejuvenation Science** — final, ISSN-registered
 
 ## Scope
 
 Molecular and cellular mechanisms of aging-related dysfunction, centriologenesis,
 centrosome biology, regenerative medicine, healthspan-extending therapies. Strong
-overlap with CDATA (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
+overlap with CEDAR (Centriolar Damage And) theory umbrella + MCAOA (Multi-Counter
 Architecture of Organismal Aging).
 
 ## Twin-journal split (canonical strategy 2026-04-26)
@@ -396,7 +396,7 @@ GLA hosts **two journals**, separated by selectivity vs inclusivity:
 |---|---|---|
 | Selectivity | high (DOAJ-bound, peer review-strict) | broader, inclusive |
 | Reject rate target | ≥40% | ≥10% |
-| Use case | flagship CDATA / MCAOA papers | early-career, niche, conference |
+| Use case | flagship CEDAR / MCAOA papers | early-career, niche, conference |
 
 **Don't trim Longevity Horizon to be like Annals** — they exist in tension on purpose.
 
@@ -501,7 +501,7 @@ Annals/
 
 ### 3.1 Core Theories
 
-#### Centriolar Damage Theory (CDATA)
+#### Centriolar Damage Theory (CEDAR)
 - **Status:** ACTIVE
 - **Lead:** Jaba Tqemaladze
 - **Description:** Core theoretical framework for centriolar involvement in aging
@@ -736,7 +736,7 @@ Annals/
 - [ ] **3.1** Bring DOAJ application docs to Q1-2027-ready state (Annals of Rejuvenation Science — e-ISSN 3088-439X; editorial policies, peer review workflow, copyright license must be finalised)
 - [ ] **3.2** Confirm 5th Editorial Board member for Annals (4/5 confirmed; gap blocks first issue publication)
 - [ ] **3.3** Publish Annals first issue by Q4 2026 (Art. 1.8.1 — advancement of rejuvenation science; milestone for EIC credibility)
-- [ ] **3.4** Archive all research subproject charters (CDATA, MCAOA, FCLC, BioSense, Ze, Activatus) in GLA docs/ folder (current status: scattered across server; no central repository)
+- [ ] **3.4** Archive all research subproject charters (CEDAR, MCAOA, FCLC, BioSense, Ze, Activatus) in GLA docs/ folder (current status: scattered across server; no central repository)
 
 ## Priority 4 — Institutional Documentation & Transparency
 
@@ -1059,7 +1059,7 @@ Annals/
 
 | Framework | Status | Public output |
 |---|---|---|
-| Centriolar Damage Theory (CDATA) | Active — core theory | Papers in preparation |
+| Centriolar Damage Theory (CEDAR) | Active — core theory | Papers in preparation |
 | MCAOA (Mitochondrial-Centric Organismal Aging) | Submitted to eLife (2026-04-30) | Under review |
 | FCLC (Focal Centriolar Lesion Cascade) | Consortium proposal | Server-resident |
 | BioSense | Active | Internal |

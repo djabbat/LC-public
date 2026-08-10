@@ -13,7 +13,7 @@
 | ✅ AIM | 2 | 2 | 0 | 0 | 100% |
 | ✅ AutomatedMicroscopy | 15 | 15 | 0 | 0 | 100% |
 | ✅ BioSense | 5 | 5 | 0 | 0 | 100% |
-| ✅ CDATA | 73 | 73 | 0 | 0 | 100% |
+| ✅ CEDAR | 73 | 73 | 0 | 0 | 100% |
 | ✅ CytogeneticTree | 14 | 14 | 0 | 0 | 100% |
 | ✅ EpigeneticDrift | 24 | 24 | 0 | 0 | 100% |
 | ✅ HAP | 1 | 1 | 0 | 0 | 100% |
@@ -61,7 +61,7 @@
 | 4 | PMID | [20480236](https://pubmed.ncbi.nlm.nih.gov/20480236/) | ✅ OK | Lezhava T 2011 Biogerontology \| Gerontology research in Georgia. | KNOWLEDGE.md:130; README.md:117 | ☐ | ☐ |
 | 5 | PMID | [36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | ✅ OK | Tqemaladze J 2023 Mol Biol Rep \| Reduction, proliferation, and differentiation d | KNOWLEDGE.md:129; README.md:116 | ☐ | ☐ |
 
-## CDATA  (73: ✅73  🚨0  ⚠️0)
+## CEDAR  (73: ✅73  🚨0  ⚠️0)
 
 | # | Тип | Идентификатор | Real? | Источник / Inf | Occurrences | Match? | Action |
 |---|---|---|---|---|---|---|---|

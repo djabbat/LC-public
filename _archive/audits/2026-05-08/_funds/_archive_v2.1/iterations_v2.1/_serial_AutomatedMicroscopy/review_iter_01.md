@@ -22,7 +22,7 @@
    Указан OSF ID `osf.io/automicroscopy_cdata` и planned date 2026-06-01. Placeholder допустим.
 
 3. **Sample size calc (power analysis)** — ✗  
-   Для CDATA experiment формула приведена (d=0.75, α=0.05, power=0.80 → n=30/group). Для M1 — N=286. Для contamination — `N = TBD`. Design effect противоречиво: в одном месте `DE=1.2`, в другом `DE = TBD`. Нет полного покрытия.
+   Для CEDAR experiment формула приведена (d=0.75, α=0.05, power=0.80 → n=30/group). Для M1 — N=286. Для contamination — `N = TBD`. Design effect противоречиво: в одном месте `DE=1.2`, в другом `DE = TBD`. Нет полного покрытия.
 
 4. **Risk matrix ≥5 rows** — ✓  
    Две матрицы (6 и 7 строк) с Probability × Impact × Mitigation. Формально выполнено.

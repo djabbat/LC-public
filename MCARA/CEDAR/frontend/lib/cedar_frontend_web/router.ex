@@ -1,5 +1,5 @@
-defmodule CDATAFrontendWeb.Router do
-  use CDATAFrontendWeb, :router
+defmodule CEDARFrontendWeb.Router do
+  use CEDARFrontendWeb, :router
 
   import Phoenix.LiveDashboard.Router
 
@@ -7,7 +7,7 @@ defmodule CDATAFrontendWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {CDATAFrontendWeb.Layouts, :root}
+    plug :put_root_layout, html: {CEDARFrontendWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -16,7 +16,7 @@ defmodule CDATAFrontendWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", CDATAFrontendWeb do
+  scope "/", CEDARFrontendWeb do
     pipe_through :browser
 
     live "/", DashboardLive, :index
@@ -29,7 +29,7 @@ defmodule CDATAFrontendWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: CDATAFrontendWeb.Telemetry
+      live_dashboard "/dashboard", metrics: CEDARFrontendWeb.Telemetry
     end
   end
 end

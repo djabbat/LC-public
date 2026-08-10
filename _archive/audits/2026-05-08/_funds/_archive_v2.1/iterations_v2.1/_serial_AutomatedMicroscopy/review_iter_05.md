@@ -22,7 +22,7 @@
    OSF ID: `osf.io/automicroscopy_cdata` (placeholder), дата регистрации 2026-06-01.
 
 3. **Sample size calc (power analysis)** — ✓  
-   Для concordance: n = (1.645+0.84)²×0.85×0.15/0.05² ≈ 286. Для CDATA: n = 30/group, формула с подстановкой. Для contamination — placeholder (TBD), но это допустимо на текущем этапе.
+   Для concordance: n = (1.645+0.84)²×0.85×0.15/0.05² ≈ 286. Для CEDAR: n = 30/group, формула с подстановкой. Для contamination — placeholder (TBD), но это допустимо на текущем этапе.
 
 4. **Risk matrix ≥5 rows** — ✓  
    В CONCEPT.md таблица из 6 строк (AI misinterpretation, env chamber, camera, network, contamination, stepper drift) с P×I×Mitigation.

@@ -21,6 +21,6 @@ Backup: ~/Desktop/AUDIT_FUNDS_2026-05-08/backup_pre_cleanup/
 - Ecdysteroids in arthropods: Gáliková M. et al. (2015). *Cell Metab*. DOI: 10.1016/j.cmet.2015.07.004
 - Bradford-Hill criteria: Hill A.B. (1965). *Proc R Soc Med*.
 
-## Планария (CDATA overlap)
+## Планария (CEDAR overlap)
 
 - Planaria no liver, yet behavioral responses: Inoue T. et al. (2015). *J Exp Biol*. PMID 25657204

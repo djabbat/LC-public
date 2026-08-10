@@ -7,9 +7,9 @@
 | Критерий | Оценка | Обоснование |
 |---|---|---|
 | **Premise** | 2 | Идея создания интегративной платформы старения как total chronic disease — разумна, но не нова (аналоги: Aging.AI, Insilico Medicine). Раздута до 5+ подпроектов без единого подтверждённого результата. |
-| **Method** | 1 | Основные методы — либо постулированные ansatz (Ze dτ/dt = -αI, без биологического обоснования), либо пост-хок подгонки (weights, CDATA bridge) на underpowered выборках. Отсутствие пре-регистрации, признанное p-hacking. |
-| **Evidence** | 1 | Единственные "подтверждения" — swept-v* на N=500 (post-hoc), остальное: NULL результаты для v1, inconclusive CDATA (p=0.12), AUC 0.81 на N=2222 без пре-регистрации (Ioannidis 2005 — автор сам цитирует!), отсутствие хоть одного peer-reviewed подтверждения. |
-| **Falsifiability** | 2 | M4 threshold (N≥2000, α=0.001, partial r²<0.05) — правильно сформулирован, но не выполнен. CDATA falsifiability не operationalised (Sobol deferred). Ze ansatz не фальсифицируем на практике. |
+| **Method** | 1 | Основные методы — либо постулированные ansatz (Ze dτ/dt = -αI, без биологического обоснования), либо пост-хок подгонки (weights, CEDAR bridge) на underpowered выборках. Отсутствие пре-регистрации, признанное p-hacking. |
+| **Evidence** | 1 | Единственные "подтверждения" — swept-v* на N=500 (post-hoc), остальное: NULL результаты для v1, inconclusive CEDAR (p=0.12), AUC 0.81 на N=2222 без пре-регистрации (Ioannidis 2005 — автор сам цитирует!), отсутствие хоть одного peer-reviewed подтверждения. |
+| **Falsifiability** | 2 | M4 threshold (N≥2000, α=0.001, partial r²<0.05) — правильно сформулирован, но не выполнен. CEDAR falsifiability не operationalised (Sobol deferred). Ze ansatz не фальсифицируем на практике. |
 | **Deliverability** | 2 | 0 подписанных EU LoI для EIC, GDPR blocker (FCLC semi-honest), отсутствие CI, порт-конфликты, зависимость от одного PhD-студента (Lezhava). Архитектура перегружена. |
 | **Novelty** | 2 | Комбинация free-energy principle + CHSH + federated learning — не нова. Утверждения о квантовых аналогах в старении (CHSH deformation 1.7478) не обоснованы и выглядят как наукообразная спекуляция. |
 | **Risk** | 5 | Крайне высокий риск: отсутствие конфирматорных данных, юридические риски GDPR, зависимость от неполученного гранта (EIC), ключевой персонал с единой точкой отказа. Финансирование такого проекта равносильно сжиганию денег. |
@@ -17,7 +17,7 @@
 ## Top 3 P0 issues
 
 ### 1. Научная несостоятельность: нет ни одного пре-регистрированного конфирматорного результата
-Весь framework построен на пост-хок анализе (p-hacking, как признаёт сам автор), underpowered выборках (N=196 для CDATA bridge с 5 параметрами — 39 obs/param при Harrell rule 10), и NULL результатах v1, которые "deprecated/superseded" без объяснения механизма исправления. Пока не будет хотя бы одного пре-регистрированного исследования N ≥ 2000 с α = 0.001, всё это — гипотезы, а не наука.
+Весь framework построен на пост-хок анализе (p-hacking, как признаёт сам автор), underpowered выборках (N=196 для CEDAR bridge с 5 параметрами — 39 obs/param при Harrell rule 10), и NULL результатах v1, которые "deprecated/superseded" без объяснения механизма исправления. Пока не будет хотя бы одного пре-регистрированного исследования N ≥ 2000 с α = 0.001, всё это — гипотезы, а не наука.
 
 **Действие:** отозвать заявку до проведения такого исследования.
 
@@ -26,16 +26,16 @@ EIC Pathfinder требует ≥1 EU-MS + ≥2 разных MS/AC — ноль 
 
 **Действие:** нужно либо отказаться от EIC, либо собрать консорциум + завершить malicious-secure инфраструктуру.
 
-### 3. Фундаментальные дефекты в теоретическом ядре (Ze ansatz + CDATA)
-`dτ_Ze/dt = −α·I(Z)` — постулирован по аналогии с физическими часами (Burgholzer 2015, Pearson 2021), без вывода для биологических систем. Автор честно переименовал в "ansatz", но не предлагает механизма, почему энтропия информации должна управлять темпом старения. CDATA — "inconclusive" с p=0.12, при этом остаётся в основном тексте как "Counter #1". CHSH deformation (константа 1.7478) — непонятно, из какой физической модели следует, как измерять. Без ответа на эти вопросы framework — пустая обёртка.
+### 3. Фундаментальные дефекты в теоретическом ядре (Ze ansatz + CEDAR)
+`dτ_Ze/dt = −α·I(Z)` — постулирован по аналогии с физическими часами (Burgholzer 2015, Pearson 2021), без вывода для биологических систем. Автор честно переименовал в "ansatz", но не предлагает механизма, почему энтропия информации должна управлять темпом старения. CEDAR — "inconclusive" с p=0.12, при этом остаётся в основном тексте как "Counter #1". CHSH deformation (константа 1.7478) — непонятно, из какой физической модели следует, как измерять. Без ответа на эти вопросы framework — пустая обёртка.
 
-**Действие:** убрать Ze и CDATA из ядра до получения чётких механистических или экспериментальных подтверждений.
+**Действие:** убрать Ze и CEDAR из ядра до получения чётких механистических или экспериментальных подтверждений.
 
 ## Top 5 text-level fixes (что можно исправить редактированием core docs)
 
 1. **`LC/CONCEPT.md: §4`** — Удалить строку "WHO recognized aging as a disease". ICD-11 MG2A "ageing-associated decline in intrinsic capacity" — это не disease, а risk factor. Overclaim — убивает доверие. Заменить на: "WHO classifies age-related decline in intrinsic capacity (MG2A) as a health condition, but not aging as a disease; our framework treats aging as a syndrome of chronic processes."
 
-2. **`LC/CONCEPT.md: §3`** — Переместить CDATA и Ze из основного списка 5 компонентов в "supporting hypotheses" с явным указанием "not validated": статус inconclusive для CDATA, ansatz для Ze. Оставить только 3 pillar: MCAOA (theoretical framework), BioSense (applied platform), FCLC (infrastructure).
+2. **`LC/CONCEPT.md: §3`** — Переместить CEDAR и Ze из основного списка 5 компонентов в "supporting hypotheses" с явным указанием "not validated": статус inconclusive для CEDAR, ansatz для Ze. Оставить только 3 pillar: MCAOA (theoretical framework), BioSense (applied platform), FCLC (infrastructure).
 
 3. **`LC/THEORY.md: §4`** — Текущая таблица "Old vs New framing" не меняет факта, что эти утверждения — speculation. Убрать полностью. Вместо этого добавить: "All mathematical claims in this document are speculative (ansatz) until empirical validation on pre-registered cohort N≥2000. See `EVIDENCE.md` for status of each claim."
 

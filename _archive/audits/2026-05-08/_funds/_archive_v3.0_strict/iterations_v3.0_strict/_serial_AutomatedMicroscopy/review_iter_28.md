@@ -38,7 +38,7 @@
 
 7. **Reference reality + match** — ✗  
    - **Реальные ссылки в EVIDENCE.md** (OpenFlexure, Hayflick, Wolff, Delgehyr, Stringer, Schindelin, Burger, Boiko, Bran) — все проверены, реальны, соответствуют тексту.  
-   - **В CONCEPT.md** в разделе "Evidence base & meta-analysis" приведены те же ссылки, плюс **плейсхолдеры** `[Author(s), Year, Journal, DOI TBD]` для трёх ключевых утверждений (AI-assisted microscopy, low-cost retrofit, CDATA protocol). Это нарушение: в этих местах должны быть конкретные данные.  
+   - **В CONCEPT.md** в разделе "Evidence base & meta-analysis" приведены те же ссылки, плюс **плейсхолдеры** `[Author(s), Year, Journal, DOI TBD]` для трёх ключевых утверждений (AI-assisted microscopy, low-cost retrofit, CEDAR protocol). Это нарушение: в этих местах должны быть конкретные данные.  
    - **В EVIDENCE.md** в конце раздела "Evidence base & meta-analysis" также есть `[Placeholder: e.g., OpenTrons, µManager…]`.  
    - **Вывод:** часть ссылок — плейсхолдеры, не соответствующие требованиям реальности. Условие не выполнено.
 
@@ -48,7 +48,7 @@
    - Это маркеры "TBD" там, где должны быть конкретные данные. Условие нарушено.
 
 9. **Internal consistency core docs** — ✓  
-   CONCEPT, THEORY, EVIDENCE согласованы по целям (CDATA Phase A), методам (ретрофит, AI supervision), прогнозам. PARAMETERS, OPEN_PROBLEMS, DESIGN — стабы, но не противоречат. Повторы в разделах Limitations не считаются противоречием.
+   CONCEPT, THEORY, EVIDENCE согласованы по целям (CEDAR Phase A), методам (ретрофит, AI supervision), прогнозам. PARAMETERS, OPEN_PROBLEMS, DESIGN — стабы, но не противоречат. Повторы в разделах Limitations не считаются противоречием.
 
 10. **Evidence base depth** — ✗  
     - **Для утверждения "AI-operated microscopy feasibility":** 3 источника (Burger, Boiko, Bran) — из химии, не microscopy; засчитывается, но слабо.  

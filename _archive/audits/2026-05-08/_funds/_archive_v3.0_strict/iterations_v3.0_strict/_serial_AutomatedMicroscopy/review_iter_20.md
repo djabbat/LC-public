@@ -32,7 +32,7 @@ OSF ID: `osf.io/TBD` (или `osf.io/automicroscopy_cdata`), planned date: 2026-
 
 ### 3. Sample size calc (power analysis)
 **✓**  
-Приведены расчёты для CDATA-эксперимента (n=30 per group, Cohen's d=0.75, α=0.05, power=0.80), для M1 (N=286), для contamination (N=TBD). Формулы есть, но часть параметров — placeholder (σ², δ, design effect). Формально расчёт представлен.
+Приведены расчёты для CEDAR-эксперимента (n=30 per group, Cohen's d=0.75, α=0.05, power=0.80), для M1 (N=286), для contamination (N=TBD). Формулы есть, но часть параметров — placeholder (σ², δ, design effect). Формально расчёт представлен.
 
 ### 4. Risk matrix ≥5 rows
 **✓**  

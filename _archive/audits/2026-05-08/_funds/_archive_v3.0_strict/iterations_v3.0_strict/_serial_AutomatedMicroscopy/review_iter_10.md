@@ -25,7 +25,7 @@
    Указаны OSF placeholder (osf.io/automicroscopy_cdata и osf.io/TBD — неконсистентно) и дата 2026-06-01. Конкретный ID отсутствует, два разных placeholder’а. Требуется единый конкретный ID.
 
 3. **Sample size calc (power analysis)** – ✗  
-   Для CDATA эксперимента расчёт выполнен (n=30/группа, Cohen’s d=0.75, α=0.05, β=0.20). Для contamination rate — N=TBD. Для uptime — N=180 фиксировано, но без расчёта мощности. Частично выполнено.
+   Для CEDAR эксперимента расчёт выполнен (n=30/группа, Cohen’s d=0.75, α=0.05, β=0.20). Для contamination rate — N=TBD. Для uptime — N=180 фиксировано, но без расчёта мощности. Частично выполнено.
 
 4. **Risk matrix ≥5 rows** – ✓  
    В CONCEPT.md 6 строк, в EVIDENCE.md ещё 7 строк. Все строки содержат Probability, Impact, Mitigation. Выполнено.

@@ -40,7 +40,7 @@ AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/De
 - Решение: создать `rust-core/crates/lc-shared-types` (SI-units, parameter registry, JSON schema для PARAMETERS.md)
 - **Effort:** ~2-3 дня; стоит делать как отдельную задачу с ревью
 
-### 🟡 README↔CONCEPT синхронизация для топ-проектов (LC_BioSense, LC_CDATA, GLA_Annals)
+### 🟡 README↔CONCEPT синхронизация для топ-проектов (LC_BioSense, LC_CEDAR, GLA_Annals)
 - Audit P0 #3: README ≠ CONCEPT в нескольких местах
 - Решение: автоматизированный compare → diff → propose-via-AIM_FS
 - **Effort:** ~1 день на script + ручная сверка
@@ -67,14 +67,14 @@ AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/De
 
 ### ✅ AIM rust-core CI workflow создан
 - `.github/workflows/aim-rust-ci.yml` — fmt + clippy + test для aim-fs + smoke-test для CLI binary
-- Закрывает audit P0 #5 для AIM (umbrella-ci уже покрывает Ze/CDATA/MCAOA/BioSense)
+- Закрывает audit P0 #5 для AIM (umbrella-ci уже покрывает Ze/CEDAR/MCAOA/BioSense)
 
 ### ✅ lc-shared-types Rust crate
 - `~/Desktop/LC/shared-types/` — единый источник Ze-констант + ParameterRegistry
 - 8/8 unit tests + 1 doc-test pass
 - `lc_shared_types::ze::V_STAR_ACTIVE_ARTICLE` (-0.08738) и `V_STAR_ACTIVE_PYTHON` (0.45631) с автоматической conversion + Sobol S1 + drift detection
 - Закрывает audit P0 #6 (cross-project parameter inconsistency) — каждое subprojects's PARAMETERS.md теперь может ссылаться на единый источник истины
-- **Next step:** добавить `lc-shared-types = { path = "../shared-types" }` в Cargo.toml-ы LC subprojects (CDATA/MCAOA/server) и заменить hardcoded литералы
+- **Next step:** добавить `lc-shared-types = { path = "../shared-types" }` в Cargo.toml-ы LC subprojects (CEDAR/MCAOA/server) и заменить hardcoded литералы
 
 ### ✅ aim-fs-migrate binary + Claude memory migration
 - `aim-fs-migrate --aim-root <path> --tenant-id <uuid> --claude-memory <dir> --legacy-aim <dir> [--dry-run]`
@@ -90,7 +90,7 @@ AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/De
 - Закрывает SPEC §10.3 (legacy → AIM_FS migration)
 
 
-### ✅ CDATA README internal contradiction → исправлено
+### ✅ CEDAR README internal contradiction → исправлено
 - Строка 3: «Counter #1» (правильно, согласовано с code)
 - Строка 12 БЫЛА «Counter #2» (неправильно)
 - Сравнение источников истины:
@@ -98,7 +98,7 @@ AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/De
   - `THEORY.md` v5.2 — Counter #1 (5 упоминаний)
   - `cell_dt_cli::COUNTER_NUMBER` — 1
 - Fix: одна точечная правка в README.md L12 (Counter #2 → Counter #1)
-- Закрывает audit P0 #3 (README ≠ CONCEPT) для CDATA
+- Закрывает audit P0 #3 (README ≠ CONCEPT) для CEDAR
 
 ### ℹ BioSense README ↔ CONCEPT — drift не обнаружен
 - README говорит про χ_Ze, статус EEG validated, ссылается на root PARAMETERS.md
@@ -118,8 +118,8 @@ AIM на самом деле живёт в `~/Desktop/LC/AIM/`, а не в `~/De
 ### ✅ lc-shared-types подключен к LC subprojects
 - `MCAOA/Cargo.toml` — добавлено в `[workspace.dependencies]`
 - `server/Cargo.toml` — добавлено в `[dependencies]`
-- `CDATA/Cargo.toml` — создан `[workspace.dependencies]` с lc-shared-types
-- Smoke check: `cargo check` для server + CDATA — pass (warnings only)
+- `CEDAR/Cargo.toml` — создан `[workspace.dependencies]` с lc-shared-types
+- Smoke check: `cargo check` для server + CEDAR — pass (warnings only)
 - **Next step (manual):** заменить hardcoded литералы `0.45631` / `-0.08738` в исходниках
   на `lc_shared_types::ze::V_STAR_ACTIVE_PYTHON` / `V_STAR_ACTIVE_ARTICLE`. Не делаю
   auto-replace — те же литералы могут встречаться в неотносящемся коде.
@@ -243,7 +243,7 @@ Smoke tests:
 - Поддерживает `--no-build`, `--uninstall`
 - Не запущен автоматически: install.sh требует sudo и модифицирует /usr/local/bin → ждёт user команды
 
-### ✅ MCAOA / CDATA / server source — сканирование
+### ✅ MCAOA / CEDAR / server source — сканирование
 - Подробный re-grep на `const|let|fn` в Rust-source: **в коде нет литералов** `0.45631` / `-0.08738`
 - Все matches в audit ранее были внутри LLM-prompt strings (server/src/services/ai_guide.rs, disclosures.rs) — НЕ заменяются (это документация для LLM)
 - Только BioSense/backend/src/main.rs имел true const declarations — заменены в Round 4
@@ -565,13 +565,13 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 - Новый binary в /usr/local/bin (10 → 11 bin'ов)
 - Distinguishing features vs aim-fs-migrate:
   - Schema classification по filename + frontmatter `type` + bucket + content
-  - **Project scope detection** через regex над telltale strings (LC_CDATA, FCLC, BioSense, Ze, etc.) — 22 known projects
+  - **Project scope detection** через regex над telltale strings (LC_CEDAR, FCLC, BioSense, Ze, etc.) — 22 known projects
   - **Dedup** через sha256(normalised body) — re-runs идемпотентны
   - Tags auto-extraction: bucket, "citation" (PMID/DOI), "llm" (DeepSeek/Anthropic), "phd"
   - Per-LC-subproject CLAUDE.md / MEMORY.md → правильно scoped к LC_<subname>
 - Real run на ecosystem: **335 entities imported** (88 dupes detected, 537 skipped)
 - Distribution by project scope (top hits):
-  - LC_CDATA: 174, LC_MCOA: 70, LC_FCLC: 63, LC_BioSense: 50, Marketing_JabaEkimi: 36, PhD: 33
+  - LC_CEDAR: 174, LC_MCOA: 70, LC_FCLC: 63, LC_BioSense: 50, Marketing_JabaEkimi: 36, PhD: 33
   - GLA_Annals: 25, LC_Ontogenesis: 29, LC_Ze: 27, Iqalto_Activatus: 15
 - AIM_FS теперь содержит **358 entities** (~90 % покрытия user's ecosystem facts)
 
@@ -598,7 +598,7 @@ SPEC §12 таблица превосходства над Claude по 15 ося
 ### ✅ /fs/projects/:slug (per-project activity feed)
 - Route `/fs/projects/:slug` — drill-down от /fs/projects карточек
 - New aim-fs API: `project_activity(tenant, slug) → ProjectActivity` со entries + recent_events + counts (feedback/state/audits/references/other)
-- Real test: LC_CDATA project_activity → 9 audits, 12 project_state, 79 other = 100 entries; 50 recent events
+- Real test: LC_CEDAR project_activity → 9 audits, 12 project_state, 79 other = 100 entries; 50 recent events
 
 ### Phoenix Routes теперь
 | Route | Live module | Назначение |
@@ -642,7 +642,7 @@ ping, propose, approve, reject, list_pending, scaffold_project, ensure_patient, 
 - Port op `entity_detail` (now **18 ops** total)
 - `AimMemory.FS.entity_detail/2` для Phoenix
 - `AimWebWeb.EntityDetailLive` route `/fs/entity/:id`: full body + provenance + scope + tags + bidirectional links + event timeline
-- Smoke: real LC_CDATA feedback entity returns full record с 2 events
+- Smoke: real LC_CEDAR feedback entity returns full record с 2 events
 
 ### ✅ Daily brief enhancement
 - `render_inbox_block` теперь shows: pending count + patients count + **disputes count**
@@ -764,7 +764,7 @@ Smoke tests:
 - New aim-fs `stats(tenant) → Stats` API + Port op
 - Returns: total_entities + events_total + avg_approval_latency_ms + by_schema/status/source/scope + creation_per_week
 - Phoenix LiveView `/fs/stats` с sparkline (CSS bar chart) для weekly creation
-- Real production data: 358 entities, 716 events, top schemas (user_fact_v1: 107, fact_v1: 102), top scopes (LC_CDATA solo: 47)
+- Real production data: 358 entities, 716 events, top schemas (user_fact_v1: 107, fact_v1: 102), top scopes (LC_CEDAR solo: 47)
 
 ### ✅ Conflict auto-suggest on propose
 - `propose()` post-commit runs FTS5 search title-on-title with same-schema filter

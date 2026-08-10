@@ -9,7 +9,7 @@ LongevityCommon is a hypothesis-stage framework, integrating 5 scientific subpro
 | Subproject | Level | Function |
 |-----------|---------|------------|
 | **MCAOA** | Theoretical (meta-theory) | Multi-Counter Architecture; aging as a weighted sum of parallel counters |
-| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage in HSC (status: inconclusive) |
+| **CEDAR** | Molecular-cellular | Hypothesis: centriolar damage in HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze biomarker |
 | **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
@@ -45,7 +45,7 @@ LongevityCommon/
 ├── _archive/ # old versions
 ├── _audits/ # audit reports
 │
-└── <subprojects>/ # MCAOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/ # MCAOA, CEDAR, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)

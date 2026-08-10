@@ -70,11 +70,11 @@
       "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/LC_BioSense.check.v1.md",
       "accepted": true
     },
-    "LC_CDATA": {
-      "slug": "LC_CDATA",
-      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/LC_CDATA.review.md",
-      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/LC_CDATA.plan.v1.md",
-      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/LC_CDATA.check.v1.md",
+    "LC_CEDAR": {
+      "slug": "LC_CEDAR",
+      "review": "/home/oem/Desktop/AUDIT_2026-05-08/reviews/LC_CEDAR.review.md",
+      "plan_final": "/home/oem/Desktop/AUDIT_2026-05-08/plans/LC_CEDAR.plan.v1.md",
+      "check_final": "/home/oem/Desktop/AUDIT_2026-05-08/iterations/LC_CEDAR.check.v1.md",
       "accepted": true
     },
     "LC_AIM": {

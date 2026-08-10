@@ -29,7 +29,7 @@
    OSF placeholder `osf.io/TBD` и `osf.io/automicroscopy_cdata`, дата 2026-06-01. Placeholder допустим.
 
 3. **Sample size calc (power analysis)** → ✓  
-   Для CDATA: Cohen’s d=0.75, α=0.05, power=0.80 → n=30/group, DE=1.2. Для M1: N=286 decisions. Формула с подстановкой.
+   Для CEDAR: Cohen’s d=0.75, α=0.05, power=0.80 → n=30/group, DE=1.2. Для M1: N=286 decisions. Формула с подстановкой.
 
 4. **Risk matrix ≥5 rows** → ✓  
    Несколько таблиц, минимум 5 строк (6 в одном месте, 5 в другом). Риски адекватны.

@@ -26,7 +26,7 @@
    ✓ Есть OSF ID `osf.io/automicroscopy_cdata` и дата 2026-06-01. Формально выполнено (placeholder допустим в pre-reg).
 
 3. **Sample size calc (power analysis)**  
-   ✗ **Не выполнено.** Для concordance расчёт есть (N=286), для uptime – 180 дней фиксировано. Однако в разделе Sample size calculation CONCEPT.md первая формула содержит σ² = TBD, δ = TBD, n = TBD. Для contamination N = TBD. Также design effect = TBD. Наличие TBD в sample size calculation недопустимо (см. п.8). Также внутренняя противоречивость: два разных расчёта для CDATA experiment (один с TBD, другой конкретный).
+   ✗ **Не выполнено.** Для concordance расчёт есть (N=286), для uptime – 180 дней фиксировано. Однако в разделе Sample size calculation CONCEPT.md первая формула содержит σ² = TBD, δ = TBD, n = TBD. Для contamination N = TBD. Также design effect = TBD. Наличие TBD в sample size calculation недопустимо (см. п.8). Также внутренняя противоречивость: два разных расчёта для CEDAR experiment (один с TBD, другой конкретный).
 
 4. **Risk matrix ≥5 rows**  
    ✓ Присутствует две матрицы: одна с 6 рисками (text), другая с 6 рисками (числа). Формально ≥5 строк выполнено.
@@ -46,7 +46,7 @@
 9. **Internal consistency core docs**  
    ✗ **Не выполнено.** Множественные противоречия и дублирования:  
    - Uptime target: predictions говорят ≥95%, falsifiability H₀: uptime ≤0.90.  
-   - Sample size для CDATA: первый блок с σ²=TBD, второй – конкретные числа (Cohen's d=0.75).  
+   - Sample size для CEDAR: первый блок с σ²=TBD, второй – конкретные числа (Cohen's d=0.75).  
    - Risk matrix дублируется дважды (текстовый и числовой).  
    - Limitations дублируются (CONCEPT.md и EVIDENCE.md).  
    - Pre-reg план описан в двух разных местах с разной детализацией.  

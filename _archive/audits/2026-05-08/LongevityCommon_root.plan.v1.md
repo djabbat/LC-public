@@ -193,7 +193,7 @@
 ### P2.2: Улучшить комментарии в Rust коде
 
 **Действие:** Добавить doc-comments к основным публичным функциям, особенно в `cell_dt_cli`, `MCAOA`  
-**Файлы:** `CDATA/crates/cell_dt_cli/src/main.rs`, `MCAOA/crates/mcoa_core/src/lib.rs`
+**Файлы:** `CEDAR/crates/cell_dt_cli/src/main.rs`, `MCAOA/crates/mcoa_core/src/lib.rs`
 
 ### P2.3: Использовать clap derive для всех CLI бинарей
 
@@ -208,4 +208,4 @@
 ### P2.5: Устранить дублирование описаний между umbrella CONCEPT.md и subproject CONCEPT.md
 
 **Действие:** В subproject CONCEPT.md заменить секции, повторяющие umbrella, на ссылки вида `см. umbrella CONCEPT.md §3`  
-**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CDATA/CONCEPT.md`, `MCAOA/CONCEPT.md`
+**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CEDAR/CONCEPT.md`, `MCAOA/CONCEPT.md`

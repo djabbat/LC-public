@@ -45,12 +45,12 @@
    - **Затрагиваемые файлы:** `realtime/config/dev.exs`, `deploy/docker-compose-all.yml`
 
 5. **Синхронизировать subproject CONCEPT.md с umbrella v5.6**  
-   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CEDAR, EpigeneticDrift, MitoROS, Proteostasis)  
    - Проверить и исправить:  
      * "DERIVE" → "POSTULATED ansatz" (Ze)  
      * "validated" → "exploratory / hypothesis-stage" (BioSense)  
      * "semi-honest" → "semi-honest only; NOT active server collusion" (FCLC)  
-     * "inconclusive" → добавить статус (CDATA)  
+     * "inconclusive" → добавить статус (CEDAR)  
    - **Трудоёмкость:** S (grep + замена по шаблону)  
    - **Риск:** низкий (текстовые правки, не затрагивают код)  
    - **Затрагиваемые файлы:** `*/CONCEPT.md` для всех перечисленных подпроектов.
@@ -75,7 +75,7 @@
    - **Затрагиваемые файлы:** `_audits/*` (переместить), `README.md`
 
 9. **Добавить LICENSE в каждый подпроект**  
-   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
+   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CEDAR/`, `FCLC/`, `server/`, `realtime/`, `web/`  
    - Или добавить README с указанием umbrella license  
    - **Затрагиваемые файлы:** `Ze/LICENSE`, `BioSense/LICENSE`, … (создать)
 

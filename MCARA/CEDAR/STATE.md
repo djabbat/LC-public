@@ -16,7 +16,7 @@
 - 🚀 **Подача на bioRxiv:** BIORXIV/2026/743702 — Version 1 SUBMITTED (подтверждение получено). Ожидание скрининга (1–3 дня) → препринт + DOI 10.1101/...
 - 📁 **Файлы:** `CEDAR/articles/centriole-division-counter-biorxiv/` (md, docx, pdf, bioRxiv pdf, Abstract версии)
 - 📄 **Формат:** Research Article — гипотеза + систематический синтез + пререгистрированный протокол P1–P9 (Stage 1); References в APA 7 (128 записей, все авторы раскрыты)
-- 🔄 **Полный цикл:** 18 peer-review рецензий обработано (42–68/100), все правки внесены; эмодзи/CDATA удалены; следы AI убраны
+- 🔄 **Полный цикл:** 18 peer-review рецензий обработано (42–68/100), все правки внесены; эмодзи/CEDAR удалены; следы AI убраны
 - ✅ **Конвертер md2docx:** добавлен флаг `--apa` (автор-год цитаты, References без нумерации), `##`→H2 (без Subtitle), Title 22pt — закоммичено (ff2cb7b5, 4eee16b4)
 - 📨 **Подтверждение получено (9 авг 07:00):** bioRxiv подтвердил подачу MS `BIORXIV/2026/743702`; скрининг 24–72 ч
 - 🔀 **Возможность передачи:** bioRxiv → «Submit Preprint to a Journal or Peer Review» (`submit.biorxiv.org/submission/queue?queueName=send_paper_away_author`) — прямой путь в журналы/Review Commons без повторной загрузки

@@ -25,7 +25,7 @@
    ✓ Placeholder `osf.io/TBD` и planned date 2026-06-01 указаны в CONCEPT.md (дважды). Формально есть, хотя идентификатор не реальный.
 
 3. **Sample size calc (power analysis)**  
-   ✓ Для M1 (N=286) и для CDATA (n=30 per group) приведена формула с подстановкой. Для contamination N=TBD – отсутствует, но основные расчёты есть.
+   ✓ Для M1 (N=286) и для CEDAR (n=30 per group) приведена формула с подстановкой. Для contamination N=TBD – отсутствует, но основные расчёты есть.
 
 4. **Risk matrix ≥5 rows**  
    ✓ В CONCEPT.md и EVIDENCE.md насчитывается более 5 строк (6+7). Выполнено.

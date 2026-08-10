@@ -25,7 +25,7 @@
    Указан OSF (osf.io/TBD) и planned date 2026-06-01. Placeholder допустим, но желательно конкретное имя. Засчитываю.
 
 3. **✗ Sample size calc (power analysis)**  
-   Частично. Есть расчёт для CDATA-эксперимента (n=30/group, Cohen's d=0.75, формула). Но для contamination, uptime, AI concordance (уже отдельно) — не хватает. Для вторичных целей sample size не указан.
+   Частично. Есть расчёт для CEDAR-эксперимента (n=30/group, Cohen's d=0.75, формула). Но для contamination, uptime, AI concordance (уже отдельно) — не хватает. Для вторичных целей sample size не указан.
 
 4. **✓ Risk matrix ≥5 rows**  
    В CONCEPT.md — 6 строк, в EVIDENCE.md — 7 строк. Выполнено.

@@ -12,7 +12,7 @@
 | `L_tissue(n,t)` | Tissue-level aging burden, MCAOA aggregator | `MCAOA/THEORY.md` |
 | `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCAOA/THEORY.md` |
 | `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCAOA/THEORY.md` |
-| `D(t)` | Centriolar damage (CDATA hypothetical counter) | `CDATA/THEORY.md` |
+| `D(t)` | Centriolar damage (CEDAR hypothetical counter) | `CEDAR/THEORY.md` |
 | `I(Z)` | Impedance / KL-divergence between actual and modeled state | `Ze/THEORY.md` |
 | `τ_Ze` | Proper-time budget | `Ze/THEORY.md` |
 | `α, β, λ` | Coupling constants (Ze) | `Ze/THEORY.md` |
@@ -28,9 +28,9 @@
 ```
 MCAOA L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
  ↑
- один из Dᵢ — CDATA (hypothetical)
+ один из Dᵢ — CEDAR (hypothetical)
 
-CDATA A(t) = a + b·D(t) + c·D(t)² (status: inconclusive)
+CEDAR A(t) = a + b·D(t) + c·D(t)² (status: inconclusive)
  χ_Ze = g₀ − g₁·A(t) (linear bridge, 5 free params, underpowered)
 
 Ze I(Z) = S(Z_real ‖ Z_model) (KL divergence)
@@ -60,7 +60,7 @@ FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
 | Variational principle `F = E − T·S − λ·I_pred` | `BioSense/THEORY.md §3.1` | Friston 2010 framework |
 | `λ` from thermodynamics | `BioSense/THEORY.md §3.2` | Lemma C (Wallace 2015 inferential argument) |
 | `v* = 0.45631` fixed point | `BioSense/THEORY.md §3.3` | Theorem 1 (numerical extremum at `k_λ=1`) |
-| CDATA bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
+| CEDAR bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
 | RDP composition for DP-SGD | `FCLC/THEORY.md` | Mironov 2017 + Wang/Balle/Kasiviswanathan 2019 |
 
 ## §4. Что **не** теорема, а ansatz / hypothesis
@@ -70,15 +70,15 @@ FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
 | Claim | Old framing | New framing |
 |-------|-------------|-------------|
 | `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy с physical clocks; биология не валидирована |
-| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
+| Bridge between `D(t)` (CEDAR) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
 | `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
 | Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
-| CDATA "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
+| CEDAR "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
 
 ## §5. Falsifiability (operational)
 
 - **MCAOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
-- **CDATA**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
+- **CEDAR**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
 - **Ze fixed point v***: falsified if swept-v* search на All-of-Us N≥500 показывает `v*_optimal` за пределами `[0.32, 0.58]` (sensitivity range для `k_λ ∈ [0.5, 2.0]`). **Test status:** done на N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent с theory.
 - **FCLC**: falsified as GDPR-compliant infrastructure if active server attack succeeds. Текущий статус: semi-honest secure only; известный блокер; v14 planned Q1 2027.
 
@@ -88,4 +88,4 @@ FCLC ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5) (RDP composition)
 - Все 5 канонических BioSense computations → `BioSense/biosense-simulator/` (Rust)
 - FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
 - MCAOA aggregator → `MCAOA/CellDT_v4/` (planned, не реализован полностью)
-- CDATA bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
+- CEDAR bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`

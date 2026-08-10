@@ -126,7 +126,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Связь с auto-memory
 
 - `project_cdata_copi_candidates` — Impetus Phase A co-PI candidates
-- `feedback_mcoa_cdata_comparison` — MCAOA vs CDATA (связь с PhD)
+- `feedback_mcoa_cdata_comparison` — MCAOA vs CEDAR (связь с PhD)
 - `pubmed_authoritative` — 10 PMIDs authoritative
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
 
@@ -141,7 +141,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 ## Связь с другими проектами
 
 - `PhD` — диссертация, не Experiment 0 scope
-- `LC/CDATA` — theoretical basis
+- `LC/CEDAR` — theoretical basis
 - `LC/AutomatedMicroscopy` — параллельный AI-microscopy проект
 - `LC/MCAOA` — meta-framework, Counter integration
 - Impetus LOI / EIC Pathfinder — grants, не Experiment 0 scope
@@ -169,7 +169,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 
 **Что НЕ валидируется (явно):**
 - Центриолярная биология (признано — см. `PEER_REVIEW_DRAFT.md`)
-- Translational claims к mammalian CDATA
+- Translational claims к mammalian CEDAR
 - Impetus pilot positioning
 
 **Модель:** *Elodea canadensis* leaves, chloroplasts. Выбор обоснован:
@@ -342,8 +342,8 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 
 ## Связь с экосистемой
 
-- **PhD** (`~/Desktop/PhD/`) — диссертация CDATA. Experiment 0 — не часть диссертации (dissertation = critical commentary по 10 PMID, не экспериментальная).
-- **LC/CDATA** (`~/Desktop/LC/CDATA/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
+- **PhD** (`~/Desktop/PhD/`) — диссертация CEDAR. Experiment 0 — не часть диссертации (dissertation = critical commentary по 10 PMID, не экспериментальная).
+- **LC/CEDAR** (`~/Desktop/LC/CEDAR/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
 - **LC/AutomatedMicroscopy** — параллельный проект про AI-microscopy. Experiment 0 — конкретный commissioning этого направления.
 - **LC/MCAOA** — meta-framework. Experiment 0 — отладка агента для будущих MCAOA-экспериментов.
 
@@ -418,7 +418,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 
 | Внешний ресурс | Связь |
 |---|---|
-| `~/Desktop/LC/CDATA/` | Научная основа (CDATA theory) |
+| `~/Desktop/LC/CEDAR/` | Научная основа (CEDAR theory) |
 | `~/Desktop/LC/AutomatedMicroscopy/` | Параллельный project про AI microscopy |
 | `~/Desktop/LC/MCAOA/` | Meta-framework, Counter frameworks |
 | `~/Desktop/AIM/llm.py` | LLM router (DeepSeek primary) для Claude agent |
@@ -427,7 +427,7 @@ Path: `/home/oem/Desktop/PhD/E0`  Date: 2026-05-08
 
 ## Что НЕ в E0 (external dependencies)
 
-- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CDATA/` (NOT here, отдельный grant submission)
+- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CEDAR/` (NOT here, отдельный grant submission)
 - **MCAOA submission** → `~/Documents/Submissions/2026-04-25_NatureAging_MCOA/`
 - **PhD dissertation** → `~/Desktop/PhD/dissertation/`
 
@@ -876,14 +876,14 @@ Source: `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`. Verificat
 
 - `project_cdata_copi_candidates.md` — Impetus Phase A co-PI candidates (rig будет использован в Phase A)
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
-- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CDATA (context)
+- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CEDAR (context)
 - `project_academic_upgrade.md` — академический upgrade pathway
 - `project_eic_umbrella.md` — EIC Pathfinder consortium (Experiment 0 → WP3)
 
 ### Feedback (правила работы в проекте)
 
 - `feedback_bradford_hill_rule.md` — Bradford Hill criteria для causality claims
-- `feedback_mcoa_cdata_comparison.md` — MCAOA vs CDATA comparison methodology
+- `feedback_mcoa_cdata_comparison.md` — MCAOA vs CEDAR comparison methodology
 - `feedback_deepseek_primary.md` — DeepSeek как primary LLM
 - `feedback_verify_references.md` — правило проверки reference перед claim
 

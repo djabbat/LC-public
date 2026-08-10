@@ -6,7 +6,7 @@
 
 ## Теоретическая основа
 
-ARGUS-LP основан на теории CEDAR (Centriolar Damage Accumulation Theory of Aging) — `~/Desktop/LC/MCARA/CEDAR/THEORY.md`.
+ARGUS-LP основан на теории CEDAR (Centriolar Entropy-Damage Accumulation Ratchet) — `~/Desktop/LC/MCARA/CEDAR/THEORY.md`.
 
 ### Ключевые теоретические положения
 

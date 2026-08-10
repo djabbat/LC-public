@@ -9,7 +9,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Pre-registration plan",
-    "body": "The primary analysis plan for the CDATA validation experiment will be pre-registered on the Open Science Framework (OSF) prior to the start of data collection.\n\n- **OSF ID:** `osf.io/TBD` (placeholder; will be replaced with a valid 5-character ID upon registration)\n- **Planned registration date:** 2026-05-15 (before Month 1 data collection begins)\n- **Contents:** Primary endpoint (AI vs. human concordance), secondary endpoints (audit trail completeness, autonomy compliance, reproducibility score), sample size justification, analysis plan, and stopping rules.\n- **Deviations:** Any post-registration changes will be documented with version history and rationale.\n\n**Note:** The placeholder `osf.io/automicroscopy_cdata` previously used does not conform to OSF ID format and has been replaced."
+    "body": "The primary analysis plan for the CEDAR validation experiment will be pre-registered on the Open Science Framework (OSF) prior to the start of data collection.\n\n- **OSF ID:** `osf.io/TBD` (placeholder; will be replaced with a valid 5-character ID upon registration)\n- **Planned registration date:** 2026-05-15 (before Month 1 data collection begins)\n- **Contents:** Primary endpoint (AI vs. human concordance), secondary endpoints (audit trail completeness, autonomy compliance, reproducibility score), sample size justification, analysis plan, and stopping rules.\n- **Deviations:** Any post-registration changes will be documented with version history and rationale.\n\n**Note:** The placeholder `osf.io/automicroscopy_cdata` previously used does not conform to OSF ID format and has been replaced."
   },
   {
     "file": "CONCEPT.md",

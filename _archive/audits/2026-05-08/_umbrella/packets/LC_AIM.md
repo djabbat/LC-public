@@ -336,7 +336,7 @@ AIM теперь умеет вести 3 типа долгоживущих entit
 **Pilot YAMLs:**
 - `USER/projects/FCLC.yaml` — pre-existing
 - `USER/experiments/E0.yaml` — PhD/E0 commissioning (Tsomaia hardware tracking)
-- `USER/experiments/AutomatedMicroscopy.yaml` — CDATA Phase A imaging rig
+- `USER/experiments/AutomatedMicroscopy.yaml` — CEDAR Phase A imaging rig
 
 **systemd unit пары** (Python legacy + Rust alternative):
 - `aim-daily-brief.service` (Python) ↔ `aim-daily-brief-rust.service` (Rust binary)
@@ -1207,13 +1207,13 @@ optional frontend) на локальных портах:
           └──────┬───────┬───────┬──────┘
                  │       │       │
          ┌───────▼─┐  ┌──▼──┐  ┌─▼──────┐
-         │  CDATA  │  │  Ze │  │BioSense│
+         │  CEDAR  │  │  Ze │  │BioSense│
          └─────────┘  └─────┘  └────────┘
                  ▲
                  │ (знания о старении → AIM medical_knowledge)
                  │
         ┌────────┴────────┐
-        │      AIM/       │  ← (standalone, но опирается на CDATA-знания)
+        │      AIM/       │  ← (standalone, но опирается на CEDAR-знания)
         │  (этот проект)  │
         └─────────────────┘
                  │
@@ -1626,7 +1626,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 
 Следить за этими только если конкретный partner / event активирует:
 
-- **CDATA / Impetus Round 4** — следить за `~/Desktop/LC/CDATA/TODO.md`.
+- **CEDAR / Impetus Round 4** — следить за `~/Desktop/LC/CEDAR/TODO.md`.
 - **EIC Pathfinder Challenges 2026** (deadline **2026-10-28**) — следить за
   `~/Desktop/LC/CLAUDE.md`.
 - **PhD applications** — следить за memory `project_phd_*` и `STRATEGY.md`
@@ -1655,7 +1655,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 3. [OCR / PDF — библиотеки](#3-ocr-и-pdf)
 4. [Лабораторные референсы](#4-лабораторные-референсы)
 5. [Многоязычие — 9 языков](#5-многоязычие)
-6. [Связь с CDATA / HAP / MCAOA](#6-научная-база-из-экосистемы)
+6. [Связь с CEDAR / HAP / MCAOA](#6-научная-база-из-экосистемы)
 7. [Регуляция / privacy](#7-регуляция-и-privacy)
 
 ---
@@ -1667,7 +1667,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 **Ключевые подходы:**
 - Senolytic therapy (dasatinib + quercetin) — Jaba 2022, Tqemaladze 2023 (*Georgian Scientists*)
 - Минеральное мороженое для восстановления после нагрузок — Tqemaladze & Samanishvili 2024
-- Биологический возраст по CDATA → персонализированные интервенции
+- Биологический возраст по CEDAR → персонализированные интервенции
 
 ## 2. LLM-провайдеры
 
@@ -1725,7 +1725,7 @@ Cornerstone из `docs/manuscripts/PATIENT_AS_PROJECT.md` + `docs/audits/AUDIT_P
 
 | Проект | Вклад в AIM |
 |--------|-------------|
-| **CDATA** | биологический возраст → health-span предсказания |
+| **CEDAR** | биологический возраст → health-span предсказания |
 | **HAP** (Hepato-Affective Primacy) | связь печени и настроения → скрининг депрессии через LFT |
 | **MCAOA** | 5 параллельных счётчиков повреждений → multi-system health dashboard |
 | **Ze Theory** | нейрофизика сознания → BioSense-χ_Ze для скрининга когнитивного возраста |
@@ -1822,7 +1822,7 @@ critical-path open question:
 
 ## Связь с экосистемой
 
-AIM — standalone, но опирается на научные результаты CDATA/HAP/MCAOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
+AIM — standalone, но опирается на научные результаты CEDAR/HAP/MCAOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
 
 ---
 
@@ -1878,7 +1878,7 @@ AIM — standalone, но опирается на научные результа
 | Проект | Путь | Роль |
 |--------|------|------|
 | CommonHealth | `~/Desktop/LC/` | Umbrella (EIC Pathfinder) |
-| CDATA | `~/Desktop/LC/CDATA/` | Биологический возраст |
+| CEDAR | `~/Desktop/LC/CEDAR/` | Биологический возраст |
 | HAP | `~/Desktop/LC/HAP/` | Гепато-аффективная теория |
 | MCAOA | `~/Desktop/LC/MCAOA/` | Мульти-счётчиковая архитектура |
 | Ze | `~/Desktop/LC/Ze/` | Нейрофизика сознания |
@@ -1901,7 +1901,7 @@ AIM — standalone, но опирается на научные результа
 - ORCID Jaba Tqemaladze: https://orcid.org/0000-...
 - Zenodo (CommonHealth deposits): https://zenodo.org/communities/commonhealth
 
-## Публикации с цитированием AIM / CDATA
+## Публикации с цитированием AIM / CEDAR
 
 - Tqemaladze J. (2026). Architecture and Design of a Prototype Multi-Modal Clinical Decision Support System for Integrative Medicine. *Longevity Horizon*, 2(4). https://doi.org/10.65649/4cxxhe47
 - Tqemaladze J. (2026). The Digital Trivium. *Longevity Horizon*, 2(4). https://doi.org/10.65649/w1adk253

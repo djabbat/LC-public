@@ -9,7 +9,7 @@
 - `/home/oem/Desktop/CommonHealth/AutomatedMicroscopy/THEORY.md`
 - `/home/oem/Desktop/CommonHealth/AutomatedMicroscopy/EVIDENCE.md`
 - `/home/oem/Desktop/CommonHealth/AutomatedMicroscopy/{DESIGN,PARAMETERS,OPEN_PROBLEMS,ROADMAP,JOURNAL,AGENTS}.md` (stubs only)
-- `/home/oem/Documents/Grants/CommonHealth/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v25_AI_2026-04-21.md` (Aim A.5, $14,500 platform line)
+- `/home/oem/Documents/Grants/CommonHealth/CEDAR/docs/IMPETUS_2026-04-25/LOI_Impetus_v25_AI_2026-04-21.md` (Aim A.5, $14,500 platform line)
 - `PEER_REVIEW_v25_{FINAL,ROUND2}_2026-04-21.md`
 - `LITERATURE_REALITY_CHECK_2026-04-21.md`
 
@@ -262,7 +262,7 @@ LOI implies tracking **N=1000+ founder cells × 4 arms × 6 months**. Divisions 
 | **Boiko et al. 2023 Nature** (PMID 38123806) | GPT-4 driving chemical synthesis — closest LLM-agent precedent | Plan-level, not real-time targeting |
 | **CenFind Bürgy 2023** (PMC10045196) | Centriole detection CNN | F1 > 90% on fixed IF images |
 | **DeepSea (Nejatbakhsh 2023 Cell Rep Methods)** | Live-cell tracking in time-lapse | IoU 0.90 at threshold 0.5 |
-| **Robichaud 2024 Nat Commun** (PMID 39266565) | Polyglutamylation → senescence — biological precedent for CDATA | No ablation |
+| **Robichaud 2024 Nat Commun** (PMID 39266565) | Polyglutamylation → senescence — biological precedent for CEDAR | No ablation |
 | **Nikon NIS.ai Smart Experiments** | Commercial closed-loop system: detect → target → acquire | Industrial, not published accuracy |
 | **Zeiss ZEN Intellesis + UGA-42** | Commercial closed-loop ablation | Not benchmarked in aging biology |
 

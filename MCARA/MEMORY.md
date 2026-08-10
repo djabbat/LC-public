@@ -86,7 +86,6 @@
 
 **Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
 
-
 ## 2026-08-03: Simerly 2018 + Madarampalli 2015 — oocyte centriole loss is gradual, ATF5 binds polyE
 
 > **Finding 1 (Simerly 2018, PMID 30143724):** Mouse centrioles are gradually lost from PGCs through mature oocytes — a developmental process spanning days to weeks during meiotic maturation. This is NOT a molecular switch that can be flipped in a somatic cell. Centrioles progressively dissociate from PCM and lose organizational capacity. The oocyte does not undergo mitotic divisions during this process — a unique context not reproducible in cycling somatic cells.
@@ -96,7 +95,6 @@
 > **Implication:** These two findings further strengthen the case for centriole elimination over PTM stripping, but also highlight the complexity of the oocyte pathway. The oocyte uses gradual dissolution during a unique cell cycle — not transferable to somatic cells by simple factor expression.
 
 > **Recorded in:** `docs/WHY_IPSC_FAILS.md` §4.1
-
 
 ## 2026-08-03: The centriole as a morphogenetic lock — resolution of the differentiation paradox
 
@@ -108,7 +106,6 @@
 
 > **Recorded in:** `docs/WHY_IPSC_FAILS.md` §4.1
 
-
 ## 2026-08-03: Why centriole elimination is mandatory — the geometric argument
 
 > **Decision:** PTM stripping (CCP1) is insufficient. Centriole aging has three modes: chemical (polyglutamylation), geometric (over-elongation), and structural (cartwheel deformation, oxidized tubulin). Köhrer et al. (2023, *Leukemia*, PMID 37821581) provides direct quantitative evidence: 1,386 centrioles from 8 healthy donors, over-elongated centrioles rise from 45% (age 24) to 76% (age 67), ρ = 0.67, p < 0.01. Geometry is templated during duplication — an over-elongated mother produces an over-elongated daughter. CCP1 fixes only chemistry. Only elimination + de novo resets all three. Nature agrees: every species eliminates centrioles during oogenesis, not strips them.
@@ -116,7 +113,6 @@
 > **Wong 2015 barrier:** Centrinone causes passive centriole dilution → p53 senescence. But the oocyte uses active proteolytic elimination without senescence. Finding the mammalian oocyte elimination factors is the central challenge. Until then, the protocol acknowledges this as an unsolved problem.
 
 > **Full argument:** `docs/WHY_IPSC_FAILS.md` §4.1
-
 
 ## 2026-08-02: Why iPSC Fails — The Correct Target Is Young Adult Stem Cells
 
@@ -134,7 +130,6 @@
 7. **4-step pipeline:** (1) Centrinone → centriole elimination, (2) PLK4 pulse → de novo young centrioles, (3) OSK+NANOG+LIN28 mRNA → deep epigenetic reset to epiblast, (4) Tissue-specific master regulators → adult stem cell. All with MCARA counter checkpoints.
 
 **Full documents:** `docs/WHY_IPSC_FAILS.md` | `docs/MCARA_TECHNOLOGICAL_PIPELINE.md`
-
 
 <!-- lang:ru -->
 ## 2026-08-02: 🔴 Статус подач — портал Springer
@@ -170,12 +165,35 @@
 
 ---
 
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** Де-риск перед элиминацией по текущим данным: замедлить счётчик (NAC-антиоксидант; обратимые PTM: TTL-ре-тирозинирование, CCP5/6-деглутамилирование); сегрегировать повреждения асимметричным наследованием материнской центриоли в дифференцирующееся потомство (Yamashita, 2007; Royall, 2023 — человеческие NPC); геми-элиминировать только материнскую центриоль (лазер/PROTAC), сохраняя контроль дупликации и избегая p53-зависимого G1-ареста (Meitinger, 2016); кондиционировать клетку (запасные PLK4-центриоли, синхронизация G1/S, протеостаз); отобрать наименее повреждённый пул (FACS по низкому Δ2/полиGlu).
+**Step 2 (Eliminate).** Убрать старую повреждённую центриоль; восстановить теломеры (теломераза/ZSCAN4 через H3K14ac/H3K18ac; Meltzer, 2024); стереть эпигенетические метки (OSK/TET1-TET2-TDG; Lu, 2020 — частично, остаётся линейная память); отобрать здоровые митохондрии (PINK1-зависимая митофагия; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3 — DUX4 открывает cleavage-стадийные гены (Hendrickson, 2017), KDM4D снимает H3K9me3-барьер репрограммирования, DPPA3 (Stella) стабилизирует тотипотентное (2C-подобное) состояние.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) после полной элиминации (Khodjakov, 2002; Uetake, 2007); контроль геометрии (9-кратная симметрия, триплеты, длина); получить безопасные молодые взрослые стволовые клетки (проверка кариотипа, восстановление p53).
+**Step 1 (Ladder).** Де-риск перед элиминацией: замедлить счётчик, сегрегировать повреждения, геми-элиминировать материнскую центриоль, кондиционировать клетку, отобрать наименее повреждённый пул.
+**Step 2 (Eliminate).** Убрать старую центриоль; восстановить теломеры; стереть эпигенетические метки; отобрать здоровые митохондрии.
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo; получить безопасные молодые взрослые стволовые клетки.
+
+- Де-риск-лестница L1–L5 (замедлить счётчик: NAC/TTL/CCP5-6/метформин; сегрегировать повреждения асимметрией; геми-элиминация только материнской центриоли; кондиционирование: PLK4-запас, G1/S, протеостаз; селекция FACS по Δ2/полиGlu) предшествует любой элиминации
+- E = элиминация старой центриоли; R = репрограммирование (OSKM/DUX4 + KDM4D + DPPA3); R = пересборка de novo (PLK4/SAS-6/STIL/CPAP)
+- Полная элиминация — только при исчерпании L1–L5; прогноз ≥80% выживаемость (геми-элиминация) vs <50% (полная), Meitinger 2016
+
+---
+
 ## 2026-07-23: ERR GitHub repo + Marketing subproject created
 
 - **ERR repo:** https://github.com/Georgia-Longevity-Alliance/ERR — public, Apache 2.0
 - **Marketing:** MCARA_EIC_Pathfinder renamed to ERR (~/Desktop/Marketing/ERR/)
 - **Content:** README = Cologne 2026 handout text. All 7 PMIDs verified.
-- **Concept:** Eliminate → Reprogram → Rebuild. Centriole reset as 4th counter.
 
 ---
 
@@ -433,7 +451,7 @@
   5. **DID particles.** During division, one is cleaved off → goes with the new centriole. During reduplication — with a decrease. **DID may not end. Problem — centriole carrier degrades according to the second law of thermodynamics.** Even when DID=N, the centriole becomes unstable → loses the ability to maintain DID. Aging = degradation of the carrier, not exhaustion of the counter.
   6. **Organism aging — the price for true differentiation.** Plants: modulation (reversible diff-), no centrioles in somatic cells. Animals: irreversible diff- through the centriolar ratchet → aging.
   7. **PolyE = compensation for dysfunction.** TTLL stabilize microtubules when accumulating entropy; CCP remove polyE. Balance = centriole's struggle for function.
-  8. **Three steps — Eliminate → Reprogram → Rebuild.** (1) ELIMINATE — removal. (2) REPROGRAM — DUX4+TPRX1. (3) REBUILD — de novo centriole as an INSTRUMENT OF SWITCHING GRN. **PCM1 (transport) + DID-RNA (genome rewriting) — complementary.**
+  8. **Three steps — Eliminate → Reprogram → Rebuild.** (1) ELIMINATE — removal. (2) REPROGRAM — DUX4 + KDM4D + DPPA3. (3) REBUILD — de novo centriole as an INSTRUMENT OF SWITCHING GRN. **PCM1 (transport) + DID-RNA (genome rewriting) — complementary.**
   9. **Direction of movement.** Down — without barriers. Up — against the ratchet.
 10. **Maturity sensor — alternative model (Lindhout 2021).** Centriole = maturity sensor, not a lock. Loss of centriole reduces the threshold of diff- non-specifically, without setting a specific state. Both models (hardware reset and maturity sensor) predict increased plasticity after elimination — difficult to distinguish without special tests. Differentiating experiments: (a) nuclear NANOG — if ↑ → active regulator; (b) elimination without factors — if chaotic activation of ZGA → maturity sensor; (c) IFT88 shRNA — if loss of cilium mimics loss of centriole → effect through cilium. Models are not mutually exclusive: centriole can be both a sensor (through cilium) and a hub (through NANOG/DID).
 - **Updated:** Article on Desktop, CONCEPT.md, THEORY.md
@@ -467,7 +485,7 @@
 - OSKM reloads software (epigenome), but does not touch hardware (centriole)
 - Partial reprogramming → rejuvenation of methylome, but not full replicative capacity
 - For totipotency, a complete reset is needed — including centrioles
-- **Jaba's Hypothesis:** Centriole elimination + OSKM → intermediate state (pluri- → closer to toti-). Centriole elimination + **totipotent factors** (DUX4 + TPRX1) → possibly true totipotency
+- **Jaba's Hypothesis:** Centriole elimination + OSKM → intermediate state (pluri- → closer to toti-). Centriole elimination + **totipotent factors** (DUX4 + KDM4D + DPPA3) → possibly true totipotency
 - **Test:** MERVL activation, Zscan4 expression, CDX2+ trophoblast differentiation
 
 **Links for Verification:**
@@ -834,16 +852,23 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 7. **Alignment:** H1/H2 LEFT, metadata LEFT, body JUSTIFY
 Результат: 10 самоцитирований без дубликатов, Abstract на месте, References по алфавиту.
 
-### 2026-08-08 — Анализ CDATA-v2 vs Huang TRCS (проверка ссылок)
-- **Анализ:** `~/Desktop/Services/docs/ANALYSIS_CDATA_v2_vs_Huang_TRCS_2026-08-08.md`
-- **Статья 1:** Tqemaladze «A Stochastic Model of Centriole-Driven Stem Cell Exhaustion» (CDATA-v2), Longevity Horizon 2(5), DOI 10.65649/wjtcf387
+### 2026-08-08 — Анализ CEDAR-v2 vs Huang TRCS (проверка ссылок)
+- **Анализ:** `~/Desktop/Services/docs/ANALYSIS_CEDAR_v2_vs_Huang_TRCS_2026-08-08.md`
+- **Статья 1:** Tqemaladze «A Stochastic Model of Centriole-Driven Stem Cell Exhaustion» (CEDAR-v2), Longevity Horizon 2(5), DOI 10.65649/wjtcf387
 - **Статья 2:** Huang «Programmed Aging Theory Defeats Damage Accumulation», Ageing Longev Res 2(1), DOI 10.53941/alr.2026.100002
-- **🔴 Критично для CDATA-v2:** ссылки [12] (Cell Biol Int 2005), [13] («CDATA» Mol Biol Rep 2023), [14] (Protoplasma 2012) — НЕ существуют с указанными названиями; у [9],[10],[11] неверные названия (PMID верны); сдвиг нумерации в разделе 1.1 (Liu→[2] вместо [6], Tritarelli→[3] вместо [27], Ohshima→[4] вместо [8]). Исправить до пересылки рецензентам.
+- **🔴 Критично для CEDAR-v2:** ссылки [12] (Cell Biol Int 2005), [13] («CEDAR» Mol Biol Rep 2023), [14] (Protoplasma 2012) — НЕ существуют с указанными названиями; у [9],[10],[11] неверные названия (PMID верны); сдвиг нумерации в разделе 1.1 (Liu→[2] вместо [6], Tritarelli→[3] вместо [27], Ohshima→[4] вместо [8]). Исправить до пересылки рецензентам.
 - **Реальные аналоги:** [12]→PMID 15886028 «Potential role of centrioles...» Cell Biol Int 2005;29(5):370-4; [13]→дубль [15] PMID 36583780 «Reduction, proliferation...» Mol Biol Rep 2023;50(3):2751-61; [14]→PMID 22684578 «RNA in centrosomes» Protoplasma 2013;250(1):397-405.
 - **Ключевые новые источники для усиления:** Fukasawa 1996 Science 271:1744 (p53↔центросома, 796 цит.); Passos 2007 PLoS Biol 5:e0110 (стохастичность теломер-сенесценции); Wagner 2008 PLoS ONE 3:e2213 (МСК 30–50 PD); Aurora B-p53 PNAS 2012 (10.1073/pnas.1110287109); Defossez 1999 MCB (rDNA circles + репарация + lifespan); Kobayashi 2014 PJA 90:119 (rDNA-стабильность↔сенесценция).
-- **Синтез:** TRCS (Huang) = макро-часы (теломеры+rDNA→p53-градиент); CDATA-v2 = микро-механика (центриоли, Aurora A, Ser215/315/15). Комплементарны; вместе = «multi-counter» архитектура (MCARA). Рекомендовано: встроить rDNA-часы вторым счётчиком в CEDAR/MCARA-симулятор.
-- **Решение:** опубликовать код CDATA-v2 (GitHub LC, Apache 2.0) + Zenodo DOI.
+- **Синтез:** TRCS (Huang) = макро-часы (теломеры+rDNA→p53-градиент); CEDAR-v2 = микро-механика (центриоли, Aurora A, Ser215/315/15). Комплементарны; вместе = «multi-counter» архитектура (MCARA). Рекомендовано: встроить rDNA-часы вторым счётчиком в CEDAR/MCARA-симулятор.
+- **Решение:** опубликовать код CEDAR-v2 (GitHub LC, Apache 2.0) + Zenodo DOI.
 ### 2026-08-08 — Zenodo DOI для CEDAR v4.7
 - **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388)
 - Релиз: v0.4.8-rdna-clock (djabbat/LC-public). Zenodo-интеграция GitHub включена — следующие релизы получат DOI автоматически.
 - Бейдж в README репо.
+
+## 2026-08-08 — Simulator v0.5: геометрия центриоли + калибровка эпигенетического счётчика
+- Решение: внести геометрический механизм центриоли (пространственное наследование, не химическое копирование) и калиброванную эпигенетическую модель в симулятор MCARA.
+- Обоснование: две статьи — "Four Counters" (PTM-терминальность) и "Spatially Constrained, Not Chemically Copied" (геометрия, α≈0.97).
+- Реализация: mcara_core (эпигенетический τ=100 лет, β=1, d_critical=0.75; функция is_epigenetic_above_critical), mcara_simulation (CentrioleGeometry OU-модель, асимметричное наследование, cilia/centrosome функции).
+- Ошибка: coupling Γ[epi][mito] доминирует при долгих симуляциях — принято (существующая особенность, будущая калибровка Γ).
+- Следующий шаг: релиз в LC-public → Zenodo DOI.

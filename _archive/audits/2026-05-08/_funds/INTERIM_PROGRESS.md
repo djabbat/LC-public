@@ -25,10 +25,10 @@
 |---|---|---|---|
 | `AIM/docs/diffdiagnosis/EVIDENCE.md` | 12 | 4 | 16 |
 | `AutomatedMicroscopy/EVIDENCE.md` | 3 | 1 | 4 |
-| `CDATA/EVIDENCE.md` | 0 | 6 | 6 |
+| `CEDAR/EVIDENCE.md` | 0 | 6 | 6 |
 | `Proteostasis/EVIDENCE.md` | 0 | 2 | 2 |
 | `Ze/UPGRADE.md`, `Ze/MEMORY.md`, `Ze/CONCEPT.md`, `Ze/KNOWLEDGE.md` | 0 | 4 (Zenodo+bioRxiv 10.64898 fake) | 4 |
-| `CDATA/CONCEPT.md` | 0 | 1 | 1 |
+| `CEDAR/CONCEPT.md` | 0 | 1 | 1 |
 | `CytogeneticTree/KNOWLEDGE.md` | 0 | 1 | 1 |
 | `HAP/LINKS.md` | 0 | 1 | 1 |
 | `AIM/docs/ssa/EVIDENCE.md` | 0 | 1 | 1 |

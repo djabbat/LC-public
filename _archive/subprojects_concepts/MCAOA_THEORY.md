@@ -12,9 +12,9 @@ MCAOA is built upon the principles of **mechanism pluralism** and **strict falsi
 
 **Axiom M2 (Dimensional Consistency).** In the kinetic equation of a counter, direct summation of terms dependent on the number of divisions (`n`) and chronological time (`t`) is inadmissible without conversion to a common dimensionless form. The canonical form is:
 `D_i(n, t) = D_i₀ + α_i · (n / n_i*) + β_i · (t / τ_i) + γ_i · I(other counters)`.
-Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are constants, fixed *a priori* for each counter based on cell biology (e.g., `n_i*` = Hayflick limit for the telomere counter in fibroblasts; `τ_i` = tubulin half-life for CDATA). This ensures that `α_i` and `β_i` become dimensionless *intensities* of damage per unit of normalized scale.
+Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are constants, fixed *a priori* for each counter based on cell biology (e.g., `n_i*` = Hayflick limit for the telomere counter in fibroblasts; `τ_i` = tubulin half-life for CEDAR). This ensures that `α_i` and `β_i` become dimensionless *intensities* of damage per unit of normalized scale.
 
-**Axiom M3 (A Priori Tissue Weighting).** The weight `w_i(tissue)`, defining the contribution of counter `i` to the total tissue burden, must be predicted BEFORE the model fitting procedure to experimental aging data. The prediction is based on independent cellular-tissue parameters: basal division rate, metabolic intensity, half-life of the counter's primary substrate, expression of relevant genes (e.g., TERT for telomeres, TTLL/CCP for CDATA), mitochondrial content. Any post-hoc adjustment of `w_i` to improve agreement with data is considered a model adjustment, not a prediction, and must be explicitly declared as a hypothesis for the next verification cycle.
+**Axiom M3 (A Priori Tissue Weighting).** The weight `w_i(tissue)`, defining the contribution of counter `i` to the total tissue burden, must be predicted BEFORE the model fitting procedure to experimental aging data. The prediction is based on independent cellular-tissue parameters: basal division rate, metabolic intensity, half-life of the counter's primary substrate, expression of relevant genes (e.g., TERT for telomeres, TTLL/CCP for CEDAR), mitochondrial content. Any post-hoc adjustment of `w_i` to improve agreement with data is considered a model adjustment, not a prediction, and must be explicitly declared as a hypothesis for the next verification cycle.
 
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCAOA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCAOA.
 
@@ -33,7 +33,7 @@ Damage for the `i`-th counter is described by the equation:
 * `γ_i`: Coupling scalar. Defines the strength of influence from other counters on the damage accumulation rate in counter `i`. `γ_i ∈ ℝ`. **Canonical default value:** `γ_i = 0` (independence hypothesis). Deviation from zero requires statistical justification based on data.
 * `I(other counters)`: Influence function. Simplest linear form: `I = Σ_{j≠i} (Γ_{ij} · D_j / D_j_crit)`, where `Γ_{ij}` is a dimensionless element of the coupling matrix, `D_j_crit` is the critical damage value for counter `j`. Non-linear forms may be proposed.
 * `n_i*`: Reference number of divisions for counter `i`. Fixed *a priori* (e.g., Hayflick limit for a given cell type).
-* `τ_i`: Reference time scale for counter `i`. Fixed *a priori* (e.g., tubulin half-life for CDATA, drift constant of epigenetic clocks).
+* `τ_i`: Reference time scale for counter `i`. Fixed *a priori* (e.g., tubulin half-life for CEDAR, drift constant of epigenetic clocks).
 
 ### 3.2. Integrated Tissue Burden
 
@@ -75,7 +75,7 @@ A cell or tissue niche transitions into a state of senescence, apoptosis, or pro
 
 | # | Name | Project | Nature | `n_i*` (Anchor) | `τ_i` (Anchor) | Comment |
 |---|------|--------|---------|----------------|---------------|---------|
-| 1 | **Centriolar Polyglutamylation (CP)** | CDATA | Divisions + Time | ~50–80 (for HSC), ~30–50 (for epithelium) | Months–Years (calibrated by mass spectrometry) | Structural counter of asymmetric inheritance. `α_i` significant, `β_i` driven by tubulin turnover. |
+| 1 | **Centriolar Polyglutamylation (CP)** | CEDAR | Divisions + Time | ~50–80 (for HSC), ~30–50 (for epithelium) | Months–Years (calibrated by mass spectrometry) | Structural counter of asymmetric inheritance. `α_i` significant, `β_i` driven by tubulin turnover. |
 | 2 | **Telomere Shortening / Telomere Stress** | Telomere | Dominantly Divisions | Hayflick limit for cell type (e.g., ~50 for human fibroblasts) | Turnover time of telomeric repeats (weeks) | Classic replicative counter. `β_i ≈ 0` for most somatic cells. |
 | 3 | **Mitochondrial ROS / mtDNA Damage** | MitoROS | Dominantly Time | `α_i → 0` for postmitotic cells | Days–Weeks (turnover of mtDNA damage) | Metabolic/temporal counter. `β_i` significant, may be amplified upon dysfunction. |
 | 4 | **Epigenetic Drift (DNA Methylation)** | EpigeneticDrift | Dominantly Time | `α_i → 0` for most cells | Doubling time of epigenetic age (e.g., ~3.6 years per DunedinPACE) | "Molecular clock". Contribution of divisions (`α_i`) is small but may be non-zero in stem/proliferating compartments. |

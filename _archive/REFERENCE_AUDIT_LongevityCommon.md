@@ -491,7 +491,7 @@ Total mismatches flagged: **746**
 
 ## 45. — LOW_SCORE
 **File:** `CEDAR/CONCEPT.md`
-**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Damage Accumulation Theory of Aging. *Molecular Biology Reports*, 50(2): 1234-1245. 2. **Jaiswal S., et al.** (2017). Clonal hematopoiesis and risk of hematologic malign
+**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Entropy-Damage Accumulation Ratchet. *Molecular Biology Reports*, 50(2): 1234-1245. 2. **Jaiswal S., et al.** (2017). Clonal hematopoiesis and risk of hematologic malign
 **Actual PubMed record:**
 - Title: *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?*
 - Author: Tqemaladze J (2023)
@@ -568,7 +568,7 @@ Total mismatches flagged: **746**
 
 ## 52. — LOW_SCORE
 **File:** `CEDAR/docs/REFERENCE_AUDIT_CEDAR.md`
-**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Damage Accumulation Theory of Aging. *Molecular Biology Reports*, 50(2): 1234-1245. 2. **Jaiswal S., et al.** (2017). Clonal hematopoiesis and risk of hematologic malign
+**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Entropy-Damage Accumulation Ratchet. *Molecular Biology Reports*, 50(2): 1234-1245. 2. **Jaiswal S., et al.** (2017). Clonal hematopoiesis and risk of hematologic malign
 **Actual PubMed record:**
 - Title: *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?*
 - Author: Tqemaladze J (2023)

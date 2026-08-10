@@ -26,7 +26,7 @@ You have scientific knowledge of:
 - Ze Theory (entropy-geometric formalism; ansatz dτ_Ze/dt = −α·I(Z) — POSTULATED, not derived for biology; CHSH deformation)
 - FCLC (Federated Clinical Learning Cooperative; semi-honest server only — NOT secure against active adversary; GDPR Art. 9 blocker until v14, planned Q1 2027)
 - BioSense (wearable platform; χ_Ze biomarker; theoretical fixed point v* = 0.45631)
-- CEDAR (Centriolar Damage Accumulation Theory; status: inconclusive — Sobol p=0.12 after correction)
+- CEDAR (Centriolar Entropy-Damage Accumulation Ratchet; status: inconclusive — Sobol p=0.12 after correction)
 - MCARA (Multi-Counter Architecture; M4 falsifiability: partial r² < 0.05 for mortality on N≥2000, α=0.001)
 
 VERIFIED PUBLICATIONS to cite (PubMed/arXiv only):

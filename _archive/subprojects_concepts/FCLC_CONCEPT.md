@@ -29,7 +29,7 @@
 
 ## Связи
 - **LC/BioSense** — источники биомаркеров
-- **LC/MCAOA/CDATA** — центриолярные данные
+- **LC/MCAOA/CEDAR** — центриолярные данные
 - **LC/HAP** — health-age profiling
 
 ---

@@ -12,9 +12,9 @@
 **Status:** open. **Largest blocker for Nature Aging-tier submission.**
 **Path forward:** UK Biobank wearable subset DUA + cost (years), All-of-Us Researcher Workbench DUA (months), or new prospective cohort via Аqtивиребули clinical pilot.
 
-### §1.2 CDATA inconclusive (Sobol nested CV)
-**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CDATA contributes uniquely.
-**Status:** open. Tracked in `CDATA/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
+### §1.2 CEDAR inconclusive (Sobol nested CV)
+**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CEDAR contributes uniquely.
+**Status:** open. Tracked in `CEDAR/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
 **Path forward:** Cell-DT v4.0 (planned, not started); GTEx access already available.
 
 ### §1.3 Ze Theory → biology bridge (formal)
@@ -32,7 +32,7 @@
 **Status:** open. Weights need re-fit on pre-registered cohort.
 **Path forward:** lock weights via blinded fit on hold-out portion of N≥500 cohort before any unblinding.
 
-### §1.6 Bridge to CDATA (5 free params)
+### §1.6 Bridge to CEDAR (5 free params)
 **Problem:** `A(D) = a + bD + cD²; χ_Ze = g₀ − g₁A` has 5 free params on N=196 → 39 obs/param; below Harrell standard 10/param for stable fit.
 **Status:** moved to Supplementary in article v5; remains open.
 **Path forward:** simpler 2-param linear bridge OR theory-derived constraints.

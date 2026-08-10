@@ -4,7 +4,7 @@
 **Approved scope:** P0+P1 items #1 (social layer), #3 (missing CLAUDE.md), #4 (BioSense backend), #5 (counter-modules plan), #6 (nginx audit), #7 (v* unify). #2 (HAP/Ontogenesis cleanup) deferred to "future" list.
 
 **Status snapshot (2026-05-07 22:00 +04):**
-- ✅ #3 — 7 CLAUDE.md созданы (MCAOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis)
+- ✅ #3 — 7 CLAUDE.md созданы (MCAOA, CEDAR, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis)
 - ✅ #6 — nginx audit + 7 `.bak` файлов вычищены, broken-symlink finding отозван (biosense-web Phoenix живёт на :4501)
 - ✅ Структурная ремедиация (pre-requisite per user 2026-05-07): stale `/home/jaba/web/longevitycommon/` (184 MB) удалён, AUTH bypass committed, deploy convention документирован
 - ⏳ #1 #4 #5 #7 — этот roadmap
@@ -17,7 +17,7 @@
 |---|---|
 | Lens D P0 #4: «BioSense backend not running, χ_Ze biomarker не работает» | **Частично false-positive.** `biosense-web.service` (Phoenix LiveView, :4501) активен; `biosense.longevity.ge` отдаёт 200, title "BioSense Simulator". Что **отсутствует** — Rust backend для **реального** χ_Ze (CONCEPT.md упоминает :4101). Текущий Phoenix dashboard вероятно показывает demo data. |
 | Lens B P1 #4: «FCLC локальная копия пуста» | **Confirmed false-positive** (см. audit § "False-positive corrections"). FCLC server-resident, отдельный repo `djabbat/FCLC`. |
-| Lens C P0 #2: «API-handoffs не реализованы» | **Confirmed**, частично. FCLC ↔ AIM работают; MCAOA/CDATA/Ze/BioSense — нет cross-talk. |
+| Lens C P0 #2: «API-handoffs не реализованы» | **Confirmed**, частично. FCLC ↔ AIM работают; MCAOA/CEDAR/Ze/BioSense — нет cross-talk. |
 
 ---
 
@@ -29,7 +29,7 @@
 
 | Step | Action | Output | Risk |
 |---|---|---|---|
-| 1.1 | **MCAOA numbering reconciliation** — решить P0 audit Lens C #1: CDATA в MCAOA = Counter #1 или #2? Telomere = #2? Один документ-decision-record + sweep по всем CONCEPT.md. | `MCAOA/docs/COUNTER_NUMBERING_DECISION.md` + 5 patches | low (decision-only) |
+| 1.1 | **MCAOA numbering reconciliation** — решить P0 audit Lens C #1: CEDAR в MCAOA = Counter #1 или #2? Telomere = #2? Один документ-decision-record + sweep по всем CONCEPT.md. | `MCAOA/docs/COUNTER_NUMBERING_DECISION.md` + 5 patches | low (decision-only) |
 | 1.2 | **Determine Phase для каждого counter:** active-development / future-work / dropped. Активные = реализовать Rust kinetics + tests; future = заморозить с datestamp; dropped = `_archive/`. | `MCAOA/docs/COUNTER_ROADMAP.md` | medium (deletion?) |
 | 1.3 | **For each active counter:** скаффолд `<counter>/backend/` Rust crate с D_i kinetics function + 5 unit tests + integration со смежным MCAOA workspace. | 1-4 new Rust crates | low |
 | 1.4 | **MCAOA orchestrator API** — единая ручка `/v1/counters/<id>/D` возвращающая текущее состояние counter'а. Docs в `MCAOA/CONCEPT.md`. | `mcoa-orchestrator` Rust binary | low |
@@ -97,7 +97,7 @@
 
 Применить per `DEPLOY_CONVENTION.md`:
 - MCAOA → создать `MCAOA/deploy/` с landing-page deploy script (P2; cosmetic)
-- CDATA → то же
+- CEDAR → то же
 - Ze → найти, откуда сейчас стартует beam.smp на :4400, перенести под `Ze/deploy/`
 - BioSense → создать в Phase 3
 - server/web/realtime → создать в Phase 4
@@ -133,7 +133,7 @@ Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 ...
 
 ## Open decisions (для пользователя)
 
-1. **Counter numbering reconciliation:** CDATA = #1 или #2? Это P0 finding и блокирует Phase 1.1. Канонический выбор — за пользователем.
+1. **Counter numbering reconciliation:** CEDAR = #1 или #2? Это P0 finding и блокирует Phase 1.1. Канонический выбор — за пользователем.
 2. **v\* canonical convention:** Python value (0.45631) или Article value (-0.087)? Phase 2.1.
 3. **BioSense backend port:** :4101 (CONCEPT) или :4502 (already nginx-mapped)? Phase 3.1.
 4. **Counter module phase classification:** какие из 4 counter'ов (Telomere/MitoROS/EpigeneticDrift/Proteostasis) идут в active-development, а какие во future-work? Phase 1.2.
@@ -148,6 +148,6 @@ Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 ...
 - `_audits/AUDIT_DEEP_2026-05-07.md` — полный аудит (201 LoC)
 - `_audits/REMEDIATION_ROADMAP_2026-05-07.md` — этот документ
 - `docs/DEPLOY_CONVENTION.md` — single source of truth для deploy patterns
-- `MCAOA/CLAUDE.md`, `CDATA/CLAUDE.md`, `AutomatedMicroscopy/CLAUDE.md`, `Telomere/CLAUDE.md`, `MitoROS/CLAUDE.md`, `EpigeneticDrift/CLAUDE.md`, `Proteostasis/CLAUDE.md` — 7 missing CLAUDE.md восстановлены
+- `MCAOA/CLAUDE.md`, `CEDAR/CLAUDE.md`, `AutomatedMicroscopy/CLAUDE.md`, `Telomere/CLAUDE.md`, `MitoROS/CLAUDE.md`, `EpigeneticDrift/CLAUDE.md`, `Proteostasis/CLAUDE.md` — 7 missing CLAUDE.md восстановлены
 - `AIM/AI/queen_deploy/` — un-archived, AUTH bypass committed
 - Server: stale `/home/jaba/web/longevitycommon/` удалён (backup tarball остался), 7 `.bak` nginx файлов удалены

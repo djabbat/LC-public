@@ -81,7 +81,7 @@ proxies `/api/` → `:4502/api/*`, `/live/` and `/` → `:4501`
 **Routes** (all mounted at both `/<name>` and `/api/<name>`):
 - `GET  /healthz` — liveness
 - `POST /chi_ze` — composed χ_Ze biomarker computation
-- `POST /bridge` — CDATA D → χ_Ze stub
+- `POST /bridge` — CEDAR D → χ_Ze stub
 - `POST /exacerbation` — risk score
 - `GET  /v_star` — canonical v* (Article + Python forms)
 
@@ -1174,7 +1174,7 @@ _Last updated: 2026-03-28_
 
 ## Indirect Connections
 
-### CDATA (~/Desktop/CDATA/)
+### CEDAR (~/Desktop/CEDAR/)
 - **Link:** Statistical methods (t-test, Cohen's d, ANCOVA) overlap
 - **Data:** No shared data but similar biostatistics approach
 - **Publications:** May co-cite Ze theory paper from BioSense
@@ -1286,7 +1286,7 @@ matplotlib>=3.4.0
 //!     POST /chi_ze                      — body {v_eeg,v_hrv,v_resp,v_sleep}
 //!                                          → {chi_ze, components}
 //!     POST /bridge                      — body {d}
-//!                                          → {chi_ze} (CDATA bridge stub)
+//!                                          → {chi_ze} (CEDAR bridge stub)
 //!     POST /exacerbation                — body {age,sex,chi_now,chi_7d}
 //!                                          → {risk, level}
 //!     GET  /api/v_star                  — return canonical v* (Article form)

@@ -1,4 +1,4 @@
-# CDATA — Formal Theory
+# CEDAR — Formal Theory
 
 **Version:** 5.3 (Counter #1 in MCAOA — see §6 and `cell_dt_cli::COUNTER_NUMBER`)
 **Status:** Active, preparation for publication.

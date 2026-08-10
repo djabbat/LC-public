@@ -22,7 +22,7 @@
 
 1. **Систематическое нарушение правила «Rust + Phoenix only»** — Python/Arduino/PHP/Node присутствуют в большинстве проектов (LC_AutomatedMicroscopy, LC_HAP, LC_MCOA, srv_drjaba, srv_books, srv_longevity и др.), без чёткого scaffolding-плана миграции.
 2. **Отсутствие исполняемого кода** — >50% «проектов» это концептуальные packs из markdown без целевого стека.
-3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
+3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CEDAR два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
 6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
@@ -48,7 +48,7 @@
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
-| 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
+| 12 | `LC_CEDAR` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
 | 13 | `LC_CytogeneticTree` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only (OK) |  |
 | 14 | `LC_EpigeneticDrift` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=11,.ex=10,.exs=6,.py=1 |
 | 15 | `LC_FCLC` | REJECT | v1 (ACCEPT) | unknown | doc-only (OK) |  |
@@ -137,7 +137,7 @@
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
-   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CDATA — два damage-уравнения).  
+   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CEDAR — два damage-уравнения).  
    - DESIGN.md часто описывает Python/другую архитектуру, не соответствующую фактическому стеку (LC_Proteostasis, LC_Telomere, LC_EpigeneticDrift).  
    - **Корень**: core-файлы не синхронизируются с кодом; отсутствует единый источник истины.
 
@@ -152,7 +152,7 @@
    - **Корень**: проекты находятся на стадии «набросков» без инженерной дисциплины.
 
 6. **Межпроектная несогласованность параметров и API**  
-   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CDATA, LC_Telomere, LC_MitoROS без оговорок.  
+   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CEDAR, LC_Telomere, LC_MitoROS без оговорок.  
    - Нет общего протокола взаимодействия между LC-проектами, хотя все они позиционируются как часть единой системы старения.  
    - **Корень**: каждый подпроект развивался изолированно; отсутствует архитектурный комитет или cross-project integration.
 
@@ -212,7 +212,7 @@
 
 1. **Систематическое нарушение правила «Rust + Phoenix only»** — Python/Arduino/PHP/Node присутствуют в большинстве проектов (LC_AutomatedMicroscopy, LC_HAP, LC_MCOA, srv_drjaba, srv_books, srv_longevity и др.), без чёткого scaffolding-плана миграции.
 2. **Отсутствие исполняемого кода** — >50% «проектов» это концептуальные packs из markdown без целевого стека.
-3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
+3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CEDAR два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
 6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
@@ -238,7 +238,7 @@
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
-| 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
+| 12 | `LC_CEDAR` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
 | 13 | `LC_CytogeneticTree` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only |  |
 | 14 | `LC_EpigeneticDrift` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=11,.ex=10,.exs=6,.py=1 |
 | 15 | `LC_FCLC` | REJECT | v1 (ACCEPT) | unknown | doc-only |  |
@@ -327,7 +327,7 @@
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
-   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CDATA — два damage-уравнения).  
+   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CEDAR — два damage-уравнения).  
    - DESIGN.md часто описывает Python/другую архитектуру, не соответствующую фактическому стеку (LC_Proteostasis, LC_Telomere, LC_EpigeneticDrift).  
    - **Корень**: core-файлы не синхронизируются с кодом; отсутствует единый источник истины.
 
@@ -342,7 +342,7 @@
    - **Корень**: проекты находятся на стадии «набросков» без инженерной дисциплины.
 
 6. **Межпроектная несогласованность параметров и API**  
-   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CDATA, LC_Telomere, LC_MitoROS без оговорок.  
+   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CEDAR, LC_Telomere, LC_MitoROS без оговорок.  
    - Нет общего протокола взаимодействия между LC-проектами, хотя все они позиционируются как часть единой системы старения.  
    - **Корень**: каждый подпроект развивался изолированно; отсутствует архитектурный комитет или cross-project integration.
 
@@ -402,7 +402,7 @@
 
 1. **Систематическое нарушение правила «Rust + Phoenix only»** — Python/Arduino/PHP/Node присутствуют в большинстве проектов (LC_AutomatedMicroscopy, LC_HAP, LC_MCOA, srv_drjaba, srv_books, srv_longevity и др.), без чёткого scaffolding-плана миграции.
 2. **Отсутствие исполняемого кода** — >50% «проектов» это концептуальные packs из markdown без целевого стека.
-3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
+3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CEDAR два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
 6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.
@@ -428,7 +428,7 @@
 | 9 | `LC_root` | REJECT | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python, P | VIOLATES (Python,PHP,Node/JS) | .rs=476,.py=361,.js=19,.ex=183,.exs=102 |
 | 10 | `LC_AIM` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir, Node/JS, Python | VIOLATES (Node/JS) | .rs=322,.js=14,.py=333,.ex=89,.exs=50 |
 | 11 | `LC_BioSense` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Python | VIOLATES (Python) | .py=8,.ex=1,.rs=1,.heex=1 |
-| 12 | `LC_CDATA` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
+| 12 | `LC_CEDAR` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=50,.py=5,.ex=9,.exs=5 |
 | 13 | `LC_CytogeneticTree` | MAJOR_REVISION | v1 (ACCEPT) | unknown | doc-only |  |
 | 14 | `LC_EpigeneticDrift` | MAJOR_REVISION | v1 (ACCEPT) | Rust, Phoenix/Elixir | OK | .rs=11,.ex=10,.exs=6,.py=1 |
 | 15 | `LC_FCLC` | REJECT | v1 (ACCEPT) | unknown | doc-only |  |
@@ -517,7 +517,7 @@
    - Проекты являются «концептуальными пакетами документации», что неприемлемо для ревью уровня программной архитектуры.
 
 3. **Дублирование и противоречия между core-файлами**  
-   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CDATA — два damage-уравнения).  
+   - Во многих проектах README и CONCEPT содержат разные названия, параметры и планы (примеры: GLA_Annals — JCAL vs Annals of Rejuvenation Science; LC_BioSense — v* constant; LC_CEDAR — два damage-уравнения).  
    - DESIGN.md часто описывает Python/другую архитектуру, не соответствующую фактическому стеку (LC_Proteostasis, LC_Telomere, LC_EpigeneticDrift).  
    - **Корень**: core-файлы не синхронизируются с кодом; отсутствует единый источник истины.
 
@@ -532,7 +532,7 @@
    - **Корень**: проекты находятся на стадии «набросков» без инженерной дисциплины.
 
 6. **Межпроектная несогласованность параметров и API**  
-   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CDATA, LC_Telomere, LC_MitoROS без оговорок.  
+   - Параметры моделей (v*, α, β, τ) в PARAMETERS.md различаются между LC_BioSense, LC_CEDAR, LC_Telomere, LC_MitoROS без оговорок.  
    - Нет общего протокола взаимодействия между LC-проектами, хотя все они позиционируются как часть единой системы старения.  
    - **Корень**: каждый подпроект развивался изолированно; отсутствует архитектурный комитет или cross-project integration.
 
@@ -2254,7 +2254,7 @@ ACCEPT
 ## MINOR ISSUES
 
 1. **Смешение языков в документации**  
-   Часть текста на русском, часть на английском. Например, `THEORY.md` пишет «Для class CDATA‑type experiments …», «В condiciях single‑PI labs». Это снижает читаемость и профессиональный тон.  
+   Часть текста на русском, часть на английском. Например, `THEORY.md` пишет «Для class CEDAR‑type experiments …», «В condiciях single‑PI labs». Это снижает читаемость и профессиональный тон.  
    *Файл: `THEORY.md`*
 
 2. **Некорректные пути в репозитории**  
@@ -2281,7 +2281,7 @@ ACCEPT
 - **Честная оценка рисков**  
   `EVIDENCE.md` включает раздел «Cautionary evidence» с перечислением ограничений DIY‑степперов, фотобличинга и AI‑галлюцинаций. Это повышает доверие.  
 - **Продуманная экосистемная интеграция**  
-  Указаны интерфейсы с CDATA, FCLC, MCAOA — хотя пока только декларативно, это хороший задел.
+  Указаны интерфейсы с CEDAR, FCLC, MCAOA — хотя пока только декларативно, это хороший задел.
 
 ---
 
@@ -2550,7 +2550,7 @@ ACCEPT
 
 ---
 
-## LC_CDATA
+## LC_CEDAR
 
 ### Peer review (v1)
 
@@ -2647,9 +2647,9 @@ ACCEPT
 5. Внедрить CI (GitHub Actions) с шагами: cargo test, cargo fmt --check, валидация параметров, проверка соответствия STATE.md TODO.
 
 
-### Improvement plan (LC_CDATA.plan.v1.md)
+### Improvement plan (LC_CEDAR.plan.v1.md)
 
-## План улучшений CDATA — P0, P1, P2
+## План улучшений CEDAR — P0, P1, P2
 
 ### P0 — Блокирующие (S/M/L + риск)
 
@@ -2682,7 +2682,7 @@ ACCEPT
 | 15 | **Реализовать автоматическую верификацию PMID/DOI в EVIDENCE.md** — GitHub Action, запускаемый при PR, проверяет каждую ссылку. | `.github/workflows/verify-references.yml`, `scripts/verify_references.py` | **M** |
 
 
-### Final check (LC_CDATA.check.v1.md) — accepted=True
+### Final check (LC_CEDAR.check.v1.md) — accepted=True
 
 ## VERDICT
 ACCEPT
@@ -2758,7 +2758,7 @@ ACCEPT
 ## STRENGTHES
 
 - **Глубокая концептуальная проработка.**  
-  Научная мотивация, гипотезы, связь с CDATA/MCAOA, фазирование эксперимента – всё изложено ясно, с верифицированными PMID.
+  Научная мотивация, гипотезы, связь с CEDAR/MCAOA, фазирование эксперимента – всё изложено ясно, с верифицированными PMID.
 - **Модульная структура.**  
   12 субпроектов с единой организацией позволяют легко масштабировать и заменять компоненты.
 - **Согласованность документации.**  
@@ -3623,7 +3623,7 @@ ACCEPT
 - **Разделение ядра и симуляции**: `mcoa_core` содержит чистые функции без I/O, что облегчает тестирование.  
 - **Использование современного стека**: Rust 2021, axum 0.7, Phoenix 1.7 – проект технически актуален.  
 - **Наличие базовых юнит-тестов в ядре** (6 тестов, включая проверку γ=0 и aging_rate_is_weighted_sum).  
-- **Интеграция с CDATA**: `mcoa_compare` и документация демонстрируют попытку кросс-валидации.
+- **Интеграция с CEDAR**: `mcoa_compare` и документация демонстрируют попытку кросс-валидации.
 
 ---
 
@@ -4316,7 +4316,7 @@ ACCEPT
 | **Core-files vs code alignment** | 1 | Документы (CONCEPT.md, THEORY.md, PARAMETERS.md) детальны и научно обоснованы, но код игнорирует их значения. Ключевые параметры `β₂` и `τ₂` в коде равны 0 и 90 годам, что лишает модель физиологического смысла. |
 | **Stack-rule compliance (Rust+Phoenix only)** | 2 | Нарушение: присутствуют Python-скрипты (`calibrate.py`, описание класса в DESIGN.md). Если правило жёсткое — требуется их удаление или переписывание на Rust/Elixir. |
 | **Modernity of stack** | 4 | Axum 0.7, Tokio 1.0, Phoenix 1.7, LiveView 0.20 — современно. Использование SQLx, Tracing, Tower — хороший выбор. |
-| **Quality of processes / connections** | 2 | Отсутствие тестов (кроме декларации в Cargo.toml), неполный Dockerfile, нет CI/CD, не разрешён конфликт нумерации с CDATA. Процессы разработки не формализованы. |
+| **Quality of processes / connections** | 2 | Отсутствие тестов (кроме декларации в Cargo.toml), неполный Dockerfile, нет CI/CD, не разрешён конфликт нумерации с CEDAR. Процессы разработки не формализованы. |
 
 ---
 
@@ -4342,7 +4342,7 @@ ACCEPT
 5. **Фронтенд не соединён с бэкендом**  
    `frontend/mix.exs` не содержит HTTP-клиента (кроме `req` как зависимости, но он не используется в показанном коде). Маршруты `DetailLive` предполагают LiveView, но данные, вероятно, должны приходить из backend. Связь отсутствует.
 
-6. **Конфликт нумерации Counter #2 с CDATA не разрешён**  
+6. **Конфликт нумерации Counter #2 с CEDAR не разрешён**  
    Упоминается в `CLAUDE.md` как P0 finding. Это блокирует интеграцию в MCAOA.
 
 ---
@@ -4390,7 +4390,7 @@ ACCEPT
 
 ---
 
-**Итоговая рекомендация:** Провести **MAJOR_REVISION**: (1) консолидировать параметры в одном файле (например, `parameters.toml`), сгенерировать из него код; (2) переработать backend, чтобы он импортировал `telomere_counter` как зависимость; (3) заменить DESIGN.md на документ, описывающий архитектуру на уровне компонентов без привязки к языку; (4) добавить минимальный набор тестов (unit + health-check); (5) разрешить конфликт нумерации с CDATA. После этого — повторный аудит.
+**Итоговая рекомендация:** Провести **MAJOR_REVISION**: (1) консолидировать параметры в одном файле (например, `parameters.toml`), сгенерировать из него код; (2) переработать backend, чтобы он импортировал `telomere_counter` как зависимость; (3) заменить DESIGN.md на документ, описывающий архитектуру на уровне компонентов без привязки к языку; (4) добавить минимальный набор тестов (unit + health-check); (5) разрешить конфликт нумерации с CEDAR. После этого — повторный аудит.
 
 
 ### Improvement plan (LC_Telomere.plan.v1.md)
@@ -4442,10 +4442,10 @@ ACCEPT
 - В LiveView `DashboardLive` загрузить данные через этот клиент и отобразить.  
 Затронутые файлы: `frontend/lib/telomere_frontend/telomere_client.ex` (новый), `frontend/lib/telomere_frontend_web/live/dashboard_live.ex`.
 
-**P0.6 – Разрешить конфликт нумерации Counter #2 с CDATA**  
+**P0.6 – Разрешить конфликт нумерации Counter #2 с CEDAR**  
 Трудоёмкость: **S**  
 Риск: Блокирует интеграцию в MCAOA.  
-- Согласовать с user/командой: либо переименовать Telomere в `#2a` или другой номер, либо изменить CDATA.  
+- Согласовать с user/командой: либо переименовать Telomere в `#2a` или другой номер, либо изменить CEDAR.  
 - Обновить `CLAUDE.md` и `CONCEPT.md` после решения.  
 Затронутые файлы: `CLAUDE.md`, `CONCEPT.md`, `backend/src/routes.rs` (список counters).
 
@@ -4539,7 +4539,7 @@ ACCEPT
 - **Core-files vs code alignment: 1** – Заявленные 18 модулей цифрового двойника в README не соответствуют реализованным LiveView-ам (6 шт.). Модули Ze-Syncorda, Ze System Generates Ze System отсутствуют.
 - **Stack-rule compliance (Rust+Phoenix only): 4** – Формально стек соблюдён, но интеграция Rust↔Elixir не показана (отсутствует порт/GenServer/NIF). Python-скрипты нарушают правило «только Rust+Phoenix».
 - **Modernity of stack: 3** – Rust и Phoenix – современные технологии, но не используются async/await в Rust, GenStage в Elixir, контейнеризация. Проект ближе к прототипу.
-- **Quality of processes / connections: 1** – Нет CI/CD, тестов (кроме заглушки), единого конфига, Makefile. Экосистемные связи (AIM, BioSense, CDATA) описаны в MAP.md, но не реализованы в коде.
+- **Quality of processes / connections: 1** – Нет CI/CD, тестов (кроме заглушки), единого конфига, Makefile. Экосистемные связи (AIM, BioSense, CEDAR) описаны в MAP.md, но не реализованы в коде.
 
 ## CRITICAL ISSUES
 
@@ -5625,7 +5625,7 @@ ACCEPT
 ### P2.2: Улучшить комментарии в Rust коде
 
 **Действие:** Добавить doc-comments к основным публичным функциям, особенно в `cell_dt_cli`, `MCAOA`  
-**Файлы:** `CDATA/crates/cell_dt_cli/src/main.rs`, `MCAOA/crates/mcoa_core/src/lib.rs`
+**Файлы:** `CEDAR/crates/cell_dt_cli/src/main.rs`, `MCAOA/crates/mcoa_core/src/lib.rs`
 
 ### P2.3: Использовать clap derive для всех CLI бинарей
 
@@ -5640,7 +5640,7 @@ ACCEPT
 ### P2.5: Устранить дублирование описаний между umbrella CONCEPT.md и subproject CONCEPT.md
 
 **Действие:** В subproject CONCEPT.md заменить секции, повторяющие umbrella, на ссылки вида `см. umbrella CONCEPT.md §3`  
-**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CDATA/CONCEPT.md`, `MCAOA/CONCEPT.md`
+**Файлы:** `Ze/CONCEPT.md`, `BioSense/CONCEPT.md`, `FCLC/CONCEPT.md`, `CEDAR/CONCEPT.md`, `MCAOA/CONCEPT.md`
 
 
 ### Final check (LC_root.check.v1.md) — accepted=True
@@ -6773,7 +6773,7 @@ ACCEPT
 ## STRENGTHS
 
 1. **Сильная концептуальная основа**  
-   Проект имеет чёткую научную цель (CDATA), жёсткие ограничения (дислексия, бюджет $1000, дистанционность) и продуманную стратегию их преодоления.
+   Проект имеет чёткую научную цель (CEDAR), жёсткие ограничения (дислексия, бюджет $1000, дистанционность) и продуманную стратегию их преодоления.
 
 2. **Использование memory-системы**  
    MEMORY.md и auto-memory в Claude позволяют сохранять контекст между сессиями — это повышает эффективность работы с LLM.
@@ -6989,7 +6989,7 @@ ACCEPT
    - Файлы: `backend/src/llm_client.rs`, `backend/src/routes.rs`
 
 7. **Переработать KNOWLEDGE.md (устранить дублирование)**  
-   - В корневом `KNOWLEDGE.md` оставить только глобальные знания (Ze, CDATA)  
+   - В корневом `KNOWLEDGE.md` оставить только глобальные знания (Ze, CEDAR)  
    - В `Pinekan/KNOWLEDGE.md` — специфику ингредиентов  
    - Сделать перекрёстные ссылки в обоих файлах
 
@@ -7447,10 +7447,10 @@ ACCEPT
 ## MINOR ISSUES
 
 1. **THEORY.md отсутствует**  
-   В MEMORY.md указано, что это системный пробел. Научная база CDATA описана только в KNOWLEDGE.md фрагментарно.
+   В MEMORY.md указано, что это системный пробел. Научная база CEDAR описана только в KNOWLEDGE.md фрагментарно.
 
 2. **UPGRADE.md proposals не рецензированы**  
-   Три предложения (CDATA biomarkers, validation, multilingual portal) висят в статусе `[ ] proposed` с 2026-03-29. Без peer-review блокируется принятие решений.
+   Три предложения (CEDAR biomarkers, validation, multilingual portal) висят в статусе `[ ] proposed` с 2026-03-29. Без peer-review блокируется принятие решений.
 
 3. **Языковая неоднородность**  
    Основной язык — русский, но часть документов на английском и грузинском. Нет практики `T[lang][key]`, как предложено в UPGRADE.md.
@@ -7582,7 +7582,7 @@ ACCEPT
 ### 1.4 Рецензия UPGRADE.md proposals  
 **Что:**  
 - Для каждого proposal:  
-  - CDATA biomarkers → reject (пока нет API для CDATA, deferred до фазы 2)  
+  - CEDAR biomarkers → reject (пока нет API для CEDAR, deferred до фазы 2)  
   - Scientific validation → approve (добавить как раздел в CONCEPT.md)  
   - Multilingual portal → approve (создать schema/i18n.yaml)  
 - Записать решения в MEMORY.md  
@@ -7603,7 +7603,7 @@ ACCEPT
 
 ## P2 — NICE-TO-HAVE (повышают качество, но не блокируют запуск)
 
-### 2.1 THEORY.md — научная база CDATA  
+### 2.1 THEORY.md — научная база CEDAR  
 **Что:** Собрать в один файл все ссылки, цитаты, механизмы из KNOWLEDGE.md, LINKS.md, CONCEPT.md. Оформить как глоссарий.  
 **Файлы:** `THEORY.md` (новый) | **Трудоёмкость:** S (1–2 дня)
 
@@ -7677,7 +7677,7 @@ ACCEPT
 
 | Категория | Оценка | Комментарий |
 |-----------|--------|-------------|
-| **Architecture** | 4 | Чёткое разделение научного и социального слоёв, контракты через HTTP API. Минус за то, что часть подпроектов (CDATA, FCLC) не полностью реализована или зависла. |
+| **Architecture** | 4 | Чёткое разделение научного и социального слоёв, контракты через HTTP API. Минус за то, что часть подпроектов (CEDAR, FCLC) не полностью реализована или зависла. |
 | **Optimality** | 3 | Репозиторий 969 МБ (вероятно, включает сырые данные/артефакты). Отсутствие Git LFS или `.gitignore` для тяжёлых файлов. |
 | **Structure / Modularity** | 4 | Хорошая модульность: каждый подпроект автономен, есть umbrella-документы. Однако некоторые модули (HAP, Ontogenesis) объявлены «TOXIC» и не удалены — загрязняют структуру. |
 | **Systematicity (cross-file consistency)** | 2 | Множество несоответствий: realtime-config не обновлён (порт 4001), TODO в DESIGN.md не выполнены, subproject CONCEPT.md не синхронизированы с umbrella v5.6. |
@@ -7814,12 +7814,12 @@ ACCEPT
    - **Затрагиваемые файлы:** `realtime/config/dev.exs`, `deploy/docker-compose-all.yml`
 
 5. **Синхронизировать subproject CONCEPT.md с umbrella v5.6**  
-   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CDATA, EpigeneticDrift, MitoROS, Proteostasis)  
+   - Для каждого подпроекта (Ze, BioSense, FCLC, MCAOA, CEDAR, EpigeneticDrift, MitoROS, Proteostasis)  
    - Проверить и исправить:  
      * "DERIVE" → "POSTULATED ansatz" (Ze)  
      * "validated" → "exploratory / hypothesis-stage" (BioSense)  
      * "semi-honest" → "semi-honest only; NOT active server collusion" (FCLC)  
-     * "inconclusive" → добавить статус (CDATA)  
+     * "inconclusive" → добавить статус (CEDAR)  
    - **Трудоёмкость:** S (grep + замена по шаблону)  
    - **Риск:** низкий (текстовые правки, не затрагивают код)  
    - **Затрагиваемые файлы:** `*/CONCEPT.md` для всех перечисленных подпроектов.
@@ -7844,7 +7844,7 @@ ACCEPT
    - **Затрагиваемые файлы:** `_audits/*` (переместить), `README.md`
 
 9. **Добавить LICENSE в каждый подпроект**  
-   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CDATA/`, `FCLC/`, `server/`, `realtime/`, `web/`  
+   - Скопировать `LICENSE` (MIT из корня MCAOA) в `Ze/`, `BioSense/`, `EpigeneticDrift/`, `MitoROS/`, `Proteostasis/`, `CEDAR/`, `FCLC/`, `server/`, `realtime/`, `web/`  
    - Или добавить README с указанием umbrella license  
    - **Затрагиваемые файлы:** `Ze/LICENSE`, `BioSense/LICENSE`, … (создать)
 
@@ -7899,7 +7899,7 @@ ACCEPT
 - P0.4 закрывает OPEN_PROBLEMS §2.5 и DESIGN.md §5.3 (port conflict).
 - P0.5 закрывает OPEN_PROBLEMS §2.4 и STATE.md §5.5 (subproject CONCEPT alignment).
 
-Научные открытые проблемы (пре‑регистрация, CDATA, Ze bridge, веса) остаются, но не являются **критическими** для данного аудита — план их и не решает, что корректно, так как они требуют исследовательской работы, а не инженерных правок.
+Научные открытые проблемы (пре‑регистрация, CEDAR, Ze bridge, веса) остаются, но не являются **критическими** для данного аудита — план их и не решает, что корректно, так как они требуют исследовательской работы, а не инженерных правок.
 
 ## NOTES
 - P0.1 (git‑артефакты) и P1/P2 — полезные улучшения, но не обязательные для закрытия критических замечаний; их выполнение повышает качество, но не требуется для VERDICT.
@@ -9199,7 +9199,7 @@ ACCEPT
 - `BioSense/CONCEPT.md` — добавить "hypothesis-stage", "post-hoc multimodal", убрать "validated"  
 - `FCLC/CONCEPT.md` — уточнить threat model "semi-honest only; not active server collusion"  
 - `MCAOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
-- `CDATA/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
+- `CEDAR/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
 **Файлы:** Указанные 5 файлов.  
 **Трудоёмкость:** M (1 день на аудит + правки)  
 **Риск:** Low
@@ -9252,7 +9252,7 @@ ACCEPT
 **Риск:** Low (аккуратно проверить математику)
 
 ### 3. Добавить лицензии во все подпроекты
-**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
+**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CEDAR/`, `FCLC/`  
 **Файлы:** по одному LICENSE на каждый подпроект.  
 **Трудоёмкость:** S (15 мин)  
 **Риск:** Low

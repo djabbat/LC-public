@@ -15,16 +15,16 @@
 
 ## Суть
 
-Hypothesis-stage framework: 5 подпроектов (MCAOA, CDATA, Ze, BioSense, FCLC) + социальный слой (server/web/realtime). Все AUC — exploratory, не confirmatory. Pre-registered тесты χ_Ze — NULL (deprecated). Публикации НЕ peer-reviewed.
+Hypothesis-stage framework: 5 подпроектов (MCAOA, CEDAR, Ze, BioSense, FCLC) + социальный слой (server/web/realtime). Все AUC — exploratory, не confirmatory. Pre-registered тесты χ_Ze — NULL (deprecated). Публикации НЕ peer-reviewed.
 
 ## EIC Pathfinder Challenges 2026
 
 - Deadline: **28 Oct 2026**, бюджет до €4M
-- Variant C: WP1-5 (FCLC + Ze + CDATA + BioSense + Activatus), €3.0M / 36 mo
+- Variant C: WP1-5 (FCLC + Ze + CEDAR + BioSense + Activatus), €3.0M / 36 mo
 - Партнёры: Geiger (Ulm, ✅ LoS 23.04.2026), Janke Curie (advisory + его co-PI как real partner), COSIC/Preneel KU Leuven
 - Miguel Angel Gonzalez Ballester (UPF Barcelona) — встреча 28.04.2026, ждём ответа
 
-## CDATA (из памяти Claude, 2026-05-17)
+## CEDAR (из памяти Claude, 2026-05-17)
 
 ### Статус: 439 тестов, GUI 7-язычная, 6 aging tracks (A-F)
 
@@ -53,7 +53,7 @@ Hypothesis-stage framework: 5 подпроектов (MCAOA, CDATA, Ze, BioSense
 - Liz Parrish: 4 quarterly review calls over 18 mo
 
 ### GitHub
-- CDATA-Aubrey: github.com/djabbat/CDATA-Aubrey (public, CC BY 4.0)
+- CEDAR-Aubrey: github.com/djabbat/CEDAR-Aubrey (public, CC BY 4.0)
 - OSF: https://osf.io/kqby4/ (DOI 10.17605/OSF.IO/KQBY4)
 
 ## HAP — HALTED (с 2026-04-21)
@@ -72,7 +72,7 @@ Hypothesis-stage framework: 5 подпроектов (MCAOA, CDATA, Ze, BioSense
 
 ### Основные подпроекты (5)
 - `MCAOA/` — Multi-Counter Architecture of Aging (ранее MCAOA)
-  - `CDATA/` — Centriolar Damage Accumulation Theory
+  - `CEDAR/` — Centriolar Entropy-Damage Accumulation Ratchet
     - **Aubrey/** → вынесен в отдельный проект `~/Desktop/Aubrey/`
 - `Ze/` — Entropy-geometric ansatz dτ/dt = −α·I(Z)
 - `BioSense/` — wearable-платформа, χ_Ze биомаркер
@@ -102,7 +102,7 @@ Hypothesis-stage framework: 5 подпроектов (MCAOA, CDATA, Ze, BioSense
 Локальная (`~/Desktop/LC/`) содержит **не все** подпроекты сервера.
 
 ### Есть на сервере, НЕТ локально:
-- `CDATA/` — Centriolar Damage Accumulation Theory
+- `CEDAR/` — Centriolar Entropy-Damage Accumulation Ratchet
 - `AutomatedMicroscopy/` — автоматизация микроскопии (новый подпроект)
 - `CytogeneticTree/` — цитогенетическое дерево
 - `EpigeneticDrift/` — эпигенетический дрейф
@@ -155,7 +155,7 @@ PID: 392762. Лог: /tmp/overnight/aubrey-tbpr-project/output.log
 ## Aubrey/ARGUS файлы на Desktop
 - `~/Desktop/Aubrey_CONCEPT_v5_ENG.md` (70KB) — основной концепт Aubrey v5
 - `~/Desktop/Aubrey_META-REVIEW_v5.md` (8.8KB) — meta-review
-- Путь из CLAUDE.md: `~/Desktop/LC/CDATA/experiments/CellLineageTree/Aubrey/` — НЕ существует локально (CDATA только на сервере)
+- Путь из CLAUDE.md: `~/Desktop/LC/CEDAR/experiments/CellLineageTree/Aubrey/` — НЕ существует локально (CEDAR только на сервере)
 - Файлы лежат на верхнем уровне Desktop, не в LC
 
 ## 2026-05-14

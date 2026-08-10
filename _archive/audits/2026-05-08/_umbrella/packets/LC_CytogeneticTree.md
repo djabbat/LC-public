@@ -104,7 +104,7 @@ Path: `/home/oem/Desktop/LC/CytogeneticTree`  Date: 2026-05-08
 
 1. `CONCEPT.md` (this subproject)
 2. `~/Desktop/LC/CONCEPT.md` (umbrella)
-3. `~/Desktop/LC/CDATA/CONCEPT.md` (parent theory)
+3. `~/Desktop/LC/CEDAR/CONCEPT.md` (parent theory)
 4. `~/Desktop/LC/MCAOA/` (parent theoretical framework)
 5. Global `~/CLAUDE.md`
 
@@ -127,7 +127,7 @@ Path: `/home/oem/Desktop/LC/CytogeneticTree`  Date: 2026-05-08
 
 ## What NOT to do
 
-- Don't merge CytogeneticTree into CDATA — they are distinct (CDATA = theoretical mechanism; CytogeneticTree = empirical + computational methodology to test at lineage level).
+- Don't merge CytogeneticTree into CEDAR — they are distinct (CEDAR = theoretical mechanism; CytogeneticTree = empirical + computational methodology to test at lineage level).
 - Don't abstract technology subfolders prematurely; each needs its own CONCEPT before becoming shared infrastructure.
 - Don't start writing a manuscript before Phase 1 data exists.
 
@@ -135,7 +135,7 @@ Path: `/home/oem/Desktop/LC/CytogeneticTree`  Date: 2026-05-08
 
 Applicable from master list in `~/CLAUDE.md` (≤15% of references). Most relevant for CytogeneticTree:
 
-- Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 — CDATA foundation
+- Tqemaladze 2023 *Mol Biol Rep* PMID 36583780 — CEDAR foundation
 - Tqemaladze 2024 *Georgian Scientists* — centriole asymmetry review
 - Chichinadze & Tqemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
 - Tqemaladze & Chichinadze 2005 *Biochem (Moscow)* — centriolar differentiation mechanisms
@@ -297,7 +297,7 @@ MIT (orchestration code); CC-BY 4.0 (PROMPT.md + policies).
 **Version:** v1.0 (initial scaffolding)
 **Date:** 2026-04-21
 **Status:** 🟡 Active (new LC subproject)
-**Parent umbrella:** `~/Desktop/LC/` (coordinator of CDATA, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
+**Parent umbrella:** `~/Desktop/LC/` (coordinator of CEDAR, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
 
 ---
 
@@ -319,7 +319,7 @@ Such a tree would reveal:
 2. **Which asymmetric divisions conserve youth** vs squander it (regenerative vs senescent fates)
 3. **Where differentiation commitment happens** in terms of centriole inheritance
 4. **The full DAG from zygote to terminally-differentiated somatic cell**
-5. **Empirical validation of CDATA** — do "old-centriole lineages" proliferate less, as predicted?
+5. **Empirical validation of CEDAR** — do "old-centriole lineages" proliferate less, as predicted?
 
 ---
 
@@ -330,7 +330,7 @@ Such a tree would reveal:
 | Subproject | Role vs Cytogenetic Tree |
 |------------|---------------------------|
 | **MCAOA** (parent theoretical framework) | Cytogenetic Tree instantiates MCAOA Counter #1 (centriolar) at single-cell resolution across lineage |
-| **CDATA** (centriolar damage theory) | Cytogenetic Tree is the **empirical test bed** for CDATA — if tree shows old-centriole-lineages arrest, CDATA validated |
+| **CEDAR** (centriolar damage theory) | Cytogenetic Tree is the **empirical test bed** for CEDAR — if tree shows old-centriole-lineages arrest, CEDAR validated |
 | **AutomatedMicroscopy** | Physical hardware platform; Cytogenetic Tree is the experimental + analytical layer on top |
 | **Ze / BioSense** | Orthogonal biomarker work at organism level; Cytogenetic Tree operates at single-cell level |
 | **FCLC** (federated learning) | Future: Cytogenetic Tree data could feed FCLC aging biomarker training |
@@ -388,7 +388,7 @@ Each lineage node can be annotated with:
 - Morphology (cell shape, size from microscopy)
 - Single-cell RNA-seq signature (if destructively sampled at endpoint)
 - Functional markers (immunofluorescence for differentiation markers)
-- PolyGlu signal at mother centriole (proxy for CDATA damage counter)
+- PolyGlu signal at mother centriole (proxy for CEDAR damage counter)
 
 ---
 
@@ -417,7 +417,7 @@ The full methodology requires integration of ~12 technologies. Each is a sub-sub
 
 ### H1 — Pure old-centriole lineage arrests
 
-Predicted by CDATA; tested in Impetus Phase A; first proof point for the Tree.
+Predicted by CEDAR; tested in Impetus Phase A; first proof point for the Tree.
 
 ### H2 — Differentiation commitment correlates with centriole asymmetry
 
@@ -461,7 +461,7 @@ Across replicate embryos / tissue systems, the cytogenetic tree has conserved st
 
 ## §8 Integrations Required
 
-- **CDATA** — theoretical model must be updated to include lineage-level predictions
+- **CEDAR** — theoretical model must be updated to include lineage-level predictions
 - **MCAOA** — Counter #1 (centriolar) formalism needs per-lineage version
 - **Impetus grant** — Phase A provides the first MVCT data
 - **Ilia Zheleznov HSC simulator** — parallel simulation of expected Tree topology
@@ -480,7 +480,7 @@ Across replicate embryos / tissue systems, the cytogenetic tree has conserved st
 
 ---
 
-*Generated 2026-04-21. Part of LC ecosystem. Connected to MCAOA (theoretical), CDATA (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*
+*Generated 2026-04-21. Part of LC ecosystem. Connected to MCAOA (theoretical), CEDAR (mechanistic), AutomatedMicroscopy (hardware), Impetus LOI (funding).*
 
 ```
 ### `ImageAnalysis/CONCEPT.md` (5206 chars)
@@ -700,7 +700,7 @@ LentiviralTools  FluorescentCameras     LaserAblation_405
 ## Integrations with LC ecosystem
 
 ```
-  CytogeneticTree  ──┬──→  CDATA (theoretical validation data)
+  CytogeneticTree  ──┬──→  CEDAR (theoretical validation data)
                      │
                      ├──→  MCAOA (Counter #1 lineage-level instance)
                      │
@@ -1085,9 +1085,9 @@ Initial scaffolding:
 - Dr. Tqemaladze labels "good" vs "bad" decisions on replayed runs
 - Use DPO to refine the decision policy
 
-## U5. Integration with CDATA
-- AIC queries CDATA's biological-age model in real time to tag cells as "old-centriole equivalents"
-- Closes loop between theory (CDATA) and experimental observation (tree)
+## U5. Integration with CEDAR
+- AIC queries CEDAR's biological-age model in real time to tag cells as "old-centriole equivalents"
+- Closes loop between theory (CEDAR) and experimental observation (tree)
 
 ## U6. Natural-language interface for lab staff
 - Staff can type "next experiment: knock out CEP152, track for 48 h, abort if division rate < 0.3/day"
@@ -1140,7 +1140,7 @@ Initial scaffolding:
 ## Publication plan
 
 - [ ] Methodology paper (Nat Methods / Cell Reports Methods) — Phase 1 first
-- [ ] Scientific paper (Nature / Cell / Nature Aging) — Phase 1 validation of CDATA prediction
+- [ ] Scientific paper (Nature / Cell / Nature Aging) — Phase 1 validation of CEDAR prediction
 - [ ] Data release (Zenodo with DOI) — concurrent with manuscript
 
 ## Risks / Open Questions
@@ -1256,7 +1256,7 @@ Initial scaffolding:
 # KNOWLEDGE — CytogeneticTree
 
 **Compiled:** 2026-04-21 (populated by systematic literature-search session)
-**Purpose:** Systematic landscape for the proposed Impetus experiment — pure old-centriole lineage purification + zygote-to-terminal cytogenetic tree reconstruction, used to validate CDATA.
+**Purpose:** Systematic landscape for the proposed Impetus experiment — pure old-centriole lineage purification + zygote-to-terminal cytogenetic tree reconstruction, used to validate CEDAR.
 **Method:** PubMed eSearch + eSummary direct API calls. Every PMID listed below was verified by `esummary` — title, first author, and year cross-checked against NCBI JSON response. **Zero hallucinated references.**
 
 > ⚠️ **Stub correction:** the earlier stub listed "Loeffler D, *Nature* 2019, PMID 31485075." Verification showed 31485075 is actually a quantum-physics paper. The correct Loeffler HSC paper is **PMID 31485073** ("Asymmetric lysosome inheritance predicts activation of haematopoietic stem cells"). Updated below.
@@ -1285,16 +1285,16 @@ Three independent claims must hold to justify "first":
 
 | PMID | First author, year | Journal | Relevance |
 |------|--------------------|---------|-----------|
-| **17255513** | Yamashita YM, 2007 | Science | *Foundational.* Asymmetric inheritance of mother vs. daughter centrosome in Drosophila male GSCs — established that stem cells retain the older centrosome. Primary citation for the CDATA thesis. |
+| **17255513** | Yamashita YM, 2007 | Science | *Foundational.* Asymmetric inheritance of mother vs. daughter centrosome in Drosophila male GSCs — established that stem cells retain the older centrosome. Primary citation for the CEDAR thesis. |
 | **17336911** | Rebollo E, 2007 | Dev Cell | Functionally unequal centrosomes drive spindle orientation in Drosophila neuroblasts. Parallel evidence in a different stem cell type. |
 | **19829375** | Wang X, 2009 | Nature | Asymmetric centrosome inheritance maintains neural progenitors in the neocortex — extends phenomenon to mammalian brain. |
 | **19829363** | Stearns T, 2009 | Nature | News & Views: "Stem cells: A fateful age gap." Short framing piece, useful citation. |
 | **21145745** | Conduit PT, 2010 | Curr Biol | Cnn dynamics drive centrosome size asymmetry; daughter-centriole retention in Drosophila neuroblasts (mechanism). |
-| **21407209** | Januschke J, 2011 | Nat Commun | *Counter-example.* Drosophila neuroblasts retain the **daughter** (younger) centrosome — cell-type-specific directionality, caveat for CDATA universality. |
+| **21407209** | Januschke J, 2011 | Nat Commun | *Counter-example.* Drosophila neuroblasts retain the **daughter** (younger) centrosome — cell-type-specific directionality, caveat for CEDAR universality. |
 | **22683192** | Pelletier L, 2012 | Curr Opin Cell Biol | Review: "Centrosome asymmetry and inheritance during animal development." |
 | **24120134** | Paridaen JT, 2013 | Cell | Asymmetric inheritance of centrosome-associated primary cilium membrane directs ciliogenesis after division — mechanistic follow-up. |
 | **25047620** | Reina J, 2014 | Phil Trans B | Review: "When fate follows age: unequal centrosomes in asymmetric cell division." Best single-document summary. |
-| **31485073** | Loeffler D, 2019 | Nature | Asymmetric lysosome inheritance predicts activation of HSCs. Not centriole-specific but provides the HSC-lineage methodology (live imaging + long-term clonal tracking) directly reusable for CDATA validation. |
+| **31485073** | Loeffler D, 2019 | Nature | Asymmetric lysosome inheritance predicts activation of HSCs. Not centriole-specific but provides the HSC-lineage methodology (live imaging + long-term clonal tracking) directly reusable for CEDAR validation. |
 | **37882444** | Royall LN, 2023 | eLife | Asymmetric inheritance of centrosomes maintains stem cell properties in human neural progenitor cells. Most recent human/mammalian confirmation. |
 | **36988082** | Gönczy P, 2023 | Genetics | Sperm-contributed centrioles segregate stochastically into 4-cell C. elegans — relevant caveat for zygote-level tracking. |
 
@@ -1408,7 +1408,7 @@ Additional off-the-shelf infrastructure (software/vendor, no PMID):
 | Sort cells by centriole age ratio | No | **Large** — no published FACS gating strategy on subcellular fluorescence ratio |
 | Closed-loop target-specific ablation | Partial | Small — Mahecic 2022 + commercial Zeiss; integration ~3 months |
 | Reconstruct lineage tree | Yes | None — adapt Chan 2019 + moslin |
-| Compare to CDATA predictions | No | Small — requires clean experimental arm (young-lineage vs. old-lineage proliferation comparison) |
+| Compare to CEDAR predictions | No | Small — requires clean experimental arm (young-lineage vs. old-lineage proliferation comparison) |
 
 ---
 
@@ -1431,7 +1431,7 @@ Additional off-the-shelf infrastructure (software/vendor, no PMID):
 
 6. **Self-citation slots (CLAUDE.md ≤15% rule):**
    - Tqemaladze 2023 *Mol Biol Rep* (PMID 36583780) — reduction/proliferation defects from old-centriole accumulation
-   - Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CDATA
+   - Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CEDAR
    - Chichinadze & Tqemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
    - Tqemaladze 2024 *Georgian Scientists* — cell center + oldest centrioles in stem cells
    - Tqemaladze 2026 *Longevity Horizon* (DOI 10.65649/3zzek632) — First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in HSC (companion paper)
@@ -1462,9 +1462,9 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 - **Literature**: every PMID must be verified via PubMed esummary API before entering any file in this subproject. No DeepSeek for citation search.
 - **RITE-Centriolin**: treat as *not yet published* / *must be de-novo cloned* until proven otherwise. Fallback: Dendra2-Centrin photoconvertible.
-- **Connection to CDATA**: CytogeneticTree is the **empirical test-bed** for CDATA theoretical predictions, NOT a parallel theory. Keep this clear in outreach.
+- **Connection to CEDAR**: CytogeneticTree is the **empirical test-bed** for CEDAR theoretical predictions, NOT a parallel theory. Keep this clear in outreach.
 - **Connection to Impetus LOI**: Phase 1 MVCT is a *minimum-viable demo*. The full Cytogenetic Tree is a multi-year programme beyond the grant.
-- **Scope**: this subproject handles *lineage-level* reconstruction; single-cell biochemistry lives in CDATA; tissue-level biomarkers live in Ze / BioSense.
+- **Scope**: this subproject handles *lineage-level* reconstruction; single-cell biochemistry lives in CEDAR; tissue-level biomarkers live in Ze / BioSense.
 
 ## Dated entries
 
@@ -1487,7 +1487,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 ## Things to remember across sessions
 
-- Always check `CONCEPT.md` is in sync with `CDATA/CONCEPT.md` + `MCAOA/` claims. If CDATA updates its theory, CytogeneticTree predictions might need update.
+- Always check `CONCEPT.md` is in sync with `CEDAR/CONCEPT.md` + `MCAOA/` claims. If CEDAR updates its theory, CytogeneticTree predictions might need update.
 - Keep clear separation: Impetus = funded Phase A (MVCT fibroblasts, binary Go/No-Go). Cytogenetic Tree = 3-phase multi-year programme.
 - `~/Desktop/LC/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
 
@@ -1496,7 +1496,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 - `project_longevity_georgia_ngo` — NGO that hosts this research
 - `feedback_deepseek_no_citations` — enforce for all KNOWLEDGE.md entries
 - `feedback_verify_references` — verify every PMID before commit
-- `feedback_cdata_docs_sync` — when editing CDATA, check if CytogeneticTree docs need update (and vice versa)
+- `feedback_cdata_docs_sync` — when editing CEDAR, check if CytogeneticTree docs need update (and vice versa)
 - `project_mcoa_nature_correspondence` — MCAOA manuscript at Nature Aging; CytogeneticTree is the empirical counterpart
 
 ```
@@ -1507,18 +1507,18 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 ## Internal (within LC ecosystem)
 
 - Umbrella: `~/Desktop/LC/CONCEPT.md`
-- Parent theory (mechanism): `~/Desktop/LC/CDATA/`
+- Parent theory (mechanism): `~/Desktop/LC/CEDAR/`
 - Parent theoretical framework: `~/Desktop/LC/MCAOA/` (under Nature Aging review, NATAGING-P13741)
 - Shared hardware platform: `~/Desktop/LC/AutomatedMicroscopy/`
 - Orthogonal biomarker work: `~/Desktop/LC/Ze/` + `~/Desktop/LC/BioSense/`
-- Funding context: `~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/`
+- Funding context: `~/Documents/Grants/LC/CEDAR/docs/IMPETUS_2026-04-25/`
 - Peer collaborator simulator: `~/Documents/Meetings/Ilia_Zheleznov_2026-04-25/MEETING_KIT.md` (external code: https://github.com/zhelilyan-create/hematopoiesis-simulator)
 
 ## Git
 
 - Public view: `djabbat/LC` (partial — core .md gitignored)
 - Private full: `djabbat/LC-private` (full content incl. CytogeneticTree)
-- Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CDATA-private` mirrors hardware dependencies)
+- Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CEDAR-private` mirrors hardware dependencies)
 
 ## External resources
 
@@ -1547,7 +1547,7 @@ All PMIDs above were fetched from NCBI eutils (esearch → esummary) in the 2026
 
 - RITE core: Verzijlbergen 2010 PNAS (yeast) — PMID 20018668
 - Centriolin-RITE precedent: Royall 2023 *eLife* — PMID 37882444 (RITE in neural progenitors)
-- CDATA core: Tqemaladze 2023 *Mol Biol Rep* — PMID 36583780
+- CEDAR core: Tqemaladze 2023 *Mol Biol Rep* — PMID 36583780
 - Asymmetric centriole inheritance: Yamashita 2007 *Science* — PMID 17255513
 - Lineage tracing foundation: Wang 2009 *Nature* — PMID 19829375 (neural progenitors)
 - Live-cell AI segmentation: Stringer 2021 *Nat Methods* (CellPose) — PMID 33318659

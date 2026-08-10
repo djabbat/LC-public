@@ -515,7 +515,7 @@ MINOR_REVISION
 ## MINOR ISSUES
 
 1. **Смешение языков в документации**  
-   Часть текста на русском, часть на английском. Например, `THEORY.md` пишет «Для class CDATA‑type experiments …», «В condiciях single‑PI labs». Это снижает читаемость и профессиональный тон.  
+   Часть текста на русском, часть на английском. Например, `THEORY.md` пишет «Для class CEDAR‑type experiments …», «В condiciях single‑PI labs». Это снижает читаемость и профессиональный тон.  
    *Файл: `THEORY.md`*
 
 2. **Некорректные пути в репозитории**  
@@ -577,7 +577,7 @@ MAJOR_REVISION
 
 - **Глубокая документация:** 9 корневых `.md` файлов детально описывают архитектуру, параметры, принятые решения и результат
 
-## LC_CDATA
+## LC_CEDAR
 ## VERDICT  
 **MAJOR_REVISION**
 
@@ -985,7 +985,7 @@ MAJOR_REVISION
 | **Core-files vs code alignment** | 1 | Документы (CONCEPT.md, THEORY.md, PARAMETERS.md) детальны и научно обоснованы, но код игнорирует их значения. Ключевые параметры `β₂` и `τ₂` в коде равны 0 и 90 годам, что лишает модель физиологического смысла. |
 | **Stack-rule compliance (Rust+Phoenix only)** | 2 | Нарушение: присутствуют Python-скрипты (`calibrate.py`, описание класса в DESIGN.md). Если правило жёсткое — требуется их удаление или переписывание на Rust/Elixir. |
 | **Modernity of stack** | 4 | Axum 0.7, Tokio 1.0, Phoenix 1.7, LiveView 0.20 — современно. Использование SQLx, Tracing, Tower — хороший выбор. |
-| **Quality of processes / connections** | 2 | Отсутствие тестов (кроме декларации в Cargo.toml), неполный Dockerfile, нет CI/CD, не разрешён конфликт нумерации с CDATA. Процессы разработки не формализованы. |
+| **Quality of processes / connections** | 2 | Отсутствие тестов (кроме декларации в Cargo.toml), неполный Dockerfile, нет CI/CD, не разрешён конфликт нумерации с CEDAR. Процессы разработки не формализованы. |
 
 ---
 
@@ -1021,7 +1021,7 @@ MAJOR_REVISION
 - **Core-files vs code alignment: 1** – Заявленные 18 модулей цифрового двойника в README не соответствуют реализованным LiveView-ам (6 шт.). Модули Ze-Syncorda, Ze System Generates Ze System отсутствуют.
 - **Stack-rule compliance (Rust+Phoenix only): 4** – Формально стек соблюдён, но интеграция Rust↔Elixir не показана (отсутствует порт/GenServer/NIF). Python-скрипты нарушают правило «только Rust+Phoenix».
 - **Modernity of stack: 3** – Rust и Phoenix – современные технологии, но не используются async/await в Rust, GenStage в Elixir, контейнеризация. Проект ближе к прототипу.
-- **Quality of processes / connections: 1** – Нет CI/CD, тестов (кроме заглушки), единого конфига, Makefile. Экосистемные связи (AIM, BioSense, CDATA) описаны в MAP.md, но не реализованы в коде.
+- **Quality of processes / connections: 1** – Нет CI/CD, тестов (кроме заглушки), единого конфига, Makefile. Экосистемные связи (AIM, BioSense, CEDAR) описаны в MAP.md, но не реализованы в коде.
 
 ## CRITICAL ISSUES
 

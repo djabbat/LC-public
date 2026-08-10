@@ -13,7 +13,7 @@ APPENDED: CONCEPT.md :: ## Reproducibility & open science
 ## iter 2
 SKIP exists: CONCEPT.md :: ## Falsifiability
 SKIP exists: CONCEPT.md :: ## Pre-registration plan
-REPLACED: CONCEPT.md :: ## Sample size calculation for CDATA exp
+REPLACED: CONCEPT.md :: ## Sample size calculation for CEDAR exp
 SKIP exists: CONCEPT.md :: ## Consortium / partners
 APPENDED: EVIDENCE.md :: ## Evidence base & meta-analysis
 SKIP exists: CONCEPT.md :: ## Methodology depth

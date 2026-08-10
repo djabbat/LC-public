@@ -192,8 +192,8 @@ Execute before responding to any user task:
 ## Rule 3: Project context (anchors)
 
 - **Author:** Dr. Jaba Tqemaladze, MD — integrative medicine specialist, author of *"Медицина Поколений"*.
-- **Goal:** $3,000,000 for a centriole-replacement (CDATA) laboratory.
-- **Primary theory:** CDATA — see `THEORY.md`.
+- **Goal:** $3,000,000 for a centriole-replacement (CEDAR) laboratory.
+- **Primary theory:** CEDAR — see `THEORY.md`.
 - **Launch:** 2026-09-27 on drjaba.com.
 - **Books:** PDFs in `priv/books/` (1 book × 4 languages currently: RU/EN/KA/KZ).
 - **Articles:** `priv/articles/` — Mol Biol Rep 2023 (Springer, peer-reviewed, **PubMed PMID: 36583780**) + Annals of Rejuvenation Science 2025 (**DOI: 10.65649/yx9sn772** — NOT PubMed-indexed).
@@ -214,7 +214,7 @@ This repo uses a strict 9-file core schema (since 2026-04-25):
 | `CONCEPT.md` | Vision, scope, ecosystem links, what's excluded — single source of truth | low |
 | `README.md` | Public-safe quickstart (the ONLY core file safe for public git) | low |
 | `CLAUDE.md` | THIS FILE: operating rules for Claude | low |
-| `THEORY.md` | CDATA equations, falsifiable predictions, chapter↔module map | low |
+| `THEORY.md` | CEDAR equations, falsifiable predictions, chapter↔module map | low |
 | `DESIGN.md` | Architecture: file tree, workflow, API contracts, deployment | medium |
 | `EVIDENCE.md` | External sources: literature, URLs, code↔refs, ecosystem | medium |
 | `PARAMETERS.md` | Numeric defaults, milestones, budget, env vars, targets | medium |
@@ -292,13 +292,13 @@ Authoritative list: `STATE.md §What NOT to do`. Summary:
 
 ---
 
-## Научная теория: CDATA
+## Научная теория: CEDAR
 
-**Centriolar Damage Accumulation Theory of Aging** — опубликована в двух рецензируемых журналах.
+**Centriolar Entropy-Damage Accumulation Ratchet** — опубликована в двух рецензируемых журналах.
 
 Стандартная медицина объясняет старение укорочением теломер. Это неполная картина.
 
-**Механизм CDATA:**
+**Механизм CEDAR:**
 
 1. Все ткани обновляются из стволовых клеток
 2. При асимметричном делении дочерняя стволовая клетка **селективно удерживает материнский (старый) центриоль**
@@ -320,7 +320,7 @@ Authoritative list: `STATE.md §What NOT to do`. Summary:
 |---|---|---|
 | 2005 | Advances in Gerontology | Tqemaladze & Chichinadze — первая публикация о роли центриолей |
 | 2023 | Molecular Biology Reports, Springer · [PubMed PMID: 36583780](https://pubmed.ncbi.nlm.nih.gov/36583780/) | *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?* |
-| 2025 | Annals of Rejuvenation Science, 1(1) · DOI: 10.65649/yx9sn772 | *Old Centrioles Make Old Bodies* — полная теория CDATA |
+| 2025 | Annals of Rejuvenation Science, 1(1) · DOI: 10.65649/yx9sn772 | *Old Centrioles Make Old Bodies* — полная теория CEDAR |
 
 ---
 
@@ -341,7 +341,7 @@ Authoritative list: `STATE.md §What NOT to do`. Summary:
 
 | Книга | Содержание |
 |---|---|
-| **Медицина Поколений** | Научная основа: ПНИЕ, эпигенетика, стволовые клетки, CDATA |
+| **Медицина Поколений** | Научная основа: ПНИЕ, эпигенетика, стволовые клетки, CEDAR |
 
 ---
 
@@ -476,7 +476,7 @@ docker compose exec app /app/bin/migrate
 | URL | Описание |
 |---|---|
 | `/` | Лендинг (7 языков: EN/FR/ES/RU/AR/ZH/KA) |
-| `/chat` | AI-чат (3 режима: 🥦 Питание / 🧬 Омоложение / 🔬 CDATA) |
+| `/chat` | AI-чат (3 режима: 🥦 Питание / 🧬 Омоложение / 🔬 CEDAR) |
 | `/nutrition` | Специализированный чат по нутрициологии |
 | `/books` | Покупка книг и токенов (checkout через Lemon Squeezy) |
 | `/admin` | Панель управления заказами *(Basic Auth)* |
@@ -490,14 +490,14 @@ docker compose exec app /app/bin/migrate
 ```
 ### `CONCEPT.md` (head 200 lines)
 ```
-# DrJaba: AI-платформа для медицины долголетия и финансирования исследований CDATA
+# DrJaba: AI-платформа для медицины долголетия и финансирования исследований CEDAR
 ## Финальная концепция (версия 3.0)
 
 ---
 
 ## Миссия
 
-DrJaba — это интегрированная AI-платформа и цифровая витрина, созданная врачом-ученым д-ром Джабой Ткемаладзе для демократизации доступа к медицине долголетия, основанной на теории накопления центриолярных повреждений (CDATA). Платформа напрямую финансирует экспериментальную валидацию терапии замены центриолей за счет продажи книг и подписок, с конечной целью сбора **$3M** для лабораторных исследований, которые переведут теоретическую биологию старения в практические омолаживающие интервенции.
+DrJaba — это интегрированная AI-платформа и цифровая витрина, созданная врачом-ученым д-ром Джабой Ткемаладзе для демократизации доступа к медицине долголетия, основанной на теории накопления центриолярных повреждений (CEDAR). Платформа напрямую финансирует экспериментальную валидацию терапии замены центриолей за счет продажи книг и подписок, с конечной целью сбора **$3M** для лабораторных исследований, которые переведут теоретическую биологию старения в практические омолаживающие интервенции.
 
 ---
 
@@ -505,7 +505,7 @@ DrJaba — это интегрированная AI-платформа и циф
 
 DrJaba — это веб-платформа, объединяющая три核心компонента:
 
-1.  **AI-ассистент долголетия** — многоязычный чат-интерфейс, предоставляющий научно обоснованные рекомендации по питанию, протоколам омоложения и объясняющий теорию CDATA. Ассистент строго ограничен образовательной функцией и не заменяет лечащего врача.
+1.  **AI-ассистент долголетия** — многоязычный чат-интерфейс, предоставляющий научно обоснованные рекомендации по питанию, протоколам омоложения и объясняющий теорию CEDAR. Ассистент строго ограничен образовательной функцией и не заменяет лечащего врача.
 2.  **Цифровой книжный магазин** — прямая продажа фундаментальных трудов д-ра Ткемаладзе по медицине долголетия с автоматизированной выдачей после оплаты.
 3.  **Движок финансирования исследований** — устойчивая бизнес-модель, где 100% прибыли направляется на экспериментальную валидацию терапии замены центриолей. Прозрачность обеспечивается публичным трекером сбора средств.
 
@@ -515,7 +515,7 @@ DrJaba — это веб-платформа, объединяющая три核�
 
 ## Зачем существует DrJaba
 
-Старение остается главным фактором риска хронических заболеваний и смертности, однако исследования фундаментальных механизмов старения критически недофинансированы. Теория накопления центриолярных повреждений (CDATA) предлагает новую, проверяемую гипотезу о коренной причине старения организма, но требует экспериментального подтверждения для перехода от теории к терапии.
+Старение остается главным фактором риска хронических заболеваний и смертности, однако исследования фундаментальных механизмов старения критически недофинансированы. Теория накопления центриолярных повреждений (CEDAR) предлагает новую, проверяемую гипотезу о коренной причине старения организма, но требует экспериментального подтверждения для перехода от теории к терапии.
 
 Традиционное академическое финансирование движется медленно и сталкивается с высокой конкуренцией. DrJaba создает альтернативный путь: генерацию исследовательского капитала напрямую от людей, которые получают пользу от знаний, формируя добродетельный цикл, где образование финансирует открытия, а открытия улучшают образование.
 
@@ -537,9 +537,9 @@ DrJaba — это веб-платформа, объединяющая три核�
 
 ## Как это работает
 
-### Научная основа: теория CDATA
+### Научная основа: теория CEDAR
 
-Теория накопления центриолярных повреждений (Centriolar Damage Accumulation Theory of Aging) предполагает:
+Теория накопления центриолярных повреждений (Centriolar Entropy-Damage Accumulation Ratchet) предполагает:
 
 - Материнская центриоль стволовых клеток необратимо накапливает молекулярные повреждения из-за репликации по шаблону
 - Дочерняя клетка, сохраняющая стволовость, всегда наследует более старую, поврежденную центриоль
@@ -557,9 +557,9 @@ DrJaba — это веб-платформа, объединяющая три核�
 
 | Функция | Описание | Доступ |
 |---------|----------|--------|
-| **AI-чат ассистент** | Три специализированных режима: Нутрициология (протокол д-ра Ткемаладзе), Омоложение (NAD+, сенолитики, рапамицин), Теория CDATA | 3 бесплатных сообщения, затем токен-гейтинг |
+| **AI-чат ассистент** | Три специализированных режима: Нутрициология (протокол д-ра Ткемаладзе), Омоложение (NAD+, сенолитики, рапамицин), Теория CEDAR | 3 бесплатных сообщения, затем токен-гейтинг |
 | **Многоязычность** | 7 языков: английский, французский, испанский, русский, арабский, китайский, грузинский | Все пользователи |
-| **Цифровой книжный магазин** | Фундаментальный текст "Медицина поколений" (теория CDATA + практика долголетия) | Автоматическая выдача PDF после оплаты ($12) |
+| **Цифровой книжный магазин** | Фундаментальный текст "Медицина поколений" (теория CEDAR + практика долголетия) | Автоматическая выдача PDF после оплаты ($12) |
 | **Токен-система** | Explorer (50 сообщений/$9), Practitioner (200 сообщений/$29), Supporter (500 сообщений/$49) — одноразовые пакеты; рекуррентные подписки с автопродлением (10% скидка при годовом платеже) | Одноразовые пакеты + рекуррентные подписки |
 | **Админ-панель** | Управление заказами, CSV-экспорты, выдача токенов, контроль выполнения | Только для администратора |
 | **Публичный трекер** | Дашборд с отображением текущей суммы сбора, прогресса по этапам исследований и отчетов о расходах | Открытый доступ |
@@ -592,7 +592,7 @@ DrJaba — это веб-платформа, объединяющая три核�
 - *Члены*: эксперты в области центриолярной биологии, геронауки, AI в медицине
 - *Функции*: валидация исследовательских протоколов, рецензирование публикаций, стратегическое направление лабораторных работ
 
-Платформа представляет собой конвергенцию экспертизы основателя: медицинская практика, научные исследования и публичное образование — все направлено на единую цель: экспериментальную валидацию и перевод теории CDATA в практические омолаживающие терапии.
+Платформа представляет собой конвергенцию экспертизы основателя: медицинская практика, научные исследования и публичное образование — все направлено на единую цель: экспериментальную валидацию и перевод теории CEDAR в практические омолаживающие терапии.
 
 ---
 
@@ -665,7 +665,7 @@ DrJaba использует модель двойного дохода для ф
 | **Фаза 3: Медиа-расширение** | Завершено | Подкасты, переводы книг |
 | **Фаза 4: Раунд финансирования** | Активна | Семейные офисы, ангелы, инвестиции диаспоры |
 | **Фаза 5: Запуск платформы** | Сентябрь 2026 | Деплой drjaba.com, старт маркетинговой кампании |
-| **Фаза 6: Лабораторные исследования** | 2027-2028 | Набор персонала, закупка оборудования, экспериментальная валидация CDATA |
+| **Фаза 6: Лабораторные исследования** | 2027-2028 | Набор персонала, закупка оборудования, экспериментальная валидация CEDAR |
 
 ### KPI успеха
 
@@ -694,7 +694,7 @@ DrJaba использует модель двойного дохода для ф
 ```
 ### `THEORY.md` (head 200 lines)
 ```
-# THEORY.md — DrJaba: Scientific Canon (CDATA)
+# THEORY.md — DrJaba: Scientific Canon (CEDAR)
 
 > Formal definitions, mechanism, falsifiable predictions, and chapter↔module map.
 > This file points at external canon (book PDFs in `priv/books/`, peer-reviewed articles in `priv/articles/`) — it does not duplicate them.
@@ -704,7 +704,7 @@ DrJaba использует модель двойного дохода для ф
 
 ## 1. Theory name
 
-**CDATA — Centriolar Damage Accumulation Theory of Aging.**
+**CEDAR — Centriolar Entropy-Damage Accumulation Ratchet.**
 
 Proposed by Dr. Jaba Tqemaladze, MD. First peer-reviewed formulation: Mol Biol Rep 2023 (Springer, PMID: 36583780). Full theory: Annals of Rejuvenation Science 2025, DOI: 10.65649/yx9sn772 (not PubMed-indexed).
 
@@ -751,7 +751,7 @@ dN/dt = r · F(D(g(t))) · N(t) − δ · N(t)
 
 where `r` is intrinsic renewal rate and `δ` is loss. Aging phenotype emerges when `r · F(D) < δ`.
 
-The CDATA digital twin (Cell-DT) implements this dynamic and reports a computational validation of **R² = 0.84** against observed stem-cell and tissue-aging markers (see Annals 2025).
+The CEDAR digital twin (Cell-DT) implements this dynamic and reports a computational validation of **R² = 0.84** against observed stem-cell and tissue-aging markers (see Annals 2025).
 
 *(Exact equations, parameter tables, and calibration data live in the Annals 2025 manuscript and `priv/books/medicina_pokolenii.pdf`.)*
 
@@ -763,7 +763,7 @@ From the same model, four interventions are predicted:
 
 | # | Pathway | Mechanism targeted | Intervention class |
 |---|---------|-------------------|--------------------|
-| 1 | **Centriole replacement** | Replace the damaged mother centriole in stem cells | Microinjection / targeted transplantation of "young" centrioles (**flagship CDATA lab program**) |
+| 1 | **Centriole replacement** | Replace the damaged mother centriole in stem cells | Microinjection / targeted transplantation of "young" centrioles (**flagship CEDAR lab program**) |
 | 2 | **Proteostatic cleanup** | Enhance proteasomal/autophagic degradation of centriolar aggregates | Small molecules boosting 26S proteasome, chaperone-mediated autophagy |
 | 3 | **Ciliogenesis restoration** | Rebuild primary-cilium signaling despite centriolar damage | Pharmacologic ciliogenesis stimulators |
 | 4 | **Niche therapy** | Optimize stem-cell microenvironment to compensate | Growth factors, niche cell rejuvenation |
@@ -772,7 +772,7 @@ From the same model, four interventions are predicted:
 
 ## 6. Falsifiable predictions
 
-CDATA is a scientific theory — it makes predictions that can be tested and that, if false, refute the theory.
+CEDAR is a scientific theory — it makes predictions that can be tested and that, if false, refute the theory.
 
 1. **Selective retention prediction** — in all metazoan stem-cell lineages with asymmetric division, the renewed stem cell retains the older mother centriole at a rate significantly > 50%. *Refutation*: stochastic (50/50) inheritance in any well-characterized lineage falsifies the mechanism.
 2. **No-repair prediction** — centrioles lack enzymatic turnover for tubulin and centriolar appendage proteins; oxidative and aggregate damage is monotone increasing over stem-cell generations. *Refutation*: discovery of centriolar repair / protein-turnover pathway undermines the "no repair" axiom.
@@ -792,17 +792,17 @@ Traceability from external canon (books / articles) to in-repo artifacts.
 | Canon source | Chapter / section | Repo location |
 |--------------|-------------------|---------------|
 | Mol Biol Rep 2023 (PMID: 36583780) | Full article | `priv/articles/Reduction, proliferation, and differentiation defects of stem cells over time_ a consequence of selective accumulation of old centrioles in the stem cells_.pdf` |
-| Annals of Rejuvenation Science 2025 (DOI: 10.65649/yx9sn772) | "Old Centrioles Make Old Bodies" — full CDATA theory | `priv/articles/Old Centrioles Make Old Bodies.docx` |
-| "Медицина Поколений" — CDATA + practical longevity | RU master | `priv/books/medicina_pokolenii.pdf` |
+| Annals of Rejuvenation Science 2025 (DOI: 10.65649/yx9sn772) | "Old Centrioles Make Old Bodies" — full CEDAR theory | `priv/articles/Old Centrioles Make Old Bodies.docx` |
+| "Медицина Поколений" — CEDAR + practical longevity | RU master | `priv/books/medicina_pokolenii.pdf` |
 | "Medicine of Generations" | EN | `priv/books/medicine_of_generations.pdf` |
 | "მედიცინა თაობების" | KA | `priv/books/taobata_medicina.pdf` |
 | "Ұрпақтар медицинасы" | KZ | `priv/books/urpaktar_medicinasy.pdf` |
-| CDATA theory explanation | Book chapters on CDATA mechanism | System prompt `:chat` in `lib/drjaba/knowledge_base.ex` |
+| CEDAR theory explanation | Book chapters on CEDAR mechanism | System prompt `:chat` in `lib/drjaba/knowledge_base.ex` |
 | Dr. Tqemaladze nutrition protocol | Book chapters on diet / PNIE | System prompt `:nutrition` in `lib/drjaba/knowledge_base.ex` |
 | Experimental longevity interventions (NAD+, senolytics, rapamycin) | Book chapters on rejuvenation | System prompt `:experiments` in `lib/drjaba/knowledge_base.ex` |
-| Landing page CDATA infographic | Simplified mechanism schema (7 languages) | `priv/landing.html` |
+| Landing page CEDAR infographic | Simplified mechanism schema (7 languages) | `priv/landing.html` |
 | Layperson explanation (EN, for press / investors) | One-page summary | `docs/lay-summary.md` |
-| CDATA Cell-DT digital twin (R² = 0.84) | External simulator | `~/Desktop/CDATA/` (ecosystem) |
+| CEDAR Cell-DT digital twin (R² = 0.84) | External simulator | `~/Desktop/CEDAR/` (ecosystem) |
 
 ---
 
@@ -829,7 +829,7 @@ Traceability from external canon (books / articles) to in-repo artifacts.
 | `deepseek_api_endpoint` | `https://api.deepseek.com/chat/completions` | `DrJaba.Claude` | |
 | `deepseek_retry_attempts` | 3 | `DrJaba.Claude` | Exponential backoff: 1s, 3s, 8s |
 | `ets_cache_ttl_seconds` | 86,400 (24h) | `DrJaba.Claude` | ETS cache for single-turn queries |
-| `system_prompt_mode_chat` | `:chat` | `DrJaba.KnowledgeBase` | CDATA theory explanations |
+| `system_prompt_mode_chat` | `:chat` | `DrJaba.KnowledgeBase` | CEDAR theory explanations |
 | `system_prompt_mode_nutrition` | `:nutrition` | `DrJaba.KnowledgeBase` | Dr. Tqemaladze's food protocol |
 | `system_prompt_mode_experiments` | `:experiments` | `DrJaba.KnowledgeBase` | Longevity interventions |
 
@@ -1072,9 +1072,9 @@ Priority legend: **P0** = blocker for next milestone · **P1** = important this 
 
 ### P4 — Proposed enhancements (ex-UPGRADE.md)
 
-- [ ] **CDATA biomarker panel for patients** — integrate CDATA's 9 biomarkers (ROS, CHIP VAF, frailty, epigenetic age, etc.) as patient aging assessment panel. Differentiator vs standard integrative medicine platforms.
-- [ ] **Multilingual patient portal (7 UN languages + Georgian)** — apply T[lang][key] dict pattern from CDATA GUI to patient-facing portal.
-- [ ] **Digital twin for individual patients** — use CDATA Cell-DT as personalized aging simulator (lifestyle + lab values → trajectory + interventions).
+- [ ] **CEDAR biomarker panel for patients** — integrate CEDAR's 9 biomarkers (ROS, CHIP VAF, frailty, epigenetic age, etc.) as patient aging assessment panel. Differentiator vs standard integrative medicine platforms.
+- [ ] **Multilingual patient portal (7 UN languages + Georgian)** — apply T[lang][key] dict pattern from CEDAR GUI to patient-facing portal.
+- [ ] **Digital twin for individual patients** — use CEDAR Cell-DT as personalized aging simulator (lifestyle + lab values → trajectory + interventions).
 - [ ] **Hevolution HF-GRO** — follow 2025–2026 round (EU partner required).
 - [ ] **Horizon Europe** — verify Free University of Tbilisi eligibility.
 
@@ -1088,7 +1088,7 @@ Priority legend: **P0** = blocker for next milestone · **P1** = important this 
 ## Milestones (done)
 
 ### Phase 1 — Concept packaging (complete)
-- [x] **Scientific publications** — Mol Biol Rep 2023 (PMID: 36583780) + Annals of Rejuvenation Science 2025 (DOI: 10.65649/yx9sn772, CDATA).
+- [x] **Scientific publications** — Mol Biol Rep 2023 (PMID: 36583780) + Annals of Rejuvenation Science 2025 (DOI: 10.65649/yx9sn772, CEDAR).
 - [x] **Book + concept analysis** — "Медицина Поколений" and "Место Силы" analyzed, concept refined.
 - [x] **4-phase business strategy** — roadmap formed.
 - [x] **Lay summary (EN)** — `docs/lay-summary.md`.
@@ -1113,10 +1113,10 @@ Priority legend: **P0** = blocker for next milestone · **P1** = important this 
 - [x] **DeepSeek API integration** — `DrJaba.Claude` HTTP client via Req (replaced Python/Ollama legacy).
 - [x] **Knowledge base** — 3 system prompts (`:chat` / `:nutrition` / `:experiments`) in `lib/drjaba/knowledge_base.ex`.
 - [x] **Chat 7 languages** — EN/FR/ES/RU/AR/ZH/KA, JS-driven multilingual switcher.
-- [x] **Chat 3 modes** — 🥦 Nutrition / 🧬 Rejuvenation / 🔬 CDATA.
+- [x] **Chat 3 modes** — 🥦 Nutrition / 🧬 Rejuvenation / 🔬 CEDAR.
 - [x] **Token gate** — 3 free messages, then email + balance check (`DrJaba.Tokens`).
 - [x] **Rate limiting** — ETS, 20 req / 10 min per IP + per identity (`DrJaba.RateLimiter`).
-- [x] **Landing page** — 7 languages, author portrait, CDATA schema, book blocks in 4 languages.
+- [x] **Landing page** — 7 languages, author portrait, CEDAR schema, book blocks in 4 languages.
 - [x] **/books LiveView** — "Медицина Поколений" ($12), 4-language blocks (KA/EN/RU/KZ), Lemon Squeezy checkout.
 - [x] **Unified navigation** — Noto Sans, `#0f1f3d` navy, `#c9a84c` gold.
 - [x] **Swoosh + Brevo SMTP** — email customers + notify doctor.
@@ -1136,7 +1136,7 @@ Priority legend: **P0** = blocker for next milestone · **P1** = important this 
 - **2026-04-21: CONCEPT↔CODE audit completed** — artifact `CONCEPT_CODE_AUDIT_2026-04-21.md`; drift items tracked under P1/P2 above.
 - **2026-04-21: "Место Силы" temporarily removed from product surface** — awaiting 4-language PDFs; translation strategy preserved in `docs/book-translation-strategy.md`.
 - **2026-03-29**: Project state snapshot recorded — Phase 2 active, $3M goal locked, launch date 2026-09-27.
-- **2026-03-25**: Both CDATA articles uploaded to ResearchGate for open access.
+- **2026-03-25**: Both CEDAR articles uploaded to ResearchGate for open access.
 - **Conboy + Zwaka selected as first Scientific Advisor outreach targets** (Berkeley + Icahn Mount Sinai).
 - **XPRIZE Healthspan + Impetus Grants flagged as priority grant applications.**
 - **Python backend fully removed**; all logic in Elixir/Phoenix.
@@ -1221,7 +1221,7 @@ drjaba/
 ├── CONCEPT.md                           — Single source of truth (vision, scope, ecosystem)
 ├── README.md                            — Public-safe quickstart (ONLY file in public git)
 ├── CLAUDE.md                            — Operating rules for Claude
-├── THEORY.md                            — CDATA formal theory, equations, falsifiable predictions
+├── THEORY.md                            — CEDAR formal theory, equations, falsifiable predictions
 ├── DESIGN.md                            — THIS FILE: architecture, file tree, API contracts
 ├── EVIDENCE.md                          — External literature / URLs / code↔refs / ecosystem
 ├── PARAMETERS.md                        — Numeric defaults, milestones, budget, env vars
@@ -1344,7 +1344,7 @@ Updating the knowledge base requires **re-extracting** from the latest book revi
 | URL | Module | Description | Auth |
 |-----|--------|-------------|------|
 | `/` | `DrJabaWeb.PageController` | Static landing (7 languages) via `:code.priv_dir(:drjaba)` → `priv/landing.html` | public |
-| `/chat` | `DrJabaWeb.ChatLive` | AI chat — 3 modes (🥦 Nutrition / 🧬 Rejuvenation / 🔬 CDATA); token-gated | public, gated |
+| `/chat` | `DrJabaWeb.ChatLive` | AI chat — 3 modes (🥦 Nutrition / 🧬 Rejuvenation / 🔬 CEDAR); token-gated | public, gated |
 | `/books` | `DrJabaWeb.BooksLive` | Book sales + token packs; Lemon Squeezy checkout | public |
 | `/nutrition` | `DrJabaWeb.NutritionLive` | Nutrition-focused chat view (specialized UI) | public, gated |
 | `/admin` | `DrJabaWeb.AdminLive` | Order management; Mark Paid / Send PDF / Grant Tokens / Cancel | HTTP Basic Auth |
@@ -1399,7 +1399,7 @@ ChatLive  ──► 3 free messages (anonymous session)
 | 2005 | Advances in Gerontology | — | — | Tqemaladze & Chichinadze — first publication on centriole role in aging |
 | 2011 | Biogerontology | **PMID: 20480236** | yes | Lezhava T. et al. (incl. Tqemaladze) |
 | 2023 | Molecular Biology Reports (Springer) | **PMID: 36583780** | **yes (peer-reviewed, PubMed-indexed)** | *Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem cells?* |
-| 2025 | Annals of Rejuvenation Science, 1(1) | **DOI: 10.65649/yx9sn772** | **no — NOT PubMed-indexed** | *Old Centrioles Make Old Bodies* — full CDATA theory |
+| 2025 | Annals of Rejuvenation Science, 1(1) | **DOI: 10.65649/yx9sn772** | **no — NOT PubMed-indexed** | *Old Centrioles Make Old Bodies* — full CEDAR theory |
 
 > **Do not** claim both articles are PubMed-indexed. Only Mol Biol Rep 2023 is. Annals of Rejuvenation Science 2025 has a DOI only.
 
@@ -1410,8 +1410,8 @@ ChatLive  ──► 3 free messages (anonymous session)
 | PMID 36583780 | https://pubmed.ncbi.nlm.nih.gov/36583780/ |
 | DOI 10.65649/yx9sn772 | https://doi.org/10.65649/yx9sn772 |
 | PMID 20480236 (Lezhava et al.) | https://pubmed.ncbi.nlm.nih.gov/20480236/ |
-| ResearchGate profile / CDATA paper | https://www.researchgate.net/publication/366712921 |
-| Zenodo CDATA code release | https://doi.org/10.5281/zenodo.19174506 |
+| ResearchGate profile / CEDAR paper | https://www.researchgate.net/publication/366712921 |
+| Zenodo CEDAR code release | https://doi.org/10.5281/zenodo.19174506 |
 
 ### Local copies
 
@@ -1429,8 +1429,8 @@ Where scientific references are baked into the application.
 
 | Module / file | What it cites | Why |
 |---|---|---|
-| `lib/drjaba/knowledge_base.ex` | CDATA theory, PNIE, stem cells, book content (`:chat` / `:nutrition` / `:experiments` prompts) | Seeds system prompts so DeepSeek answers stay on-canon |
-| `priv/landing.html` | PMID 36583780, DOI 10.65649/yx9sn772, CDATA schema | Public credibility signals on drjaba.com |
+| `lib/drjaba/knowledge_base.ex` | CEDAR theory, PNIE, stem cells, book content (`:chat` / `:nutrition` / `:experiments` prompts) | Seeds system prompts so DeepSeek answers stay on-canon |
+| `priv/landing.html` | PMID 36583780, DOI 10.65649/yx9sn772, CEDAR schema | Public credibility signals on drjaba.com |
 | `priv/books/` | "Медицина Поколений" × 4 languages | Fulfillment payload for `Orders.fulfill_order/1` |
 | `priv/articles/` | Mol Biol Rep 2023 PDF; Annals 2025 manuscript | Reference corpus; source for prompt extraction |
 | `README.md` | PMID 36583780, DOI 10.65649/yx9sn772 | Public quickstart |
@@ -1510,7 +1510,7 @@ Where scientific references are baked into the application.
 | Project | Path | Relationship to DrJaba |
 |---------|------|------------------------|
 | **longevity.ge** | `/home/jaba/web/longevity/` | OJS (PKP) scientific journal platform for longevity publications; shared audience |
-| **CDATA (Cell-DT simulator)** | `~/Desktop/CDATA/` | Scientific foundation of DrJaba; computational validation (R²=0.84) of centriole-damage accumulation model; candidate for DrJaba patient-facing digital-twin feature |
+| **CEDAR (Cell-DT simulator)** | `~/Desktop/CEDAR/` | Scientific foundation of DrJaba; computational validation (R²=0.84) of centriole-damage accumulation model; candidate for DrJaba patient-facing digital-twin feature |
 | **AIM** (integrative medicine assistant) | `~/Desktop/AIM/` | Shared DeepSeek infrastructure (`~/.aim_env → DEEPSEEK_API_KEY`, `~/Desktop/AIM/llm.py`); ecosystem rules in `~/Desktop/AIM/CLAUDE.md` |
 | **monetaria** | ecosystem | Related project (finance/monetization tooling) |
 | **ksystem** | ecosystem | Lexicon / multilingual articles on 8 languages |
@@ -1539,7 +1539,7 @@ Where scientific references are baked into the application.
 
 ## 1. Scientific validation gaps
 
-### 1.1 CDATA has no wet-lab rescue data yet
+### 1.1 CEDAR has no wet-lab rescue data yet
 
 - **Problem**: The centerpiece falsifiable prediction — that transplanting a young (low-damage) centriole into an aged stem cell partially rescues ciliogenesis / spindle fidelity / division rate — has **not been tested in a wet lab**. Only computational validation exists (Cell-DT digital twin, R² = 0.84 against empirical aging markers).
 - **Implication**: all investor/grant pitches must be careful to distinguish "theory with computational support" from "empirically validated therapy."
@@ -1548,19 +1548,19 @@ Where scientific references are baked into the application.
 ### 1.2 Selective retention — universality not established
 
 - **Problem**: Selective retention of the older mother centriole by the renewed stem cell is empirically observed in *several* systems (notably fly male germline stem cells). Whether it is universal across all metazoan lineages with asymmetric division is not proven.
-- **Implication**: CDATA as formulated assumes near-universal selective retention; significant deviation in mammalian lineages of clinical interest would weaken the therapeutic argument.
+- **Implication**: CEDAR as formulated assumes near-universal selective retention; significant deviation in mammalian lineages of clinical interest would weaken the therapeutic argument.
 - **Resolution path**: systematic literature review across human / mouse stem-cell lineages; collaboration with a centriole-biology lab (see STATE.md P1 advisor outreach).
 
 ### 1.3 "No repair" axiom
 
-- **Problem**: CDATA assumes centrioles lack protein-turnover / repair pathways. If a centriolar-protein repair pathway is discovered, the monotone-damage axiom fails and the model needs revision.
+- **Problem**: CEDAR assumes centrioles lack protein-turnover / repair pathways. If a centriolar-protein repair pathway is discovered, the monotone-damage axiom fails and the model needs revision.
 - **Resolution path**: ongoing — advisory board membership should include someone who tracks centrosomal / PCM turnover literature.
 
 ### 1.4 Annals of Rejuvenation Science 2025 is not PubMed-indexed
 
-- **Problem**: The full CDATA theory paper (DOI 10.65649/yx9sn772) appears in a venue that is not PubMed-indexed. This is a credibility-signal gap when addressing investors / grant reviewers used to PubMed as a minimum filter.
+- **Problem**: The full CEDAR theory paper (DOI 10.65649/yx9sn772) appears in a venue that is not PubMed-indexed. This is a credibility-signal gap when addressing investors / grant reviewers used to PubMed as a minimum filter.
 - **Mitigation**: (a) primary citation in public copy remains Mol Biol Rep 2023 (PMID 36583780 — Springer, peer-reviewed, PubMed-indexed); (b) the Annals paper is self-archived on ResearchGate for open access.
-- **Resolution path**: target submission of an expanded CDATA review to a PubMed-indexed venue as part of Phase 2.
+- **Resolution path**: target submission of an expanded CEDAR review to a PubMed-indexed venue as part of Phase 2.
 
 ---
 
@@ -1603,7 +1603,7 @@ Where scientific references are baked into the application.
 
 ### 3.6 Digital-twin patient feature
 
-- **Problem**: CDATA Cell-DT exists externally (`~/Desktop/CDATA/`). Integrating it as a DrJaba patient-facing feature (lifestyle + lab values → trajectory) is a proposed P4 enhancement — no implementation.
+- **Problem**: CEDAR Cell-DT exists externally (`~/Desktop/CEDAR/`). Integrating it as a DrJaba patient-facing feature (lifestyle + lab values → trajectory) is a proposed P4 enhancement — no implementation.
 
 ### 3.7 Public fundraising tracker
 
@@ -1630,7 +1630,7 @@ Where scientific references are baked into the application.
 ### 4.2 FDA SaMD classification (US)
 
 - **Current stance**: platform is not a medical device (Software as a Medical Device). This holds only if the AI does not provide individualized treatment recommendations or diagnoses.
-- **Risk**: feature creep (e.g. adding the CDATA biomarker panel or patient digital twin from §3.6) could cross into SaMD territory and require premarket clearance.
+- **Risk**: feature creep (e.g. adding the CEDAR biomarker panel or patient digital twin from §3.6) could cross into SaMD territory and require premarket clearance.
 
 ### 4.3 "Centriole replacement therapy" marketing language
 
@@ -1654,7 +1654,7 @@ Where scientific references are baked into the application.
 |------|-----------|--------|--------------------|------------------|
 | **Platform revenue misses $500K–$1M over 18 mo** | Low–Medium | High | Multi-channel: grants + VitaDAO + angels + family offices + diaspora + experiment.com | $3M goal forces longer fundraise; lab start date slips past 2027 |
 | **DeepSeek API policy change or pricing shock** | Medium | High | Planned fallback to OpenAI/Claude and long-term Llama (§3.5 — not yet wired) | Chat outage until fallback ships |
-| **Competitor dominance (Sinclair, Attia, Huberman, Bryan Johnson)** | High | Medium | Narrow CDATA specialization + founder's scientist-practitioner identity + Russian-speaking audience beachhead | Longer payback on marketing; slower CAC improvement |
+| **Competitor dominance (Sinclair, Attia, Huberman, Bryan Johnson)** | High | Medium | Narrow CEDAR specialization + founder's scientist-practitioner identity + Russian-speaking audience beachhead | Longer payback on marketing; slower CAC improvement |
 | **Scientific Advisor recruitment fails** | Medium | High | 8 candidates + letter templates prepared; Conboy+Zwaka first | Credibility gap in grant apps; advisor-approved protocol timelines slip |
 | **XPRIZE Healthspan rejection** | Medium | Medium | 6 grant sources in parallel (`docs/grant-strategy.md`) | Diversification holds; no single-point-of-failure |
 | **"Место Силы" brand confusion at launch** | Medium | Medium | Tracked as P1 — either ship PDFs or strip mentions | Trust erosion on product day |
@@ -1665,7 +1665,7 @@ Where scientific references are baked into the application.
 | **Founder key-person risk** | Medium | Very High | SAB recruitment + team hire plan in CONCEPT | Entire project has founder dependency until team ≥3 |
 | **Legal claim: AI gave "medical advice"** | Low | High | Mandatory disclaimer + hardcoded prompt + professional liability insurance (CONCEPT) | Litigation cost + brand damage |
 | **Grant bureaucracy: Free University of Tbilisi eligibility for Horizon Europe** | Medium | Medium | Verify before submission (STATE.md P2); GNSF is Georgian-native backup | Europe path narrows |
-| **Negative press around CDATA** | Low | Medium | Peer-reviewed Mol Biol Rep 2023 anchor; open-access papers on ResearchGate | Reputation hit; recoverable |
+| **Negative press around CEDAR** | Low | Medium | Peer-reviewed Mol Biol Rep 2023 anchor; open-access papers on ResearchGate | Reputation hit; recoverable |
 
 ---
 

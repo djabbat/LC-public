@@ -1,4 +1,4 @@
-# Review of CDATA
+# Review of CEDAR
 
 ## Verdict
 REVISE_MAJOR
@@ -35,7 +35,7 @@ REVISE_MAJOR
 
 3. **file:CONCEPT.md** — Purge the HTML comment `<!-- REF_AUDIT_2026-05-08: FABRICATION CLEANUP applied -->` and all [PMID_REMOVED]/[pre-print placeholder] markers. Replace with real citations or remove.
 
-4. **file:CONCEPT.md** — The "FABRICATION CLEANUP" backstory must not appear in any grant submission. Rewrite the `CDATA/CONCEPT.md` header to remove audit trail commentary; keep only scholarly content.
+4. **file:CONCEPT.md** — The "FABRICATION CLEANUP" backstory must not appear in any grant submission. Rewrite the `CEDAR/CONCEPT.md` header to remove audit trail commentary; keep only scholarly content.
 
 5. **file:PARAMETERS.md** — Update tissue-specific `nu` values (isc_nu=70, muscle_nu=4, neural_nu=2) from literature priors to post-MCMC posteriors, with annotation "Round-7 MCMC posterior" as done for α_HSC. (See STATE.md L1 residual.)
 

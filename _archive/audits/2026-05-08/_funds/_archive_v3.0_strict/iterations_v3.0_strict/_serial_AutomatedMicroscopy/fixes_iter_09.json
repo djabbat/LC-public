@@ -27,7 +27,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics not captured.\n3. **Environmental stability:** ±0.5°C, ±0.5% CO₂; excursions beyond these limits may affect results.\n4. **No physical sample manipulation:** Media changes are human-performed, introducing variability.\n5. **Single-field-of-view only:** Spatial heterogeneity not addressed.\n6. **AI model generalizability:** Trained on CDATA-class protocols; applicability to other assays not tested.\n7. **Cost estimate:** $4,500 BOM may vary with component availability and shipping.\n8. **Replication:** Independent replication by another lab not yet performed."
+    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics not captured.\n3. **Environmental stability:** ±0.5°C, ±0.5% CO₂; excursions beyond these limits may affect results.\n4. **No physical sample manipulation:** Media changes are human-performed, introducing variability.\n5. **Single-field-of-view only:** Spatial heterogeneity not addressed.\n6. **AI model generalizability:** Trained on CEDAR-class protocols; applicability to other assays not tested.\n7. **Cost estimate:** $4,500 BOM may vary with component availability and shipping.\n8. **Replication:** Independent replication by another lab not yet performed."
   },
   {
     "file": "/CONCEPT.md",

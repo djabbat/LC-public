@@ -3,7 +3,7 @@
     "file": "CONCEPT.md",
     "action": "insert_after_line",
     "line_anchor": "## Primary use case",
-    "body": "\n\n### Sample size calculation for CDATA experiment\n\n**Primary endpoint:** Concordance between AI-operated and human-operated microscopy (Cohen's κ).\n\n**Parameters:**\n- H₀: κ ≤ 0.70 (poor agreement)\n- H₁: κ ≥ 0.85 (substantial agreement)\n- α = 0.05 (two-sided)\n- Power = 0.80\n- Expected κ under H₁ = 0.85, σ = 0.15 (based on pilot data, placeholder)\n\n**Formula:** n = (Z_α/2 + Z_β)² · σ² / δ²\n- Z_α/2 = 1.96, Z_β = 0.84\n- δ = 0.85 - 0.70 = 0.15\n- n = (1.96 + 0.84)² · (0.15)² / (0.15)² = 7.84 ≈ 8 per group (placeholder, to be updated with actual σ)\n\n**Contamination rate:** H₀: contamination ≥ 0.03 (3% of wells). Sample size TBD pending pilot data (placeholder)."
+    "body": "\n\n### Sample size calculation for CEDAR experiment\n\n**Primary endpoint:** Concordance between AI-operated and human-operated microscopy (Cohen's κ).\n\n**Parameters:**\n- H₀: κ ≤ 0.70 (poor agreement)\n- H₁: κ ≥ 0.85 (substantial agreement)\n- α = 0.05 (two-sided)\n- Power = 0.80\n- Expected κ under H₁ = 0.85, σ = 0.15 (based on pilot data, placeholder)\n\n**Formula:** n = (Z_α/2 + Z_β)² · σ² / δ²\n- Z_α/2 = 1.96, Z_β = 0.84\n- δ = 0.85 - 0.70 = 0.15\n- n = (1.96 + 0.84)² · (0.15)² / (0.15)² = 7.84 ≈ 8 per group (placeholder, to be updated with actual σ)\n\n**Contamination rate:** H₀: contamination ≥ 0.03 (3% of wells). Sample size TBD pending pilot data (placeholder)."
   },
   {
     "file": "CONCEPT.md",
@@ -15,13 +15,13 @@
     "file": "CONCEPT.md",
     "action": "insert_after_line",
     "line_anchor": "## Limitations",
-    "body": "\n\n1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be missed.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; tighter tolerances require commercial incubator.\n4. **No physical manipulation:** Media changes, drug additions must be human-performed; no on-platform liquid handling.\n5. **AI generalizability:** Claude Code agent trained on CDATA-class protocols; performance on other cell types or stains not yet tested.\n6. **Stage accuracy:** ±2 µm (placeholder, to be confirmed by calibration); may limit high-resolution colocalization studies.\n7. **Camera sensitivity:** Blackfly S sensor may be insufficient for low-light fluorescence; alternative (sCMOS) not budgeted.\n8. **Long-term drift:** Stepper motors may accumulate positional error over weeks; homing frequency TBD."
+    "body": "\n\n1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be missed.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; tighter tolerances require commercial incubator.\n4. **No physical manipulation:** Media changes, drug additions must be human-performed; no on-platform liquid handling.\n5. **AI generalizability:** Claude Code agent trained on CEDAR-class protocols; performance on other cell types or stains not yet tested.\n6. **Stage accuracy:** ±2 µm (placeholder, to be confirmed by calibration); may limit high-resolution colocalization studies.\n7. **Camera sensitivity:** Blackfly S sensor may be insufficient for low-light fluorescence; alternative (sCMOS) not budgeted.\n8. **Long-term drift:** Stepper motors may accumulate positional error over weeks; homing frequency TBD."
   },
   {
     "file": "EVIDENCE.md",
     "action": "insert_after_line",
     "line_anchor": "## Limitations & Known Biases",
-    "body": "\n\n**Unified limitations (see also CONCEPT.md):**\n1. Sample stability ≥3 weeks not validated beyond CDATA.\n2. Imaging frequency ≤2/hour misses fast dynamics.\n3. Environmental tolerances ±0.5°C/±0.5% CO₂; not suitable for sensitive primary cells.\n4. No on-platform liquid handling; media changes human-performed.\n5. AI generalizability limited to CDATA-class protocols.\n6. Stage accuracy ±2 µm (placeholder).\n7. Camera sensitivity may limit low-light applications.\n8. Long-term stepper drift requires further characterization."
+    "body": "\n\n**Unified limitations (see also CONCEPT.md):**\n1. Sample stability ≥3 weeks not validated beyond CEDAR.\n2. Imaging frequency ≤2/hour misses fast dynamics.\n3. Environmental tolerances ±0.5°C/±0.5% CO₂; not suitable for sensitive primary cells.\n4. No on-platform liquid handling; media changes human-performed.\n5. AI generalizability limited to CEDAR-class protocols.\n6. Stage accuracy ±2 µm (placeholder).\n7. Camera sensitivity may limit low-light applications.\n8. Long-term stepper drift requires further characterization."
   },
   {
     "file": "EVIDENCE.md",

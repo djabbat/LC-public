@@ -22,7 +22,7 @@
 
 2. **Pre-registration plan (OSF placeholder + date)** — ✗ Есть placeholder `osf.io/TBD` и дата 2026-06-01. Формально план есть, но идентификатор не указан. Это borderline. В сочетании с другими TBD — скорее невыполнение, т.к. требуется конкретный placeholder, а не `TBD`.
 
-3. **Sample size calc (power analysis)** — ✓ Частично. Есть power analysis для CDATA (n=30/группа, Cohen's d=0.75, α=0.05, power=0.80) и для M1 (N=286). Для contamination — N=TBD. Пункт выполнен не полностью.
+3. **Sample size calc (power analysis)** — ✓ Частично. Есть power analysis для CEDAR (n=30/группа, Cohen's d=0.75, α=0.05, power=0.80) и для M1 (N=286). Для contamination — N=TBD. Пункт выполнен не полностью.
 
 4. **Risk matrix ≥5 rows** — ✓ В CONCEPT.md 6 строк, в EVIDENCE.md тоже ≥5. Выполнено.
 

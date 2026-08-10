@@ -20,7 +20,6 @@
 - **Оогенез:** центриоли элиминируются → сброс hardware → тотипотентность зиготы
 - **Сперматогенез:** центриоли сохраняются через мейоз, дуплицируются дважды, ремоделируются → служат seeds для de novo сборки в зиготе
 - При оплодотворении: Eliminate (ооцит) + Rebuild (de novo из спермальных seeds) происходят одновременно
-- **Природа уже реализует триаду CEDAR: Eliminate → Reprogram → Rebuild**
 
 ### Centriculum — микротрубочковый фильтр и возраст-зависимая деградация (Maheshwari & Cohen-Fix 2023/2026)
 
@@ -35,7 +34,6 @@
 
 ---
 
-
 ## Phylogenetic Analysis: Centriole Elimination Across Mammals (2026-08-03)
 
 > **Finding:** Systematic review of 15+ mammalian species reveals three distinct patterns of centriole elimination, refuting the critique that placental mammals universally lost this mechanism.
@@ -49,7 +47,6 @@
 **Key reference:** Uzbekov R, Avidor-Reiss T (2024) The proximal centriole age in spermatozoa determines its fate in the zygote. Open Biol 14:230458. PMID 38442864. [Older centrioles preferentially eliminated — age-dependent selection.]
 
 **Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
-
 
 ## The Centriole as a Morphogenetic Lock
 
@@ -70,7 +67,6 @@ A critic might argue: centriole elimination drives differentiation (Renzova 2018
 The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
-
 
 ## 0. Hardware/Software Distinction (Jaba Tqemaladze, 2026-07-08)
 
@@ -104,7 +100,7 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
    **Θ-индекс — функциональность центриоли, НЕ статус дифференцировки.** Энтропия и дифференцировка — две разные оси. Θ измеряет, насколько хорошо центриоль выполняет свои функции (центросома + цилия). Status дифференцировки определяют генные сети (GRN). Высокий Θ = центриоль плохо работает → старение. GRN = какие сети включены → дифференцировка.
 
-   **Три шага — Eliminate → Reprogram → Rebuild.** Как в природе. (1) ELIMINATE — удаление старой центриоли (Θ → 0). (2) REPROGRAM — OSKM или DUX4+TPRX1. (3) REBUILD — de novo сборка (PLK4, SAS-6, STIL, CPAP). **De novo центриоль — ИНСТРУМЕНТ ПЕРЕКЛЮЧЕНИЯ генных сетей.** С её помощью отключаются сети, поддерживавшие нетотипотентное состояние, и включаются сети, поддерживающие тотипотентное состояние дифференцировки — до следующего переключения. Тотипотентность — такое же состояние дифференцировки, как и любое другое, просто с другим набором включённых генных сетей.
+   **Три шага — Eliminate → Reprogram → Rebuild.** Как в природе. (1) ELIMINATE — удаление старой центриоли (Θ → 0). (2) REPROGRAM — OSKM или DUX4 + KDM4D + DPPA3. (3) REBUILD — de novo сборка (PLK4, SAS-6, STIL, CPAP). **De novo центриоль — ИНСТРУМЕНТ ПЕРЕКЛЮЧЕНИЯ генных сетей.** С её помощью отключаются сети, поддерживавшие нетотипотентное состояние, и включаются сети, поддерживающие тотипотентное состояние дифференцировки — до следующего переключения. Тотипотентность — такое же состояние дифференцировки, как и любое другое, просто с другим набором включённых генных сетей.
 
 **Сперматозоид приносит затравки, не матрицы.** Центриоли сперматозоида могут организовать центросому, но не являются темплатами для новых центриолей. De novo сборка в бластомерах происходит с использованием этих затравок, но строит НОВЫЕ центриоли, свободные от эпигенетического груза.
 
@@ -120,7 +116,7 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
    **Состояние взрослых стволовых клеток — асимметрия DID и асимметрия стабильности.** Две центриоли различаются по двум параметрам: (1) запас DID (одна N, вторая 0); (2) степень термодинамической деградации (старая центриоль более повреждена). При асимметричном делении дочерняя клетка с DID=N сохраняет стволовость, но получает всё более нестабильную центриоль. Рано или поздно нестабильность достигает порога — центриоль теряет способность удерживать DID → функциональное истощение.
 
-4. **Старение организма — цена за истинную дифференциацию.** Необратимая дифференцировка = необратимое закрытие одних генных сетей (GRN) + открытие других. **Наивные клетки: GRN открыты** — бивалентный хроматин (H3K4me3 + H3K27me3), гены доступны → TLSC/hTBLC работают без центриолей. **Сома: GRN закрыты** — H3K9me3, DNA-метилирование, LAD-секвестрация. Центриоль — физический участник поддержания закрытых GRN (CAMC, NANOG-секвестрация, cilium-сигналинг). Элиминация центриоли убирает физический якорь закрытия — сети могут быть открыты DUX4+TPRX1 и остаться открытыми.
+4. **Старение организма — цена за истинную дифференциацию.** Необратимая дифференцировка = необратимое закрытие одних генных сетей (GRN) + открытие других. **Наивные клетки: GRN открыты** — бивалентный хроматин (H3K4me3 + H3K27me3), гены доступны → TLSC/hTBLC работают без центриолей. **Сома: GRN закрыты** — H3K9me3, DNA-метилирование, LAD-секвестрация. Центриоль — физический участник поддержания закрытых GRN (CAMC, NANOG-секвестрация, cilium-сигналинг). Элиминация центриоли убирает физический якорь закрытия — сети могут быть открыты DUX4 + KDM4D + DPPA3 и остаться открытыми.
 
 7. **CCP1-6 обратимы, но не могут полностью сбросить центриоль.** Частичный ремонт ≠ полный сброс. Но центриоль можно элиминировать и создать de novo — как в ооцитах (Polo-зависимый механизм) и как в соме C. elegans (механизм неизвестен). Три стадии: maintenance (ANA1/CEP295, Polo/PCM) → priming (убиквитинирование? неизвестно в соме) → execution (протеасома? микротрубочковые силы?). См. Kalbfuss & Gönczy 2023 (PMID 37963546).
 
@@ -134,7 +130,6 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 12. **Maturity sensor — альтернативная модель.** Центриоль = датчик зрелости, не замок. Потеря центриоли снижает порог дифф-ки неспецифически. Обе модели (hardware reset и maturity sensor) предсказывают повышение пластичности после элиминации — трудноразличимы без специальных тестов. Различающие эксперименты: (а) ядерный NANOG — если ↑ → активный регулятор; (б) элиминация без факторов — если хаотичная активация ZGA → maturity sensor; (в) IFT88 shRNA — если потеря реснички имитирует потерю центриоли → эффект через cilium. Модели не взаимоисключающие: центриоль может быть и сенсором (через cilium), и хабом (через NANOG/CAMC). **Примечание (аудит 2026-07-19):** Lindhout 2021 (PMID 33835529) показывает, что потеря центриолей *нарушает* развитие аксона в нейронах — не подтверждает «maturity sensor → пластичность» гипотезу.
 
 **Эпигеном = software.** Перепрограммируем факторами Яманаки, но неспособен исправить hardware-дефекты. Это объясняет, почему частичное репрограммирование омолаживает метилом, но не восстанавливает полную репликативную способность: центриолярный hardware не заменён.
-
 
 ## 0.1. Totipotency vs Pluripotency: Hardware + Software Reset (2026-07-12)
 
@@ -151,13 +146,12 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 **MCARA prediction (диапазонное, 2026-07-17):**
 1. Centriole elimination + OSKM → 1.5–10× more efficient pluripotency (range depending on cell type, elimination method, and p53/p38 suppression), possibly intermediate state between pluri- and totipotency
-2. Centriole elimination + totipotent factors (DUX4 + TPRX1) → possibly true totipotency (MERVL+, Zscan4+, CDX2+ trophectoderm)
+2. Centriole elimination + totipotent factors (DUX4 + KDM4D + DPPA3) → possibly true totipotency (MERVL+, Zscan4+, CDX2+ trophectoderm)
 3. OSKM alone (centriole intact) → pluripotency only, never totipotency — because the hardware lock remains
 
 **Test:** MERVL activation, Zscan4 expression, CDX2+ trophectoderm differentiation capacity.
 
 **Key insight:** Partial reprogramming (OSK) rejuvenates the methylome but fails to restore full replicative capacity. The centriole — hardware that transcription factors cannot reset — may be why.
-
 
 ## 0.2. Centriole as Conditional Entropy Carrier (Stress Integrator)
 
@@ -166,7 +160,6 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 The sinc-MT/KIFC3 pathway (Robichaud 2024, PMID 39266565) — это стресс-ответ, ведущий к cell cycle arrest. Убери стресс — polyE-массивы могут не формироваться, и сенесценс может не наступить несмотря на центриолярный «возраст».
 
 **Это не ослабляет CEDAR:** интегратор, прогрессивно отказывающий при хроническом низкоуровневом стрессе (hTERT + гипоксия), функционально неотличим от автономного счётчика, и экспериментальное предсказание — удаление центриоли повышает эффективность репрограммирования — остаётся идентичным.
-
 
 ## 0.2. Centriole-Specific Kinetic Equations
 
@@ -186,7 +179,6 @@ CAMC(N) = CAMC₀ − λ·N_asym
 S(t) = S₀ + S_max / (1 + e^(−k(t − t½))) − δ·CCP(t)
 ```
 Критический порог `t½` — точка ускорения накопления polyE, потенциально соответствующая onset репликативного сенесценса.
-
 
 ## 0.3. Three Classes of Centriole Elimination Methods: Disentangling Centriole vs CAMC (2026-07-09)
 
@@ -245,7 +237,6 @@ polyE ([E]) растёт, когда стресс (k_E) превышает ём�
 
 **Гипотеза:** Активность TTLL (глутамилаз) растёт с репликативным стрессом; активность CCP (деглутамилаз) падает с возрастом. Parameters β, λ, η(t), δ не откалиброваны — уравнения представляют тестируемые предсказания.
 
-
 ## 0.3. Bradford Hill Analysis (Causal Inference)
 
 | Критерий | Оценка | Обоснование |
@@ -264,11 +255,9 @@ polyE ([E]) растёт, когда стресс (k_E) превышает ём�
 
 ---
 
-
 ## 1. Philosophical and Methodological Premises
 
 MCARA is built upon the principles of **mechanism pluralism** and **strict falsifiability**. It rejects the reductionist search for a single "root cause" of aging, recognizing that multiple, partially independent damage accumulation processes can reach critical thresholds in different tissues at different times. The key methodological tenet is the prohibition of post-hoc adjustment of counter weights (`w_i`). All weights and reference scales (`n_i*`, `τ_i`) must be fixed *a priori*, based on independent biological knowledge, prior to model validation on data. This transforms MCARA from a curve-fitting tool into a set of testable predictions.
-
 
 ## 2. Axiomatic Foundation
 
@@ -283,7 +272,6 @@ Here `n_i*` (reference number of divisions) and `τ_i` (reference time) are cons
 **Axiom M4 (Falsifiability as a First-Order Principle).** Any statement deductively derived from MCARA must be accompanied by a description of a practically feasible experimental test whose outcome could refute that statement. The existence of such tests is a mandatory attribute of a complete theoretical construct within MCARA.
 
 **Axiom M5 (Time-Driven Entropy + Asymmetric CAMC — Jaba Tqemaladze, 2026-07-05).** Centrioles accumulate entropy with **time**, like all material structures. **Asymmetric** divisions remodel the Centrosome-Associated Memory Complex (CAMC). One inducer of irreversible differentiation detaches per asymmetric division; symmetric divisions do not alter CAMC. Two independent processes: (1) time → entropy (passive, universal), (2) asymmetric division → CAMC (active, programmatic). Full specification: CEDAR/THEORY.md.
-
 
 ## 3. Formal Definitions
 
@@ -337,7 +325,6 @@ These thresholds are **provisional** and will be refined during the calibration 
 A cell or tissue niche transitions into a state of senescence, apoptosis, or pronounced dysfunction upon fulfillment of one of two conditions:
 1. `L_tissue(n, t) > L_critical(tissue)`, where `L_critical` is a tissue-specific threshold for integrated burden.
 2. `∃ i : D_i(n, t) > D_critical(i, tissue)`, where `D_critical` is a tissue-specific threshold for a specific counter (e.g., critical telomere shortening).
-
 
 ## 4. Canonical Set of MCARA Counters (v5.0 — 4 counters)
 
@@ -425,7 +412,6 @@ A systematic review and meta-analysis (PROSPERO **CRD42026218473**, n=14 studies
 
 See manuscripts "Stem-Cell-Centric Multi-Counter Theory of Organismal Aging" and "Epigenomic Rejuvenation Without Functional Restoration" (both NOT YET PUBLISHED, draft 2026-05-10).
 
-
 ## 5. Coupling Matrix Between Counters (Γ)
 
 The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is the rate at which accumulated damage in counter `j` accelerates damage accumulation in counter `i`.
@@ -440,7 +426,6 @@ The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is 
 
 **Key Rule:** Elements `Γ_{ij}` (and consequently `γ_i` in simplified form) must be **measured** in controlled experiments (see MCARA Test 2), not be free parameters for fitting. This separates causal inference from correlational analysis.
 
-
 ## 6. Predictions of MCARA Theory
 
 1. **Heterogeneity of Dominant Counters:** In different tissues, the same counter will have a different weight `w_i`. For example, in the liver (`low division rate`), the weight of mitochondrial and epigenetic counters will be higher than that of the telomere counter.
@@ -448,7 +433,6 @@ The matrix `Γ ∈ ℝ^{k×k}` defines directed influence: element `Γ_{ij}` is 
 3. **Synergy of Targeted Interventions:** Combined intervention on several counters with high `w_i` in a given tissue will yield a super-additive effect on healthspan extension, whereas intervention on irrelevant counters will not.
 4. **Existence of "Uncoupled" Tissues:** Tissues can be identified where the total burden `L_tissue` remains low, despite high values of one counter (`D_i`), due to compensatorily low weights of other counters.
 5. **Prediction of Aging Trajectories:** Given known *a priori* `w_i(tissue)`, `n_i*`, `τ_i` and initial `D_i₀`, the model predicts the trajectory of burden accumulation `L_tissue(t)` for each tissue, which can be verified in longitudinal studies.
-
 
 ## MCARA Phase III Update (2026-05-15)
 
@@ -462,3 +446,21 @@ CONCEPT.md replaced with MCARA Phase III v2.0 corrected concept.
 
 **Source code:** [github.com/djabbat/LC](https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCARA) (branch `mcaoa-v3.2`, в `MCARA/`)  
 **Preprint:** DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
+
+**LERR — Ladder, Eliminate, Reprogram, Rebuild.**
+
+**Step 1 (Ladder).** Cut the damage load first: slow the counter, push old centrioles into differentiating daughters, remove only the mother centriole, keep spare young ones.
+
+**Step 2 (Eliminate).** Take out the old centriole. Restore telomeres. Wipe the epigenome. Rescue mitochondria.
+
+**Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
+
+**Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
+**Step 1 (Ladder).** Де-риск перед элиминацией по текущим данным: замедлить счётчик (NAC-антиоксидант; обратимые PTM: TTL-ре-тирозинирование, CCP5/6-деглутамилирование); сегрегировать повреждения асимметричным наследованием материнской центриоли в дифференцирующееся потомство (Yamashita, 2007; Royall, 2023 — человеческие NPC); геми-элиминировать только материнскую центриоль (лазер/PROTAC), сохраняя контроль дупликации и избегая p53-зависимого G1-ареста (Meitinger, 2016); кондиционировать клетку (запасные PLK4-центриоли, синхронизация G1/S, протеостаз); отобрать наименее повреждённый пул (FACS по низкому Δ2/полиGlu).
+**Step 2 (Eliminate).** Убрать старую повреждённую центриоль; восстановить теломеры (теломераза/ZSCAN4 через H3K14ac/H3K18ac; Meltzer, 2024); стереть эпигенетические метки (OSK/TET1-TET2-TDG; Lu, 2020 — частично, остаётся линейная память); отобрать здоровые митохондрии (PINK1-зависимая митофагия; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3 — DUX4 открывает cleavage-стадийные гены (Hendrickson, 2017), KDM4D снимает H3K9me3-барьер репрограммирования, DPPA3 (Stella) стабилизирует тотипотентное (2C-подобное) состояние.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) после полной элиминации (Khodjakov, 2002; Uetake, 2007); контроль геометрии (9-кратная симметрия, триплеты, длина); получить безопасные молодые взрослые стволовые клетки (проверка кариотипа, восстановление p53).
+**Step 1 (Ladder).** Де-риск перед элиминацией: замедлить счётчик, сегрегировать повреждения, геми-элиминировать материнскую центриоль, кондиционировать клетку, отобрать наименее повреждённый пул.
+**Step 2 (Eliminate).** Убрать старую центриоль; восстановить теломеры; стереть эпигенетические метки; отобрать здоровые митохондрии.
+**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo; получить безопасные молодые взрослые стволовые клетки.

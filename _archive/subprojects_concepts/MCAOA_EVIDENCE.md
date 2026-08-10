@@ -43,9 +43,9 @@
 
 *Data generated within the LC project for MCAOA concept validation.*
 
-1. **Sobol sensitivity analysis of CDATA v5.1:**
+1. **Sobol sensitivity analysis of CEDAR v5.1:**
  * File: `data/mcoa/sensitivity/sobol_results_2026-04-15.csv`
- * Method: Global sensitivity analysis (Sobol method) for the CDATA model.
+ * Method: Global sensitivity analysis (Sobol method) for the CEDAR model.
  * Sample: N = 16384.
  * Key result: First-order (S1) for parameter `α_cent` (divisions) is 0.68 ± 0.05, for `β_cent` (time) is 0.22 ± 0.04 in epithelial tissue simulation. Confirms dominance of divisions, but significant time contribution.
  * Status: Verified, reproducible.
@@ -72,8 +72,8 @@
  - At epigenetic_rate = 0: alpha S1 → 0.362 (dominant)
  - **Centriolar group dominates epigenetic group: 0.471 vs 0.470**
  * **Resolution:** Individual epigenetic_rate dominance is explained by linear additivity + parameter correlation (alpha drives damage which drives ep_stress_k). At the group level, centriolar mechanics **dominate**.
- * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CDATA/docs/CDATA_REFORMULATION_2026-04-26.md`. NMC-2 closed.
- * **Source:** `~/Desktop/LC/CDATA/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
+ * **Consequence:** Counter #1 (CP) retains canonical position, reformulated as «structural age-tracker» per `CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md`. NMC-2 closed.
+ * **Source:** `~/Desktop/LC/CEDAR/scripts/cdata_ablation_sobol.py` + ablation log 2026-04-26.
 
 3. **Weak experimental basis for the connection matrix Γ.**
  * **Evidence:** Most proposed connections between counters (e.g., `Γ_{cent, epigenetic}`) are based on indirect correlations or in vitro studies, rather than direct causal in vivo experiments.

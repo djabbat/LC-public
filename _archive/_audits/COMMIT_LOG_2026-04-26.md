@@ -23,7 +23,7 @@
 1. **Smith J. et al. 2025 Nat Commun 16:4501 — FLAGGED** (DOI 10.1038/s41467-025-65974-8 не разрешается, single-letter author = red flag fabrication). Помечено в EVIDENCE.md как FLAGGED, удалено из доказательной базы до верификации.
 2. **DOI 10.1016/j.dcn.2021.100971 — REMOVED** (hypothetical citation, признанный авторами; недопустим в EVIDENCE.md).
 
-### CDATA/EVIDENCE.md — 1 DOI correction
+### CEDAR/EVIDENCE.md — 1 DOI correction
 
 | Утверждение | Старый DOI | Новый DOI | Источник |
 |---|---|---|---|
@@ -33,15 +33,15 @@
 
 ## Не применено (требует ручного вмешательства)
 
-### CDATA Sobol-парадокс (C1)
+### CEDAR Sobol-парадокс (C1)
 
-S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигенетического признака улучшает R². Это формальная internal contradiction центрального тезиса CDATA. **Не fixable через citation correction** — требует:
+S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигенетического признака улучшает R². Это формальная internal contradiction центрального тезиса CEDAR. **Не fixable через citation correction** — требует:
 - Counter-factual analysis с only-centriolar features
 - LOO-CV bias correction (-0.093)
-- Reformulation core CDATA hypothesis
+- Reformulation core CEDAR hypothesis
 - Возможно reset gипотезы
 
-Уже adressed в `~/Desktop/LC/CDATA/docs/CDATA_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
+Уже adressed в `~/Desktop/LC/CEDAR/docs/CEDAR_REFORMULATION_2026-04-26.md` (rigorous version, не universal cascade). Sobol-парадокс остаётся active concern для Wave 2 (fund-perspective review).
 
 ### HAP — stub state, требует rebuild
 
@@ -65,7 +65,7 @@ S1(epigenetic_rate)=0.403 > S1(alpha_centriolar)=0.224, ablation эпигене�
 
 ## Status
 
-✅ **Citation integrity issues fixed:** 4 BioSense PMIDs, 1 CDATA DOI, 2 Ontogenesis fabrications flagged/removed.
-⏸ **Structural issues queued для Wave 2:** CDATA Sobol-paradox, HAP stub, Ontogenesis pending rebuild, FCLC PATE/audit.
+✅ **Citation integrity issues fixed:** 4 BioSense PMIDs, 1 CEDAR DOI, 2 Ontogenesis fabrications flagged/removed.
+⏸ **Structural issues queued для Wave 2:** CEDAR Sobol-paradox, HAP stub, Ontogenesis pending rebuild, FCLC PATE/audit.
 
 Wave 2 (fund-perspective review) запустится автоматически после получения 2 оставшихся Wave 1 agents (CommonHealth Top+MCAOA+Ze, PhD), применения их corrections, и затем launch Wave 2 agents на исправленной версии.

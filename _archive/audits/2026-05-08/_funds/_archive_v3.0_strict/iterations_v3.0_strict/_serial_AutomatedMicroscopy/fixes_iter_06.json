@@ -27,7 +27,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be missed.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; extreme conditions not tested.\n4. **No physical manipulation:** Media changes and reagent additions are human-performed; full automation not achieved.\n5. **Generalizability:** Validated only for CDATA-class protocols; other assays may require adaptation.\n6. **AI training data:** Model trained on limited dataset; performance on novel cell types or conditions unknown.\n7. **Cost estimate:** $4,500 BOM excludes labor and maintenance; total cost of ownership not assessed.\n8. **Regulatory compliance:** Not intended for clinical use; no FDA/CE marking."
+    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be missed.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; extreme conditions not tested.\n4. **No physical manipulation:** Media changes and reagent additions are human-performed; full automation not achieved.\n5. **Generalizability:** Validated only for CEDAR-class protocols; other assays may require adaptation.\n6. **AI training data:** Model trained on limited dataset; performance on novel cell types or conditions unknown.\n7. **Cost estimate:** $4,500 BOM excludes labor and maintenance; total cost of ownership not assessed.\n8. **Regulatory compliance:** Not intended for clinical use; no FDA/CE marking."
   },
   {
     "file": "/CONCEPT.md",

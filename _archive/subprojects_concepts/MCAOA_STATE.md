@@ -40,7 +40,7 @@ Arm F: Counter #6 (Dicer/Piwi KD)  → piRNA-mediated
 - [x] **Biogerontology (Springer)** — подано 2026-06-03, прошло technical check
 - [ ] Await editorial decision (Biogerontology)
 - [ ] Prepare response to reviewer comments (if any)
-- [ ] Sobol ABL-2 paradox for Counter #1 — close in coordination with CDATA L1
+- [ ] Sobol ABL-2 paradox for Counter #1 — close in coordination with CEDAR L1
 - [ ] Tissue-specific weights calibration against real data HSC/skin/neural
 - [ ] **Stem-Cell-Centric extension:** final TBPR reconciliation, verify VEXAS PMID, JAK/NLRP3 therapeutic refs, formalize D_pi (piRNA counter) kinetics for §4.1 THEORY.md
 - [ ] **Damage Shadow review:** transfer draft to `docs/manuscripts/DAMAGE_SHADOW/`, verify PROSPERO record, add EpigeneticDrift subproject EVIDENCE.md cross-link
@@ -108,7 +108,7 @@ Senior Editor Yamini Dalal: no Reviewing Editor available, invited transfer to R
 NATAGING-P13741 rejected without peer review.
 
 ### 2026-04-19 — Nature Aging submission
-MCAOA v5 submitted to Nature Aging as the flagship meta-theory of LC. Includes Counter #1 (CDATA), and formalizes the general multi-counter architecture.
+MCAOA v5 submitted to Nature Aging as the flagship meta-theory of LC. Includes Counter #1 (CEDAR), and formalizes the general multi-counter architecture.
 
 ---
 

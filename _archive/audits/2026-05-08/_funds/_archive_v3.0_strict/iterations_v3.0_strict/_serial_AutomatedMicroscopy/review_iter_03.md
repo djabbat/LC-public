@@ -25,7 +25,7 @@
    Указан OSF ID `osf.io/TBD` и дата 2026-06-01. **Идентификатор TBD — невалидный placeholder**. Требуется конкретный ID (например, osf.io/abcde).
 
 3. ✗ **Sample size calc (power analysis)**  
-   Для concordance расчёт есть (N=286). Для contamination — TBD. В CONCEPT.md также есть расчёт для CDATA cell division (n=30/group). Однако **расчёт для contamination не завершён**, что нарушает полноту.
+   Для concordance расчёт есть (N=286). Для contamination — TBD. В CONCEPT.md также есть расчёт для CEDAR cell division (n=30/group). Однако **расчёт для contamination не завершён**, что нарушает полноту.
 
 4. ✓ **Risk matrix ≥5 rows**  
    Есть две таблицы: в CONCEPT.md (6 строк) и в EVIDENCE.md (7 строк). Условие выполнено.

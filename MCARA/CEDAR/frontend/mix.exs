@@ -1,4 +1,4 @@
-defmodule CDATAFrontend.MixProject do
+defmodule CEDARFrontend.MixProject do
   use Mix.Project
 
   def project do
@@ -18,7 +18,7 @@ defmodule CDATAFrontend.MixProject do
 
   def application do
     [
-      mod: {CDATAFrontend.Application, []},
+      mod: {CEDARFrontend.Application, []},
       extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end

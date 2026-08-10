@@ -22,7 +22,7 @@
 
 2. **✗ Pre-registration plan (OSF placeholder + date)** — Указан placeholder «osf.io/TBD» и дата 2026-06-01. Реальный ID не создан. План зарегистрирован не будет до исправления. Нарушение: placeholder ≠ plan. Требуется реальный номер до подачи.
 
-3. **✗ Sample size calc (power analysis)** — Есть power analysis для основного endpoint (concordance: n=286), для CDATA эксперимента (n=30 per group, Cohen's d=0.75). Но для contamination endpoint: «N = TBD», design effect = TBD. Также есть «pilot data placeholders». Неполная калькуляция для всех первичных и вторичных endpoint'ов.
+3. **✗ Sample size calc (power analysis)** — Есть power analysis для основного endpoint (concordance: n=286), для CEDAR эксперимента (n=30 per group, Cohen's d=0.75). Но для contamination endpoint: «N = TBD», design effect = TBD. Также есть «pilot data placeholders». Неполная калькуляция для всех первичных и вторичных endpoint'ов.
 
 4. **✓ Risk matrix ≥5 rows** — Присутствует несколько таблиц, содержащих ≥5 строк. Probability и Impact указаны, mitigation есть. Однако в одном месте числовая шкала (1-5) не согласована с другой таблицей (словесная). Счёт как выполненный, но качество среднее.
 
@@ -34,7 +34,7 @@
 
 8. **✗ No fabrication markers** — **Фабрикационные маркеры присутствуют:** «osf.io/TBD», «Repository: TBD», «protocols.io link TBD», «[Author(s), Year, Journal, DOI TBD]», «N = TBD», «DE = TBD», «σ² = TBD», «δ = TBD». Многочисленные TBD в тех местах, где должны быть конкретные данные. Условие нарушено.
 
-9. **✓ Internal consistency core docs** — Методы (концепция AI-operated microscopy) соответствуют целям (сбор данных для CDATA). Теория, evidence, концептуальные документы не противоречат друг другу. Небольшие дублирования (несколько risk matrices, limitations) не нарушают согласованность.
+9. **✓ Internal consistency core docs** — Методы (концепция AI-operated microscopy) соответствуют целям (сбор данных для CEDAR). Теория, evidence, концептуальные документы не противоречат друг другу. Небольшие дублирования (несколько risk matrices, limitations) не нарушают согласованность.
 
 10. **✗ Evidence base depth (≥3 indep refs/claim, sys-review or meta-analysis cited, contradicting results addressed)** — Критически не выполнено.
     - Ключевое утверждение «Low-cost microscope retrofit is feasible»: всего 1 peer-reviewed source (OpenFlexure) + 1 manufacturer datasheet.

@@ -50,10 +50,10 @@
 
 ### P0 (блокирующие)
 
-1. **Отсутствие CLAUDE.md в ключевых подпроектах MCAOA и CDATA.**
- - **Файлы:** `MCAOA/` (нет `MCAOA/CLAUDE.md`), `CDATA/` (нет `CDATA/CLAUDE.md`).
- - **Проблема:** Согласно корневому `CLAUDE.md`, каждый подпроект должен иметь CLAUDE.md. MCAOA и CDATA — центральные компоненты экосистемы, без CLAUDE.md их internal rules не определны.
- - **Исправление:** Создать `MCAOA/CLAUDE.md` и `CDATA/CLAUDE.md` с указанием sources of truth, правилами разработки и связями с экосистемой.
+1. **Отсутствие CLAUDE.md в ключевых подпроектах MCAOA и CEDAR.**
+ - **Файлы:** `MCAOA/` (нет `MCAOA/CLAUDE.md`), `CEDAR/` (нет `CEDAR/CLAUDE.md`).
+ - **Проблема:** Согласно корневому `CLAUDE.md`, каждый подпроект должен иметь CLAUDE.md. MCAOA и CEDAR — центральные компоненты экосистемы, без CLAUDE.md их internal rules не определны.
+ - **Исправление:** Создать `MCAOA/CLAUDE.md` и `CEDAR/CLAUDE.md` с указанием sources of truth, правилами разработки и связями с экосистемой.
 
 2. **Отсутствие CONCEPT.md в Ontogenesis.**
  - **Файлы:** `Ontogenesis/` (пустая структура — только data/, scripts/, target).
@@ -75,7 +75,7 @@
 ### P2 (косметические)
 
 5. **Наличие файла `CORRECTIONS_2026-04-22.md`, на который ссылаются многие CONCEPT.md, но он не включён в контекст и, возможно, неполон.**
- - **Файлы:** `_archive/audits/CORRECTIONS_2026-04-22.md` (упоминается в CLAUDE.md, CONCEPT.md MCAOA, CDATA и др.).
+ - **Файлы:** `_archive/audits/CORRECTIONS_2026-04-22.md` (упоминается в CLAUDE.md, CONCEPT.md MCAOA, CEDAR и др.).
  - **Проблема:** Файл не виден в текущем bundle — невозможно проверить, все ли исправления учтены.
  - **Исправление:** Для аудита запросить содержимое этого файла.
 
@@ -90,10 +90,10 @@
 
 ### P0 (блокирующие)
 
-1. **CDATA — статус inconclusive, но в MAP.md и MCAOA он представлен как Counter #1.**
- - **Файлы:** `CDATA/CONCEPT.md` («С2 подтверждена» — противоречит «inconclusive» в корневом CONCEPT.md), `MCAOA/CONCEPT.md` (§3.1 говорит о CDATA как о Counter #1), `MAP.md` (§2 — CDATA status inconclusive, но MCAOA ссылается на него как на счётчик).
- - **Проблема:** Корневой CONCEPT.md v5.6 объявляет CDATA inconclusive (Sobol p=0.12), но в MCAOA/CONCEPT.md написано «Counter #1 (Centriolar)» без оговорки о неопределённости. Это создаёт ложное впечатление подтверждённости.
- - **Исправление:** MCAOA/CONCEPT.md должен явно указывать «Counter #1 candidate (status inconclusive)» с ссылкой на CDATA OPEN_PROBLEMS.
+1. **CEDAR — статус inconclusive, но в MAP.md и MCAOA он представлен как Counter #1.**
+ - **Файлы:** `CEDAR/CONCEPT.md` («С2 подтверждена» — противоречит «inconclusive» в корневом CONCEPT.md), `MCAOA/CONCEPT.md` (§3.1 говорит о CEDAR как о Counter #1), `MAP.md` (§2 — CEDAR status inconclusive, но MCAOA ссылается на него как на счётчик).
+ - **Проблема:** Корневой CONCEPT.md v5.6 объявляет CEDAR inconclusive (Sobol p=0.12), но в MCAOA/CONCEPT.md написано «Counter #1 (Centriolar)» без оговорки о неопределённости. Это создаёт ложное впечатление подтверждённости.
+ - **Исправление:** MCAOA/CONCEPT.md должен явно указывать «Counter #1 candidate (status inconclusive)» с ссылкой на CEDAR OPEN_PROBLEMS.
 
 2. **Отсутствие реализованных API-ручек между подпроектами (оркестрация не работает).**
  - **Файлы:** `MAP.md §3` (матрица API), серверные листинги (нет social server, нет BioSense backend на :4101).
@@ -142,9 +142,9 @@
  - **Проблема:** MCAOA заявлен как мета-теоретический фундамент, но его визуализация (например, демонстрация M4 фальсифицируемости) не доступна в вебе.
  - **Исправление:** Развернуть MCAOA frontend (React) или хотя бы статическую страницу с описанием.
 
-4. **CDATA не имеет работающего веб-интерфейса, но nginx конфиг cdata.longevity.ge существует.**
+4. **CEDAR не имеет работающего веб-интерфейса, но nginx конфиг cdata.longevity.ge существует.**
  - **Аналогично MCAOA.**
- - **Исправление:** Или развернуть CDATA frontend, или удалить nginx конфиг.
+ - **Исправление:** Или развернуть CEDAR frontend, или удалить nginx конфиг.
 
 5. **Журналы Longevity Horizon и Annals of Rejuvenation Science не видны как директории на сервере (longhoriz/rescience).**
  - **Файлы:** Сервер: `/home/jaba/web/longevity/` — нет поддиректорий `longhoriz/` или `rescience/`, хотя OJS может использовать маршрутизацию.
@@ -169,7 +169,7 @@
 
 2. **Провести одномоментную чистку TOXIC подпроектов (HAP, Ontogenesis).** Или удалить их из корня репозитория (перенести в `_archive/`), или явно маркировать как historical и заблокировать их использование в любых грантовых документах. Это устранит стратегическое противоречие.
 
-3. **Создать недостающие CLAUDE.md для MCAOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC (серверная копия).** Это повысит структурную целостность и позволит ассистенту корректно работать с каждым подпроектом.
+3. **Создать недостающие CLAUDE.md для MCAOA, CEDAR, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC (серверная копия).** Это повысит структурную целостность и позволит ассистенту корректно работать с каждым подпроектом.
 
 4. **Запустить BioSense backend на сервере и интегрировать его с biosense-web.** Без этого χ_Ze остаётся теорией без реализации, что делает невозможным демонстрацию биомаркера для гранта.
 

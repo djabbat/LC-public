@@ -17,7 +17,7 @@
 |------|---------------------|
 | **Aging as Total Chronic Disease** | Working hypothesis: physiological aging is a constellation of co-progressing chronic processes that can be tracked, predicted, and modulated as a single multimodal disease entity |
 | **MCAOA** | Multi-Counter Architecture of Aging — meta-theory in which aging = weighted sum of N parallel damage counters (genomic, mitochondrial, centriolar, …) |
-| **CDATA** | Centriolar Damage Accumulation Theory — molecular-cellular hypothesis (status: **inconclusive**) about centriole inheritance in haematopoietic stem cells |
+| **CEDAR** | Centriolar Entropy-Damage Accumulation Ratchet — molecular-cellular hypothesis (status: **inconclusive**) about centriole inheritance in haematopoietic stem cells |
 | **HSC** | Haematopoietic Stem Cell |
 | **Ze** | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` relating biological time to information content of a state vector Z |
 | **χ_Ze** | Multimodal biomarker derived from Ze (current formulation is post-hoc; pre-registered univariate χ_Ze returned NULL on Cuban/Dortmund/LEMON cohorts) |
@@ -29,7 +29,7 @@
 
 | Audience | Where to start |
 |----------|----------------|
-| Aging biologist | [`MCAOA/CONCEPT.md`](MCAOA/CONCEPT.md), [`CDATA/CONCEPT.md`](CDATA/CONCEPT.md), `THEORY.md` |
+| Aging biologist | [`MCAOA/CONCEPT.md`](MCAOA/CONCEPT.md), [`CEDAR/CONCEPT.md`](CEDAR/CONCEPT.md), `THEORY.md` |
 | ML / FL engineer | [`FCLC/CONCEPT.md`](FCLC/CONCEPT.md), `realtime/`, `server/` |
 | Mathematician | [`Ze/THEORY.md`](Ze/THEORY.md), `PARAMETERS.md` |
 | Clinician | [`Activated/`](https://github.com/djabbat/) (private), `Activated/CONCEPT.md` |
@@ -46,7 +46,7 @@
                                      │ supplies "counter slot"
                                      ▼
    ┌─────────────┐   ┌──────────────────────────┐   ┌──────────────┐
-   │ CDATA       │──►│  candidate counters:     │◄──│ other        │
+   │ CEDAR       │──►│  candidate counters:     │◄──│ other        │
    │ (centriole, │   │  C₁ genome  C₂ mito      │   │ counters     │
    │ inconclusive)│   │  C₃ centriole  C₄ epi    │   │ (future)     │
    └─────────────┘   │  C₅ telomere  …          │   └──────────────┘
@@ -119,7 +119,7 @@ LongevityCommon/
 ├── PI_TRACK_RECORD.md, PROJECT_AUDIT_2026-05-12.md            # transparency
 ├── pi.md                                                       # agent memo
 │
-├── MCAOA/, CDATA/, Ze/, BioSense/, FCLC/, AIM/                # subprojects
+├── MCAOA/, CEDAR/, Ze/, BioSense/, FCLC/, AIM/                # subprojects
 │
 ├── server/                                                     # Rust/axum REST API
 ├── web/                                                        # React+TS PWA UI

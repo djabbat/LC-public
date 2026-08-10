@@ -52,10 +52,10 @@ SELECT gen_random_uuid(),
        v.duration,
        'draft'
 FROM (VALUES
-  ('CDATA Phase 0 (centriolar dynamics in HSC)',
+  ('CEDAR Phase 0 (centriolar dynamics in HSC)',
    'Centriolar polyGlu accumulates monotonically with division count, predicting Hayflick limit.',
    'Single-cell live imaging of centriolar PTM during HSC division.',
-   'CDATA',  60,  180),
+   'CEDAR',  60,  180),
   ('Telomere x EpigeneticDrift coupling (Cuban EEG cohort)',
    'Γ_{2,4} > 0.1 in HSC-like progenitors of Cuban N=88.',
    'Cross-counter coupling Γ_{2,4} measurement.',

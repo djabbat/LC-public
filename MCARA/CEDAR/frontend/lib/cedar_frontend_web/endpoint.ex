@@ -1,4 +1,4 @@
-defmodule CDATAFrontendWeb.Endpoint do
+defmodule CEDARFrontendWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :cedar_frontend
 
   socket "/live", Phoenix.LiveView.Socket,
@@ -20,5 +20,5 @@ defmodule CDATAFrontendWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug CDATAFrontendWeb.Router
+  plug CEDARFrontendWeb.Router
 end

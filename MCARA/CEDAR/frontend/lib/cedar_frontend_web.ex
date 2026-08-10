@@ -1,11 +1,11 @@
-defmodule CDATAFrontendWeb do
+defmodule CEDARFrontendWeb do
   def controller do
     quote do
-      use Phoenix.Controller, namespace: CDATAFrontendWeb
+      use Phoenix.Controller, namespace: CEDARFrontendWeb
 
       import Plug.Conn
-      import CDATAFrontendWeb.Gettext
-      alias CDATAFrontendWeb.Router.Helpers, as: Routes
+      import CEDARFrontendWeb.Gettext
+      alias CEDARFrontendWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -13,7 +13,7 @@ defmodule CDATAFrontendWeb do
     quote do
       use Phoenix.View,
         root: "lib/cedar_frontend_web/templates",
-        namespace: CDATAFrontendWeb
+        namespace: CEDARFrontendWeb
 
       import Phoenix.Controller,
         only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
@@ -25,7 +25,7 @@ defmodule CDATAFrontendWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {CDATAFrontendWeb.Layouts, :app}
+        layout: {CEDARFrontendWeb.Layouts, :app}
 
       unquote(view_helpers())
     end
@@ -52,7 +52,7 @@ defmodule CDATAFrontendWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CDATAFrontendWeb.Gettext
+      import CEDARFrontendWeb.Gettext
     end
   end
 
@@ -63,10 +63,10 @@ defmodule CDATAFrontendWeb do
       import Phoenix.LiveView.Helpers
       import Phoenix.LiveView.Stream
 
-      import CDATAFrontendWeb.CoreComponents
-      import CDATAFrontendWeb.Gettext
+      import CEDARFrontendWeb.CoreComponents
+      import CEDARFrontendWeb.Gettext
 
-      alias CDATAFrontendWeb.Router.Helpers, as: Routes
+      alias CEDARFrontendWeb.Router.Helpers, as: Routes
     end
   end
 

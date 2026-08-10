@@ -526,7 +526,7 @@ Ze = (H, ρ_Z, {M_i}, τ_Z, θ_Z)
 | v*_active ≈ 0.456 | **ГИПОТЕЗА** ⚠️ | 🔴 **КРИТИЧНО (2026-04-11): I²=90.3%** (Cochran Q=20.6, p<0.0001) по 3 датасетам — Cuban d=1.694, Dortmund d=0.732, MPI-LEMON d=0.110. Pooling N=196 статистически **некорректен**. v*≈0.456 = Cuban-specific оценка, не универсальная. 95% ДИ не вычислен. Репликации нет. | Вычислить v* per dataset отдельно; Cochran Q перед любым pooling; bootstrap per dataset |
 | χ_Ze клинические пороги (0.80/0.60/0.40) | **ГИПОТЕЗА** ⚠️ | 🔴 Теоретические; "N<50" не валидация | Формальное тест-ретест (N≥50) + anchor-based |
 | MCID_χZe = 0.05 | **РАБОЧАЯ ГИПОТЕЗА** ⚠️ | 🔴 N=12 — статистически недействительно | SEM-based (N≥50); anchor-based (N≥100) |
-| Ze ↔ CDATA (τ_Z ~ Φ(D)) | **ГИПОТЕЗА** ⚠️ | 🔴 Математический каркас без данных | Лонгитудинальная когорта N≥100, 3 визита |
+| Ze ↔ CEDAR (τ_Z ~ Φ(D)) | **ГИПОТЕЗА** ⚠️ | 🔴 Математический каркас без данных | Лонгитудинальная когорта N≥100, 3 визита |
 | χ_Ze предсказывает биологический возраст | **ГИПОТЕЗА** ⚠️ | 🔴 Нет данных | UK Biobank: χ_Ze vs Horvath/GrimAge (N≥200) |
 | BioSense измеряет χ_Ze | **ДИЗАЙН-ГИПОТЕЗА** ⚠️ | 🔴 Нет прототипа (TRL 2) | BioSense прототип + валидационное исследование |
 
@@ -878,7 +878,7 @@ Ze (theory hub)
     |                           → Ze-neurology predictions
     |                           → ze_eeg_validation/results/
     |
-    |--[ZIO aging index]----> CDATA (centrosomal aging)
+    |--[ZIO aging index]----> CEDAR (centrosomal aging)
     |                           → χ_Ze + mitochondrial shield
     |                           → unified aging biomarker
     |
@@ -984,7 +984,7 @@ Poincare (mathematical philosophy + Ze math)
     |   Phase 3A article ✅          DOI: 10.65649/kzj86888 (math formalism)
     |                                DOI: 10.65649/hqm2c554 (Minkowski from Ze)
     |
-    |--[cognitive model]-------> CDATA / AIM
+    |--[cognitive model]-------> CEDAR / AIM
         Poincaré's discovery     → Ze-cognitive model in diagnosis_engine
         psychology               → "cognitive Ze blindness" module (planned)
 ```
@@ -1273,12 +1273,12 @@ Ze теория делает конкретные предсказания, от
 
 ### Три уровня симулятора
 
-**Уровень 1 — Клеточный Ze (уже реализован: CDATA)**
-- CDATA Cell-DT — это и есть Ze-симулятор на биологическом уровне
+**Уровень 1 — Клеточный Ze (уже реализован: CEDAR)**
+- CEDAR Cell-DT — это и есть Ze-симулятор на биологическом уровне
 - N_Hayflick([O₂]) — экспериментально проверяемое Ze-предсказание
 - Следующий шаг: добавить Ze-счётчик (τ_Z) как явную переменную в TissueState
   τ_Z(n) = τ_Z(0) − n_T_events, где n_T = количество ошибок деления
-- Показать: CDATA frailty = Ze-энтропия S_Ze = k ln(D/D_max)
+- Показать: CEDAR frailty = Ze-энтропия S_Ze = k ln(D/D_max)
 
 **Уровень 2 — Термодинамический Ze (новое)**
 Файл: `~/Desktop/Ze/simulator/ze_thermo.py`
@@ -1309,13 +1309,13 @@ Ze теория делает конкретные предсказания, от
 
 1. **Уровень 2 (ze_thermo.py)** — 2–3 дня Python, проверяет Второй закон
 2. **Уровень 3 (ze_quantum.py)** — 3–5 дней, проверяет Born rule
-3. **Уровень 1 обновление** — добавить τ_Z в CDATA TissueState (требует Rust)
+3. **Уровень 1 обновление** — добавить τ_Z в CEDAR TissueState (требует Rust)
 
 ### Связи с существующими статьями
 
-- `~/Desktop/CDATA/Articles/Ze_and_Entropy.md` → основа для Уровня 2
+- `~/Desktop/CEDAR/Articles/Ze_and_Entropy.md` → основа для Уровня 2
 - `~/Desktop/5+_Ze_Foundations_of_Physics.md` §5 → основа для Уровня 3
-- `~/Desktop/5+_CDATA_Aging_Cell.md` → Уровень 1 (уже реализован)
+- `~/Desktop/5+_CEDAR_Aging_Cell.md` → Уровень 1 (уже реализован)
 
 ---
 
@@ -1591,7 +1591,7 @@ A clear publication roadmap should be drafted before Phase 2 concludes. Priority
   - RMSSD, SDNN → Ze-аналоги τ и v. Ze-биомаркер = единый интегральный показатель.
 - **Нейрология**: спайки нейронов → Ze-поток. Эпилепсия: v → 0 (burst = T-доминирование). Норма: v ≈ v*.
 - **Онкология**: темп митозов → S-доминирование. Ze-скорость как биомаркер злокачественности.
-- **Интеграция с CDATA**: ZIO-индекс + χ_Ze центриолей + митохондриальный щит → единый агрегатный индекс старения.
+- **Интеграция с CEDAR**: ZIO-индекс + χ_Ze центриолей + митохондриальный щит → единый агрегатный индекс старения.
 - **Интеграция с HealthWearable**: NexRing/Linktop → RR-поток → `ze_ecg.py` → Ze-метрики в историю болезни AIM.
 - **Задача**: написать `ze_ecg.py` — анализ RR-потока (CSV/EDF/wearable JSON), вывод Ze-метрик по сегментам.
 
@@ -1677,11 +1677,11 @@ A clear publication roadmap should be drafted before Phase 2 concludes. Priority
 - ✅ 4-панельный рисунок: τ_Z(t), surprise distributions, cumulative T-events, rate bars
 - [ ] Добавить результаты в §5 of 5+_Ze_Foundations_of_Physics.md
 
-### 🟡 Уровень 1 — Клеточный Ze (обновление CDATA)
+### 🟡 Уровень 1 — Клеточный Ze (обновление CEDAR)
 - [ ] Добавить `tau_z: u64` в TissueState — явный Ze-счётчик клетки
 - [ ] Каждое ошибочное деление → τ_Z -= 1 (T-событие)
 - [ ] Клетка умирает при τ_Z = 0 (Аксиома Z1)
-- [ ] Показать: CDATA frailty ≡ Ze-энтропия S_Ze = k_B ln(D_crit - D)
+- [ ] Показать: CEDAR frailty ≡ Ze-энтропия S_Ze = k_B ln(D_crit - D)
 - [ ] Статья: «Cellular Ze-Counter as the Molecular Basis of Hayflick Limit»
 
 ### 🟢 Публикация результатов симулятора
@@ -1916,7 +1916,7 @@ New direction: Ze velocity of biological systems narrows with age.
 Young organism: v oscillates freely around v* (high χ, high τ).
 Aging organism: v gets "stuck" — oscillation range narrows, χ decreases, τ decreases.
 Prediction: Ze variability (χ) is an aging biomarker, independent of mean HRV.
-Integration with CDATA: centriole age → Ze counter age → reduced plasticity.
+Integration with CEDAR: centriole age → Ze counter age → reduced plasticity.
 
 ---
 
@@ -1972,7 +1972,7 @@ Integration with CDATA: centriole age → Ze counter age → reduced plasticity.
 | Теоретическая основа | нет | Ze Vectors Theory |
 | Портативность | да | да |
 
-**Стратегия:** χ_Ze — interpretable, theory-grounded альтернатива BrainYears. Подчёркивать физический смысл v* и связь с CDATA/биологическим старением.
+**Стратегия:** χ_Ze — interpretable, theory-grounded альтернатива BrainYears. Подчёркивать физический смысл v* и связь с CEDAR/биологическим старением.
 
 ---
 
@@ -2293,7 +2293,7 @@ Running log of decisions, context, and key facts across sessions.
 1. PMID 36583780 — https://pubmed.ncbi.nlm.nih.gov/36583780/
 2. PMID 20480236 — https://pubmed.ncbi.nlm.nih.gov/20480236/
 3. Zenodo Ze — https://doi.org/10.5281/zenodo.19174630
-4. Zenodo CDATA — https://doi.org/10.5281/zenodo.19174506
+4. Zenodo CEDAR — https://doi.org/10.5281/zenodo.19174506
 
 ---
 

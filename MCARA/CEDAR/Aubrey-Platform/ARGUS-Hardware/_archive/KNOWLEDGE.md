@@ -58,7 +58,7 @@
 
 - **MCAOA** = Multi-Counter Architecture of Organismal Aging (Tqemaladze J. 2026, Zenodo DOI: 10.5281/zenodo.20055806)
 - ARGUS targets empirical validation of **centriolar counter (#1)** predictions
-- CEDAR = Centriolar Damage Accumulation Theory of Aging [PMID: 36583780] — theoretical basis for counter #1
+- CEDAR = Centriolar Entropy-Damage Accumulation Ratchet [PMID: 36583780] — theoretical basis for counter #1
 - MCAOA (Multi-Counter Architecture of Organismal Aging, formerly MCAOA) — renamed to avoid confusion with bioinformatics abbreviations. Zenodo DOI: 10.5281/zenodo.20055806
 
 ## Key experimental precedent: ablation validation

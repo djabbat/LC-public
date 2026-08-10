@@ -22,7 +22,7 @@
    OSF ID `osf.io/automicroscopy_cdata` (placeholder), planned registration date 2026-06-01. Соответствует.
 
 3. **Sample size calculation (power analysis)** ✓  
-   Для CDATA experiment: формула, подстановка, N=30 клеток на группу. Для concordance: N=286 решений, α=0.05, power=0.80. Есть формула и подстановка.
+   Для CEDAR experiment: формула, подстановка, N=30 клеток на группу. Для concordance: N=286 решений, α=0.05, power=0.80. Есть формула и подстановка.
 
 4. **Risk matrix ≥5 rows** ✓  
    6 строк в CONCEPT.md (Probability/Impact/Mitigation). Соответствует.

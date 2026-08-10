@@ -42,7 +42,7 @@ CREATE TABLE counters (
 CREATE INDEX idx_counters_tissue ON counters(tissue_type);
 CREATE INDEX idx_counters_gamma ON counters(gamma_i);
 
--- CDATA-specific counter extension
+-- CEDAR-specific counter extension
 CREATE TABLE cdata_counters (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     counter_id UUID NOT NULL REFERENCES counters(id) ON DELETE CASCADE,

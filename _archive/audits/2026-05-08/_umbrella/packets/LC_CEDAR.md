@@ -1,10 +1,10 @@
-# AUDIT PACKET — LC_CDATA
+# AUDIT PACKET — LC_CEDAR
 
-Path: `/home/oem/Desktop/LC/CDATA`  Date: 2026-05-08
+Path: `/home/oem/Desktop/LC/CEDAR`  Date: 2026-05-08
 
 ## Size & file counts
 ```
-7,8M	/home/oem/Desktop/LC/CDATA
+7,8M	/home/oem/Desktop/LC/CEDAR
 ```
 **Extensions:** .rs=50, .toml=13, .md=10, .ex=9, .png=9, .exs=5, .py=5, .pdf=4, (noext)=3, .heex=2, .json=2, .sh=1, .yml=1, .example=1, .sql=1
 ## Tree (depth=2, max 200 entries)
@@ -69,31 +69,31 @@ Path: `/home/oem/Desktop/LC/CDATA`  Date: 2026-05-08
 
 ### `CLAUDE.md` (2646 chars)
 ```md
-# CLAUDE.md — CDATA
+# CLAUDE.md — CEDAR
 
-**CDATA** (Centriolar Damage Accumulation Theory of Aging) — Counter в архитектуре MCAOA. Постулирует накопление polyGlu-PTM на материнской центриоли как одну из канонических осей старения.
+**CEDAR** (Centriolar Entropy-Damage Accumulation Ratchet) — Counter в архитектуре MCAOA. Постулирует накопление polyGlu-PTM на материнской центриоли как одну из канонических осей старения.
 
-**Path:** `/home/oem/Desktop/LC/CDATA/`
+**Path:** `/home/oem/Desktop/LC/CEDAR/`
 **Repo:** часть `djabbat/LC` (private). Не отдельный repo.
 
 ---
 
 ## Source of truth
 
-**`CDATA/CONCEPT.md`** v5.2 — авторитетный документ.
+**`CEDAR/CONCEPT.md`** v5.2 — авторитетный документ.
 См. родительский `~/Desktop/LC/CLAUDE.md` и `~/Desktop/LC/MCAOA/CONCEPT.md`.
 
 ---
 
 ## Counter numbering (унифицировано 2026-05-07)
 
-CDATA = **Counter #1** (Centriolar) per user decision 2026-05-07. Все subscripts формул используют `_1` (`α₁`, `β₁`, `γ₁`, `n₁`, `τ₁`). Прежняя двойная маркировка #1/#2 в CONCEPT.md устранена.
+CEDAR = **Counter #1** (Centriolar) per user decision 2026-05-07. Все subscripts формул используют `_1` (`α₁`, `β₁`, `γ₁`, `n₁`, `τ₁`). Прежняя двойная маркировка #1/#2 в CONCEPT.md устранена.
 
 ---
 
 ## ⚠ Inviolable axioms
 
-CDATA имеет три аксиомы (см. `CONCEPT.md § "АКСИОМЫ CDATA"`). **НЕ изменять без специальной команды.** Должны присутствовать во всех LOI/грантах/манускриптах.
+CEDAR имеет три аксиомы (см. `CONCEPT.md § "АКСИОМЫ CEDAR"`). **НЕ изменять без специальной команды.** Должны присутствовать во всех LOI/грантах/манускриптах.
 
 ---
 
@@ -109,10 +109,10 @@ CDATA имеет три аксиомы (см. `CONCEPT.md § "АКСИОМЫ CDA
 
 ## Stack
 
-- **Backend:** Rust workspace (`CDATA/backend/`, `CDATA/crates/`)
-- **Frontend:** TypeScript (`CDATA/frontend/`)
-- **GUI:** native (`CDATA/gui/`)
-- **Articles:** `CDATA/articles/` (manuscripts, peer reviews)
+- **Backend:** Rust workspace (`CEDAR/backend/`, `CEDAR/crates/`)
+- **Frontend:** TypeScript (`CEDAR/frontend/`)
+- **GUI:** native (`CEDAR/gui/`)
+- **Articles:** `CEDAR/articles/` (manuscripts, peer reviews)
 
 ---
 
@@ -141,23 +141,23 @@ CDATA имеет три аксиомы (см. `CONCEPT.md § "АКСИОМЫ CDA
 
 ## Тесты
 
-`cargo test` в `CDATA/backend/` workspace, `pytest` для analysis scripts. Зелёный gate перед публикацией LOI/манускрипта.
+`cargo test` в `CEDAR/backend/` workspace, `pytest` для analysis scripts. Зелёный gate перед публикацией LOI/манускрипта.
 
 ```
 ### `README.md` (4597 chars)
 ```md
-# CDATA — Centriolar Damage Accumulation Theory of Aging
+# CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Статус:** Активная теория (Counter #1 в MCAOA — согласовано с `cell_dt_cli::COUNTER_NUMBER = 1` и THEORY.md §6). TRL 3→4.
 **Последнее обновление канона:** 2026-04-22 (CORRECTIONS).
 
 ## Краткое изложение
 
-CDATA (Centriolar Damage Accumulation Theory of Aging) — это механистическая теория, объясняющая, почему стволовые клетки стареют и перестают функционировать даже при наличии активной теломеразы и низкого окислительного стресса. Теория постулирует, что ключевым ограничивающим фактором является не генетический или эпигенетический ущерб, а физическое накопление посттрансляционных модификаций (PTM), в первую очередь полиглутамилирования, на материнской центриоли.
+CEDAR (Centriolar Entropy-Damage Accumulation Ratchet) — это механистическая теория, объясняющая, почему стволовые клетки стареют и перестают функционировать даже при наличии активной теломеразы и низкого окислительного стресса. Теория постулирует, что ключевым ограничивающим фактором является не генетический или эпигенетический ущерб, а физическое накопление посттрансляционных модификаций (PTM), в первую очередь полиглутамилирования, на материнской центриоли.
 
 Материнская центриоль — стабильная клеточная структура, преимущественно наследуемая стволовой дочерней клеткой и служащая основой для первичной реснички. Накопление PTM нарушает сигнализацию через ресничку (Hedgehog, Wnt), что ведёт к двум последствиям: 1) увеличению доли дифференцировочных, а не самообновляющих, делений; 2) замедлению самого темпа делений. Совокупный эффект — истощение пула функциональных стволовых клеток, что проявляется как репликативное старение (предел Хейфлика) *in vivo* и соответствует наблюдаемому ограничению в 4-5 генераций при серийной трансплантации гемопоэтических стволовых клеток (HSC).
 
-CDATA формализована как Counter #2 в рамках мета-теории MCAOA (Multi-Counter Architecture), где старение организма моделируется как сумма независимых, параллельно накапливающих повреждения "счётчиков". CDATA предоставляет первую количественную молекулярную основу для официального признака старения стволовых клеток — misorientation центросомы (Rando et al., Cell Stem Cell 2025).
+CEDAR формализована как Counter #2 в рамках мета-теории MCAOA (Multi-Counter Architecture), где старение организма моделируется как сумма независимых, параллельно накапливающих повреждения "счётчиков". CEDAR предоставляет первую количественную молекулярную основу для официального признака старения стволовых клеток — misorientation центросомы (Rando et al., Cell Stem Cell 2025).
 
 ## Ключевые утверждения (Аксиомы)
 
@@ -179,7 +179,7 @@ CDATA формализована как Counter #2 в рамках мета-те
 
 ## Корректировки (Канон 2026-04-22)
 
-Все документы CDATA следуют единому источнику истины: **CORRECTIONS_2026-04-22**. Ключевые изменения:
+Все документы CEDAR следуют единому источнику истины: **CORRECTIONS_2026-04-22**. Ключевые изменения:
 *   **Формула Health Score удалена.** Веса не имели математического обоснования из MCAOA.
 *   **χ_Ze — теоретический конструкт, а не валидированный биомаркер.** Утверждение R²=0.84 получено на синтетических данных и отозвано.
 *   **MCAOA Test 2 не является источником параметра γ_i.** По умолчанию γ_i = 0 (гипотеза независимости).
@@ -189,17 +189,17 @@ CDATA формализована как Counter #2 в рамках мета-те
 
 Теория прошла несколько раундов ревью. Механизм асимметричного наследования центриоли (C2) подтверждён на двух типах клеток млекопитающих. Главный текущий барьер — отсутствие прямых данных о накоплении PTM пропорционально числу делений (C1) и асимметрии наследования у гемопоэтических стволовых клеток (HSC). Эти пробелы являются предметом активной экспериментальной валидации в рамках дорожной карты.
 
-CDATA позиционируется как основа для подачи заявки в EIC Pathfinder (дедлайн 2026-05-12) и является ядром для разработки первого класса геропротекторов, нацеленных на деглутамилазную активность.
+CEDAR позиционируется как основа для подачи заявки в EIC Pathfinder (дедлайн 2026-05-12) и является ядром для разработки первого класса геропротекторов, нацеленных на деглутамилазную активность.
 ```
 ### `backend/README.md` (3185 chars)
 ```md
-# CDATA Backend
+# CEDAR Backend
 
-Centriolar Damage Accumulation Theory of Aging backend implementation for LC project.
+Centriolar Entropy-Damage Accumulation Ratchet backend implementation for LC project.
 
 ## Overview
 
-This is the production-grade Axum backend for the CDATA subproject, implementing:
+This is the production-grade Axum backend for the CEDAR subproject, implementing:
 - Full CRUD operations for all domain entities
 - PostgreSQL database with SQLx
 - RESTful API endpoints
@@ -212,7 +212,7 @@ This is the production-grade Axum backend for the CDATA subproject, implementing
 
 1. **Parameter** - Quantitative parameters from PARAMETERS.md with γ_i = 0 default
 2. **Counter** - MCAOA counter registry (α_i, β_i, γ_i kinetics)
-3. **CdataCounter** - CDATA-specific extension (Hayflick limit, D_crit, rescue half-life)
+3. **CdataCounter** - CEDAR-specific extension (Hayflick limit, D_crit, rescue half-life)
 4. **Tissue** - Tissue types and weights for MCAOA
 5. **TransplantArm** - HSC transplant arm tracking
 6. **SensitivityAnalysis** - Sobol sensitivity storage
@@ -344,30 +344,30 @@ MIT
 ```
 ### `CONCEPT.md` (135028 chars)
 ```md
-# CDATA — Concept v5.2 — Counter #1 (Centriolar) in MCAOA
+# CEDAR — Concept v5.2 — Counter #1 (Centriolar) in MCAOA
 
 > ⚠️ **См. [../CORRECTIONS_2026-04-22.md](../CORRECTIONS_2026-04-22.md)** — некоторые утверждения могут быть отозваны. Каноны обновлены 2026-04-22.
 
 
 ## Родительская теория
 
-**CDATA является одним из треков MCAOA** — Multi-Counter Architecture of Organismal Aging (Tqemaladze J., 2026, Nature Aging submission). MCAOA = flagship meta-теория экосистемы LC; организменное старение формализуется как взвешенная сумма параллельных damage-accumulation counter'ов D_i, каждый с собственной division-зависимой (α_i) и time-зависимой (β_i) кинетикой.
+**CEDAR является одним из треков MCAOA** — Multi-Counter Architecture of Organismal Aging (Tqemaladze J., 2026, Nature Aging submission). MCAOA = flagship meta-теория экосистемы LC; организменное старение формализуется как взвешенная сумма параллельных damage-accumulation counter'ов D_i, каждый с собственной division-зависимой (α_i) и time-зависимой (β_i) кинетикой.
 
-**CDATA = MCAOA Counter #1 (Centriolar):** накопление polyGlu PTM на материнской центриоли → D_centriole(n, t) = D_centriole,0 + α_1·(n/n₁\*) + β_1·(t/τ_1) + γ_1·I(others).
+**CEDAR = MCAOA Counter #1 (Centriolar):** накопление polyGlu PTM на материнской центриоли → D_centriole(n, t) = D_centriole,0 + α_1·(n/n₁\*) + β_1·(t/τ_1) + γ_1·I(others).
 
 Этот документ описывает механистические детали Counter #1; для общей архитектуры см. `~/Desktop/LC/MCAOA/CONCEPT.md`.
 
-## Centriolar Damage Accumulation Theory of Aging (механизм Counter #1)
+## Centriolar Entropy-Damage Accumulation Ratchet (механизм Counter #1)
 
-**Версия:** 5.2 (Counter #1 framing, унифицировано 2026-05-07; numbering decision: CDATA = #1, Telomere = #2, MitoROS = #3, EpigeneticDrift = #4, Proteostasis = #5); механистическое содержание v5.1 (Обновлена 2026-04-15: ATF5-PGT-PCNT механизм (Madarampalli 2015) (PMID 26213385); Bobinnec 1998 — GT335 инъекция = полная потеря центриоли + восстановление через de novo синтез (поддерживает ¬R); Pan 2025 (Cells Tissues Organs) — CCP1-дефицит → укороченные цилии в BMSC → нарушение остеогенной дифференцировки → восстановление CCP1 обращает эффект; формализованная P11 N_relapse = (P_crit − P₀)/α; количественные предсказания CDATA: rescue half-life ~40–60 делений, full relapse ~80–120 делений; CellTrace Violet + TTLL6 siRNA/LDC10 как контроли P11; Asymmetry Index AI = MFI(Ninein+)/MFI(Ninein−); BHCA прогноз 22/27 при подтверждении всех 5 предсказаний Phase 0)
+**Версия:** 5.2 (Counter #1 framing, унифицировано 2026-05-07; numbering decision: CEDAR = #1, Telomere = #2, MitoROS = #3, EpigeneticDrift = #4, Proteostasis = #5); механистическое содержание v5.1 (Обновлена 2026-04-15: ATF5-PGT-PCNT механизм (Madarampalli 2015) (PMID 26213385); Bobinnec 1998 — GT335 инъекция = полная потеря центриоли + восстановление через de novo синтез (поддерживает ¬R); Pan 2025 (Cells Tissues Organs) — CCP1-дефицит → укороченные цилии в BMSC → нарушение остеогенной дифференцировки → восстановление CCP1 обращает эффект; формализованная P11 N_relapse = (P_crit − P₀)/α; количественные предсказания CEDAR: rescue half-life ~40–60 делений, full relapse ~80–120 делений; CellTrace Violet + TTLL6 siRNA/LDC10 как контроли P11; Asymmetry Index AI = MFI(Ninein+)/MFI(Ninein−); BHCA прогноз 22/27 при подтверждении всех 5 предсказаний Phase 0)
 **Дата:** 2026-04-15
 **Статус:** C2 подтверждена у млекопитающих (2 клеточных типа); блокирующий барьер — C1 и C2 у HSC; in-sample R²(MCAI)=0.745; LOO-CV mean=-0.093 (требует исправления ROS-уравнения); готов для Longevity Impetus LOI (дедлайн 2026-04-25) и EIC Pathfinder (2026-05-12)
 
 ---
 
-## ⚠️ АКСИОМЫ CDATA — НЕ ИЗМЕНЯТЬ БЕЗ СПЕЦИАЛЬНОЙ КОМАНДЫ
+## ⚠️ АКСИОМЫ CEDAR — НЕ ИЗМЕНЯТЬ БЕЗ СПЕЦИАЛЬНОЙ КОМАНДЫ
 
-> **Эти три утверждения являются фундаментом теории CDATA. Они не подлежат изменению, пересмотру или удалению без явной команды пользователя. Они должны присутствовать во всех LOI, грантах, статьях и публичных материалах CDATA.**
+> **Эти три утверждения являются фундаментом теории CEDAR. Они не подлежат изменению, пересмотру или удалению без явной команды пользователя. Они должны присутствовать во всех LOI, грантах, статьях и публичных материалах CEDAR.**
 
 ### АКСИОМА 1 — Hayflick в гипоксии с теломеразой
 > **Стволовые клетки, находящиеся в гипоксической среде при активной теломеразе, всё равно достигают предела Хейфлика.**
@@ -392,19 +392,19 @@ MIT
 
 ### Hallmark Recognition (открывающая цитата для всех рукописей и грантов — добавлено v4.8)
 
-> **«Centrosome misorientation is an officially recognized hallmark of stem cell aging»** (Rando, Brunet & Goodell, *Cell Stem Cell* 2025). CDATA provides the first quantitative molecular mechanism for this hallmark: PTM accumulation in the mother centriole is the upstream driver of centrosome misorientation, and the only ¬R-candidate satisfying conditions C1+C2+C3. This positions CDATA as the mechanistic backbone of the newest stem cell aging hallmark.
+> **«Centrosome misorientation is an officially recognized hallmark of stem cell aging»** (Rando, Brunet & Goodell, *Cell Stem Cell* 2025). CEDAR provides the first quantitative molecular mechanism for this hallmark: PTM accumulation in the mother centriole is the upstream driver of centrosome misorientation, and the only ¬R-candidate satisfying conditions C1+C2+C3. This positions CEDAR as the mechanistic backbone of the newest stem cell aging hallmark.
 
 ### Impact Statement (включать в начало каждой рукописи и гранта)
 
-> **Все существующие клинические инструменты биологического возраста (GrimAge, DunedinPACE, PhenoAge) — диагностические, не терапевтические. Они отвечают на вопрос «насколько быстро вы стареете?», но не на вопрос «что именно остановить?». CDATA — единственная теория, дающая ответ на второй вопрос через логическую необходимость: PTM-деградацию центриолей. Это превращает CDATA из академической теории в roadmap для разработки первого класса anti-aging drugs с конкретной молекулярной мишенью — деглутамилазами — которые не были бы идентифицированы никаким эмпирическим скринингом, поскольку не входят ни в один из 12 Hallmarks of Aging и не предсказываются ни одной существующей теорией старения.**
+> **Все существующие клинические инструменты биологического возраста (GrimAge, DunedinPACE, PhenoAge) — диагностические, не терапевтические. Они отвечают на вопрос «насколько быстро вы стареете?», но не на вопрос «что именно остановить?». CEDAR — единственная теория, дающая ответ на второй вопрос через логическую необходимость: PTM-деградацию центриолей. Это превращает CEDAR из академической теории в roadmap для разработки первого класса anti-aging drugs с конкретной молекулярной мишенью — деглутамилазами — которые не были бы идентифицированы никаким эмпирическим скринингом, поскольку не входят ни в один из 12 Hallmarks of Aging и не предсказываются ни одной существующей теорией старения.**
 
 ### Расширенное название теории
 
 **Полное механистическое название** (для рукописей и грантов):
-«**Asymmetric Centriolar Damage Accumulation Theory of Aging (ACDATA)**»
+«**Asymmetric Centriolar Entropy-Damage Accumulation Ratchet (ACEDAR)**»
 
-Аббревиатура CDATA сохраняется для совместимости с PMID 36583780. В тексте использовать:
-«CDATA (Centriolar Damage Accumulation through Asymmetric Inheritance)» — это немедленно сигнализирует рецензенту, что механистическая уникальность — в асимметрии наследования, а не просто «накоплении».
+Аббревиатура CEDAR сохраняется для совместимости с PMID 36583780. В тексте использовать:
+«CEDAR (Centriolar Damage Accumulation through Asymmetric Inheritance)» — это немедленно сигнализирует рецензенту, что механистическая уникальность — в асимметрии наследования, а не просто «накоплении».
 
 ---
 
@@ -415,7 +415,7 @@ MIT
 
 ## Executive Summary
 
-CDATA (Centriolar Damage Accumulation Theory of Aging) — механистическая теория старения, объясняющая деградацию организма как неизбежное следствие накопления PTM-повреждений в материнских центриолях стволовых клеток.
+CEDAR (Centriolar Entropy-Damage Accumulation Ratchet) — механистическая теория старения, объясняющая деградацию организма как неизбежное следствие накопления PTM-повреждений в материнских центриолях стволовых клеток.
 
 После 7 раундов жёсткого peer review концепция достигла:
 - **32 параметра** (редуцировано со 120 — см. Model Selection ниже)
@@ -432,9 +432,9 @@ CDATA (Centriolar Damage Accumulation Theory of Aging) — механистич�
 
 ## Advances beyond Tqemaladze 2023 (PMID: 36583780)
 
-Статья Tqemaladze 2023 сформулировала центральный тезис CDATA качественно. CDATA v4.3 добавляет:
+Статья Tqemaladze 2023 сформулировала центральный тезис CEDAR качественно. CEDAR v4.3 добавляет:
 
-| Аспект | Tqemaladze 2023 | CDATA v4.3 |
+| Аспект | Tqemaladze 2023 | CEDAR v4.3 |
 |--------|-----------------|------------|
 | Формализация | Качественная теория | ODE-система, 32 параметра, MCMC калибровка |
 | Sobol analysis | Нет | nu (S1=0.416) и alpha (S1=0.193) как доминанты |
@@ -477,7 +477,7 @@ CDATA (Centriolar Damage Accumulation Theory of Aging) — механистич�
 
 **✅ S4 CLOSED (2026-04-13):** N=16384, bootstrap CI = SALib conf_level=0.95. Утверждения о negligible параметрах теперь статистически валидны: 23 параметра имеют S1<0.001 AND ST<0.010, подтверждённые 95% CI.
 
-**Обновлённый ключевой вывод:** Три параметра (epigenetic_rate, alpha, nu_HSC) объясняют 78% дисперсии выходного D(50). alpha и nu_HSC **прямо поддерживают CDATA-тезис**: скорость делений × повреждение за деление = главные физические детерминанты накопления повреждений. Доминирование epigenetic_rate обусловлено прямой линейной зависимостью ep_age = ep_rate × T в аналитическом приближении; в полной Rust-ODE вес эпигенетики ожидается меньше.
+**Обновлённый ключевой вывод:** Три параметра (epigenetic_rate, alpha, nu_HSC) объясняют 78% дисперсии выходного D(50). alpha и nu_HSC **прямо поддерживают CEDAR-тезис**: скорость делений × повреждение за деление = главные физические детерминанты накопления повреждений. Доминирование epigenetic_rate обусловлено прямой линейной зависимостью ep_age = ep_rate × T в аналитическом приближении; в полной Rust-ODE вес эпигенетики ожидается меньше.
 
 **✅ Ablation Sobol (v4.7, N=8192, 2026-04-13) — РАЗРЕШАЕТ СОБОЛЬ-ПАРАДОКС (NMC-2):**
 
@@ -488,7 +488,7 @@ CDATA (Centriolar Damage Accumulation Theory of Aging) — механистич�
 
 **При epigenetic_rate=0:** S1(alpha)=0.362 → DOMINANT. Centriolar параметры доминируют без линейного ep-слагаемого.
 
-**Вывод:** Индивидуальное доминирование epigenetic_rate (S1=0.402) отражает линейную аддитивность в аналитическом приближении. Как группа — centriolar ≈ epigenetic (0.471 vs 0.470). CDATA-название «Centriolar Damage Accumulation» обосновано на групповом уровне.
+**Вывод:** Индивидуальное доминирование epigenetic_rate (S1=0.402) отражает линейную аддитивность в аналитическом приближении. Как группа — centriolar ≈ epigenetic (0.471 vs 0.470). CEDAR-название «Centriolar Damage Accumulation» обосновано на групповом уровне.
 
 **⚠️ Ablation R² (новая находка v4.7):**
 - FULL model: R²=0.778 на MCAI-траектории
@@ -521,7 +521,7 @@ ep_age(t) = ∫₀ᵗ [ep_rate_base + k_ep × D(τ)] dτ
 **Значение:** In-sample R²=0.327 (not 0.84; см. ниже). LOO-CV mean=-0.093 → модель переобучена на 28 точках (4 биомаркера × 7 возрастных точек). R²(ROS)=-0.512 указывает на модельную спецификацию ROS-компонента при pi_0=0.99 (граница оптимизации → признак нeидентифицируемости). Требуется исправление ROS-уравнения и расширение калибровочного датасета.
 
 **Разрыв R²=0.84 vs R²=0.327 — диагноз:**
-`null_model_r2.py` (источник цифры 0.84) использует **SIMULATED data** («currently uses synthetic data calibrated to CDATA parameters» — явно в комментарии скрипта). R²=0.84 на синтетических данных нельзя цитировать как валидацию. Реальный in-sample fit на литературных данных: R²(MCAI)=0.745, R²(CHIP)=0.611, R²(Telo)=0.465; R²(ROS)=-0.512 (ошибка спецификации). **Для грантов использовать:** «in-sample cross-sectional fit: R²(MCAI)=0.745, R²(CHIP)=0.611, R²(Telo)=0.465; ROS component requires model revision (see §Limitations). Independent hold-out validation (UK Biobank/InCHIANTI) — planned as Aim 3.»
+`null_model_r2.py` (источник цифры 0.84) использует **SIMULATED data** («currently uses synthetic data calibrated to CEDAR parameters» — явно в комментарии скрипта). R²=0.84 на синтетических данных нельзя цитировать как валидацию. Реальный in-sample fit на литературных данных: R²(MCAI)=0.745, R²(CHIP)=0.611, R²(Telo)=0.465; R²(ROS)=-0.512 (ошибка спецификации). **Для грантов использовать:** «in-sample cross-sectional fit: R²(MCAI)=0.745, R²(CHIP)=0.611, R²(Telo)=0.465; ROS component requires model revision (see §Limitations). Independent hold-out validation (UK Biobank/InCHIANTI) — planned as Aim 3.»
 
 **Ограничение (для Aging Cell §Limitations):** «Sobol analysis employed a vectorized analytic model approximation; epigenetic_rate sensitivity (S1=0.403) may be overestimated relative to the full Cell-DT v3.0 ODE. Group ablation analysis (N=8,192) confirms centriolar parameter group dominance (S1_sum=0.471) approximately equal to epigenetic group (S1_sum=0.470), with centriolar parameters becoming clearly dominant when epigenetic_rate=0. Mechanistic integration of D(t)→epigenetic_rate is planned for Cell-DT v4.0.»
 
@@ -548,7 +548,7 @@ ep_age(t) = ∫₀ᵗ [ep_rate_base + k_ep × D(τ)] dτ
 ```
 ### `THEORY.md` (8280 chars)
 ```md
-# CDATA — Формальная теория
+# CEDAR — Формальная теория
 
 **Версия:** 5.2 (Counter #1 в MCAOA — см. §6 и `cell_dt_cli::COUNTER_NUMBER`)
 **Статус:** Активная, подготовка к публикации.
@@ -556,7 +556,7 @@ ep_age(t) = ∫₀ᵗ [ep_rate_base + k_ep × D(τ)] dτ
 
 ## 1. Родительская рамка: MCAOA (Multi-Counter Architecture)
 
-CDATA формализована как Counter #1 (Centriolar) в мета-теории MCAOA (Tqemaladze J., 2026, *Nature Aging* submission). MCAOA постулирует, что старение организма `L_organism(t)` есть взвешенная сумма `K` параллельных, тканеспецифичных счётчиков повреждений:
+CEDAR формализована как Counter #1 (Centriolar) в мета-теории MCAOA (Tqemaladze J., 2026, *Nature Aging* submission). MCAOA постулирует, что старение организма `L_organism(t)` есть взвешенная сумма `K` параллельных, тканеспецифичных счётчиков повреждений:
 
 `L_organism(t) = Σ_{ткани} w_ткань · [ Σ_{i=1..K} w_i(ткань) · f_i( D_i(n_ткань, t) ) ]`
 
@@ -565,7 +565,7 @@ CDATA формализована как Counter #1 (Centriolar) в мета-те
 *   `f_i()` — функция воздействия повреждения на фенотип (например, линейная, пороговая).
 *   `w` — калибруемые веса, определяемые из данных, а не априорно.
 
-CDATA предоставляет механистическую модель для `D_centriole(n, t)`.
+CEDAR предоставляет механистическую модель для `D_centriole(n, t)`.
 
 ## 2. Аксиоматическая основа
 
@@ -594,7 +594,7 @@ CDATA предоставляет механистическую модель д�
 
 где:
 *   `D_{c,0}` — базальный уровень повреждения (например, при рождении).
-*   `α` (alpha) — прирост повреждения за одно асимметричное деление. Единица: [damage/division]. Первичный параметр CDATA.
+*   `α` (alpha) — прирост повреждения за одно асимметричное деление. Единица: [damage/division]. Первичный параметр CEDAR.
 *   `n*` — масштабирующий коэффициент (опорное число делений).
 *   `β` (beta) — прирост повреждения со временем, независимо от делений (например, спонтанное химическое повреждение). Единица: [damage/time].
 *   `τ` (tau) — временная константа (напр., характерное время реакции).
@@ -645,7 +645,7 @@ CDATA предоставляет механистическую модель д�
 
 ## 5. Доказательство ¬R (Не-Ремонт)
 
-CDATA удовлетворяет трём критериям для признания её механизма кандидатом в ¬R (Non-Repairable Damage) в терминах теории неремонтируемого накопления:
+CEDAR удовлетворяет трём критериям для признания её механизма кандидатом в ¬R (Non-Repairable Damage) в терминах теории неремонтируемого накопления:
 1.  **C1 (Линейное накопление):** Повреждение (PTM) накапливается пропорционально числу делений (`α · n`).
 2.  **C2 (Асимметричное наследование):** Повреждение преимущественно передаётся стволовой линии.
 3.  **C3 (Функциональный ущерб):** Повреждение напрямую ухудшает ключевую функцию клетки (сигналинг самообновления).
@@ -654,7 +654,7 @@ CDATA удовлетворяет трём критериям для призна
 
 ## 6. Связь с другими счётчиками MCAOA
 
-CDATA (Counter #1) считается ранним, инициирующим счётчиком, особенно для высокообновляемых тканей. Его выход `D_c(n,t)` может служить входом или модулятором для других счётчиков:
+CEDAR (Counter #1) считается ранним, инициирующим счётчиком, особенно для высокообновляемых тканей. Его выход `D_c(n,t)` может служить входом или модулятором для других счётчиков:
 *   **Эпигенетический дрейф (Counter #?):** Хроническое нарушение сигналинга может влиять на паттерны метилирования ДНК в нише.
 *   **Соматические мутации/CHIP (Counter #?):** Увеличенный межделительный интервал может изменять паттерны накопления мутаций.
 
@@ -662,7 +662,7 @@ CDATA (Counter #1) считается ранним, инициирующим с�
 ```
 ### `PARAMETERS.md` (9899 chars)
 ```md
-# CDATA — Параметры модели
+# CEDAR — Параметры модели
 
 **Версия модели:** Cell-DT v3.0 (32 параметра)
 **Дата калибровки:** 2026-04-10
@@ -678,11 +678,11 @@ CDATA (Counter #1) считается ранним, инициирующим с�
 > | π (signal-dep vs age-decay) | 0.65 `pi_base` + `D_half` + `k_s` | **age-decay model documented**: `pi_0=0.87`, `pi_baseline=0.10`, `tau_protection=24.3`. Signal-dep model deprecated (never implemented) |
 > | τ_prot | 15 years | **24.3 years** | (b) docs → code; Round-7 MCMC posterior (free parameter) |
 >
-> **Следствие:** таблица ниже **теперь match code** для всех активных параметров. Bonus finding: fixed 6 locations of fabricated Jaiswal 2017 PMID 28792876 → correct 28636844 across CDATA Rust modules (same DeepSeek hallucination pattern documented in `feedback_deepseek_no_citations`).
+> **Следствие:** таблица ниже **теперь match code** для всех активных параметров. Bonus finding: fixed 6 locations of fabricated Jaiswal 2017 PMID 28792876 → correct 28636844 across CEDAR Rust modules (same DeepSeek hallucination pattern documented in `feedback_deepseek_no_citations`).
 >
 > **Также:** `cell_dt_cli::CounterParams` hosts a **third parameter set** (α=0.60, β=0.15, τ=30yr) for the MCAOA additive damage form — orthogonal to the multiplicative AgingEngine; annotated but out-of-scope for current reconciliation.
 
-Следующая таблица содержит все 32 параметра модели CDATA, оставшиеся после редукции с 120 (см. Model Selection в `CONCEPT.md`). Параметры сгруппированы по модулям. `S1` — индекс чувствительности первого порядка из Sobol analysis (N=16384).
+Следующая таблица содержит все 32 параметра модели CEDAR, оставшиеся после редукции с 120 (см. Model Selection в `CONCEPT.md`). Параметры сгруппированы по модулям. `S1` — индекс чувствительности первого порядка из Sobol analysis (N=16384).
 
 | Модуль | Имя параметра | Символ | Описание | Единицы | Значение (оценка) | 95% CI/Диапазон | Источник (PMID/DOI) | Статус | S1 (ранг) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -690,7 +690,7 @@ CDATA (Counter #1) считается ранним, инициирующим с�
 | | `nu_HSC` | ν_HSC | Базовая частота делений HSC | divisions/year | 1.2 | [0.8, 1.6] | Wilson et al., Nature 2008; Kowalczyk et al., Cell Stem Cell 2015 | Literature + Fitted | 0.155 (3) |
 | | `beta_HSC` | β_HSC | Фоновая скорость повреждения центриоли (время). См. notes ниже — dead field в multiplicative engine | damage/year | **1.0** (multiplicative/unused) <br> 0.005 (additive cell_dt_cli) | [0.001, 0.01] (additive); N/A (multiplicative) | `fixed_params.rs:79` retained; active in `cell_dt_cli::CounterParams` additive form | **Deprecated in multiplicative; active in additive CLI form** (2026-04-21) | 0.025 (6, additive only) |
 | | `tau_protection` | τ_prot | Временная константа экспоненциального затухания youth_protection | years | **24.3** | [18.5, 30.2] | Round-7 MCMC posterior (`calibration.rs` — free parameter) | **Fitted** (docs updated 2026-04-21 → code post-calibration value; prior `15 years` was pre-calibration value) | 0.046 (5) |
-| **Age-decay Youth Protection** (CDATA v3.0 current implementation) | `pi_0` | π_0 | Амплитуда экспоненциального затухания youth_protection; formula: `youth_protection(age) = pi_0 · exp(−age/tau_protection) + pi_baseline` | unitless | 0.87 | [0.80, 0.92] | Round-7 MCMC posterior (`calibration.rs`) | **Fitted** (free parameter in MCMC) | 0.013 (8) |
+| **Age-decay Youth Protection** (CEDAR v3.0 current implementation) | `pi_0` | π_0 | Амплитуда экспоненциального затухания youth_protection; formula: `youth_protection(age) = pi_0 · exp(−age/tau_protection) + pi_baseline` | unitless | 0.87 | [0.80, 0.92] | Round-7 MCMC posterior (`calibration.rs`) | **Fitted** (free parameter in MCMC) | 0.013 (8) |
 | | `pi_baseline` | π_floor | Асимптотический floor youth_protection при t → ∞ | unitless | 0.10 | [0.05, 0.15] | Round-7 MCMC posterior | **Fitted** | <0.001 |
 
 **Deprecated / Legacy parameters (removed 2026-04-21 audit — never implemented in v3.0 code):**
@@ -738,7 +738,7 @@ Prior versions of PARAMETERS.md listed four parameters (`pi_base`, `pi_0` alt-me
 ```
 ### `STATE.md` (4948 chars)
 ```md
-# STATE — CDATA
+# STATE — CEDAR
 
 **Назначение:** волатильное состояние, активные TODO, decision log, milestones.
 **Конвенция:** новые записи в Decision Log сверху с датой.
@@ -806,7 +806,7 @@ Grep не нашёл "ABL-2" в CONCEPT/THEORY/README. Проверить Append
 ## Milestones
 
 ### v5.2 — Counter #1 framing ✅ 2026-04-21
-- [x] CDATA встроена в MCAOA как Counter #1
+- [x] CEDAR встроена в MCAOA как Counter #1
 - [x] CONCEPT.md обновлён под Counter framing
 - [x] Hallmark recognition (Rando, Brunet, Goodell 2025) добавлено
 
@@ -838,13 +838,13 @@ TODO.md архивирован. Все TODO мигрированы в STATE.md �
 Каноны параметров обновлены. См. umbrella `_archive/audits/CORRECTIONS_2026-04-22.md`.
 
 ### 2026-04-21 — Counter framing
-CDATA пере-фрейминг как Counter #1 в MCAOA. Не отменяет аксиомы, только повышает архитектурный статус.
+CEDAR пере-фрейминг как Counter #1 в MCAOA. Не отменяет аксиомы, только повышает архитектурный статус.
 
 ---
 
 ## Что НЕ делать
 
-- Не изменять 3 аксиомы CDATA без явной команды
+- Не изменять 3 аксиомы CEDAR без явной команды
 - Не игнорировать L1 mismatch — это блокирующий fix для validation
 - Не добавлять новые counter numbering без обновления всех ссылок
 - Не цитировать Longevity Horizon в peer-reviewed публикациях
@@ -858,7 +858,7 @@ CDATA пере-фрейминг как Counter #1 в MCAOA. Не отменяе�
 ```
 ### `DESIGN.md` (5107 chars)
 ```md
-# CDATA — Архитектура и дизайн системы
+# CEDAR — Архитектура и дизайн системы
 
 **Версия ПО:** Cell-DT (Cell Destiny Tracker) v3.0
 **Язык:** Rust (основная логика), Python (анализ, визуализация)
@@ -867,7 +867,7 @@ CDATA пере-фрейминг как Counter #1 в MCAOA. Не отменяе�
 
 ## 1. Обзор архитектуры
 
-Cell-DT — это дискретно-событийный симулятор, реализующий стохастическую модель CDATA на уровне популяции клеток. Архитектура следует принципам Domain-Driven Design (DDD) для чёткого разделения ответственности.
+Cell-DT — это дискретно-событийный симулятор, реализующий стохастическую модель CEDAR на уровне популяции клеток. Архитектура следует принципам Domain-Driven Design (DDD) для чёткого разделения ответственности.
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                        Application Layer                     │
@@ -989,7 +989,7 @@ cell-dt/
 ```
 ### `EVIDENCE.md` (6963 chars)
 ```md
-# CDATA — Эмпирические основания
+# CEDAR — Эмпирические основания
 
 **Дата последней верификации:** 2026-04-22
 **Статус:** Актуально в соответствии с CORRECTIONS_2026-04-22
@@ -1042,18 +1042,18 @@ cell-dt/
 1.  **Отсутствие прямых данных C1+C2 для HSC:** Критически важно. Нет ни одной публикации, демонстрирующей одновременно (C1) линейный рост PTM на центриоли HSC с числом делений *in vivo* и (C2) асимметричное наследование этой PTM-нагруженной центриоли у HSC. Это главный блокирующий барьер для окончательного принятия теории. (См. `OPEN_PROBLEMS.md`).
 2.  **Альтернативные объяснения для замедления HSC:** Удлинение клеточного цикла у старых HSC может быть обусловлено системными факторами (ниша, воспаление), а не внутренним центриолярным повреждением. Существующие данные корреляционны.
 3.  **Сложность измерения:** Количественное измерение уровня полиглутамилирования на отдельной центриоли в редкой популяции HSC in situ является технически сложной задачей.
-4.  **Неопределённость связи с эпиклоком:** Доминирование параметра `epigenetic_rate` в Sobol-анализе может указывать, что CDATA-процесс является downstream или модулируется более сильным драйвером эпигенетического дрейфа, а не наоборот. Это требует дополнительного исследования.
+4.  **Неопределённость связи с эпиклоком:** Доминирование параметра `epigenetic_rate` в Sobol-анализе может указывать, что CEDAR-процесс является downstream или модулируется более сильным драйвером эпигенетического дрейфа, а не наоборот. Это требует дополнительного исследования.
 5.  **Ограниченность тканевого охвата:** Наиболее сильные свидетельства C2 получены для нейральных прогениторов и лимфоцитов. Экстраполяция на все типы стволовых клеток требует подтверждения.
-6.  **Провал предрегистрированных тестов для χ_Ze:** В рамках других проектов экосистемы (Ze) попытки валидации теоретического биомаркера χ_Ze на реальных когортах (MPI-LEMON, Dortmund Vital) не увенчались успехом. Это не опровергает CDATA напрямую, но указывает на сложность перевода теоретических конструктов в клинически валидные сигналы.
+6.  **Провал предрегистрированных тестов для χ_Ze:** В рамках других проектов экосистемы (Ze) попытки валидации теоретического биомаркера χ_Ze на реальных когортах (MPI-LEMON, Dortmund Vital) не увенчались успехом. Это не опровергает CEDAR напрямую, но указывает на сложность перевода теоретических конструктов в клинически валидные сигналы.
 ```
 ### `OPEN_PROBLEMS.md` (8754 chars)
 ```md
-# CDATA — Открытые проблемы и тесты на фальсификацию
+# CEDAR — Открытые проблемы и тесты на фальсификацию
 
 **Дата:** 2026-04-22
 **Статус:** Актуально для подачи в EIC Pathfinder (ABL-2 disclosure)
 
-Этот документ систематизирует нерешённые научные вопросы в рамках теории CDATA. Каждая проблема включает один или несколько конкретных, выполнимых тестов на фальсификацию (falsification tests) с чёткими критериями успеха/провала. Приоритеты: **P0 (критический, блокирующий)**, **P1 (высокий, для валидации)**, **P2 (средний, для уточнения)**, **P3 (низкий, концептуальный)**.
+Этот документ систематизирует нерешённые научные вопросы в рамках теории CEDAR. Каждая проблема включает один или несколько конкретных, выполнимых тестов на фальсификацию (falsification tests) с чёткими критериями успеха/провала. Приоритеты: **P0 (критический, блокирующий)**, **P1 (высокий, для валидации)**, **P2 (средний, для уточнения)**, **P3 (низкий, концептуальный)**.
 
 ## Проблема OP1: Отсутствие прямых доказательств C1 и C2 для гемопоэтических стволовых клеток (HSC)
 
@@ -1064,7 +1064,7 @@ cell-dt/
 ### Тест FT1.1: Измерение PTM vs. число делений в HSC (in vivo)
 *   **Метод:** Использовать мышиную модель с отслеживанием делений (например, Confetti, DivTracker). Выделять HSC (Lin- Sca-1+ c-Kit+ CD150+ CD48-) с разным числом исторических делений. Проводить иммунофлуоресцентный анализ с антителами против polyGlu (GT335) и маркёра материнской центриоли (Ninein, CEP170). Количественно оценивать колокализацию сигналов.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** Положительная корреляция (r_spearman > 0.6, p < 0.01) между интенсивностью сигнала GT335 на материнской центриоли и числом зарегистрированных делий клетки.
+    1.  **Подтверждение CEDAR:** Положительная корреляция (r_spearman > 0.6, p < 0.01) между интенсивностью сигнала GT335 на материнской центриоли и числом зарегистрированных делий клетки.
     2.  **Слабое подтверждение:** Положительная корреляция (0.3 < r < 0.6, p < 0.05).
     3.  **Неопределённость:** Корреляция отсутствует или слабая (r < 0.3, p > 0.05), но методология вызывает сомнения (например, низкий сигнал).
     4.  **Фальсификация:** Статистически значимая отрицательная или нулевая корреляция (r ≈ 0, p > 0.1) при адекватной мощности выборки и чувствительности метода. Это нанесёт серьёзный удар по C1 для HSC.
@@ -1072,7 +1072,7 @@ cell-dt/
 ### Тест FT1.2: Визуализация асимметричного наследования центриоли при делении HSC ex vivo
 *   **Метод:** Культивирование одиночных HSC в микролунках с матриксом. Трансдукция конструктом, экспрессирующим флуоресцентно меченый маркёр материнской центриоли (например, CEP170-GFP) и маркёр клеточной судьбы (например, Histone H2B-mCherry для отслеживания хроматина). С помощью live-cell imaging отслеживать деление и фиксировать, какая из дочерних клеток (стволовая или дифференцирующаяся) наследует помеченную материнскую центриоль. Использовать антитела к поверхностным маркёрам (CD150, CD48) для пост-фактум идентификации судьбы.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** В >70% отслеженных асимметричных делений старая материнская центриоль наследуется клеткой, демонстрирующей стволовой фенотип (CD150+ CD48-).
+    1.  **Подтверждение CEDAR:** В >70% отслеженных асимметричных делений старая материнская центриоль наследуется клеткой, демонстрирующей стволовой фенотип (CD150+ CD48-).
     2.  **Слабое подтверждение:** Наследование в 55-70% случаев.
     3.  **Неопределённость:** Отсутствие чёткой картины (40-55%), возможно, из-за технических артефактов или неоднородности популяции.
     4.  **Фальсификация:** Чёткое отсутствие асимметрии (<40%) или предпочтительное наследование дифференцирующейся дочерью. Это опровергнет C2 для HSC.
@@ -1086,21 +1086,21 @@ cell-dt/
 ### Тест FT2.1: Одноклеточная корреляция PTM, сигналинга и судьбы
 *   **Метод:** Анализ на фиксированных клетках. После сортировки HSC проводить intracellular staining на polyGlu (GT335), активную форму нижележащего эффектора Shh (Gli1) или Wnt (нефосфорилированный β-катенин), а также маркёры ранней дифференцировки. Использовать масс-цитометрию (CyTOF) или сверхразрешающую микроскопию для одновременного измерения.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** Сильная отрицательная корреляция между интенсивностью GT335 (в центриолярной области) и интенсивностью сигнала Gli1/β-катенин (r < -0.5). Клетки с высоким GT335 чаще экспрессируют маркёры дифференцировки.
+    1.  **Подтверждение CEDAR:** Сильная отрицательная корреляция между интенсивностью GT335 (в центриолярной области) и интенсивностью сигнала Gli1/β-катенин (r < -0.5). Клетки с высоким GT335 чаще экспрессируют маркёры дифференцировки.
     2.  **Слабое подтверждение:** Умеренная отрицательная корреляция (-0.3 > r > -0.5).
     3.  **Неопределённость:** Слабая или отсутствующая корреляция, но потенциально маскируемая шумом измерений.
     4.  **Фальсификация:** Отсутствие корреляции или положительная корреляция. Это поставит под сомнение причинно-следственную связь PTM → сигналинг → судьба.
 
 ## Проблема OP3: Доминирование эпигенетического параметра в Sobol-анализе
 
-**Описание:** Глобальный анализ чувствительности (Sobol) выявил доминирование параметра `epigenetic_rate`. Это может означать, что: а) эпигенетический дрейф — более сильный драйвер наблюдаемых фенотипов; б) CDATA-процесс является downstream эффектом эпигенетических изменений; в) это артефакт упрощённой аналитической модели.
+**Описание:** Глобальный анализ чувствительности (Sobol) выявил доминирование параметра `epigenetic_rate`. Это может означать, что: а) эпигенетический дрейф — более сильный драйвер наблюдаемых фенотипов; б) CEDAR-процесс является downstream эффектом эпигенетических изменений; в) это артефакт упрощённой аналитической модели.
 
 **Приоритет:** **P1 (Высокий)**
 
 ### Тест FT3.1: Ablation-анализ в полной ODE-модели
-*   **Метод:** Провести Sobol-анализ на полной ODE-реализации модели CDATA в Cell-DT (Rust), а не на её аналитическом приближении. Сравнить ранги и индексы чувствительности параметров.
+*   **Метод:** Провести Sobol-анализ на полной ODE-реализации модели CEDAR в Cell-DT (Rust), а не на её аналитическом приближении. Сравнить ранги и индексы чувствительности параметров.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** В полной ODE-модели доминирование `epigenetic_rate` существенно снижается (S1 < 0.2), а относительный вклад центриолярных параметров (`alpha`, `nu`) возрастает.
+    1.  **Подтверждение CEDAR:** В полной ODE-модели доминирование `epigenetic_rate` существенно снижается (S1 < 0.2), а относительный вклад центриолярных параметров (`alpha`, `nu`) возрастает.
     2.  **Слабое подтверждение:** `epigenetic_rate` остаётся главным, но разрыв с `alpha` уменьшается.
     3.  **Неопределённость:** Картина не меняется.
     4.  **Фальсификация (для текущей формулировки):** Доминирование `epigenetic_rate` усиливается, указывая на то, что эпигенетика — первичный драйвер, а центриолярное повреждение — вторичный или сопутствующий процесс. Потребуется пересмотр иерархии в MCAOA.
@@ -1114,7 +1114,7 @@ cell-dt/
 ### Тест FT4.1: Зависимость времени генерации от уровня PTM в отслеживаемых клонах
 *   **Метод:** Используя систему отслеживания делений in vivo (например, Doxycycline-inducible H2B-GFP dilution), выделять клоны HSC с разной историей делений. Оценивать их PTM-статус (косвенно или напрямую, если метод станет доступен). Сравнивать рассчитанное время генерации для клонов с высоким и низким предполагаемым PTM.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** Клоны с предполагаемым высоким PTM имеют статистически значимо большее время генерации.
+    1.  **Подтверждение CEDAR:** Клоны с предполагаемым высоким PTM имеют статистически значимо большее время генерации.
     2.  **Опровержение:** Время генерации не зависит от PTM-статуса клона.
     3.  **Неопределённость:** Данные слишком шумные для вывода.
 
@@ -1127,7 +1127,7 @@ cell-dt/
 ### Тест FT5.1: Сравнительный анализ наследования и накопления
 *   **Метод:** Литературный мета-анализ и теоретическое моделирование. Для каждого кандидата (центриоль, ядерные поры, липофусцин) оценить: а) Доказательства асимметричного наследования в HSC; б) Доказательства линейного накопления с делениями; в) Доказательства прямого функционального ущерба для самообновления.
 *   **Критерии:**
-    1.  **Подтверждение CDATA:** Только центриоль имеет убедительные, хотя и неполные, доказательства по всем трём пунктам. Остальные кандидаты проваливают хотя бы один критерий.
+    1.  **Подтверждение CEDAR:** Только центриоль имеет убедительные, хотя и неполные, доказательства по всем трём пунктам. Остальные кандидаты проваливают хотя бы один критерий.
     2.  **Опровержение:** Найдён другой кандидат с равными или более сильными доказательствами по всем трём критериям для HSC.
 
 ## Проблема OP6: Предсказание P6 (Фенотип CCP1 KO) и его обратимость
@@ -1162,9 +1162,9 @@ name = "cdata_backend"
 version = "0.1.0"
 edition = "2021"
 authors = ["LC Team"]
-description = "CDATA subproject backend - Centriolar Damage Accumulation Theory of Aging"
+description = "CEDAR subproject backend - Centriolar Entropy-Damage Accumulation Ratchet"
 license = "MIT"
-repository = "https://github.com/LC/CDATA"
+repository = "https://github.com/LC/CEDAR"
 readme = "README.md"
 
 [[bin]]
@@ -1212,7 +1212,7 @@ panic = "abort"
 ```
 ### `frontend/mix.exs` (1904 chars)
 ```exs
-defmodule CDATAFrontend.MixProject do
+defmodule CEDARFrontend.MixProject do
   use Mix.Project
 
   def project do
@@ -1232,7 +1232,7 @@ defmodule CDATAFrontend.MixProject do
 
   def application do
     [
-      mod: {CDATAFrontend.Application, []},
+      mod: {CEDARFrontend.Application, []},
       extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
@@ -1339,7 +1339,7 @@ CMD ["cdata_backend"]
 ```
 ### code `crates/cell_dt_cli/src/main.rs`
 ```
-//! CDATA CLI (MCAOA Counter #1) — simple trajectory output matching
+//! CEDAR CLI (MCAOA Counter #1) — simple trajectory output matching
 //! the interface of telomere-sim, mito_ros-sim, etc.
 
 use std::env;
@@ -1395,7 +1395,7 @@ fn main() {
 ```
 ### code `crates/cell_dt_gui/src/main.rs`
 ```
-/// CDATA v3.0 — Desktop GUI (eframe / egui)
+/// CEDAR v3.0 — Desktop GUI (eframe / egui)
 ///
 /// Layout:
 ///   Left  (200px) — preset + interventions + age cursor
@@ -1422,7 +1422,7 @@ struct VarMeta {
 
 const VARS: [VarMeta; 9] = [
     VarMeta { name:"Centriole Damage", unit:"index 0–1",
-        description:"Core CDATA. Irreversible centriolar DNA damage.\nα=0.0082 · ν(t) · (1−Π(t))",
+        description:"Core CEDAR. Irreversible centriolar DNA damage.\nα=0.0082 · ν(t) · (1−Π(t))",
         y_max:1.0, warn:0.40, crit:0.70, bad_is_high:true },
     VarMeta { name:"Stem Cell Pool", unit:"fraction",
         description:"Residual regenerative capacity.\n= 1 − damage × 0.8. Below 0.3 → regen failure.",
@@ -1497,7 +1497,7 @@ async fn main() -> Result<(), AppError> {
         .with(tracing_subscriber::fmt::layer())
         .init();
 
-    info!("Starting CDATA backend v{}", env!("CARGO_PKG_VERSION"));
+    info!("Starting CEDAR backend v{}", env!("CARGO_PKG_VERSION"));
 
     // Load configuration
     let config = Config::from_env()

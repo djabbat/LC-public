@@ -27,13 +27,13 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be undersampled.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; excursions beyond these limits may affect cell health.\n4. **No physical manipulation:** Media changes and drug additions are human-performed; potential for inconsistency.\n5. **Generalizability:** Validated only for CDATA-class protocols; applicability to other assays (e.g., Telomere, MitoROS) is assumed but not tested.\n6. **AI model specificity:** Claude Code agent is a black-box LLM; performance may degrade with model updates or domain shifts.\n7. **Cost estimate:** BOM of $4,500 excludes consumables, labor, and maintenance; total cost of ownership may be higher.\n8. **Replication scope:** Independent validation at a second site is planned but not yet executed (site TBD)."
+    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** ≤2/hour; faster dynamics (e.g., mitotic events) may be undersampled.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂; excursions beyond these limits may affect cell health.\n4. **No physical manipulation:** Media changes and drug additions are human-performed; potential for inconsistency.\n5. **Generalizability:** Validated only for CEDAR-class protocols; applicability to other assays (e.g., Telomere, MitoROS) is assumed but not tested.\n6. **AI model specificity:** Claude Code agent is a black-box LLM; performance may degrade with model updates or domain shifts.\n7. **Cost estimate:** BOM of $4,500 excludes consumables, labor, and maintenance; total cost of ownership may be higher.\n8. **Replication scope:** Independent validation at a second site is planned but not yet executed (site TBD)."
   },
   {
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Consortium / partners",
-    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Framework coordination, funding | Active |\n| CDATA team | First user, validation experiments | Active |\n| OpenFlexure community | Hardware design, open-source support | Consulted |\n| University microscopy core facility | Independent validation site | TBD (contact: TBD) |\n| AI safety consultant | Audit of bounded autonomy policy | TBD |\n| Electronics workshop | PCB design, assembly | Confirmed |"
+    "body": "| Partner | Role | Status |\n|---------|------|--------|\n| LC | Framework coordination, funding | Active |\n| CEDAR team | First user, validation experiments | Active |\n| OpenFlexure community | Hardware design, open-source support | Consulted |\n| University microscopy core facility | Independent validation site | TBD (contact: TBD) |\n| AI safety consultant | Audit of bounded autonomy policy | TBD |\n| Electronics workshop | PCB design, assembly | Confirmed |"
   },
   {
     "file": "/CONCEPT.md",

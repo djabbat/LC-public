@@ -29,7 +29,7 @@
    OSF identifier `osf.io/automicroscopy_cdata` (placeholder) + date 2026-06-01.
 
 3. **Sample size calc (power analysis)** — **✓**  
-   Для CDATA: n=(1.96+0.84)²·(0.4²+0.4²)/0.3² = 28.4 → 30 per group, Cohen’s d=0.75.  
+   Для CEDAR: n=(1.96+0.84)²·(0.4²+0.4²)/0.3² = 28.4 → 30 per group, Cohen’s d=0.75.  
    Для contamination — TBD (неполнота, но главная гипотеза покрыта).
 
 4. **Risk matrix ≥5 rows** — **✓**  

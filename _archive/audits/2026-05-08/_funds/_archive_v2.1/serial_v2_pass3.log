@@ -178,8 +178,8 @@
 [2026-05-08 17:36:56] ========== Proteostasis DONE (final verdict: REJECT) ==========
 
 [2026-05-08 17:36:56] 
-========== CDATA START ==========
-[2026-05-08 17:36:56]   CDATA iter 1
+========== CEDAR START ==========
+[2026-05-08 17:36:56]   CEDAR iter 1
 [2026-05-08 17:39:34] 
 ========== AutomatedMicroscopy START ==========
 [2026-05-08 17:39:34]   AutomatedMicroscopy iter 1

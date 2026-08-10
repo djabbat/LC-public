@@ -175,7 +175,7 @@ defmodule MCAOAFrontend.BackendClient do
         status: "active",
         coupling_strength: 0.2,
         measurement_method: "GT335 mass-spec",
-        subproject: "CDATA"
+        subproject: "CEDAR"
       },
       %{
         id: "mitochondrial",

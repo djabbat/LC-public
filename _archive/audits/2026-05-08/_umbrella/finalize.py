@@ -222,7 +222,7 @@ def build_executive_header() -> str:
 
 1. **Систематическое нарушение правила «Rust + Phoenix only»** — Python/Arduino/PHP/Node присутствуют в большинстве проектов (LC_AutomatedMicroscopy, LC_HAP, LC_MCOA, srv_drjaba, srv_books, srv_longevity и др.), без чёткого scaffolding-плана миграции.
 2. **Отсутствие исполняемого кода** — >50% «проектов» это концептуальные packs из markdown без целевого стека.
-3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CDATA два damage-уравнения; GLA_Annals JCAL vs ARS).
+3. **Дублирование/противоречия в core-файлах** — README ≠ CONCEPT ≠ DESIGN ≠ PARAMETERS внутри одного проекта (LC_BioSense v*; LC_CEDAR два damage-уравнения; GLA_Annals JCAL vs ARS).
 4. **Бинарные артефакты в git** — десятки .docx, .pdf, старых снапшотов в LC_Ze, LC_MCOA, GLA, PhD/sources_pdfs.
 5. **Полное отсутствие CI/CD, тестов, lock-файлов** — кроме `Iqalto/iqalto-core` (8 unit-тестов, и те с ошибкой) ни один проект не имеет работающей test-suite.
 6. **Несогласованность параметров между подпроектами LC** — `v*`, `α`, `β`, `τ` в PARAMETERS.md разных модулей не унифицированы; нет shared-крейта типов.

@@ -1,4 +1,4 @@
-defmodule CDATAFrontendWeb.Telemetry do
+defmodule CEDARFrontendWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 

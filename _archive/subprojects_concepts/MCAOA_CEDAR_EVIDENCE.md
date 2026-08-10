@@ -1,4 +1,4 @@
-# CDATA — Empirical Foundations
+# CEDAR — Empirical Foundations
 
 **Last verification date:** 2026‑04‑25
 **Status:** Current as per CORRECTIONS_2026‑04‑22 and update 2026‑04‑25.
@@ -47,7 +47,7 @@ These sample sizes are achievable with the 30+30 mice budgeted (approximately 20
 |---------|-----------------|------------|--------|------------|
 | R1 | GT335 staining fails to detect polyGlu in HSC centrioles due to low abundance | Medium | High | Use validated protocol from pilot; include positive controls (brain sections); test STED to enhance signal. |
 | R2 | HSC yield from mouse bone marrow insufficient for planned sample size | Low | High | Use 30+30 mice; isolate from pooled femur/tibia; if low, repeat isolation from additional animals (contingency budget). |
-| R3 | Asymmetric inheritance (C2) not observed in HSC (Ninein positive) | Low | Critical | Alternative: use CEP170; if still negative, consider that HSC may differ from neural/T‑cells; then CDATA would be falsified for blood. |
+| R3 | Asymmetric inheritance (C2) not observed in HSC (Ninein positive) | Low | Critical | Alternative: use CEP170; if still negative, consider that HSC may differ from neural/T‑cells; then CEDAR would be falsified for blood. |
 | R4 | Live‑cell imaging of HSC divisions causes phototoxicity, affecting division outcome | Medium | Medium | Use low‑light imaging; limit acquisition to first two divisions; validate with brightfield controls. |
 | R5 | CCP1‑KO mice show embryonic or early postnatal lethality | Low | High | Use conditional KO (Vav‑iCre); Dr. Y has experience; back‑up: inducible KO. |
 | R6 | Pre‑registration delays due to IRB/IACUC approval timing | Medium | Low | Submit IACUC protocol immediately after award; pre‑register study design on OSF before data collection. |

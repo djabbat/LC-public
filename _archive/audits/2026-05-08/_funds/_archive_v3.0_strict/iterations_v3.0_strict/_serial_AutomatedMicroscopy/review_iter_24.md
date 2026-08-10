@@ -25,7 +25,7 @@
    - Указан OSF ID `osf.io/TBD` (невалидный placeholder) и дата 2026-06-01. Требуется осмысленный placeholder (например, `osf.io/automicroscopy_cdata`). Текущий "TBD" недопустим.
 
 3. **Sample size calc (power analysis): ✗**
-   - Для concordance есть корректный расчёт (N=286), для CDATA эксперимента (N=60), для uptime фиксированное N=180. Но для contamination N=TBD, для cost – дескриптивно. Для secondary endpoints power analysis отсутствует.
+   - Для concordance есть корректный расчёт (N=286), для CEDAR эксперимента (N=60), для uptime фиксированное N=180. Но для contamination N=TBD, для cost – дескриптивно. Для secondary endpoints power analysis отсутствует.
 
 4. **Risk matrix ≥5 rows: ✓**
    - В CONCEPT.md две версии risk matrix (по 6 строк каждая), с probability, impact, mitigation. Требование выполнено.
@@ -43,7 +43,7 @@
    - В CONCEPT.md обнаружены множественные "TBD" в sample size calculation, "DOI TBD" в evidence base, "TBD (additional partner)" – там, где должны быть конкретные данные. Это нарушает правило.
 
 9. **Internal consistency core docs: ✓**
-   - CONCEPT.md, THEORY.md, EVIDENCE.md согласованы: методы описаны в CONCEPT и детализированы в THEORY, цели соответствуют CDATA. Stub-файлы (PARAMETERS, OPEN_PROBLEMS, DESIGN) не противоречат, но пусты – это не нарушение консистентности.
+   - CONCEPT.md, THEORY.md, EVIDENCE.md согласованы: методы описаны в CONCEPT и детализированы в THEORY, цели соответствуют CEDAR. Stub-файлы (PARAMETERS, OPEN_PROBLEMS, DESIGN) не противоречат, но пусты – это не нарушение консистентности.
 
 10. **Evidence base depth (≥3 indep refs/claim, sys-review or meta-analysis cited, contradicting results addressed): ✗**
     - Ключевое утверждение "low-cost microscope retrofit feasible" опирается только на OpenFlexure (1 peer-reviewed) + manufacturer specs. Не ≥3 независимых.

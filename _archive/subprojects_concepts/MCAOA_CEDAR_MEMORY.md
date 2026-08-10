@@ -1,9 +1,9 @@
-# CDATA — Memory
+# CEDAR — Memory
 
 ## History of Decisions
 
 ### 2024-01-15 — Project Initialization
-- **Decision:** CDATA project created
+- **Decision:** CEDAR project created
 - **Rationale:** Need for structuring and centralizing data across multiple sources; previous ad‑hoc methods caused inconsistencies and duplication.
 - **Alternatives Considered:**
   - Use existing wiki (rejected due to lack of version control)

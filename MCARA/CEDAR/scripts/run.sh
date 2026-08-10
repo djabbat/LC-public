@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ──────────────────────────────────────────────────────────────────────────────
-# CDATA v3.0 — Cell-DT Digital Twin Simulator
+# CEDAR v3.0 — Cell-DT Digital Twin Simulator
 # Main launcher script
 # ──────────────────────────────────────────────────────────────────────────────
 set -e
@@ -11,8 +11,8 @@ cd "$PROJECT_DIR"
 BOLD='\033[1m'; CYAN='\033[0;36m'; GREEN='\033[0;32m'; RED='\033[0;31m'; NC='\033[0m'
 
 echo -e "${BOLD}${CYAN}╔══════════════════════════════════════════════╗${NC}"
-echo -e "${BOLD}${CYAN}║   CDATA v3.0 — Cell-DT Digital Twin         ║${NC}"
-echo -e "${BOLD}${CYAN}║   Centriolar Damage Accumulation Theory      ║${NC}"
+echo -e "${BOLD}${CYAN}║   CEDAR v3.0 — Cell-DT Digital Twin         ║${NC}"
+echo -e "${BOLD}${CYAN}║   Centriolar Entropy-Damage Accumulation Ratchet      ║${NC}"
 echo -e "${BOLD}${CYAN}╚══════════════════════════════════════════════╝${NC}"
 echo ""
 
@@ -105,7 +105,7 @@ case "$CMD" in
         ;;
 
     gui)
-        echo -e "${BOLD}Starting CDATA Streamlit GUI...${NC}"
+        echo -e "${BOLD}Starting CEDAR Streamlit GUI...${NC}"
         if ! command -v streamlit &>/dev/null; then
             echo "Installing streamlit..."
             pip install streamlit matplotlib numpy

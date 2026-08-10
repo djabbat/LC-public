@@ -1,15 +1,15 @@
-# CDATA — Parameters
+# CEDAR — Parameters
 
 ## Project Overview
 
-CDATA is a lightweight data transformation and validation framework designed for modern cloud-native applications. It provides a declarative schema language, runtime validation, and seamless integration with popular data pipelines.
+CEDAR is a lightweight data transformation and validation framework designed for modern cloud-native applications. It provides a declarative schema language, runtime validation, and seamless integration with popular data pipelines.
 
 ## Goals & Tasks
 
 | Priority | Task | Deadline | Status |
 |----------|------|----------|--------|
 | P0 | Implement core schema parser and validator | upon approval | In progress |
-| P0 | Define and document the CDATA schema language (v0.1) | after prerequisite tasks | Planned |
+| P0 | Define and document the CEDAR schema language (v0.1) | after prerequisite tasks | Planned |
 | P1 | Build CLI tool for schema compilation and validation | after previous milestone | Planned |
 | P1 | Create Python SDK with full API coverage | after previous milestone | Planned |
 | P1 | Write comprehensive user documentation and examples | after previous milestone | Planned |

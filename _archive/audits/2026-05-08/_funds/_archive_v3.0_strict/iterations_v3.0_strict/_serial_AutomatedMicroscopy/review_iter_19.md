@@ -25,7 +25,7 @@
    Указан OSF (placeholder `osf.io/TBD`), дата 2026-06-01, описание содержимого. Плейсхолдер допустим.
 
 3. **Sample size calc (power analysis)** – ✓  
-   Для CDATA эксперимента: формула, подстановки, α=0.05, power=0.80, N=30/group. Для M1: N=286. Для contamination – TBD, но основной endpoint покрыт.
+   Для CEDAR эксперимента: формула, подстановки, α=0.05, power=0.80, N=30/group. Для M1: N=286. Для contamination – TBD, но основной endpoint покрыт.
 
 4. **Risk matrix ≥5 rows** – ✓  
    Две матрицы по 6 строк, суммарно ≥5. Указаны probability (1-5) и impact (1-5) с mitigation.

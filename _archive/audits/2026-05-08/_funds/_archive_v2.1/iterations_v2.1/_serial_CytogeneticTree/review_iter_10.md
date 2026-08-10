@@ -39,7 +39,7 @@
 **Version:** v1.0 (initial scaffolding)
 **Date:** 2026-04-21
 **Status:** 🟡 Active (new LC subproject)
-**Parent umbrella:** `~/Desktop/LC/` (coordinator of CDATA, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
+**Parent umbrella:** `~/Desktop/LC/` (coordinator of CEDAR, FCLC, Ze, BioSense, MCAOA, HAP, Ontogenesis, AutomatedMicroscopy, and now CytogeneticTree)
 
 ---
 
@@ -61,7 +61,7 @@ Such a tree would reveal:
 2. **Which asymmetric divisions conserve youth** vs squander it (regenerative vs senescent fates)
 3. **Where differentiation commitment happens** in terms of centriole inheritance
 4. **The full DAG from zygote to terminally-differentiated somatic cell**
-5. **Empirical validation of CDATA** — do "old-centriole lineages" proliferate less, as predicted?
+5. **Empirical validation of CEDAR** — do "old-centriole lineages" proliferate less, as predicted?
 
 ---
 

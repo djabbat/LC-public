@@ -27,7 +27,7 @@
     "file": "/CONCEPT.md",
     "action": "append_section",
     "heading": "## Limitations",
-    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** Limited to ≤2/hour; not suitable for fast kinetic assays.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂ tolerance may be insufficient for temperature-sensitive mutants.\n4. **No physical manipulation:** Media changes and drug additions must be performed manually, introducing variability.\n5. **Single microscope platform:** Validation only on Zeiss IM 35; transferability to other models not tested.\n6. **AI model dependency:** Performance tied to Claude Code agent; updates or deprecation may affect reproducibility.\n7. **Generalizability:** Tested only on CDATA-class protocols; applicability to other assays (e.g., MitoROS, Telomere) not yet demonstrated."
+    "body": "1. **Sample stability:** Protocol assumes ≥3 weeks stability; degradation beyond this window not validated.\n2. **Imaging frequency:** Limited to ≤2/hour; not suitable for fast kinetic assays.\n3. **Environmental control:** ±0.5°C, ±0.5% CO₂ tolerance may be insufficient for temperature-sensitive mutants.\n4. **No physical manipulation:** Media changes and drug additions must be performed manually, introducing variability.\n5. **Single microscope platform:** Validation only on Zeiss IM 35; transferability to other models not tested.\n6. **AI model dependency:** Performance tied to Claude Code agent; updates or deprecation may affect reproducibility.\n7. **Generalizability:** Tested only on CEDAR-class protocols; applicability to other assays (e.g., MitoROS, Telomere) not yet demonstrated."
   },
   {
     "file": "/CONCEPT.md",

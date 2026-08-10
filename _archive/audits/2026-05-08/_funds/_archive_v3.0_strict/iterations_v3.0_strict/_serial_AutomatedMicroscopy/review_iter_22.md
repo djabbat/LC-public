@@ -25,7 +25,7 @@
    OSF ID: `osf.io/TBD`, planned date 2026-06-01. Плейсхолдер допустим, дата указана.
 
 3. **✓ Sample size calc (power analysis)**  
-   Для CDATA: n = (1.96+0.84)² × (0.4²+0.4²) / 0.3² = 28.4 → 30 cells/group, α=0.05, power=0.80, Cohen's d=0.75. Формула и подстановка приведены.
+   Для CEDAR: n = (1.96+0.84)² × (0.4²+0.4²) / 0.3² = 28.4 → 30 cells/group, α=0.05, power=0.80, Cohen's d=0.75. Формула и подстановка приведены.
 
 4. **✓ Risk matrix ≥5 rows**  
    В CONCEPT.md две матрицы по 6 рисков с Probability/Impact и mitigation. ≥5.

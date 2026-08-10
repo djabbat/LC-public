@@ -22,7 +22,7 @@
 - [ ] Read `BioSense/CONCEPT.md` — ensure "hypothesis-stage exploratory" prominent in §1; weights post-hoc disclosed
 - [ ] Read `FCLC/CONCEPT.md` — threat model uniformly "semi-honest server only; not active"
 - [ ] Read `MCAOA/CONCEPT.md` — add M4 operational threshold (N≥2000, α=0.001, partial r²<0.05)
-- [ ] Read `CDATA/CONCEPT.md` — status "inconclusive (Sobol p=0.12)" added
+- [ ] Read `CEDAR/CONCEPT.md` — status "inconclusive (Sobol p=0.12)" added
 - [ ] (none of these block runtime; documentation alignment only)
 
 ## Phase 2 — Social layer code edits (per DESIGN §5)
@@ -67,9 +67,9 @@
 ## Phase 5 — Long-term scientific
 
 - [ ] N≥2000 pre-registered cohort acquisition (UK Biobank wearable subset OR All-of-Us OR Аqтивиребули pilot)
-- [ ] Cell-DT v4.0 build for full Sobol decomposition (CDATA)
+- [ ] Cell-DT v4.0 build for full Sobol decomposition (CEDAR)
 - [ ] Swept-v* falsification protocol on N≥2000 (BioSense)
-- [ ] Bridge to CDATA simplification (5 params → 2 params or theory-derived)
+- [ ] Bridge to CEDAR simplification (5 params → 2 params or theory-derived)
 - [ ] EEGLAB/EDF Rust readers (BioSense Phase 2)
 
 ## Deferred / not now

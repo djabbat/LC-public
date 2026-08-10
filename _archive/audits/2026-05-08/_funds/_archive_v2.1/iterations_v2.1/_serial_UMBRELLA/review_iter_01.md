@@ -55,7 +55,7 @@
    *Привести power analysis для **первичного исхода pre‑registration** (partial r² χ_Ze vs. all‑cause mortality): задайте ожидаемый effect size (r² или partial r²), α, мощность, полученное N.*
 
 5. **`UMBRELLA/CONCEPT.md` §9 (Limitations)**  
-   *Добавить ограничение: "Multimodal weights (0.30,0.30,0.20,0.20) получены на N=150 без внешней репликации; статус CDATA – inconclusive (Sobol p=0.12)."*
+   *Добавить ограничение: "Multimodal weights (0.30,0.30,0.20,0.20) получены на N=150 без внешней репликации; статус CEDAR – inconclusive (Sobol p=0.12)."*
 
 ---
 

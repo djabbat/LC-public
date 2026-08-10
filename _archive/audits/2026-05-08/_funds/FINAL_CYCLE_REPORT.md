@@ -19,7 +19,7 @@
 | AIM | REVISE_MINOR | 1 | ✅ ACCEPT |
 | AutomatedMicroscopy | FUND_AS_IS | 2 | ✅ ACCEPT |
 | BioSense | FUND_AS_IS | 1 | ✅ ACCEPT |
-| CDATA | REVISE_MINOR | 4 | ✅ ACCEPT |
+| CEDAR | REVISE_MINOR | 4 | ✅ ACCEPT |
 | CytogeneticTree | REVISE_MAJOR | 14 | ⚠️ PLATEAU |
 | EpigeneticDrift | FUND_AS_IS | 1 | ✅ ACCEPT |
 | HAP | REVISE_MINOR | 5 | ✅ ACCEPT |

@@ -416,7 +416,7 @@ Before data collection:
 | **Address** | 42 Rustaveli, Resort Abastumani, Georgia |
 | **Email** | jaba@longevity.ge |
 | **Background** | MD Tbilisi State Medical University; clinical residency Institute of Psychiatry Tbilisi |
-| **Theoretical contribution** | Originator of CEDAR (Centriolar Damage Accumulation Theory of Aging), Counter #1 в MCARA |
+| **Theoretical contribution** | Originator of CEDAR (Centriolar Entropy-Damage Accumulation Ratchet), Counter #1 в MCARA |
 
 **Note:** This PI applies к ALL projects under GLA/LC umbrella unless explicitly overridden. Replace any `[TODO: PI name]`, `Lead PI: TBD`, `Principal Investigator: TBD` placeholders с этим блоком.
 

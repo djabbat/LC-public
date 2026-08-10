@@ -31,7 +31,7 @@
 3. **Sample size calc (power analysis) — ✗**
    Power analysis для concordance M1 есть (N=286), для uptime (180 days fixed), для contamination (TBD). Однако:
    - **Для contamination N = TBD** — не завершено.
-   - **Для основного CDATA эксперимента** используется формула n = (Z_α/2 + Z_β)² · σ² / δ², но **σ и δ — placeholder** ("TBD from pilot"). Без конкретных чисел это не sample size calc, а шаблон.
+   - **Для основного CEDAR эксперимента** используется формула n = (Z_α/2 + Z_β)² · σ² / δ², но **σ и δ — placeholder** ("TBD from pilot"). Без конкретных чисел это не sample size calc, а шаблон.
    - **Design effect** — placeholder "TBD", хотя указан 1.2 как conservative estimate (противоречие самому себе).
    - **Не указан метод коррекции множественных сравнений** (три Aim), хотя power считалась для одного теста.
 
@@ -70,7 +70,7 @@
    - **CONCEPT.md** и **THEORY.md** имеют разную структуру falsifiability (THEORY.md не содержит числовых порогов и power analysis, только общие критерии).
    - **Risk matrix дублируется** с разными форматами.
    - **Limitations в EVIDENCE.md** — шестой пункт: "Single‑field‑of‑view only" — противоречит CONCEPT.md, где указаны multiple FOV (6-12 FOVs per condition).
-   - **Sample size** в CONCEPT.md — две разные формулы: одна для CDATA (без указания, что это) и одна для concordance (M1). Не согласованы.
+   - **Sample size** в CONCEPT.md — две разные формулы: одна для CEDAR (без указания, что это) и одна для concordance (M1). Не согласованы.
    - **Consortium** — в CONCEPT.md другие партнёры, чем в DESIGN.md (Cambridge vs Zurich, EMBL vs Max Planck).
 
 ## Reference audit (обязательная таблица — все ссылки компонента)

@@ -39,7 +39,7 @@
 |---|---|---|
 | TOXIC_WITHDRAW | 1 | UMBRELLA |
 | REJECT | 8 | AIM, EpigeneticDrift, HAP, MCAOA, MitoROS, Proteostasis, Telomere, Ze |
-| REVISE_MAJOR | 4 | AutomatedMicroscopy, BioSense, CDATA, CytogeneticTree |
+| REVISE_MAJOR | 4 | AutomatedMicroscopy, BioSense, CEDAR, CytogeneticTree |
 | REVISE_MINOR / FUND_AS_IS | 0 | — |
 
 **Средний score экосистемы:** 2.0/5 (баллы Premise/Method/Evidence/Falsif/Deliv/Novelty/Risk → 2-3-2-3-2-3-2). Серьёзные фонды требуют 4+.
@@ -52,13 +52,13 @@
 - **218/219 PMID валидны** ✓ (одна не найдена: PMID 27249423)
 - **104/129 DOI в Crossref**, +3 Zenodo (DataCite), +1 Longevity Horizon internal, **+21 FAKE** (нет ни в одном реестре, doi.org=404)
 - **🔴 19 PMID↔DOI mismatches** — реальный PMID указывает на статью, не имеющую отношения к описанию в тексте
-- Локализация: **AIM/docs/diffdiagnosis/EVIDENCE.md (12 mismatch + 4 fake)**, AutomatedMicroscopy/EVIDENCE.md (3+1), CDATA/EVIDENCE.md (0+6), Proteostasis/EVIDENCE.md (0+2)
+- Локализация: **AIM/docs/diffdiagnosis/EVIDENCE.md (12 mismatch + 4 fake)**, AutomatedMicroscopy/EVIDENCE.md (3+1), CEDAR/EVIDENCE.md (0+6), Proteostasis/EVIDENCE.md (0+2)
 
 ### 2. Подозрительный DOI prefix
 `10.64898/2026.03.26.714124v1` (BrainYears bioRxiv 2026) в Ze/CONCEPT.md и Ze/KNOWLEDGE.md — bioRxiv использует prefix `10.1101`, не `10.64898`. **Скорее всего выдуман.**
 
 ### 3. Все эмпирические результаты — hypothesis-stage / post-hoc / без confirmatory
-- CDATA Sobol p=0.12 (inconclusive)
+- CEDAR Sobol p=0.12 (inconclusive)
 - Ze v1 NULL на 3 cohort'ах (Cuban EEG / Dortmund Vital / MPI-LEMON), v2 χ_Ze — post-hoc reformulation
 - BioSense χ_Ze MCID на N=12, AUC=0.81 на All-of-Us N=2222 — exploratory с p-hacking risk
 - Ни один pre-registered протокол с α=0.001 не существует
@@ -86,14 +86,14 @@
 
 1. **Удалить 21 fabricated DOI и исправить 19 PMID↔DOI mismatches** во ВСЕХ файлах (см. `refs/REFERENCE_AUDIT_FINAL.md`). Не обращать в reverse через автоматический patcher (он часто меняет один fake на другой fake) — ручная проверка по PubMed для каждого случая.
 2. **Переместить HAP/, Ontogenesis/ в `_archive/`** с пометкой TOXIC. Очистить корневой CLAUDE.md.
-3. **Создать недостающие CLAUDE.md** для подпроектов: MCAOA, CDATA, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC.
-4. **Зарегистрировать на OSF.io** протоколы для BioSense (replication v*_active), CDATA (Sobol S1+S2 на GTEx), Ze (test-retest reliability χ_Ze).
+3. **Создать недостающие CLAUDE.md** для подпроектов: MCAOA, CEDAR, AutomatedMicroscopy, Telomere, MitoROS, EpigeneticDrift, Proteostasis, FCLC.
+4. **Зарегистрировать на OSF.io** протоколы для BioSense (replication v*_active), CEDAR (Sobol S1+S2 на GTEx), Ze (test-retest reliability χ_Ze).
 5. **Развернуть social server (Rust/Axum) и BioSense backend** на сервере — иначе все утверждения о работающей платформе технически некорректны.
 
 ## 12-WEEK PLAN (до 31 июля 2026)
 
 1. Полный аудит всех ссылок через API (PubMed/Crossref/DataCite) → REFERENCE_AUDIT_REPORT.md.
-2. Один экспериментальный proof-of-concept (например, CDATA C1 на HSC мышах: n=3, 3 возраста, sortinp + IF, blinded). Pre-registration, препринт.
+2. Один экспериментальный proof-of-concept (например, CEDAR C1 на HSC мышах: n=3, 3 возраста, sortinp + IF, blinded). Pre-registration, препринт.
 3. Заключить ≥2 signed EU LoIs (MPI Leipzig, Karolinska, CNRS).
 4. CI/CD для umbrella (GitHub Actions): integration tests social layer + BioSense + Ze loopback.
 5. Унифицировать терминологию (POSTULATE, v*, hypothesis-stage маркеры) между подпроектами.
@@ -105,7 +105,7 @@
 
 - **Ze математический аппарат** (derivation v*_passive, Minkowski metric, Rust core)
 - **BioSense Rust core + biosense-web** (компилируется, нужен deploy)
-- **Cell-DT симулятор (CDATA)** — 161/161 тестов, Apache 2.0
+- **Cell-DT симулятор (CEDAR)** — 161/161 тестов, Apache 2.0
 - **FCLC v13** (semi-honest) — после v14 (Q1 2027) пригоден для GDPR
 
 Ничего из этого не подаётся самостоятельно без устранения проблем.
@@ -142,11 +142,11 @@
 
 В 12 файлах добавлен `<!-- REF_AUDIT_2026-05-08 -->` баннер и 36 inline маркеров рядом с проблемными строками. Это reversible:
 - AIM/docs/diffdiagnosis/EVIDENCE.md (16 markers)
-- CDATA/EVIDENCE.md (6)
+- CEDAR/EVIDENCE.md (6)
 - AutomatedMicroscopy/EVIDENCE.md (4)
 - Proteostasis/EVIDENCE.md (2)
 - Ze/UPGRADE.md, Ze/MEMORY.md, Ze/CONCEPT.md, Ze/KNOWLEDGE.md (4)
-- CytogeneticTree/KNOWLEDGE.md, CDATA/CONCEPT.md, HAP/LINKS.md, AIM/docs/ssa/EVIDENCE.md (4)
+- CytogeneticTree/KNOWLEDGE.md, CEDAR/CONCEPT.md, HAP/LINKS.md, AIM/docs/ssa/EVIDENCE.md (4)
 
 **НЕ применены auto patches** (опасны: часто меняют fake DOI на DOI другой статьи).
 

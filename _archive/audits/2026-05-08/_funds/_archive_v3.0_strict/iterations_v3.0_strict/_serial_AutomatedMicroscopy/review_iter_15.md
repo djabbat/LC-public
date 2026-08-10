@@ -55,7 +55,7 @@
 После аудита 2026-05-08 удалены все [REF_NEEDED] и [PMID_REMOVED]. Placeholders (TBD) для sample size – не фабрикационные маркеры, а открытые параметры. Выполнено.
 
 **9. Internal consistency core docs** — ✓  
-CONCEPT, THEORY, EVIDENCE согласованы: методология (AI supervision), цели (24/7 imaging для CDATA), predictions. Stubs (PARAMETERS, OPEN_PROBLEMS, DESIGN) не противоречат. Выполнено.
+CONCEPT, THEORY, EVIDENCE согласованы: методология (AI supervision), цели (24/7 imaging для CEDAR), predictions. Stubs (PARAMETERS, OPEN_PROBLEMS, DESIGN) не противоречат. Выполнено.
 
 **10. Evidence base depth (≥3 indep refs/claim, sys-review or meta-analysis cited, contradicting results addressed)** — ✗  
 (a) Ключевые утверждения:

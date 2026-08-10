@@ -1,4 +1,4 @@
-## Review of CDATA
+## Review of CEDAR
 
 ## Verdict
 **REJECT**

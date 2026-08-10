@@ -124,7 +124,7 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 ## Контекст
 
 - **Кандидат:** Джаба Ткемаладзе, MD (independent researcher)
-- **Тема:** Centriolar Damage Accumulation Theory of Aging (CDATA)
+- **Тема:** Centriolar Entropy-Damage Accumulation Ratchet (CEDAR)
 - **Язык диссертации:** грузинский (target Грузия) или английский (target ЕС/UNED/UNISA)
 - **Целевая защита:** Q1–Q2 2027
 
@@ -149,8 +149,8 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 
 ## Связь с экосистемой
 
-- **CDATA project** (`~/Desktop/LC/CDATA/`) — научная основа, диссертация = систематизация
-- **MCAOA** (`~/Desktop/LC/MCAOA/`) — диссертация содержит epilogue «CDATA as MCAOA Counter #2»
+- **CEDAR project** (`~/Desktop/LC/CEDAR/`) — научная основа, диссертация = систематизация
+- **MCAOA** (`~/Desktop/LC/MCAOA/`) — диссертация содержит epilogue «CEDAR as MCAOA Counter #2»
 - **E0 submodule** (`./E0/`, отдельный репозиторий `djabbat/E0`) — экспериментальный rig для Kaede-ablation, относится к диссертационной программе
 
 ## Startup Protocol
@@ -189,7 +189,7 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 ## Связь с auto-memory
 
 - `project_cdata_copi_candidates` — Impetus Phase A co-PI candidates
-- `feedback_mcoa_cdata_comparison` — MCAOA vs CDATA (связь с PhD)
+- `feedback_mcoa_cdata_comparison` — MCAOA vs CEDAR (связь с PhD)
 - `pubmed_authoritative` — 10 PMIDs authoritative
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
 
@@ -204,7 +204,7 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 ## Связь с другими проектами
 
 - `PhD` — диссертация, не Experiment 0 scope
-- `LC/CDATA` — theoretical basis
+- `LC/CEDAR` — theoretical basis
 - `LC/AutomatedMicroscopy` — параллельный AI-microscopy проект
 - `LC/MCAOA` — meta-framework, Counter integration
 - Impetus LOI / EIC Pathfinder — grants, не Experiment 0 scope
@@ -217,12 +217,12 @@ PhD by Published Works на основе совокупности 10 PubMed-ин
 ```
 ### `README.md` (2107 chars)
 ```md
-# PhD — Centriolar Damage Accumulation Theory of Aging
+# PhD — Centriolar Entropy-Damage Accumulation Ratchet
 
 PhD by Published Works — coherent programme of 10 PubMed-indexed publications.
 
 **Candidate:** Jaba Tqemaladze, MD
-**Topic:** Centriolar Damage Accumulation Theory of Aging (CDATA)
+**Topic:** Centriolar Entropy-Damage Accumulation Ratchet (CEDAR)
 **Language:** Georgian (Georgian programmes) or English (EU programmes)
 **Target defense:** Q1–Q2 2027
 
@@ -252,7 +252,7 @@ PhD/
 ├── English/               — English Mastery routine (IELTS prep)
 ├── in_memoriam/
 │   └── CHICHINADZE.md     — dedication to K. Chichinadze
-├── sources_pdfs/          — 10 PubMed papers + Dual-Counter + modern CDATA
+├── sources_pdfs/          — 10 PubMed papers + Dual-Counter + modern CEDAR
 ├── microscope/            — Zeiss IM 35 / ICM 405 documentation (for E0)
 ├── docs/                  — application docs, correspondence (gitignored)
 └── _archive/              — historical audit reports
@@ -278,7 +278,7 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 
 **Что НЕ валидируется (явно):**
 - Центриолярная биология (признано — см. `PEER_REVIEW_DRAFT.md`)
-- Translational claims к mammalian CDATA
+- Translational claims к mammalian CEDAR
 - Impetus pilot positioning
 
 **Модель:** *Elodea canadensis* leaves, chloroplasts. Выбор обоснован:
@@ -462,7 +462,7 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 
 **Вариант A укладывается в годовой бюджет $1000.**
 
-## Как это ПОМОЖЕТ диссертации CDATA — РЕВОЛЮЦИОННО
+## Как это ПОМОЖЕТ диссертации CEDAR — РЕВОЛЮЦИОННО
 
 Из теоретической → в **экспериментально-теоретическую**.
 
@@ -472,7 +472,7 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 - Покажут компетенцию кандидата в области клеточной биологии
 
 ### Уровень 2 — **11-я PubMed публикация** (дополнительно $300-500)
-С флуоресцентными антителами к γ-тубулину / центрину → изображения асимметричного наследования центриолей → Peer-reviewed paper → **добавить к 10 PubMed как физическое экспериментальное подтверждение CDATA**.
+С флуоресцентными антителами к γ-тубулину / центрину → изображения асимметричного наследования центриолей → Peer-reviewed paper → **добавить к 10 PubMed как физическое экспериментальное подтверждение CEDAR**.
 
 Нужно дополнительно:
 - Антитела anti-γ-tubulin (+ secondary fluorophore) ~$200
@@ -481,7 +481,7 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 - CO2 инкубатор, стерильный бокс — есть в любой лаборатории TSU
 
 ### Уровень 3 — экспериментальный PhD falsification (6-12 мес)
-Полный CDATA falsification test: отследить judged asymmetry across generations. Требует confocal, больше времени и бюджета. **Не для этой диссертации.**
+Полный CEDAR falsification test: отследить judged asymmetry across generations. Требует confocal, больше времени и бюджета. **Не для этой диссертации.**
 
 ## Рекомендация
 
@@ -504,13 +504,13 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 ```
 ### `CONCEPT.md` (4002 chars)
 ```md
-# PhD by Published Works — Centriolar Damage Accumulation Theory of Aging
+# PhD by Published Works — Centriolar Entropy-Damage Accumulation Ratchet
 
 ## Цель
 
 Получить учёную степень **доктора биологических/медицинских наук (или эквивалент)** по совокупности 10 PubMed-индексированных публикаций.
 
-**Тема диссертации:** **Centriolar Damage Accumulation Theory of Aging (CDATA)** — უჯრედული დაბერების ცენტრიოლური თეორია (для грузинских программ).
+**Тема диссертации:** **Centriolar Entropy-Damage Accumulation Ratchet (CEDAR)** — უჯრედული დაბერების ცენტრიოლური თეორია (для грузинских программ).
 
 ## Почему этот путь
 
@@ -524,7 +524,7 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 | Регион | Программы | Memory-entry |
 |---|---|---|
 | Грузия | Tier 1/2/3 — карта в memory | `project_phd_programs_georgia_audit_2026-04-26` |
-| Грузия (CS/Math track) | SOU — для симуляторов Ze+CDATA | `project_phd_sou_email_sent` |
+| Грузия (CS/Math track) | SOU — для симуляторов Ze+CEDAR | `project_phd_sou_email_sent` |
 | Грузия (Biology) | BSU отложен на 2027/28 | `project_phd_bsu_deferred_jan_2027` |
 | Испания | UNED Madrid (тесис por compendio + Bologna 2005) | `project_phd_uned` 🔥 hot |
 | Польша | UJ Kraków (Biology programme topic #34) | `project_phd_uj_krakow` |
@@ -551,23 +551,23 @@ Repository contains no personal contacts or supervisor identities. Programme cor
 | 2 | Введение — центриоль и старение | 1,000–1,500 |
 | 3 | Когерентная программа 10 PubMed | 1,500–2,000 |
 | 4 | Критический обзор каждой из 10 работ | 5,000–8,000 |
-| 5 | CDATA синтез | 2,000–3,000 |
+| 5 | CEDAR синтез | 2,000–3,000 |
 | 6 | Falsification tests | 1,000–1,500 |
 | 7 | Связь с литературой 2023–2026 | 1,500–2,000 |
 | 8 | Перспективы | 500–800 |
-| 9 | **Epilogue: CDATA as MCAOA Counter #2** | 1,500–2,500 |
+| 9 | **Epilogue: CEDAR as MCAOA Counter #2** | 1,500–2,500 |
 | 10 | Заключение | 500–800 |
 | | **ИТОГО** | **15,000–22,900** |
 
 Полные параметры — `PARAMETERS.md §2`.
 
-## Appendix A: CDATA как MCAOA Counter #2
+## Appendix A: CEDAR как MCAOA Counter #2
 
-MCAOA (Multi-Counter Architecture of Organismal Aging) — последующий шаг от CDATA к 6-counter обобщению (см. `~/Desktop/LC/MCAOA/`). Подача в Nature Aging (2026-04-19, NATAGING-P13741) → desk-reject → каскад eLife/F1000Research/ARS (`project_mcoa_journal_path`).
+MCAOA (Multi-Counter Architecture of Organismal Aging) — последующий шаг от CEDAR к 6-counter обобщению (см. `~/Desktop/LC/MCAOA/`). Подача в Nature Aging (2026-04-19, NATAGING-P13741) → desk-reject → каскад eLife/F1000Research/ARS (`project_mcoa_journal_path`).
 
 В диссертации:
-- Главы 1–8: исторический нарратив CDATA как самостоятельной теории
-- Глава 9 (epilogue): CDATA как Counter #2 в MCAOA — **не отменяет CDATA, а повышает её статус**
+- Главы 1–8: исторический нарратив CEDAR как самостоятельной теории
+- Глава 9 (epilogue): CEDAR как Counter #2 в MCAOA — **не отменяет CEDAR, а повышает её статус**
 - In Memoriam: дань наследию Chichinadze в MCAOA-контексте
 
 ## Бюджет
@@ -576,11 +576,11 @@ MCAOA (Multi-Counter Architecture of Organismal Aging) — последующи�
 
 ## Связанные подпроекты
 
-- **`E0/`** (submodule, `djabbat/E0`) — экспериментальный rig Kaede-ablation для CDATA (HW+SW commissioning); полное 11-file core
+- **`E0/`** (submodule, `djabbat/E0`) — экспериментальный rig Kaede-ablation для CEDAR (HW+SW commissioning); полное 11-file core
 - **`English/`** — режим English Mastery (Anki + Redman + McCarthy O'Dell); цель = интервью UJ Kraków/UNISA на английском
 - **`dissertation/`** — главный текст (грузинский), DISSERTATION_MASTER_ka.md/.docx + 17 секций
 - **`microscope/`** — Zeiss IM 35 / ICM 405 documentation (для E0)
-- **`sources_pdfs/`** — 10 PubMed PDF + Dual-Counter + современная CDATA-литература
+- **`sources_pdfs/`** — 10 PubMed PDF + Dual-Counter + современная CEDAR-литература
 - **`in_memoriam/`** — посвящение К. Чичинадзе
 
 ## Целевая защита
@@ -739,8 +739,8 @@ Cм. `lessons/Day_001.md` — основан на материале котор�
 
 ## Связь с экосистемой
 
-- **PhD** (`~/Desktop/PhD/`) — диссертация CDATA. Experiment 0 — не часть диссертации (dissertation = critical commentary по 10 PMID, не экспериментальная).
-- **LC/CDATA** (`~/Desktop/LC/CDATA/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
+- **PhD** (`~/Desktop/PhD/`) — диссертация CEDAR. Experiment 0 — не часть диссертации (dissertation = critical commentary по 10 PMID, не экспериментальная).
+- **LC/CEDAR** (`~/Desktop/LC/CEDAR/`) — научная основа. Experiment 0 — отладка rig перед Experiment A (настоящий биологический пилот).
 - **LC/AutomatedMicroscopy** — параллельный проект про AI-microscopy. Experiment 0 — конкретный commissioning этого направления.
 - **LC/MCAOA** — meta-framework. Experiment 0 — отладка агента для будущих MCAOA-экспериментов.
 
@@ -795,12 +795,12 @@ PhD/
 │   ├── DISSERTATION_MASTER_ka.md   (+ .docx)
 │   ├── 02_introduction_ka.md
 │   ├── 04_1_ka.md … 04_10_ka.md    ← 10 PubMed критических обзоров
-│   ├── 05_ka.md                    ← CDATA синтез
+│   ├── 05_ka.md                    ← CEDAR синтез
 │   ├── 06_ka.md                    ← falsification
 │   ├── 07_ka.md                    ← связь с литературой 2023–2026
 │   ├── 08_ka.md                    ← перспективы
 │   ├── 09_ka.md                    ← заключение
-│   ├── 04_10_ka.md                 ← Epilogue: CDATA as MCAOA Counter #2
+│   ├── 04_10_ka.md                 ← Epilogue: CEDAR as MCAOA Counter #2
 │   ├── CRITICAL_COMMENTARY_ka.md
 │   ├── polyglutamylation_deep_analysis.md
 │   └── cdata_abstract_v*.png       ← 8 версий abstract figure
@@ -834,8 +834,8 @@ PhD/
 
 ## 2. Связь с экосистемой
 
-- **`~/Desktop/LC/CDATA/`** — научная основа (теория). Диссертация = систематизация.
-- **`~/Desktop/LC/MCAOA/`** — обобщение CDATA. Эпилог диссертации = «CDATA as MCAOA Counter #2».
+- **`~/Desktop/LC/CEDAR/`** — научная основа (теория). Диссертация = систематизация.
+- **`~/Desktop/LC/MCAOA/`** — обобщение CEDAR. Эпилог диссертации = «CEDAR as MCAOA Counter #2».
 - **`~/Desktop/Claude/SESSION_STATE.md`** — где остановились в межсессионном контексте.
 - **`~/.claude/projects/-home-oem/memory/`** — anonymised programme map (`project_phd_programs_georgia_audit_2026-04-26`, `project_phd_europe_audit_2026-04-26`, и индивидуальные `project_phd_*`).
 - **`~/Desktop/Claude/PUBLICATIONS.md`** — полный список 154 публикаций.
@@ -903,7 +903,7 @@ PhD/
 
 | Внешний ресурс | Связь |
 |---|---|
-| `~/Desktop/LC/CDATA/` | Научная основа (CDATA theory) |
+| `~/Desktop/LC/CEDAR/` | Научная основа (CEDAR theory) |
 | `~/Desktop/LC/AutomatedMicroscopy/` | Параллельный project про AI microscopy |
 | `~/Desktop/LC/MCAOA/` | Meta-framework, Counter frameworks |
 | `~/Desktop/AIM/llm.py` | LLM router (DeepSeek primary) для Claude agent |
@@ -912,7 +912,7 @@ PhD/
 
 ## Что НЕ в E0 (external dependencies)
 
-- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CDATA/` (NOT here, отдельный grant submission)
+- **Impetus LOI** → `~/Documents/Submissions/2026-04-25_Impetus_CEDAR/` (NOT here, отдельный grant submission)
 - **MCAOA submission** → `~/Documents/Submissions/2026-04-25_NatureAging_MCOA/`
 - **PhD dissertation** → `~/Desktop/PhD/dissertation/`
 
@@ -952,11 +952,11 @@ PhD/
 | 2. Введение | 1,000 | 1,500 |
 | 3. Когерентная программа 10 PubMed | 1,500 | 2,000 |
 | 4. Критический обзор 10 работ | 5,000 | 8,000 |
-| 5. CDATA синтез | 2,000 | 3,000 |
+| 5. CEDAR синтез | 2,000 | 3,000 |
 | 6. Falsification tests | 1,000 | 1,500 |
 | 7. Связь с литературой 2023-2026 | 1,500 | 2,000 |
 | 8. Перспективы | 500 | 800 |
-| 9. CDATA as MCAOA Counter #2 (epilogue) | 1,500 | 2,500 |
+| 9. CEDAR as MCAOA Counter #2 (epilogue) | 1,500 | 2,500 |
 | 10. Заключение | 500 | 800 |
 | **ИТОГО** | **15,000** | **22,900** |
 
@@ -1007,7 +1007,7 @@ PhD/
 
 - [ ] 10 PubMed работ обсуждены критически (по 500+ слов каждая)
 - [ ] In Memoriam Chichinadze — готов
-- [ ] CDATA синтез — falsifiable predictions явно
+- [ ] CEDAR синтез — falsifiable predictions явно
 - [ ] MCAOA-эпилог (приложение A к CONCEPT)
 - [ ] Автореферат (~30 страниц) на грузинском
 - [ ] Все цитирования верифицированы через PubMed (zero hallucinations)
@@ -1280,11 +1280,11 @@ void capture_with_led(uint16_t exposure_ms) {
 - [ ] §2 Введение — центриоль и старение (1,000–1,500)
 - [ ] §3 Когерентная программа 10 PubMed (1,500–2,000)
 - [ ] §4.1–§4.10 Критический обзор (5,000–8,000)
-- [ ] §5 CDATA синтез (2,000–3,000)
+- [ ] §5 CEDAR синтез (2,000–3,000)
 - [ ] §6 Falsification tests (1,000–1,500)
 - [ ] §7 Связь с литературой 2023–2026 (1,500–2,000)
 - [ ] §8 Перспективы (500–800)
-- [ ] §9 (epilogue) CDATA as MCAOA Counter #2 (1,500–2,500)
+- [ ] §9 (epilogue) CEDAR as MCAOA Counter #2 (1,500–2,500)
 - [ ] §10 Заключение (500–800)
 
 ## v1.6 — IELTS readiness (parallel, опционально)
@@ -1409,7 +1409,7 @@ E0 ведётся самостоятельно как submodule.
 | 4 (May 20 – 26) | first 5-min mock interview with Adona |
 | 5 (May 27 – Jun 2) | 200 words; PubMed abstract read aloud daily |
 | 6 (Jun 3 – 9) | UJ topic #34 vocabulary (epigenetic clock, biomarkers) |
-| 7 (Jun 10 – 16) | 10-min CDATA presentation in English (5 rehearsals) |
+| 7 (Jun 10 – 16) | 10-min CEDAR presentation in English (5 rehearsals) |
 | 8 (Jun 17 – 23) | 30-min full mock interview with Adona |
 | 9 (Jun 24 – 30) | rest + light review; **interview Jun 30 – Jul 1** |
 
@@ -1447,11 +1447,11 @@ E0 ведётся самостоятельно как submodule.
 - [ ] Раздел 2: Введение — центриоль и старение (1,000–1,500)
 - [ ] Раздел 3: Когерентная программа 10 PubMed (1,500–2,000)
 - [ ] Раздел 4: Критический обзор каждой работы (5,000–8,000)
-- [ ] Раздел 5: CDATA синтез (2,000–3,000)
+- [ ] Раздел 5: CEDAR синтез (2,000–3,000)
 - [ ] Раздел 6: Falsification tests (1,000–1,500)
 - [ ] Раздел 7: Связь с литературой 2023–2026 (1,500–2,000)
 - [ ] Раздел 8: Перспективы (500–800)
-- [ ] Раздел 9 (epilogue): CDATA as MCAOA Counter #2 (1,500–2,500)
+- [ ] Раздел 9 (epilogue): CEDAR as MCAOA Counter #2 (1,500–2,500)
 - [ ] Раздел 10: Заключение (500–800)
 
 ## P2 — Application package (после выбора программы)
@@ -1563,19 +1563,19 @@ E0 — отдельный submodule, ведётся самостоятельно
 
 ## Индекс
 
-1. [CDATA — ядро диссертации](#1-cdata-ядро)
+1. [CEDAR — ядро диссертации](#1-cdata-ядро)
 2. [Centriolar biology — ключевая литература](#2-centriolar-biology)
 3. [Stem cell asymmetric inheritance](#3-stem-cell-asymmetric)
-4. [Modern CDATA-relevant literature (2023–2026)](#4-modern-cdata-literature)
-5. [MCAOA — обобщение CDATA](#5-mcoa)
+4. [Modern CEDAR-relevant literature (2023–2026)](#4-modern-cdata-literature)
+5. [MCAOA — обобщение CEDAR](#5-mcoa)
 6. [TSU / PhD by Published Works — правила](#6-tsu-правила)
 7. [Posмертное упоминание Chichinadze](#7-chichinadze)
 
 ---
 
-## 1. CDATA — ядро
+## 1. CEDAR — ядро
 
-**Centriolar Damage Accumulation Theory of Aging (CDATA).** Ядро диссертации. Ключевая идея: стволовые клетки асимметрично наследуют старую материнскую центриоль → накопление повреждений в СК → снижение регенеративной способности с возрастом.
+**Centriolar Entropy-Damage Accumulation Ratchet (CEDAR).** Ядро диссертации. Ключевая идея: стволовые клетки асимметрично наследуют старую материнскую центриоль → накопление повреждений в СК → снижение регенеративной способности с возрастом.
 
 **10 PubMed работ** (последовательность 2005–2024) — хронология развития теории. См. PARAMETERS.md §4 + `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`.
 
@@ -1596,9 +1596,9 @@ E0 — отдельный submodule, ведётся самостоятельно
 - Yamashita Y.M. et al. (2007). Drosophila germline SC — mother centriole retained. *Science*. PMID 17255513 [verified 2026-04-26].
 - Wang X. et al. (2009). **Mammalian (mouse) neocortex — radial glial cells**, NOT Drosophila — старая центриоль → удерживается в СК. *Nature*. PMID 19829375 [verified 2026-04-26]. **Внимание:** в более ранних версиях глав диссертации Wang 2009 неоднократно ошибочно описывался как Drosophila — исправлено 2026-04-26 в 02_introduction_ka.md, 05_ka.md, 07_ka.md, DISSERTATION_MASTER_ka.md. См. PMID_CORRECTIONS_2026-04-26.md.
 - Conduit P.T. et al. (2015). *Centrosome function and assembly*. Nat Rev.
-- **Preprint 2026 (НЕ peer-reviewed, НЕ для диссертации primary citation):** Tqemaladze J. *First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in Murine Hematopoietic Stem Cells* — DOI 10.65649/3zzek632 (Longevity Horizon, non-indexed). Использовать только в вспомогательных материалах или после перепода в PubMed-indexed журнал. Основной CDATA evidence — 10 PubMed publications из §1.
+- **Preprint 2026 (НЕ peer-reviewed, НЕ для диссертации primary citation):** Tqemaladze J. *First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in Murine Hematopoietic Stem Cells* — DOI 10.65649/3zzek632 (Longevity Horizon, non-indexed). Использовать только в вспомогательных материалах или после перепода в PubMed-indexed журнал. Основной CEDAR evidence — 10 PubMed publications из §1.
 
-## 4. Modern CDATA-relevant literature
+## 4. Modern CEDAR-relevant literature
 
 Работы 2023–2026, которые диссертация должна обсудить (Глава 7):
 
@@ -1614,14 +1614,14 @@ E0 — отдельный submodule, ведётся самостоятельно
 **Multi-Counter Architecture of Organismal Aging** (Tqemaladze 2026). Подана в Nature Aging 2026-04-19 (NATAGING-P13741). Формализует 5 параллельных счётчиков повреждений:
 
 1. Genomic mutations (CNV + SNV drift)
-2. **Centriolar damage (CDATA)** — Counter #2 ← вклад диссертации
+2. **Centriolar damage (CEDAR)** — Counter #2 ← вклад диссертации
 3. Mitochondrial dysfunction
 4. Proteostasis collapse
 5. Epigenetic drift
 
 Формула: *Aging rate ≈ Σ α_i · (Counter_i / threshold_i)*, с tissue-specific weights.
 
-**В диссертации:** Chapter 9 / Epilogue — "CDATA as MCAOA Counter #2" (см. CONCEPT §A.2).
+**В диссертации:** Chapter 9 / Epilogue — "CEDAR as MCAOA Counter #2" (см. CONCEPT §A.2).
 
 ## 6. TSU — правила
 
@@ -1653,7 +1653,7 @@ E0 — отдельный submodule, ведётся самостоятельно
 - Class II ≥ 18/27 — умеренная
 - Class III ≥ 12/27 — слабая
 
-**CDATA: 25/27** (Class I). HAP: ~20/27 (Class II). Использовать BHCA в Главе 5 (синтез) для формальной оценки CDATA.
+**CEDAR: 25/27** (Class I). HAP: ~20/27 (Class II). Использовать BHCA в Главе 5 (синтез) для формальной оценки CEDAR.
 
 ---
 
@@ -1753,7 +1753,7 @@ Source: `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`. Verificat
 
 ## 2026-05-07 — Глубокий аудит ecosystem
 
-В большом межпроектном аудите выявлено: 8 core-файлов проекта были удалены при анонимизации supervisors/admins (2026-05-04), но не закоммичены. Восстановлены нейтральные версии (без имён) с сохранением структуры — CDATA-PhD, 10 PubMed, MCAOA epilogue, Chichinadze dedication, $1,000 budget, Q1–Q2 2027 target.
+В большом межпроектном аудите выявлено: 8 core-файлов проекта были удалены при анонимизации supervisors/admins (2026-05-04), но не закоммичены. Восстановлены нейтральные версии (без имён) с сохранением структуры — CEDAR-PhD, 10 PubMed, MCAOA epilogue, Chichinadze dedication, $1,000 budget, Q1–Q2 2027 target.
 
 ## 2026-05-05 — Multi-programme outreach wave
 
@@ -1780,8 +1780,8 @@ E0 (Kaede-ablation rig) выделен в самостоятельный реп�
 MCAOA подана в Nature Aging (NATAGING-P13741) — desk-reject 2026-04-28 → каскад eLife/F1000Research/ARS (см. memory `project_mcoa_journal_path`).
 
 В диссертации:
-1. Главы 1–8 — исторический нарратив CDATA без изменений
-2. Глава 9 / эпилог — «CDATA as MCAOA Counter #2»
+1. Главы 1–8 — исторический нарратив CEDAR без изменений
+2. Глава 9 / эпилог — «CEDAR as MCAOA Counter #2»
 3. In Memoriam Chichinadze — добавить MCAOA-упоминание (дань наследию)
 
 Объём пересмотрен: 7,500–15,000 слов → **15,000–22,900 слов** (после MCAOA-эпилога).
@@ -1811,14 +1811,14 @@ MCAOA подана в Nature Aging (NATAGING-P13741) — desk-reject 2026-04-28 
 
 - `project_cdata_copi_candidates.md` — Impetus Phase A co-PI candidates (rig будет использован в Phase A)
 - (PhD-supervisor memories удалены 2026-05-04 правилом feedback_no_supervisor_names)
-- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CDATA (context)
+- `project_aubrey_collaboration.md` — Aubrey de Grey engagement with CEDAR (context)
 - `project_academic_upgrade.md` — академический upgrade pathway
 - `project_eic_umbrella.md` — EIC Pathfinder consortium (Experiment 0 → WP3)
 
 ### Feedback (правила работы в проекте)
 
 - `feedback_bradford_hill_rule.md` — Bradford Hill criteria для causality claims
-- `feedback_mcoa_cdata_comparison.md` — MCAOA vs CDATA comparison methodology
+- `feedback_mcoa_cdata_comparison.md` — MCAOA vs CEDAR comparison methodology
 - `feedback_deepseek_primary.md` — DeepSeek как primary LLM
 - `feedback_verify_references.md` — правило проверки reference перед claim
 
@@ -1886,11 +1886,11 @@ URL и контакты программ — в memory:
 - `project_phd_sou_email_sent`, `project_phd_bsu_deferred_jan_2027`, `project_phd_stipendium_hungaricum`
 - `project_phd_ran` (closed 2026-05-04)
 
-## CDATA / MCAOA — научный контекст
+## CEDAR / MCAOA — научный контекст
 
 | Ресурс | URL / путь |
 |--------|------------|
-| CDATA project (local) | `~/Desktop/LC/CDATA/` |
+| CEDAR project (local) | `~/Desktop/LC/CEDAR/` |
 | MCAOA project (local) | `~/Desktop/LC/MCAOA/` |
 | eLife submission MCAOA | ID eLife-RP-RA-2026-111885 (см. memory `project_mcoa_nature_correspondence`) |
 | ORCID auto-update OJS | `project_orcid_ojs_setup` |

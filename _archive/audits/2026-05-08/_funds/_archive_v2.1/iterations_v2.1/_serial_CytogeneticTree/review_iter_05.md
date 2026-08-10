@@ -63,7 +63,7 @@ All references from KNOWLEDGE.md and CONCEPT.md are listed below. Only the ones 
 | 6 | Mahecic D 2022 *Nat Methods* | PMID 36076039 | Yes | Yes – event-driven acquisition | OK |
 | 7 | Chan MM 2019 *Nature* | PMID 31086336 | Yes | Yes – mouse embryogenesis CRISPR barcoding | OK |
 | 8 | Kalhor R 2018 *Science* | PMID 30093604 | Yes | Yes – MARC1 homing CRISPR | OK |
-| 9 | Januschke J 2011 *Nat Commun* | PMID 21407209 | Yes | Yes – counter-example for CDATA | OK |
+| 9 | Januschke J 2011 *Nat Commun* | PMID 21407209 | Yes | Yes – counter-example for CEDAR | OK |
 | 10 | Loeffler D 2019 *Nature* | PMID 31485073 | Yes | Yes – HSC asymmetric lysosome inheritance | OK (corrected) |
 | 11 | Lee & Luo 1999 *Neuron* | PMID 10197526 (suggested) | **NOT VERIFIED** | Claim: MARCM technique for lineage analysis. The text says “REFERENCE VERIFICATION PENDING”. No evidence that the DOI 10.1016/S0896-6273(00)80701-1 is legitimate. | **FAIL** |
 | 12 | Parrinello 2003 | No DOI/PMID given | **NOT VERIFIED** | Claim: physiological hypoxia 3% O₂. Marked `REF_VERIFY`. | **FAIL** |

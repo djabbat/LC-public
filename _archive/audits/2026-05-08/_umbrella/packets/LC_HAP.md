@@ -317,7 +317,7 @@ HAP/
 - HAP входит в CommonHealth как независимый подпроект
 - Самоцитирование: DOI 10.65649/d76f6c48
 - Связь с Ze: аффективные системы как Ze-системы (перспектива)
-- Связь с CDATA: старение печени → снижение аффективной регуляции (гипотеза)
+- Связь с CEDAR: старение печени → снижение аффективной регуляции (гипотеза)
 
 ```
 ### `PARAMETERS.md` (1658 chars)
@@ -641,7 +641,7 @@ _Индекс памяти проекта. Детали — в файлах па
 - Ecdysteroids in arthropods: Gáliková M. et al. (2015). *Cell Metab*. DOI: 10.1016/j.cmet.2015.07.004
 - Bradford-Hill criteria: Hill A.B. (1965). *Proc R Soc Med*.
 
-## Планария (CDATA overlap)
+## Планария (CEDAR overlap)
 
 - Planaria no liver, yet behavioral responses: Inoue T. et al. (2015). *J Exp Biol*. PMID 25657204
 

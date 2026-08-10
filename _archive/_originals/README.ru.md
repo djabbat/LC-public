@@ -7,7 +7,7 @@ LC — это hypothesis-stage framework, объединяющий 5 научн�
 | Подпроект | Уровень | Что делает |
 |-----------|---------|------------|
 | **MCAOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
-| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
+| **CEDAR** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
 | **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
@@ -43,7 +43,7 @@ LC/
 ├── _archive/ # старые версии
 ├── _audits/ # audit reports
 │
-└── <subprojects>/ # MCAOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/ # MCAOA, CEDAR, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)

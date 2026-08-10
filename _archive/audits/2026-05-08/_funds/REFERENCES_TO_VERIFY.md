@@ -63,11 +63,11 @@
 | 4 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | KNOWLEDGE.md:129 | - **Ze Theory:** Tqemaladze J. Mol Biol Reports 2023. PMID 36583780 | ☐ | ☐ | ☐ |
 | 5 | PMID | `20480236` | [link](https://pubmed.ncbi.nlm.nih.gov/20480236/) | KNOWLEDGE.md:130 | - **Aging biology:** Lezhava T. et al. Biogerontology 2011. PMID 20480236 | ☐ | ☐ | ☐ |
 
-### CDATA (73 уникальных, всего вхождений 130)
+### CEDAR (73 уникальных, всего вхождений 130)
 
 | # | Тип | Идентификатор | URL | File:Line | Контекст | Real? | Match? | Action |
 |---|---|---|---|---|---|---|---|---|
-| 1 | PMID | `26213385` | [link](https://pubmed.ncbi.nlm.nih.gov/26213385/) | CONCEPT.md:25 | **Версия:** 5.2 (Counter #1 framing, унифицировано 2026-05-07; numbering decision: CDATA = #1, Telom | ☐ | ☐ | ☐ |
+| 1 | PMID | `26213385` | [link](https://pubmed.ncbi.nlm.nih.gov/26213385/) | CONCEPT.md:25 | **Версия:** 5.2 (Counter #1 framing, унифицировано 2026-05-07; numbering decision: CEDAR = #1, Telom | ☐ | ☐ | ☐ |
 | 2 | PMID | `28636844` | [link](https://pubmed.ncbi.nlm.nih.gov/28636844/) | CONCEPT.md:75 | > **Статус этики:** Cell-DT v3.0 — полностью *in silico* симулятор. **Реальных пациентов нет.** Все  | ☐ | ☐ | ☐ |
 | 3 | PMID | `24138928` | [link](https://pubmed.ncbi.nlm.nih.gov/24138928/) | CONCEPT.md:75 | > **Статус этики:** Cell-DT v3.0 — полностью *in silico* симулятор. **Реальных пациентов нет.** Все  | ☐ | ☐ | ☐ |
 | 4 | PMID | `18316408` | [link](https://pubmed.ncbi.nlm.nih.gov/18316408/) | CONCEPT.md:75 | > **Статус этики:** Cell-DT v3.0 — полностью *in silico* симулятор. **Реальных пациентов нет.** Все  | ☐ | ☐ | ☐ |
@@ -108,9 +108,9 @@
 | 39 | PMID | `23746838` | [link](https://pubmed.ncbi.nlm.nih.gov/23746838/) | CONCEPT.md:885 | \| \| inhib_threshold \| 0.8 \| Uniform(0.6,1.0) \| PMID: 23746838 (Campisi 2013; high SASP = pathol | ☐ | ☐ | ☐ |
 | 40 | PMID | `19587680` | [link](https://pubmed.ncbi.nlm.nih.gov/19587680/) | CONCEPT.md:892 | \| **Фиксированные** \| mtor_activity \| 0.7 \| Fixed \| PMID: 19587680 (Harrison et al. 2009; basal | ☐ | ☐ | ☐ |
 | 41 | PMID | `21654799` | [link](https://pubmed.ncbi.nlm.nih.gov/21654799/) | CONCEPT.md:895 | \| \| yap_taz_sensitivity \| 0.5 \| Fixed \| PMID: 21654799 (Dupont et al. 2011; YAP/TAZ mechanosens | ☐ | ☐ | ☐ |
-| 42 | PMID | `34546229` | [link](https://pubmed.ncbi.nlm.nih.gov/34546229/) | CONCEPT.md:1146 | \| Метрика \| CDATA v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
-| 43 | PMID | `29786094` | [link](https://pubmed.ncbi.nlm.nih.gov/29786094/) | CONCEPT.md:1146 | \| Метрика \| CDATA v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
-| 44 | PMID | `31451800` | [link](https://pubmed.ncbi.nlm.nih.gov/31451800/) | CONCEPT.md:1146 | \| Метрика \| CDATA v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
+| 42 | PMID | `34546229` | [link](https://pubmed.ncbi.nlm.nih.gov/34546229/) | CONCEPT.md:1146 | \| Метрика \| CEDAR v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
+| 43 | PMID | `29786094` | [link](https://pubmed.ncbi.nlm.nih.gov/29786094/) | CONCEPT.md:1146 | \| Метрика \| CEDAR v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
+| 44 | PMID | `31451800` | [link](https://pubmed.ncbi.nlm.nih.gov/31451800/) | CONCEPT.md:1146 | \| Метрика \| CEDAR v4.3 \| DunedinPACE (PMID 34546229) \| PhenoAge (PMID 29786094) \| GrimAge (PMID | ☐ | ☐ | ☐ |
 | 45 | PMID | `18923395` | [link](https://pubmed.ncbi.nlm.nih.gov/18923395/) | CONCEPT.md:1295 | \| **Drosophila** \| Centrosome misorientation ↑ с возрастом (5%→40%); дезориентированные GSC делятс | ☐ | ☐ | ☐ |
 | 46 | PMID | `22357619` | [link](https://pubmed.ncbi.nlm.nih.gov/22357619/) | CONCEPT.md:1296 | \| **Drosophila** \| Нутритивный дефицит → centrosome misorientation → G2 arrest \| Ак. 2 (цилия→G1/ | ☐ | ☐ | ☐ |
 | 47 | PMID | `22215083` | [link](https://pubmed.ncbi.nlm.nih.gov/22215083/) | CONCEPT.md:1297 | \| **Мышь (мышца)** \| Старые MDSC: дефектная пролиферация; co-culture молодых со старыми → rescue д | ☐ | ☐ | ☐ |
@@ -317,7 +317,7 @@
 | 10 | PMID | `30982602` | [link](https://pubmed.ncbi.nlm.nih.gov/30982602/) | EVIDENCE.md:50 | \| ~~Schultz & Sinclair 2019 PMID 30982602 (NAD+/sirtuin)~~ \| **Miscitation** — PMID 30982602 = Kuc | ☐ | ☐ | ☐ |
 | 11 | PMID | `38510429` | [link](https://pubmed.ncbi.nlm.nih.gov/38510429/) | EVIDENCE.md:53 | \| ~~Tqemaladze 2024 Editorial PMID 38510429~~ \| Removed to bring self-citation < 10% \| | ☐ | ☐ | ☐ |
 | 12 | PMID | `15886028` | [link](https://pubmed.ncbi.nlm.nih.gov/15886028/) | EVIDENCE.md:60 | - Tqemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work | ☐ | ☐ | ☐ |
-| 13 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | EVIDENCE.md:61 | - Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship | ☐ | ☐ | ☐ |
+| 13 | PMID | `36583780` | [link](https://pubmed.ncbi.nlm.nih.gov/36583780/) | EVIDENCE.md:61 | - Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CEDAR flagship | ☐ | ☐ | ☐ |
 
 ### Ze (3 уникальных, всего вхождений 6)
 

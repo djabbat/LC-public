@@ -145,26 +145,26 @@ Path: `/home/oem/Desktop/LC`  Date: 2026-05-08
 ./AutomatedMicroscopy/JOURNAL.md
 ./AutomatedMicroscopy/_archive
 ./DESIGN.md
-./CDATA
-./CDATA/STATE.md
-./CDATA/frontend
-./CDATA/PARAMETERS.md
-./CDATA/Cargo.toml
-./CDATA/run.sh
-./CDATA/EVIDENCE.md
-./CDATA/crates
-./CDATA/DESIGN.md
-./CDATA/gui
-./CDATA/README.md
-./CDATA/backend
-./CDATA/scripts
-./CDATA/CLAUDE.md
-./CDATA/THEORY.md
-./CDATA/OPEN_PROBLEMS.md
-./CDATA/articles
-./CDATA/CONCEPT.md
-./CDATA/_archive
-./CDATA/LICENSE
+./CEDAR
+./CEDAR/STATE.md
+./CEDAR/frontend
+./CEDAR/PARAMETERS.md
+./CEDAR/Cargo.toml
+./CEDAR/run.sh
+./CEDAR/EVIDENCE.md
+./CEDAR/crates
+./CEDAR/DESIGN.md
+./CEDAR/gui
+./CEDAR/README.md
+./CEDAR/backend
+./CEDAR/scripts
+./CEDAR/CLAUDE.md
+./CEDAR/THEORY.md
+./CEDAR/OPEN_PROBLEMS.md
+./CEDAR/articles
+./CEDAR/CONCEPT.md
+./CEDAR/_archive
+./CEDAR/LICENSE
 ./README.md
 ./FCLC
 ./FCLC/fclc-web
@@ -223,7 +223,7 @@ Path: `/home/oem/Desktop/LC`  Date: 2026-05-08
 ## Project Identity
 
 **LC** — центральная платформа экосистемы долголетия + **umbrella для EIC Pathfinder заявки**.
-**Подпроекты (подпапки):** MCAOA · Ze · CDATA · BioSense · Ontogenesis · HAP (+ Activated из Iqalto как WP5). **MCAOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCAOA как счётчики или измерительные слои.
+**Подпроекты (подпапки):** MCAOA · Ze · CEDAR · BioSense · Ontogenesis · HAP (+ Activated из Iqalto как WP5). **MCAOA** (добавлен 2026-04-21) — мета-теоретический фундамент; остальные подпроекты встраиваются в MCAOA как счётчики или измерительные слои.
 **Версия:** CONCEPT v4.0 (Ecosystem Edition) | **Status: CONCEPT APPROVED**
 **Location:** `~/Desktop/LC/`
 
@@ -241,7 +241,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 **Architecture (Variant C, decided 2026-04-17, ACTIVE):**
 - WP1 FCLC (€0.6M, 12 mo) — federated learning
 - WP2 Ze (€0.5M, 12 mo) — biomarker
-- WP3 CDATA (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
+- WP3 CEDAR (€0.8M, 24 mo) — biology / centriolar damage (partner: Institut Curie via Janke's co-PI, in negotiation 2026-04-28)
 - WP4 BioSense (€0.6M, 18 mo) — wearable hardware
 - WP5 Activatus/Korkoti (€0.5M, 12 mo) — clinical pilot anaemia
 - **Total: €3.0M, 36 mo** (revisable up to €4M ceiling)
@@ -255,7 +255,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 
 **Outstanding blockers from 2026-04-21 audit (must resolve before submission):**
 1. PATE demo implementation (ε≈0.63 path) — target Sep 2026
-2. CDATA ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
+2. CEDAR ABL-2 Sobol S1 paradox — extended global sensitivity analysis — target Aug 2026
 3. HAP/Ontogenesis fabricated PMIDs — already halted; rebuilt before any inclusion in proposal
 
 **Concept Note preprint:** Tqemaladze, J. (2026) "LongevityHealth", Zenodo v3, DOI 10.5281/zenodo.19849384 (28 April 2026; supersedes earlier "LC" preprint 19546679).
@@ -272,7 +272,7 @@ The "Biotechnology for Healthy Ageing" topic in Challenges 2026 is a closer scie
 LC/        ← этот проект (социальный слой)
 ├── MCAOA/               ← Multi-Counter Architecture of Organismal Aging — мета-теория (добавлен 2026-04-21)
 ├── Ze/                 ← Ze Theory — Entropic-Geometric Theory of Everything. Канон: Ze Theory.pdf + Ze Теория.pdf (2026-04-25). Rust simulator покрывает 3 блока: импеданс-ODE, CHSH-деформация, cheating autowaves.
-├── CDATA/              ← теория повреждения центриолей, MCAI (Counter #2 в MCAOA)
+├── CEDAR/              ← теория повреждения центриолей, MCAI (Counter #2 в MCAOA)
 ├── BioSense/           ← EEG+HRV+обоняние (измерительный слой MCAOA)
 ├── Ontogenesis/        ← платформа онтогенеза 0–25 лет
 ├── HAP/                ← Hepato-Affective Primacy Theory (нейро-гепатология)
@@ -281,7 +281,7 @@ LC/        ← этот проект (социальный слой)
 └── realtime/           ← Elixir/Phoenix Channels
 ```
 
-**Правило:** LC — thin social layer over Ze+CDATA+BioSense+Ontogenesis+HAP. Никакой новой науки, никакой новой privacy-инфраструктуры. Новое: UX сообщества, ранжирование ленты, Ze·Guide AI.
+**Правило:** LC — thin social layer over Ze+CEDAR+BioSense+Ontogenesis+HAP. Никакой новой науки, никакой новой privacy-инфраструктуры. Новое: UX сообщества, ранжирование ленты, Ze·Guide AI.
 
 **FCLC — отдельный проект** (extracted 2026-04-26). Server-resident: `jaba@server:/home/jaba/web/fclc/`. Repos: `djabbat/FCLC` (private) + `djabbat/FCLC-public`. См. `~/.claude/projects/-home-oem/memory/project_fclc_server_workflow.md`.
 
@@ -369,11 +369,11 @@ ARCHITECTURE не существует отдельно — его содерж�
 **Файлы ядра (полный список — в .gitignore для public):**
 `CONCEPT.md` · `KNOWLEDGE.md` · `PARAMETERS.md` · `MAP.md` · `MEMORY.md` · `LINKS.md` · `UPGRADE.md` · `TODO.md` · `CLAUDE.md` · `STRATEGY.md` · `REMINDER.md`
 
-**`STRATEGY.md`** — гибридная грантовая стратегия (4 трека: CDATA/Ze/BioSense/Ontogenesis; FCLC — отдельный проект).
+**`STRATEGY.md`** — гибридная грантовая стратегия (4 трека: CEDAR/Ze/BioSense/Ontogenesis; FCLC — отдельный проект).
 Читать первым делом в каждой сессии перед работой с любым подпроектом.
 
 **Git (монорепозиторий):**
-- **Единый репозиторий:** `djabbat/LC` (объединяет LC + Ze + CDATA + BioSense + Ontogenesis + HAP). FCLC = отдельный repo `djabbat/FCLC`.
+- **Единый репозиторий:** `djabbat/LC` (объединяет LC + Ze + CEDAR + BioSense + Ontogenesis + HAP). FCLC = отдельный repo `djabbat/FCLC`.
 - Private: все файлы включая .md ядра
 - Public: только код + README (core .md в .gitignore)
 
@@ -385,7 +385,7 @@ ARCHITECTURE не существует отдельно — его содерж�
 |-----------|-----------|----------------------|
 | ~~FCLC~~ | extracted 2026-04-26 | server-resident, `djabbat/FCLC` repo |
 | Ze | `Ze/CLAUDE.md` | `Ze/CONCEPT.md` |
-| CDATA | `CDATA/CLAUDE.md` | `CDATA/CONCEPT.md` |
+| CEDAR | `CEDAR/CLAUDE.md` | `CEDAR/CONCEPT.md` |
 | BioSense | `BioSense/CLAUDE.md` | `BioSense/CONCEPT.md` |
 | Ontogenesis | `Ontogenesis/CLAUDE.md` | `Ontogenesis/CONCEPT.md` |
 | HAP | `HAP/CLAUDE.md` | `HAP/CONCEPT.md` |
@@ -470,7 +470,7 @@ Parent: `~/Desktop/LC/MCAOA/CONCEPT.md`, `~/Desktop/LC/CLAUDE.md`.
 - Покрытые механизмы: mtROS как сигнальные молекулы (не только damage), heteroplasmy clonal expansion, tissue-specific phenotypes
 - Falsifiability conditions явно прописаны
 
-⚠ См. родительский MCAOA/CLAUDE.md про numbering conflict — Counter #2 одновременно используется CDATA и Telomere.
+⚠ См. родительский MCAOA/CLAUDE.md про numbering conflict — Counter #2 одновременно используется CEDAR и Telomere.
 
 ---
 
@@ -617,7 +617,7 @@ AIM теперь умеет вести 3 типа долгоживущих entit
 **Pilot YAMLs:**
 - `USER/projects/FCLC.yaml` — pre-existing
 - `USER/experiments/E0.yaml` — PhD/E0 commissioning (Tsomaia hardware tracking)
-- `USER/experiments/AutomatedMicroscopy.yaml` — CDATA Phase A imaging rig
+- `USER/experiments/AutomatedMicroscopy.yaml` — CEDAR Phase A imaging rig
 
 **systemd unit пары** (Python legacy + Rust alternative):
 - `aim-daily-brief.service` (Python) ↔ `aim-daily-brief-rust.service` (Rust binary)
@@ -709,7 +709,7 @@ LC — это hypothesis-stage framework, объединяющий 5 научн�
 | Подпроект | Уровень | Что делает |
 |-----------|---------|------------|
 | **MCAOA** | Theoretical (meta-теория) | Multi-Counter Architecture; aging как взвешенная сумма параллельных счётчиков |
-| **CDATA** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
+| **CEDAR** | Molecular-cellular | Hypothesis: centriolar damage в HSC (status: inconclusive) |
 | **Ze** | Mathematical | Entropy-geometric ansatz `dτ/dt = −α·I(Z)` |
 | **BioSense** | Applied | Wearable platform + χ_Ze биомаркер |
 | **FCLC** | Infrastructure | Federated learning + DP + k-anonymity (semi-honest only) |
@@ -745,7 +745,7 @@ LC/
 ├── _archive/                    # старые версии
 ├── _audits/                     # audit reports
 │
-└── <subprojects>/               # MCAOA, CDATA, Ze, BioSense, ...
+└── <subprojects>/               # MCAOA, CEDAR, Ze, BioSense, ...
 ```
 
 ## Run (subproject backends)
@@ -808,7 +808,7 @@ Georgia Longevity Alliance (NGO #404506520, Associated Country Horizon Europe)
 ## Связь с другими компонентами LC
 
 Протеостаз является одним из **девяти основных счётчиков** в рамках MCAOA. Его состояние влияет на общую метрику повреждения тканей *L_tissue(n, t)*. Модель напрямую связана с проектами:
-*   **CDATA (Cellular Damage Theory of Aging):** Коллапс протеостаза является одним из основных источников клеточного повреждения (*D_CELL*) в теории CDATA.
+*   **CEDAR (Cellular Damage Theory of Aging):** Коллапс протеостаза является одним из основных источников клеточного повреждения (*D_CELL*) в теории CEDAR.
 *   **FCLC (Functional Capacity & LifeCourse):** Снижение протеостатического резерва является драйвером потери функциональной ёмкости в постмитотических тканях (мозг, мышцы).
 
 ## Статус и дальнейшие шаги
@@ -938,7 +938,7 @@ LC — это **умбрелла-экосистема** из 5 взаимосв�
 | # | Подпроект | Уровень | Status | Auth doc |
 |---|-----------|---------|--------|----------|
 | 1 | **MCAOA** | Theoretical (meta-теория счётчиков) | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | `MCAOA/CONCEPT.md` |
-| 2 | **CDATA** | Molecular-cellular (centriolar PTM hypothesis) | **Inconclusive** — preliminary issue ABL-2 (R²_no_α=0.833 > full=0.778) НЕ statistically significant after nested CV (p=0.12); Sobol full decomp deferred to Cell-DT v4.0 | `CDATA/CONCEPT.md` |
+| 2 | **CEDAR** | Molecular-cellular (centriolar PTM hypothesis) | **Inconclusive** — preliminary issue ABL-2 (R²_no_α=0.833 > full=0.778) НЕ statistically significant after nested CV (p=0.12); Sobol full decomp deferred to Cell-DT v4.0 | `CEDAR/CONCEPT.md` |
 | 3 | **Ze Theory** | Mathematical (entropy-geometric) | `dτ_Ze/dt = −α·I(Z)` — **POSTULATED ansatz** (НЕ derivation) by analogy with Burgholzer 2015 + Pearson 2021 (physical clocks, не биология) | `Ze/CONCEPT.md` |
 | 4 | **BioSense** | Applied (wearable, χ_Ze) | Theoretical fixed point `v* = 0.45631` at `k_λ=1`; sensitivity range `v* ∈ [0.32, 0.58]` for `k_λ ∈ [0.5, 2.0]`. Empirically tested via swept-v* search on All-of-Us N=500: `v*_optimal = 0.451 (95% CI 0.443-0.459)` consistent with theory. | `BioSense/CONCEPT.md` |
 | 5 | **FCLC** | Infrastructure (federated learning, privacy) | v13.4 PASS milestone; ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5); RDP composition Wang/Mironov 2017-2019. **Threat model (v5):** semi-honest server + Byzantine-robust ≤25% (Krum); NOT secure against active server collusion or malicious server. **GDPR Art. 9 blocker** до FCLC v14 (planned Q1 2027). | `FCLC/CONCEPT.md` |
@@ -952,7 +952,7 @@ Plus 1 supporting: **Activated** (clinical pilot via Шашвиашвили — 
 ```
 Theoretical level         MCAOA (counter-sum framework, axioms M1-M4)
                               ↓ (counter #1 candidate)
-Molecular-cellular level  CDATA (centriolar PTM hypothesis, status inconclusive)
+Molecular-cellular level  CEDAR (centriolar PTM hypothesis, status inconclusive)
                               ↓ (instantiates one D_i mechanism)
 Mathematical level        Ze Theory (entropy-geometric ansatz dτ/dt = −α·I)
                               ↓ (gives χ_Ze formal foundation)
@@ -982,7 +982,7 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 ├── deploy/                      # docker-compose-all.yml для production
 │
 ├── MCAOA/                        # подпроект theoretical
-├── CDATA/                       # подпроект molecular
+├── CEDAR/                       # подпроект molecular
 ├── Ze/                          # подпроект mathematical (regenerated 2026-04-28)
 ├── BioSense/                    # подпроект applied (regenerated 2026-04-28)
 ├── FCLC/                        # подпроект infrastructure (server-resident, отдельный repo)
@@ -1030,7 +1030,7 @@ Infrastructure level      FCLC (federated learning + DP + k-anon + secagg)
 
 ### 8.4 Что не реализовано (но было обещано в article)
 - Swept-v* falsification protocol на All-of-Us → требует data access (DUA pending).
-- Cell-DT v4.0 для full Sobol decomposition → отдельный subproject (CDATA область).
+- Cell-DT v4.0 для full Sobol decomposition → отдельный subproject (CEDAR область).
 - FCLC v14 malicious-secure migration → planned Q1 2027.
 
 ## 9. Иерархия authority при конфликте между файлами
@@ -1194,13 +1194,13 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 ---
 
-## Связь с ABL-2 parodox (CDATA) — научный контекст
+## Связь с ABL-2 parodox (CEDAR) — научный контекст
 
-Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
+Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CEDAR/CONCEPT.md Appendix B](../CEDAR/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CEDAR-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
-Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
+Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CEDAR) и пару (этот counter, другие active counters).
 
 Принцип по умолчанию (§CORRECTIONS 1.3): `γ_i = 0` пока post-hoc статистика не отвергнет независимость на данных.
 
@@ -1385,13 +1385,13 @@ Self-citations follow the `≤15% of total references` rule mandated by Nature R
 
 ---
 
-## Связь с ABL-2 parodox (CDATA) — научный контекст
+## Связь с ABL-2 parodox (CEDAR) — научный контекст
 
-Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CDATA/CONCEPT.md Appendix B](../CDATA/CONCEPT.md).
+Этот counter может участвовать в разрешении **ABL-2 paradox** — центральной научной задачи WP3 EIC Pathfinder v3 (Variant B). Подробности: [CEDAR/CONCEPT.md Appendix B](../CEDAR/CONCEPT.md).
 
-Суть: в текущей CDATA-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
+Суть: в текущей CEDAR-модели Sobol-анализ показал, что эпигенетический параметр доминирует (S1=0.403) над центриольным (S1=0.224). Это может означать, что различные counters в MCAOA архитектуре не являются независимыми, и что interactions между ними (параметр γ_ij) важнее single-counter вклада.
 
-Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CDATA) и пару (этот counter, другие active counters).
+Для **этого** counter'а это значит: в будущих экспериментах (post-EIC WP1) при определении γ-коэффициентов взаимодействия потребуется учитывать пару (этот counter, CEDAR) и пару (этот counter, другие active counters).
 
 Принцип по умолчанию (§CORRECTIONS 1.3): `γ_i = 0` пока post-hoc статистика не отвергнет независимость на данных.
 
@@ -1616,7 +1616,7 @@ fast:      Groq llama-3.1-8b → DS-chat → Ollama 3b
 | `L_tissue(n,t)` | Tissue-level aging burden, MCAOA aggregator | `MCAOA/THEORY.md` |
 | `w_i(tissue)` | Tissue-specific weight for counter `i` | `MCAOA/THEORY.md` |
 | `f_i(D_i(n,t))` | Counter-specific function on damage state `D_i` | `MCAOA/THEORY.md` |
-| `D(t)` | Centriolar damage (CDATA hypothetical counter) | `CDATA/THEORY.md` |
+| `D(t)` | Centriolar damage (CEDAR hypothetical counter) | `CEDAR/THEORY.md` |
 | `I(Z)` | Impedance / KL-divergence between actual and modeled state | `Ze/THEORY.md` |
 | `τ_Ze` | Proper-time budget | `Ze/THEORY.md` |
 | `α, β, λ` | Coupling constants (Ze) | `Ze/THEORY.md` |
@@ -1632,9 +1632,9 @@ fast:      Groq llama-3.1-8b → DS-chat → Ollama 3b
 ```
 MCAOA            L_tissue = Σᵢ wᵢ · fᵢ(Dᵢ)
                                     ↑
-                                 один из Dᵢ — CDATA (hypothetical)
+                                 один из Dᵢ — CEDAR (hypothetical)
 
-CDATA           A(t) = a + b·D(t) + c·D(t)²       (status: inconclusive)
+CEDAR           A(t) = a + b·D(t) + c·D(t)²       (status: inconclusive)
                 χ_Ze = g₀ − g₁·A(t)                (linear bridge, 5 free params, underpowered)
 
 Ze              I(Z) = S(Z_real ‖ Z_model)        (KL divergence)
@@ -1664,7 +1664,7 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Variational principle `F = E − T·S − λ·I_pred` | `BioSense/THEORY.md §3.1` | Friston 2010 framework |
 | `λ` from thermodynamics | `BioSense/THEORY.md §3.2` | Lemma C (Wallace 2015 inferential argument) |
 | `v* = 0.45631` fixed point | `BioSense/THEORY.md §3.3` | Theorem 1 (numerical extremum at `k_λ=1`) |
-| CDATA bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
+| CEDAR bridge `A(D)`, `χ(A)` | `BioSense/THEORY.md §4` | Lemma D (linear, 5 params, underpowered) |
 | RDP composition for DP-SGD | `FCLC/THEORY.md` | Mironov 2017 + Wang/Balle/Kasiviswanathan 2019 |
 
 ## §4. Что **не** теорема, а ansatz / hypothesis
@@ -1674,15 +1674,15 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 | Claim | Old framing | New framing |
 |-------|-------------|-------------|
 | `dτ_Ze/dt = −α·I(Z)` | "derived from Burgholzer/Pearson" | **POSTULATED ansatz** by analogy с physical clocks; биология не валидирована |
-| Bridge between `D(t)` (CDATA) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
+| Bridge between `D(t)` (CEDAR) and `χ_Ze` | "mechanistically anchored" | **5 free params** на N=196 underpowered; moved to Supplementary |
 | `χ_Ze` predicts mortality | confirmatory | exploratory hypothesis-generating only; pre-registered N≥500 NOT yet run |
 | Multimodal weights `(0.30, 0.30, 0.20, 0.20)` | "theoretically motivated" | **post-hoc** pilot fit; not theory-fixed |
-| CDATA "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
+| CEDAR "Counter #1 in MCAOA" | confident | status **inconclusive**; Sobol nested CV deferred to Cell-DT v4.0 |
 
 ## §5. Falsifiability (operational)
 
 - **MCAOA M4** (article §3.1): falsified if на pre-registered cohort `N ≥ 2000`, `α = 0.001`, partial r² для all-cause mortality (controlling age, sex) `< 0.05` для каждого counter. Power analysis: N=1875 для R²=0.3 at 80% power.
-- **CDATA**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
+- **CEDAR**: falsified if полная Sobol decomposition (S1+S2+ST) с nested CV на real GTEx-like data показывает что α-component не contributes значимо. Текущий Sobol на synthetic data: ABL-2 paradox (R²_no_α=0.833 vs full=0.778), но difference NOT significant (p=0.12 после correction).
 - **Ze fixed point v***: falsified if swept-v* search на All-of-Us N≥500 показывает `v*_optimal` за пределами `[0.32, 0.58]` (sensitivity range для `k_λ ∈ [0.5, 2.0]`). **Test status:** done на N=500, `v*_optimal = 0.451 (95% CI 0.443-0.459)` — consistent с theory.
 - **FCLC**: falsified as GDPR-compliant infrastructure if active server attack succeeds. Текущий статус: semi-honest secure only; известный блокер; v14 planned Q1 2027.
 
@@ -1692,7 +1692,7 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 - Все 5 канонических BioSense computations → `BioSense/biosense-simulator/` (Rust)
 - FCLC RDP composition + Krum aggregator → `FCLC/fclc-core/src/dp/` + `aggregation/` (Rust, server-resident)
 - MCAOA aggregator → `MCAOA/CellDT_v4/` (planned, не реализован полностью)
-- CDATA bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
+- CEDAR bridge fitting → out of canonical simulator surface; Python prototype в `_archive/`
 
 ```
 ### `Proteostasis/THEORY.md` (7054 chars)
@@ -1752,13 +1752,13 @@ FCLC            ε_total ≈ 0.43 at (σ=1.5, q=0.013, T=5)  (RDP composition)
 3.  **Прогноз эффективности интервенций:** Целевые интервенции, которые снижают *D₅* (индукторы шаперонов, активаторы аутофагии, антисмысловые олигонуклеотиды против агрегирующих белков), должны приводить к наибольшему продлению здоровья в тканях, где протеостаз является доминирующим лимитирующим счётчиком (прогноз для «MCAOA Test 1»).
 4.  **Прогноз мультиморбидности:** Высокий уровень *D₅* в одной системе (например, центральная нервная система) будет статистически предсказывать его повышение в других системах (периферические нервы, мышцы) из-за общих системных факторов и молекулярных связей (например, прионоподобное распространение).
 
-## 5. Интеграция в MCAOA и CDATA
+## 5. Интеграция в MCAOA и CEDAR
 
 В рамках MCAOA вклад коллапса протеостаза в общее повреждение ткани *L_tissue* определяется как:
 *L_tissue(n, t) = ... + w₅(tissue) · f₅(D₅(n, t)) + ...*
 где *w₅(tissue)* — тканеспецифичный вес счётчика #5, а *f₅* — функция, отображающая повреждение *D₅* на вклад в фенотип старения (например, сигмоида).
 
-В рамках теории клеточного повреждения CDATA, накопление *D₅* является прямым источником **внутриклеточного повреждения (*D_CELL*)**. Уравнение CDATA для *D_CELL* включает член, пропорциональный *D₅*. Таким образом, теория протеостаза предоставляет конкретный биологический механизм и метрику для одного из компонент CDATA.
+В рамках теории клеточного повреждения CEDAR, накопление *D₅* является прямым источником **внутриклеточного повреждения (*D_CELL*)**. Уравнение CEDAR для *D_CELL* включает член, пропорциональный *D₅*. Таким образом, теория протеостаза предоставляет конкретный биологический механизм и метрику для одного из компонент CEDAR.
 
 ---
 *Теория соответствует канону CORRECTIONS_2026-04-22. Параметры α₅, β₅, n₅*, τ₅, γ₅ⱼ подлежат экспериментальному определению. Значения по умолчанию для γ₅ⱼ, в соответствии с исправлениями, равны 0 (гипотеза независимости), пока статистический анализ данных не покажет обратного.*
@@ -2035,7 +2035,7 @@ gap, фиксируемый в `STRATEGY.md` P1.
 | Subproject | Role in ecosystem | Role in EIC заявке (Challenges 2026, Area #2) | Status |
 |-----------|--------------------|------------------------------------------------|--------|
 | **MCAOA** | Theoretical meta-framework | Cross-WP framework | submitted Nature Aging, NOT peer-reviewed |
-| **CDATA** | Molecular-cellular hypothesis | WP3 biology (Geiger Ulm) | inconclusive (Sobol pending) |
+| **CEDAR** | Molecular-cellular hypothesis | WP3 biology (Geiger Ulm) | inconclusive (Sobol pending) |
 | **Ze Theory** | Mathematical | WP2 theory foundation | postulated ansatz (no biology bridge) |
 | **BioSense** | Wearable biomarker | **WP4 — center of grant (Area #2 fit)** | hypothesis-stage, swept-v* validated |
 | **FCLC** | Federated infrastructure | WP1 privacy infrastructure | v13.4 PASS, semi-honest only (v14 planned) |
@@ -2060,7 +2060,7 @@ gap, фиксируемый в `STRATEGY.md` P1.
                              ↓
    ┌─────────────────────────┴───────────────────────────────┐
    │ MCAOA: L_tissue = Σ wᵢ fᵢ(Dᵢ) — Dᵢ candidates include    │
-   │ CDATA centriolar damage (status: inconclusive)          │
+   │ CEDAR centriolar damage (status: inconclusive)          │
    └─────────────────────────┬───────────────────────────────┘
                              ↓
    ┌─────────────────────────────────────────────────────────┐
@@ -2122,7 +2122,7 @@ When article (`~/Desktop/LC.md`) changes:
 1. Diff against current `CONCEPT.md` §3 (5-component status table) and §5 (M4)
 2. Bump CONCEPT version (v5.6 → v5.7 etc.)
 3. Re-derive `THEORY.md`, `DESIGN.md`, `PARAMETERS.md`, `MAP.md` (this), `EVIDENCE.md`, `OPEN_PROBLEMS.md`, `STATE.md`
-4. Cross-check subproject CONCEPTs (Ze/BioSense/FCLC/CDATA/MCAOA) for conflicts; update where needed
+4. Cross-check subproject CONCEPTs (Ze/BioSense/FCLC/CEDAR/MCAOA) for conflicts; update where needed
 5. Cross-check social server/web/realtime strings (disclosures, AI prompts) — see DESIGN §5
 6. Commit: "Regenerate umbrella core from article vX.Y"
 
@@ -2248,13 +2248,13 @@ optional frontend) на локальных портах:
           └──────┬───────┬───────┬──────┘
                  │       │       │
          ┌───────▼─┐  ┌──▼──┐  ┌─▼──────┐
-         │  CDATA  │  │  Ze │  │BioSense│
+         │  CEDAR  │  │  Ze │  │BioSense│
          └─────────┘  └─────┘  └────────┘
                  ▲
                  │ (знания о старении → AIM medical_knowledge)
                  │
         ┌────────┴────────┐
-        │      AIM/       │  ← (standalone, но опирается на CDATA-знания)
+        │      AIM/       │  ← (standalone, но опирается на CEDAR-знания)
         │  (этот проект)  │
         └─────────────────┘
                  │
@@ -2354,7 +2354,7 @@ LentiviralTools  FluorescentCameras     LaserAblation_405
 ## Integrations with LC ecosystem
 
 ```
-  CytogeneticTree  ──┬──→  CDATA (theoretical validation data)
+  CytogeneticTree  ──┬──→  CEDAR (theoretical validation data)
                      │
                      ├──→  MCAOA (Counter #1 lineage-level instance)
                      │
@@ -2565,7 +2565,7 @@ _Last updated: 2026-03-28_
 
 ⚠ **Weights are post-hoc fits on underpowered pilot (N=150)**. NOT theory-derived. Re-fit required on pre-registered cohort N≥2000.
 
-## §3. CDATA bridge constants (status: inconclusive)
+## §3. CEDAR bridge constants (status: inconclusive)
 
 | Symbol | Default | Status |
 |--------|--------:|--------|
@@ -2649,7 +2649,7 @@ Production reality на сервере:
 | AIM Hive Queen | 8090 | — | hive.longevity.ge |
 | AIM LLM router | 8770 | — | (loopback only) |
 | MCAOA | (none — landing only) | static `/var/www/mcoa-landing/` | mcoa.longevity.ge |
-| CDATA | (none — landing only) | static `/var/www/cdata-landing/` | cdata.longevity.ge |
+| CEDAR | (none — landing only) | static `/var/www/cdata-landing/` | cdata.longevity.ge |
 | (umbrella social) realtime | — | 4500 | app.longevity.ge |
 | (umbrella social) server | **4600** (decided 2026-05-08; 8080 held by docker-proxy on production host) | — | app.longevity.ge |
 | (umbrella social) web | — | 5173 (dev) / static (prod) | app.longevity.ge |
@@ -3138,7 +3138,7 @@ Suggestions for project development from external analysis, literature, and cros
 | Subproject | Status | Last updated |
 |------------|--------|--------------|
 | **MCAOA** | submitted Nature Aging NATAGING-P13741, NOT peer-reviewed | (per article) |
-| **CDATA** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
+| **CEDAR** | inconclusive (Sobol p=0.12 after correction; full S2/ST pending) | (per article v5) |
 | **Ze** | regenerated 2026-04-28; simulator + backend + Phoenix live; F-tests partial pass | 2026-04-28 |
 | **BioSense** | regenerated 2026-04-28; simulator + backend + Phoenix live; B1-B6 + datasets crate; γ velocity convention applied | 2026-04-28 |
 | **FCLC** | v13.4 PASS milestone; semi-honest only; v14 planned Q1 2027 | 2026-04-26 (server deployment) |
@@ -3198,7 +3198,7 @@ Per `DESIGN.md §5`:
 - [ ] `BioSense/CONCEPT.md` — same; ensure χ_Ze "hypothesis-stage" + post-hoc multimodal disclosed
 - [ ] `FCLC/CONCEPT.md` — threat model wording aligned ("semi-honest only; not active server collusion")
 - [ ] `MCAOA/CONCEPT.md` — M4 operational threshold (N≥2000, α=0.001, partial r²<0.05) added
-- [ ] `CDATA/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
+- [ ] `CEDAR/CONCEPT.md` — status "inconclusive" added; ABL-2 explanation; Sobol full decomp deferred
 
 **None of these block scientific layer functioning** — all are documentation/disclosure consistency updates.
 
@@ -3218,9 +3218,9 @@ md5sum ~/Desktop/LC.md
 [record on next commit]
 
 ```
-### `CDATA/STATE.md` (4948 chars)
+### `CEDAR/STATE.md` (4948 chars)
 ```md
-# STATE — CDATA
+# STATE — CEDAR
 
 **Назначение:** волатильное состояние, активные TODO, decision log, milestones.
 **Конвенция:** новые записи в Decision Log сверху с датой.
@@ -3288,7 +3288,7 @@ Grep не нашёл "ABL-2" в CONCEPT/THEORY/README. Проверить Append
 ## Milestones
 
 ### v5.2 — Counter #1 framing ✅ 2026-04-21
-- [x] CDATA встроена в MCAOA как Counter #1
+- [x] CEDAR встроена в MCAOA как Counter #1
 - [x] CONCEPT.md обновлён под Counter framing
 - [x] Hallmark recognition (Rando, Brunet, Goodell 2025) добавлено
 
@@ -3320,13 +3320,13 @@ TODO.md архивирован. Все TODO мигрированы в STATE.md �
 Каноны параметров обновлены. См. umbrella `_archive/audits/CORRECTIONS_2026-04-22.md`.
 
 ### 2026-04-21 — Counter framing
-CDATA пере-фрейминг как Counter #1 в MCAOA. Не отменяет аксиомы, только повышает архитектурный статус.
+CEDAR пере-фрейминг как Counter #1 в MCAOA. Не отменяет аксиомы, только повышает архитектурный статус.
 
 ---
 
 ## Что НЕ делать
 
-- Не изменять 3 аксиомы CDATA без явной команды
+- Не изменять 3 аксиомы CEDAR без явной команды
 - Не игнорировать L1 mismatch — это блокирующий fix для validation
 - Не добавлять новые counter numbering без обновления всех ссылок
 - Не цитировать Longevity Horizon в peer-reviewed публикациях
@@ -3360,7 +3360,7 @@ CDATA пере-фрейминг как Counter #1 в MCAOA. Не отменяе�
 - [ ] Дождаться решения Nature Aging editorial decision
 - [ ] Подготовить response к reviewer comments (если будут)
 - [ ] Backup: secondary target (npj Aging, eLife) если reject
-- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CDATA L1
+- [ ] Sobol ABL-2 paradox для Counter #1 — закрыть в координации с CEDAR L1
 - [ ] Tissue-specific weights калибровка против реальных данных HSC/skin/neural
 
 ---
@@ -3404,7 +3404,7 @@ Created `crates/mcoa_compare/`:
 Добавлены CLAUDE + STATE. Существующие 7 файлов (CONCEPT/DESIGN/EVIDENCE/OPEN_PROBLEMS/PARAMETERS/README/THEORY) уже соответствуют новой схеме.
 
 ### 2026-04-19 — Nature Aging submission
-MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CDATA), и формализует общую multi-counter архитектуру.
+MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. Включает Counter #1 (CEDAR), и формализует общую multi-counter архитектуру.
 
 ---
 
@@ -3447,7 +3447,7 @@ MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. �
 - [ ] Read `BioSense/CONCEPT.md` — ensure "hypothesis-stage exploratory" prominent in §1; weights post-hoc disclosed
 - [ ] Read `FCLC/CONCEPT.md` — threat model uniformly "semi-honest server only; not active"
 - [ ] Read `MCAOA/CONCEPT.md` — add M4 operational threshold (N≥2000, α=0.001, partial r²<0.05)
-- [ ] Read `CDATA/CONCEPT.md` — status "inconclusive (Sobol p=0.12)" added
+- [ ] Read `CEDAR/CONCEPT.md` — status "inconclusive (Sobol p=0.12)" added
 - [ ] (none of these block runtime; documentation alignment only)
 
 ## Phase 2 — Social layer code edits (per DESIGN §5)
@@ -3492,9 +3492,9 @@ MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. �
 ## Phase 5 — Long-term scientific
 
 - [ ] N≥2000 pre-registered cohort acquisition (UK Biobank wearable subset OR All-of-Us OR Аqтивиребули pilot)
-- [ ] Cell-DT v4.0 build for full Sobol decomposition (CDATA)
+- [ ] Cell-DT v4.0 build for full Sobol decomposition (CEDAR)
 - [ ] Swept-v* falsification protocol on N≥2000 (BioSense)
-- [ ] Bridge to CDATA simplification (5 params → 2 params or theory-derived)
+- [ ] Bridge to CEDAR simplification (5 params → 2 params or theory-derived)
 - [ ] EEGLAB/EDF Rust readers (BioSense Phase 2)
 
 ## Deferred / not now
@@ -3592,7 +3592,7 @@ MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. �
 
 Следить за этими только если конкретный partner / event активирует:
 
-- **CDATA / Impetus Round 4** — следить за `~/Desktop/LC/CDATA/TODO.md`.
+- **CEDAR / Impetus Round 4** — следить за `~/Desktop/LC/CEDAR/TODO.md`.
 - **EIC Pathfinder Challenges 2026** (deadline **2026-10-28**) — следить за
   `~/Desktop/LC/CLAUDE.md`.
 - **PhD applications** — следить за memory `project_phd_*` и `STRATEGY.md`
@@ -3642,7 +3642,7 @@ MCAOA v5 поданa в Nature Aging как flagship мета-теория LC. �
 ## Publication plan
 
 - [ ] Methodology paper (Nat Methods / Cell Reports Methods) — Phase 1 first
-- [ ] Scientific paper (Nature / Cell / Nature Aging) — Phase 1 validation of CDATA prediction
+- [ ] Scientific paper (Nature / Cell / Nature Aging) — Phase 1 validation of CEDAR prediction
 - [ ] Data release (Zenodo with DOI) — concurrent with manuscript
 
 ## Risks / Open Questions
@@ -3883,7 +3883,7 @@ _Обновлено: 2026-03-21_
 ├── realtime/                      # social-layer Phoenix Channels
 │
 ├── MCAOA/                          # subproject: theoretical
-├── CDATA/                         # subproject: molecular hypothesis
+├── CEDAR/                         # subproject: molecular hypothesis
 ├── Ze/                            # subproject: math + simulator (regenerated 2026-04-28)
 ├── BioSense/                      # subproject: applied + simulator + datasets (regenerated 2026-04-28)
 ├── FCLC/                          # subproject: federated infra (server-resident, separate repo)
@@ -4455,7 +4455,7 @@ Source content pending: `AUTOMATED_MICROSCOPY_SETUP.md` в этой же пап�
 | Proteomic Aging Clock | Argentieri et al. 2024 | PMID **39117878** ✅ |
 | Free-energy principle | Friston 2010 *Nat Rev Neurosci* 11 | PMID **20068583** ✅ |
 | Predictive information (binary Markov) | Bialek/Nemenman/Tishby 2001 *Neural Computation* 13 | DOI 10.1162/089976601753195969 ✅ |
-| CDATA original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
+| CEDAR original (Tqemaladze 2023) | Tqemaladze J. 2023 *Mol Biol Rep* 50 | PMID **36583780** ✅ |
 | Tqemaladze 2005 early centriole work | *Cell Biol Int* 29 | PMID **15886028** ✅ |
 | ATF5-centriole link | Madarampalli 2015 *Cell* 162 | PMID **26213385** ✅ |
 | Ioannidis on false-positive findings | Ioannidis JPA 2005 *PLOS Med* | PMID **16060722** ✅ |
@@ -4490,7 +4490,7 @@ After v3 removal of Editorial, total references: **36** (peer-reviewed external)
 
 Tqemaladze peer-reviewed self-citations retained:
 - Tqemaladze 2005 *Cell Biol Int* 29 (PMID 15886028) — early centriole work
-- Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CDATA flagship
+- Tqemaladze 2023 *Mol Biol Rep* 50 (PMID 36583780) — CEDAR flagship
 - 3 others from `~/.claude/projects/-home-oem/memory/pubmed_authoritative.md`
 
 Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer-reviewed; moved to Supplementary as "internal manuscript sources".
@@ -4507,12 +4507,12 @@ Self-citations to *Longevity Horizon* (DOI 10.65649/...) **NOT counted** as peer
 | `v* = 0.45631` empirical (BioSense) | ✅ Pilot (All-of-Us N=500, 95% CI 0.443-0.459) | — | consistent with theory; full pre-registered test pending |
 | χ_Ze correlates with PhenoAge r=0.67 | ⚠ Exploratory (post-hoc, not pre-registered) | — | Bonferroni / replication required |
 | AUC=0.81 accelerated aging detection | ⚠ Exploratory | — | winner's curse risk; pre-reg N≥2000 required |
-| CDATA causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
+| CEDAR causal in HSC aging | — | ⚠ Inconclusive (Sobol p=0.12 after correction) | nested CV + S2/ST on real GTEx data |
 | MCAOA M4 (R²<0.05 falsification) | — | ✅ Operationally defined | requires N≥2000 cohort |
 
 ## §5. What is deliberately NOT cited
 
-- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CDATA bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
+- **Anything from Longevity Horizon as peer-reviewed**. Tqemaladze 2026 BioSense (DOI 10.65649/23ba5z09), Ze (DOI 10.65649/xf5vp867), CEDAR bridge papers — all referenced as "internal manuscript, not peer-reviewed; see Supplementary".
 - **HAP** (any reference) — failed PMID audit.
 - **Ontogenesis** (any reference) — failed PMID audit.
 - **Self-citations counted as peer-reviewed** — only the 5 PubMed-indexed Tqemaladze entries.
@@ -4713,7 +4713,7 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision
 - Related open problems: `OPEN_PROBLEMS.md` §1 AI judgment quality, §2 hardware reliability
 - Parameter provenance: `PARAMETERS.md`
-- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
+- External: Impetus LOI v24 §Methods section cites automation (`~/Documents/Grants/LC/CEDAR/docs/IMPETUS_2026-04-25/LOI_Impetus_v24_MCOA_2026-04-21.pdf`)
 
 ---
 
@@ -4736,9 +4736,9 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 **Status:** open. **Largest blocker for Nature Aging-tier submission.**
 **Path forward:** UK Biobank wearable subset DUA + cost (years), All-of-Us Researcher Workbench DUA (months), or new prospective cohort via Аqtивиребули clinical pilot.
 
-### §1.2 CDATA inconclusive (Sobol nested CV)
-**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CDATA contributes uniquely.
-**Status:** open. Tracked in `CDATA/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
+### §1.2 CEDAR inconclusive (Sobol nested CV)
+**Problem:** ABL-2 paradox (R²_no_α=0.833 vs full=0.778) appears in synthetic Sobol — not statistically significant after nested CV (p=0.12). Full S1+S2+ST decomposition on **real GTEx data N=948** required to determine if CEDAR contributes uniquely.
+**Status:** open. Tracked in `CEDAR/OPEN_PROBLEMS.md`; depends on Cell-DT v4.0 build.
 **Path forward:** Cell-DT v4.0 (planned, not started); GTEx access already available.
 
 ### §1.3 Ze Theory → biology bridge (formal)
@@ -4756,7 +4756,7 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 **Status:** open. Weights need re-fit on pre-registered cohort.
 **Path forward:** lock weights via blinded fit on hold-out portion of N≥500 cohort before any unblinding.
 
-### §1.6 Bridge to CDATA (5 free params)
+### §1.6 Bridge to CEDAR (5 free params)
 **Problem:** `A(D) = a + bD + cD²; χ_Ze = g₀ − g₁A` has 5 free params on N=196 → 39 obs/param; below Harrell standard 10/param for stable fit.
 **Status:** moved to Supplementary in article v5; remains open.
 **Path forward:** simpler 2-param linear bridge OR theory-derived constraints.
@@ -5008,7 +5008,7 @@ Source content pending: `AUTOMATED_MICROSCOPY_SETUP.md` в этой же пап�
 3. [OCR / PDF — библиотеки](#3-ocr-и-pdf)
 4. [Лабораторные референсы](#4-лабораторные-референсы)
 5. [Многоязычие — 9 языков](#5-многоязычие)
-6. [Связь с CDATA / HAP / MCAOA](#6-научная-база-из-экосистемы)
+6. [Связь с CEDAR / HAP / MCAOA](#6-научная-база-из-экосистемы)
 7. [Регуляция / privacy](#7-регуляция-и-privacy)
 
 ---
@@ -5020,7 +5020,7 @@ Source content pending: `AUTOMATED_MICROSCOPY_SETUP.md` в этой же пап�
 **Ключевые подходы:**
 - Senolytic therapy (dasatinib + quercetin) — Jaba 2022, Tqemaladze 2023 (*Georgian Scientists*)
 - Минеральное мороженое для восстановления после нагрузок — Tqemaladze & Samanishvili 2024
-- Биологический возраст по CDATA → персонализированные интервенции
+- Биологический возраст по CEDAR → персонализированные интервенции
 
 ## 2. LLM-провайдеры
 
@@ -5078,7 +5078,7 @@ Source content pending: `AUTOMATED_MICROSCOPY_SETUP.md` в этой же пап�
 
 | Проект | Вклад в AIM |
 |--------|-------------|
-| **CDATA** | биологический возраст → health-span предсказания |
+| **CEDAR** | биологический возраст → health-span предсказания |
 | **HAP** (Hepato-Affective Primacy) | связь печени и настроения → скрининг депрессии через LFT |
 | **MCAOA** | 5 параллельных счётчиков повреждений → multi-system health dashboard |
 | **Ze Theory** | нейрофизика сознания → BioSense-χ_Ze для скрининга когнитивного возраста |
@@ -5104,7 +5104,7 @@ Source content pending: `AUTOMATED_MICROSCOPY_SETUP.md` в этой же пап�
 # KNOWLEDGE — CytogeneticTree
 
 **Compiled:** 2026-04-21 (populated by systematic literature-search session)
-**Purpose:** Systematic landscape for the proposed Impetus experiment — pure old-centriole lineage purification + zygote-to-terminal cytogenetic tree reconstruction, used to validate CDATA.
+**Purpose:** Systematic landscape for the proposed Impetus experiment — pure old-centriole lineage purification + zygote-to-terminal cytogenetic tree reconstruction, used to validate CEDAR.
 **Method:** PubMed eSearch + eSummary direct API calls. Every PMID listed below was verified by `esummary` — title, first author, and year cross-checked against NCBI JSON response. **Zero hallucinated references.**
 
 > ⚠️ **Stub correction:** the earlier stub listed "Loeffler D, *Nature* 2019, PMID 31485075." Verification showed 31485075 is actually a quantum-physics paper. The correct Loeffler HSC paper is **PMID 31485073** ("Asymmetric lysosome inheritance predicts activation of haematopoietic stem cells"). Updated below.
@@ -5133,16 +5133,16 @@ Three independent claims must hold to justify "first":
 
 | PMID | First author, year | Journal | Relevance |
 |------|--------------------|---------|-----------|
-| **17255513** | Yamashita YM, 2007 | Science | *Foundational.* Asymmetric inheritance of mother vs. daughter centrosome in Drosophila male GSCs — established that stem cells retain the older centrosome. Primary citation for the CDATA thesis. |
+| **17255513** | Yamashita YM, 2007 | Science | *Foundational.* Asymmetric inheritance of mother vs. daughter centrosome in Drosophila male GSCs — established that stem cells retain the older centrosome. Primary citation for the CEDAR thesis. |
 | **17336911** | Rebollo E, 2007 | Dev Cell | Functionally unequal centrosomes drive spindle orientation in Drosophila neuroblasts. Parallel evidence in a different stem cell type. |
 | **19829375** | Wang X, 2009 | Nature | Asymmetric centrosome inheritance maintains neural progenitors in the neocortex — extends phenomenon to mammalian brain. |
 | **19829363** | Stearns T, 2009 | Nature | News & Views: "Stem cells: A fateful age gap." Short framing piece, useful citation. |
 | **21145745** | Conduit PT, 2010 | Curr Biol | Cnn dynamics drive centrosome size asymmetry; daughter-centriole retention in Drosophila neuroblasts (mechanism). |
-| **21407209** | Januschke J, 2011 | Nat Commun | *Counter-example.* Drosophila neuroblasts retain the **daughter** (younger) centrosome — cell-type-specific directionality, caveat for CDATA universality. |
+| **21407209** | Januschke J, 2011 | Nat Commun | *Counter-example.* Drosophila neuroblasts retain the **daughter** (younger) centrosome — cell-type-specific directionality, caveat for CEDAR universality. |
 | **22683192** | Pelletier L, 2012 | Curr Opin Cell Biol | Review: "Centrosome asymmetry and inheritance during animal development." |
 | **24120134** | Paridaen JT, 2013 | Cell | Asymmetric inheritance of centrosome-associated primary cilium membrane directs ciliogenesis after division — mechanistic follow-up. |
 | **25047620** | Reina J, 2014 | Phil Trans B | Review: "When fate follows age: unequal centrosomes in asymmetric cell division." Best single-document summary. |
-| **31485073** | Loeffler D, 2019 | Nature | Asymmetric lysosome inheritance predicts activation of HSCs. Not centriole-specific but provides the HSC-lineage methodology (live imaging + long-term clonal tracking) directly reusable for CDATA validation. |
+| **31485073** | Loeffler D, 2019 | Nature | Asymmetric lysosome inheritance predicts activation of HSCs. Not centriole-specific but provides the HSC-lineage methodology (live imaging + long-term clonal tracking) directly reusable for CEDAR validation. |
 | **37882444** | Royall LN, 2023 | eLife | Asymmetric inheritance of centrosomes maintains stem cell properties in human neural progenitor cells. Most recent human/mammalian confirmation. |
 | **36988082** | Gönczy P, 2023 | Genetics | Sperm-contributed centrioles segregate stochastically into 4-cell C. elegans — relevant caveat for zygote-level tracking. |
 
@@ -5256,7 +5256,7 @@ Additional off-the-shelf infrastructure (software/vendor, no PMID):
 | Sort cells by centriole age ratio | No | **Large** — no published FACS gating strategy on subcellular fluorescence ratio |
 | Closed-loop target-specific ablation | Partial | Small — Mahecic 2022 + commercial Zeiss; integration ~3 months |
 | Reconstruct lineage tree | Yes | None — adapt Chan 2019 + moslin |
-| Compare to CDATA predictions | No | Small — requires clean experimental arm (young-lineage vs. old-lineage proliferation comparison) |
+| Compare to CEDAR predictions | No | Small — requires clean experimental arm (young-lineage vs. old-lineage proliferation comparison) |
 
 ---
 
@@ -5279,7 +5279,7 @@ Additional off-the-shelf infrastructure (software/vendor, no PMID):
 
 6. **Self-citation slots (CLAUDE.md ≤15% rule):**
    - Tqemaladze 2023 *Mol Biol Rep* (PMID 36583780) — reduction/proliferation defects from old-centriole accumulation
-   - Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CDATA
+   - Tqemaladze & Chichinadze 2005 *Biochemistry (Moscow)* — foundational CEDAR
    - Chichinadze & Tqemaladze 2008 *Adv Gerontol* — centrosomal hypothesis of aging
    - Tqemaladze 2024 *Georgian Scientists* — cell center + oldest centrioles in stem cells
    - Tqemaladze 2026 *Longevity Horizon* (DOI 10.65649/3zzek632) — First Direct Structural Evidence for Age-Dependent Polyglutamylation Asymmetry in HSC (companion paper)
@@ -5520,7 +5520,7 @@ critical-path open question:
 
 ## Связь с экосистемой
 
-AIM — standalone, но опирается на научные результаты CDATA/HAP/MCAOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
+AIM — standalone, но опирается на научные результаты CEDAR/HAP/MCAOA/Ze. При обновлении этих проектов — проверять, не нужно ли добавить новый анализ в doctor-агент.
 
 ---
 
@@ -5535,9 +5535,9 @@ AIM — standalone, но опирается на научные результа
 
 - **Literature**: every PMID must be verified via PubMed esummary API before entering any file in this subproject. No DeepSeek for citation search.
 - **RITE-Centriolin**: treat as *not yet published* / *must be de-novo cloned* until proven otherwise. Fallback: Dendra2-Centrin photoconvertible.
-- **Connection to CDATA**: CytogeneticTree is the **empirical test-bed** for CDATA theoretical predictions, NOT a parallel theory. Keep this clear in outreach.
+- **Connection to CEDAR**: CytogeneticTree is the **empirical test-bed** for CEDAR theoretical predictions, NOT a parallel theory. Keep this clear in outreach.
 - **Connection to Impetus LOI**: Phase 1 MVCT is a *minimum-viable demo*. The full Cytogenetic Tree is a multi-year programme beyond the grant.
-- **Scope**: this subproject handles *lineage-level* reconstruction; single-cell biochemistry lives in CDATA; tissue-level biomarkers live in Ze / BioSense.
+- **Scope**: this subproject handles *lineage-level* reconstruction; single-cell biochemistry lives in CEDAR; tissue-level biomarkers live in Ze / BioSense.
 
 ## Dated entries
 
@@ -5560,7 +5560,7 @@ AIM — standalone, но опирается на научные результа
 
 ## Things to remember across sessions
 
-- Always check `CONCEPT.md` is in sync with `CDATA/CONCEPT.md` + `MCAOA/` claims. If CDATA updates its theory, CytogeneticTree predictions might need update.
+- Always check `CONCEPT.md` is in sync with `CEDAR/CONCEPT.md` + `MCAOA/` claims. If CEDAR updates its theory, CytogeneticTree predictions might need update.
 - Keep clear separation: Impetus = funded Phase A (MVCT fibroblasts, binary Go/No-Go). Cytogenetic Tree = 3-phase multi-year programme.
 - `~/Desktop/LC/AutomatedMicroscopy/` is the shared hardware platform dir; CytogeneticTree is the methodology layer on top.
 
@@ -5569,7 +5569,7 @@ AIM — standalone, но опирается на научные результа
 - `project_longevity_georgia_ngo` — NGO that hosts this research
 - `feedback_deepseek_no_citations` — enforce for all KNOWLEDGE.md entries
 - `feedback_verify_references` — verify every PMID before commit
-- `feedback_cdata_docs_sync` — when editing CDATA, check if CytogeneticTree docs need update (and vice versa)
+- `feedback_cdata_docs_sync` — when editing CEDAR, check if CytogeneticTree docs need update (and vice versa)
 - `project_mcoa_nature_correspondence` — MCAOA manuscript at Nature Aging; CytogeneticTree is the empirical counterpart
 
 ```
@@ -5712,7 +5712,7 @@ _Last updated: 2026-03-28_
 | Проект | Путь | Роль |
 |--------|------|------|
 | CommonHealth | `~/Desktop/LC/` | Umbrella (EIC Pathfinder) |
-| CDATA | `~/Desktop/LC/CDATA/` | Биологический возраст |
+| CEDAR | `~/Desktop/LC/CEDAR/` | Биологический возраст |
 | HAP | `~/Desktop/LC/HAP/` | Гепато-аффективная теория |
 | MCAOA | `~/Desktop/LC/MCAOA/` | Мульти-счётчиковая архитектура |
 | Ze | `~/Desktop/LC/Ze/` | Нейрофизика сознания |
@@ -5735,7 +5735,7 @@ _Last updated: 2026-03-28_
 - ORCID Jaba Tqemaladze: https://orcid.org/0000-...
 - Zenodo (CommonHealth deposits): https://zenodo.org/communities/commonhealth
 
-## Публикации с цитированием AIM / CDATA
+## Публикации с цитированием AIM / CEDAR
 
 - Tqemaladze J. (2026). Architecture and Design of a Prototype Multi-Modal Clinical Decision Support System for Integrative Medicine. *Longevity Horizon*, 2(4). https://doi.org/10.65649/4cxxhe47
 - Tqemaladze J. (2026). The Digital Trivium. *Longevity Horizon*, 2(4). https://doi.org/10.65649/w1adk253
@@ -5757,18 +5757,18 @@ _Last updated: 2026-03-28_
 ## Internal (within LC ecosystem)
 
 - Umbrella: `~/Desktop/LC/CONCEPT.md`
-- Parent theory (mechanism): `~/Desktop/LC/CDATA/`
+- Parent theory (mechanism): `~/Desktop/LC/CEDAR/`
 - Parent theoretical framework: `~/Desktop/LC/MCAOA/` (under Nature Aging review, NATAGING-P13741)
 - Shared hardware platform: `~/Desktop/LC/AutomatedMicroscopy/`
 - Orthogonal biomarker work: `~/Desktop/LC/Ze/` + `~/Desktop/LC/BioSense/`
-- Funding context: `~/Documents/Grants/LC/CDATA/docs/IMPETUS_2026-04-25/`
+- Funding context: `~/Documents/Grants/LC/CEDAR/docs/IMPETUS_2026-04-25/`
 - Peer collaborator simulator: `~/Documents/Meetings/Ilia_Zheleznov_2026-04-25/MEETING_KIT.md` (external code: https://github.com/zhelilyan-create/hematopoiesis-simulator)
 
 ## Git
 
 - Public view: `djabbat/LC` (partial — core .md gitignored)
 - Private full: `djabbat/LC-private` (full content incl. CytogeneticTree)
-- Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CDATA-private` mirrors hardware dependencies)
+- Cross-repo: tech subfolders can be pulled into project-specific repos if needed (e.g., `djabbat/CEDAR-private` mirrors hardware dependencies)
 
 ## External resources
 
@@ -5797,7 +5797,7 @@ _Last updated: 2026-03-28_
 
 - RITE core: Verzijlbergen 2010 PNAS (yeast) — PMID 20018668
 - Centriolin-RITE precedent: Royall 2023 *eLife* — PMID 37882444 (RITE in neural progenitors)
-- CDATA core: Tqemaladze 2023 *Mol Biol Rep* — PMID 36583780
+- CEDAR core: Tqemaladze 2023 *Mol Biol Rep* — PMID 36583780
 - Asymmetric centriole inheritance: Yamashita 2007 *Science* — PMID 17255513
 - Lineage tracing foundation: Wang 2009 *Nature* — PMID 19829375 (neural progenitors)
 - Live-cell AI segmentation: Stringer 2021 *Nat Methods* (CellPose) — PMID 33318659
@@ -5839,7 +5839,7 @@ _Last updated: 2026-03-28_
 
 ## Indirect Connections
 
-### CDATA (~/Desktop/CDATA/)
+### CEDAR (~/Desktop/CEDAR/)
 - **Link:** Statistical methods (t-test, Cohen's d, ANCOVA) overlap
 - **Data:** No shared data but similar biostatistics approach
 - **Publications:** May co-cite Ze theory paper from BioSense
@@ -6027,7 +6027,7 @@ _Last updated: 2026-03-28_
 
 ---
 
-### [CDATA] Центросомы, старение и сенесценция 2025–2026
+### [CEDAR] Центросомы, старение и сенесценция 2025–2026
 
 **Источники:**
 - [Drivers of Centrosome Abnormalities: Senescence Progression and Tumor Immune Escape — ScienceDirect 2025](https://www.sciencedirect.com/science/article/abs/pii/S1044579X25000173)
@@ -6041,10 +6041,10 @@ _Last updated: 2026-03-28_
 - **Cancer Cell 2025:** Сенесценция играет двойную роль в предраке: сначала тумор-супрессорный барьер, потом про-туморальный PreTME через паракринный SASP
 - Центросомная амплификация — наиболее частый дефект в опухолях; связана с геномной нестабильностью и ускоренным старением
 
-**Связь с CDATA:**
-> PLK4 ингибитор в клинике — прямое подтверждение терапевтического направления #2 (протеасомальная очистка / регуляция дупликации). ECASP + NF-κB путь хорошо согласуется с CDATA моделью: поврежденные центриоли → SASP → сенесценция → старение ткани. Обновить MCAI-модель с учётом ECASP компонента.
+**Связь с CEDAR:**
+> PLK4 ингибитор в клинике — прямое подтверждение терапевтического направления #2 (протеасомальная очистка / регуляция дупликации). ECASP + NF-κB путь хорошо согласуется с CEDAR моделью: поврежденные центриоли → SASP → сенесценция → старение ткани. Обновить MCAI-модель с учётом ECASP компонента.
 
-**→ Дублировано в CDATA/KNOWLEDGE.md**
+**→ Дублировано в CEDAR/KNOWLEDGE.md**
 
 ---
 
@@ -6079,7 +6079,7 @@ _Last updated: 2026-03-28_
     *   **Health Score:** Не упоминать старую формулу Health Score. Если нужен аналог, говорить о "тканевом повреждении *L_tissue* из MCAOA".
     *   **χ_Ze:** Не упоминать χ_Ze как валидированный клинический биомаркер. Разрешено упоминание только как исследовательского индекса MCAOA Counter "S" — системной синхронизации через плазму/SASP (см. `Ze/CONCEPT.md §4`, переработан 2026-04-23). Прежняя формулировка «Ze Vector Theory» отозвана.
     *   **MCAOA Test 2 и γ_i:** Никогда не утверждать, что "MCAOA Test 2 является источником значений γ_i". γ_i по умолчанию равны 0. Ненулевые значения могут быть получены только из post-hoc статистического анализа данных.
-    *   **Структура EIC:** При упоминании структуры гранта использовать только новую структуру EIC Part B v3 (WP1 MCAOA, WP2 CDATA Experimental, WP3 CDATA Computational, WP4 FCLC).
+    *   **Структура EIC:** При упоминании структуры гранта использовать только новую структуру EIC Part B v3 (WP1 MCAOA, WP2 CEDAR Experimental, WP3 CEDAR Computational, WP4 FCLC).
 3.  **Язык:** Для повествовательных, объяснительных разделов использовать **русский язык**. Технические термины, названия белков, генов, методов, а также блоки кода и математические формулы должны быть на **английском**. Ссылки (PMID, DOI) и цитаты из статей — на языке оригинала (обычно англ.).
 4.  **Запрет заглушек:** Запрещено оставлять в окончательном выводе метки-заглушки типа `TODO`, `[ВСТАВИТЬ]`, `...`. Если информация неизвестна, следует либо явно указать "данный параметр требует экспериментального измерения", либо опустить утверждение.
 5.  **Приоритет исходных файлов:** При конфликте информации, полученной агентом из внешних источников, и информации в файлах проекта (README.md, THEORY.md, EVIDENCE.md, CORRECTIONS_2026-04-22.md), приоритет имеют файлы проекта. В случае сомнений — запросить уточнение у пользователя.
@@ -6240,7 +6240,7 @@ tower = { version = "0.4", features = ["util"] }
 http-body-util = "0.1"
 
 ```
-### `CDATA/Cargo.toml` (408 chars)
+### `CEDAR/Cargo.toml` (408 chars)
 ```toml
 [workspace]
 members = [

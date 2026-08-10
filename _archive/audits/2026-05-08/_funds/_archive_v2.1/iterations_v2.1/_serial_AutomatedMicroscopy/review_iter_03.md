@@ -22,7 +22,7 @@
    Указан OSF ID `osf.io/automicroscopy_cdata` (нестандартный формат, но placeholder) и дата регистрации 2026-06-01.
 
 3. **Sample size calc (power analysis)** — **✗**  
-   Для CDATA эксперимента (division rate) – корректная формула с подстановкой, n=30. Для M1 – N=286. Однако **для contamination** sample size указан как «TBD (placeholder)», а также для design effect в CDATA – «placeholder: DE = TBD». Отсутствие полного power analysis для contamination недопустимо.
+   Для CEDAR эксперимента (division rate) – корректная формула с подстановкой, n=30. Для M1 – N=286. Однако **для contamination** sample size указан как «TBD (placeholder)», а также для design effect в CEDAR – «placeholder: DE = TBD». Отсутствие полного power analysis для contamination недопустимо.
 
 4. **Risk matrix ≥5 rows** — **✓**  
    В CONCEPT.md представлена таблица из 6 строк (AI misinterpretation, environmental failure, camera degradation, network outage, contamination, stepper drift). Каждая строка содержит probability, impact, mitigation.
@@ -62,7 +62,7 @@
 
 1. **CONCEPT.md: раздел «Sample size calculation»**  
    - Для contamination-критерия необходимо указать: ожидаемый baseline contamination rate (например, 2%), минимальный детектируемый эффект (например, снижение до 1% или абсолютная разница 0.01), α, power и **рассчитанный N** (формула для одной пропорции или Fisher’s exact).  
-   - Для design effect (DE) в CDATA: заменить «placeholder: DE = TBD» на конкретное обоснованное число (например, 1.2) или указать метод расчёта после пилота.
+   - Для design effect (DE) в CEDAR: заменить «placeholder: DE = TBD» на конкретное обоснованное число (например, 1.2) или указать метод расчёта после пилота.
 
 2. **CONCEPT.md: раздел «Pre-registration plan»**  
    - OSF ID `osf.io/automicroscopy_cdata` не соответствует стандартному формату (обычно 5-6 символов). Заменить на `osf.io/abcd12` (или другой валидный по форме placeholder). Дата регистрации 2026-06-01 – приемлемо.

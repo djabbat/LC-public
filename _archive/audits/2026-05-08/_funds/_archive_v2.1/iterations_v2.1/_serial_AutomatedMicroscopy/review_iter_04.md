@@ -22,7 +22,7 @@
    Указан OSF, placeholder `osf.io/TBD` (и второй `osf.io/automicroscopy_cdata`), дата 2026-06-01. План есть, хотя двойной placeholder — неаккуратность.
 
 3. **Sample size calc (power analysis)** ✓  
-   Для CDATA: n=30 на группу, α=0.05, power=0.80, Cohen’s d=0.75, формула приведена. Для M1: N=286. Частично (contamination N=TBD). В целом выполнено.
+   Для CEDAR: n=30 на группу, α=0.05, power=0.80, Cohen’s d=0.75, формула приведена. Для M1: N=286. Частично (contamination N=TBD). В целом выполнено.
 
 4. **Risk matrix ≥5 rows** ✓  
    В CONCEPT.md минимум 6 строк с probability (0.1–0.3), impact (High/Medium/Low), mitigation. Выполнено.

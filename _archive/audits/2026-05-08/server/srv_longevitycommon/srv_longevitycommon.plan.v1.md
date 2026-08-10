@@ -47,7 +47,7 @@
 - `BioSense/CONCEPT.md` — добавить "hypothesis-stage", "post-hoc multimodal", убрать "validated"  
 - `FCLC/CONCEPT.md` — уточнить threat model "semi-honest only; not active server collusion"  
 - `MCAOA/CONCEPT.md` — добавить M4 порог (N≥2000, α=0.001, partial r²<0.05)  
-- `CDATA/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
+- `CEDAR/CONCEPT.md` — статус "inconclusive", Sobol p=0.12, deferred to Cell-DT v4.0  
 **Файлы:** Указанные 5 файлов.  
 **Трудоёмкость:** M (1 день на аудит + правки)  
 **Риск:** Low
@@ -100,7 +100,7 @@
 **Риск:** Low (аккуратно проверить математику)
 
 ### 3. Добавить лицензии во все подпроекты
-**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CDATA/`, `FCLC/`  
+**Что:** Скопировать `LICENSE` (MIT) в подпроекты, где его нет: `AIM/`, `MCAOA/`, `BioSense/`, `Ze/`, `CEDAR/`, `FCLC/`  
 **Файлы:** по одному LICENSE на каждый подпроект.  
 **Трудоёмкость:** S (15 мин)  
 **Риск:** Low

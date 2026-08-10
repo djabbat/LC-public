@@ -7,7 +7,7 @@
 **Created:** 2026-05-18 | **Updated:** 2026-06-11
 
 ## Description
-Articles on CEDAR (Centriolar Damage Accumulation Theory of Aging). Submissions to journals, preprints, revisions.
+Articles on CEDAR (Centriolar Entropy-Damage Accumulation Ratchet). Submissions to journals, preprints, revisions.
 
 ## Rules
 - Articles are submitted to free journals (diamond OA / no APC)

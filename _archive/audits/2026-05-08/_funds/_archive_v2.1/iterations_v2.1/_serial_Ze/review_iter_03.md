@@ -9,8 +9,8 @@
 - **Evidence:** 2 — пилотные данные N≤196 с высокой гетерогенностью (I²=90.3%), отсутствие независимой репликации, все гипотезы непроверены.
 - **Falsif:** 2 — попытка есть, но numeric thresholds не заданы (Cohen's d = TBD, r = TBD). Без конкретных чисел фальсифицируемость не операционализирована.
 - **Deliv:** 3 — roadmap есть, но много TBD, матрица рисков хорошая, limitations прописаны.
-- **Novelty:** 4 — оригинальная концепция, связь Ze с CDATA, spacetime emergence, конкурентное позиционирование vs BrainYears.
-- **Risk:** 2 — высокий риск: отсутствие предварительных данных по ключевым гипотезам (χ_Ze vs aging, CDATA longitudinal), незавершённая валидация, fabrication markers в references.
+- **Novelty:** 4 — оригинальная концепция, связь Ze с CEDAR, spacetime emergence, конкурентное позиционирование vs BrainYears.
+- **Risk:** 2 — высокий риск: отсутствие предварительных данных по ключевым гипотезам (χ_Ze vs aging, CEDAR longitudinal), незавершённая валидация, fabrication markers в references.
 
 ## Checklist (✓/✗ each + explanation)
 

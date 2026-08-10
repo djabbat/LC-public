@@ -1,14 +1,14 @@
-# CDATA — Concept
+# CEDAR — Concept
 
 ## Description
-CDATA is a next-generation data integration and analytics platform designed to unify disparate data sources into a single, queryable interface. It eliminates the need for complex ETL pipelines by providing real-time access to data from databases, APIs, and files.
+CEDAR is a next-generation data integration and analytics platform designed to unify disparate data sources into a single, queryable interface. It eliminates the need for complex ETL pipelines by providing real-time access to data from databases, APIs, and files.
 
 ## Purpose & Motivation
 **Purpose:** To enable organizations to make data-driven decisions by providing instant, unified access to all their data without moving or transforming it beforehand.  
-**Motivation:** Traditional data warehouses are slow, expensive, and require extensive upfront modeling. CDATA offers a lightweight, schema-on-read approach that reduces time-to-insight from weeks to minutes.
+**Motivation:** Traditional data warehouses are slow, expensive, and require extensive upfront modeling. CEDAR offers a lightweight, schema-on-read approach that reduces time-to-insight from weeks to minutes.
 
 ## Approach
-CDATA utilizes a distributed query engine with in-memory caching to connect to over 50 data sources. Users can run standard SQL queries across multiple sources simultaneously. The platform supports both cloud and on-premise deployments, with automatic schema discovery and query optimization.
+CEDAR utilizes a distributed query engine with in-memory caching to connect to over 50 data sources. Users can run standard SQL queries across multiple sources simultaneously. The platform supports both cloud and on-premise deployments, with automatic schema discovery and query optimization.
 
 ## Key Metrics
 - Query latency: < 100ms (P99)

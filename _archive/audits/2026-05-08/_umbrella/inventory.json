@@ -11,7 +11,7 @@
     {"slug": "LC_root",  "root": "/home/oem/Desktop/LC"},
     {"slug": "LC_AIM",                "root": "/home/oem/Desktop/LC/AIM"},
     {"slug": "LC_BioSense",           "root": "/home/oem/Desktop/LC/BioSense"},
-    {"slug": "LC_CDATA",              "root": "/home/oem/Desktop/LC/CDATA"},
+    {"slug": "LC_CEDAR",              "root": "/home/oem/Desktop/LC/CEDAR"},
     {"slug": "LC_CytogeneticTree",    "root": "/home/oem/Desktop/LC/CytogeneticTree"},
     {"slug": "LC_EpigeneticDrift",    "root": "/home/oem/Desktop/LC/EpigeneticDrift"},
     {"slug": "LC_FCLC",               "root": "/home/oem/Desktop/LC/FCLC"},

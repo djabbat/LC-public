@@ -29,7 +29,7 @@
 Указан OSF (`osf.io/TBD`), дата 2026-06-01. Плейсхолдер допустим, но требуется конкретный ID.
 
 ### 3. Sample size calculation (power analysis) — ✓
-Для первичного endpoint (concordance) – полный расчёт с формулой (z-тест для одной пропорции). Для CDATA-эксперимента – расчёт по Cohen's d (n=30/group). Для contamination – TBD (плейсхолдер, но не основной). Требование выполнено.
+Для первичного endpoint (concordance) – полный расчёт с формулой (z-тест для одной пропорции). Для CEDAR-эксперимента – расчёт по Cohen's d (n=30/group). Для contamination – TBD (плейсхолдер, но не основной). Требование выполнено.
 
 ### 4. Risk matrix ≥5 rows — ✓
 Две таблицы: первая (6 строк) + вторая (6 строк). Итого >5. Вероятность, влияние, mitigation указаны.
@@ -55,7 +55,7 @@
 Фабрикационные маркеры присутствуют в местах, где должны быть конкретные данные.
 
 ### 9. Internal consistency core docs — ✓
-Методы (`THEORY.md` → bounded autonomy, PROMPT-driven) согласуются с концепцией (`CONCEPT.md`). Цели (CDATA Phase A) едины. Противоречий между core-файлами не обнаружено.
+Методы (`THEORY.md` → bounded autonomy, PROMPT-driven) согласуются с концепцией (`CONCEPT.md`). Цели (CEDAR Phase A) едины. Противоречий между core-файлами не обнаружено.
 
 ### 10. Evidence base depth (≥3 indep refs/claim, sys-review, contradictions) — ✗
 - **Ни одно ключевое утверждение не подкреплено ≥3 независимыми источниками.** Примеры:
@@ -116,6 +116,6 @@
 
 ## Top 5 text‑level fixes
 
-1. **CONCEPT.md → Evidence base & meta-analysis** – заменить три плейсхолдера `[Placeholder: …]` на реальные DOI/PMID, описывающие: (a) AI‑assisted microscopy, (b) low‑cost microscope retrofit, (c) CDATA protocol. Добавить ссылку на хотя бы один систематический обзор или мета‑анализ (например, PRISMA по AI в микроскопии).
+1. **CONCEPT.md → Evidence base & meta-analysis** – заменить три плейсхолдера `[Placeholder: …]` на реальные DOI/PMID, описывающие: (a) AI‑assisted microscopy, (b) low‑cost microscope retrofit, (c) CEDAR protocol. Добавить ссылку на хотя бы один систематический обзор или мета‑анализ (например, PRISMA по AI в микроскопии).
 
 2. **CONCEPT.md → Sample size calculation** – заменить `σ² = TBD`, `δ = TBD`, `DE = TBD` на конкретные численные значения, обоснованные пилотными данными или литературой. Удалить все `

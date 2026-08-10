@@ -348,7 +348,7 @@ Total candidates: **746** (LOW_SCORE mismatches)
 
 
 ## 45. PMID 36583780 in `CEDAR/CONCEPT.md`
-**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Damage Accumulation Theory of Aging. *Molecular Biology Reports*, 50(2): 1234-1245. PMID: 36583780 2. **Jaiswal S., et al.** (2017). C
+**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Entropy-Damage Accumulation Ratchet. *Molecular Biology Reports*, 50(2): 1234-1245. PMID: 36583780 2. **Jaiswal S., et al.** (2017). C
 **Actual (wrong?) paper:** Tqemaladze J 2023 — Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem c
 **Keywords extracted:** Tqemaladze, Centriolar, Damage, Accumulation, Theory
 **No candidates found.**
@@ -400,7 +400,7 @@ Total candidates: **746** (LOW_SCORE mismatches)
 
 
 ## 52. PMID 36583780 in `CEDAR/docs/REFERENCE_AUDIT_CEDAR.md`
-**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Damage Accumulation Theory of Aging. *Molecular Biology Reports*, 50(2): 1234-1245. PMID: 36583780 2. **Jaiswal S., et al.** (2017). C
+**Your context:** функционального снижения --- ## Ключевые референсы **Фундаментальные:** 1. **Tqemaladze J.** (2023). Centriolar Entropy-Damage Accumulation Ratchet. *Molecular Biology Reports*, 50(2): 1234-1245. PMID: 36583780 2. **Jaiswal S., et al.** (2017). C
 **Actual (wrong?) paper:** Tqemaladze J 2023 — Reduction, proliferation, and differentiation defects of stem cells over time: a consequence of selective accumulation of old centrioles in the stem c
 **Keywords extracted:** Tqemaladze, Centriolar, Damage, Accumulation, Theory
 **No candidates found.**

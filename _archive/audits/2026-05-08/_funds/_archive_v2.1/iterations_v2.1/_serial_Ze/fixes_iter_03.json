@@ -21,7 +21,7 @@
     "file": "CONCEPT.md",
     "action": "append_section",
     "heading": "## Risk matrix",
-    "body": "| Risk | Probability | Impact | Mitigation |\n|------|-------------|--------|------------|\n| Low statistical power due to small sample | Medium | High | Increase N based on power analysis; use Bayesian methods |\n| High heterogeneity in pilot data (I²=90.3%) | High | High | Stratify by age/sex; use random-effects models |\n| Unreliable MCID estimate | Medium | Medium | Use SEM-based MCID; validate in independent cohort |\n| Fabrication markers in references | Low | High | Remove all [Reference pending] and [reference removed]; verify all citations |\n| Lack of independent replication | High | High | Plan replication study with external lab; use OSF for open data |\n| Missing longitudinal data for CDATA | High | Medium | Collect pilot longitudinal data; use surrogate endpoints if needed"
+    "body": "| Risk | Probability | Impact | Mitigation |\n|------|-------------|--------|------------|\n| Low statistical power due to small sample | Medium | High | Increase N based on power analysis; use Bayesian methods |\n| High heterogeneity in pilot data (I²=90.3%) | High | High | Stratify by age/sex; use random-effects models |\n| Unreliable MCID estimate | Medium | Medium | Use SEM-based MCID; validate in independent cohort |\n| Fabrication markers in references | Low | High | Remove all [Reference pending] and [reference removed]; verify all citations |\n| Lack of independent replication | High | High | Plan replication study with external lab; use OSF for open data |\n| Missing longitudinal data for CEDAR | High | Medium | Collect pilot longitudinal data; use surrogate endpoints if needed"
   },
   {
     "file": "CONCEPT.md",
