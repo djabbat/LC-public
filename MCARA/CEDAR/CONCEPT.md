@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.4
+**Version:** 1.5
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -47,6 +47,16 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 **[H] The inseparability thesis:** in the aging of an animal organism, it is **epistemically impossible to separate** the programmed from the stochastic component — every measured centriole state is a convolution of both. A deformation that looks "programmed" (templated geometry) may be amplified by stochastic damage; an "error" may in fact be a programmed step of differentiation. This is why the model's equations (S = S₀ + β·t + η(t)) are **phenomenological and not decomposable in vivo**: β (programmed) and η (stochastic) are not independently estimable in the intact organism. The two can only be separated experimentally, by removing the organism-level context (e.g., in vitro clonal analysis, where the niche and developmental context are controlled) — and even then, only approximately.
 
 **Consequence for the protocol:** no claim of "programmed aging" or "stochastic aging" alone is made. The reset intervention is tested against **total** accumulated state (both components together), which is precisely why the germline reset (elimination + de novo) is the only complete reversal: it clears programmed geometry AND stochastic damage in one act.
+
+**5. Aging of the animal organism is the price of irreversible differentiation and true tissues (2026-08-11).**
+
+**[H] The evolutionary thesis:** in animals, organismal aging is the **price paid for (a) irreversible differentiation and (b) true tissue architecture**. The differentiation ratchet (CEDAR-γ) makes differentiation irreversible — the cell is locked into its identity, which is precisely what allows stable, functional tissues (a liver cell must not spontaneously become a neuron). But the ratchet has a price: stem cells consume their division potential with each asymmetric act (division limit); somatic cells carry templated geometry + stochastic damage (age-driven dysfunction). The organism ages because its tissues are *true* — locked and maintained by the ratchet.
+
+**The germline is the exception that proves the rule:** the only compartment that escapes the price is the one that *releases the ratchet* — eliminates centrioles and rebuilds de novo at the start of each generation (meiosis → blastomeres). The germline does not form "true tissues" in the somatic sense; it resets instead.
+
+**Comparative evidence [I] (with caveats):** lineages that relaxed the ratchet show attenuated aging phenotypes — planarians lost centrosomes during evolution (Azimzadeh et al., 2012, *Science*) and are paradigm organisms for regeneration/negligible senescence; colonial organisms (Hydra) maintain high stem-cell plasticity and show negligible aging. The correlation is suggestive, not proof — the caveat is that many other traits differ between these lineages.
+
+**Placement:** this thesis is the evolutionary layer of CEDAR — it explains *why* the general theory (differentiation → division limit) holds: because true tissues require irreversible differentiation, and irreversible differentiation (via the ratchet) is the proximate mechanism of the division limit and of aging.
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
