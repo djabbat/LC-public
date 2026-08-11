@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.1
+**Version:** 1.2
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -26,6 +26,8 @@ A critic might argue: centriole elimination drives differentiation (Renzova 2018
 The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
 
 > **CEDAR unified definition (2026-08-11, aligned with Entropy Reset Protocol v5.2):** CEDAR — **C**entriolar **E**ntropy-**D**amage **A**ccumulation **R**atchet — is **one ratchet with two modes**: (1) **counter mode** (CEDAR-α/β): semi-conservative duplication accumulates entropy/damage per division; (2) **state-lock mode** (CEDAR-γ, = the morphogenetic lock / differentiation ratchet): the organelle locks the cell's current identity. Loss of the ratchet releases identity in the direction set by the starting state: pluripotent → rolls down (Renzova 2018); differentiated (with p53 suppressed) → plastic → new de novo centriole re-locks a younger state (Entropy Reset Protocol §4.2a). The aging counter and the reprogramming barrier are two faces of one mechanism.
+
+> **CEDAR as the general theory (2026-08-11):** CEDAR is the **general theory of differentiation and the division limit in animal stem cells** — division and differentiation are coupled through the differentiation ratchet: each asymmetric division that produces a differentiating daughter consumes part of the stem cell's division potential, and the division limit (Hayflick for somatic; ~200 divisions for stem cells) is reached *because of* accumulated differentiation acts, not merely damage. **Placement:** CEDAR (general theory) ⊃ MCARA (special case: which counter's entropy finishes first — v5.2) ⊃ Entropy Reset Protocol (somatic reversal without the meiotic price). The unified definition above is the mechanistic core of this general theory (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
