@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v5.5 — evolutionary thesis (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v5.6 — retention mechanism (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -373,6 +373,8 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 > **Programmed vs stochastic (per CEDAR v1.4):** centriolar deformation is **programmed** (templated geometry, part of the differentiation program); error accumulation with age is **stochastic** (η(t)). **In animal aging the two are epistemically inseparable** — every measured state is a convolution of both; β and η are not independently estimable in vivo. The germline reset clears both in one act; the protocol tests against the total state, not a decomposed one.
 >
 > **Evolutionary thesis (per CEDAR v1.5):** **animal aging is the price of irreversible differentiation and true tissues** — the differentiation ratchet locks identity (needed for tissue architecture) but consumes stem-cell potential and accumulates somatic damage. The germline escapes by releasing the ratchet (elimination + de novo); lineages that relaxed the ratchet (planarians — centrosome loss, Azimzadeh 2012; Hydra) show attenuated aging (correlative, caveated).
+>
+> **Retention mechanism (per CEDAR v1.6):** stem cells spend division potential because asymmetric-division systems whose progeny do not eliminate centrioles **selectively retain the oldest centriole in daughter stem cells** — temporal entropy (β·t + η(t), inseparable) rises monotonically, lowering centrosome/cilium functionality until the division limit is reached. This is the proximate mechanism behind the central question.
 
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
