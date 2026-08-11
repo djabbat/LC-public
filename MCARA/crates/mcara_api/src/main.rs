@@ -56,7 +56,7 @@ async fn simulate(
     let divisions = req.divisions.unwrap_or(100);
     let seconds = req.seconds_per_division.unwrap_or(604800.0);
     let gamma = Gamma::default();
-    let records = run(tissue, divisions, seconds, &gamma, 0.0, EdcTarget::None);
+    let records = run(tissue, divisions, seconds, &gamma, 0.0, EdcTarget::None, 42);
     Ok(Json(SimulateResponse { tissue: req.tissue, records }))
 }
 

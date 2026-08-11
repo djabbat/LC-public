@@ -1,6 +1,19 @@
 # MEMORY.md — HAP Project
 
 **Purpose:** What needs to be remembered between sessions. New on top.
+
+## 2026-08-11 — OSF Projects will be phased out (no action needed for HAP)
+
+**Source:** COS announcement email 2026-08-11 (osf.io).
+- **2026-11-16:** no new OSF projects/components can be created.
+- **2027-02-19:** all OSF projects (public and private) become **read-only**.
+- **Stays:** OSF Registries (pre-registrations) keep working — content remains persistent.
+
+**HAP-related OSF objects (both verified live, HTTP 200):**
+- `osf.io/dqy38` — HAP Biomarker_Review registration (Open-Ended, 2026-06-15) → **registration, stays, no action**.
+- `osf.io/mgzt5` — HAP Biomarker_Review project (public) → will become read-only 2027-02-19. **Confirmed: no project files stored there** (Jaba checked 2026-08-11) → nothing to export.
+
+**Decision:** No export needed, no doc link updates needed (registrations persist). If a new OSF project is ever needed — create it before 2026-11-16.
 ## 2026-07-01 — BSPC formal rejection (9th rejection)
 
 - **July 1, 2026** — formal rejection of BSPC (BSPC-D-26-11119), Executive Editor Mathias Baumert
