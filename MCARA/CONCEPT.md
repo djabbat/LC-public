@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v5.0 — stem-cell entropy accumulation + natural path of entropy reversal (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v5.1 — special case of division-limit-due-to-differentiation theory (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -361,6 +361,12 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 **[H] The somatic path (Entropy Reset Protocol, v5.3):** reproduce the germline reversal **without the meiotic price** — centriole elimination → verified de novo biogenesis → CRCS across hallmark readouts, while diploidy is preserved and no meiotic recombination occurs. The germline is the *existence proof* that multi-counter entropy reversal is biologically possible; the protocol is the test of whether the same reversal works in a somatic stem/progenitor context.
 
 **[P] Testable claim:** if the germline reversal is the only complete path, then somatic entropy reversal must involve the same steps in the same order: eliminate the oldest counter (centriole) → open the plasticity window → rebuild → re-lock the new state (differentiation ratchet, CEDAR-γ). The 2×2 factorial (Protocol v5.3 §6) tests exactly this order against OSK alone.
+
+### Special case of the general theory: division limit due to differentiation in animal stem cells (2026-08-11)
+
+> **MCARA is a special case of the general theory that animal stem cells reach their division limit *because of differentiation*.** The general claim: in animal stem cells, division and differentiation are coupled through the differentiation ratchet — each asymmetric division that produces a differentiating daughter consumes part of the stem cell's division potential, and the limit (Hayflick for somatic; ~200 divisions for stem cells) is reached *because of* the accumulated differentiation acts, not merely because of damage accumulation. MCARA specifies the machinery (which counter's entropy — centriole, telomere, mitochondria, epigenome — accumulates first during those asymmetric acts); the Entropy Reset Protocol specifies the reversal (germline-style reset without the meiotic price). Both are special cases of the division-limit-due-to-differentiation theory, which is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+>
+> **Placement:** general theory (division limit due to differentiation in animal stem cells) ⊃ MCARA (which counter finishes first) ⊃ CEDAR (centriolar counter + state-lock) ⊃ Entropy Reset Protocol (somatic reversal).
 
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
