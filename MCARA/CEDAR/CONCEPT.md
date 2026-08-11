@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.6
+**Version:** 1.7
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -50,7 +50,7 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 **5. Aging of the animal organism is the price of irreversible differentiation and true tissues (2026-08-11).**
 
-**[H] The evolutionary thesis:** in animals, organismal aging is the **price paid for (a) irreversible differentiation and (b) true tissue architecture**. The differentiation ratchet (CEDAR-γ) makes differentiation irreversible — the cell is locked into its identity, which is precisely what allows stable, functional tissues (a liver cell must not spontaneously become a neuron). But the ratchet has a price: stem cells consume their division potential with each asymmetric act (division limit); somatic cells carry templated geometry + stochastic damage (age-driven dysfunction). The organism ages because its tissues are *true* — locked and maintained by the ratchet.
+**[H] The mechanism of organismal aging (corrected 2026-08-11):** the organism ages **because the oldest centrioles — those carrying the most errors — accumulate in its stem cells**. The chain is: (1) oldest centriole retention in daughter stem cells (per §6) → (2) **division tempo falls** (centrosome function) and **niche-signal perception falls** (cilium function) → (3) **tissue self-repair declines** while **self-destruction rises** (apoptosis, senescence, degradation). Aging is therefore the *imbalance*: tissue self-repair ↓ / self-destruction ↑, driven by the temporal entropy of the retained oldest centriole in stem cells. The evolutionary framing (true tissues require irreversible differentiation, per §5 above) is context, not the proximate cause; the proximate cause is the retention-driven imbalance.
 
 **The germline is the exception that proves the rule:** the only compartment that escapes the price is the one that *releases the ratchet* — eliminates centrioles and rebuilds de novo at the start of each generation (meiosis → blastomeres). The germline does not form "true tissues" in the somatic sense; it resets instead.
 
