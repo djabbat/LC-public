@@ -9,3 +9,5 @@ license.workspace = true
 mcara_core = { path = "../mcara_core" }
 serde = { workspace = true }
 nalgebra = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }

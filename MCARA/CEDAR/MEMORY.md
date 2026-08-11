@@ -1,5 +1,104 @@
 # CEDAR — Memory
 
+## 2026-08-11: 💰 ВАЖНО — MBoC больше НЕ бесплатен (APC с 01.01.2026)
+
+**Проверка:** официальная страница molbiolcell.org/info-for-authors (11 авг 2026).
+
+### Факты
+- **APC с 01.01.2026:** Full article **$2,800** (non-member) / $2,500 (member, conventional); OA $4,100/$3,700. Brief Report $2,600/$2,300.
+- Submission fee: нет. Page charges: нет. **Цветные фигуры: БЕСПЛАТНО** (онлайн-журнал, RGB).
+- **Waiver:** «partial waiver … to member authors who have no source of funding» — частичный, ТОЛЬКО членам ASCB, нужна справка от декана/завкаф.
+- Плата — только после acceptance (invoice post-acceptance); способность платить не влияет на ревью.
+- Старая информация в JOURNAL_TRANSFER_OPTIONS.md («бесплатно») — ОШИБОЧНА (обновлено 11 авг).
+
+### Вывод по цене
+- **JCS (Company of Biologists)** — бесплатно в подписной версии (гибрид) → главный кандидат при критерии «бесплатно».
+- **MBoC** — $2,800; альтернатива: членство ASCB (~$150/год) → $2,500 + частичный waiver.
+- **eLife** — $3,000, но waiver «for anyone who cannot afford».
+
+### Статус
+- Inquiry MBoC написан, НО: если Джаба хочет бесплатный журнал → переключиться на JCS (нужен свой inquiry).
+- Ч/б версии фигур уже готовы (пригодятся для любого журнала); цвет в MBoC — бесплатно.
+
+---
+
+## 2026-08-11 — OSF Projects will be phased out (no action needed for CEDAR)
+
+**Source:** COS announcement email 2026-08-11 (osf.io).
+- **2026-11-16:** no new OSF projects/components can be created.
+- **2027-02-19:** all OSF projects (public and private) become **read-only**.
+- **Stays:** OSF Registries (pre-registrations) keep working — content remains persistent.
+
+**CEDAR-related OSF objects (all verified live, HTTP 200):**
+- `osf.io/kqby4` — MCARA/Aubrey (CEDAR) pre-registration, DOI 10.17605/OSF.IO/KQBY4 (2026-05-15) → **registration, stays, no action**.
+- `osf.io/xvb36` — associated OSF project (Aubrey/CEDAR) → will become read-only 2027-02-19. **Confirmed: no project files stored there** (Jaba checked 2026-08-11) → nothing to export.
+- `osf.io/9x3k7` — MCARA Test 4 pre-registration → stays.
+
+**Decision:** No export needed, no doc link updates needed (registrations persist). If a new OSF project is ever needed — create it before 2026-11-16.
+
+---
+
+## 2026-08-11: ✅ Доработка статьи «Spatially Constrained» для MBoC (после bioRxiv desk reject)
+
+**Файл:** `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/`
+
+### Что сделано
+- **Figure 1** (концептуальная схема ратчета): `figures/figure1_ratchet.py` → `figure1_spatial_ratchet.png/pdf`. Три панели: A — мать ограничивает дочернюю (boundary condition), B — передача геометрии G1–G4 (дрейф 200→252 нм), C — предсказание P1–P3 (r > 0.7, рост дисперсии). Вставлена в Introduction после абзаца Panda et al.
+- **Figure 2** (OU-симуляция): `figures/simulate_ou.py` → `figure2_ou_simulation.png/pdf`. Три панели: A — траектории α=0.97, B — рост дисперсии для α=0.94/0.97/0.985 (эмпир. 2000 клеток vs аналитика), C — SD∞/σ = 1/√(1−α²) расходится при α→1.
+- **Калибровка сходится:** α=0.97, μ=2.23 нм/дел → E[L₅₀] = 258 нм (+29%) — точно воспроизводит Köhrer et al. 2023. SD(L₅₀)=62 нм ≈ SD∞=61.7 нм. Сенситивность: α=0.94 (μ=3.65), α=0.985 (μ=1.64).
+- **Текст статьи:** 2799 → 3281 слов. Добавлены: Figure 1 + caption (Introduction), симуляция в Methods (Stochastic model), численные результаты + Figure 2 (Results → Model parameter estimates), Data availability (код seed-fixed, NumPy 1.26/Matplotlib 3.8).
+- **Abstract:** добавлено «numerical simulation (2,000 cells, seed-fixed) reproduces +29% plasma-cell elongation at 50 divisions and predicts centriole length variance rises with age (Figure 2)».
+
+### Следующие шаги (до подачи в MBoC)
+- [x] Pre-submission inquiry написан: `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/Inquiry_MBoC.md` (To: mboc@ascb.org, CC: mboc@molbiolcell.org, subject: «Pre-submission inquiry: model paper on centriole geometry persistence and aging (scope check)», 4 абзаца)
+- [ ] ОТПРАВИТЬ inquiry (Gmail) и ждать ответа редактора (pi блокирует подачу до ответа)
+- [ ] Собрать docx командой Джабы (md2docx, только по команде)
+- [ ] Подача напрямую на molbiolcell.org (после desk reject трансфер bioRxiv недоступен)
+
+---
+
+## 2026-08-11: 🔴🔴 Post-mortem — bioRxiv ×2 desk reject (centriole preprints)
+
+**Platform:** bioRxiv (preprint server)
+**Result:** 🔴🔴 BOTH centriole preprints rejected at screening — «not a complete research manuscript within the scope of bioRxiv»
+
+### Article 1 — BIORXIV/2026/743596 (rejected 11 Aug, ~7 h decision)
+**Title:** «Spatially Constrained, Not Chemically Copied: A Testable Model for the Persistence and Accumulation of Centriole Geometric Changes with Age»
+**File:** `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/`
+**Content type:** Testable model / hypothesis + literature synthesis + transcriptomic re-analysis (GSE104406, GSE59114) + OU stochastic model. **No primary data, no figures (0 «Figure» mentions, 2799 words).**
+
+### Article 2 — BIORXIV/2026/743702 (rejected 10 Aug)
+**Title:** «The Centriole as a Candidate Division Counter in Stem-Cell Aging: A Falsifiable Hypothesis with a Pre-Registered Protocol»
+**Content type:** Hypothesis + protocol P1–P9 (Stage 1), no primary HSC data.
+
+### Reason (what they said)
+> «During the screening process our affiliate scientists determined that this manuscript is not a complete research manuscript within the scope of bioRxiv. … this conclusion simply refers to the manuscript's appropriateness for bioRxiv and is not a judgment on the merits of the work.»
+
+### Analysis
+- bioRxiv = Research Square №2: pure hypotheses / model papers without original data are rejected on policy, not quality.
+- bioRxiv requires a COMPLETE research manuscript: original data (experimental or computational) + figures.
+- The article already contained re-usable data: DESeq2 re-analysis + OU model — but presented as a «model», not as results.
+
+### What we missed
+- [x] bioRxiv does NOT accept hypothesis/opinion/model-only manuscripts (no «Hypothesis» section exists at bioRxiv).
+- [ ] Missing Figure 1 (conceptual scheme) — pre-submission rule №5 violated.
+- [ ] No pre-submission inquiry (rule №2) — though for preprints it is platform policy, not editor scope.
+- [ ] Article formatted as «testable model» instead of research article with data (rule №8: ALL articles — as research with data).
+
+### What to change before next submission
+- [ ] Add Figure 1: conceptual scheme (spatial-constraint ratchet: mother → daughter geometry transmission).
+- [ ] Convert OU-model + DESeq2 re-analysis into Results with generated figures (simulations of α = 0.94–0.985, steady-state variance) → makes it a computational research article with original data.
+- [ ] Add simulation code + data availability statement.
+- [ ] Pre-submission inquiry to MBoC (per JOURNAL_TRANSFER_OPTIONS.md, main candidate).
+- [ ] Hypothesis-only preprints → Zenodo (2 already published — works).
+
+### Next journal
+**Journal:** MBoC (Molecular Biology of the Cell, ASCB) — free, thematic fit (centriole cell biology), accepts model-driven works with data. Transfer network MBoC ↔ JCS ↔ JCB.
+**Journal-fit check:** PASS (planned: after adding Figure 1 + simulation data + inquiry)
+**Plan:** add data/figures → pre-submission inquiry → MBoC submission (direct, transfer unavailable after desk reject).
+
+---
+
 ## 2026-08-09: 🟢 bioRxiv submission — BIORXIV/2026/743702 (V1)
 
 **Platform:** bioRxiv
