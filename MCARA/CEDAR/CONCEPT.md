@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.3
+**Version:** 1.4
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -36,6 +36,17 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 **2. Possible chemical pathway: differentiation-inducer molecules in the first blastomeres.** [H] Beyond geometry, the first blastomeres of the embryo may produce **molecular differentiation inducers** — possibly assembled at/near the fresh centrioles (the hypothetical CAMC on the mother centriole; ciliary signaling factors). This would give the centriole a dual route to differentiation: structural (templated geometry) + chemical (secreted/assembled inducer molecules). Testable: proteomic/transcriptomic screen of first-blastomere-conditioned medium; CAMC composition on fresh vs. aged centrioles.
 
 **3. Age-driven entropy accumulation → functional decline.** [I] In addition to geometry change, centrioles accumulate entropy with age (polyE, stochastic damage, η(t)), leading to **functional impairment**: (a) **centrosome function** — reduced division frequency (defective spindle/duplication → longer cell cycles, arrest); (b) **cilium function** — reduced responses to niche signals (the primary cilium is the antenna for Hedgehog/Wnt/PDGFRα; an aged mother centriole builds a functionally aged cilium → impaired niche signaling). [P] Both impairments are assayed in the Entropy Reset Protocol (division frequency = CRCS proliferative component; cilium function = H10 readout).
+
+**4. Programmed vs. stochastic — an inseparable pair (2026-08-11).** Two distinct components act in the centriole, but **in animal aging they cannot be separated**:
+
+| Component | Nature | Where it acts |
+|-----------|--------|---------------|
+| **Programmed deformation** | Deterministic, developmentally specified | Geometry templated mother→daughter across asymmetric divisions — part of the differentiation program itself |
+| **Stochastic error accumulation** | Random, age-driven | PolyE, oxidation, glycation, thermal noise (η(t)) — accumulates with chronological age |
+
+**[H] The inseparability thesis:** in the aging of an animal organism, it is **epistemically impossible to separate** the programmed from the stochastic component — every measured centriole state is a convolution of both. A deformation that looks "programmed" (templated geometry) may be amplified by stochastic damage; an "error" may in fact be a programmed step of differentiation. This is why the model's equations (S = S₀ + β·t + η(t)) are **phenomenological and not decomposable in vivo**: β (programmed) and η (stochastic) are not independently estimable in the intact organism. The two can only be separated experimentally, by removing the organism-level context (e.g., in vitro clonal analysis, where the niche and developmental context are controlled) — and even then, only approximately.
+
+**Consequence for the protocol:** no claim of "programmed aging" or "stochastic aging" alone is made. The reset intervention is tested against **total** accumulated state (both components together), which is precisely why the germline reset (elimination + de novo) is the only complete reversal: it clears programmed geometry AND stochastic damage in one act.
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
