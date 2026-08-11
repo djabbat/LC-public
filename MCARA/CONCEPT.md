@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v5.2 — CEDAR as the general theory (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v5.3 — mechanism: geometry + chemistry + age-driven dysfunction (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -367,6 +367,8 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 > **The general theory is CEDAR**: in animal stem cells, division and differentiation are coupled through the differentiation ratchet — each asymmetric division that produces a differentiating daughter consumes part of the stem cell's division potential, and the division limit (Hayflick for somatic cells; ~200 divisions for stem cells) is reached **because of** the accumulated differentiation acts, not merely because of damage accumulation. CEDAR is therefore the general theory of differentiation and the division limit in animal stem cells (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780; Threshold Stand model).
 >
 > **Placement (corrected):** **CEDAR** (general theory: differentiation → division limit in animal stem cells) ⊃ **MCARA** (special case: which counter's entropy finishes first during asymmetric acts) ⊃ **Entropy Reset Protocol** (somatic reversal of the germline reset).
+>
+> **Mechanism (per CEDAR v1.3):** (1) **geometry, not abstract entropy** — semi-conservative duplication templates mother→daughter deformation, the physical basis of differentiation; (2) **chemical pathway [H]** — possible differentiation-inducer molecules produced in first blastomeres; (3) **age-driven entropy accumulation** → functional decline: reduced division frequency (centrosome function) + impaired niche-signal responses (cilium function).
 
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
