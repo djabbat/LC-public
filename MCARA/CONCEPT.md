@@ -402,3 +402,54 @@ Centriole damage accumulates by TWO parallel mechanisms:
 **Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
 **Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
 **Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.
+
+---
+
+## New Evidence — 2026-08-11 (peer-review v7–v9 autofix, Entropy Reset Protocol v7.4)
+
+> Added per Jaba (2026-08-11): all useful findings from three peer-review autofix cycles (v7.0–v7.4) that strengthen MCARA/CEDAR evidence base. All PMIDs verified via NCBI E-utilities (66/66).
+
+### New support for the centriolar counter (#1) and CEDAR ratchet
+
+| PMID | Author, year | Key result | Supports |
+|:----:|------------|-----------|----------|
+| 42507085 | Pistorio et al. (2026) *FASEB J* | **Centriolar protein POC5 regulates human adipogenesis and cellular senescence** — direct protein-level link centriole↔senescence (2nd independent, after Robichaud 2024) | CEDAR H8/H9; centriole as aging carrier |
+| 41167311 | Biven & Wang (2025) *JBC* | Mechanisms underlying centriole stability — molecular basis of templated geometry change | H_programmed; geometric counter (v0.5) |
+| 38935637 | Meyer-Gerards & Bazzi (2025) *FEBS J* | Developmental and tissue-specific roles of mammalian centrosomes — consolidates §2.3–2.4 of protocol | Regime C; tissue-specificity caveat |
+| 40667363 | Ozaki et al. (2025) *bioRxiv* (preprint, disclosed) | CEP152–CEP63–PCNT aggregates seed de novo biogenesis outside centriole | De novo route molecular description |
+
+### New support for the p53/mitotic-surveillance axis (protocol design)
+
+| PMID | Author, year | Key result | Role in protocol |
+|:----:|------------|-----------|------------------|
+| 27371829 | Fong et al. (2016) *eLife* | 53BP1–USP28–p53 arrest after centrosome loss / prolonged mitosis | Basis for USP25/28 override (v7.0) |
+| 27432897 | Meitinger et al. (2016) *JCB* | Independent confirmation, 53BP1–USP28–p53 | Same |
+| 33226141 | Wang et al. (2021) *EMBO J* | Microcephaly via 53BP1–USP28–TP53 in vivo | In vivo confirmation |
+| 28130345 | Fava et al. (2017) *Genes Dev* | PIDDosome activates p53 on supernumerary centrosomes | Amplification-side surveillance (v7.3) |
+| 33350486 | Maniswami et al. (2021) *EMBO J* | ANKRD26 distal appendages → centrosome–PIDDosome–p53 | Same |
+| 37530438 | Schuler et al. (2023) *EMBO J* | Extra centrosomes → PIDD1 inflammation/immunosurveillance | Safety rationale (v7.3) |
+
+### New tools for the elimination/override pipeline
+
+| PMID | Author, year | Tool | Role |
+|:----:|------------|------|------|
+| 40020058 | Sladky et al. (2025) *Sci Adv* | AID2 degrades CEP192 in live mice | AID2-SAS-6 route (§6.2b) |
+| 33177522 | Yesbolatova et al. (2020) *Nat Commun* | AID2 platform | Same |
+| 37279162 | Sun et al. (2023) *J Med Chem* | First PLK4-PROTAC | Elimination alternative |
+| 29581585 | Nabet et al. (2018) *Nat Chem Biol* | dTAG system | dTAG route |
+| 42248454 | Hyle et al. (2026) *JBC* | AID-resistance mechanisms | Route-concordance gate as resistance screen |
+| 40902594 | Bratt et al. (2025) *Cell Chem Biol* | USP28 pharmacology in p53 signaling | USP25/28 override (v7.0) |
+| 42017948 | Hernandez-Olmos et al. (2026) *J Med Chem* | Selective USP25/28 inhibitors | Same |
+| 38816515 | Patzke et al. (2024) *EMBO Rep* | Structural basis USP25/28 inhibitors | Same |
+
+### PLK4 oncology context (safety argument)
+
+| PMID | Author, year | Journal | Value |
+|:----:|------------|---------|-------|
+| 41488365 | Muntaqua et al. (2025) | *iScience* | PLK4 linchpin in cancer — druggable axis |
+| 41092110 | Parsyan et al. (2025) | *Carcinogenesis* | PLK4 target in breast cancer |
+| 40940791 | Jaiswal et al. (2025) | *Cells* | PLK4 in skin cancer |
+| 41319860 | Pan et al. (2026) | *Cancer Letters* | CDT1 → polyploid giant cancer cells + centrosome amplification (transformation marker) |
+
+---
+*Section added 2026-08-11. Full integration in `~/Desktop/Marketing/ARGUS-OS3/docs/ENTROPY_RESET_PROGRAM_COMPLETE.md` v7.4 (66 PMIDs).*

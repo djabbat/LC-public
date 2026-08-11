@@ -304,3 +304,27 @@ Recent back-to-back papers reveal a **two-tier quality control system** in haplo
 **Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
 **Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
 **Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.
+
+---
+
+## New Evidence Integration — 2026-08-11 (peer-review v7–v9 autofix)
+
+> Added per Jaba (2026-08-11). All PMIDs verified via NCBI E-utilities (66/66). Full integration: `~/Desktop/Marketing/ARGUS-OS3/docs/ENTROPY_RESET_PROGRAM_COMPLETE.md` v7.4.
+
+### CEDAR-supporting findings (ratchet model)
+
+1. **POC5 regulates human adipogenesis and cellular senescence** (Pistorio et al., 2026, *FASEB J*, PMID 42507085) — a centriolar protein directly modulates senescence in primary human cells; **2nd independent protein-level link** centriole↔senescence (after Robichaud 2024, PMID 39266565). Supports CEDAR C2/state-lock: centriolar protein content → cell fate (adipocyte vs. senescent).
+2. **Centriole stability mechanisms** (Biven & Wang, 2025, *JBC*, PMID 41167311) — molecular basis of templated geometry change; supports H_programmed (geometry as part of the differentiation mechanism, not passive damage).
+3. **CEP152–CEP63–PCNT aggregates seed de novo biogenesis outside the centriole** (Ozaki et al., 2025, *bioRxiv*, PMID 40667363 — preprint, disclosed) — molecular description of the template-independent route the protocol must prove.
+4. **Mammalian centrosome developmental roles review** (Meyer-Gerards & Bazzi, 2025, *FEBS J*, PMID 38935637) — consolidates tissue-specificity caveat (Januschke 2011 neuroblast counterexample).
+
+### Surveillance-axis findings (protocol safety design)
+
+1. **Loss-side:** 53BP1–USP28–p53 mitotic surveillance (Fong 2016 *eLife* PMID 27371829; Meitinger 2016 *JCB* PMID 27432897; Wang 2021 *EMBO J* PMID 33226141) → basis for **USP25/28-targeted override** (v7.0), preserving p53 for genuine DNA damage.
+2. **Amplification-side:** PIDDosome–p53 via ANKRD26 distal appendages (Fava 2017 *Genes Dev* PMID 28130345; Maniswami 2021 *EMBO J* PMID 33350486); PIDD1-mediated inflammation from extra centrosomes (Schuler 2023 *EMBO J* PMID 37530438) → registered as the second surveillance arm (v7.3); gate E (exactly 2 centrioles) switches both off post-recovery.
+3. **Tools:** AID2-CEP192 in live mice (Sladky 2025 *Sci Adv* PMID 40020058); PLK4-PROTAC (Sun 2023 *J Med Chem* PMID 37279162); dTAG (Nabet 2018 PMID 29581585); AID-resistance caveat (Hyle 2026 *JBC* PMID 42248454); USP25/28 inhibitors (Bratt 2025 PMID 40902594; Hernandez-Olmos 2026 PMID 42017948; Patzke 2024 PMID 38816515).
+
+### Consequence for CEDAR predictions
+
+- The ratchet model's two-mode prediction (loss in pluripotent → down [Renzova]; loss in somatic → plasticity → re-locked younger) now has **explicitly tooled falsification tests** (USP25/28 override + AID2 elimination + single-cell tracking), moving CEDAR from theory to a registered, executable protocol.
+- The **killer experiment** (TTLL5-induced artificial centriole aging in OSK-rejuvenated cells; §12 protocol v7.3) is the direct causal test of "centriole state overrides epigenetic age" — CEDAR's strongest prediction.
