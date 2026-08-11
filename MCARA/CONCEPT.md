@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v4.7 — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v4.8 — MCARA↔CEDAR ratchet unification (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question:** What molecular division counter finishes first — and under what conditions?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -16,7 +16,7 @@
 **Evidence:**
 - **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
 - **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
-- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+- **Köhrer et al. (2023, PMID 37821581, *Leukemia*):** Centriole over-elongation is an early feature of **plasma cell disorders** — disease-associated geometry change. **Whether analogous structural changes accumulate during physiological aging remains undetermined** (tested in Entropy Reset Protocol, Objective 4). The templating argument stands on Kochanski & Borisy (1990) semi-conservative duplication, not on Köhrer.
 
 **Resolution of the differentiation paradox:**
 A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
@@ -335,6 +335,12 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 ## References
 
 *See project MEMORY.md for reference history.*
+
+## MCARA ↔ CEDAR ratchet unification (2026-08-11)
+
+> **MCARA explains the replicative limit of somatic cells** as a race between several division counters (telomeres, mitochondria/ROS, epigenome, centriole) — "which counter finishes first?" (Hayflick limit ~50 divisions; stem cells ~200 with hTERT+hypoxia). CEDAR is the centriolar counter (#1) and, per the unified definition (Entropy Reset Protocol v5.2), it is **one ratchet with two modes**: counter (accumulates entropy per division) + state-lock (differentiation ratchet — locks cell identity). Renzova 2018 is the state-lock release in the pluripotent→down direction; the Entropy Reset Protocol tests the differentiated→plastic→re-locked direction.
+>
+> **Two consequences for the protocol:** (1) a single-counter reset (centriole) may improve but not abolish the replicative limit if another counter (e.g., telomeres) finishes first — the 2×2 factorial + hTERT control addresses this; (2) "which counter finishes first" becomes directly testable by comparing CRCS gains from single vs. combined resets (factorial decomposition, §12 of the protocol).
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
 
