@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v4.9 — focus: stem-cell entropy accumulation (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v5.0 — stem-cell entropy accumulation + natural path of entropy reversal (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -341,6 +341,27 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 > **MCARA explains the replicative limit of somatic cells through stem-cell entropy accumulation:** a race between several division counters (centriole/CEDAR, telomeres, mitochondria/ROS, epigenome) — "which counter's entropy finishes first?" (Hayflick limit ~50 divisions; stem cells ~200 with hTERT+hypoxia; asymmetric inheritance retains old structures in the stem cell, Regime B). CEDAR is the centriolar counter (#1) and, per the unified definition (Entropy Reset Protocol v5.2), it is **one ratchet with two modes**: counter (accumulates entropy per division) + state-lock (differentiation ratchet — locks cell identity). Renzova 2018 is the state-lock release in the pluripotent→down direction; the Entropy Reset Protocol tests the differentiated→plastic→re-locked direction.
 >
 > **Two consequences for the protocol:** (1) a single-counter reset (centriole) may improve but not abolish the replicative limit if another counter (e.g., telomeres) finishes first — the 2×2 factorial + hTERT control addresses this; (2) "which counter finishes first" becomes directly testable by comparing CRCS gains from single vs. combined resets (factorial decomposition, §12 of the protocol).
+
+## The Natural Path of Entropy Reversal (focus 2026-08-11)
+
+**How nature overcomes stem-cell entropy — and how it transfers to somatic cells.**
+
+**[E] The germline resets accumulated entropy in every generation, across all counters simultaneously:**
+
+| Counter's entropy | Natural reset mechanism | Evidence |
+|-------------------|------------------------|----------|
+| Centriole (CEDAR) | Elimination during oogenesis/meiosis + de novo biogenesis in blastomeres | Simerly 2018 (PMID 30143724); Kalbfuss & Gönczy 2023 (PMID 37256957); Takumi & Kitagawa 2022 (PMID 35445021) |
+| Epigenome | Genome-wide reprogramming to totipotency in the zygote | Ocampo 2016 (PMID 27984723); Lu 2020 (PMID 33268865) — partial reprogramming as the somatic proxy |
+| Telomeres | Re-extension in germline/early embryo | Germline telomerase |
+| Mitochondria | Maternal-line bottleneck + zygotic mitophagy | mtDNA transmission literature |
+| Proteostasis | Oocyte clearance + de novo proteome | Oocyte biology |
+
+**The price nature pays:** haploidization (loss of the diploid set) and crossing-over (meiotic recombination).
+
+**[H] The somatic path (Entropy Reset Protocol, v5.3):** reproduce the germline reversal **without the meiotic price** — centriole elimination → verified de novo biogenesis → CRCS across hallmark readouts, while diploidy is preserved and no meiotic recombination occurs. The germline is the *existence proof* that multi-counter entropy reversal is biologically possible; the protocol is the test of whether the same reversal works in a somatic stem/progenitor context.
+
+**[P] Testable claim:** if the germline reversal is the only complete path, then somatic entropy reversal must involve the same steps in the same order: eliminate the oldest counter (centriole) → open the plasticity window → rebuild → re-lock the new state (differentiation ratchet, CEDAR-γ). The 2×2 factorial (Protocol v5.3 §6) tests exactly this order against OSK alone.
+
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
 
