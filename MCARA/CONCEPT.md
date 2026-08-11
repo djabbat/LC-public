@@ -2,7 +2,7 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v5.3 — mechanism: geometry + chemistry + age-driven dysfunction (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Version:** v5.4 — programmed/stochastic inseparability (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
 **Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
@@ -369,6 +369,8 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 > **Placement (corrected):** **CEDAR** (general theory: differentiation → division limit in animal stem cells) ⊃ **MCARA** (special case: which counter's entropy finishes first during asymmetric acts) ⊃ **Entropy Reset Protocol** (somatic reversal of the germline reset).
 >
 > **Mechanism (per CEDAR v1.3):** (1) **geometry, not abstract entropy** — semi-conservative duplication templates mother→daughter deformation, the physical basis of differentiation; (2) **chemical pathway [H]** — possible differentiation-inducer molecules produced in first blastomeres; (3) **age-driven entropy accumulation** → functional decline: reduced division frequency (centrosome function) + impaired niche-signal responses (cilium function).
+>
+> **Programmed vs stochastic (per CEDAR v1.4):** centriolar deformation is **programmed** (templated geometry, part of the differentiation program); error accumulation with age is **stochastic** (η(t)). **In animal aging the two are epistemically inseparable** — every measured state is a convolution of both; β and η are not independently estimable in vivo. The germline reset clears both in one act; the protocol tests against the total state, not a decomposed one.
 
 
 ## Geometric centriole counter (v0.5, 2026-08-08)
