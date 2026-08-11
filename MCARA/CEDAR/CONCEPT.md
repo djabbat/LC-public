@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.7
+**Version:** 1.8
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -31,7 +31,7 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 ### The mechanism (2026-08-11 refinement): geometry, chemistry, and age-driven dysfunction
 
-**1. Geometric deformation is the basis of differentiation (not abstract "entropy").** [E] The centriole duplicates semi-conservatively — the mother centriole is the template for the daughter (Kochanski & Borisy 1990, PMID 2335566). [I] Therefore **geometric deformation of the mother centriole is templated into the daughter** — a deformed cartwheel/over-elongated cylinder propagates its geometry across divisions. [H] This propagated deformation is the physical basis of differentiation: each asymmetric division hands the deformed (older) geometry to the differentiating daughter, biasing its fate (Regime B/C of the Entropy Reset Protocol). Geometry, not "entropy" in the abstract, is the state variable.
+**1. Geometric deformation is the basis of differentiation (not abstract "entropy").** [E] The centriole duplicates semi-conservatively — the mother centriole is the template for the daughter (Kochanski & Borisy 1990, PMID 2335566). [I] Therefore **geometric deformation of the mother centriole is templated into the daughter** — a deformed cartwheel/over-elongated cylinder propagates its geometry across divisions. **[H] The geometry change is most likely PROGRAMMED — and most likely part of the differentiation mechanism itself**, not merely passive damage accumulation: the templated geometry change is a deterministic, developmentally specified step that (a) hands the older/deformed geometry to the differentiating daughter (biasing its fate — Regime B/C) and (b) is the physical substrate of the differentiation ratchet (CEDAR-γ). Geometry, not "entropy" in the abstract, is the state variable. (Programmed vs. stochastic inseparability per §4 applies: in vivo, the programmed geometry change cannot be separated from superimposed stochastic errors.)
 
 **2. Possible chemical pathway: differentiation-inducer molecules in the first blastomeres.** [H] Beyond geometry, the first blastomeres of the embryo may produce **molecular differentiation inducers** — possibly assembled at/near the fresh centrioles (the hypothetical CAMC on the mother centriole; ciliary signaling factors). This would give the centriole a dual route to differentiation: structural (templated geometry) + chemical (secreted/assembled inducer molecules). Testable: proteomic/transcriptomic screen of first-blastomere-conditioned medium; CAMC composition on fresh vs. aged centrioles.
 
