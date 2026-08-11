@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.5
+**Version:** 1.6
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -57,6 +57,16 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 **Comparative evidence [I] (with caveats):** lineages that relaxed the ratchet show attenuated aging phenotypes — planarians lost centrosomes during evolution (Azimzadeh et al., 2012, *Science*) and are paradigm organisms for regeneration/negligible senescence; colonial organisms (Hydra) maintain high stem-cell plasticity and show negligible aging. The correlation is suggestive, not proof — the caveat is that many other traits differ between these lineages.
 
 **Placement:** this thesis is the evolutionary layer of CEDAR — it explains *why* the general theory (differentiation → division limit) holds: because true tissues require irreversible differentiation, and irreversible differentiation (via the ratchet) is the proximate mechanism of the division limit and of aging.
+
+**6. Why stem cells spend division potential: selective retention of the oldest centriole (temporal entropy) in daughter stem cells (2026-08-11).**
+
+**[E] The retention rule:** in asymmetric-division systems of adult stem cells, the older (mother) centrosome is inherited preferentially by the cell that retains stemness (Yamashita et al., 2007, PMID 17255513; Wang et al., 2009, PMID 19829375; Januschke et al., 2011, PMID 21407209).
+
+**[E] The non-elimination context:** in these systems the progeny **do not eliminate centrioles** (unlike C. elegans — 88% of somatic cells eliminate; planarian neoblasts lack centrioles). The ratchet is never released in the somatic stem-cell lineage.
+
+**[H] The accumulation mechanism:** because the oldest centriole is retained by the stem cell at every asymmetric division, the daughter stem cell **selectively accumulates the oldest centriole — i.e., temporal entropy** (the entropy carried by time itself: templated geometry + stochastic damage, β·t + η(t), inseparable per §4). Over many asymmetric acts, temporal entropy in the daughter stem cells rises monotonically, **lowering their functionality** — reduced division frequency (centrosome function) and impaired niche-signal responses (cilium function) per §3.
+
+**Consequence:** the division limit of stem cells is the direct result of the retention rule: the stem cell cannot shed its oldest centriole, so it cannot shed temporal entropy; when the accumulated temporal entropy exceeds the functional threshold, division capacity is exhausted. This is the proximate mechanism behind the evolutionary thesis (§5) and the MCARA question ("which counter finishes first").
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
