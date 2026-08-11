@@ -2,8 +2,8 @@
 
 **Type:** umbrella project — analysis only — see CONCEPT.md for details.
 **Date:** 2026-07-19
-**Version:** v4.8 — MCARA↔CEDAR ratchet unification (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
-**Central question:** What molecular division counter finishes first — and under what conditions?
+**Version:** v4.9 — focus: stem-cell entropy accumulation (2026-08-11) — Centriculum (Maheshwari 2023/2026) + Spermatogenesis (Ishida & Shibuya 2026)
+**Central question (2026-08-11):** How does **entropy accumulate in stem cells** across division counters — centriole (CEDAR), telomeres, mitochondria, epigenome — and **which counter finishes first** (replicative limit / stem-cell exhaustion)?
 **Grant:** EIC Pathfinder Challenges 2026 · Deadline 28 October 2026
 **Budget:** ~€3.2M · 36 months
 
@@ -31,7 +31,7 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 ## 0. The Centriole as a Gatekeeper of Cell State
 
-The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA checks which molecular counter finishes first.**
+The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA models stem-cell entropy accumulation:** in asymmetric stem-cell divisions the older structures are retained by the stem cell (Yamashita 2007; Wang 2009 — Regime B of the Entropy Reset Protocol), so stem cells accumulate entropy *geometrically* across counters, and the replicative limit is the point where the accumulated entropy exceeds the cell's capacity to divide. **MCARA checks which counter's entropy finishes first.**
 
 **Key Hardware/Software Difference:**
 - **Centriole = hardware:** non-repairable in situ. There is no coordinated quality-control mechanism that restores the entire organelle to a "young" state. But it can be **eliminated and created de novo** — exactly what happens in meiosis.
@@ -338,7 +338,7 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 
 ## MCARA ↔ CEDAR ratchet unification (2026-08-11)
 
-> **MCARA explains the replicative limit of somatic cells** as a race between several division counters (telomeres, mitochondria/ROS, epigenome, centriole) — "which counter finishes first?" (Hayflick limit ~50 divisions; stem cells ~200 with hTERT+hypoxia). CEDAR is the centriolar counter (#1) and, per the unified definition (Entropy Reset Protocol v5.2), it is **one ratchet with two modes**: counter (accumulates entropy per division) + state-lock (differentiation ratchet — locks cell identity). Renzova 2018 is the state-lock release in the pluripotent→down direction; the Entropy Reset Protocol tests the differentiated→plastic→re-locked direction.
+> **MCARA explains the replicative limit of somatic cells through stem-cell entropy accumulation:** a race between several division counters (centriole/CEDAR, telomeres, mitochondria/ROS, epigenome) — "which counter's entropy finishes first?" (Hayflick limit ~50 divisions; stem cells ~200 with hTERT+hypoxia; asymmetric inheritance retains old structures in the stem cell, Regime B). CEDAR is the centriolar counter (#1) and, per the unified definition (Entropy Reset Protocol v5.2), it is **one ratchet with two modes**: counter (accumulates entropy per division) + state-lock (differentiation ratchet — locks cell identity). Renzova 2018 is the state-lock release in the pluripotent→down direction; the Entropy Reset Protocol tests the differentiated→plastic→re-locked direction.
 >
 > **Two consequences for the protocol:** (1) a single-counter reset (centriole) may improve but not abolish the replicative limit if another counter (e.g., telomeres) finishes first — the 2×2 factorial + hTERT control addresses this; (2) "which counter finishes first" becomes directly testable by comparing CRCS gains from single vs. combined resets (factorial decomposition, §12 of the protocol).
 
