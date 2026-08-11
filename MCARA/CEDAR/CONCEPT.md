@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.2
+**Version:** 1.3
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -28,6 +28,14 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 > **CEDAR unified definition (2026-08-11, aligned with Entropy Reset Protocol v5.2):** CEDAR — **C**entriolar **E**ntropy-**D**amage **A**ccumulation **R**atchet — is **one ratchet with two modes**: (1) **counter mode** (CEDAR-α/β): semi-conservative duplication accumulates entropy/damage per division; (2) **state-lock mode** (CEDAR-γ, = the morphogenetic lock / differentiation ratchet): the organelle locks the cell's current identity. Loss of the ratchet releases identity in the direction set by the starting state: pluripotent → rolls down (Renzova 2018); differentiated (with p53 suppressed) → plastic → new de novo centriole re-locks a younger state (Entropy Reset Protocol §4.2a). The aging counter and the reprogramming barrier are two faces of one mechanism.
 
 > **CEDAR as the general theory (2026-08-11):** CEDAR is the **general theory of differentiation and the division limit in animal stem cells** — division and differentiation are coupled through the differentiation ratchet: each asymmetric division that produces a differentiating daughter consumes part of the stem cell's division potential, and the division limit (Hayflick for somatic; ~200 divisions for stem cells) is reached *because of* accumulated differentiation acts, not merely damage. **Placement:** CEDAR (general theory) ⊃ MCARA (special case: which counter's entropy finishes first — v5.2) ⊃ Entropy Reset Protocol (somatic reversal without the meiotic price). The unified definition above is the mechanistic core of this general theory (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+### The mechanism (2026-08-11 refinement): geometry, chemistry, and age-driven dysfunction
+
+**1. Geometric deformation is the basis of differentiation (not abstract "entropy").** [E] The centriole duplicates semi-conservatively — the mother centriole is the template for the daughter (Kochanski & Borisy 1990, PMID 2335566). [I] Therefore **geometric deformation of the mother centriole is templated into the daughter** — a deformed cartwheel/over-elongated cylinder propagates its geometry across divisions. [H] This propagated deformation is the physical basis of differentiation: each asymmetric division hands the deformed (older) geometry to the differentiating daughter, biasing its fate (Regime B/C of the Entropy Reset Protocol). Geometry, not "entropy" in the abstract, is the state variable.
+
+**2. Possible chemical pathway: differentiation-inducer molecules in the first blastomeres.** [H] Beyond geometry, the first blastomeres of the embryo may produce **molecular differentiation inducers** — possibly assembled at/near the fresh centrioles (the hypothetical CAMC on the mother centriole; ciliary signaling factors). This would give the centriole a dual route to differentiation: structural (templated geometry) + chemical (secreted/assembled inducer molecules). Testable: proteomic/transcriptomic screen of first-blastomere-conditioned medium; CAMC composition on fresh vs. aged centrioles.
+
+**3. Age-driven entropy accumulation → functional decline.** [I] In addition to geometry change, centrioles accumulate entropy with age (polyE, stochastic damage, η(t)), leading to **functional impairment**: (a) **centrosome function** — reduced division frequency (defective spindle/duplication → longer cell cycles, arrest); (b) **cilium function** — reduced responses to niche signals (the primary cilium is the antenna for Hedgehog/Wnt/PDGFRα; an aged mother centriole builds a functionally aged cilium → impaired niche signaling). [P] Both impairments are assayed in the Entropy Reset Protocol (division frequency = CRCS proliferative component; cilium function = H10 readout).
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
