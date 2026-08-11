@@ -1,7 +1,7 @@
 # CEDAR — Centriolar Entropy-Damage Accumulation Ratchet
 
 **Type:** umbrella project — analysis only.
-**Version:** 1.0
+**Version:** 1.1
 
 > **Full concept:** `~/Desktop/PhD/CONCEPT.md`
 > **Within MCARA:** Counter #1 (Centriolar) — `~/Desktop/LC/MCARA/CONCEPT.md`
@@ -14,7 +14,7 @@
 **Evidence:**
 - **Renzova et al. (2018, PMID 30197118):** Centrinone-induced centriole loss in human pluripotent stem cells triggers spontaneous differentiation to all three germ layers. Without centrioles, cells lose the structural apparatus for controlled self-renewal.
 - **Kalbfuss & Gönczy (2023, PMID 37256957):** ~88% of C. elegans embryonic cells eliminate centrioles during terminal differentiation. Centriole elimination is a programmed event that accompanies — and may enable — the transition from proliferative to post-mitotic state.
-- **Köhrer et al. (2023, PMID 37821581):** Centriole over-elongation (45% at age 24 → 76% at 67, ρ=0.67, p<0.01) demonstrates geometric aging. The centriole templates its own duplication — geometry propagates. An aged centriole cannot be "stripped" back to youth.
+- **Köhrer et al. (2023, PMID 37821581, *Leukemia*):** Centriole over-elongation is an early feature of **plasma cell disorders** — disease-associated geometry change. **Whether analogous structural changes accumulate during physiological aging remains undetermined** (tested in the Entropy Reset Protocol, Objective 4). The templating argument stands on Kochanski & Borisy (1990) semi-conservative duplication, not on Köhrer.
 
 **Resolution of the differentiation paradox:**
 A critic might argue: centriole elimination drives differentiation (Renzova 2018), therefore it cannot enable reprogramming. This misinterprets the centriole's function. The centriole maintains the *capacity to hold an identity*, not the identity itself. Removing it breaks the lock. What happens next depends on the signals:
@@ -24,6 +24,8 @@ A critic might argue: centriole elimination drives differentiation (Renzova 2018
 - **De novo centriole → new lock.** Young centrioles restore controlled asymmetric division and stabilize the new identity.
 
 The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
+
+> **CEDAR unified definition (2026-08-11, aligned with Entropy Reset Protocol v5.2):** CEDAR — **C**entriolar **E**ntropy-**D**amage **A**ccumulation **R**atchet — is **one ratchet with two modes**: (1) **counter mode** (CEDAR-α/β): semi-conservative duplication accumulates entropy/damage per division; (2) **state-lock mode** (CEDAR-γ, = the morphogenetic lock / differentiation ratchet): the organelle locks the cell's current identity. Loss of the ratchet releases identity in the direction set by the starting state: pluripotent → rolls down (Renzova 2018); differentiated (with p53 suppressed) → plastic → new de novo centriole re-locks a younger state (Entropy Reset Protocol §4.2a). The aging counter and the reprogramming barrier are two faces of one mechanism.
 
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
