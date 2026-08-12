@@ -777,7 +777,7 @@ Two distinct claims made in this paper:
 | Naked cartwheel forms FIRST (no MTs) | Cartwheel assembly = surface-catalysed from the very beginning |
 | Bloom phase: MT blade assembly + radial separation + cartwheel growth | Cartwheel grows while attached to template — template distortion → distorted growth |
 | 6 structural modules mapped (24 proteins) | Complete architectural map — any deviation measurable |
-| **U-ExM method established** | Method for measuring cartwheel geometry IS READY at Guichard lab |
+| **U-ExM method established** | Method ready at Guichard lab, BUT cartwheel disassembles at maturation in vertebrate mother centrioles (Guichard 2026) — valid readout for C. elegans / procentrioles only; for mature human centrioles measure persistent scaffold (triplets, inner scaffold POC1A/B/POC5, A-C linker) |
 
 #### Bournonville L et al. (2025) Nat Commun — A-C Linker
 > *The A-C linker controls centriole structural integrity and duplication.* Nat Commun. 2025. PMID: **40707486**.
