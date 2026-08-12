@@ -1,3 +1,11 @@
+## 🔴 2026-08-13 — Aging Cell: inquiry отправлен + APC-проверка
+<!-- lang:ru -->
+- [x] Inquiry отправлен в Aging Cell (13.08, agc@wiley.com)
+- [ ] 💰 Проверить APC Aging Cell: Research4Life (Грузия Group B → скидка 50%?), waiver для GLA
+- [ ] 💰 Fallback: BioEssays / Mech Ageing Dev (подписочный путь 0$)
+- [ ] ⏳ Ответ редакции на inquiry
+<!-- /lang:ru -->
+
 # TODO
 
 # MCARA — TODO.md

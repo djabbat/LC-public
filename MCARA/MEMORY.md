@@ -1,3 +1,17 @@
+## 🔴 INQUIRY Aging Cell отправлен + задача APC (2026-08-13)
+
+<!-- lang:ru -->
+**Inquiry в Aging Cell отправлен 13.08** (agc@wiley.com, subject: «Pre-submission inquiry — centriolar entropy as a source of aging-clock signal»). Копия: letters/sent/AgingCell_inquiry_2026-08-13.md.
+
+**🔴 ЗАДАЧА: проверить, бесплатен ли журнал Aging Cell (APC/waiver):**
+- Подача и inquiry — бесплатно (подтверждено)
+- Публикация: полный OA, APC ~$3,000–4,000 (Wiley)
+- **Проверить Research4Life waiver:** Грузия — Group B → ~50% скидка; Group A → бесплатно. Wiley участвует в Research4Life.
+- **Fallback без APC:** BioEssays (Wiley, гибридный — подписочный путь 0$), Mechanisms of Ageing and Development (Elsevier, гибридный), Aging (Albany NY)
+- **Проверить точно:** страница APC Aging Cell на onlinelibrary.wiley.com + Research4Life eligibility для Грузии + запросить waiver при принятии (GLA — некоммерческая)
+- **Решение по APC:** после ответа редакции на inquiry
+<!-- /lang:ru -->
+
 
 ## 🔴 ДВЕ ЛИНИИ: Дифференциация и Старение (2026-08-13) — концептуальное ядро
 

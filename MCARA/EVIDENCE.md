@@ -792,3 +792,11 @@ CEP164 (distal appendage protein, необходим для стыковки б�
 **Experimental separation:** Line 1 (geometric counter → differentiation errors) — metrics M1/M5 + stem-cell asymmetry; Line 2 (chronological entropy → centrosome/cilia dysfunction → clock noise) — post-mitotic cells + dysfunction read-outs.
 
 *Written into: THEORY.md, CONCEPT.md, CEDAR/THEORY.md, Research Article (Introduction + Hypothesis versions), Proposal Meyer, EVIDENCE §19, MEMORY.*
+
+## 20. Terminology: CDATA → CEDAR (2026-08-13)
+
+<!-- lang:ru -->
+**По указанию Джабы: термин CDATA (Centriolar Damage Accumulation Theory of Aging) УБРАН из всех файлов и проектов, заменён на CEDAR** (имя центриолярного счётчика в MCARA). Причина: CDATA притягивает к себе критику рецензентов (Digital Twin на синтетических данных, GRADE V, путаница с названием теории), тогда как CEDAR — чистое имя компонента.
+
+Выполнено: sed-замена во всех md (LC, Marketing/ARGUS-OS3, ERR/wp1_cedar). ARGUS-OS3 запушен. Research Article docx пересобран. 0 упоминаний CDATA осталось.
+<!-- /lang:ru -->
