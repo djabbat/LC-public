@@ -780,3 +780,15 @@ CEP164 (distal appendage protein, необходим для стыковки б�
 **Вывод:** центриолярные гены реагируют на старение (компенсаторное повышение при пассаже) и на острый гликационный стресс (супрессия). Пилот подтверждает: гипотеза проверяема на публичных данных. НЕ доказательство (без нормализации, 1 датасет) — сигнал для Phase 0.
 
 **Файл:** `MCARA/CEDAR/docs/GEO_PILOT_centriolar_genes_aging_2026-08-13.md`
+
+## 19. Two Lines — Differentiation and Aging (2026-08-13)
+
+**Line 1 — Differentiation (programmed, geometric counter).** The replicative count is kept by *changes in centriole geometry*: each template-based duplication on the persisting mother scaffold copies a slightly altered geometry, so the number of divisions is physically encoded in scaffold shape. Differentiation depends on asymmetric stem-cell division systems — and therefore on stochastic accumulation of errors by the oldest retained centrioles.
+
+**Line 2 — Aging (side effect of differentiation).** The entropy of centrosome and cilia dysfunction accumulates with the *chronological age of the centriole*: slower division tempo (centrosomal function) and reduced signaling perception (ciliary function). Aging is the by-product of differentiation, not an independent process.
+
+**Selective accumulation of the oldest centrioles** in asymmetric stem-cell systems leads to: (1) lower division tempo (centrosomal role), (2) lower signaling reception (ciliary role).
+
+**Experimental separation:** Line 1 (geometric counter → differentiation errors) — metrics M1/M5 + stem-cell asymmetry; Line 2 (chronological entropy → centrosome/cilia dysfunction → clock noise) — post-mitotic cells + dysfunction read-outs.
+
+*Written into: THEORY.md, CONCEPT.md, CEDAR/THEORY.md, Research Article (Introduction + Hypothesis versions), Proposal Meyer, EVIDENCE §19, MEMORY.*
