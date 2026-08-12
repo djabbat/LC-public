@@ -2,6 +2,34 @@
 
 # MCARA — TODO.md
 
+## 🔴 2026-08-12/13 — Кёльн: Meyer + Aubrey подготовка
+<!-- lang:ru -->
+- [x] Proposal Meyer v3.6 (8 циклов рецензий, 35 verified PMID) + docx
+- [x] Письмо Meyer отправлено 13.08 с вложением (Proposal v3.6 docx)
+- [x] Research Article APA7 для Meyer → `docs/proposals/`
+- [x] Proposal Aubrey v2 — кислородный парадокс (Parrinello 2003, PMID 12855956)
+- [ ] ⏳ Ответы: Coelho, Guichard, Meyer, Gönczy (follow-up 14 авг)
+- [ ] 🔬 Если Meyer заинтересуется: кислородный эксперимент 3% vs 21% O₂ + hTERT — представить как пилот
+- [ ] 📄 Research Article APA7 → подать как hypothesis article (после ОК Meyer) — кандидаты: Aging Cell / Nat Aging (короткий)
+<!-- /lang:ru -->
+
+## 🔴 2026-08-12 — NDE1/SDA находка → действия
+<!-- lang:ru -->
+- [x] ✉️ Письмо Paul Guichard (paul.guichard@unige.ch) — SAS-6 cartwheel + старение — отправлено 2026-08-12
+- [x] ✉️ Письмо Paula Coelho (palmeida@caltech.edu) — центриоль↔автофагия, кандидат в партнёры консорциума (после отказа Gönczy) — отправлено 2026-08-12
+- [ ] 🔬 Добавить NDE1/CEP128/ninein + центриолярное разделение + ectopic foci в панель маркеров старения центриоли (U-ExM)
+- [ ] 📊 Тест LC3B/p62 + автофагический поток в старых vs молодых центриолях — перекрёстная связь C1↔C5
+- [ ] 📄 Сослаться: NDE1 (10.64898/2026.07.01.735914) + POC5 (PMID 42507085) + Coelho Nat Commun (PMID 42324259) в CIRCBIO-07 / ERC / статье v9
+- [ ] 📎 Проверить Coelho в списке партнёров CIRCBIO-07
+<!-- /lang:ru -->
+
+## 🔴 2026-08-12 — EIC Pathfinder: старт после Кёльна
+<!-- lang:ru -->
+- [ ] 📌 **EIC Pathfinder — работа начинается ПОСЛЕ 4 сентября 2026** (после Кёльна 31 авг – 2 сен). Решение Джабы 2026-08-12.
+- [ ] ⏳ Дедлайн 28 окт 2026 → после 4 сен останется ~7 недель на Part B
+- [ ] 📄 Reference PMID 41844775 + 42229233 in EIC Pathfinder Part B
+<!-- /lang:ru -->
+
 ## 🔴 2026-07-25 — Chk1 Follow-up
 <!-- lang:ru -->
 - [ ] ✉️ Write to George Zachos (gzachos@uoc.gr) — intersection of Chk1 + centrosome + aging

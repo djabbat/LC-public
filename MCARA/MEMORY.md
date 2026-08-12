@@ -1,4 +1,56 @@
 
+## 🔴 GUICHARD: SAS-6 картвел НЕ персистирует в зрелых человеческих центриолях (2026-08-13)
+
+> **Reply saved:** `refs/Guichard_SAS6_cartwheel_critical_reply_2026-08-12.md` | **Letter:** `letters/sent/2026-08-12_Guichard_SAS6_cartwheel_aging.md`
+
+<!-- lang:ru -->
+**КРИТИЧЕСКИЙ ответ Paul Guichard (UNIGE) на письмо про SAS-6 cartwheel:**
+1. В человеческих/позвоночных центриолях картвел SAS-6 **дизассемблируется при созревании** — присутствует только в процентриолях/молодых; в зрелых материнских центриолях ОТСУТСТВУЕТ → M1 (SAS-6 ring geometry) невалиден для зрелых человеческих центриолей.
+2. **В C. elegans картвел ПЕРСИСТИРУЕТ** (работа Gönczy) → Эксперимент A (C. elegans) с SAS-6 ВАЛИДЕН и усилен.
+3. **U-ExM** может не дать разрешения для тонких изменений картвела → STED/крио-ЭТ на подвыборке.
+4. **Совет Guichard:** измерять персистентные структуры: триплетные микротрубочки, внутренний скаффолд (POC1A/B, POC5), A-C линкер.
+
+**Внесено во все документы:** M1 переопределён (persistent-scaffold geometry), C. elegans-only для картвела, U-ExM resolution caveat добавлен. Proposal Meyer v3.6, Research Article, Proposal Aubrey v2 — обновлены. Джаба отправил follow-up (вопрос про inner scaffold/A-C linker + приглашение на Кёльн).
+<!-- /lang:ru -->
+
+## 🔴 Proposal Meyer v3.6 + Research Article + Кислородный парадокс (2026-08-12)
+
+> **Files:** `docs/proposals/Proposal_Meyer_CEDAR_aging_clocks.md` (v3.6), `docs/proposals/Testing_the_Hypothesis_of_Centriolar_Entropy_as_a_Source_of_Transcriptomic_Aging_Clock_Signal.md`, `docs/proposals/Proposal_Aubrey_Centriole_Reset.md` (v2)
+> **Letter sent:** Meyer 2026-08-13 (with attachment) — copy in `letters/sent/`
+
+<!-- lang:ru -->
+**Proposal Meyer прошёл 8 циклов строгой рецензии: 68→72→71→78→62→68→85→~93 (v3.6).** Ключевые решения:
+1. **Часы Meyer верифицированы:** BiT age (Aging Cell 2021, Meyer 1-й автор) — транскриптомные часы; стохастическая вариация (Nat Aging 2024); Gallrein 2026 (нейроны C. elegans); Koch 2026 (DREAM). Meyer — соавтор 2× Nat Aging 2026, 1-й автор BiT age.
+2. **Метрика M2 больше не зависит от препринта Yang:** первичные маркеры CEP128 (Kashihara 2019) + ninein (Tillery 2024), вторичный NDE1/NDEL1 (Inaba 2016, JCB — peer-reviewed).
+3. **Химические маркеры повреждения:** 4-HNE + DNPH-карбонилы (ко-локализация с centrin-3), метионин-сульфоксид в SILAC — «повреждение» стало химически измеримым.
+4. **Мостик центриоль→DREAM собран из PMID:** Meitinger 2016 (p53) → Schmidt 2024 (p21-DREAM) → Koch 2026 (репарация) + PIDDosome (Garcia-Carpio 2023) + автофагия (Coelho 2026).
+5. **Эксперимент A.0 — STOP-rule:** если p53/DREAM-сигнатура не появляется — A, B, D не запускаются.
+6. **Кислородный парадокс (для Aubrey):** Parrinello 2003 (PMID 12855956) — MEF в 3% O₂ не стареют в эксперименте, в 21% O₂ иммортализуются (иллюзия отсутствия предела). Парадокс = ключевой тест: hTERT+ клетки в гипоксии имеют предел (центриоль = счётчик, не теломеры); MEF-иммортализация несёт центриолярные маркеры через событие, стирающее Hayflick-предел.
+7. **Research Article APA7 оформлен** — для Meyer, структура: Abstract (≤250 слов) + Keywords + Introduction + Methods + Anticipated results + Discussion + References APA7.
+
+**Следующие шаги:** ждать ответы Coelho/Guichard/Meyer; Gönczy follow-up 14 авг; Кёльн 31 авг–2 сен (Meyer: Proposal + чашки кофе; Aubrey: кислородный парадокс).
+<!-- /lang:ru -->
+
+## 🔴 NDE1 → Subdistal Appendages + Centriole→Autophagy Link (2026-08-12)
+
+> **Paper:** Yang, Coelho, Glover (Caltech), preprint openRxiv 2026-07-02, DOI: 10.64898/2026.07.01.735914
+> **Full analysis:** `~/Desktop/Services/docs/literature/NDE1_2026_Subdistal_Appendages.md`
+> **Ref:** `refs/NDE1_Subdistal_Appendages_Yang_2026.md`
+
+<!-- lang:ru -->
+**Находка 1 — молекулярное расслоение субдистальных придатков (SDA):** NDE1 формирует кольцо в SDA между CEP128 (проксимальный слой) и ninein (периферия). NDE1 в ODF2/CEP128-ветви, НЕ в CEP170-ветви (CEP170-ветвь → репарация ДНК, Rodríguez-Real 2023 PMID 37664992). Три маркера SDA-целостности: NDE1-кольцо, расстояние между парными центриолями, ectopic foci.
+
+**Находка 2 — 🔴 связь центриоль→автофагия:** NDE1 depletion → ↑LC3B/p62, ↓автофагический поток. Это мост между C1/CEDAR и C5/Proteostasis — перекрёстное взаимодействие счётчиков MCARA, предсказанное архитектурой.
+
+**Находка 3 — подтверждение «двух функций» центриоли (Tqemaladze 2025):** дистальные придатки → сигналинг цилии; субдистальные придатки → MTOC-организация. NDE1 depletion фенокопирует отказ MTOC-ветви.
+
+**Находка 4 — Paula Coelho (palmeida@caltech.edu):** соавтор NDE1-статьи + первый автор «Sensing centrosome amplification: interface between centriole duplication and autophagy» (Nat Commun 2026, PMID 42324259, genome-wide screen — Wnt/Hippo/Tpr53/PIDDosome/цилии/автофагия). Сильный кандидат в партнёры консорциума после отказа Gönczy (2026-08-07).
+
+**Находка 5 — POC5 (PMID 42507085, FASEB J 2026):** человеческий центриолярный белок → преждевременная сенесценция (SA-β-gal, p-p53), супернумерарные центриоли, 35% ↓пролиферации. Клиническое доказательство «центриоль = счётчик старения». Метод — U-ExM (как рекомендовал Gönczy).
+
+**Действия:** связаться с Coelho; добавить NDE1/CEP128/ninein + LC3B/p62 в панель маркеров; сослаться в CIRCBIO-07/ERC/статье v9.
+<!-- /lang:ru -->
+
 ## 🔴 CRITICAL CORRECTION: Planarian Centriole Data (2026-08-06)
 
 > **Finding:** Deep PubMed search confirmed that Azimzadeh 2012 explicitly states planarian neoblasts and embryonic cells DO NOT have centrioles. The 2026-07-17 audit correction went in the wrong direction.
@@ -964,7 +1016,7 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
   4. **Publication ladder:** Phase 0/1 → JCB/Mol Biol Cell (IF 6-8); Phase 2 → Nat Cell Biol; Phase 2+3 → Nature/Cell. Честная вероятность Phase 1 (25-40%) в грантовом нарративе.
 - **Anderson & Stearns 2009 → уровень [I]** (корреляция, не причинность).
 - **Итог: 87 уникальных PMID, верифицированы 87/87.** Оценка: 96/100 (RR), 94/100 (ERC).
-- **Монография:** 25 800+ слов, PDF 92 стр., книга 94 стр. Автоматизация rebuild.sh работает.
+- **Монография:** 25 800+ слов, PDF 92 стр., книга 94 стр. Автоматизация rebuild.sh работала (заменена на make-pdf-book.sh 2026-08-12).
 - **11 циклов autofix (v7.0→v8.1).**
 
 ### 2026-08-12 — Peer-review v17 autofix (протокол v8.2) — рецензент НЕ нашёл фатальных ошибок (94/100)
@@ -976,4 +1028,18 @@ not only p53i (pifithrin-α) but also p38i (SB203580) is needed.
 - **Верификация:** все 12 источников рецензента уже в протоколе (87/87 PMID); новых цитат не потребовалось.
 - **Итог: 97/100 (Hypothesis/RR).** 12 циклов autofix (v7.0→v8.2).
 - **Монография:** 27 557 слов, PDF 93 стр., книга 97 стр. (обложки на Desktop напрямую).
-- **Автоматизация rebuild.sh работает** (исправлены пути обложек).
+- **Автоматизация:** единый инструмент — `Services/scripts/make-pdf-book.sh` (+ стиль `pdf-book-style.css`). Старые rebuild-скрипты удалены 2026-08-12. Сборка: `make-pdf-book.sh "книга.docx" -f cover_front.png -b cover_back.png -t Contents -o "книга.pdf"` (исправлены пути обложек).
+
+### 2026-08-12 — Чистка: чистая научная монография + протокол v8.3
+- **По указанию Джабы:** «зачем письма, peer review и подобное? Чистый протокол и чистая монография».
+- **Убрано из монографии:** Part V (все рецензии v7-v18), Appendix A (Pre-Submission Inquiry), все оценки/скоры, следы «AI/autofix/revision N/reviewer».
+- **Убрано из протокола:** весь changelog (v5.3-v8.2 блоки; история в MEMORY.md), пометки «revision N», «reviewer», «per Gakely».
+- **Созданы 5 новых фигур:** FIGURE_2_Experimental_Design, FIGURE_3_Proof_Ladder, FIGURE_4_Override_Architecture, FIGURE_5_Surveillance + FIGURE_1 (была) + FIGURE_6 (13 puzzles). Все 6 интегрированы в монографию и docx.
+- **Монография:** 19 045 слов, 0 кириллицы, 0 следов AI, 6 фигур, PDF 66 стр., книга 69 стр., docx с изображениями.
+- **Протокол:** v8.3 чистый научный (Red Thread + Protocol + Search Appendix в монографии; Grant Core/Gakely остаются в рабочем пакете docs/).
+- **Пуш:** все 3 репозитория.
+
+### 2026-08-12 — APC waiver Scientific Reports (Entropy of Age)
+- **Рукопись:** «Entropy of Age» (Mosaic Aging / Bristlebot) — Scientific Reports, Submission ID: `8ad40dcb-b58d-4374-a4dd-5f471983b60a`
+- **Запрос APC waiver:** тикет Springer Nature **#11625271** — подтверждено получение 12 авг 2026 (Global Open Research Support Specialist: Josephron Solomon Iglesias Dimapilis), в очереди на обработку.
+- **Дальше:** ждать ответ; если нет ответа 5-7 дней — вежливо напомнить с Ticket ID. Записать решение в SUBMISSIONS_STATUS.md.

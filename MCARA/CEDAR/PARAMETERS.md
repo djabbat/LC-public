@@ -86,7 +86,7 @@
 | Elimination rate (somatic) | k_elim_som | ≈ 0 | per year | No centriole elimination in adult somatic cells |
 | Critical damage threshold | D_critical | 1.0 | dimensionless | Functional failure threshold |
 | Time to D_critical (human) | τ_critical | 60-100 | years | D₀ ≈ 0.05-0.10 D_critical |
-| Cartwheel radius | r_cartwheel | ~25 | nm | SAS-6 ring, 9-fold symmetry |
+| Cartwheel radius | r_cartwheel | ~25 | nm | SAS-6 ring, 9-fold symmetry; valid as an age metric only in C. elegans/procentrioles (cartwheel disassembles at maturation in vertebrate mother centrioles — Guichard 2026) |
 | Expected radius variation (late passage) | Δr_aged | 2-5 | nm | Carbonylation → surface distortion |
 | Carbonylated tubulin (aged) | f_carbonyl | 2-5 | % of total | Stadtman ER (2006), PMID: 16756493 |
 | Damaged dimers per centriole (aged) | N_damaged | ~36-90 | dimers | 1800 total × 2-5% carbonylation |
