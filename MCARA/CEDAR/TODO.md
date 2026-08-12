@@ -2,6 +2,14 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
+## 🔴 2026-08-13 — Meyer-протокол → design article
+<!-- lang:ru -->
+- [ ] 📄 Подача `Testing_the_Hypothesis_of_Centriolar_Entropy...` как design article (кандидаты: Cell Reports Methods / eLife / Nature Protocols-стиль)
+- [ ] 🔬 Phase 0: GEO-реанализ (центриолярные гены vs возраст) — первый пилотный сигнал
+- [ ] 🔬 Phase 0: SILAC-оборот скаффолда + U-ExM passage 5 vs 25
+- [ ] 📎 Ссылка на протокол в CEDAR/docs/ и ERR/wp1_cedar/docs/
+<!-- /lang:ru -->
+
 ## Active Tasks (2026-07-26)
 ### 🟢 2026-08-09 — bioRxiv preprint submitted
 - [x] **bioRxiv BIORXIV/2026/743702** — Version 1 submitted (files: `articles/centriole-division-counter-biorxiv/`)
