@@ -6,6 +6,14 @@
 > **📄 Rewrite strategy:** `~/Desktop/Services/docs/REWRITE_STRATEGY_2026-07-16.md`
 
 **Purpose:** volatile state, active TODOs, milestones.
+
+## 🔴 2026-08-13 — Meyer-протокол интегрирован (Research Article)
+
+> **Files:** `docs/Testing_the_Hypothesis_of_Centriolar_Entropy_as_a_Source_of_Transcriptomic_Aging_Clock_Signal.md` (+ .docx) — в CEDAR/docs/ и ERR/wp1_cedar/docs/
+
+<!-- lang:ru -->
+**Протокол (research article, APA7, 35 verified PMID) добавлен в CEDAR/docs/ и ERR/wp1_cedar/docs/.** Ядро: проверка гипотезы «центриоль — счётчик → источник стохастической вариации часов старения». Ключевые компоненты: Phase 0 (U-ExM + SILAC + GEO-реанализ + digital twin), A.0 (p53/DREAM, STOP-rule), A-iv (rescue + химерные центриоли), B (n=42, MitoQ, hTERT, CRISPR), C (валидация), D (iPSC, SILAC-изотоп). Включено замечание Guichard (картвел → persistent scaffold). Отправлено Meyer (13.08). Кандидат на подачу как design article (Nature Protocols / Cell Reports Methods / eLife).
+<!-- /lang:ru -->
 **Convention:** new entries at the top with date.
 ---
 
