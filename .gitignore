@@ -24,3 +24,14 @@ test_*.db
 *.sqlite
 realtime/deps/
 erl_crash.dump
+
+# 🔴 Письма и внутренняя переписка — НЕ публиковать (правило 2026-08-12)
+**/correspondence/
+**/letters/
+**/letter_to_*
+**/email_to_*
+**/*inquiry*
+**/cover_letter*
+**/*appeal*
+**/reply_*
+**/*_thanks*
