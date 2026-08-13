@@ -1,14 +1,36 @@
-## 🔴 INQUIRY Aging Cell отправлен + задача APC (2026-08-13)
+## 🔴 ДОБРОКАЧЕСТВЕННЫЕ ОПУХОЛИ = модель счётчиков (невусы) (2026-08-13)
 
 <!-- lang:ru -->
-**Inquiry в Aging Cell отправлен 13.08** (agc@wiley.com, subject: «Pre-submission inquiry — centriolar entropy as a source of aging-clock signal»). Копия: letters/sent/AgingCell_inquiry_2026-08-13.md.
+**Записано везде (Proposal Aubrey, EVIDENCE §21, MEMORY).** Аналогия с побегом фибробластов:
+- **Невус** = побег, остановленный счётчиками (p16/p53 активны → OIS-сенесценция; теломераза низкая) — Serrano 1997 (Cell), Michaloglou 2005 (Nature), Lorbeer 2024 (PNAS Nexus — разные механизмы в разных невусах)
+- **Побег фибробластов** = счётчики сломаны (p53/p19ARF + теломераза/ALT)
+- **Рак (меланома)** = все счётчики сломаны
 
-**🔴 ЗАДАЧА: проверить, бесплатен ли журнал Aging Cell (APC/waiver):**
+**CEDAR-предсказание (тестируемо на архивных образцах):** центриолярная глубина ПОВЫШЕНА в невусах, СБРОШЕНА в меланоме — невусы vs меланома vs нормальные меланоциты, CEP128/ninein + p16, на рутинных срезах.
+
+**LERR:** невусы доказывают управляемую остановку без гибели in vivo; обратимость OIS (снятие p16/p53) = путь прогрессии → Rebuild должен СОХРАНЯТЬ p53/p16, не удалять.
+
+**MCARA:** иерархия счётчиков видна (теломеры + OIS + центриолярный); «разные механизмы сенесценции» (Lorbeer) согласуются с 5-счётчиковой архитектурой.
+<!-- /lang:ru -->
+
+## 🔴 INQUIRY Aging Biology (бывш. Aging Cell) переотправлен + задача APC (2026-08-13)
+
+<!-- lang:ru -->
+**Первая попытка inquiry (13.08, agc@wiley.com) — НЕ ДОСТАВЛЕНА:** 550 5.1.1 User Unknown. Причина: **Aging Cell переименован в Aging Biology** (журнал продолжает выходить под новым названием, тот же Wiley).
+
+**Контактные данные Aging Biology (подтверждены через Contact-страницу Wiley):**
+- Editorial Assistant: Megan Johnson — editorial.assistant@agingbiologyjournal.com
+- Editors-in-Chief: Vera Gorbunova (rochester.edu), John Sedivy (Brown), Peter Adams (SBP), Julie Andersen (Buck)
+- Принимает Hypothesis and Theory статьи (до 12 000 слов, peer-reviewed) — формат подходит.
+
+**Inquiry переотправлен 13.08 на editorial.assistant@agingbiologyjournal.com** (subject: «Pre-submission inquiry — centriolar entropy as a source of aging-clock signal»). Копия: letters/sent/AgingBiology_inquiry_2026-08-13.md. Старые файлы letters/AgingCell_inquiry_2026-08-13.md и letters/sent/ удалены.
+
+**🔴 ЗАДАЧА: проверить, бесплатен ли журнал Aging Biology (APC/waiver):**
 - Подача и inquiry — бесплатно (подтверждено)
 - Публикация: полный OA, APC ~$3,000–4,000 (Wiley)
 - **Проверить Research4Life waiver:** Грузия — Group B → ~50% скидка; Group A → бесплатно. Wiley участвует в Research4Life.
 - **Fallback без APC:** BioEssays (Wiley, гибридный — подписочный путь 0$), Mechanisms of Ageing and Development (Elsevier, гибридный), Aging (Albany NY)
-- **Проверить точно:** страница APC Aging Cell на onlinelibrary.wiley.com + Research4Life eligibility для Грузии + запросить waiver при принятии (GLA — некоммерческая)
+- **Проверить точно:** страница APC Aging Biology на onlinelibrary.wiley.com + Research4Life eligibility для Грузии + запросить waiver при принятии (GLA — некоммерческая)
 - **Решение по APC:** после ответа редакции на inquiry
 <!-- /lang:ru -->
 
