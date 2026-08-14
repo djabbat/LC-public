@@ -21,6 +21,33 @@
 **Implication for CEDAR/MCARA:** The ungulate-type mechanism (post-fertilization, mitotic) is the most directly transferable to somatic cell reprogramming. Human elimination factors exist (primate-type) but are uncharacterized. Both branches confirm that centriole elimination is present in placental mammals — it was never lost, just diversified.
 
 
+## Evolution of Centriole Loss: Land vs Water (Verified 2026-07-26)
+
+> **Source:** `docs/VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md` — systematic verification (7 PubMed queries, >12,000 results, ~30 abstracts, 40+ PMIDs). Score: 72 → 95/100.
+
+### Verified facts (with PMIDs)
+
+1. **LLPS is a key organizing mechanism of the centrosome** — Cep63–Cep152, Cep57, Aurora-A (BuGZ), TTBK2–CEP164, CEP44 (O-GlcNAcylation), CEP112 all use phase separation for centriolar compartments (PMID 33208041, 38857398, 38746663, 40483689, 40906019, 39349455).
+2. **LECA had centrioles and flagella** — Chlamydomonas retains ancestral traits lost in land plants and yeast (PMID 25690512).
+3. **Land plants (Embryophyta) lost centrioles** — most seed plants lack them; mosses retain centrioles in sperm (de novo assembly); mosses are a transitional form (PMID 22691130, 40040596, 34595246, 25690512).
+4. **Plants use acentrosomal mitosis** — Ran-GTP gradient, augmin nucleation, CORD/TPX2/Kinesin-14D, transient MTOCs (“Gametosomes”) (PMID 25809139, 40945508, 35513464, 28973935, 39163829, 27837282).
+5. **Centrosome ≠ centriole** — Dictyostelium (Amoebozoa, freshwater) has a functional centrosome WITHOUT centrioles; PCM can act as MTOC autonomously (PMID 34685637). Centriole loss ≠ MTOC function loss.
+6. **Centrin is the Ca²⁺-binding protein of centrioles** — controls centriole duplication Ca²⁺-dependently (PMID 17694534). NOT CaMKII (previous version errored here).
+
+### Hypotheses (not facts — multiple working hypotheses, Chamberlin 1890)
+
+- **H1 (osmotic):** sea → freshwater transition → hypotonic stress → cell wall (turgor) → mechanical shape stabilization → reduced need for centralized MTOC → gradual centriole loss.
+- **H2 (energetic trade-off):** cellulose wall + photosynthesis → high energy cost → centriole/centrosome cycle becomes “luxury” → reduction.
+- **H3 (life cycle):** gametophyte/sporophyte alternation → centriole needed only in male gametes → retained in moss sperm → lost in seed plants (non-flagellated gametes).
+- **H4 (mechanical):** cell wall fixes shape → acentrosomal Ran-GTP mechanism suffices → centriole as MTOC redundant.
+
+### Implications for CEDAR
+
+1. **LLPS role in centrosome organization** must be incorporated into CEDAR theory (M1–M9 mechanisms and the morphogenetic lock model).
+2. **Dictyostelium** is a model for “centrosome without centriole” — relevant to CAMC experiments and the question of what the centriole specifically contributes vs PCM.
+3. **Environment ↔ centriole retention link** (osmotic stress) opens a new, unexplored angle: if the environment affects centriole retention/loss, the stem-cell microenvironment may influence centriole behavior during aging.
+4. Full PMID list (40+): see `docs/VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md`.
+
 ## The Centriole as a Morphogenetic Lock
 
 > **Core insight (2026-08-03):** The centriole does not encode a specific cell fate. It encodes the *capacity for controlled asymmetric division*, which maintains whatever fate the cell currently holds. It is a morphogenetic lock, not a fate determinant.
