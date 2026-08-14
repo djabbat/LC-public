@@ -25,6 +25,7 @@ MCARA/
 │
 ├── EpigeneticDrift/    — Counter #2: Epigenetic Clock
 ├── MitoROS/            — Counter #3: Mitochondrial
+├── Proteostasis/       — Counter: Proteostasis
 ├── Telomere/           — Counter #4: Telomeric
 │
 ├── _archive/ARGUS-LP_v3_2026-06/  — Outdated ARGUS-LP version (June 2026). Current: Marketing/ARGUS-LP_OS v49.
@@ -39,6 +40,11 @@ MCARA/
 │   ├── Phase-B/        —   Counter Race
 │   └── ...
 │
+├── articles/           — Articles and manuscripts
+├── submissions/        — Journal submissions (internal, gitignored)
+├── results/            — Results data
+├── _originals/         — Original source files
+├── grants/             — Grant applications
 ├── crates/             — Rust Code (mcara_core, mcara_api, mcara_cli, mcara_compare, mcara_simulation, mcara_tests)
 ├── backend/            — Python Backend
 ├── frontend/           — Web Interface
