@@ -25,6 +25,15 @@ Ze/
 ├── simulator/        — Rust simulator (ze-core + ze-runner)
 ├── website/          — Interactive digital twin (Phoenix)
 │   └── ze_sim/       — Simulation on the website
+├── ze-web/           — Ze web app
+├── ze-public/        — Public-facing Ze resources
+├── Materials/        — Research materials
+├── Ze_Music/         — Music-related Ze work
+├── Ze_CHSH_QIP_submission/ — CHSH QIP submission
+├── simulations/      — Simulation scripts/notebooks
+├── bristlebot_sim/   — Bristlebot swarm simulation
+├── letters/          — Letters (internal, gitignored)
+├── _archive/         — Archived material
 │
 ├── Articles/         — Published articles
 ├── docs/             — Documentation
