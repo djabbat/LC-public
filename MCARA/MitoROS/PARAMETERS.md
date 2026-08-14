@@ -19,8 +19,8 @@
 | | \( \lambda_{les} \) | Weight of oxidative damage contribution to \( D_3 \). | Not defined | Dimensionless | \( \lambda_{het} + \lambda_{les} = 1 \). | Hypothetical |
 | Sigmoid steepness | \( k_3 \) | Parameter determining the sharpness of the contribution function \( f_3(D_3) \) transition near the threshold. | \( 5 – 20 \) | Dimensionless | Heuristic. Reflects the assumption that the transition from normal to dysfunction is relatively sharp for mitochondrial defects (threshold effect). | Hypothetical |
 | Contribution function threshold | \( D_3^{threshold} \) | Value of \( D_3 \) at which the contribution function \( f_3 \) reaches the midpoint of the transition. | Not defined | Dimensionless | Typically set to \( H_{crit} \) in simplified models. Requires calibration for specific tissues and mutations. | Hypothetical |
-хода (0.5). | \( 0.3 – 0.7 \) | Безразмерная | Должно быть связано с \( H_{crit} \), но также включает вклад окислительных повреждений. \( D_3^{threshold} < H_{crit} \), так как комбинированные повреждения могут вызывать дисфункцию раньше. | Гипотетичен |
-| Коэффициенты связи | \( \Gamma_{3,j} \) | Мера влияния счётчика \( j \) на скорость накопления \( D_3 \). | **0** (по умолчанию) | Зависит от функции \( g_j \) | Согласно канону CORRECTIONS. Ненулевое значение может быть установлено только post-hoc на основе статистического анализа данных, отвергающего независимость. | Гипотетичен / Определяется данными |
+step (0.5). | \( 0.3 – 0.7 \) | Dimensionless | Should be related to \( H_{crit} \), but also includes the contribution of oxidative damage. \( D_3^{threshold} < H_{crit} \), since combined damage can cause dysfunction earlier. | Hypothetical |
+| Coupling coefficients | \( \Gamma_{3,j} \) | Measure of the influence of counter \( j \) on the accumulation rate of \( D_3 \). | **0** (by default) | Depends on the function \( g_j \) | According to the CORRECTIONS canon. A nonzero value can be set only post-hoc based on statistical analysis of data rejecting independence. | Hypothetical / Data-defined |
 
 ## τ₃ Operationalization
 
@@ -66,5 +66,5 @@ where f_COX⁻ is the fraction of COX‑negative fibres at age t. This is an app
 
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.
 

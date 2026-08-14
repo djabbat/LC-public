@@ -7,12 +7,12 @@
 
 **Purpose:** volatile state, active TODOs, milestones.
 
-## 🔴 2026-08-13 — Meyer-протокол интегрирован (Research Article)
+## 🔴 2026-08-13 — Meyer protocol integrated (Research Article)
 
-> **Files:** `docs/Testing_the_Hypothesis_of_Centriolar_Entropy_as_a_Source_of_Transcriptomic_Aging_Clock_Signal.md` (+ .docx) — в CEDAR/docs/ и ERR/wp1_cedar/docs/
+> **Files:** `docs/Testing_the_Hypothesis_of_Centriolar_Entropy_as_a_Source_of_Transcriptomic_Aging_Clock_Signal.md` (+ .docx) — in CEDAR/docs/ and ERR/wp1_cedar/docs/
 
 <!-- lang:ru -->
-**Протокол (research article, APA7, 35 verified PMID) добавлен в CEDAR/docs/ и ERR/wp1_cedar/docs/.** Ядро: проверка гипотезы «центриоль — счётчик → источник стохастической вариации часов старения». Ключевые компоненты: Phase 0 (U-ExM + SILAC + GEO-реанализ + digital twin), A.0 (p53/DREAM, STOP-rule), A-iv (rescue + химерные центриоли), B (n=42, MitoQ, hTERT, CRISPR), C (валидация), D (iPSC, SILAC-изотоп). Включено замечание Guichard (картвел → persistent scaffold). Отправлено Meyer (13.08). Кандидат на подачу как design article (Nature Protocols / Cell Reports Methods / eLife).
+**Protocol (research article, APA7, 35 verified PMID) added to CEDAR/docs/ and ERR/wp1_cedar/docs/.** Core: testing the hypothesis "centriole — counter → source of stochastic variation in the aging clock." Key components: Phase 0 (U-ExM + SILAC + GEO reanalysis + digital twin), A.0 (p53/DREAM, STOP-rule), A-iv (rescue + chimeric centrioles), B (n=42, MitoQ, hTERT, CRISPR), C (validation), D (iPSC, SILAC isotope). Included Guichard's remark (cartwheel → persistent scaffold). Sent to Meyer (13.08). Candidate for submission as a design article (Nature Protocols / Cell Reports Methods / eLife).
 <!-- /lang:ru -->
 **Convention:** new entries at the top with date.
 ---
@@ -20,15 +20,15 @@
 ## 🟢 2026-08-09 — bioRxiv submission: BIORXIV/2026/743702 (Version 1)
 
 <!-- lang:ru -->
-- 📄 **Статья:** «The Centriole as a Candidate Division Counter in Stem-Cell Aging: A Falsifiable Hypothesis with a Pre-Registered Protocol»
-- 🚀 **Подача на bioRxiv:** BIORXIV/2026/743702 — Version 1 SUBMITTED (подтверждение получено). Ожидание скрининга (1–3 дня) → препринт + DOI 10.1101/...
-- 📁 **Файлы:** `CEDAR/articles/centriole-division-counter-biorxiv/` (md, docx, pdf, bioRxiv pdf, Abstract версии)
-- 📄 **Формат:** Research Article — гипотеза + систематический синтез + пререгистрированный протокол P1–P9 (Stage 1); References в APA 7 (128 записей, все авторы раскрыты)
-- 🔄 **Полный цикл:** 18 peer-review рецензий обработано (42–68/100), все правки внесены; эмодзи/CEDAR удалены; следы AI убраны
-- ✅ **Конвертер md2docx:** добавлен флаг `--apa` (автор-год цитаты, References без нумерации), `##`→H2 (без Subtitle), Title 22pt — закоммичено (ff2cb7b5, 4eee16b4)
-- 📨 **Подтверждение получено (9 авг 07:00):** bioRxiv подтвердил подачу MS `BIORXIV/2026/743702`; скрининг 24–72 ч
-- 🔀 **Возможность передачи:** bioRxiv → «Submit Preprint to a Journal or Peer Review» (`submit.biorxiv.org/submission/queue?queueName=send_paper_away_author`) — прямой путь в журналы/Review Commons без повторной загрузки
-- 📌 **Следующий шаг:** дождаться скрининга (DOI 10.1101/...) → рассмотреть Review Commons (EMBO, бесплатно) или журнал через transfer-очередь → journal-fit + inquiry
+- 📄 **Article:** "The Centriole as a Candidate Division Counter in Stem-Cell Aging: A Falsifiable Hypothesis with a Pre-Registered Protocol"
+- 🚀 **Submission to bioRxiv:** BIORXIV/2026/743702 — Version 1 SUBMITTED (confirmation received). Awaiting screening (1–3 days) → preprint + DOI 10.1101/...
+- 📁 **Files:** `CEDAR/articles/centriole-division-counter-biorxiv/` (md, docx, pdf, bioRxiv pdf, Abstract versions)
+- 📄 **Format:** Research Article — hypothesis + systematic synthesis + pre-registered protocol P1–P9 (Stage 1); References in APA 7 (128 entries, all authors disclosed)
+- 🔄 **Full cycle:** 18 peer-review reports processed (42–68/100), all revisions incorporated; emojis/CEDAR removed; AI traces eliminated
+- ✅ **md2docx converter:** added `--apa` flag (author-year citations, References without numbering), `##`→H2 (no Subtitle), Title 22pt — committed (ff2cb7b5, 4eee16b4)
+- 📨 **Confirmation received (Aug 9, 07:00):** bioRxiv confirmed submission of MS `BIORXIV/2026/743702`; screening 24–72 h
+- 🔀 **Transfer option:** bioRxiv → "Submit Preprint to a Journal or Peer Review" (`submit.biorxiv.org/submission/queue?queueName=send_paper_away_author`) — direct route to journals/Review Commons without re-upload
+- 📌 **Next step:** await screening (DOI 10.1101/...) → consider Review Commons (EMBO, free) or journal via transfer queue → journal-fit + inquiry
 <!-- /lang:ru -->
 
 ---
@@ -37,9 +37,9 @@
 ---
 
 <!-- lang:ru -->
-- Де-риск-лестница L1–L5 (замедлить счётчик; сегрегировать повреждения; геми-элиминация материнской центриоли; кондиционирование; селекция) предшествует любой элиминации
-- Полная элиминация — только при исчерпании L1–L5; прогноз: ≥80% выживаемость (геми) vs <50% (полная), Meitinger 2016
-- Встроено в статью MCARA_Four_Counters_Research.md (Rev 82, §4)
+- De-risking ladder L1–L5 (slow down the counter; segregate damage; hemi-elimination of the maternal centriole; conditioning; selection) precedes any elimination
+- Full elimination — only when L1–L5 are exhausted; prognosis: ≥80% survival (hemi) vs <50% (full), Meitinger 2016
+- Incorporated into the article MCARA_Four_Counters_Research.md (Rev 82, §4)
 <!-- /lang:ru -->
 
 ---
@@ -47,17 +47,17 @@
 ## 🟢 2026-08-02 — Julia Mahamid response + Gönczy/Guichard letters SENT
 
 <!-- lang:ru -->
-- 📨 **Julia Mahamid** — ответил (поблагодарил, Tollervey — да, идея elimination/de novo, иду к Gönczy/Guichard)
-- 📨 **Pierre Gönczy** — письмо отправлено (гипотеза CEDAR + elimination + cryo-ET, Mahamid рекомендовала)
-- 📨 **Paul Guichard** — письмо отправлено (`paul.guichard@unige.ch`, expansion microscopy, Mahamid рекомендовала)
-- 🔬 **Анализ Tollervey et al. (2025) Dev Cell** — проведён. Mother vs daughter УЖЕ структурно различны. НЕТ сравнения young vs aged.
-- 🔬 **Анализ Guichard lab:** Laporte 2024 Cell (U-ExM карта, 24 белка), Bournonville 2025 Nat Commun (A-C linker), Brunet 2025 EMBO J (Alms1→cartwheel). Поле методологически готово.
-- 🛡️ **Defence document:** `docs/REPAIR_OBJECTION_DEFENSE.md` — 5-уровневая защита от возражения «должны быть механизмы репарации»
-- 📊 **Обновлены:** EVIDENCE.md (+§11, §12), THEORY.md (¬R v6.0), MEMORY.md (+2 записи), PARAMETERS.md (+13 кинетических параметров)
+- 📨 **Julia Mahamid** — replied (thanked; Tollervey — yes, the elimination/de novo idea; heading to Gönczy/Guichard)
+- 📨 **Pierre Gönczy** — email sent (CEDAR hypothesis + elimination + cryo-ET, recommended by Mahamid)
+- 📨 **Paul Guichard** — email sent (`paul.guichard@unige.ch`, expansion microscopy, recommended by Mahamid)
+- 🔬 **Analysis of Tollervey et al. (2025) Dev Cell** — completed. Mother vs daughter are ALREADY structurally distinct. NO comparison of young vs aged.
+- 🔬 **Analysis of Guichard lab:** Laporte 2024 Cell (U-ExM map, 24 proteins), Bournonville 2025 Nat Commun (A-C linker), Brunet 2025 EMBO J (Alms1→cartwheel). The field is methodologically ready.
+- 🛡️ **Defence document:** `docs/REPAIR_OBJECTION_DEFENSE.md` — 5-level defense against the objection "repair mechanisms must exist"
+- 📊 **Updated:** EVIDENCE.md (+§11, §12), THEORY.md (¬R v6.0), MEMORY.md (+2 entries), PARAMETERS.md (+13 kinetic parameters)
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Следующий шаг:** ждать ответа Gönczy/Guichard. Follow-up через 2 недели если нет ответа.
+**Next step:** wait for response from Gönczy/Guichard. Follow up in 2 weeks if no response.
 <!-- /lang:ru -->
 
 ---
@@ -201,26 +201,26 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 ## 🟢 2026-08-08 — rDNA clock (TRCS) integrated — CEDAR v4.7
 
 <!-- lang:ru -->
-- ⏱️ **Третий счётчик — rDNA-часы (TRCS, Huang 2026):** `SenescenceTrigger::RdnDnaShortening` + `rdna_copy_number` в AgingEngine. 45S rDNA убывает с делениями стволовых клеток (в отличие от теломер), падение ниже 0.5 → p53-сенесценция.
-- 🧮 **Параметры:** RDNA_LOSS_PER_DIVISION=0.0006 (HSC 12 дел/год → порог ~70 лет), RDNA_CRIT=0.5, RDNA_MIN=0.2, интервенция `rdna_restoration` (+2%/год, TRCS-стратегия омоложения).
-- ✅ **Тесты:** 547 pass (workspace); добавлены тесты rDNA (убывание, порог, restoration, snapshot).
-- 🔗 **Мост:** центриоли (CEDAR) + теломеры + rDNA (TRCS) = multi-counter архитектура (MCARA). Анализ: `~/Desktop/Services/docs/ANALYSIS_CEDAR_v2_vs_Huang_TRCS_2026-08-08.md`
+- ⏱️ **Third counter — rDNA clock (TRCS, Huang 2026):** `SenescenceTrigger::RdnDnaShortening` + `rdna_copy_number` in AgingEngine. 45S rDNA decreases with stem cell divisions (unlike telomeres), falling below 0.5 → p53 senescence.
+- 🧮 **Parameters:** RDNA_LOSS_PER_DIVISION=0.0006 (HSC 12 divisions/year → threshold ~70 years), RDNA_CRIT=0.5, RDNA_MIN=0.2, intervention `rdna_restoration` (+2%/year, TRCS rejuvenation strategy).
+- ✅ **Tests:** 547 pass (workspace); added rDNA tests (decline, threshold, restoration, snapshot).
+- 🔗 **Bridge:** centrioles (CEDAR) + telomeres + rDNA (TRCS) = multi-counter architecture (MCARA). Analysis: `~/Desktop/Services/docs/ANALYSIS_CEDAR_v2_vs_Huang_TRCS_2026-08-08.md`
 <!-- /lang:ru -->
 
-**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim; опубликовать код (GitHub + Zenodo).
+**Next step:** mirror the rDNA clock in Python cedar-sim; publish the code (GitHub + Zenodo).
 
 ---
 
-## 🟢 2026-08-08 — Zenodo DOI получен для CEDAR v4.7
+## 🟢 2026-08-08 — Zenodo DOI obtained for CEDAR v4.7
 
 <!-- lang:ru -->
-- 📦 **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388) — релиз v0.4.8-rdna-clock, djabbat/LC-public
-- 🏷️ Бейдж DOI добавлен в README репозитория (коммит 99c8263)
-- 🔁 Zenodo-интеграция GitHub активна — следующие релизы получают DOI автоматически
-- 📌 Цитата кода: Tqemaladze J. (2026). CEDAR v4.7. Zenodo. https://doi.org/10.5281/zenodo.21852388
+- 📦 **DOI: 10.5281/zenodo.21852388** (https://doi.org/10.5281/zenodo.21852388) — release v0.4.8-rdna-clock, djabbat/LC-public
+- 🏷️ DOI badge added to the repository README (commit 99c8263)
+- 🔁 Zenodo-GitHub integration is active — subsequent releases receive DOIs automatically
+- 📌 Code citation: Tqemaladze J. (2026). CEDAR v4.7. Zenodo. https://doi.org/10.5281/zenodo.21852388
 <!-- /lang:ru -->
 
-**Следующий шаг:** зеркалировать rDNA-часы в Python cedar-sim (в TODO симулятора); перегенерировать PDF CEDAR-v2 из исправленного md (OJS article 188).
+**Next step:** mirror the rDNA clock in Python cedar-sim (in the simulator TODO); regenerate the CEDAR-v2 PDF from the corrected md (OJS article 188).
 
 **LERR — Ladder, Eliminate, Reprogram, Rebuild.**
 
@@ -231,11 +231,11 @@ Added sample size, risk matrix, strengthened ¬R, and confirmation bias section.
 **Step 3 (Reprogram).** Push to totipotency with DUX4 + KDM4D + DPPA3.
 
 **Step 4 (Rebuild).** Grow fresh centrioles de novo. Derive clean, young adult stem cells.
-**Step 1 (Ladder).** Де-риск перед элиминацией по текущим данным: замедлить счётчик (NAC-антиоксидант; обратимые PTM: TTL-ре-тирозинирование, CCP5/6-деглутамилирование); сегрегировать повреждения асимметричным наследованием материнской центриоли в дифференцирующееся потомство (Yamashita, 2007; Royall, 2023 — человеческие NPC); геми-элиминировать только материнскую центриоль (лазер/PROTAC), сохраняя контроль дупликации и избегая p53-зависимого G1-ареста (Meitinger, 2016); кондиционировать клетку (запасные PLK4-центриоли, синхронизация G1/S, протеостаз); отобрать наименее повреждённый пул (FACS по низкому Δ2/полиGlu).
-**Step 2 (Eliminate).** Убрать старую повреждённую центриоль; восстановить теломеры (теломераза/ZSCAN4 через H3K14ac/H3K18ac; Meltzer, 2024); стереть эпигенетические метки (OSK/TET1-TET2-TDG; Lu, 2020 — частично, остаётся линейная память); отобрать здоровые митохондрии (PINK1-зависимая митофагия; Vázquez-Martín, 2016).
-**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3 — DUX4 открывает cleavage-стадийные гены (Hendrickson, 2017), KDM4D снимает H3K9me3-барьер репрограммирования, DPPA3 (Stella) стабилизирует тотипотентное (2C-подобное) состояние.
-**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) после полной элиминации (Khodjakov, 2002; Uetake, 2007); контроль геометрии (9-кратная симметрия, триплеты, длина); получить безопасные молодые взрослые стволовые клетки (проверка кариотипа, восстановление p53).
-**Step 1 (Ladder).** Де-риск перед элиминацией: замедлить счётчик, сегрегировать повреждения, геми-элиминировать материнскую центриоль, кондиционировать клетку, отобрать наименее повреждённый пул.
-**Step 2 (Eliminate).** Убрать старую центриоль; восстановить теломеры; стереть эпигенетические метки; отобрать здоровые митохондрии.
-**Step 3 (Reprogram).** Индуцировать тотипотентность: DUX4 + KDM4D + DPPA3.
-**Step 4 (Rebuild).** Пересобрать молодые центриоли de novo; получить безопасные молодые взрослые стволовые клетки.
+**Step 1 (Ladder).** De-risk before elimination based on current data: slow down the counter (NAC antioxidant; reversible PTMs: TTL re-tyrosination, CCP5/6 deglutamylation); segregate damage via asymmetric inheritance of the mother centriole into differentiating progeny (Yamashita, 2007; Royall, 2023 — human NPCs); hemi-eliminate only the mother centriole (laser/PROTAC), preserving duplication control and avoiding p53-dependent G1 arrest (Meitinger, 2016); condition the cell (reserve PLK4 centrioles, G1/S synchronization, proteostasis); select the least damaged pool (FACS by low Δ2/polyGlu).
+**Step 2 (Eliminate).** Remove the old damaged centriole; restore telomeres (telomerase/ZSCAN4 via H3K14ac/H3K18ac; Meltzer, 2024); erase epigenetic marks (OSK/TET1-TET2-TDG; Lu, 2020 — partially, linear memory remains); select healthy mitochondria (PINK1-dependent mitophagy; Vázquez-Martín, 2016).
+**Step 3 (Reprogram).** Induce totipotency: DUX4 + KDM4D + DPPA3 — DUX4 opens cleavage-stage genes (Hendrickson, 2017), KDM4D removes the H3K9me3 reprogramming barrier, DPPA3 (Stella) stabilizes the totipotent (2C-like) state.
+**Step 4 (Rebuild).** Reassemble young centrioles de novo (PLK4 → SAS-6 → STIL → CPAP; Nigg & Holland, 2018; Gönczy, 2012) after complete elimination (Khodjakov, 2002; Uetake, 2007); control geometry (9-fold symmetry, triplets, length); obtain safe young adult stem cells (karyotype check, p53 restoration).
+**Step 1 (Ladder).** De-risk before elimination: slow down the counter, segregate damage, hemi-eliminate the mother centriole, condition the cell, select the least damaged pool.
+**Step 2 (Eliminate).** Remove the old centriole; restore telomeres; erase epigenetic marks; select healthy mitochondria.
+**Step 3 (Reprogram).** Induce totipotency: DUX4 + KDM4D + DPPA3.
+**Step 4 (Rebuild).** Reassemble young centrioles de novo; obtain safe young adult stem cells.

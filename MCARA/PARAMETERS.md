@@ -14,3 +14,11 @@
 | Cilia failure threshold | geometry damage 0.30 | Primary-cilium competence → 0 | Ishikawa 2005 (Odf2) |
 | Centrosome failure threshold | damage + 0.5·PTM = 0.60 | MTOC competence → 0; fragmentation → senescence | Manning 2010 (NEDD1) |
 | Var(L∞) | σ²/(1−α²) | Steady-state geometric variance; diverges as α→1 | OU model |
+
+
+## Grant tracks (2026-08-13)
+
+| Grant | Deadline | Topic | Status |
+|-------|----------|-------|--------|
+| VW-Stiftung Pioneering Research | 27 Aug 2026 | Centriole-as-counter (aging clocks variance) | Active — short proposal ready; lead CECAD/Meyer; docs: Marketing/DREAM_CEDAR/ |
+| EIC Pathfinder Challenges | 28 Oct 2026 | Organismal Aging 4D simulator + CEDAR validation | CONCEPT v4.6 (Meyer-test added) |

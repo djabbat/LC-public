@@ -16,7 +16,7 @@
 **Created:** after completion of prerequisite tasks
 
 ## Description
-Ze is a research project focused on quantum error correction and entanglement verification. It develops theoretical models (Ze_CHSH, Ze_Model, D_Ze) and seeks funding through grants (NLnet, EU4Business, Czech Embassy, ERC). The project aims to publish results in high-impact journals and establish a hierarchy of quantum correlations.
+Ze is a research project focused on quantum error correction and entanglement verification. It develops theoretical models (Ze_CHSH, Ze_D, Ze_Model, simulator, Ze-Hierarchy) and seeks funding through grants (NLnet, EU4Business, Czech Embassy, ERC). The project aims to publish results in high-impact journals and establish a hierarchy of quantum correlations.
 
 ## Structure
 - `_pi.md` — this file

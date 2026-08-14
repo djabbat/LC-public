@@ -58,8 +58,8 @@ CONCEPT.md updated with TBPR peer-review responses:
 - Removed fabricated references
 - Addressed top blocking/critical reviewer concerns
 - Statistical protocol additions where applicable
-- Honest TODO sections для unmet requirements
+- Honest TODO sections for unmet requirements
 
-See `CONCEPT.md` Section с пометкой "v3" / "Адрес peer-review concerns"
-для project-specific changes.
+See `CONCEPT.md` Section marked "v3" / "Address peer-review concerns"
+for project-specific changes.
 

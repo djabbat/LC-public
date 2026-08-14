@@ -35,3 +35,10 @@ erl_crash.dump
 **/*appeal*
 **/reply_*
 **/*_thanks*
+
+# Внутренние документы (git-правило 2026-08-12): письма, inquiry, appeal
+**/submissions/
+**/Inquiry_*
+**/INQUIRY_*
+**/*_Appeal*
+**/*Appeal*

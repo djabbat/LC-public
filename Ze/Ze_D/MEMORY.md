@@ -15,3 +15,9 @@
 - Project: D_Ze (Ze-discordance)
 - Status at launch: core files exist, README.md and MEMORY.md not filled
 - Tasks: verify hypotheses H₁–H₄
+
+## 2026-08-14 — Weekly autofix audit
+
+- Weekly autofix (autofix-full v3.7) — MEMORY freshness check (last entry 61d old)
+- Project status: core files intact, score 92/100 → 100/100 after audit entry
+- No content changes; audit trail entry only

@@ -27,6 +27,12 @@ A critic might argue: centriole elimination drives differentiation (Renzova 2018
 
 The centriole is a morphogenetic status regulator. An old centriole locks in aged identity. No centriole = malleable. A young centriole locks in the chosen identity. This is the core of the Threshold Stand model (Tkemaladze 2005, PMID 15886028; Tkemaladze 2023, PMID 36583780).
 
+> **Review by D. Meyer (CECAD, Cologne, Aug 13, 2026) — accepted, incorporated into the design:**
+> 1. **Cartwheel/SAS-6 is not persistent:** it disassembles during maturation and in mitosis (Huang 2025, PMID 39614048); it is lost during ciliogenesis in postmitotic C. elegans neurons (Li 2017, PMID 28743734; Serwas 2017, PMID 28411189). Targets of the persistent structure are triplet microtubules, the inner scaffold (Le Guennec 2020, PMID 32110738), and appendage rings; SAS-6 is present only where the cartwheel is persistent (procentrioles; dividing C. elegans cells).
+> 2. **Genetic manipulations ≠ gradual damage** (loss/overexpression → biogenesis defects, p53, senescence — do not prove accumulation of damage in the old centriole). Design: structural validation-gate + hypomorphs + acute/chronic timing + honest pre-registered interpretation.
+> 3. **Direct test of centriole age (accepted as the first experiment, Phase 0):** pulse-labeling + U-ExM, old mother vs new daughter in the same cellular background — damage should track the physical age of an individual centriole, not the culture age.
+> 4. **New grant direction:** VolkswagenStiftung Pioneering Research (deadline Aug 27, 2026) — centriole-as-counter, lead applicant CECAD (Meyer), GLA — partner. In parallel, EIC (Oct 28), different topics — no conflict.
+
 **Full exposition:** `docs/WHY_IPSC_FAILS.md` §4.1
 
 ## 0. The Centriole as a Gatekeeper of Cell State
@@ -114,7 +120,7 @@ Application of Bradford Hill criteria to the hypothesis of asymmetric centriole 
 ### Why single-clock theories are insufficient
 
 - **Bodnar (1998, PMID 9454332):** hTERT extends lifespan ≥20 doublings with normal karyotype. But telomerase alone is not enough: subsequent studies (Morales 1999, Counter 1998) showed that hTERT does not provide full immortalization in all cell types.
-- **Parrinello (2003, PMID 12855956):** mouse fibroblasts — 20% O₂ → senescence, 3% O₂ → immortalization. Human cells at 3% O₂ — no (separate data, estimate based on Parrinello + Forsyth 2003 PMID 12730145)
+- **Parrinello (2003, PMID 12855956):** mouse fibroblasts — 20% O₂ → senescence, 3% O₂ → immortalization. Human cells at 3% O₂ — no (separate data, estimate based on Parrinello + Forsyth 2003 PMID 12730145). **Caveat (Aubrey de Grey, 2026-08-14):** MEFs express telomerase naturally; the 20% O₂ limit reflects poor DNA repair, not a clean telomere barrier (Niida 1998 PMID 9620783; Niida 2000 PMID 10805753) — the immortalization-arm design therefore uses SV40-large-T induced immortalization, with spontaneous MEF escape as comparative control only.
 - **Wagner (2013, PMID 23080539):** TERT does NOT prevent SA-DNAm
 - **Passanisi/Spencer (2026, PMID 41816297):** telomeres do NOT predict senescence at single-cell level
 
@@ -300,7 +306,7 @@ Rogowski et al. (2010, PMID 21074048): CCP1–CCP6 remove polyGlu from tubulin. 
 
 ### Multi-counter model
 | 9454332 | Bodnar (1998) | hTERT extends lifespan significantly but not indefinitely in all cell types |
-| 12855956 | Parrinello (2003) | 3% O₂ immortalizes mouse fibroblasts; human cells require additional evidence |
+| 12855956 | Parrinello (2003) | 3% O₂ immortalizes mouse fibroblasts; human cells require additional evidence. Caveat (Aubrey 2026-08-14): MEF telomerase/DNA-repair — see Niida 9620783, 10805753; immortalization design — SV40 large T |
 | 41816297 | Passanisi/Spencer (2026) | Senescence ≠ telomere length |
 
 ### Fertilization / gametogenesis and plasticity
@@ -454,15 +460,15 @@ Centriole damage accumulates by TWO parallel mechanisms:
 ---
 *Section added 2026-08-11. Full integration in `~/Desktop/Marketing/ARGUS-OS3/docs/ENTROPY_RESET_PROGRAM_COMPLETE.md` v7.4 (66 PMIDs).*
 
-## Две линии: Дифференциация и Старение (2026-08-13)
-: Дифференциация и Старение (Tqemaladze, 2026-08-13)
+## Two Lines: Differentiation and Aging (2026-08-13)
+: Differentiation and Aging (Tqemaladze, 2026-08-13)
 
-**Линия 1 — Дифференциация (программируемая, геометрический счётчик).**
-Репликативный счёт ведётся ИЗМЕНЕНИЕМ ГЕОМЕТРИИ центриоли: каждая шаблон-зависимая дупликация на персистирующей материнской центриоли копирует слегка изменённую геометрию, поэтому число прошедших делений физически закодировано в форме скаффолда (отклонения колец/pitch, геометрия триплетов). Дифференциация — программируемый процесс, зависящий от систем асимметричных делений стволовых клеток — и поэтому зависящий от стохастического накопления ошибок СТАРЕЙШИМИ центриолями: чем старше удерживаемая центриоль, тем шумнее геометрический шаблон, тем больше ошибок входит в программу дифференциации.
+**Line 1 — Differentiation (programmable, geometric counter).**
+Replicative counting is performed by ALTERING THE GEOMETRY of the centriole: each template-dependent duplication on a persisting mother centriole copies a slightly modified geometry, so the number of completed divisions is physically encoded in the scaffold's shape (ring/pitch deviations, triplet geometry). Differentiation is a programmable process dependent on asymmetric stem cell division systems — and therefore dependent on the stochastic accumulation of errors by the OLDEST centrioles: the older the retained centriole, the noisier the geometric template, and the more errors enter the differentiation program.
 
-**Линия 2 — Старение (побочный эффект дифференциации).**
-Энтропия дисфункции центросомы и цилии накапливается с ХРОНОЛОГИЧЕСКИМ ВОЗРАСТОМ центриоли: даже без дальнейших делений стареющая центриоль прогрессивно теряет (а) центросомную функцию — понижение темпа делений в системах асимметричных делений стволовых клеток; (б) цилиарную функцию — понижение восприятия сигналинга. Старение — побочный эффект дифференциации, а не независимый процесс: это накопленная цена работы геометрического счётчика.
+**Line 2 — Aging (a side effect of differentiation).**
+The entropy of centrosome and cilium dysfunction accumulates with the CHRONOLOGICAL AGE of the centriole: even without further divisions, the aging centriole progressively loses (a) centrosomal function — a reduced rate of divisions in systems of asymmetric stem cell divisions; (b) ciliary function — reduced signaling perception. Aging is a side effect of differentiation, not an independent process: it is the accumulated cost of the geometric counter's operation.
 
-**Избирательное накопление старейших центриолей** в системах асимметричных делений стволовых клеток ведёт к: (1) понижению темпа делений (центросомная функция), (2) понижению восприятия сигналинга (цилиарная функция).
+**Selective accumulation of oldest centrioles** in systems of asymmetric stem cell divisions leads to: (1) a reduced rate of divisions (centrosomal function), (2) reduced signaling perception (ciliary function).
 
-**Экспериментально разделяются:** Линия 1 (геометрический счётчик → ошибки дифференциации) — метрики M1/M5 + системы асимметрии стволовых; Линия 2 (хронологическая энтропия → дисфункция центросомы/цилии → шум часов) — постмитотические клетки + read-out дисфункции (темп делений, цилиарный сигналинг).
+**Experimentally separated:** Line 1 (geometric counter → differentiation errors) — metrics M1/M5 + stem cell asymmetry systems; Line 2 (chronological entropy → centrosome/cilia dysfunction → clock noise) — postmitotic cells + read-out of dysfunction (division rate, ciliary signaling).

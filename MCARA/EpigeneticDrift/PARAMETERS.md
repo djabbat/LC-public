@@ -24,9 +24,9 @@ to reprogramming. 2) Strong connection of blood epigenetic age with systemic hea
 **Notes:**
 1. All coupling parameters `γ₄ⱼ` by default
 to reprogramming. 2) Strong connection of blood epigenetic age with systemic health. |
-анию равны 0, в соответствии с каноном CORRECTIONS_2026-04-22 (отказ от циклической зависимости с MCARA Test 2).
-2. Значения в квадратных скобках `[a, b]` представляют предполагаемый 90% доверительный или правдоподобный интервал.
-3. Статус **Hypothetical** означает, что параметр введён теорией, но его численное значение не подтверждено контролируемыми экспериментами.
+are equal to 0, in accordance with the canon CORRECTIONS_2026-04-22 (rejection of cyclic dependence with MCARA Test 2).
+2. Values in square brackets `[a, b]` represent the estimated 90% confidence or credible interval.
+3. The status **Hypothetical** means that the parameter is introduced by theory, but its numerical value is not confirmed by controlled experiments.
 
 ---
 
@@ -37,7 +37,7 @@ Sample size justification: For the proposed ABL-2 modulation experiment (OPEN_PR
 
 ## v3 Update (2026-05-13)
 
-См. CONCEPT.md "v3" / "Адрес peer-review concerns" секцию для project-specific changes.
+See CONCEPT.md "v3" / "Address peer-review concerns" section for project-specific changes.
 
 
 | Budget | $60,000 |

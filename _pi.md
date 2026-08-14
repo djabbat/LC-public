@@ -18,3 +18,4 @@ Marketing (CEDAR, MCARA branding), PhD (HAP), Services (AIM, BioSense)
 - **FCLC** — Federated Clinical Learning Cooperative (own repo djabbat/FCLC)
 - **HAP** — HAP framework
 - **Organismal_Aging** — integration layer
+- **InMed** — integrative medicine social network (Phoenix, MVP → v3)
