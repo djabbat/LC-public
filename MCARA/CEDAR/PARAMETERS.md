@@ -1,6 +1,6 @@
 # CEDAR — Parameters
 
-**Version: 1.8 | **Updated:** 2026-07-26
+**Version:** 1.8 | **Updated:** 2026-07-26
 
 ## Centriolar Damage Accumulation Model Parameters
 

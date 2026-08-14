@@ -25,7 +25,7 @@
 - [x] **Publish CEDAR code** — GitHub (LC-public, tag v0.4.8-rdna-clock) + Zenodo DOI 10.5281/zenodo.21852388 (2026-08-08)
 - [x] **Fix PARAMETERS.md** — replace generic template with centriole aging parameters (autofix cycle 1) — done 2026-07-26
 - [x] **Fix MAP.md** — update to match current directory structure (autofix cycle 1) — done 2026-07-26
-- [ ] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md
+- [x] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md — **done 2026-08-15** (new section “Evolution of Centriole Loss: Land vs Water” in THEORY.md)
 - [ ] **CIRCBIO-07 Part B** — draft due 1 Aug 2026 (5 days)
 
 ### 🟡 P1 — Important
