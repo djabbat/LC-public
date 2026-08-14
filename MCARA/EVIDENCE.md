@@ -121,6 +121,8 @@
  * **Consequence:** Precludes the simple use of χ_Ze as a «sixth», integrative synchronization counter in the current version of MCARA. χ_Ze remains a theoretical construct.
  * **Source:** Report `internal/ze_validation_failures_2026-04.pdf` (available upon request).
 
+5. **SAS-6/картуэлл не персистентен — методологическое ограничение (Meyer review, 2026-08-13).** Картуэлл разбирается при созревании и в митозе (Huang 2025, PMID 39614048) и теряется при цилиогенезе в постмитотических нейронах C. elegans (Li 2017, PMID 28743734; Serwas 2017, PMID 28411189). Дизайны, опирающиеся на SAS-6 как на маркер долгоживущей структуры в зрелых клетках, некорректны. **Персистентные мишени:** триплет-микротрубочки, внутренний скэффолд (Le Guennec 2020, PMID 32110738), appendage-кольца. **Mitigation:** прямой тест возраста центриоли (pulse-labeling мать vs дочь, U-ExM M1–M5) в Фазе 0 — не зависит от картуэлла.
+
 
 ### Köhrer et al. (2023) — Centriole over-elongation in human aging
 
@@ -695,9 +697,11 @@ CEP164 (distal appendage protein, необходим для стыковки б�
 
 **Значение для CEDAR:** если центриоль — счётчик, то:
 1. hTERT+ клетки в гипоксии имеют предел → центриоль, не теломеры, лимитирующий счётчик (линия Jaba: Hayflick-предел при гипоксии с активной теломеразой)
-2. MEF-иммортализация несёт центриолярные маркеры через событие, стирающее Hayflick-предел → счётчик переживает иммортализацию
+2. Иммортализация несёт центриолярные маркеры через событие, стирающее Hayflick-предел → счётчик переживает иммортализацию
 
-**Эксперимент (в Proposal Aubrey v2):** 3% vs 21% O₂ × hTERT± × человек/мышь; read-outs: PD до ареста + U-ExM M1–M5 + химические маркеры (4-HNE, DNPH) + транскриптомные часы.
+**Caveat (Aubrey de Grey, 2026-08-14):** спонтанная MEF-иммортализация при 21% O₂ — клональный бутылочный горлышек, зашумлённый DNA-repair: MEF экспрессируют теломеразу естественно (Niida 1998 PMID 9620783; Niida 2000 PMID 10805753 — escape через ALT). → **Основной Arm = индуцированная иммортализация SV40 large T** (человек + MEF, 21% и 3% O₂), спонтанный MEF escape — сравнительный контроль. Документ: The_Immortalization_Phenomenon v4.
+
+**Эксперимент (в Proposal Aubrey v4):** SV40-large-T × (21% vs 3% O₂) × человек/мышь + hTERT-арм; read-outs: PD до ареста + U-ExM M1–M5 + химические маркеры (4-HNE, DNPH) + транскриптомные часы.
 
 ### Часы Meyer — верифицировано (для Proposal Meyer)
 

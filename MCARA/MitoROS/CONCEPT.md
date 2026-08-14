@@ -33,23 +33,23 @@ Counter #3 in the MCARA architecture: mitochondrial ROS and mtDNA damage as a qu
 - **Counter #1 (Centriolar/CEDAR):** Γ₁₃ — oxidative stress → damage to centrioles
 - **Counter #2 (Telomere):** Γ₂₃ — mtROS accelerates telomere shortening
 - **Counter #4 (EpigeneticDrift):** Γ₄₃ — mtDNA po
-вреждения коррелируют с эпигенетическим дрейфом
-- **Counter #5 (Proteostasis):** Γ₅₃ — окислительное повреждение белков
+damage correlates with epigenetic drift
+- **Counter #5 (Proteostasis):** Γ₅₃ — oxidative protein damage
 
-## Параметры
-| Параметр | Значение | Источник |
+## Parameters
+| Parameter | Value | Source |
 |----------|----------|----------|
-| α₃ (деление-зависимое накопление) | TBD | Пилотный эксперимент |
-| β₃ (время-зависимое накопление) | TBD | Пилотный эксперимент |
-| τ₃ (постоянная времени) | 0.1–0.3/год | Кросс-секционные данные |
-| w₃ (тканевые веса) | TBD | Валидация N=30/ткань |
+| α₃ (division-dependent accumulation) | TBD | Pilot experiment |
+| β₃ (time-dependent accumulation) | TBD | Pilot experiment |
+| τ₃ (time constant) | 0.1–0.3/year | Cross-sectional data |
+| w₃ (tissue weights) | TBD | Validation N=30/tissue |
 
-## Ключевые открытые вопросы
-См. `docs/MitoROS_full_paper_draft.md`:
-1. Клональная экспансия mtDNA мутаций
-2. Пороговый эффект гетероплазмии
-3. Роль митофагии
-4. Межтканевая вариабельность
+## Key Open Questions
+See `docs/MitoROS_full_paper_draft.md`:
+1. Clonal expansion of mtDNA mutations
+2. Threshold effect of heteroplasmy
+3. Role of mitophagy
+4. Inter-tissue variability
 
 ## Consumables (annual)
 
@@ -66,7 +66,7 @@ Counter #3 in the MCARA architecture: mitochondrial ROS and mtDNA damage as a qu
 
 ### Chk1→Mitophagy Connection (2026-07-25)
 
-**Jing P et al. (2026, PMID 42229233):** CHK1 activates mitophagy to attenuate cardiac aging via AHSA1-HSP90 pathway. Chk1 ↓ с возрастом в сердце. Overexpression → защита через митофагию. **Chk1 — общий регулятор Counter #1 (β-tubulin/spindle) и Counter #3 (AHSA1/mitophagy).**
+**Jing P et al. (2026, PMID 42229233):** CHK1 activates mitophagy to attenuate cardiac aging via the AHSA1-HSP90 pathway. Chk1 decreases with age in the heart. Overexpression confers protection through mitophagy. **Chk1 is a common regulator of Counter #1 (β-tubulin/spindle) and Counter #3 (AHSA1/mitophagy).**
 
 ## Hypothesis
 

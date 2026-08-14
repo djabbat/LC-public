@@ -2,12 +2,12 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
-## 🔴 2026-08-13 — Meyer-протокол → design article
+## 🔴 2026-08-13 — Meyer-protocol → design article
 <!-- lang:ru -->
-- [ ] 📄 Подача `Testing_the_Hypothesis_of_Centriolar_Entropy...` как design article (кандидаты: Cell Reports Methods / eLife / Nature Protocols-стиль)
-- [ ] 🔬 Phase 0: GEO-реанализ (центриолярные гены vs возраст) — первый пилотный сигнал
-- [ ] 🔬 Phase 0: SILAC-оборот скаффолда + U-ExM passage 5 vs 25
-- [ ] 📎 Ссылка на протокол в CEDAR/docs/ и ERR/wp1_cedar/docs/
+- [ ] 📄 Submit `Testing_the_Hypothesis_of_Centriolar_Entropy...` as a design article (candidates: Cell Reports Methods / eLife / Nature Protocols-style)
+- [ ] 🔬 Phase 0: GEO re-analysis (centriolar genes vs age) — first pilot signal
+- [ ] 🔬 Phase 0: SILAC scaffold turnover + U-ExM passage 5 vs 25
+- [ ] 📎 Link to protocol in CEDAR/docs/ and ERR/wp1_cedar/docs/
 <!-- /lang:ru -->
 
 ## Active Tasks (2026-07-26)
@@ -22,7 +22,7 @@
 
 ### 🔴 P0 — Critical
 - [x] **rDNA clock (TRCS) integrated** — SenescenceTrigger::RdnDnaShortening + rdna_copy_number (v4.7, 2026-08-08, 547 tests pass)
-- [x] **Publish CEDAR code** — GitHub (LC-public, тег v0.4.8-rdna-clock) + Zenodo DOI 10.5281/zenodo.21852388 (2026-08-08)
+- [x] **Publish CEDAR code** — GitHub (LC-public, tag v0.4.8-rdna-clock) + Zenodo DOI 10.5281/zenodo.21852388 (2026-08-08)
 - [x] **Fix PARAMETERS.md** — replace generic template with centriole aging parameters (autofix cycle 1) — done 2026-07-26
 - [x] **Fix MAP.md** — update to match current directory structure (autofix cycle 1) — done 2026-07-26
 - [ ] **Verification doc** — review VERIFICATION_CENTRIOLE_LAND_WATER_2026-07-26.md for integration into THEORY.md

@@ -1,24 +1,32 @@
+## 🔴 Meyer review accepted — added to THEORY/EVIDENCE (2026-08-13)
+
+<!-- lang:ru -->
+- SAS-6/cartwheel is not persistent (Huang 2025 PMID 39614048; Li 2017 PMID 28743734; Serwas 2017 PMID 28411189) → targets: triplet wall, inner scaffold (Le Guennec 2020 PMID 32110738), appendage rings
+- Direct first test: pulse-labeling mother vs daughter (U-ExM M1–M5)
+- VW-Stiftung Pioneering Research (27 Aug 2026): lead — CECAD/Meyer, GLA — partner (Marketing/DREAM_CEDAR/)
+<!-- /lang:ru -->
+
 # CEDAR — Memory
 
-## 2026-08-11: 💰 ВАЖНО — MBoC больше НЕ бесплатен (APC с 01.01.2026)
+## 2026-08-11: 💰 IMPORTANT — MBoC is no longer free (APC from 01.01.2026)
 
-**Проверка:** официальная страница molbiolcell.org/info-for-authors (11 авг 2026).
+**Check:** official page molbiolcell.org/info-for-authors (Aug 11, 2026).
 
-### Факты
-- **APC с 01.01.2026:** Full article **$2,800** (non-member) / $2,500 (member, conventional); OA $4,100/$3,700. Brief Report $2,600/$2,300.
-- Submission fee: нет. Page charges: нет. **Цветные фигуры: БЕСПЛАТНО** (онлайн-журнал, RGB).
-- **Waiver:** «partial waiver … to member authors who have no source of funding» — частичный, ТОЛЬКО членам ASCB, нужна справка от декана/завкаф.
-- Плата — только после acceptance (invoice post-acceptance); способность платить не влияет на ревью.
-- Старая информация в JOURNAL_TRANSFER_OPTIONS.md («бесплатно») — ОШИБОЧНА (обновлено 11 авг).
+### Facts
+- **APC as of 01.01.2026:** Full article **$2,800** (non-member) / $2,500 (member, conventional); OA $4,100/$3,700. Brief Report $2,600/$2,300.
+- Submission fee: none. Page charges: none. **Color figures: FREE** (online journal, RGB).
+- **Waiver:** "partial waiver … to member authors who have no source of funding" — partial, ONLY for ASCB members, requires a letter from the dean/department head.
+- Fee is charged only after acceptance (invoice post-acceptance); ability to pay does not affect review.
+- Old information in JOURNAL_TRANSFER_OPTIONS.md ("free") — INCORRECT (updated Aug 11).
 
-### Вывод по цене
-- **JCS (Company of Biologists)** — бесплатно в подписной версии (гибрид) → главный кандидат при критерии «бесплатно».
-- **MBoC** — $2,800; альтернатива: членство ASCB (~$150/год) → $2,500 + частичный waiver.
-- **eLife** — $3,000, но waiver «for anyone who cannot afford».
+### Price Conclusion
+- **JCS (Company of Biologists)** — free in the subscription version (hybrid) → the main candidate under the "free" criterion.
+- **MBoC** — $2,800; alternative: ASCB membership (~$150/year) → $2,500 + partial waiver.
+- **eLife** — $3,000, but waiver "for anyone who cannot afford."
 
-### Статус
-- Inquiry MBoC написан, НО: если Джаба хочет бесплатный журнал → переключиться на JCS (нужен свой inquiry).
-- Ч/б версии фигур уже готовы (пригодятся для любого журнала); цвет в MBoC — бесплатно.
+### Status
+- The MBoC inquiry has been written, BUT: if Jaba wants a free journal → switch to JCS (requires its own inquiry).
+- Black-and-white versions of the figures are already prepared (useful for any journal); color in MBoC is free.
 
 ---
 
@@ -38,22 +46,22 @@
 
 ---
 
-## 2026-08-11: ✅ Доработка статьи «Spatially Constrained» для MBoC (после bioRxiv desk reject)
+## 2026-08-11: ✅ Revision of the article "Spatially Constrained" for MBoC (after bioRxiv desk reject)
 
-**Файл:** `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/`
+**File:** `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/`
 
-### Что сделано
-- **Figure 1** (концептуальная схема ратчета): `figures/figure1_ratchet.py` → `figure1_spatial_ratchet.png/pdf`. Три панели: A — мать ограничивает дочернюю (boundary condition), B — передача геометрии G1–G4 (дрейф 200→252 нм), C — предсказание P1–P3 (r > 0.7, рост дисперсии). Вставлена в Introduction после абзаца Panda et al.
-- **Figure 2** (OU-симуляция): `figures/simulate_ou.py` → `figure2_ou_simulation.png/pdf`. Три панели: A — траектории α=0.97, B — рост дисперсии для α=0.94/0.97/0.985 (эмпир. 2000 клеток vs аналитика), C — SD∞/σ = 1/√(1−α²) расходится при α→1.
-- **Калибровка сходится:** α=0.97, μ=2.23 нм/дел → E[L₅₀] = 258 нм (+29%) — точно воспроизводит Köhrer et al. 2023. SD(L₅₀)=62 нм ≈ SD∞=61.7 нм. Сенситивность: α=0.94 (μ=3.65), α=0.985 (μ=1.64).
-- **Текст статьи:** 2799 → 3281 слов. Добавлены: Figure 1 + caption (Introduction), симуляция в Methods (Stochastic model), численные результаты + Figure 2 (Results → Model parameter estimates), Data availability (код seed-fixed, NumPy 1.26/Matplotlib 3.8).
-- **Abstract:** добавлено «numerical simulation (2,000 cells, seed-fixed) reproduces +29% plasma-cell elongation at 50 divisions and predicts centriole length variance rises with age (Figure 2)».
+### What has been done
+- **Figure 1** (conceptual scheme of the ratchet): `figures/figure1_ratchet.py` → `figure1_spatial_ratchet.png/pdf`. Three panels: A — mother constrains daughter (boundary condition), B — transmission of geometry G1–G4 (drift 200→252 nm), C — predictions P1–P3 (r > 0.7, increase in variance). Inserted into the Introduction after the Panda et al. paragraph.
+- **Figure 2** (OU simulation): `figures/simulate_ou.py` → `figure2_ou_simulation.png/pdf`. Three panels: A — trajectories α=0.97, B — variance growth for α=0.94/0.97/0.985 (empirical 2000 cells vs analytical), C — SD∞/σ = 1/√(1−α²) diverges as α→1.
+- **Calibration converges:** α=0.97, μ=2.23 nm/division → E[L₅₀] = 258 nm (+29%) — exactly reproduces Köhrer et al. 2023. SD(L₅₀)=62 nm ≈ SD∞=61.7 nm. Sensitivity: α=0.94 (μ=3.65), α=0.985 (μ=1.64).
+- **Manuscript text:** 2799 → 3281 words. Added: Figure 1 + caption (Introduction), simulation in Methods (Stochastic model), numerical results + Figure 2 (Results → Model parameter estimates), Data availability (seed-fixed code, NumPy 1.26/Matplotlib 3.8).
+- **Abstract:** added "numerical simulation (2,000 cells, seed-fixed) reproduces +29% plasma-cell elongation at 50 divisions and predicts centriole length variance rises with age (Figure 2)".
 
-### Следующие шаги (до подачи в MBoC)
-- [x] Pre-submission inquiry написан: `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/Inquiry_MBoC.md` (To: mboc@ascb.org, CC: mboc@molbiolcell.org, subject: «Pre-submission inquiry: model paper on centriole geometry persistence and aging (scope check)», 4 абзаца)
-- [ ] ОТПРАВИТЬ inquiry (Gmail) и ждать ответа редактора (pi блокирует подачу до ответа)
-- [ ] Собрать docx командой Джабы (md2docx, только по команде)
-- [ ] Подача напрямую на molbiolcell.org (после desk reject трансфер bioRxiv недоступен)
+### Next steps (before submission to MBoC)
+- [x] Pre-submission inquiry written: `~/Desktop/Services/publications/2026_bioRxiv_Centriole_Geometric_Aging/Inquiry_MBoC.md` (To: mboc@ascb.org, CC: mboc@molbiolcell.org, subject: "Pre-submission inquiry: model paper on centriole geometry persistence and aging (scope check)", 4 paragraphs)
+- [ ] SEND the inquiry (Gmail) and wait for the editor's response (PI blocks submission until a response is received)
+- [ ] Compile the docx using Java's command (md2docx, only upon command)
+- [ ] Submit directly to molbiolcell.org (after desk reject, transfer to bioRxiv is unavailable)
 
 ---
 
@@ -200,55 +208,55 @@
 **Ref file:** `refs/Royle_2026_Clathrin_Mitotic_Life.md`
 
 <!-- lang:ru -->
-**Мета-анализ:** Все 9 ключевых ссылок Royle lab верифицированы через 4 базы (OpenAlex + PubMed + Semantic Scholar + Europe PMC). Критических опровержений модели не обнаружено. Модель консенсусная.
+**Meta-analysis:** All 9 key Royle lab references have been verified across 4 databases (OpenAlex + PubMed + Semantic Scholar + Europe PMC). No critical refutations of the model were found. The model is consensus-based.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**🔴🔴🔴 КЛЮЧЕВАЯ НАХОДКА ДЛЯ CEDAR:**
+**🔴🔴🔴 KEY FINDING FOR CEDAR:**
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Foraker et al., 2012, J Cell Biol (PMID 22891263):** Clathrin stabilises CENTROSOME через стабилизацию centrosomal ch-TOG. Clathrin depletion → centrosome amplification + multipolar spindles. Acute clathrin inactivation в S phase → fragmentation centrosome. Это ПРЯМАЯ экспериментальная связь клатрина с целостностью центросомы!
+**Foraker et al., 2012, J Cell Biol (PMID 22891263):** Clathrin stabilizes the centrosome through stabilization of centrosomal ch-TOG. Clathrin depletion → centrosome amplification + multipolar spindles. Acute clathrin inactivation in S phase → centrosome fragmentation. This is a DIRECT experimental link between clathrin and centrosome integrity!
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Yabuno et al., 2019, Cell Cycle (PMID 31272276):** CHC фосфорилируется по T606 киназой GAK. CHC-pT606 локализуется в ядре и на ЦЕНТРОСОМЕ в интерфазе. Комплекс GAK→CHC-pT606→PLK1→Kiz-pT379.
+**Yabuno et al., 2019, Cell Cycle (PMID 31272276):** CHC is phosphorylated at T606 by the kinase GAK. CHC-pT606 localizes to the nucleus and CENTROSOME during interphase. The complex GAK→CHC-pT606→PLK1→Kiz-pT379.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Полный состав комплекса (Ryan 2021, J Cell Sci, PMID 33380489):**
+**Full composition of the complex (Ryan 2021, J Cell Sci, PMID 33380489):**
 <!-- /lang:ru -->
 - CORE: TACC3 + CHC (clathrin heavy chain)
 - ANCILLARY: chTOG/CKAP5 (binds TACC3), GTSE1 (binds CHC)
 <!-- lang:ru -->
-- ❌ NOT in complex: PI3K-C2α (опровергнуто Ryan 2021)
+- ❌ NOT in complex: PI3K-C2α (refuted by Ryan 2021)
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**4 механизма действия клатрина в митозе:**
+**4 mechanisms of clathrin action in mitosis:**
 <!-- /lang:ru -->
 1. Inter-microtubule bridging (Booth 2011 EMBO J, Nixon 2015 eLife)
 <!-- lang:ru -->
-2. GTSE1 recruitment → MCAK inhibition на astral MTs (Rondelet 2020 JCB)
-3. Centrosome integrity через ch-TOG (Foraker 2012 JCB) 🔴
+2. GTSE1 recruitment → MCAK inhibition on astral MTs (Rondelet 2020 JCB)
+3. Centrosome integrity via ch-TOG (Foraker 2012 JCB) 🔴
 <!-- /lang:ru -->
 4. CHC-pT606 → PLK1 → Kiz signaling (Yabuno 2019 Cell Cycle) 🔴
 
 <!-- lang:ru -->
-**Drug development против TACC3-CHC:**
+**Drug development against TACC3-CHC:**
 <!-- /lang:ru -->
 - SP TACC3 — hydrocarbon-stapled peptide, 400× affinity (Gunning 2026, Structure, PMID 42049022)
 - AK306 — small molecule CLTC binder, selective for cancer (Bond 2018, Mol Cancer Res, PMID 29769406)
 
 <!-- lang:ru -->
-**Тестируемое предсказание для CEDAR:** CHC-pT606 levels at centrosomes should decrease with cellular aging → centrosome instability → multipolar spindles → aneuploidy.
+**Testable prediction for CEDAR:** CHC-pT606 levels at centrosomes should decrease with cellular aging → centrosome instability → multipolar spindles → aneuploidy.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Слабые места:**
-1. In vivo значимость — большинство данных из cultured cells
-2. Прямая демонстрация возраст-зависимого нарушения комплекса отсутствует
-3. TACC3-ch-TOG частично независимы от клатрина (Gutiérrez-Caballero 2015)
+**Weaknesses:**
+1. In vivo significance — most data are from cultured cells
+2. Direct demonstration of age-dependent impairment of the complex is lacking
+3. TACC3–ch-TOG are partially independent of clathrin (Gutiérrez-Caballero 2015)
 <!-- /lang:ru -->
 
 ---
@@ -259,160 +267,160 @@
 > **Core insight:** The correct reprogramming target is NOT iPSC (pluripotent) and not merely "younger somatic cell" — it is **tissue-specific adult stem cells with youthful division tempo.** These cells are multipotent (lineage-committed), safe (no teratomas), niche-regulated, and naturally capable of tissue regeneration. MCARA counters prevent overshoot past this state into pluripotency.
 
 <!-- lang:ru -->
-## 2026-08-02 (Цикл 4): 🔴 Критические находки 2026 года
+## 2026-08-02 (Cycle 4): 🔴 Critical Findings of 2026
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Источник:** Глубокая переработка статьи после сверхстрогого рецензирования.
+**Source:** Deep revision of the article after ultra-strict peer review.
 <!-- /lang:ru -->
 
 **MEDA (Krongauz et al., 2026)** — arXiv:2607.13608.
 <!-- lang:ru -->
-- ODE discovery для biological systems с LLM-powered agentic system!
-- Прямое применение к CEDAR: autonomous discovery of ODE models для aging dynamics.
-- Система: retrieves background knowledge → defines admissible variables → generates mechanistic constraints → proposes candidate ODEs → fits and evaluates.
-- Показала strong structural recovery в retrieval и extrapolation tasks.
-- Критически важно: knowledge-guided formalization и mechanistic constraints — load-bearing components. Без них numerical fitting preserves trajectory-compatible but biologically incorrect equations → прямая аналогия с CEDAR!
+- ODE discovery for biological systems with LLM-powered agentic system!
+- Direct application to CEDAR: autonomous discovery of ODE models for aging dynamics.
+- System: retrieves background knowledge → defines admissible variables → generates mechanistic constraints → proposes candidate ODEs → fits and evaluates.
+- Demonstrated strong structural recovery in retrieval and extrapolation tasks.
+- Critically important: knowledge-guided formalization and mechanistic constraints are load-bearing components. Without them, numerical fitting preserves trajectory-compatible but biologically incorrect equations → direct analogy with CEDAR!
 <!-- /lang:ru -->
 
 **Baker et al. (2026) — Octopus** — arXiv:2607.16262.
 <!-- lang:ru -->
-- Multi-Scale Autonomous Discovery Engine: neuro-symbolic architecture с LLM swarms + mechanistic interpretability.
-- Ключевое: rigorous Benjamini-Hochberg FDR correction (q=0.0292)!
-- Показал autonomous discovery IGF2 как vulnerability к 5-FU resistance в colorectal cancer.
+- Multi-Scale Autonomous Discovery Engine: neuro-symbolic architecture with LLM swarms + mechanistic interpretability.
+- Key point: rigorous Benjamini-Hochberg FDR correction (q=0.0292)!
+- Demonstrated autonomous discovery of IGF2 as a vulnerability to 5-FU resistance in colorectal cancer.
 <!-- /lang:ru -->
 - Validated in vivo (mouse cohort, Mann-Whitney p=0.0373).
 <!-- lang:ru -->
-- Шаблон для CEDAR: как делать autonomous discovery С statistical rigor.
+- Template for CEDAR: how to do autonomous discovery with statistical rigor.
 <!-- /lang:ru -->
 
 **FEV Framework (Pham & Hy, 2026)** — arXiv:2607.27556.
 <!-- lang:ru -->
-- Function–Evidence–Validation framework для evaluating agentic bioinformatics.
-- 109 systems surveyed, 128 publications. Основной вывод: planning и execution advanced быстрее чем replayability, provenance, validation.
-- Ключевая метрика для CEDAR: workflow correctness вместо final-answer correctness.
+- Function–Evidence–Validation framework for evaluating agentic bioinformatics.
+- 109 systems surveyed, 128 publications. Main conclusion: planning and execution advanced faster than replayability, provenance, and validation.
+- Key metric for CEDAR: workflow correctness instead of final-answer correctness.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Источник:** Циклы autofix статьи для журнала IF 18+. Найдены работы, прямо применимые к CEDAR:
+**Source:** Autofix cycles for an IF 18+ journal article. Works directly applicable to CEDAR have been identified.
 <!-- /lang:ru -->
 
 1. **LLM-SR (Shojaee et al., 2024)** — arXiv:2404.18400, ICLR 2025 Oral.
 <!-- lang:ru -->
-   - Symbolic regression с LLM: обнаружение уравнений из данных.
-   - Прямое применение к CEDAR: поиск математических законов старения (зависимость mortality rate от числа broken counters, формула вероятности отказа multi-counter системы).
-   - Превосходит традиционные genetic programming methods. LLM предлагает equation skeletons → evolutionary search оптимизирует параметры.
-   - Код: github.com/deep-symbolic-mathematics/LLM-SR
+- Symbolic regression with LLM: discovering equations from data.
+- Direct application to CEDAR: searching for mathematical laws of aging (dependence of mortality rate on the number of broken counters, formula for failure probability of a multi-counter system).
+- Surpasses traditional genetic programming methods. LLM proposes equation skeletons → evolutionary search optimizes parameters.
+- Code: github.com/deep-symbolic-mathematics/LLM-SR
 <!-- /lang:ru -->
 
 2. **LaSR (Grayeli et al., 2024)** — arXiv:2409.09359, NeurIPS 2024.
    - Symbolic Regression with Learned Concept Library. LLM-guided + evolutionary algorithms.
 <!-- lang:ru -->
-   - Авторы показали discovery новых scaling laws для LLMs — метод применим к discovery scaling laws в aging (Gompertz, Weibull, и более сложные).
-   - Ключевая фича: zero-shot LLM queries для evolution of abstract concepts.
+- The authors demonstrated the discovery of new scaling laws for LLMs — the method is applicable to discovering scaling laws in aging (Gompertz, Weibull, and more complex models).
+- Key feature: zero-shot LLM queries for the evolution of abstract concepts.
 <!-- /lang:ru -->
 
 3. **Multi-Agent Physical Laws Discovery (Hu et al., 2024)** — arXiv:2411.16416.
    - Multi-agent framework: literature → variable selection → hypothesis → symbolic regression → formula derivation → mechanistic explanation.
 <!-- lang:ru -->
-   - Валидирован на materials science (GFA, hardness, Young's modulus). Архитектура прямо переносима на CEDAR: литература по aging → выбор biomarkers → symbolic regression → mechanistic model of counter failure.
-   - Correlation coefficients до 0.94. Формулы generalizable на unseen data.
+- Validated on materials science (GFA, hardness, Young's modulus). The architecture is directly transferable to CEDAR: literature on aging → biomarker selection → symbolic regression → mechanistic model of counter failure.
+- Correlation coefficients up to 0.94. Formulas are generalizable to unseen data.
 <!-- /lang:ru -->
 
 4. **ICSR (Merler et al., 2024)** — arXiv:2404.19094, ACL 2024.
 <!-- lang:ru -->
-   - In-Context Symbolic Regression: LLM итеративно предлагает functional forms → external optimizer fitting → feedback → refinement.
-   - Даёт simpler equations с лучшей out-of-distribution generalization.
+- In-Context Symbolic Regression: LLM iteratively proposes functional forms → external optimizer fitting → feedback → refinement.
+   - Yields simpler equations with better out-of-distribution generalization.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**План действий для CEDAR:**
-- Применить LLM-SR к synthetic данным из CEDAR simulator для discovery законов mortality.
-- Применить LaSR для поиска scaling laws в aging (cross-species comparison).
-- Использовать Hu et al. multi-agent framework как архитектурный шаблон для CEDAR agentic pipeline.
-- Все методы open-source, можно запускать локально.
+**Action Plan for CEDAR:**
+- Apply LLM-SR to synthetic data from the CEDAR simulator to discover mortality laws.
+- Apply LaSR to search for scaling laws in aging (cross-species comparison).
+- Use the Hu et al. multi-agent framework as an architectural template for the CEDAR agentic pipeline.
+- All methods are open-source and can be run locally.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-## 2026-08-02: 🔴 Системный ответ на возражение «должны быть механизмы репарации»
+## 2026-08-02: 🔴 System response to the objection "there must be repair mechanisms"
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Trigger:** Julia Mahamid (EMBL) ответила на письмо о гипотезе CEDAR: «I also suspect there may be repair mechanisms, as such damage cannot propagates endlessly in an organisms lifetime.»
+**Trigger:** Julia Mahamid (EMBL) responded to the letter about the CEDAR hypothesis: «I also suspect there may be repair mechanisms, as such damage cannot propagates endlessly in an organisms lifetime.»
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Решение:** Проведён исчерпывающий анализ. Создана система защиты из 5 уровней:
+**Solution:** An exhaustive analysis has been conducted. A five-level protection system has been established:
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-1. **Ограниченная репарация существует** (аутофагия — Coelho 2026, UPS, шапероны) — но действует на PCM, не на microtubule triplets центриолярной стенки.
-2. **Structural constraint:** центриоль — закрытая цилиндрическая структура; повреждённый тубулин внутри triplets не может быть извлечён без разбора всей центриоли.
-3. **Элиминация + de novo синтез** — сброс в зародышевой линии между поколениями (Gönczy & Balestra 2023, Manandhar 1999).
-4. **Эволюционное объяснение:** selection shadow (Medawar 1952, Williams 1957) — давление отбора падает после репродуктивного возраста → полная репарация не отбиралась.
-5. **Количественная модель:** k_damage ≈ 0.01-0.05 D_critical/год → D_critical достигается за 60-100 лет — соответствует человеческой продолжительности жизни.
+1. **Limited repair exists** (autophagy — Coelho 2026, UPS, chaperones) — but it acts on PCM, not on the microtubule triplets of the centriolar wall.
+2. **Structural constraint:** the centriole is a closed cylindrical structure; damaged tubulin inside the triplets cannot be extracted without disassembling the entire centriole.
+3. **Elimination + de novo synthesis** — reset in the germline between generations (Gönczy & Balestra 2023, Manandhar 1999).
+4. **Evolutionary explanation:** selection shadow (Medawar 1952, Williams 1957) — selective pressure declines after reproductive age → full repair was not selected for.
+5. **Quantitative model:** k_damage ≈ 0.01-0.05 D_critical/year → D_critical is reached within 60-100 years — consistent with human lifespan.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Обновлены файлы:**
-- ✅ `docs/REPAIR_OBJECTION_DEFENSE.md` — полный документ защиты (10 разделов, 6 предсказаний, количественная модель)
-- ✅ `THEORY.md` §4.1 — усилена аксиома ¬R с учётом limited repair (v6.0)
-- ✅ `EVIDENCE.md` §11 — новый раздел «Repair Mechanisms & Their Limitations»
-- ✅ `MEMORY.md` — данная запись
-- ✅ `PARAMETERS.md` — добавлены кинетические параметры k_damage, k_repair, k_elim
+**Updated files:**
+- ✅ `docs/REPAIR_OBJECTION_DEFENSE.md` — complete defense document (10 sections, 6 predictions, quantitative model)
+- ✅ `THEORY.md` §4.1 — strengthened axiom ¬R accounting for limited repair (v6.0)
+- ✅ `EVIDENCE.md` §11 — new section "Repair Mechanisms & Their Limitations"
+- ✅ `MEMORY.md` — this record
+- ✅ `PARAMETERS.md` — added kinetic parameters k_damage, k_repair, k_elim
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Оценка защиты:** 9/10. Единственное слабое место — отсутствие прямых экспериментальных данных по distortion cartwheel (для этого и пишем Gönczy/Guichard).
+**Protection assessment:** 9/10. The only weak point is the lack of direct experimental data on the distortion cartwheel (this is precisely why we are writing to Gönczy/Guichard).
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Письма:**
-- Julia Mahamid — ответ отправлен (Desktop: `2026-08-02_julia_mahamid_reply.txt`)
-- Pierre Gönczy — письмо готово (Desktop: `2026-08-02_pierre_gonczy.txt`)
-- Paul Guichard — письмо готово (Desktop: `2026-08-02_paul_guichard.txt`)
+**Letters:**
+- Julia Mahamid — reply sent (Desktop: `2026-08-02_julia_mahamid_reply.txt`)
+- Pierre Gönczy — letter ready (Desktop: `2026-08-02_pierre_gonczy.txt`)
+- Paul Guichard — letter ready (Desktop: `2026-08-02_paul_guichard.txt`)
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-## 2026-08-02: 🔴 Анализ Tollervey et al. (2025) + похожие статьи
+## 2026-08-02: 🔴 Analysis of Tollervey et al. (2025) + related articles
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Статья:** Tollervey F, Rios MU, Zagoriy E, Woodruff JB, Mahamid J. *Molecular architectures of centrosomes in C. elegans embryos visualized by cryo-electron tomography.* Dev Cell. 2025. PMID: **39721584**.
+**Article:** Tollervey F, Rios MU, Zagoriy E, Woodruff JB, Mahamid J. *Molecular architectures of centrosomes in C. elegans embryos visualized by cryo-electron tomography.* Dev Cell. 2025. PMID: **39721584**.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Действие:** Julia Mahamid поправила — правильная статья Tollervey et al., не Fung et al. Проведён глубокий анализ статьи + поиск похожих.
+**Action:** Julia Mahamid corrected — the correct article is Tollervey et al., not Fung et al. A deep analysis of the article was conducted, along with a search for similar works.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Ключевые находки Tollervey 2025:**
-1. Mother vs daughter centriole — already structurally distinct (в cryo-ET!)
+**Key findings of Tollervey 2025:**
+1. Mother vs daughter centriole — already structurally distinct (in cryo-ET!)
 <!-- /lang:ru -->
 2. 13 protofilaments (centriolar) vs 11 (PCM) MT
 <!-- lang:ru -->
-3. Atypical γ-TuRC с 11-fold симметрией
-4. PCM = пористый, неупорядоченный network
-5. ⚠️ НЕТ сравнения young vs aged — это и есть наш эксперимент
+3. Atypical γ-TuRC with 11-fold symmetry
+4. PCM = porous, disordered network
+5. ⚠️ NO comparison of young vs aged — this is exactly our experiment
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Родственные статьи (Guichard lab — ключевые):**
-- **Laporte et al. (2024) Cell** PMID: **38604175** — U-ExM карта сборки человеческой центриоли (24 белка, 6 модулей). 🔥 Guichard lab УЖЕ имеет метод.
-- **Bournonville et al. (2025) Nat Commun** PMID: **40707486** — A-C linker (CCDC77, WDR67, MIIP) — конкретная молекулярная мишень окисления.
-- **Brunet et al. (2025) EMBO J** PMID: **40021845** — Alms1 → Plk4 → Sas-6 — молекулярный путь cartwheel assembly.
-- **Mercey et al. (2025) J Cell Sci** PMID: **41147396** — обзор методов: cryo-ET, U-ExM, super-resolution.
+**Related articles (Guichard lab — key):**
+- **Laporte et al. (2024) Cell** PMID: **38604175** — U-ExM map of human centriole assembly (24 proteins, 6 modules). 🔥 Guichard lab ALREADY has the method.
+- **Bournonville et al. (2025) Nat Commun** PMID: **40707486** — A-C linker (CCDC77, WDR67, MIIP) — a specific molecular target of oxidation.
+- **Brunet et al. (2025) EMBO J** PMID: **40021845** — Alms1 → Plk4 → Sas-6 — molecular pathway of cartwheel assembly.
+- **Mercey et al. (2025) J Cell Sci** PMID: **41147396** — methods review: cryo-ET, U-ExM, super-resolution.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Мета-вывод:** Поле методологически готово. Все методы (U-ExM) и молекулярные карты существуют. Guichard lab — идеальный адресат: у них всё готово для эксперимента, кроме гипотезы. Гипотеза — у нас.
+**Meta-conclusion:** The field is methodologically ready. All methods (U-ExM) and molecular maps exist. The Guichard lab is the ideal recipient: they have everything ready for the experiment, except for the hypothesis. The hypothesis is ours.
 <!-- /lang:ru -->
 
 <!-- lang:ru -->
-**Обновлены файлы:**
-- ✅ `docs/TOLLERVEY_2025_ANALYSIS.md` — полный анализ (7 разделов, мета-анализ, 4 новых предсказания)
-- ✅ `EVIDENCE.md` §12 — новый раздел
-- ✅ `MEMORY.md` — данная запись
+**Updated files:**
+- ✅ `docs/TOLLERVEY_2025_ANALYSIS.md` — full analysis (7 sections, meta-analysis, 4 new predictions)
+- ✅ `EVIDENCE.md` §12 — new section
+- ✅ `MEMORY.md` — this entry
 <!-- /lang:ru -->
 
 ## 2026-07-31: Incubator — humidity control
@@ -713,7 +721,7 @@ Recorded: THEORY.md Axiom C1, CONCEPT.md, workshop_entropy_in_aging_2pages, EVID
 
 **Solution:** CONCEPT.md has been corrected. The previous version contained erroneous text about a "data integration platform" (hallucination). The correct concept of the centriolar theory of aging has been restored.
 
-- Де-риск-лестница L1–L5 предшествует элиминации; прогноз ≥80% (геми) vs <50% (полная), Meitinger 2016
+- De-risking ladder L1–L5 precedes elimination; prognosis ≥80% (hemi) vs <50% (complete), Meitinger 2016
 
 **LERR — Ladder, Eliminate, Reprogram, Rebuild.**
 

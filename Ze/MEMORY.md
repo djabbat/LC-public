@@ -1,5 +1,15 @@
 # Rejection Log — Ze
 
+## 📌 КНИГА НА RESEARCHGATE: ZE THEORY (2026-08-14)
+
+<!-- lang:ru -->
+**Книга «ZE THEORY — Entropic-Geometric Approach to the Unification of Time, Quantum Mechanics, and Consciousness» размещена на ResearchGate:**
+
+- URL: https://www.researchgate.net/publication/412146705_ZE_THEORY_Entropic-Geometric_Approach_to_the_Unification_of_Time_Quantum_Mechanics_and_Consciousness
+
+Контекст: отдельная публикация от статьи/рукописей Ze (Formal Axiomatics, Born Rule, Tsirelson — Foundations of Physics, Rejection #31). Книга — полное изложение Ze-модели.
+<!-- /lang:ru -->
+
 ## Rejection #31 — 2026-08-04 — Foundations of Physics
 **Journal:** Foundations of Physics (Springer)
 **ID:** `3fab9acb`
