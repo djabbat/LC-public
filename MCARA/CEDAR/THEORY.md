@@ -31,7 +31,7 @@
 2. **LECA had centrioles and flagella** — Chlamydomonas retains ancestral traits lost in land plants and yeast (PMID 25690512).
 3. **Land plants (Embryophyta) lost centrioles** — most seed plants lack them; mosses retain centrioles in sperm (de novo assembly); mosses are a transitional form (PMID 22691130, 40040596, 34595246, 25690512).
 4. **Plants use acentrosomal mitosis** — Ran-GTP gradient, augmin nucleation, CORD/TPX2/Kinesin-14D, transient MTOCs (“Gametosomes”) (PMID 25809139, 40945508, 35513464, 28973935, 39163829, 27837282).
-5. **Centrosome ≠ centriole** — Dictyostelium (Amoebozoa, freshwater) has a functional centrosome WITHOUT centrioles; PCM can act as MTOC autonomously (PMID 34685637). Centriole loss ≠ MTOC function loss.
+5. **Centrosome ≠ centriole** — Dictyostelium (Amoebozoa, freshwater) has a functional centrosome WITHOUT centrioles; PCM can act as MTOC autonomously (PMID 34685637). Centriole loss ≠ MTOC function loss. **Full mechanics now documented (2026-08-15):** Gräf, Grafe & Meyer (2026) *Cells* 15(16):1449 — centromere clustering (Rabl, 6 chromosomes) + Sun1 → lamin NE81 tether + NE fenestration in semi-closed mitosis + Cenp68/monopolin hypothesis → complete acentriolar spindle. DOI 10.3390/cells15161449. Подробно: `docs/GRÄF_2026_CENTROMERE_CLUSTERING.md`.
 6. **Centrin is the Ca²⁺-binding protein of centrioles** — controls centriole duplication Ca²⁺-dependently (PMID 17694534). NOT CaMKII (previous version errored here).
 
 ### Hypotheses (not facts — multiple working hypotheses, Chamberlin 1890)

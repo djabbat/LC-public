@@ -38,6 +38,12 @@
 | Mironov RDP framework | Mironov 2017 | arXiv **1702.07476** ✅ |
 | Federated Learning + DP for medicine — recent | Zheng et al. 2025 | PMID **40363282** ✅ |
 | FAItH federated analytics with DP | 2025 | PMID **40128311** ✅ |
+| Centromere inactivation during aging — rescuable in human cells | Sikder et al. 2025 *Mol Cell* 85(4):757–773 | PMID **39809271** ✅ |
+| Acentriolar centrosome organizes full spindle (Dictyostelium, centromere clustering + NE fenestra) | Gräf, Grafe & Meyer 2026 *Cells* 15(16):1449 | DOI **10.3390/cells15161449** ✅ |
+| Centriole-independent spindle assembly (PCNT–CDK5RAP2 PCM) | Watanabe et al. 2020 *JCB* 219(12) | PMID **33170211** ✅ |
+| Centrosome amplification → variant SASP (HIF-1α) | Wu et al. 2023 *Aging Cell* 22(3):e13766 | PMID **36660875** ✅ |
+| Centromere clustering ↔ 3D genome states | Polisetty et al. 2025 *PNAS* 122(50) | PMID **41364759** ✅ |
+| Condensin II determines architecture type across tree of life | Hoencamp et al. 2021 *Science* 372(6545):984–989 | PMID **34045355** ✅ |
 
 ## §2. Removed / unverified (deleted from article in v3-v5)
 
