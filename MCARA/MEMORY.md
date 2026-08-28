@@ -1,5 +1,90 @@
 # MEMORY — MCARA
 
+## 🤝 Дело (2026-08-21): Meyer и Gönczy — advisors pro bono, НЕ участники VW-консорциума
+
+<!-- lang:ru -->
+**Суть:** Оба не могут участвовать в заявке VW-Stiftung (Meyer — уже имеет заявку в конкурсе, Gönczy — отказался), но помогают делом (pro bono): советы и фидбек.
+**Следствие для заявки:** НЕ вносить их в **5-ю секцию шаблона** (список всех участвующих сторон для проверки элигибельности) — они внешние советники, а не заявленные партнёры.
+**Что дали:**
+- **Meyer:** 3 научные правки (SAS-6 не персистентен; лоф-пертубация не тест градального повреждения → Phase 0 pulse-label mother vs daughter; наводка на сам грант VW) + рекомендация **Beyer** как lead.
+- **Gönczy:** подтверждение, что реверс-эксперимент (элиминация → дедифференцировка) никто не делал; core-ссылка **Sci Adv 2023 (Kalbfuss & Gönczy, eadg8682)**; наводка на **Paul Guichard (UNIGE, U-ExM)** как метод-партнёра; оценка вопроса «Tantalizing».
+<!-- /lang:ru -->
+
+## ✅ Submission — 2026-08-21 — GeroScience systematic review (JAAA-S-26-03068)
+
+<!-- lang:ru -->
+**Что:** «The reset of aging counters in the germline and early embryo» — Systematic Review подан в GeroScience (Springer), Editorial Manager ID `JAAA-S-26-03068`.
+**Пакет:** `~/Desktop/Services/publications/GeroScience_Systematic_Review_Counters/` (manuscript.docx, cover_letter.docx, title_page.docx, Fig1/Fig2, VisualAbstract_1200x600, ESM_1–4, PRINTS_TRACKER.md).
+**Факты:**
+- 31 ссылка верифицированы: NCBI E-utilities (PMID, авторы, том/стр.) + CrossRef (все 31 DOI разрешаются).
+- PRISMA 2020 checklist в ESM_1; risk-of-bias в ESM_3; мета-анализ DerSimonian–Laird (74.6% [69.5–79.7] PGC 5mC; 71.7% [50.2–93.2] mtDNA embryo; 12.4% [1.1–23.7] selective replication; 90.0% [82.2–97.8] paternal 5mC).
+- Британский английский, AI-маркеры удалены, порядок цитирования проверен скриптом.
+- **Longevity Horizon из References УБРАН** — MCARA описана как авторская рамка; цитируемая публичная ссылка на MCARA: препринт RS `https://doi.org/10.21203/rs.3.rs-10320101/v1` (добавить при ревизии).
+- Suggested reviewers: Gönczy, Meyer, Wagner, Schiebel, Bazzi, Hobmayer, Trifunovic, Bettencourt-Dias, Azimzadeh, Geiger.
+- Препринт RS (та же рукопись) — на скрининге; реестр всех 5 препринтов: `~/Desktop/Services/publications/GeroScience_Systematic_Review_Counters/PRINTS_TRACKER.md`.
+**Урок:** для подачи в рецензируемый журнал нельзя ссылаться на Longevity Horizon (не рецензируемое издание) — использовать RS-препринты как публичные DOI-ссылки.
+<!-- /lang:ru -->
+
+## 📉 Decline #33 — 2026-08-18 — Schumacher (CECAD) — VW-Stiftung lead
+
+<!-- lang:ru -->
+**Кто:** Prof. Björn Schumacher (bjoern.schumacher@uni-koeln.de), Scientific Director CECAD, University of Cologne
+**Контекст:** Приглашение вести заявку VW-Stiftung Pioneering Research (дедлайн 27 авг, до €1.3M) — центриольный счётчик старения; механизм опирался на его же территорию: DREAM/p53/p21 → transcriptomic noise (Meyer & Schumacher, Nat Aging 2024).
+**Тайминг:** Письмо 18 авг 15:13 → отказ 18 авг ~18:27 (в тот же день): «in this short timeframe I won't be able to contribute». На второй вопрос (кого рекомендует в Кёльне по центриолям/aging clocks/mitotic surveillance) — «I don't know anyone working on centrioles here».
+
+### Причина отказа
+- ❌ Только тайминг (9 дней до дедлайна). Содержание не оспорил, черновик посмотрел — наука не причина.
+- ❌ По его словам, в CECAD/Кёльне centriole-экспертизы нет. Наш кандидат №1 Bazzi (Uniklinik Köln, centrosomes/cilia, USP28/53BP1) в его поле зрения не попал — вероятно, воспринимает как «cilia», а не «centrioles».
+
+### Что упустили / выводы
+- ✅ Резервная сетка уже работала в момент отказа: Bazzi + Schiebel + Müller-Reichert (письма 18 авг), Wagner (резерв №5, из отпуска 24 авг), Antebi/Beyer/Hoppe (резерв 2).
+- ✅ Мост не сжигаем: Шумахер видел черновик, претензий нет, его Nat Aging 2024 — опора гипотезы → кандидат на будущее соавторство (CIRCBIO-07, статьи).
+- ⚠️ Урок: при тайминге <2 недель приглашать сразу нескольких кандидатов параллельно (как и сделали) — не ждать ответа первого.
+
+### Следующий шаг
+- [ ] 19 авг: проверить ответы Bazzi / Schiebel (просили ответ до 21 авг). Оба отказали → Müller-Reichert + активация Wagner 24 авг.
+- [ ] 📞 Erstberatung VW-Stiftung — обязательна, ещё не сделана.
+- [ ] Шумахеру по VW больше не писать — вопрос исчерпан (два его ответа получены, закрывающее письмо отправлено 18 авг).
+<!-- /lang:ru -->
+
+## 🔴 Rejection #32 — 2026-08-17 — Cell Biochemistry and Biophysics (MCAOA framework)
+
+<!-- lang:ru -->
+**Журнал:** Cell Biochemistry and Biophysics (Springer Nature) — Editor Sanjay Varikuti
+**ID:** `6b9dedae-4cc3-4dfa-b866-15b12e031756`
+**Рукопись:** «The Multi-Counter Architecture of Organismal Aging: A Quantitative Framework for Integrating Mechanistic Theories» (MCAOA — Organismal Aging, НЕ центриольная версия)
+**Тип решения:** 🔴 Отказ редактора, без внешнего ревью (reviewer comments в письме отсутствуют — стандартное form letter)
+**Дней до решения:** ~5–6 (подача ~11 авг → technical check 13 авг → With editor 15 авг → отказ 17 авг)
+
+### Причина (что сказал редактор)
+> «Regrettably, your manuscript has been rejected for publication in Cell Biochemistry and Biophysics.» + рекомендация Springer Nature transfer service (персональные рекомендации журналов придут отдельным письмом).
+
+Конкретной причины нет — стандартное письмо. Вывод: **scope mismatch** — CBB публикует молекулярную клеточную биохимию/биофизику (экспериментальные работы), теоретическая рамка старения вне scope.
+
+### Контекст — это 4-й отказ данной рукописи
+1. **Nature Aging** — 28 апр
+2. **npj Aging** — 28 апр
+3. **Biogerontology** (`7cc6de62`) — 🔴 **10 авг** (после transfer recommendation 14 июл + апелляции 15 июл — апелляция отклонена)
+4. **Cell Biochemistry and Biophysics** — 17 авг
+
+### Что мы упустили
+- ❌ **Pre-submission inquiry НЕ отправлялся** — та же системная ошибка, что в #31 (GeroScience). 80%+ отказов — desk reject из-за scope mismatch без inquiry.
+- ❌ **CBB — не тот журнал с самого начала**: scope = молекулярная биохимия/биофизика, не теоретическая геронтология. journal-fit не проверялся.
+- ❌ После отказа Biogerontology (10 авг) рукопись переподали в CBB сразу, без переработки и без journal-fit — спешка.
+- ❌ Тип «Perspective» без данных — CBB ждёт experimental/molecular работы.
+
+### Что изменить перед следующей подачей
+- [ ] Дождаться рекомендаций **Springer Transfer Desk** (SN пришлёт персонализированные рекомендации; детали подачи сохраняются — быстрый путь). Проверить дашборд su-app.springernature.com.
+- [ ] Проверить в дашборде/полном письме: были ли reviewer comments (в присланном тексте их нет).
+- [ ] Если transfer не подходит: `bash ~/Desktop/Services/scripts/journal-fit.sh MCARA <журнал>` + **pre-submission inquiry ОБЯЗАТЕЛЕН** (email + subject), ждать ответа.
+- [ ] Кандидаты (fit по scope, гибрид = free non-OA): **J. Theoretical Biology** (Elsevier, «quantitative framework» = идеальный fit) → **Mechanisms of Ageing and Development** / **Experimental Gerontology** (Elsevier, гипотезы принимают) → Frontiers in Aging (APC, fallback).
+
+### Следующий журнал
+**Приоритет:** Springer Transfer Desk — рекомендации из письма SN (бесплатно, быстро, детали сохранены).
+**Независимый план Б:** Journal of Theoretical Biology (Elsevier, гибрид — free) — с inquiry.
+**Journal-fit check:** VERIFY перед выбором.
+<!-- /lang:ru -->
+
 ## 📌 AUBREY: response #2 — the idea is fine, technical questions → senescence experts (2026-08-14)
 
 <!-- lang:ru -->
@@ -1242,3 +1327,42 @@ Result: 10 self-citations without duplicates, Abstract in place, References in a
 - **Manuscript:** «Entropy of Age» (Mosaic Aging / Bristlebot) — Scientific Reports, Submission ID: `8ad40dcb-b58d-4374-a4dd-5f471983b60a`
 - **APC waiver request:** Springer Nature ticket **#11625271** — receipt confirmed 12 Aug 2026 (Global Open Research Support Specialist: Josephron Solomon Iglesias Dimapilis), queued for processing.
 - **Next steps:** wait for a response; if no response within 5–7 days, politely follow up with the Ticket ID. Record the decision in SUBMISSIONS_STATUS.md.
+
+---
+
+## 2026-08-18: VW-Stiftung (27 авг) — lead не найден, письма Bazzi/Schiebel отправлены
+
+<!-- lang:ru -->
+**Дедлайн VW Pioneering Research: 27 авг 2026** (9 дней). Lead applicant — немецкий институт. Верхний бюджет €1.3M.
+
+**История lead-кандидатов:**
+- Meyer (CECAD) — ❌ отказался 13 авг (уже есть заявка в этом call)
+- Wagner (RWTH) — ❌ отказ 14 авг (отпуск в Наксосе, «timing does not work»). **18 авг: Джаба сообщил, что Wagner отказался и от EIC** — письмо Wagner переделано: только встреча в Кёльне, без VW/EIC-контекста.
+- Schiebel (Heidelberg) — ⏳ письмо 13 авг, ответа нет; follow-up отправлен 18 авг (дедлайн ответа 21 авг)
+- **Bazzi (Uniklinik Köln)** — 📮 письмо отправлено 18 авг (главный кандидат: USP28/p53/53BP1 митотический сурвейлленс = наша интервенция; он в Кёльне — встреча возможна 31 авг–2 сен). Дедлайн ответа 21 авг.
+
+**Резерв (если Bazzi/Schiebel откажут):** Schumacher (CECAD, DREAM/aging clocks) → Beyer (CECAD, transcriptional noise) → Müller-Reichert (Dresden, FIB-SEM) → Antebi (MPI AGE) → Hoppe (CECAD).
+
+**Пропущено/сделано 18 авг:**
+- Bazzi письмо (планировалось 15 авг) — пропущено, отправлено 18 авг
+- Erstberatung VW-Stiftung (обязательная консультация) — ❌ ещё не сделана
+- 🔔 Напоминание 19 авг: проверка ответов + резерв: docs/REMINDER_2026-08-19_VW_Backup.md
+
+**EIC Pathfinder (28 окт):** Кёльн 31 авг–2 сен — план создан (ERR/docs/Cologne_Plan_2026-08-18.md): воркшоп Entropy in Aging (доклад 10 мин), встречи Meyer + de Grey + Wagner (+Bazzi). LoS Janke (Curie) — OVERDUE. ARGUS engineering partner — не подтверждён.
+
+**Локальные модели:** решено остаться на Qwen3.6-35B-A3B (MoE ~5 ток/с). Qwen3.8-27B — плотная, ~2 ток/с на i5-10400, влезает только Q3_K_M (13.8GB) — не выгодно. Переходить, когда выйдет MoE-версия 3.8.
+<!-- /lang:ru -->
+
+---
+
+## 2026-08-18 (вечер): Schumacher отказался от VW lead
+
+<!-- lang:ru -->
+**Björn Schumacher (CECAD, Кёльн)** — ❌ отказ 18 авг (~18:10): «I am afraid that in this short timeframe I won't be able to contribute to this application.»
+
+**Post-mortem (краткий):**
+- Причина: НЕ тема и не институт, а **тайминг** — дедлайн 27 авг слишком близко, за ~9 дней он не готов вписаться. То же, что у Wagner («timing does not work»).
+- Вывод: тема валидна, привлекательность кандидатов не проблема; проблема — окно подачи. Параллельная рассылка (18 авг) была правильной — часть отказов неизбежна, нужен запас.
+- Осталось: **Bazzi ⭐, Schiebel, Müller-Reichert** (ответы до 21 авг). Резерв: Wagner (24 авг, после отпуска) → Antebi/Beyer/Hoppe.
+- Действие: 19 авг — если тишина, отправить Antebi (MPI AGE, C. elegans aging — верифицированный кандидат Тир 2).
+<!-- /lang:ru -->

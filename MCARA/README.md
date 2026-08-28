@@ -4,7 +4,7 @@
 [![Rust](https://img.shields.io/badge/Rust-1.85+-blue.svg)](https://www.rust-lang.org)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20055806.svg)](https://doi.org/10.5281/zenodo.20055806)
 
-**Reference:** Tqemaladze J. (2026) *Multi-Counter Architecture of Organismal Aging*. Submitted to eLife (ID eLife-RP-RA-2026-111885). Not published as Reviewed Preprint (no Reviewing Editor available). Appeal pending. Preprint on Zenodo: DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
+**Reference:** Tqemaladze J. (2026) *Multi-Counter Architecture of Organismal Aging: A Quantitative Framework for Integrating Mechanistic Theories* (MCAOA). Rejected: Nature Aging (28 Apr), npj Aging (28 Apr), Biogerontology (10 Aug), Cell Biochemistry and Biophysics (17 Aug, ID 6b9dedae). Status: not published — re-submission planned (J. Theoretical Biology / Springer Transfer Desk). Preprint on Zenodo: DOI [10.5281/zenodo.20055806](https://doi.org/10.5281/zenodo.20055806)
 
 **Source code:** [github.com/djabbat/LC](https://github.com/djabbat/LC/tree/mcaoa-v3.2/MCARA) (branch `mcaoa-v3.2`, в `MCARA/`)
 

@@ -14,12 +14,31 @@
 - [x] ✉️ Letter to Elmar Schiebel (schiebel.elmar@zmbh.uni-heidelberg.de) — **sent Aug 13** (attachment VW_short_proposal_draft.pdf)
 - [x] 📚 Key Meyer papers collected: docs/Meyer_key_publications.md (Nat Aging 2024 #38724736, NSMB 2023 #36959262, Nat Aging 2026 #42230995, Aging Cell 2021 #33656257)
 - [ ] ⏳ Awaiting Meyer recommendation (Andreas Beyer, CECAD?)
-- [ ] ✉️ NEW PRIORITY: Hisham Bazzi (hisham.bazzi@uk-koeln.de, Uniklinik Köln) — mammalian centrosomes + p53/53BP1/USP28 mitotic surveillance (his direct papers: Damen 2021 Nat Commun #34050161; Phan 2021 EMBO J #33226141; Meyer-Gerards & Bazzi 2025 FEBS J) → DIRECT match with design (USP28 override). Letter ~Aug 15
-- [ ] ⏳ **DECISION (Aug 14): wait for Schiebel reply until tomorrow 16:00 Tbilisi time (Aug 15 16:00) → then decide who to write (Bazzi / Beyer / Schumacher). Strategy: docs/proposals/VW_Lead_Candidates_Strategy_2026-08-14.md + Desktop/VW_Pioneering_Research_Lead_Candidates_2026-08-14.md**
+- [x] ✉️ Bazzi (hisham.bazzi@uk-koeln.de) — ОТПРАВЛЕНО 18 авг (VW lead; ответ до 21 авг)
+- [x] ✉️ Schiebel follow-up — ОТПРАВЛЕНО 18 авг (VW lead; ответ до 21 авг)
+- [x] ✉️ Wagner — ОТПРАВЛЕНО 18 авг (встреча в Кёльне; EIC/VW не упоминаются — отказался)
+- [x] 🔔 **Wagner ответ 20 авг:** воркшоп Entropy in Aging **заполнен**, зарегистрировался в **waiting list** → встреча в Кёльне под вопросом.
+- [x] ✉️ **20 авг: письмо Cho (место для Wagner) + ответ Wagner — ОТПРАВЛЕНЫ** (letters + копии на Desktop в Entropy_in_Aging/docs)
+- [ ] ⏳ **VW lead: ждём Bazzi (отправить 18 авг) / Schiebel (до 21 авг)** — затем Erstberatung + сборка заявки к 27 авг
+- [x] ✉️ РЕЗЕРВ ПАРАЛЛЕЛЬНО — ОТПРАВЛЕНО 18 авг: Schumacher (CECAD) + Müller-Reichert (TU Dresden) (letters/sent/)
+- [x] ❌ **Schumacher ОТКАЗ 18 авг вечером**: «short timeframe» — не успеет. Причина: дедлайн 27 авг, слишком мало времени. (Подтверждает правильность параллельной рассылки.)
+- [ ] ⏳ Ждём до 21 авг: **Bazzi ⭐, Schiebel, Müller-Reichert** (3 осталось)
+- [ ] 🔔 **19 авг: если Bazzi/Schiebel/Müller-Reichert не ответят → отправить Antebi (MPI AGE) / Beyer / Hoppe + Erstberatung (REMINDER_2026-08-19_VW_Backup.md)**
+- [ ] 🔔 **24 авг: Wagner выходит из отпуска — ЕСЛИ все 4 отказали → Wagner резерв №5 (REMINDER_2026-08-24_Wagner.md); если кто-то согласился — не нужно**
 - [ ] ✉️ Backup: Björn Schumacher (bjoern.schumacher@uni-koeln.de, IGSAD/CECAD) — DREAM/aging clocks/DNA repair; check conflict with Meyer application (1 application/PI — Meyer and Schumacher different PIs, but both IGSAD)
 - [ ] ✉️ Backup: Andreas Beyer (andreas.beyer@uni-koeln.de, CECAD) — transcriptional noise of aging (upon Meyer confirmation)
 - [ ] ✉️ Backup: Thomas Müller-Reichert (TU Dresden) — centriole ultrastructure C. elegans, FIB-SEM; Adam Antebi (MPI AGE Köln) — C. elegans aging; Thorsten Hoppe (CECAD) — C. elegans/ubiquitin
 - [ ] 📞 VW-Stiftung Erstberatung — mandatory consultation before submission
+- [x] 📞 **Чек-лист/вопросы к звонку 21 авг собран — копия на Desktop для Адона** (VW_CALL_CHECKLIST_21Aug_Adon.md; исходник docs/vw_calls/.../VW_CALL_QUESTIONS_21Aug.md)
+- [x] 📞 **Звонок Kratzsch 21 авг состоялся — ответы записаны** (docs/vw_calls/2026-08-21_kratzsch_call/VW_CALL_ANSWERS_Kratzsch_2026-08-21.md)
+- [x] 🟡 **21 авг: от Bazzi/Schiebel/Müller-Reichert ответов нет** → АКТИВИРОВАН РЕЗЕРВ: письма Antebi / Beyer / Hoppe подготовлены (letters/ + копии на Desktop) — отправить
+- [x] ✉️ Отправить резерв-письма: Adam Antebi (antebi@age.mpg.de), Andreas Beyer (andreas.beyer@uni-koeln.de), Thorsten Hoppe (thorsten.hoppe@uni-koeln.de) — ОТПРАВЛЕНЫ 21 авг (letters/sent/), ждём ответ
+- [ ] ⏳ Ждём ответы от: Bazzi ⭐ / Schiebel / Müller-Reichert / Antebi / Beyer / Hoppe
+- [ ] 🔔 **24 авг: Wagner выходит из отпуска — АБСОЛЮТНО ПОСЛЕДНИЙ резерв (№5), только если все отказали** (REMINDER_2026-08-24_Wagner.md)
+- [ ] 🔴 **Letter of intent обязателен к 27 авг** — нужен зафиксированный и подписанный lead (институция: назначение PI + доступ к объектам) ДО подачи
+- [x] 🟢 **Erstberatung НЕ обязательна к 27 авг** — состоялась в переписке (вопрос закрыт)
+- [ ] 🟢 **При сборке заявки:** abstract/summaries EN-DE/keywords — вне 4 стр.; **анонимизировать** текст (без институций и имён); все участники — в 5-й секции шаблона
+- [ ] 🟡 Уточнить ставку overhead (~10%?) и правило «1 заявка на PI» (6a/6b НЕ задавались) — при финализации/фоллоу-апе, если нужно
 - [ ] Check: candidate not participating in another application in this call (ask directly in letter)
 - [ ] Check email: reply from Schiebel?
 - [ ] EIC CONCEPT v4.6 — final proofread

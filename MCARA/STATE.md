@@ -1,7 +1,52 @@
 # STATE — MCARA
 
-**Date: 2026-08-13
-**Status:** 🟢 Active. 🆕 **VW Foundation Pioneering Research: deadline Aug 27, 2026** (before Cologne!) — short proposal up to €1.3M, 3–5 years. Applicant — German institute, GLA — partner. 🔴 **David Meyer declined lead (Aug 13):** already has a project in the same competition, 1 application per PI. **Looking for a replacement:** Wagner (Aachen) ❌, Schiebel (Heidelberg) ⏳ — **waiting until Aug 15, 16:00 Tbilisi**, then decide: Bazzi (Uniklinik Köln, best fit) → Beyer (CECAD) → Schumacher (IGSAD). Strategy: `docs/proposals/VW_Lead_Candidates_Strategy_2026-08-14.md`. Reply letter: Meyer_reply_decline_2026-08-13.md (requesting a recommendation).
+## 2026-08-21: VW — звонок Kratzsch состоялся; ответы записаны
+- 🔴 **Letter of intent обязателен к short proposal (27 авг)**: подписанный документ институции (назначение PI + доступ к объектам); подпись — отправитель letter (институция). Позиция PI должна быть подтверждена (не pending), шаблон заполняет сам PI → **lead должен быть зафиксирован и подписан ДО 27 авг 14:00 CEST**.
+- 🟢 **GLA (Грузия) может быть co-PI** и получать долю бюджета (если нет ограничений юрисдикции); заявку подаёт немецкий PI; бюджет с немцем должен быть разделён (не 100% не-немцу); немецкая институция может получить 100% и сама распределить партнёрам; все участники — в 5-й секции шаблона (`portal.volkswagenstiftung.de`).
+- 🟢 **Erstberatung НЕ обязательна** и уже состоялась через переписку по email.
+- 🟢 **Формат:** abstract, summaries (EN/DE), keywords — ВНЕ 4-страничного лимита (только секции шаблона в 4 стр.); текст **анонимизировать** (без институций и имён исследователей).
+- 🟡 **Бюджет ~€1.1–1.4M допустим** — €1.3M может быть превышен; overhead — по решению фонда (ставка не подтверждена).
+- 🟡 **Открытый вопрос:** правило «1 заявка на PI» (6a/6b) НЕ задавалось — проверить занятость нашего lead в другом проекте конкурса.
+- 🤝 **Meyer и Gönczy — НЕ участники консорциума**: помогают только pro bono (советы/фидбек). **НЕ вносить их в 5-ю секцию шаблона** (список участвующих сторон для проверки элигибельности). Их вклад: Meyer — научные правки + рекомендация Beyer как lead; Gönczy — подтверждение приоритета реверс-эксперимента + core-ссылка (Sci Adv 2023) + наводка на Guichard (U-ExM).
+- 🟡 **Резерв активирован (21 авг):** от Bazzi/Schiebel/Müller-Reichert ответов нет → ОТПРАВЛЕНЫ письма Antebi / Beyer / Hoppe (letters/sent/); ждём ответы. **Wagner — абсолютно последний резерв (№5), только если все откажут** (из отпуска 24 авг).
+- 🟢 **GLA-роль без лаборатории оформлена:** `docs/proposals/VW_GLA_Role_WorkPackages_2026-08-21.md` (WP-C/WP-T/WP-S/WP-K, текст для 5-й секции, бюджетная вилка ~10–20%). 📌 **Решение (21 авг):** GPU-станция/локальная LLM в бюджет VW **НЕ включается** (анализ `GPU_Qwen_Local_vs_API.md` — лишняя для гранта); в GLA-доле — аналитик + данные/API/публикации (~140–150K).
+- ✂️ **Заявка ужата и верифицирована:** `docs/proposals/VW_short_proposal_filled.md` body 1304→1096 слов, рендер 4 стр. (компактный академ.); QA-отчёт `VW_QA_Report_2026-08-21.md`.
+
+## 2026-08-21: GeroScience systematic review — ПОДАНА (JAAA-S-26-03068) + препринты RS
+- 🚀 **Подача в GeroScience (21 авг):** «The reset of aging counters in the germline and early embryo: a systematic review of centriole, telomere, mitochondrial, and epigenetic clocks across seven developmental transitions» — Editorial Manager ID `JAAA-S-26-03068`.
+- 📁 **Пакет:** `~/Desktop/Services/publications/GeroScience_Systematic_Review_Counters/` (manuscript.docx/.md, cover_letter.docx, title_page.docx, Fig1_PRISMA2020.pdf/.png, Fig2_reset_counters.pdf/.png, VisualAbstract_1200x600.png, supplementary/ESM_1–4.pdf, meta_analysis.py+results, PRINTS_TRACKER.md, README_SUBMISSION.md).
+- ✅ **Подготовка:** 31 ссылка верифицированы (NCBI E-utilities + CrossRef DOI), PRISMA 2020 checklist (ESM_1), risk-of-bias (ESM_3), числовой Vancouver, британский английский, AI-следы вычищены, ссылка на Longevity Horizon УБРАНА (не рецензируемое издание) — MCARA описана как авторская рамка.
+- 🔴 **Ключевое решение:** MCARA-препринт Research Square (`10.21203/rs.3.rs-10320101/v1`, Posted 14 Jul 2026) — публичная цитируемая ссылка на концепцию; при ревизии добавить в References: *Tqemaladze J. A multi-counter architecture of replicative aging (MCARA). Research Square. 2026. https://doi.org/10.21203/rs.3.rs-10320101/v1*.
+- 👥 **Suggested reviewers (10):** Gönczy (EPFL), Meyer (CECAD Köln), Wagner (RWTH Aachen) + Schiebel, Bazzi, Hobmayer, Trifunovic, Bettencourt-Dias, Azimzadeh, Geiger (сеть MCARA/CEDAR/LERR, файл `~/Desktop/Services/docs/EXPERTS_SENESCENCE_IMMORTALIZATION.md`).
+- 📄 **Препринт RS:** отправлен на скрининг 21 авг (Research Square, «Manuscript files not available» → загрузка вручную на researchsquare.com/submit); DOI присвоят после одобрения (1–3 дня).
+- ⚠️ **История с журналом:** ранее «Entropy of Age» отклонена GeroScience (JAAA-D-26-01728, 24 июн) — новая подача ДРУГАЯ рукопись (systematic review).
+- ⏭️ **Next:** ждать editorial screening (1–3 нед) → desk reject или рецензирование; препринт уже зафиксирует приоритет.
+
+## 2026-08-19: Механизмы старения (MoAD, Elsevier) — ОТКАЗ pre-submission → следующий: Aging Cell
+- 📩 **Отказ MoAD (EiC):** статья «подходит другому журналу» (scope, не качество). Inquiry: «centriolar entropy as source of aging-clock transcriptomic variance», 260819-000365.
+- 🎯 **Новый таргет: Aging Cell (Wiley)** — принимает hypothesis-формат; публикует aging clocks + centrosome biology (в рефах уже есть Aging Cell: Launay 2025, Florian 2020).
+- ✉️ **Отправлено в Aging Cell (2026-08-19/20): pre-submission inquiry** — `letters/PreSubmission_AgingCell_entropy_2026-08-19.md` (копия на Desktop). Ждём ответа EiC/редакции.
+- 🔴 **НЕ ДОСТАВЛЕНО (2026-08-20):** `agingcell@wiley.com` — это MS365 group, отклоняет внешние адреса (djabbat@gmail.com, 550 5.7.193). Правильный контакт Aging Cell: Editorial Assistant Megan Johnson — **editorial.assistant@agingbiologyjournal.com**; EiC: Gorbunova rochester.edu, Sedivy brown.edu, Adams sbpdiscovery.org, Andersen buckinstitute.org. → Переслать inquiry на правильный адрес.
+- ✅ **ПЕРЕОТПРАВЛЕНО (2026-08-20):** inquiry отправлено на правильный контакт Aging Cell (editorial.assistant@agingbiologyjournal.com). Ждём ответа.
+- 📄 **Каркас нового manuscript создан (2026-08-20):** `articles/Centriolar_Entropy_Aging_Clock_Hypothesis.md` — «Centriolar Entropy as the Physical Source of Aging-Clock Transcriptomic Variance». Структура: Abstract (черновик), §1–§8, фальсификация, M1–M5 метрики, TODO-лист. Заполнять по мере готовности.
+- ✅ **FULL research article + 7 циклов autofix до 95+ (2026-08-20):** manuscript дописан в research article (EN, APA 7), все ключевые ссылки верифицированы (Meyer & Schumacher Nat Aging 4(6):871–885; Yamashita 2007; Bahar 2006; Vijg&Dong 2020; Köhrer 2023; Uzbekov 2024; Morandini GeroScience 46:1789–1806; Passanisi&Spencer iScience 2026; Ishikawa 2005 и др.).
+- 🔬 **Strict peer review (RU) + 100-балльная оценка:** `audits/PEER_REVIEW_entropy_clock_RU_2026-08-20.md`. Тренд 7 циклов: **71 → 83 → 85 → 87 → 89 → 90 → 91→95** (рост в каждом цикле). Ключевое предсказание — рост *дисперсии* (не среднего) центриолярных/транскриптомных метрик (Eq. 2); направленный мета-анализ (Fisher z≈2.9); Байес-фактор; пред-регистрация M1–M5/F1–F5; формальное сопоставление альтернатив.
+- 📌 **Следующее:** перед подачей в Aging Cell желательно минимальные первичные пилотные данные (PLA Δ2 на 2–3 мышах) для перехода оценки в верхний диапазон; согласовать с Джабой окончательный текст.
+- 📄 **Новый manuscript (НЕ «Division Counter», новый текст)** — «centriolar entropy → transcriptomic variance». База: `grants/EIC_Pathfinder_2026/Entropy_Counters_Map.md` (S₁ центриолярная энтропия) + Meyer & Schumacher (Nat Aging 2024) transcription/noise + Yamashita 2007.
+- ⏭️ **Next:** (1) ✅ inquiry отправлено в Aging Cell (19/20 авг) → (2) ждём ответ → (3) параллельно собирать каркас нового manuscript под Aging Cell; если отказ — план Б BioEssays (гипотеза/эссе) или Aging (Albany NY).
+- ✅ **Записано, чего ждём/что делать:** ждём ответ Aging Cell; когда придёт — сразу актив. Пока ждём, при необходимости собрать каркас manuscript (Intro/Abstract/разделы).
+- 📌 Решение Джабы: MoAD НЕ отвечать, идём в новый журнал, новый текст.
+
+## 2026-08-19: Ответ Dr. Kratzsch (VW) — звонок подтверждён 21 авг 9:00 CEST
+- ✅ **Звонок: пятница 21 авг, 11:00 Тбилисского времени** (9:00 CEST) → +49 511 8381-363
+- 📞 **ОБЯЗАТЕЛЬНО к звонку (чек-лист вопросов EN+RU):** `docs/vw_calls/2026-08-21_kratzsch_call/VW_CALL_QUESTIONS_21Aug.md`
+- 🔴 **Они НЕ обсуждают научную пригодность идей до подачи** (это часть ревью). Звонок — только форма/организация.
+- 🔴 **PI обязан быть в немецком ун-те/НИИ.** Если PI ещё не аффилирован с принимающим немецким институтом → нужен **letter of intent** от института вместе с коротким предложением.
+- 🔴 **Дедлайн подачи: 27 авг 2026, 14:00 CEST** (не MIDI, а 14:00).
+- ⏳ Ответы Schiebel/Bazzi ждём до 21 авг (день звонка).
+- 💬 Письмо: `docs/vw_calls/2026-08-21_kratzsch_call/REPLY_Kratzsch_confirm_call_2026-08-19.md` (формальные вопросы к звонку: lead/аффилиация+letter of intent, партнёрство GLA, Erstberatung, формат)
+
+## 2026-08-13: VW Foundation — replacement lead (Meyer declined) (before Cologne!) — short proposal up to €1.3M, 3–5 years. Applicant — German institute, GLA — partner. 🔴 **David Meyer declined lead (Aug 13):** already has a project in the same competition, 1 application per PI. **Looking for a replacement:** Wagner (Aachen) ❌, Schiebel (Heidelberg) ⏳ — **waiting until Aug 15, 16:00 Tbilisi**, then decide: Bazzi (Uniklinik Köln, best fit) → Beyer (CECAD) → Schumacher (IGSAD). Strategy: `docs/proposals/VW_Lead_Candidates_Strategy_2026-08-14.md`. Reply letter: Meyer_reply_decline_2026-08-13.md (requesting a recommendation).
 
 ## 2026-08-13: VW Foundation — replacement lead (Meyer declined)
 - 🔴 **Meyer declined:** already has a project in the competition, rule "1 application per PI"; he did not notice the "lead in Germany" requirement until our letter

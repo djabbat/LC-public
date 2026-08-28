@@ -1,6 +1,36 @@
 # Organismal Aging — MEMORY
 
-**Date:** 2026-07-29
+**Date:** 2026-08-17
+
+---
+
+## 🔴 2026-08-17: Post-Mortem — Cell Biochemistry and Biophysics rejection (MCAOA framework)
+
+**Журнал:** Cell Biochemistry and Biophysics (Springer) — Editor Sanjay Varikuti
+**ID:** `6b9dedae-4cc3-4dfa-b866-15b12e031756`
+**Рукопись:** «The Multi-Counter Architecture of Organismal Aging: A Quantitative Framework for Integrating Mechanistic Theories»
+**Тип решения:** Отказ редактора без внешнего ревью (reviewer comments в письме нет). ~5–6 дней до решения (подача ~11 авг).
+
+### Что случилось
+> «Regrettably, your manuscript has been rejected for publication in Cell Biochemistry and Biophysics.» + предложение Springer Nature transfer service.
+
+**Это 4-й отказ рукописи:** Nature Aging (28 апр) → npj Aging (28 апр) → Biogerontology (10 авг, после апелляции) → CBB (17 авг).
+
+### Что упустили
+- Pre-submission inquiry не отправлялся (систематическая ошибка, 80%+ отказов — desk reject без inquiry).
+- CBB — журнал молекулярной биохимии/биофизики; теоретическая рамка старения — вне scope.
+- Переподача сразу после отказа Biogerontology без переработки и journal-fit проверки.
+
+### Что изменить
+- [ ] Дождаться рекомендаций Springer Transfer Desk (письмо SN; детали сохраняются).
+- [ ] Проверить дашборд: были ли reviewer comments в полном письме.
+- [ ] Если transfer не подходит: journal-fit + inquiry ОБЯЗАТЕЛЬНО.
+- [ ] Кандидаты: J. Theoretical Biology (Elsevier, free non-OA) → MAD / Exp. Gerontology (Elsevier) → Frontiers in Aging (APC).
+
+### Следующий шаг
+1. Проверить su-app.springernature.com — рекомендации Transfer Desk для 6b9dedae.
+2. Решить: transfer или независимая подача в J. Theoretical Biology с inquiry.
+3. Полный пост-мортем — Rejection #32 в `~/Desktop/LC/MCARA/MEMORY.md`.
 
 ---
 

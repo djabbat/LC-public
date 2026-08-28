@@ -7,6 +7,19 @@
 
 **Purpose:** volatile state, active TODOs, milestones.
 
+## 🟢 2026-08-21 — GeroScience systematic review ПОДАНА (связана с MCARA/CEDAR)
+
+<!-- lang:ru -->
+**Рукопись:** «The reset of aging counters in the germline and early embryo» — Systematic Review, GeroScience (Springer), Editorial Manager ID `JAAA-S-26-03068`, подана 21 авг 2026.
+**Связь:** MCARA-рамка (4 счётчика: C1 центриоль — ядро CEDAR, C2 теломеры, C3 митохондрии, C4 эпигеном) на оси развития T1–T7 (ПЗК → бластоциста); де ново центриологенез (T7) — «Rebuild» шаг LERR.
+**Пакет:** `~/Desktop/Services/publications/GeroScience_Systematic_Review_Counters/` — manuscript.docx/.md, cover_letter.docx, title_page.docx, Fig1_PRISMA2020, Fig2_reset_counters, VisualAbstract_1200x600, supplementary/ESM_1–4.pdf, PRINTS_TRACKER.md.
+**Проверки:** 31 ссылка верифицированы (NCBI + CrossRef), PRISMA 2020 checklist, risk-of-bias, числовой Vancouver, британский английский, AI-следы убраны; ссылка на Longevity Horizon удалена (→ MCARA описана как авторская рамка).
+**Цитируемая ссылка на MCARA:** препринт RS `10.21203/rs.3.rs-10320101/v1` (Posted 14 Jul 2026) — добавить в References при ревизии.
+**Рецензенты:** Gönczy, Meyer, Wagner + сеть MCARA/CEDAR (Schiebel, Bazzi, Hobmayer, Trifunovic, Bettencourt-Dias, Azimzadeh, Geiger) — `~/Desktop/Services/docs/EXPERTS_SENESCENCE_IMMORTALIZATION.md`.
+**Препринт RS:** в скрининге (загрузка вручную researchsquare.com/submit, «Manuscript files not available»).
+<!-- /lang:ru -->
+---
+
 ## 🔴 2026-08-13 — Meyer protocol integrated (Research Article)
 
 > **Files:** `docs/Testing_the_Hypothesis_of_Centriolar_Entropy_as_a_Source_of_Transcriptomic_Aging_Clock_Signal.md` (+ .docx) — in CEDAR/docs/ and ERR/wp1_cedar/docs/

@@ -1,3 +1,12 @@
+## ✅ GeroScience systematic review подан (2026-08-21)
+
+<!-- lang:ru -->
+- **«The reset of aging counters in the germline and early embryo»** — GeroScience, Editorial Manager ID `JAAA-S-26-03068`, 21 авг 2026.
+- Пакет: `~/Desktop/Services/publications/GeroScience_Systematic_Review_Counters/`. MCARA-рамка на оси развития T1–T7; де ново центриологенез (T7) — «Rebuild» шаг LERR.
+- MCARA-препринт RS `10.21203/rs.3.rs-10320101/v1` — цитируемая ссылка на концепцию (при ревизии добавить в References).
+- Связь с CEDAR: C1 (центриоль) — ядро CEDAR-модели; в ревью обоснована как «least-erasable counter».
+<!-- /lang:ru -->
+
 ## 🔴 Meyer review accepted — added to THEORY/EVIDENCE (2026-08-13)
 
 <!-- lang:ru -->
