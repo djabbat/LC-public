@@ -8,6 +8,7 @@ pub mod mortality;
 pub mod frailty;
 pub mod disease;
 pub mod trauma;
+pub mod entropy;
 
 use crate::{Fraction, Time, Divisions, SimulationStep};
 use crate::centriole::{CentrioleState, EntropyRates};
