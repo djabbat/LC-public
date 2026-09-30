@@ -125,3 +125,40 @@
 | Chk1→AHSA1→TRIM8→HSP90 — молекулярный механизм активации митофагии | (ibid.) | (ibid.) — IP-MS, Co-IP | ✅ 2026-07-25 | Strong |
 
 **Value:** Chk1 — та же киназа, что контролирует качество веретена (Counter #1 через β-tubulin-T285, PMID 41844775), также активирует митофагию (Counter #3). Одна киназа — два счётчика MCARA.
+
+---
+
+## Добавлено 2026-09-30 — Oocyte Mitochondrial Selection & ROS-Free Metabolism (Counter #3)
+
+> Полный разбор: `docs/LITERATURE_REVIEW_2026-09-30_Oocyte_MitoSelection.md`
+
+### Ключевые новые подтверждения
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|:---:|:---:|
+| Ооциты элиминируют комплекс I → ROS-free митохондриальный метаболизм; активный UPRmt; физиологический тип клеток без complex I | **35859172** | Rodríguez-Nuevo et al. Oocytes maintain ROS-free mitochondrial metabolism by suppressing complex I. *Nature*. 2022;607:424-430 | ✅ 2026-09-30 | **Strong** |
+| Balbiani body ре-ассемблируется в растущих фолликулах вокруг MTOC → митохондриальная селекция и контроль качества органелл (Yin & Spradling) | DOI 10.64898/2026.09.02.748954 | Yin Q, Spradling AC. *bioRxiv*. 2026 (препринт) | ✅ 2026-09-30 | Moderate (препринт) |
+| Независимое подтверждение Bb/RNP-компартмента в растущих ооцитах (конвергенция) | **42664359** | Zollo et al. A transient RNP compartment boosts translation and growth of mammalian oocytes. *Sci Adv*. 2026 | ✅ 2026-09-30 | Strong |
+
+### Вмешательства по «очистке» (обратимость D₃)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|:---:|:---:|
+| Спермидин → усиление митофагии → омоложение качества ооцитов при репродуктивном старении | **37845508** | Zhang et al. Polyamine metabolite spermidine rejuvenates oocyte quality by enhancing mitophagy. *Nat Aging*. 2023 | ✅ 2026-09-30 | **Strong** |
+| SS-31 (митохондриально-направленный) улучшает качество возрастных ооцитов | **41612464** | SS-31 improves quality of maternally aged oocytes. *J Ovarian Res*. 2026 | ✅ 2026-09-30 | Moderate |
+| DRP1 — регулятор репродуктивного старения; фиссия критична для митохондриального QC (согласуется с Drp1-данными Yin & Spradling) | **41660882** | DRP1 in reproduction and reproductive aging. *Biol Reprod*. 2026 | ✅ 2026-09-30 | Strong |
+| Митофагия как терапевтическая мишень в женских репродуктивных заболеваниях | **41341128** | Mitophagy in female reproductive system diseases. *Front Endocrinol*. 2025 | ✅ 2026-09-30 | Strong (обзор) |
+
+### База контроля качества (теория)
+
+| Claim | PMID | Article | Verified | Strength |
+|-------|------|---------|:---:|:---:|
+| Митофагия — механизм контроля качества митохондрий | **29462587** | Pickles & Youle. Mitophagy and quality control mechanisms. *Curr Biol*. 2018 | ✅ 2026-09-30 | Strong (обзор) |
+| Фиссия/фузия/митофагия — единая ось контроля качества | **18519024** | Twig et al. Mitochondrial fusion, fission and autophagy as a quality control axis. *BBA Bioenergetics*. 2008 | ✅ 2026-09-30 | Strong |
+
+### Значение для MitoROS (модельные изменения)
+1. **Член очистки C(t)** в уравнение D₃(n,t): митофагия/митохондриальная селекция как активный сброс, а не только накопление. Закрывает старую оговорку #3 «очистка важнее накопления» конкретикой.
+2. **Параметр ρ** — скорость продукции ROS регулируема (complex I suppression как крайний случай, PMID 35859172).
+3. **Герминативная линия — «положительный контроль»**: десятилетия качества через снижение продукции + селекцию.
+4. **Γ₁₃-мост (с CEDAR)**: MTOC-организация митохондрий — деградация центриоли → нарушение митохондриального QC → рост D₃. См. CEDAR review 2026-09-30.
+5. **Вмешательства-кандидаты**: спермидин, SS-31 (в существующий стек моделирования).

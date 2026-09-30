@@ -2,6 +2,16 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
+## 🔴 2026-09-30 — Literature: oscillators & organelle hub (CEDAR)
+<!-- lang:ru -->
+- [ ] **Review file created:** `docs/LITERATURE_REVIEW_2026-09-30_Oscillators_OrganelleHub.md` (Ortiz-Álvarez & Al Jord 2026; Yin & Spradling 2026)
+- [ ] Взять: de novo/деутеросомный путь как режим «сброса» vs шаблонная дупликация (статья 1, PMID 28982797, 38811726)
+- [ ] Взять: QC числа центриолей (PIDDosome-p53, PMID 28130345) как отдельный контур
+- [ ] Взять: MTOC-организация митохондрий как механизм Γ₁₃ (мост CEDAR↔MitoROS)
+- [ ] Гипотеза: quiescence ооцитов ≠ накопление временнóй энтропии — калибровка division- vs time-компоненты
+- [ ] Проверить: активация de novo-пути (PLK4) при Entropy Reset; возрастная динамика ацетилирования тубулина (HDAC6/ATAT1)
+<!-- /lang:ru -->
+
 ## 🔴 2026-08-13 — Meyer-protocol → design article
 <!-- lang:ru -->
 - [ ] 📄 Submit `Testing_the_Hypothesis_of_Centriolar_Entropy...` as a design article (candidates: Cell Reports Methods / eLife / Nature Protocols-style)

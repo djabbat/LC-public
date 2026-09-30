@@ -834,3 +834,37 @@ Two distinct claims made in this paper:
 | Carbonylation on centriolar proteins | ❌ NOT DONE | Needs redox proteomics |
 
 **Conclusion:** The field is methodologically ready. All methods and molecular maps exist. The hypothesis is the missing piece — and Guichard lab has everything needed to test it.
+
+---
+
+## Добавлено 2026-09-30 — Repurposed Cell-Cycle Oscillators & Centriole as Organelle Hub
+
+> Полный разбор: `docs/LITERATURE_REVIEW_2026-09-30_Oscillators_OrganelleHub.md`
+
+### Новые подтверждения для CEDAR (C1/C2 + CEDAR-γ)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|:---:|:---:|
+| Митотический осциллятор перепрофилируется на массовую продукцию центриолей без деления («митоз без митоза») | **28982797** | Al Jord et al. Calibrated mitotic oscillator drives motile ciliogenesis. *Science*. 2017 | ✅ 2026-09-30 | Strong |
+| Альтернативный клеточный цикл координирует дифференцировку мультицилиарных клеток — «state-lock» через специализированный цикл | **38811726** | Choksi et al. An alternative cell cycle coordinates multiciliated cell differentiation. *Nature*. 2024 | ✅ 2026-09-30 | Strong |
+| Амплификация центриолей возможна без центросомы (независимость de novo пути) | **31506528** | Vladar et al. Dynamics of centriole amplification in centrosome-depleted progenitors. *Sci Rep*. 2019 | ✅ 2026-09-30 | Strong |
+| PIDDosome-p53 — детектор сверхчисленных центросом (QC числа центриолей) | **28130345** | Fava et al. The PIDDosome activates p53 in response to supernumerary centrosomes. *Genes Dev*. 2017 | ✅ 2026-09-30 | Strong |
+| Избыточные центросомы → PIDD1-опосредованное воспаление/иммунонадзор | **37530438** | Extra centrosomes induce PIDD1-mediated inflammation. *Cell Rep*. 2023 | ✅ 2026-09-30 | Strong |
+| Центросомная дисфункция — связь сенесценции и противоопухолевого иммунитета | **32606370** | Wu et al. Centrosome dysfunction: link between senescence and tumor immunity. *Signal Transduct Target Ther*. 2020 | ✅ 2026-09-30 | Strong |
+| Амплификация центросом → RAC1 → автофагия (мост с MitoROS/протеостазом) | **42633651** | Connecting the dots: centrosome-RAC1 → autophagy. *Autophagy*. 2026 | ✅ 2026-09-30 | Moderate |
+
+### MTOC как организатор митохондрий (ооцит, Yin & Spradling 2026)
+
+| Claim | PMID/DOI | Article | Verified | Strength |
+|-------|----------|---------|:---:|:---:|
+| Balbiani body ре-ассемблируется вокруг MTOC; MTOC организует митохондриальный кластер → митохондриальная селекция | DOI 10.64898/2026.09.02.748954 | Yin Q, Spradling AC. *bioRxiv*. 2026 (препринт) | ✅ 2026-09-30 | Moderate (препринт) |
+| Персистентные мейотические центросомы переживают quiescence (вопреки Szollosi 1972); Bb-MTOC — их потомок | (ibid.) | (ibid.) | ✅ 2026-09-30 | Moderate (препринт) |
+| Независимое подтверждение структуры в растущих ооцитах (конвергенция) | **42664359** | Zollo et al. A transient RNP compartment. *Sci Adv*. 2026 | ✅ 2026-09-30 | Strong |
+| Морфология/распределение/активность митохондрий при развитии ооцита | **38599901** | Mitochondrial morphology, distribution and activity during oocyte development. *Trends Endocrinol Metab*. 2024 | ✅ 2026-09-30 | Strong |
+
+### Значение для CEDAR (концептуальные выводы)
+1. **Два режима центриолярной динамики:** (а) шаблонная дупликация в делящихся клетках — носитель энтропии/деградации; (б) de novo/деутеросомная амплификация в постмитотических клетках — сброс геометрии. de novo-сброс недоступен самоподдерживающимся стволовым клеткам (согласуется с Renzova 2018: потеря центриолей → хаотичная дифференцировка).
+2. **Подкрепление «germline reset»:** единственное полное обращение = устранение + de novo; ооцит делает то же для митохондрий (Bb-селекция) — природа «чинит» сбросом, а не починкой.
+3. **Quiescence ≠ накопление:** персистентные центросомы ооцитов сохраняются через месяцы покоя → основная энтропия копится при делениях (division-компонента), а не от времени (time-компонента). Калибровка β vs division-компонент.
+4. **QC числа существует (PIDDosome), QC качества единственной старой центриоли — нет:** старая «правильная» центриоль не отбраковывается → согласуется с селективным удержанием в стволовой клетке.
+5. **Γ₁₃-мост (с MitoROS):** MTOC организует митохондрии → деградация центриоли → нарушение митохондриального контроля качества → рост D₃. Конкретный механизм связи Counter #1 ↔ Counter #3.

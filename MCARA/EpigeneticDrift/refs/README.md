@@ -28,3 +28,4 @@ Each PMID below was verified against the NCBI esummary API on the date shown. Ev
 | 36336680 | Wang K | 2022 | Signal Transduct Targe | Epigenetic regulation of aging: implications for interventions of aging and diseases. | `PMID_36336680_Wang_2022_signaltransducttar_epigenetic_regulation_of_aging_impli.md` |
 | 41289991 | Arif T | 2025 | Cell Stem Cell | Reversing lysosomal dysfunction restores youthful state in aged hematopoietic stem cells. | `PMID_41289991_Arif_2025_cellstemcell_reversing_lysosomal_dysfunction_rest.md` |
 | 38216430 | Wu Z | 2024 | Trends Pharmacol Sci | Emerging epigenetic insights into aging mechanisms and interventions. | `PMID_38216430_Wu_2024_trendspharmacolsci_emerging_epigenetic_insights_into_ag.md` |
+| 42455441 | Liao Y | 2026 | Adv Exp Med Biol | Asymmetric Chromosome Establishment and Segregation During Germline Stem Cell Division. | `PMID_42455441_Liao_2026_aemb_asymmetric_chromosome_establishment_and_seg.md` |

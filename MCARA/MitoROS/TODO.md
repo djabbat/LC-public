@@ -2,6 +2,16 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
+## 🔴 2026-09-30 — Literature: oocyte mitochondrial selection (MitoROS)
+<!-- lang:ru -->
+- [ ] **Review file created:** `docs/LITERATURE_REVIEW_2026-09-30_Oocyte_MitoSelection.md` (Yin & Spradling 2026 + Rodríguez-Nuevo 2022 + спермидин/SS-31)
+- [ ] Взять в модель: член очистки C(t) (митофагия/селекция) в уравнение D₃(n,t)
+- [ ] Взять: параметр ρ — регулируемая скорость продукции ROS (complex I suppression, PMID 35859172)
+- [ ] Обновить EVIDENCE.md: «очистка важнее накопления» — закрыть оговорку #4 конкретикой (PMID 35859172, 37845508, 18519024)
+- [ ] Зафиксировать перекрёстный механизм Γ₁₃ (MTOC→митохондриальная организация) — см. CEDAR review 2026-09-30
+- [ ] Вмешательства-кандидаты: спермидин (PMID 37845508), SS-31 (PMID 41612464)
+<!-- /lang:ru -->
+
 ## Goals & Tasks
 
 - **Goal 1:** Establish core MitoROS functionality upon approval.

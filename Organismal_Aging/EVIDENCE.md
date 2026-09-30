@@ -5,6 +5,30 @@
 
 ---
 
+## §00. NEW: Stem-cell Division & Cell-fate Decisions (2026-09, weekly alert)
+
+> Полный разбор: `docs/literature_stemcell_division_cellfate_2026.md`
+> Три статьи: деление стволовых клеток, клеточная судьба, герминальные стволовые клетки, абсциссия.
+
+### Liao & Chen (2026) — Asymmetric Chromosome Establishment and Segregation in GSC
+- **DOI:** `10.1007/978-981-92-1439-6_8` | Adv Exp Med Biol | PMID 42455441 | Review
+- Асимметричная сегрегация сестринских хроматид при делении герминальных стволовых клеток (Drosophila, C. elegans)
+- Гистоны/варианты как носители эпигенетической информации; координация с митотическим аппаратом
+- → **#4 EpigeneticDrift** (неслучайное наследование хроматина) и **#1** (асимметрия)
+
+### Che (2026) — DMRT1 in Fate Determination of Male Germ Cells
+- **DOI:** `10.54097/9h0phe40` | Int J Biol Life Sci | Open access | Review
+- DMRT1: детерминация судьбы и поддержание мужских герминальных клеток, SSC, мейоз
+- → **Level #3 (гонады)**, переключатель самообновление↔дифференцировка
+
+### Kodba (2026, thesis) — The final step of cell division
+- **DOI:** `10.33540/3719` | Utrecht | PhD thesis
+- Задержанная абсциссия в плюрипотентных mESCs: Aurora B → MCAK → стабильность микротрубочек; верхний регулятор Wnt/STOP
+- Тайминг деления ↔ плюрипотентность ↔ дифференцировка (выход из плюрипотентности в G1)
+- → **Level #3 (онтогенез: зигота → морула → ткани)**, счётчик #1
+
+---
+
 ## §0. NEW: Hydra Epithelial Multifunctionality (2026)
 
 ### Seybold, Salvenmoser et al. (2026) — Ультраструктура стволовости в Hydra

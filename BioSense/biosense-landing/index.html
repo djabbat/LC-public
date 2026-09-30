@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioSense · χ_Ze biomarker platform</title>
+<meta name="description" content="BioSense — a wearable χ_Ze aging-activity biomarker simulator and the PScan contactless 3D body scanner for propaedeutic self-examination. Research-grade, not medical advice." />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #18181b; background: #fafafa; }
+  a { color: #15803d; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 24px 40px; }
+  .hero { text-align: center; padding: 36px 16px 28px; }
+  .hero .kicker { color: #4f46e5; font-weight: 600; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+  .hero h1 { font-size: 34px; margin: 8px 0 10px; letter-spacing: -0.02em; }
+  .hero p { color: #52525b; max-width: 760px; margin: 0 auto; line-height: 1.6; }
+  .pill { display:inline-block; background:#dcfce7; color:#166534; font-size:12px; padding:3px 10px; border-radius:999px; margin: 4px 4px 0 0; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 8px; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: #fff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 20px 22px; }
+  .card h2 { margin: 0 0 6px; font-size: 16px; color: #18181b; }
+  .card .sub { font-size: 13px; color: #71717a; margin: 0 0 14px; line-height: 1.5; }
+  .control { margin-bottom: 12px; }
+  .control label { display:flex; justify-content:space-between; font-size:12px; color:#52525b; text-transform:uppercase; letter-spacing:.04em; }
+  .control .val { font-family: ui-monospace, SFMono-Regular, monospace; font-size:13px; color:#18181b; }
+  .control input[type=range] { width:100%; margin-top:4px; }
+  .row-stats { display:flex; gap:20px; flex-wrap:wrap; margin-top:6px; }
+  .stat .k { font-size:11px; color:#71717a; text-transform:uppercase; }
+  .stat .v { font-size:22px; font-weight:600; font-family: ui-monospace, monospace; }
+  .badge { display:inline-block; padding:2px 10px; border-radius:999px; font-size:12px; }
+  .b-ok { background:#dcfce7; color:#166534; }
+  .b-warn { background:#fef3c7; color:#92400e; }
+  .b-hi  { background:#fee2e2; color:#991b1b; }
+  .btn { display:inline-block; background:#15803d; color:#fff; padding:10px 18px; border-radius:8px; font-weight:600; }
+  .btn:hover { background:#166534; text-decoration:none; }
+  .note { font-size:12px; color:#71717a; margin-top:10px; line-height:1.5; }
+  .formula { font-family:ui-monospace, monospace; font-size:12px; color:#3f3f46; background:#f4f4f5; padding:6px 10px; border-radius:6px; display:inline-block; }
+  .err { color:#b91c1c; font-size:13px; }
+  svg.plot { width:100%; height:auto; max-height:200px; background:#fafafa; border-radius:6px; }
+  svg.plot path.curve { fill:none; stroke:#15803d; stroke-width:2; }
+  svg.plot line.axis { stroke:#d4d4d8; stroke-width:1; }
+  .footer { color:#a1a1aa; font-size:12px; text-align:center; padding:20px 0 8px; }
+  .pscan { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  .pscan .txt { flex:1; min-width:260px; }
+  .pscan .cta { text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">LongevityCommon · BioSense</div>
+    <h1>BioSense — the χ_Ze wearable biomarker</h1>
+    <p>A variational biomarker of aging-activity computed from physiological velocities (EEG · HRV · respiration · sleep). Drag the sliders to see χ_Ze converge toward its fixed point v*, plus a CEDAR bridge and 30-day risk readout. <span class="badge b-ok">research-grade — not medical advice</span></p>
+    <span class="pill">χ_Ze simulator</span>
+    <span class="pill">CEDAR bridge</span>
+    <span class="pill">PScan 3D body scanner</span>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Inputs</h2>
+      <p class="sub">Modality velocities feed the variational principle F = E − T·S − λ·I_pred. Fixed point: <span class="formula">v* = 0.45631</span></p>
+      <div class="control"><label><span>v(EEG)</span><span class="val" id="veeg_v">0.50</span></label><input type="range" id="v_eeg" min="-1" max="1" step="0.01" value="0.50"></div>
+      <div class="control"><label><span>v(HRV)</span><span class="val" id="vhrv_v">0.45</span></label><input type="range" id="v_hrv" min="-1" max="1" step="0.01" value="0.45"></div>
+      <div class="control"><label><span>v(resp)</span><span class="val" id="vresp_v">0.45</span></label><input type="range" id="v_resp" min="-1" max="1" step="0.01" value="0.45"></div>
+      <div class="control"><label><span>v(sleep)</span><span class="val" id="vsleep_v">0.46</span></label><input type="range" id="v_sleep" min="-1" max="1" step="0.01" value="0.46"></div>
+      <div class="control"><label><span>D (centriolar damage)</span><span class="val" id="d_v">0.30</span></label><input type="range" id="d" min="0" max="1" step="0.01" value="0.30"></div>
+      <div class="control"><label><span>age (years)</span><span class="val" id="age_v">70</span></label><input type="range" id="age" min="20" max="100" step="1" value="70"></div>
+      <div class="control"><label><span>χ_Ze now</span><span class="val" id="chinow_v">0.55</span></label><input type="range" id="chi_now" min="0" max="1" step="0.01" value="0.55"></div>
+      <div class="control"><label><span>χ_Ze (7d ago)</span><span class="val" id="chi7d_v">0.61</span></label><input type="range" id="chi_7d" min="0" max="1" step="0.01" value="0.61"></div>
+      <label style="font-size:12px;color:#52525b;text-transform:uppercase;letter-spacing:.04em;">Sex</label>
+      <select id="sex" style="margin:4px 0 6px;padding:4px 8px;border-radius:6px;border:1px solid #cbd5e1;">
+        <option value="F" selected>Female</option><option value="M">Male</option>
+      </select>
+      <div><span class="badge" id="backend_badge">backend: …</span> <span class="badge" id="loading" style="display:none">computing…</span></div>
+      <div class="err" id="err"></div>
+    </div>
+
+    <div class="card">
+      <h2>χ_Ze composite</h2>
+      <div class="row-stats">
+        <div class="stat"><div class="k">composite</div><div class="v" id="comp">—</div></div>
+        <div class="stat"><div class="k">EEG</div><div class="v" id="peeg">—</div></div>
+        <div class="stat"><div class="k">HRV</div><div class="v" id="phrv">—</div></div>
+        <div class="stat"><div class="k">resp</div><div class="v" id="presp">—</div></div>
+        <div class="stat"><div class="k">sleep</div><div class="v" id="psleep">—</div></div>
+        <div class="stat"><div class="k">v*</div><div class="v" id="vstar">—</div></div>
+      </div>
+      <div style="margin-top:18px">
+        <h2 style="font-size:14px">CEDAR bridge</h2>
+        <p class="formula">A(D) = a + b·D + c·D² ; χ_Ze = g₀ − g₁·A</p>
+        <div class="row-stats">
+          <div class="stat"><div class="k">A(D)</div><div class="v" id="ba">—</div></div>
+          <div class="stat"><div class="k">χ_Ze(D)</div><div class="v" id="bchi">—</div></div>
+        </div>
+        <svg class="plot" id="bridgeplot" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <div style="margin-top:18px">
+        <h2 style="font-size:14px">30-day exacerbation risk</h2>
+        <p class="formula">P = σ(β₀ + β_age·age + β_sex·sex + β_chi·χ_now + β_dchi·Δχ)</p>
+        <div class="row-stats">
+          <div class="stat"><div class="k">P_30d</div><div class="v" id="risk">—</div></div>
+          <div class="stat"><div class="k">logit</div><div class="v" id="logit">—</div></div>
+        </div>
+        <div style="margin-top:8px"><span class="badge" id="risklevel">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <h2>PScan — contactless 3D body scanner</h2>
+    <div class="pscan">
+      <div class="txt">
+        <p class="sub">A democratic, low-cost tool that lets a person — alone — capture a 3D model of a body region (head, hands, abdomen…), mark a <strong>“Map of examined”</strong> on the model, and send it to a physician (telemedicine) or an AI database. Contactless photogrammetry (webcam / smartphone) with a propaedeutic regional scheme.</p>
+        <p class="note">Framing: a data-capture / patient-generated-data instrument. Interpretation is made by a physician or AI downstream.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://pscan.longevity.ge" rel="noopener">Open PScan scanner →</a>
+        <p class="note" style="margin-top:8px">https://pscan.longevity.ge</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    BioSense · LongevityCommon · χ_Ze = variational biomarker · PScan = 3D body scanner · Research-grade, not medical advice · <a href="https://ze.longevity.ge">Ze theory</a> · <a href="https://mcara.longevity.ge">MCARA</a> · <a href="https://cdata.longevity.ge">CEDAR</a> · <a href="https://fclc.longevity.ge">FCLC</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function num(id){ return parseFloat($(id).value); }
+  function fmt(x, n){ return (x===null||x===undefined||isNaN(x)) ? "—" : Number(x).toFixed(n===undefined?3:n); }
+  var colors = { low:"#166534", medium:"#92400e", high:"#991b1b" };
+
+  async function api(path, body){
+    var r = await fetch("/api/"+path, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)});
+    if(!r.ok){ var e=await r.json().catch(()=>({})); throw new Error((e&&e.error)||("HTTP "+r.status)); }
+    return r.json();
+  }
+
+  async function compute(){
+    $("err").textContent="";
+    var body = { v_eeg:num("v_eeg"), v_hrv:num("v_hrv"), v_resp:num("v_resp"), v_sleep:num("v_sleep") };
+    var d = num("d"), age = num("age"), chi_now = num("chi_now"), chi_7d = num("chi_7d");
+    var sex = $("sex").value;
+    $("loading").style.display="inline-block";
+    try{
+      var chi = await api("chi_ze", body);
+      var br  = await api("bridge", {d:d});
+      var ex  = await api("exacerbation", {age:age, sex:sex, chi_now:chi_now, chi_7d:chi_7d});
+      $("comp").textContent = fmt(chi.chi_ze,4);
+      $("peeg").textContent = fmt(chi.per_modality && chi.per_modality.eeg,3);
+      $("phrv").textContent = fmt(chi.per_modality && chi.per_modality.hrv,3);
+      $("presp").textContent = fmt(chi.per_modality && chi.per_modality.resp,3);
+      $("psleep").textContent = fmt(chi.per_modality && chi.per_modality.sleep,3);
+      $("vstar").textContent = fmt(chi.v_star,5);
+      $("ba").textContent = fmt(br.a,4);
+      $("bchi").textContent = fmt(br.chi_ze,4);
+      $("risk").textContent = fmt(ex.risk_30d,4);
+      $("logit").textContent = fmt(ex.logit,3);
+      var lv = ex.level || "low";
+      var bl = $("risklevel"); bl.textContent = lv; bl.className = "badge "+(lv==="high"?"b-hi":(lv==="medium"?"b-warn":"b-ok")); bl.style.color = colors[lv];
+      drawBridge();
+    }catch(e){
+      $("err").textContent = "Error: "+e.message;
+    }finally{
+      $("loading").style.display="none";
+    }
+  }
+
+  async function drawBridge(){
+    var pts=[];
+    for(var i=0;i<=20;i++){ var dd=i/20; try{ var r=await api("bridge",{d:dd}); pts.push([dd, r.chi_ze]); }catch(e){} }
+    var w=500,h=200,pl=40,pr=16,pt=16,pb=30,iw=w-pl-pr,ih=h-pt-pb;
+    var svg=$("bridgeplot"); var s="";
+    s+='<line class="axis" x1="'+pl+'" y1="'+pt+'" x2="'+pl+'" y2="'+(h-pb)+'"/><line class="axis" x1="'+pl+'" y1="'+(h-pb)+'" x2="'+(w-pr)+'" y2="'+(h-pb)+'"/>';
+    s+='<text x="'+(pl-4)+'" y="'+(pt+4)+'" text-anchor="end" font-size="10" fill="#71717a">1</text><text x="'+(pl-4)+'" y="'+(h-pb)+'" text-anchor="end" font-size="10" fill="#71717a">0</text>';
+    s+='<text x="'+pl+'" y="'+(h-8)+'" font-size="10" fill="#71717a">D=0</text><text x="'+(w-pr)+'" y="'+(h-8)+'" text-anchor="end" font-size="10" fill="#71717a">D=1</text>';
+    var poly=pts.map(function(p){ var x=pl+p[0]*iw, y=pt+(1-p[1])*ih; return x.toFixed(1)+","+y.toFixed(1); }).join(" ");
+    s+='<polyline class="curve" points="'+poly+'"/>';
+    svg.innerHTML=s;
+  }
+
+  ["v_eeg","v_hrv","v_resp","v_sleep","d","age","chi_now","chi_7d"].forEach(function(id){
+    $(id).addEventListener("input", function(){ $({v_eeg:"veeg_v",v_hrv:"vhrv_v",v_resp:"vresp_v",v_sleep:"vsleep_v",d:"d_v",age:"age_v",chi_now:"chinow_v",chi_7d:"chi7d_v"}[id]).textContent = $(id).value; compute(); });
+  });
+  $("sex").addEventListener("change", compute);
+
+  // health badge
+  fetch("/api/healthz").then(function(r){ return r.json(); }).then(function(j){
+    if(j && j.status==="ok"){ var b=$("backend_badge"); b.textContent="backend: ok"; b.className="badge b-ok"; }
+  }).catch(function(){ var b=$("backend_badge"); b.textContent="backend: unreachable"; b.className="badge b-warn"; });
+
+  compute();
+})();
+</script>
+</body>
+</html>
