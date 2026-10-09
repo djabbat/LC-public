@@ -12,6 +12,7 @@
 | **Division-Dependent Erosion Coefficient** | `α₂` | 50 — 200 | [bp / PD] | PMID: 24374808, PMID: 30650660 | **Fixed (Range)** | Loss per population doubling under low stress conditions. |
 | **Critical Replicative Limit (Scale Factor)** | `n₂*` | 40 — 60 | [PD] (dimensionless) | Hayflick & Moorhead, 1961; PMID: 38581556 | **Fixed (Range)** | Hayflick limit. Depends on conditions (oxygen). Value for standard culture conditions. |
 | **Stress-Dependent Erosion Amplitude** | `β₂` | 20 — 50 | [bp] | Derived from: PMID: 30472697 (shortening in neurons), PMID: 25612739 (shortening in leukocytes ~30 bp/yr) | **Estimated (Poor)** | Amplitude of loss over time `τ₂`. Estimate is very rough, as it depends on unknown `τ₂`. In fact, `β₂/τ₂` is estimated at ~20-50 bp/yr. |
+| **Telomerase/ALT Maintenance Gate** | `T₂` | 0 — 1 (default 0) | dimensionless | PMID: 42751823 (planarian neoblasts, telomerase+ SC); PMID: 31353226 (longest telomeres = signature of SC); PMID: 34664335 (telomere length ≠ telomerase activity) | **Fixed (Range), compartment-specific** | Fraction of erosion compensated by telomerase/ALT. `T₂=0` = telomerase-negative somatic cells (default); `T₂→1` = telomerase-positive SC (α₂_eff→0, n₂*→∞). Added 2026-10-09. |
 
 **Note:** τ₂ is currently labeled as "Hypothesized (Very Poor)". A concrete plan for its estimation is provided in OP-T1, with a target timeline of within the first 12 months of the project.
 

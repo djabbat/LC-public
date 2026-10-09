@@ -44,6 +44,7 @@ class TelomereCounter(BaseCounter):
  beta: float = 40.0, # β₂ [bp]
  tau: float = 0.166, # τ₂ [years] (~2 months)
  n_star: float = 50.0, # n₂* [PD]
+ telomerase_gate: float = 0.0, # T₂ [0..1] telomerase/ALT maintenance gate (0=off, 1=full)
  d_critical: float = 5000.0): # D₂,critical [bp] for f₂
  """
  Initialize the telomere counter with canonical or custom parameters.
@@ -137,6 +138,7 @@ ALPHA_RANGE = (50.0, 200.0) # α₂ [bp/PD]
 BETA_RANGE = (20.0, 50.0) # β₂ [bp]
 TAU_RANGE = (0.083, 0.25) # τ₂ [years] (1-3 months)
 N_STAR_RANGE = (40.0, 60.0) # n₂* [PD]
+TELOMERASE_GATE_DEFAULT = 0.0 # T₂ (0 = telomerase-negative somatic; 1 = telomerase-positive SC, e.g. planarian neoblasts)
 INITIAL_DEFICIT_RANGE = (-15000.0, -10000.0) # D₂,₀ [bp]
 
 # Default values (midpoints of ranges)
