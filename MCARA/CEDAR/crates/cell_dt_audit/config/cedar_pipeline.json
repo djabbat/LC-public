@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "comment": "CEDAR pipeline policy config (data-driven, Demon Core Transfer 2026-10-16). Declares the dependency graph and the dependency policies. Policies match on typed status transitions (from -> to); a policy with the wrong transition type never matches.",
+  "graph": [
+    { "downstream": "calibration", "upstreams": ["datasets"] },
+    { "downstream": "sensitivity", "upstreams": ["calibration"] },
+    { "downstream": "validation", "upstreams": ["calibration", "sensitivity"] },
+    { "downstream": "simulation", "upstreams": ["calibration", "validation"] }
+  ],
+  "policies": [
+    {
+      "policy_id": "p-cal-v",
+      "name": "calibration_must_be_supported_for_validation",
+      "upstream_stage": "calibration",
+      "upstream_transition": "SUPPORTED -> SUPPORTED",
+      "downstream_stage": "validation",
+      "role": "POLICY"
+    },
+    {
+      "policy_id": "p-sens-v",
+      "name": "sensitivity_must_be_supported_for_validation",
+      "upstream_stage": "sensitivity",
+      "upstream_transition": "SUPPORTED -> SUPPORTED",
+      "downstream_stage": "validation",
+      "role": "POLICY"
+    }
+  ]
+}

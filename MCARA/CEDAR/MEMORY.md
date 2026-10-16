@@ -56,6 +56,23 @@
 - Example с реальным MCMC сходится (R²_train≈0.89), ±20% стабильно, валидация Accepted, журнал подписан.
 <!-- /lang:ru -->
 
+## ✅ 2026-10-16 (4) — Data-driven политики (шаг 4)
+
+<!-- lang:ru -->
+### Решение
+- Убрать захардкоженные/строковые политики: граф и политики — из файла (data-driven), переходы — типизированные.
+
+### Что построено
+- **`cell_dt_audit/src/config.rs`**: `StatusTransition` (типизированный; строковый round-trip `"SUPPORTED -> SUPPORTED"` ⟷ объект), `DependencyPolicyConfig`, `DependencyEdge`, `PolicyConfig::from_json/from_file`, `upstreams_of`, `has_applicable_policy` (строгий типизированный матчинг).
+- **`PipelineAudit::set_config`/`upstream_stages`/`check_dependency_config`**: граф из конфига (объявлено → авторитетно, иначе fallback); `check_dependency` тоже матчит типизированно; без конфига `check_dependency_config` → NEED.
+- **`AuditedPipeline::with_config`/`run_validation_config`/`run_full_pipeline_config`**: реальный конвейер управляется политиками из файла.
+- **`config/cedar_pipeline.json`** (sample: 4 edges + 2 политики) + example загружает его.
+
+### Итог
+- **+7 тестов** (5 config.rs + 1 data-driven integration + 1 typed-parse); всего **136** (123 validation + 11 audit unit + 2 audit integration), 0 clippy в новых файлах.
+- Слабое место §7–8 «строковые/захардкоженные политики» закрыто; осталось (честно): линейные фиты в example — упрощение; `check_dependency_config` требует attached-конфиг (нет встроенного дефолтного файла в коде).
+<!-- /lang:ru -->
+
 ## ✅ GeroScience systematic review подан (2026-08-21)
 
 <!-- lang:ru -->

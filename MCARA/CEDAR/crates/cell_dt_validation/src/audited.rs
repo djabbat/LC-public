@@ -15,6 +15,7 @@
 //! The pipeline never fabricates a downstream consequence; it returns a STOP
 //! CARD instead.
 
+use cell_dt_audit::config::PolicyConfig;
 use cell_dt_audit::policy::StageDependencyPolicy;
 use cell_dt_audit::status::StageStatus;
 use cell_dt_audit::stop_card::{NeedClass, StageStopCard};
@@ -67,6 +68,67 @@ impl AuditedPipeline {
             audit: PipelineAudit::new(),
             validation_threshold_r2: 0.75,
         }
+    }
+
+    /// Create an audited pipeline driven entirely by a data-driven `PolicyConfig`
+    /// (dependency graph + policies from a file, not hardcoded).
+    pub fn with_config(config: PolicyConfig) -> Self {
+        let mut p = Self::new();
+        p.audit.set_config(config);
+        p
+    }
+
+    /// Config-driven validation: the dependency check uses the declared graph
+    /// and the typed policies from the attached `PolicyConfig`.
+    #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
+    pub fn run_validation_config(
+        &mut self,
+        suite: &ValidationSuite,
+        author: &str,
+        introduced_threshold: bool,
+    ) -> Result<ValidationStatus, StageStopCard> {
+        self.audit
+            .check_dependency_config(PipelineStage::Validation, StageStatus::Supported)?;
+        if introduced_threshold {
+            return Err(StageStopCard::new(
+                "validation / membrane",
+                "promote validation to SUPPORTED",
+                "acceptance threshold introduced by this run",
+                "externally-declared acceptance threshold",
+                NeedClass::MissingRule,
+                false,
+                None,
+            ));
+        }
+        let status = self.status_from_suite(suite);
+        self.audit.mark_stage(
+            PipelineStage::Validation,
+            status.to_stage_status(),
+            author,
+            &[&format!("r2>{:.2}", self.validation_threshold_r2)],
+        );
+        Ok(status)
+    }
+
+    /// Config-driven full run: datasets → calibration → sensitivity → validation,
+    /// with all dependency checks against the attached `PolicyConfig`.
+    #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
+    pub fn run_full_pipeline_config(
+        &mut self,
+        calibration: &McmcResult,
+        sensitivity_stable: bool,
+        suite: &ValidationSuite,
+        author: &str,
+    ) -> Result<ValidationStatus, StageStopCard> {
+        self.audit.mark_stage(
+            PipelineStage::Datasets,
+            StageStatus::Replicated,
+            author,
+            &["reference-datasets"],
+        );
+        self.record_calibration(calibration, author)?;
+        self.record_sensitivity(sensitivity_stable, author);
+        self.run_validation_config(suite, author, false)
     }
 
     /// Run a validation suite through the audit discipline.

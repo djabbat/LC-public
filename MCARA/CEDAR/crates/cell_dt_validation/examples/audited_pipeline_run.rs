@@ -13,9 +13,9 @@
 ///
 /// Run: `cargo run -p cell_dt_validation --example audited_pipeline_run`
 
+use cell_dt_audit::config::PolicyConfig;
 use cell_dt_audit::journal::JournalGuard;
 use cell_dt_audit::{PipelineStage, StageStatus};
-use cell_dt_audit::policy::StageDependencyPolicy;
 use cell_dt_validation::{
     AuditedPipeline, Metropolis, ReferenceDatasets, ValidationResult, ValidationSuite,
     default_calibration_params, training_fitness,
@@ -96,30 +96,16 @@ fn main() {
         println!("Validation fit: {:<24} R²={:.3} RMSE={:.4}", d.name, r2, rmse);
     }
 
-    // ── 4. Audited run ───────────────────────────────────────────────────────
-    let policies = vec![
-        StageDependencyPolicy::new(
-            "calibration_must_be_supported",
-            "calibration",
-            "SUPPORTED -> SUPPORTED",
-            "validation",
-        ),
-        StageDependencyPolicy::new(
-            "sensitivity_must_be_supported",
-            "sensitivity",
-            "SUPPORTED -> SUPPORTED",
-            "validation",
-        ),
-    ];
+    // ── 4. Audited run, driven by the data-driven policy config ──────────────
+    // Load the dependency graph + policies from the config FILE (not hardcoded).
+    let config_path =
+        format!("{}/../cell_dt_audit/config/cedar_pipeline.json", env!("CARGO_MANIFEST_DIR"));
+    let config = PolicyConfig::from_file(&config_path).expect("policy config loads");
+    println!("Policy config loaded: {} edges, {} policies",
+        config.graph.len(), config.policies.len());
 
-    let mut pipeline = AuditedPipeline::new();
-    match pipeline.run_full_pipeline(
-        &result,
-        sensitivity_stable,
-        &suite,
-        "cedar-cli",
-        &policies,
-    ) {
+    let mut pipeline = AuditedPipeline::with_config(config);
+    match pipeline.run_full_pipeline_config(&result, sensitivity_stable, &suite, "cedar-cli") {
         Ok(status) => println!("\nVALIDATION verdict: {:?}", status),
         Err(card) => println!("\nSTOP CARD: {}", card.where_),
     }

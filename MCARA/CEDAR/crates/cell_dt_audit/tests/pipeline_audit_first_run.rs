@@ -191,3 +191,50 @@ fn ced_pipeline_audit_first_run() {
     assert_ne!(RegimeState::Need, RegimeState::Go);
     assert_eq!(NeedClass::MissingRule, NeedClass::MissingRule);
 }
+
+#[test]
+fn data_driven_policy_config_run() {
+    use cell_dt_audit::config::PolicyConfig;
+    use cell_dt_audit::journal::JournalGuard;
+    use cell_dt_audit::status::StageStatus;
+    use cell_dt_audit::stop_card::NeedClass;
+    use cell_dt_audit::{PipelineAudit, PipelineStage};
+
+    // Load the real sample config from the crate (path resolved at compile time).
+    let path = format!("{}/config/cedar_pipeline.json", env!("CARGO_MANIFEST_DIR"));
+    let cfg = PolicyConfig::from_file(&path).expect("sample policy config loads");
+    assert_eq!(cfg.version, 1);
+    assert_eq!(cfg.policies.len(), 2);
+
+    let mut audit = PipelineAudit::new();
+    audit.set_config(cfg);
+
+    // Record calibration + sensitivity as SUPPORTED.
+    audit.mark_stage(PipelineStage::Datasets, StageStatus::Replicated, "ci", &[]);
+    audit.mark_stage(PipelineStage::Calibration, StageStatus::Supported, "ci", &[]);
+    audit.mark_stage(PipelineStage::Sensitivity, StageStatus::Supported, "ci", &[]);
+
+    // Data-driven dependency check passes: declared graph + typed transitions.
+    audit
+        .check_dependency_config(PipelineStage::Validation, StageStatus::Supported)
+        .expect("data-driven policy for SUPPORTED -> SUPPORTED must apply");
+
+    // A promotion with a transition NOT declared by any policy → lawful BLOCK.
+    let err = audit
+        .check_dependency_config(PipelineStage::Validation, StageStatus::Contested)
+        .expect_err("CONTESTED promotion has no applicable policy");
+    assert_eq!(err.stop_class, NeedClass::MissingRule);
+    assert!(!err.can_ask_outside);
+
+    // Without a config attached, the config-driven check BLOCKs (NEED).
+    let bare = PipelineAudit::new();
+    let err = bare
+        .check_dependency_config(PipelineStage::Validation, StageStatus::Supported)
+        .expect_err("no config → NEED / MISSING_RULE");
+    assert_eq!(err.stop_class, NeedClass::MissingRule);
+
+    // The data-driven trail is still signed.
+    let guard = JournalGuard::from_seed([13u8; 32]);
+    let sig = audit.sign_journal(&guard).unwrap();
+    assert!(audit.verify_journal(&guard, &sig));
+}

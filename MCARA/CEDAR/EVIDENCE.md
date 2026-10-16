@@ -1174,6 +1174,12 @@ Two distinct claims made in this paper:
 - **Шаг 3 (2026-10-16): полный lifecycle MCMC в аудите + мембрана калибровки.** `record_calibration(&McmcResult)`
   напрямую (статус из внешних диагностик: R-hat<1.05 + R²_train); мембрана: R² хороший без внешнего
   свидетельства сходимости → self-authorization BLOCK (STOP CARD, NEED/MISSING_RULE); `run_full_pipeline(&McmcResult, ...)`.
-- **Тесты:** 130 зелёных (123 validation + 6 audit unit + 1 integration), 0 clippy в новых файлах.
-- **Слабые места (честно, §7–8 мастера):** линейные фиты в example — упрощение по сравнению с `training_fitness`;
-  dependency-граф и политики — строковые/захардкоженные (data-driven — следующий шаг).
+- **Шаг 4 (2026-10-16): data-driven политики.** `cell_dt_audit/src/config.rs` — `StatusTransition`
+  (типизированный, строковый round-trip `"SUPPORTED -> SUPPORTED"` ⟷ объект), `PolicyConfig`
+  (`from_json`/`from_file`: граф + политики); `PipelineAudit::set_config`/`check_dependency_config`
+  (граф из конфига, строгий типизированный матчинг; без конфига → NEED);
+  `AuditedPipeline::with_config`/`run_full_pipeline_config`; sample `config/cedar_pipeline.json`
+  (4 edges + 2 политики); example загружает конфиг из файла.
+- **Тесты:** 136 зелёных (123 validation + 11 audit unit + 2 audit integration), 0 clippy в новых файлах.
+- **Слабые места (честно, §9 мастера):** линейные фиты в example — упрощение по сравнению с `training_fitness`;
+  `check_dependency_config` требует attached-конфиг (нет встроенного дефолтного файла в коде).

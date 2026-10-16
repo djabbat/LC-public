@@ -9,6 +9,7 @@
 - [x] **EVIDENCE.md обогащён** — секция «Demon Core Transfer → pipeline-аудит» (принципы → реализация → тесты → слабые места)
 - [x] **Интеграция с реальным конвейером (шаг 2):** `cell_dt_validation/src/audited.rs` — `AuditedPipeline` оборачивает ValidationSuite + calibration/sensitivity (dependency policy, мембрана, статус из реальных результатов); `examples/audited_pipeline_run.rs` — реальный MCMC + ±20% sensitivity + фиты по ROS/Telomere/CHIP VAF/MCAI → NETWORK DELTA / STOP MAP / NEED MAP; +4 теста audited (всего 129: 122 validation + 6 audit unit + 1 integration)
 - [x] **Полный lifecycle MCMC в аудите (шаг 3):** `record_calibration(&McmcResult)` напрямую (не boolean-сигналы); **мембрана калибровки** встроена (R² хороший без R-hat → self-authorization BLOCK); `run_full_pipeline(&McmcResult, ...)`; +1 тест мембраны калибровки (всего 130)
+- [x] **Data-driven политики (шаг 4):** `config.rs` — `StatusTransition` (типизированный, строковый round-trip), `PolicyConfig` (`from_json`/`from_file`, граф + политики); `PipelineAudit::set_config`/`check_dependency_config`; `AuditedPipeline::with_config`/`run_full_pipeline_config`; sample `config/cedar_pipeline.json`; example загружает конфиг из файла; +7 тестов (всего 136)
 <!-- /lang:ru -->
 
 ## 🟢 2026-10-15 — EVM-пилот (детерминистический явно-электронный движок, Anastasov)

@@ -25,11 +25,13 @@
 //!
 //! Master document: `docs/DEMON_CORE_TRANSFER_2026-10-16.md`.
 
+pub mod config;
 pub mod journal;
 pub mod policy;
 pub mod status;
 pub mod stop_card;
 
+pub use config::{DependencyEdge, DependencyPolicyConfig, PolicyConfig, StatusTransition};
 pub use journal::{AuditJournal, AuditJournalEntry, JournalGuard};
 pub use policy::{
     evaluate_composition, CompositionPolicy, CompositionVerdict, JustificationComposition,
@@ -80,6 +82,20 @@ impl PipelineStage {
     }
 }
 
+impl TryFrom<&str> for PipelineStage {
+    type Error = String;
+    fn try_from(s: &str) -> Result<Self, Self::Error> {
+        Ok(match s {
+            "calibration" => Self::Calibration,
+            "sensitivity" => Self::Sensitivity,
+            "validation" => Self::Validation,
+            "datasets" => Self::Datasets,
+            "simulation" => Self::Simulation,
+            other => return Err(format!("unknown pipeline stage: {other}")),
+        })
+    }
+}
+
 /// The pipeline-audit orchestrator: records stage runs non-destructively,
 /// checks dependency policies, and produces STOP CARDS instead of fabricating.
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
@@ -88,11 +104,38 @@ pub struct PipelineAudit {
     pub records: Vec<AuditRecord>,
     /// The append-only audit journal (tamper-evident).
     pub journal: AuditJournal,
+    /// Data-driven policy config (dependency graph + policies). When set,
+    /// `check_dependency` uses the declared graph/policies instead of the
+    /// hardcoded defaults.
+    #[serde(default)]
+    pub config: Option<PolicyConfig>,
 }
 
 impl PipelineAudit {
     pub fn new() -> Self {
         Self::default()
+    }
+
+    /// Attach a data-driven policy config (dependency graph + policies).
+    pub fn set_config(&mut self, config: PolicyConfig) {
+        self.config = Some(config);
+    }
+
+    /// Upstream stages for a stage: from the data-driven graph if set,
+    /// otherwise from the builtin default graph.
+    pub fn upstream_stages(&self, stage: PipelineStage) -> Vec<PipelineStage> {
+        match &self.config {
+            Some(cfg) => {
+                if cfg.graph.iter().any(|e| e.downstream == stage.as_str()) {
+                    // Declared in the config graph → authoritative.
+                    cfg.upstreams_of(stage)
+                } else {
+                    // Not declared → builtin default fallback.
+                    stage.upstream_dependencies().to_vec()
+                }
+            }
+            None => stage.upstream_dependencies().to_vec(),
+        }
     }
 
     /// Record a stage run as a NEW assertion (non-destructive MARK):
@@ -162,6 +205,8 @@ impl PipelineAudit {
     /// Stage dependency policy: a stage may be promoted to `wanted` only if an
     /// applicable upstream policy exists for each declared dependency.
     ///
+    /// The dependency edges come from the data-driven graph (if set) or the
+    /// builtin default; policies are matched on a TYPED `StatusTransition`.
     /// Without an applicable policy the pipeline must not invent the
     /// downstream consequence — it BLOCKs and returns a STOP CARD (NEED).
     #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
@@ -171,15 +216,17 @@ impl PipelineAudit {
         wanted: StageStatus,
         policies: &[StageDependencyPolicy],
     ) -> Result<(), StageStopCard> {
-        for upstream in stage.upstream_dependencies() {
-            let up_status = self.current_status(*upstream);
+        for upstream in self.upstream_stages(stage) {
+            let up_status = self.current_status(upstream);
             let Some(up_status) = up_status else {
-                return Err(stage_missing_upstream(stage, *upstream));
+                return Err(stage_missing_upstream(stage, upstream));
             };
-            let transition = format!("{} -> {}", up_status.as_str(), wanted.as_str());
+            let transition = crate::config::StatusTransition::new(up_status, wanted);
             let applicable = policies.iter().any(|p| {
                 p.upstream_stage == upstream.as_str()
-                    && p.upstream_transition == transition
+                    && crate::config::StatusTransition::parse(&p.upstream_transition)
+                        .map(|t| t == transition)
+                        .unwrap_or(false)
                     && p.downstream_stage == stage.as_str()
             });
             if !applicable {
@@ -187,7 +234,49 @@ impl PipelineAudit {
                     format!("{:?} promotion", stage),
                     &format!("promote {:?} to {:?}", stage, wanted),
                     &format!("upstream {:?} = {:?}", upstream, up_status),
-                    &format!("applicable dependency policy for '{transition}'"),
+                    &format!("applicable dependency policy for '{}'", transition.as_str()),
+                    NeedClass::MissingRule,
+                    false,
+                    None,
+                ));
+            }
+        }
+        Ok(())
+    }
+
+    /// Dependency check driven entirely by the data-driven `PolicyConfig`:
+    /// the declared graph supplies the dependency edges and the declared
+    /// policies supply the allowed typed transitions. If no config is set,
+    /// this BLOCKs (NEED / MISSING_RULE).
+    #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
+    pub fn check_dependency_config(
+        &self,
+        stage: PipelineStage,
+        wanted: StageStatus,
+    ) -> Result<(), StageStopCard> {
+        let Some(cfg) = &self.config else {
+            return Err(StageStopCard::new(
+                "dependency policy",
+                &format!("promote {:?} to {:?}", stage, wanted),
+                "no data-driven policy config attached",
+                "PolicyConfig (graph + policies)",
+                NeedClass::MissingRule,
+                false,
+                None,
+            ));
+        };
+        for upstream in self.upstream_stages(stage) {
+            let up_status = self.current_status(upstream);
+            let Some(up_status) = up_status else {
+                return Err(stage_missing_upstream(stage, upstream));
+            };
+            let transition = crate::config::StatusTransition::new(up_status, wanted);
+            if !cfg.has_applicable_policy(upstream, transition, stage) {
+                return Err(StageStopCard::new(
+                    format!("{:?} promotion", stage),
+                    &format!("promote {:?} to {:?}", stage, wanted),
+                    &format!("upstream {:?} = {:?}", upstream, up_status),
+                    &format!("applicable dependency policy for '{}'", transition.as_str()),
                     NeedClass::MissingRule,
                     false,
                     None,
