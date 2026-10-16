@@ -1171,6 +1171,9 @@ Two distinct claims made in this paper:
 - **`examples/audited_pipeline_run.rs`** — реальный прогон: MCMC сходится (R²_train≈0.89),
   ±20% чувствительность стабильна (ΔR²≈0.0000), фиты ROS/Telomere/CHIP VAF/MCAI → вердикт
   Accepted; вывод NETWORK DELTA / STOP MAP / NEED MAP; журнал подписан HMAC-SHA256.
-- **Тесты:** 129 зелёных (122 validation + 6 audit unit + 1 integration), 0 clippy в новых файлах.
-- **Слабые места (честно, §7 мастера):** MCMC→аудит через boolean-сигналы, а не тип McmcResult;
-  мембрана калибровки не обёрнута в `record_calibration`; линейные фиты — упрощение.
+- **Шаг 3 (2026-10-16): полный lifecycle MCMC в аудите + мембрана калибровки.** `record_calibration(&McmcResult)`
+  напрямую (статус из внешних диагностик: R-hat<1.05 + R²_train); мембрана: R² хороший без внешнего
+  свидетельства сходимости → self-authorization BLOCK (STOP CARD, NEED/MISSING_RULE); `run_full_pipeline(&McmcResult, ...)`.
+- **Тесты:** 130 зелёных (123 validation + 6 audit unit + 1 integration), 0 clippy в новых файлах.
+- **Слабые места (честно, §7–8 мастера):** линейные фиты в example — упрощение по сравнению с `training_fitness`;
+  dependency-граф и политики — строковые/захардкоженные (data-driven — следующий шаг).

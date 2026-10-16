@@ -40,6 +40,22 @@
 - Слабые места интеграции (честно, в §7 мастер-документа): MCMC→аудит через boolean-сигналы, а не тип McmcResult; мембрана калибровки не обёрнута в `record_calibration`; линейные фиты в example — упрощение.
 <!-- /lang:ru -->
 
+## ✅ 2026-10-16 (3) — Полный lifecycle MCMC в аудите + мембрана калибровки (шаг 3)
+
+<!-- lang:ru -->
+### Решение
+- Закрыть слабые места §7 п.1–2: аудит принимает `McmcResult` напрямую; мембрана калибровки встроена.
+
+### Что построено
+- **`record_calibration(&McmcResult)`** — статус из внешних диагностик (R-hat < 1.05 + R²_train), без boolean-прокладки.
+- **Мембрана калибровки:** R² хороший, но нет внешнего свидетельства сходимости (R-hat пуст/NaN) → self-authorization BLOCK (STOP CARD, NEED/MISSING_RULE); запись SUPPORTED не создаётся.
+- **`run_full_pipeline(&McmcResult, sensitivity_stable, ...)`** — полный конвейер с реальным результатом MCMC.
+
+### Итог
+- **+1 тест** `calibration_membrane_blocks_self_authorization`; всего **130** (123 validation + 6 audit unit + 1 integration), 0 clippy.
+- Example с реальным MCMC сходится (R²_train≈0.89), ±20% стабильно, валидация Accepted, журнал подписан.
+<!-- /lang:ru -->
+
 ## ✅ GeroScience systematic review подан (2026-08-21)
 
 <!-- lang:ru -->

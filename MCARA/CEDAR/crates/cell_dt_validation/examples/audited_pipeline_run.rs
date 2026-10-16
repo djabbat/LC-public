@@ -114,8 +114,7 @@ fn main() {
 
     let mut pipeline = AuditedPipeline::new();
     match pipeline.run_full_pipeline(
-        converged,
-        result.r2_training,
+        &result,
         sensitivity_stable,
         &suite,
         "cedar-cli",

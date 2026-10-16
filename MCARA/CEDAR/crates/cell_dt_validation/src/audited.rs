@@ -19,6 +19,7 @@ use cell_dt_audit::policy::StageDependencyPolicy;
 use cell_dt_audit::status::StageStatus;
 use cell_dt_audit::stop_card::{NeedClass, StageStopCard};
 use cell_dt_audit::{PipelineAudit, PipelineStage};
+use crate::calibration::McmcResult;
 use crate::validation::{ValidationResult, ValidationSuite};
 
 /// Outcome of an audited validation run.
@@ -117,25 +118,55 @@ impl AuditedPipeline {
         Ok(status)
     }
 
-    /// Record a calibration run's status: converged (R-hat < 1.05) AND
-    /// acceptable training R² → SUPPORTED; not converged → CONTESTED;
-    /// converged but weak fit → OPEN.
+    /// Record a calibration run from its real `McmcResult`.
+    ///
+    /// Status is derived from the external diagnostics, never from the
+    /// posterior this run itself introduces:
+    /// - converged (R-hat < 1.05) AND acceptable training R² → SUPPORTED;
+    /// - convergence evidence present but not converged → CONTESTED;
+    /// - otherwise → OPEN.
+    ///
+    /// **Transaction membrane (DCT08–DCT09):** a run that would otherwise be
+    /// SUPPORTED cannot authorize itself with its own posterior mean when no
+    /// external convergence evidence exists (all R-hat missing/NaN) — that is
+    /// self-authorization and the run BLOCKs with a STOP CARD (NEED / MISSING_RULE).
+    #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
     pub fn record_calibration(
         &mut self,
-        r_hat_converged: bool,
-        r2_training: f64,
+        result: &McmcResult,
         author: &str,
-    ) -> StageStatus {
-        let status = if r_hat_converged && r2_training > self.validation_threshold_r2 {
+    ) -> Result<StageStatus, StageStopCard> {
+        let has_convergence_evidence =
+            !result.r_hat.is_empty() && result.r_hat.iter().any(|&r| !r.is_nan());
+        let converged = has_convergence_evidence
+            && result.r_hat.iter().all(|&r| r.is_nan() || r < 1.05);
+        let r2_ok = result.r2_training > self.validation_threshold_r2;
+
+        // Membrane: SUPPORTED requires external convergence evidence; without
+        // it the run would be authorizing itself with its own posterior.
+        if r2_ok && !has_convergence_evidence {
+            return Err(StageStopCard::new(
+                "calibration / membrane",
+                "promote calibration to SUPPORTED",
+                "posterior params introduced by this run; no convergence evidence",
+                "external convergence evidence (R-hat < 1.05)",
+                NeedClass::MissingRule,
+                false,
+                None,
+            ));
+        }
+
+        let status = if converged && r2_ok {
             StageStatus::Supported
-        } else if !r_hat_converged {
+        } else if !converged && has_convergence_evidence {
             StageStatus::Contested
         } else {
             StageStatus::Open
         };
-        self.audit
+        Ok(self
+            .audit
             .mark_stage(PipelineStage::Calibration, status, author, &["mcmc"])
-            .status
+            .status)
     }
 
     /// Record a sensitivity run: stable under ±20% perturbation → SUPPORTED.
@@ -156,8 +187,7 @@ impl AuditedPipeline {
     #[allow(clippy::result_large_err)] // a STOP CARD is deliberately information-rich
     pub fn run_full_pipeline(
         &mut self,
-        r_hat_converged: bool,
-        r2_training: f64,
+        calibration: &McmcResult,
         sensitivity_stable: bool,
         suite: &ValidationSuite,
         author: &str,
@@ -169,7 +199,7 @@ impl AuditedPipeline {
             author,
             &["reference-datasets"],
         );
-        self.record_calibration(r_hat_converged, r2_training, author);
+        self.record_calibration(calibration, author)?;
         self.record_sensitivity(sensitivity_stable, author);
         // Validation may only run if calibration+sensitivity are SUPPORTED and
         // an applicable policy exists — otherwise a lawful STOP CARD.
@@ -236,18 +266,33 @@ mod tests {
         ]
     }
 
+    /// Build a real `McmcResult` (the pipeline runs the real MCMC; here we
+    /// construct one to control convergence / fitness deterministically).
+    fn mcmc(r_hat: Vec<f64>, r2: f64) -> McmcResult {
+        McmcResult {
+            param_names: vec!["tau_protection", "pi_0"],
+            samples: vec![],
+            acceptance_rate: 0.31,
+            r_hat,
+            posterior_mean: vec![24.3, 0.87],
+            posterior_sd: vec![1.0, 0.05],
+            r2_training: r2,
+            rmse_training: 0.05,
+        }
+    }
+
     #[test]
     fn full_pipeline_run_audits_validation_non_destructively() {
         let mut p = AuditedPipeline::new();
         let suite = suite_from_fits("CHIP", 0.79, 0.05, 0.04, 5);
 
         let outcome = p
-            .run_full_pipeline(true, 0.82, true, &suite, "ci", &default_policies())
+            .run_full_pipeline(&mcmc(vec![1.01], 0.82), true, &suite, "ci", &default_policies())
             .expect("converged calibration + stable sensitivity + policies → validation runs");
         assert_eq!(outcome, ValidationStatus::Accepted);
 
         // Second run appends a new epoch; history keeps both runs.
-        p.run_full_pipeline(true, 0.80, true, &suite, "ci", &default_policies())
+        p.run_full_pipeline(&mcmc(vec![1.00], 0.80), true, &suite, "ci", &default_policies())
             .unwrap();
         let history = p.audit.history_of(PipelineStage::Validation);
         assert_eq!(history.len(), 2, "prior validation runs must be kept");
@@ -265,11 +310,15 @@ mod tests {
 
     #[test]
     fn validation_blocks_when_upstream_not_supported() {
-        // Calibration contested (not converged) → validation must BLOCK with a
-        // classified STOP CARD (NEED / MISSING_RULE), not fabricate.
+        // Calibration contested (R-hat = 2.0, not converged) → validation must
+        // BLOCK with a classified STOP CARD (NEED / MISSING_RULE), not fabricate.
         let mut p = AuditedPipeline::new();
         let suite = suite_from_fits("CHIP", 0.79, 0.05, 0.04, 5);
-        p.record_calibration(false, 0.82, "ci"); // not converged → CONTESTED
+        assert_eq!(
+            p.record_calibration(&mcmc(vec![2.0], 0.82), "ci")
+                .unwrap(),
+            StageStatus::Contested
+        );
 
         let err = p
             .run_validation(&suite, "ci", &default_policies(), false)
@@ -284,9 +333,33 @@ mod tests {
     }
 
     #[test]
+    fn calibration_membrane_blocks_self_authorization() {
+        // A run with a good posterior R² but NO convergence evidence is trying
+        // to authorize its own SUPPORTED status with its own posterior → BLOCK.
+        let mut p = AuditedPipeline::new();
+        let err = p
+            .record_calibration(&mcmc(vec![f64::NAN], 0.90), "ci")
+            .unwrap_err();
+        assert_eq!(err.stop_class, NeedClass::MissingRule);
+        assert_eq!(err.where_.contains("membrane"), true);
+        assert_eq!(
+            p.audit.current_status(PipelineStage::Calibration),
+            None,
+            "self-authorized calibration must NOT be recorded as SUPPORTED"
+        );
+
+        // With external convergence evidence the same R² is lawfully SUPPORTED.
+        assert_eq!(
+            p.record_calibration(&mcmc(vec![1.02], 0.90), "ci")
+                .unwrap(),
+            StageStatus::Supported
+        );
+    }
+
+    #[test]
     fn validation_membrane_rejects_self_introduced_threshold() {
         let mut p = AuditedPipeline::new();
-        p.record_calibration(true, 0.82, "ci");
+        p.record_calibration(&mcmc(vec![1.01], 0.82), "ci").unwrap();
         p.record_sensitivity(true, "ci");
         let suite = suite_from_fits("CHIP", 0.79, 0.05, 0.04, 5);
         // The run tries to introduce its own acceptance threshold → banned.
@@ -304,7 +377,7 @@ mod tests {
     fn status_reflects_actual_results_no_fabrication() {
         // Weak fits → REFUTED; mixed → CONTESTED; empty → OPEN.
         let mut p = AuditedPipeline::new();
-        p.record_calibration(true, 0.82, "ci");
+        p.record_calibration(&mcmc(vec![1.01], 0.82), "ci").unwrap();
         p.record_sensitivity(true, "ci");
 
         let weak = suite_from_fits("CHIP", 0.5, 0.2, 0.15, 5);
