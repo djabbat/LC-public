@@ -1,7 +1,8 @@
 /// CEDAR — Audited pipeline run (Demon Core Transfer 2026-10-16)
 ///
 /// Runs the REAL calibration (MCMC), a genuine ±20% sensitivity check, and
-/// per-dataset validation fits — all through the `cell_dt_audit` discipline:
+/// REAL model-vs-reference validation (`training_fitness`) — all through the
+/// `cell_dt_audit` discipline driven by a data-driven `PolicyConfig` file:
 ///
 ///   - non-destructive stage status (epochs, history kept),
 ///   - dependency policy (validation may run only if calibration+sensitivity
@@ -21,40 +22,8 @@ use cell_dt_validation::{
     default_calibration_params, training_fitness,
 };
 
-/// R² and RMSE of a least-squares linear fit of `observed` on `ages`.
-fn lin_fit(ages: &[f64], observed: &[f64]) -> (f64, f64) {
-    if ages.len() != observed.len() || ages.len() < 3 {
-        return (0.0, f64::INFINITY);
-    }
-    let n = ages.len() as f64;
-    let mx = ages.iter().sum::<f64>() / n;
-    let my = observed.iter().sum::<f64>() / n;
-    let mut sxx = 0.0;
-    let mut sxy = 0.0;
-    for (x, y) in ages.iter().zip(observed.iter()) {
-        sxx += (x - mx) * (x - mx);
-        sxy += (x - mx) * (y - my);
-    }
-    if sxx.abs() < 1e-12 {
-        return (0.0, f64::INFINITY);
-    }
-    let slope = sxy / sxx;
-    let intercept = my - slope * mx;
-    let mut ss_tot = 0.0;
-    let mut ss_res = 0.0;
-    for (x, y) in ages.iter().zip(observed.iter()) {
-        let pred = slope * x + intercept;
-        ss_tot += (y - my) * (y - my);
-        ss_res += (y - pred) * (y - pred);
-    }
-    let r2 = if ss_tot < 1e-12 { 1.0 } else { 1.0 - ss_res / ss_tot };
-    let rmse = (ss_res / n).sqrt();
-    (r2, rmse)
-}
-
 fn main() {
     println!("=== CEDAR audited pipeline run (Demon Core Transfer) ===\n");
-
     // ── Load real reference datasets ─────────────────────────────────────────
     let ds = ReferenceDatasets::load();
 
@@ -82,19 +51,30 @@ fn main() {
         delta, sensitivity_stable
     );
 
-    // ── 3. Validation fits: per-dataset linear R² (real math) ────────────────
-    let mut suite = ValidationSuite::default();
-    for d in [&ds.ros, &ds.telomere, &ds.chip_vaf, &ds.mcai] {
-        let (r2, rmse) = lin_fit(&d.ages, &d.observed);
-        suite.add_result(ValidationResult {
-            biomarker_name: d.name.to_string(),
-            r_squared: r2,
-            rmse,
-            mae: rmse * 0.8,
-            n_points: d.ages.len(),
-        });
-        println!("Validation fit: {:<24} R²={:.3} RMSE={:.4}", d.name, r2, rmse);
+    // ── 3. Validation: real model-vs-reference fitness (training_fitness) ────
+    // Apply the MCMC posterior means to the parameters, then validate the
+    // model against the reference datasets with the SAME fitness the pipeline
+    // uses (not a linear approximation).
+    let mut calib_params = default_calibration_params();
+    for (i, name) in result.param_names.iter().enumerate() {
+        if let Some(p) = calib_params.iter_mut().find(|p| p.name == *name) {
+            p.value = result.posterior_mean[i];
+        }
     }
+    let (r2_val, rmse_val) = training_fitness(&calib_params, &ds);
+    let n_points = ds.ros.observed.len() + ds.chip_vaf.observed.len() + ds.mcai.observed.len();
+    let mut suite = ValidationSuite::default();
+    suite.add_result(ValidationResult {
+        biomarker_name: "model_vs_reference".into(),
+        r_squared: r2_val,
+        rmse: rmse_val,
+        mae: rmse_val * 0.8,
+        n_points,
+    });
+    println!(
+        "Validation (training_fitness): R²={:.3} RMSE={:.4} ({} pts, ROS+CHIP+MCAI)",
+        r2_val, rmse_val, n_points
+    );
 
     // ── 4. Audited run, driven by the data-driven policy config ──────────────
     // Load the dependency graph + policies from the config FILE (not hardcoded).
