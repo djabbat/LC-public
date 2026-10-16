@@ -50,3 +50,17 @@ Ze/bristlebot_sim
 # ── Запрещено к публикации (правило: только научное) ─────────────────
 Ze/PN/
 Ze/Ze_CHSH/FoP_Submission/
+
+# ── История очищена 2026-10-16 (filter-repo): файлы остались локально ──
+**/PEER_REVIEW*
+**/peer_review*
+**/Peer_Review*
+**/critical_reply*
+**/Email_*
+**/EMAIL_*
+**/TSERTSVADZE_EMAIL*
+**/email_from_*
+**/email_followup*
+**/answer_to_*
+**/LoI*
+**/LOI*
