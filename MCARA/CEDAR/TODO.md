@@ -2,6 +2,14 @@
 
 > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`
 
+## 🟢 2026-10-16 — Demon Core Transfer → pipeline-аудит (cell_dt_audit)
+<!-- lang:ru -->
+- [x] **Кран `crates/cell_dt_audit` создан** — перенос исполнительной дисциплины демон-ядра (Noepedia волна 3, DCT01–DCT20) на аудит вычислительного конвейера: неразрушающий статус стадии, STOP/NEED + STOP CARD, transaction membrane, dependency policy, composition semantics, tamper-evident журнал (HMAC-SHA256). Мастер: `docs/DEMON_CORE_TRANSFER_2026-10-16.md`
+- [x] **7 тестов зелёные** (6 unit + первый сквозной прогон `tests/pipeline_audit_first_run.rs`), 0 clippy-замечаний
+- [x] **EVIDENCE.md обогащён** — секция «Demon Core Transfer → pipeline-аудит» (принципы → реализация → тесты → слабые места)
+- [ ] **Следующий шаг:** связать `cell_dt_audit` с реальными стадиями — обернуть MCMC-калибровку и ValidationSuite в `PipelineAudit` (отдельный PR)
+<!-- /lang:ru -->
+
 ## 🟢 2026-10-15 — EVM-пилот (детерминистический явно-электронный движок, Anastasov)
 <!-- lang:ru -->
 - [x] **Пилот выполнен:** глицин + Gly-Gly стабильны (RMSD 0.028 / 0.101 Å) — `scripts/evm_pilot/REPORT.md` (мастер: `~/Desktop/Services/docs/ANALYSIS_2026-10-15_Anastasov_DeterministicPhysics.md`)

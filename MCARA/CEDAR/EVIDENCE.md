@@ -1128,3 +1128,37 @@ Two distinct claims made in this paper:
 
 ### Rebuild-прецедент для LERR (важно для Track C / StemEntropy)
 - **p53-зависимое обретение центросом в дедифференцирующихся миотубах (42786221)** = валидированный аналог фазы Rebuild без импорта; согласуется с идеей Centriole Import (2026-10-15) и с правилом «лицензирование ≤2, иначе мультиполярность/CIN» (Leone & Engel 2019, 31301302).
+
+---
+
+## 🔥 NEW 2026-10-16 — Demon Core Transfer → pipeline-аудит (cell_dt_audit)
+
+> **Мастер:** `docs/DEMON_CORE_TRANSFER_2026-10-16.md`. **Источник принципов:** Noepedia Demon Core
+> Harvest (DAIS `docs/NOEPEDIA_DEMON_CORE_HARVEST_2026-10-16.md`, DCT01–DCT20, DEMON_CORE_SPEC).
+> **Код:** `crates/cell_dt_audit` (Rust; зависимость только hmac/sha2). **Статус:** реализован +
+> 7 тестов (6 unit + 1 первый сквозной прогон), 0 clippy-замечаний.
+
+### Перенос исполнительной дисциплины демона на конвейер CEDAR
+Волна-2 Noepedia (K-лестница, два свидетеля, REQUIRED_ROLE) уже в CEDAR. Волна-3 добавляет
+**как конвейер обязан останавливаться, не выдумывать, не затирать историю и не самолегитимизироваться**:
+
+| Принцип (демон-ядро, DCT) | Реализация в `cell_dt_audit` | Тест |
+|---|---|---|
+| Non-destructive MARK / история ≠ текущее (DCT11–12) | `AuditRecord` (stage/epoch/scope) + `PipelineAudit::mark_stage`; `history_of()` хранит все прогоны | эпохи 1→2, история из 2 записей |
+| STOP/NEED + STOP CARD (DEMON §7–8) | `RegimeState` (GO/ASK/BLOCK/NEED), `NeedClass` (12), `StageStopCard` | стадия без политики → BLOCK, не фабрикует |
+| Transaction membrane (DCT08–09) | `PipelineAudit::membrane_check` — прогон не авторизуется параметром, который сам вводит | `SELF_AUTHORIZATION` отклонён; внешний параметр разрешён |
+| Dependency policy в сети (DCT05–07) | `StageDependencyPolicy` (ROLE=POLICY) + `check_dependency` | без политики → NEED/MISSING_RULE; с политикой → проход |
+| Composition semantics (DCT19–20) | `CompositionPolicy` + `evaluate_composition` (ALTERNATIVE/JOINT) | один датасет challenged: ALTERNATIVE выживает, JOINT падает |
+| TRACE CONTINUITY + подпись журнала (DCT10–12, P2) | `AuditJournal` (archive/compact/`check_trace_continuity`) + `JournalGuard` (HMAC-SHA256) | честный трейл верифицируется; изменение ломает подпись; компактирование сохраняет адреса |
+
+### Отличия от DAIS (сознательные)
+- **HMAC-SHA256 вместо Ed25519**: локальный трейл анализа — tamper-evidence достаточно;
+  сертификация/мульти-сторонний аудит потребовал бы Ed25519 (как в DAIS) — зафиксировано как слабое место §5.
+- **In-memory, без БД/сети** (проект «analysis only»); интеграция с реальными стадиями
+  `cell_dt_validation`/`cell_dt_cli` — следующий шаг.
+
+### Слабые места (честно, детали в мастер-документе §5)
+- Dependency-граф захардкожен в коде (не data-driven); политики сравниваются строково;
+  `StageStopCard` проще, чем в DAIS (нет списков provenance/scope в карте);
+  «молчание ≠ поддержка» сейчас структурно, автоматического конвейер-проверятеля ещё нет;
+  реальные MCMC-прогоны через аудит-слой не проверены (кран стоит отдельно).

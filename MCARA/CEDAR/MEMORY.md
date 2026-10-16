@@ -1,3 +1,29 @@
+## ✅ 2026-10-16 — Demon Core Transfer → pipeline-аудит (cell_dt_audit)
+
+<!-- lang:ru -->
+### Решение
+- Перенести исполнительную дисциплину Noepedia демон-ядра (волна 3: DCT01–DCT20 / DEMON_CORE_SPEC) из DAIS в аудит вычислительного конвейера CEDAR. Волна-2 (K-лестница, два свидетеля) уже была в CEDAR; не хватало «как конвейер останавливается, не выдумывает, не затирает историю и не самолегитимизируется».
+
+### Что построено
+- **Кран `crates/cell_dt_audit`** (Rust, зависимость только hmac/sha2):
+  - `status.rs` — `StageStatus` (K-лестница) + `AuditRecord` (stage/epoch/scope, non-destructive);
+  - `stop_card.rs` — `RegimeState` (GO/ASK/BLOCK/NEED) + `NeedClass` (12) + `StageStopCard`;
+  - `policy.rs` — `StageDependencyPolicy` (ROLE=POLICY) + `CompositionPolicy`/`evaluate_composition`;
+  - `journal.rs` — `AuditJournal` (append-only, archive/compact/check_trace_continuity) + `JournalGuard` (HMAC-SHA256);
+  - `lib.rs` — `PipelineStage` (5 стадий) + `PipelineAudit` (mark_stage/membrane_check/check_dependency).
+- **7 тестов** (6 unit + первый сквозной прогон), 0 clippy-замечаний.
+
+### Ключевое решение (отличие от DAIS)
+- **HMAC-SHA256 вместо Ed25519** — локальный трейл анализа: tamper-evidence достаточно; сертификация/мульти-сторонний аудит потребовал бы Ed25519 (как в DAIS) — зафиксировано в слабых местах §5 мастер-документа.
+- In-memory, без БД/сети (проект «analysis only»).
+
+### Слабые места (честно)
+- Dependency-граф захардкожен; политики сравниваются строково; `StageStopCard` проще DAIS-версии; «молчание ≠ поддержка» структурно, автоматического конвейер-проверятеля нет; реальные MCMC-прогоны через аудит-слой не проверены (кран стоит отдельно).
+
+### Мастер-документ
+- `docs/DEMON_CORE_TRANSFER_2026-10-16.md` · EVIDENCE.md обогащён · TODO пункт закрыт (кроме интеграции с реальными стадиями — отдельный PR).
+<!-- /lang:ru -->
+
 ## ✅ GeroScience systematic review подан (2026-08-21)
 
 <!-- lang:ru -->
