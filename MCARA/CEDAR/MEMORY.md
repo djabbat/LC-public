@@ -749,3 +749,14 @@ Recorded: THEORY.md Axiom C1, CONCEPT.md, workshop_entropy_in_aging_2pages, EVID
 **Step 2 (Eliminate).** Clear the old centriole; restore telomeres; strip epigenetic marks; select healthy mitochondria.
 **Step 3 (Reprogram).** Induce totipotency with DUX4 + KDM4D + DPPA3.
 **Step 4 (Rebuild).** Regenerate young centrioles de novo; derive safe, young adult stem cells.
+
+---
+
+## 2026-10-05: 📚 Аларт Semantic Scholar — Центросомная наследственность эмбриона × ооцитарная точность
+- **Источник:** 6 статей еженедельного аларта (Lozano-Prieto, Ju/Zhu, Ortiz-Álvarez, Yin&Spradling, Aparicio, Sathananthan) + глубокий поиск PubMed (12+ подтверждающих PMID).
+- **Полный разбор:** `docs/ANALYSIS_2026-10-05_CentrosomeInheritance_OocyteFidelity.md` + EVIDENCE.md 2026-10-05.
+- **Ключевые находки:**
+  - Germline reset молекулярно обоснован: CDK1→SAS-6 LLPS → элиминация (Qi 2025, PMID 40410380; Huang 2022, 36356903) + ацентросомное окно (huoMTOC, Wu 2022, 36395215) + отцовская ре-инициация (Fishman 2018, 29880810; Sathananthan 1997, 9225167) + амплификация через осцилляторы (Ortiz-Álvarez 2026, 42782440).
+  - «D≈0» зиготы под вопросом: отцовская центриоль может нести энтропию → **новый фальсификатор: polyGlu/окисление на проксимальной центриоли зиготы × возраст отца (КРС-модель)**.
+  - Центриоль = автономный осциллятор, сопряжённый с клеточным циклом (Ow & Aydogan 2026, 42782439) → уточнение уравнения времени CEDAR.
+- **Решения:** Counter #1 → 8.5/10; Эксперимент 4 (перенос отцовской энтропии, ~$41K) добавлен в EXPERIMENTAL_DESIGNS.

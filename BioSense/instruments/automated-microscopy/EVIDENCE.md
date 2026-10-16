@@ -47,13 +47,36 @@ Verified facts, references, and internal data supporting design choices in this 
 | GPT-4 driving chemical synthesis planning (Boiko et al. 2023 Nature) | Boiko et al. 2023 | DOI: 10.1038/s41586-023-06792-0; PMID: 38123806 | ✅ 2026-04-21 | Strong |
 | ChemCrow — LLM with chemistry tools (Bran et al. 2024 Nat Machine Intell) | Bran et al. 2024 | 10.1038/s42256-024-00832-8 | ✅ 2026-04-21 | Strong |
 
-**Note:** As of now, there is no published precedent of **LLM agent (Claude-class) operating microscopy in `/overnight` mode for aging biology experiments**. This subproject would be among the first. Novel, but not unprecedented (follows chemistry lab automation paradigm).
+**Note (обновлено 2026-10-07):** Прецеденты LLM-агентов, управляющих микроскопией, теперь существуют: SYNAPS-I (Argonne/DOE, X-ray ptychography + SAM3, 2026), SIMBA (single-molecule imaging), AutoRASOR (автономный SEM), AFM-агент через MCP (arXiv:2608.26198), Self-Driving SPM (PMID 42447372). Специфика этого подпроекта сохраняется как ниша: **(а) биология старения/центриоли, (б) DIY-ретрофит <$10k, (в) overnight-автономия на потребительском железе, (г) open-source**. Подтверждающие refs — в секции ниже.
+
+## Agentic AI & foundation-model microscopy — verified refs (2026-10-07)
+
+> Источники: techxplore (Argonne SYNAPS-I, 2026-10-06) + Zenodo 21918325 (LoRA на 4 ГБ GPU). Подтверждено поиском по arXiv API, Europe PMC (PubMed), Crossref. Мастер-анализ: `~/Desktop/Services/docs/AGENTIC_AI_EDGE_FINETUNING_ANALYSIS_2026-10-07.md`.
+
+| Возможность | Источник | PMID / DOI / arXiv | Verified | Strength |
+|-------------|----------|--------------------|----------|----------|
+| Agentic AI управляет микроскопом/beamline по natural language ("measure this region", "map this area"); автономный ROI-поиск; риск-тированная автономия (низкий риск — сам, высокий — человек) | SYNAPS-I, Argonne/DOE Genesis Mission (2026) | techxplore 2026-10-06 (пресс-релиз Argonne) | ✅ 2026-10-07 | Moderate (не peer-reviewed) |
+| Agentic AI для AFM через **MCP**: 3 агента — Messenger (natural language→команды), Pilot (оценка качества изображения LLM), Doctor (диагностика артефактов, прозрачная постобработка) | 2026 | arXiv **2608.26198** | ✅ | Strong (препринт) |
+| SIMBA — агентная платформа для single-molecule многомерной микроскопии (LLM-агенты: интерпретация намерения, оркестрация пайплайнов, денойзинг) | 2026 | DOI **10.64898/2026.04.16.719005** | ✅ | Strong (препринт) |
+| AutoRASOR — автономный SEM-оператор: DINOv3-встраивание + ROI через active learning по морфологической неопределённости; без доменного претрейна | 2026 | arXiv **2609.22411** | ✅ | Strong |
+| Self-Driving Scanning Probe Microscopy: от ускорения к автономному discovery/manipulation (review) | Acc Chem Res 2026 | PMID **42447372** | ✅ | Strong |
+| SAM3 + **LoRA (PEFT)**: 0.98% параметров, обучение на одном consumer GPU, лучше zero-shot SAM3; backbone заморожен | 2026 | arXiv **2607.23694** | ✅ | Strong |
+| SAM3 + LoRA для пожилой популяции: SAM3-AgeSeg (сегментация опухолей костей, LoRA-адаптация к особенностям костей пожилых) | Front Med (Lausanne) 2026 | PMID **42676879** | ✅ | Strong |
+| Сжатие Cellpose-SAM: W8A16 без потерь (все модальности), смешанный W4/W8 = 6.76× (0/176 катастроф), ternary = катастрофа 169/176; аудит по модальностям, не single-number | 2026 | arXiv **2609.21038** | ✅ | Strong |
+| SAMJ — SAM-аннотация прямо в ImageJ/Fiji (быстрая сегментация без кода) | Nat Commun 2026 | PMID **42315510** | ✅ | Strong |
+| SAM2HIPT — SAM2+HIPT для сегментации ядер (иммуногистохимия) | Biomed Phys Eng Express 2026 | PMID **42025178** | ✅ | Strong |
+| MCP-оркестрация лаборатории: NIMO Controller — единый интерфейс человек + AI-агент через MCP-сервера | 2026 | arXiv **2605.15227** | ✅ | Strong |
+| Реальная реконструкция ptychography: часы/дни → секунды, измерение на лету | SYNAPS-I + arXiv подтверждения | techxplore 2026-10-06; arXiv 2609.25684, 2608.02869, 2601.17694 | ✅ | Moderate–Strong |
+| PEFT-дообучение на потребительских GPU (LoRA+ лучший в 18/24 конфигураций; на-устройственная персонализация SLM) | 2026 | arXiv **2608.04488**, **2607.02158** | ✅ | Strong |
+
+**Практическое применение для центриол:** (1) SAM3/SAMJ вместо/вместе с CellPose для сегментации GFP-centrin/γ-tubulin/PCNT; (2) LoRA-адаптация SAM3 к центриолярным изображениям на одном consumer GPU (паттерн arXiv:2607.23694); (3) агентный ROI-поиск (паттерн SYNAPS-I) для нахождения «старой» vs «новой» центриоли в автоматизированном overnight-режиме; (4) аудит сжатия по модальностям (паттерн arXiv:2609.21038), если деплоим на CPU/edge.
+
 ## Internal Data / Artifacts
 
 - `AUTOMATED_MICROSCOPY_SETUP.md` — full engineering specification (this subproject)
 - `~/Documents/Engineering/AutomatedMicroscopy_2026-04-21/` — source material (pre-LC integration)
-- Future: PROMPT.md templates for each Aim
-- Future: Claude Code policy file `microscope-operator.md`
+- **Done 2026-10-07:** `PROMPT.md` — natural-language templates для агента (5 шаблонов: M1 feasibility, ROI-поиск «старая vs новая центриоль», 3-недельный скрининг, аудит сжатия, мониторинг среды) — операционализирует паттерны SYNAPS-I
+- **Done 2026-10-07:** `AGENTS.md` (он же `microscope-operator.md`) — риск-тированная политика агента: auto_allow / require_human_approval / emergency_stop, журналирование, анти-галлюцинация, 48h-валидация, MCP-future
 - Future: bill-of-materials spreadsheet с актуальными 2026 prices
 
 ---
@@ -107,7 +130,7 @@ Verified facts, references, and internal data supporting design choices in this 
 
 - **Biosafety blind spot:** AI cannot detect contamination visually as reliably as a trained human (microbial turbidity is subtle in early stages). Mitigation: AI flags `cell_density_drop` as WARN, human checks visually at 8 AM daily.
 
-- **No precedent in aging biology:** First project using Claude-class LLM for continuous microscopy supervision. Unknown failure modes. Mitigation: 48h validation period in Phase A Month 1 before full autonomy.
+- **No precedent in aging biology (обновлено 2026-10-07):** Прецеденты управления микроскопией LLM-агентами существуют (SYNAPS-I, SIMBA, AutoRASOR, AFM-MCP, SPM — см. секцию выше), но НЕ в нише «биология старения/центриоли + DIY-ретрофит <$10k». Нишевые неизвестные сбои остаются. Mitigation: 48h validation period в Phase A Month 1 до полной автономии + risk-tiered approval (паттерн SYNAPS-I) + журналирование всех решений.
 ## Cross-references
 
 - Parent theory: `THEORY.md` §2 hypothesis, §3 prompt-driven supervision

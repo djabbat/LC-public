@@ -43,3 +43,10 @@
 - [ ] Write unit tests for core modules.
 - [ ] Write integration tests for module interactions.
 - [ ] Create user documentation and API reference.
+
+## 🔴 2026-10-05 — Ооцитарная митоселекция: эволюционный фундамент (аларт Semantic Scholar)
+<!-- lang:ru -->
+- [ ] Взять в модель: член очистки C(t) (митофагия/селекция) — второй фундамент (эволюционный Lane 2026, PMID 41923599 + обзорный Kar 2026, PMID 42125994)
+- [ ] Взять: ооцит = «положительный контроль» качества митохондрий → верхняя граница вмешательств
+- [ ] Обновить META_ANALYSIS_Mitochondrial_ROS_Senescence.md данными Lane 2026
+<!-- /lang:ru -->

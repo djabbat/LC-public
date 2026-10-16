@@ -1366,3 +1366,8 @@ Result: 10 self-citations without duplicates, Abstract in place, References in a
 - Осталось: **Bazzi ⭐, Schiebel, Müller-Reichert** (ответы до 21 авг). Резерв: Wagner (24 авг, после отпуска) → Antebi/Beyer/Hoppe.
 - Действие: 19 авг — если тишина, отправить Antebi (MPI AGE, C. elegans aging — верифицированный кандидат Тир 2).
 <!-- /lang:ru -->
+
+## 2026-10-05: 🧬 Аларт Semantic Scholar — Γ-связка счётчиков
+- **Записано:** EVIDENCE.md (Γ-матрица: тройное сопряжение #1 ⇄ Часы ⇄ #3; эволюционный якорь Lane 2026).
+- **Оценки:** Counter #1 → 8.5/10; Counter #3 → 9.0/10; MCARA → 8.2/10.
+- **Новые задачи:** входной параметр «возраст отца»; осцилляторная сопряжённость β; член очистки C(t).

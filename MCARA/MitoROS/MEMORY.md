@@ -73,3 +73,10 @@
 - **Finding:** MLKL → non-lethal mitochondrial damage → HSC aging (Yamada 2026, Nat Commun)
 - **Finding:** UPR^mt → HSC quiescence exit (Mohrin 2018) and NSC aging (Wang 2023)
 - **Decision:** Findings added to EVIDENCE.md §v4
+
+## 2026-10-05: 🧫 Аларт Semantic Scholar — ооцитарная митоселекция (эволюционный фундамент)
+- **Находки:**
+  - Lane & Pomiankowski 2026 (PMID 41923599): отбор качества мтДНК — движущая сила эволюции полов и герминативной архитектуры → ооцит = «положительный контроль» качества митохондрий.
+  - Kar & Elkouby 2026 (PMID 42125994): Balbiani body at a glance — митоселекция консенсусна.
+  - Aparicio 2026 (тезис, 10.33540/3770): ооцит без канонических центросом → контекст Γ₁₃ (MTOC→митохондриальная организация).
+- **Решения:** Counter #3 → 9.0/10; модель C(t) (член очистки) получает второй фундамент (эволюционный + обзорный). Записано в EVIDENCE.md §v5.

@@ -18,7 +18,7 @@
 - **Open problems / research questions:** see `OPEN_PROBLEMS.md`
 - **Bill of materials / quantitative params:** see `PARAMETERS.md`
 - **System architecture / code structure:** see `DESIGN.md`
-- **AI agent instructions:** see `AGENTS.md`
+- **AI agent instructions:** see `AGENTS.md` (политика агента, риск-тированная автономия) и `PROMPT.md` (natural-language шаблоны протоколов)
 - **Changelog / decisions:** see `JOURNAL.md`
 - **Future roadmap:** see `ROADMAP.md`
 
