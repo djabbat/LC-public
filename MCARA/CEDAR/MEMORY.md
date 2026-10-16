@@ -24,6 +24,22 @@
 - `docs/DEMON_CORE_TRANSFER_2026-10-16.md` · EVIDENCE.md обогащён · TODO пункт закрыт (кроме интеграции с реальными стадиями — отдельный PR).
 <!-- /lang:ru -->
 
+## ✅ 2026-10-16 (2) — Интеграция аудита с реальным конвейером (шаг 2)
+
+<!-- lang:ru -->
+### Решение
+- Связать `cell_dt_audit` с реальными стадиями `cell_dt_validation`: мост `audited.rs` + реальный example-прогон.
+
+### Что построено
+- **`cell_dt_validation/src/audited.rs`**: `AuditedPipeline` — `run_validation` (dependency-policy + мембрана + статус из реальных результатов), `record_calibration`, `record_sensitivity`, `run_full_pipeline` (datasets→calibration→sensitivity→validation со STOP CARD). Зависимость `cell_dt_validation → cell_dt_audit` (без цикла).
+- **`examples/audited_pipeline_run.rs`**: реальный MCMC (сходится, R²_train≈0.89), честная ±20% чувствительность (ΔR²≈0.0000), реальные фиты ROS/Telomere/CHIP VAF/MCAI → вердикт Accepted; вывод **NETWORK DELTA / STOP MAP / NEED MAP** (DEMON_CORE_SPEC §9); журнал подписан HMAC-SHA256.
+- **4 новых теста** audited (полный прогон неразрушающе 2 эпохи; BLOCK при не-SUPPORTED upstream; мембрана отклоняет self-introduced threshold; статус отражает фактические результаты).
+
+### Итог
+- 129 тестов (122 validation + 6 audit unit + 1 integration), 0 clippy-замечаний в новых файлах.
+- Слабые места интеграции (честно, в §7 мастер-документа): MCMC→аудит через boolean-сигналы, а не тип McmcResult; мембрана калибровки не обёрнута в `record_calibration`; линейные фиты в example — упрощение.
+<!-- /lang:ru -->
+
 ## ✅ GeroScience systematic review подан (2026-08-21)
 
 <!-- lang:ru -->

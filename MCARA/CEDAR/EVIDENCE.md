@@ -1162,3 +1162,15 @@ Two distinct claims made in this paper:
   `StageStopCard` проще, чем в DAIS (нет списков provenance/scope в карте);
   «молчание ≠ поддержка» сейчас структурно, автоматического конвейер-проверятеля ещё нет;
   реальные MCMC-прогоны через аудит-слой не проверены (кран стоит отдельно).
+
+### Интеграция с реальным конвейером (шаг 2, 2026-10-16)
+- **`cell_dt_validation/src/audited.rs`** — `AuditedPipeline` оборачивает реальные стадии:
+  `run_validation` (dependency-policy + мембрана + статус из фактических результатов),
+  `record_calibration` (R-hat<1.05 + R²_train), `record_sensitivity` (±20%),
+  `run_full_pipeline` (datasets→calibration→sensitivity→validation со STOP CARD).
+- **`examples/audited_pipeline_run.rs`** — реальный прогон: MCMC сходится (R²_train≈0.89),
+  ±20% чувствительность стабильна (ΔR²≈0.0000), фиты ROS/Telomere/CHIP VAF/MCAI → вердикт
+  Accepted; вывод NETWORK DELTA / STOP MAP / NEED MAP; журнал подписан HMAC-SHA256.
+- **Тесты:** 129 зелёных (122 validation + 6 audit unit + 1 integration), 0 clippy в новых файлах.
+- **Слабые места (честно, §7 мастера):** MCMC→аудит через boolean-сигналы, а не тип McmcResult;
+  мембрана калибровки не обёрнута в `record_calibration`; линейные фиты — упрощение.
