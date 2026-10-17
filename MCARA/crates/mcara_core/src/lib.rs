@@ -246,6 +246,45 @@ pub enum McoaError {
     DimensionalInconsistency(&'static str),
 }
 
+
+/// CASCADE ↔ MCARA sync (2026-10-17). The cellular replicative capacity is the ANY-OF exit:
+/// `n* = min_i n_i*` — the first counter to pass its threshold (CASCADE `run()` semantics:
+/// "first counter to fire"). MCARA's weighted sum `L_tissue = Σ wᵢ·fᵢ` is the TISSUE-level
+/// aggregate; the any-of is the CELL-level replicative limit. Different levels — not a conflict.
+///
+/// Numbering: same five counters; CASCADE orders Proteostasis = #4, Epigenetic = #5
+/// (division counters); MCARA orders Epigenetic = #4, Proteostasis = #5 (time-driven weight).
+///
+/// Couplings: CASCADE's literature-calibrated couplings (c_tm = 4.5 ← von Zglinicki 1995,
+/// 90 → >500 bp/PD, PMID 7664835; plus c_mt, c_et, c_pe, c_mp) instantiate MCARA's Γ matrix;
+/// CASCADE's c_tm ≫ MCARA's provisional default (0.30) because CASCADE is calibrated to human
+/// in-vitro telomere-erosion data.
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
+pub struct CounterThresholds {
+    /// Division count at which counter `i` passes its replicative threshold (the any-of `n_i*`).
+    /// Index order = [`Counter::Centriolar`, `Telomere`, `Mitochondrial`, `Epigenetic`, `Proteostasis`].
+    pub n_star_div: [f64; N_COUNTERS],
+}
+
+/// ANY-OF exit: the cell's replicative capacity is set by the FIRST counter to fire —
+/// `n* = min_i n_i*` (CASCADE's cellular-level output; MCARA's weighted sum is the tissue level).
+pub fn replicative_capacity_nstar(thresholds: &CounterThresholds) -> f64 {
+    thresholds
+        .n_star_div
+        .iter()
+        .cloned()
+        .fold(f64::INFINITY, f64::min)
+}
+
+/// CASCADE default any-of exit times (pure-counter, stem context, telomerase ON):
+/// centriole ≈ 52, telomere = ∞ (telomerase ON), mtDNA ≈ 51, epigenetic ≈ 63,
+/// proteostasis = ∞ (knife-edge d_p/r_p = k_p)  ⇒  n* = 51 (mtDNA).
+pub fn cascade_default_nstar() -> f64 {
+    replicative_capacity_nstar(&CounterThresholds {
+        n_star_div: [52.0, f64::INFINITY, 51.0, 63.0, f64::INFINITY],
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -351,5 +390,12 @@ mod tests {
             assert!((inf - expected).abs() < 1e-12,
                 "{:?} self-influence: got {} expected {}", c, inf, expected);
         }
+    }
+
+    #[test]
+    fn any_of_replicative_capacity_is_min() {
+        // CASCADE pure-counter stem context: n* = min(52, ∞, 51, 63, ∞) = 51 (mtDNA)
+        let n = cascade_default_nstar();
+        assert!((n - 51.0).abs() < 1e-12, "any-of n* expected 51, got {}", n);
     }
 }
