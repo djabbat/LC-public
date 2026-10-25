@@ -2,7 +2,7 @@
 **Date:** 2026-06-21 (complete rethinking — merging all subprojects)  
 **Version:** 7.0 — Organismal Aging as a single integrator  
 **Author:** Jaba Tqemaladze, MD — Georgia Longevity Alliance  
-**License:** Apache 2.0  
+**License:** MIT  
 **Codebase:** 360+ files (Rust + Python + Phoenix/Elixir)  
 
 ---
