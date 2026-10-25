@@ -1,3 +1,9 @@
+## 🆕 2026-10-18 — CPEB/Orb2 «трансляционный счётчик» (из Buehler/Lerit MBC 2026)
+- [ ] 📚 Проработать CPEB/Orb2 как кандидата в Counter «трансляционная ёмкость» (мастер: `~/Desktop/Services/docs/ORB2_CPEB_CENTROSOME_ANALYSIS_2026-10-18.md`)
+- [ ] 🔬 Спроектировать тест очередности счётчиков «центриоль vs трансляция» (порог невозврата)
+- [ ] 📝 Включить Γ-ребро CPEB4↔MitoROS (PMID 42764119) в MCARA-статью (M1–M5 / coupling-матрица)
+- [ ] 🔗 Связать с MitoROS (мито-адаптация) и Proteostasis (Mrj→Orb2) подпроектами
+
 ## 🔴 P0 — VW-Stiftung (Aug 27) + Meyer changes
 
 <!-- lang:ru -->

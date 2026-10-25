@@ -1,5 +1,20 @@
 # STATE — MCARA
 
+## 2026-10-20: Верификация «Eliminate → Reprogram → Rebuild» (тотипотентность + Rebuild) + слабые места
+- 📚 **Триггер:** серия вопросов Джабы (тотипотентность → кардиомиоциты → де-ново центриоли → стволовые) + команда «подтвердить и найти слабые места». Мастер-анализ: `LC/MCARA/docs/ANALYSIS_2026-10-20_EliminateRebuild_Totipotency_Evidence.md` (все PMID/DOI верифицированы EuropePMC/NCBI 2026-10-20).
+- 🆕 **Подтверждено:** Chen 2021 Science OSKM-кардио (34554778); Yan 2026 JMCC OSK (42013916); 🔴 Gabisonia 2019 Nature аритмии у свиней (31068698); PRMT7 (27225728); Obox4 (38856708); KLF18 (41986233); OTX2/CtBP1/2-репрессоры (41554740/42547579); ciTLSC Wu 2026 Nature (42875493); деградеры PLK4 (42220890); FBXW7/McIdas/STIL-BRCA1 «тормоза» амплификации (41453690/41644695/41749477); 🔴 мышца требует центросом (42786221); Ренцова-парадокс (30197118).
+- 🧭 **Мета-вывод:** элиминация центриолей — необходимое, но НЕ достаточное условие; Rebuild — самый рискованный узел (амплификация → анеуплоидия → рак). Уточнение Counter #1: центриоль = аппаратный элемент В СВЯЗКЕ с генной сетью, не автономный «храповик».
+- 📄 **Записано:** LC/EVIDENCE.md §0e, MCARA/EVIDENCE.md §NEW 2026-10-20, CEDAR/EVIDENCE.md NEW 2026-10-20, `articles/Eliminate_Reprogram_Rebuild/REFERENCE_VERIFICATION_2026-10-20.md`.
+- 🔮 **Gatekeeper-эксперимент:** hPSC + PLK4-ингибиция + PFT-α + PIDDosome-ингибитор + DUX4/TPRX1 → MERVL⁺ (иначе фаза 2 несостоятельна).
+
+## 2026-10-18: Находка — CPEB/Orb2 как «трансляционный счётчик» (из статьи Buehler/Lerit MBC 2026)
+- 📚 **Триггер:** Semantic Scholar — «Drosophila Orb2 → NSC centrosome asymmetry» (MBC 2026, DOI 10.1091/mbc.e26-06-0252). Мастер-анализ: `~/Desktop/Services/docs/ORB2_CPEB_CENTROSOME_ANALYSIS_2026-10-18.md`.
+- 🆕 **Новое:** CPEB-семейство связывает центросомную асимметрию (Orb2→Polo→PCM), мито (CPEB4↔мито-адаптация↔сенесценция, PMID 42764119) и протеостаз (Mrj→Orb2, PMID 38648719) — **кандидат в интегративный счётчик «трансляционная ёмкость»**.
+- 📄 **Записано:** LC/EVIDENCE.md §0d, MCARA/EVIDENCE.md §12, MCARA/CONCEPT.md, MCARA/THEORY.md, refs (4+1), MitoROS/Proteostasis EVIDENCE, PhD/NGO/Marketing EVIDENCE + THEORY.
+- ⚠️ **Контр-нюанс:** orb2-НСК делятся асимметрично при нарушении Polo/PCM → асимметрия PCM не достаточна для асимметрии деления (Kill-критерий).
+- 🔮 **Новый фальсификатор-кандидат:** «очередность счётчиков (центриоль vs трансляция) определяет порог невозврата».
+- 📝 **Статья по находке (18 окт):** «CPEB/Orb2 Replicative Translational Counter» (Hypothesis, 26 refs, 94/100 для IF≥18) → пакет `Services/publications/CPEB_Orb2_Replicative_Translational_Counter/`; **INQUIRY ОТПРАВЛЕН в Aging Cell** (`editorial.assistant@agingbiologyjournal.com`, 250 OK). ⚠️ **Правило APC=0:** Aging Cell платный OA → подача только при waiver; иначе BioEssays→MoAD→GeroScience (APC=0). Реестры: PUBLICATIONS_TRACKER.md, MANUSCRIPT_VERSIONS.md.
+
 ## 2026-08-21: VW — звонок Kratzsch состоялся; ответы записаны
 - 🔴 **Letter of intent обязателен к short proposal (27 авг)**: подписанный документ институции (назначение PI + доступ к объектам); подпись — отправитель letter (институция). Позиция PI должна быть подтверждена (не pending), шаблон заполняет сам PI → **lead должен быть зафиксирован и подписан ДО 27 авг 14:00 CEST**.
 - 🟢 **GLA (Грузия) может быть co-PI** и получать долю бюджета (если нет ограничений юрисдикции); заявку подаёт немецкий PI; бюджет с немцем должен быть разделён (не 100% не-немцу); немецкая институция может получить 100% и сама распределить партнёрам; все участники — в 5-й секции шаблона (`portal.volkswagenstiftung.de`).

@@ -981,3 +981,153 @@ Counter #3 (митохондрии)     ⇄  Селекция/очистка (Ba
 - **Rebuild-протокол без импорта:** p53-зависимое обретение центросом при дедифференцировке миотуба (42786221) — валидированный аналог фазы Rebuild (рядом с идеей Centriole Import, 2026-10-15).
 - **Филогенетическая рамка шире:** рептилии-амниоты (питон, геккон) регенерируют сердце → для статей/грантов граница «regenerator vs non-regenerator» не равна «холодно-/теплокровные».
 - **Оценка MCARA:** coupling #1 расширен до класса TAL (мульти-ткань) — **8.7/10 → 8.8/10** (общая, не только кардиальная, конвергенция счётчика).
+
+---
+
+## 12. NEW — CPEB/Orb2: «трансляционный счётчик» × центросомная асимметрия (2026-10-18)
+
+> Триггер: Semantic Scholar — Buehler/Lerit *Mol Biol Cell* 2026 (Orb2 → NSC centrosome asymmetry). Мастер-анализ: `~/Desktop/Services/docs/ORB2_CPEB_CENTROSOME_ANALYSIS_2026-10-18.md`. PMID/DOI верифицированы Europe PMC 2026-10-18.
+
+### Ядро: Orb2 (CPEB-ортомолог Drosophila) управляет PCM/Polo и размером мозга
+| Работа | Идентификатор | Значение для MCARA |
+|---|---|---|
+| Buehler et al. *Mol Biol Cell* 2026-10-14 | DOI **10.1091/mbc.e26-06-0252** | Orb2 обогащает **Polo-киназу** на центросомах (весь клеточный цикл); потеря → нарушение PCM-эффекторов. НСК всё равно строят/ориентируют веретено и делятся асимметрично, но клетки **мельче** (рост). → асимметрия PCM ≠ необходима для асимметрии деления |
+| Hailstock et al. *Cell Reports* 2026 | PMID **42430239** | Orb2 RNA-binding → рост мозга; poly-Q/ZZ сдерживают; **Orb2 upstream of Brat** (TRIM-NHL) → размер мозга доза-зависим |
+| Low et al. *Genetics* 2026 | PMID **41206465** | Orb2 ZZ-домен: сотни материнских мРНК, репрессия в **MZT** |
+| Robinson et al. bioRxiv 2021 (препринт) | DOI **10.1101/2021.11.23.469707** | микроцефалия (независимо от НСК-функции); асимметрия центросом; перекрытие целей Orb2 ↔ **hCPEB4** |
+
+### Новые Γ-ребра (связи счётчиков) — главная ценность для MCARA
+| Claim | PMID | Coupling |
+|---|---|---|
+| ⭐⭐⭐ **CPEB4↔старение: потеря → нарушение митохондриальной адаптации → стресс-индуцированная сенесценция (AT2)** | **42764119** (*Mech Ageing Dev* 2026) | **CPEB ↔ мито (Counter #2/MitoROS) ↔ сенесценция** — новое прямое Γ-ребро |
+| ⭐⭐ Спад трансляционной способности как драйвер мейотической нестабильности ооцита при старении | **39082954** (*Reproduction* 2024) | трансляционный счётчик ↔ репродуктивное старение |
+| ⭐⭐ Клональная атриция СК в стареющем midgut Drosophila | **42340984** (*PLoS Biol* 2026) | истощение пула СК (Axiom MCARA) |
+| Шаперон Mrj (Hsp40) контролирует Orb2-олигомеризацию ↔ долговременная память | **38648719** (*PLoS Biol* 2024) | протеостаз (Counter #4) ↔ трансляционный контроль |
+| Прион-подобный агрегат Orb2 = гейт синаптической информации (непрерывная модель) | **30662713** (*R Soc Open Sci* 2018) | модель-кандидат для agentic-симуляций LC |
+
+### Что это добавляет в MCARA
+1. **Кандидат в интегративный счётчик «трансляционная ёмкость»:** CPEB-семейство связывает Counter #1 (центриоль/PCM-Polo), #2 (мито, через CPEB4) и #4 (протеостаз, через Mrj↔Orb2). Трансляционная способность падает с возрастом (39082954; 42764119) — это отдельный, но сопряжённый счётчик, а не только «эффектор».
+2. **Трансляционный слой «морфогенетического замка»:** центросомная асимметрия (PCM/Polo) сама зависит от локальной трансляции (Orb2) → «замок» = структурный (центриоль, CEDAR) + трансляционный (CPEB/Orb2→PCM/Brat) слои.
+3. **Контр-нюанс (честность модели):** orb2-НСК делятся асимметрично и нормально, несмотря на нарушение Polo/PCM → **асимметрия PCM не достаточна для асимметричного деления** (ср. Strawbridge: ES exit без асимметричного деления). Фиксировать в Kill-критериях: «асимметрия центросом → судьба» не универсальна.
+4. **Новый фальсификатор-кандидат:** «трансляционная ёмкость СК (CPEB-зависимая) падает раньше/позже центриолярной энтропии?» — очередность счётчиков (центральный вопрос MCARA) теперь может тестироваться и по трансляционному пути.
+5. **Оценка MCARA:** coupling-матрица Γ получает ребро CPEB4↔MitoROS (42764119) — **8.8/10 → 8.9/10** (интегративная, не только механическая связность счётчиков).
+
+---
+
+## §NEW 2026-10-20 — «Eliminate → Reprogram → Rebuild»: верификация тотипотентной индукции + слабые места (мета-анализ)
+
+> **Триггер:** серия вопросов Джабы (тотипотентность → кардиомиоциты → де-ново центриоли → стволовые клетки). **Мастер-анализ (все PMID/DOI верифицированы через EuropePMC + NCBI 2026-10-20):** `LC/MCARA/docs/ANALYSIS_2026-10-20_EliminateRebuild_Totipotency_Evidence.md`
+
+### 0. Суть
+Протокол «Eliminate → Reprogram → Rebuild» (элиминация центриолей → мейоз-/зигот-факторы → де-ново сборка) — **гипотеза**, прямого эксперимента «элиминация + DUX4/TPRX1 в соматической клетке» нет (P. Gönczy, личн., 2026-07). Каждый блок имеет сильную косвенную поддержку и одинаково сильные контр-примеры. Главный вывод: **элиминация необходима, но НЕ достаточна**; Rebuild — самый рискованный узел (амплификация → анеуплоидия → рак).
+
+### 1. Блок «Reprogram» — верифицированные факторы (новые)
+| Фактор | PMID | Значение |
+|---|---|---|
+| **Obox4** промотирует ZGA при потере Dux | **38856708** (*eLife* 2024) | ⭐ Замена/поддержка DUX4 (снижение токсичности FSHD) |
+| **KLF18** — необходимый компонент DUX4-сети | **41986233** (*Genes Dev* 2026) | ⭐ Кандидат в «ядро» DUX4+TPRX1+KLF18 |
+| **NELFA** ведёт к 8C-состоянию (независимо от DUX4) | **42069772** (*Nat Commun* 2026) | ⭐ Альтернативный маршрут в 8C |
+| **OTX2** ингибирует 8C/morula-репрограммирование | **41554740** (*Nat Commun* 2026) | ✅ Хроматиновый «замок»; OTX2-KD как стратегия |
+| **CtBP1/2** ограничивают 2C-программы | **42547579** (*EMBO Rep* 2026) | ⭐ Ещё один репрессор-мишень |
+| **DPPA2/DUX**-зависимая тотипотентность (хроматин) | **42426342** (*EMBO J* 2026) | ⭐ Механизм |
+| **PRMT7** заменяет SOX2 (ооцит-протеом) | **27225728** (*J Proteome Res* 2016) | ✅ Мейоз-фактор |
+| **ciTLSC (химическая тотипотентность, мышь)** | **42875493** (*Nature* 2026) | ⭐ Химический путь вместо TF-коктейля (расширение Yang 2022) |
+| Фазовое разделение **DUX** → тотипотентность | **41832971** (*Protein Cell* 2026) | ⭐ Механизм |
+| Бластомеро-подобные клетки через **PARP-DUX4** | **40338744** (*Cell Rep* 2025) | ⭐ Потенциально новый метод |
+| Выход из тотипотентности (обзор) | **42368449** (*Front Cell Dev Biol* 2026) | ⭐ Рамка «вход/выход» |
+
+### 2. Блок «Eliminate» — инструменты и барьеры
+| Механизм | PMID | Значение |
+|---|---|---|
+| **PLK4 PROTAC SP27** (валидирован в TRIM37-амплиф. MCF-7) | **37279162** (*J Med Chem* 2023) | ✅ Инструмент; в фибробластах — обязательный пилот |
+| ⭐ **Деградеры PLK4 след. поколения (центирин-базированные)** | **42220890** (*RSC Chem Biol* 2026) | Новый инструмент Eliminate |
+| **TRIM37** предотвращает эктопические сборки | **32908304** (*Nature* 2020) | ✅ Предсказание чувствительности |
+| 🔴 **Ренцова-парадокс:** PLK4-STIL инактивация → p53-дифференцировка hPSC | **30197118** (*Stem Cell Rep* 2018) | Главный контр-пример для Eliminate |
+| 🔴 Центросомная потеря → 53BP1–USP28–p53–p21 → G1-арест | **27432897/27371829/27432896** (2016) | Барьер в соматических клетках |
+| 🔴 **Необласты планарий ацентриолярны, но плюрипотентны** (не тотипотентны) | **25047607** (Azimzadeh 2014) | Элиминация ≠ тотипотентность |
+
+### 3. Блок «Rebuild» — де-ново сборка и риски
+| Тезис | PMID | Значение |
+|---|---|---|
+| **PLK4 гиперэкспрессия → амплификация → анеуплоидия/CIN** | **40257113** (*Cytoskeleton* 2025, обзор) | ✅ Риск подтверждён |
+| ⭐ **FBXW7** деградирует PLK4-фосфорил. STIL-SAS6-картридж (защита от передупликации) | **41453690** (*JBC* 2026) | Эндогенный «тормоз» для титрования |
+| ⭐ **STIL-BRCA1** ось → амплификация + нестабильность | **41749477** (*FEBS Lett* 2026) | Контрольная точка |
+| ⭐ **McIdas** контролирует число центриолей через PLK4 | **41644695** (*EMBO Rep* 2026) | Кандидат-«тормоз» |
+| **ALMS1** — адаптируемый биогенез (де-ново) | **42380124** (*Nat Commun* 2026) | ✅ Уже в refs |
+| 🔴 **Реактивированные КМ амплифицируют центриоли >4 (мультиполярность, CIN)** | **31301302** (Leone & Engel 2019) | Red flag для кардиального Rebuild |
+
+### 4. Слабые места (мета-анализ — коротко)
+1. **Ренцова-парадокс** (30197118): элиминация в hPSC → дифференцировка, не пластичность. Gatekeeper: PLK4-ингибиция + PFT-α + PIDDosome-ингибитор + DUX4/TPRX1 в hPSC должна дать MERVL⁺.
+2. **Планарии** (25047607): ацентриолярность + плюрипотентность, но не тотипотентность → нужны факторы.
+3. **Скелетная мышца ТРЕБУЕТ центросом** для дедифференцировки (**42786221**, *npj Regen Med* 2026): децентриоляция НЕ универсальна → тканеспецифичная развилка в протоколе (для КМ — использовать уже существующее окно).
+4. **Аритмия:** Gabisonia 2019 *Nature* (**31068698**): AAV9-miR-199a у свиней → 7/10 погибли от желудочковых тахиаритмий. In vivo-версия требует ЭКГ-мониторинга + kill-switch; ex vivo — проверка электрофизиологической зрелости.
+5. **DUX4-токсичность (FSHD):** снижать дозу через KLF18 (41986233) / Obox4 (38856708) поддержку сети.
+6. **8CLC транзиентны + промежуточные состояния** (TPRX1 без LEUTX) → endpoint должен различать полную/частичную ZGA-программу.
+
+### 5. Дискриминация: подтверждено vs гипотеза
+| Утверждение | Статус |
+|---|---|
+| Центриоль накапливает PTM-повреждения с возрастом | ✅ Sullenberger 2020 (32526902) |
+| Ооциты элиминируют центриоли перед тотипотентностью | ✅ Manandhar 2005; Kalbfuss & Gönczy 2023 (37963546); Qi 2025 (40410380) |
+| OSK-частичное репрограммирование помогает регенерации сердца (мышь) | ✅ Chen 2021 (34554778); Yan 2026 (42013916) |
+| Кардиальная стимуляция in vivo → риск аритмий | ✅ Gabisonia 2019 (31068698) |
+| Элиминация + DUX4/TPRX1 → стабильная тотипотентность из фибробластов | ❌ Не тестировано |
+| Децентриоляция универсально полезна | ❌ Опровергнуто мышцей (42786221) |
+
+### 6. Что это добавляет в MCARA / CEDAR
+- **Уточнение формулировки Counter #1:** центриоль — не «генератор судьбы», а **аппаратный элемент, работающий в связке с генной сетью** (планарии, мышца, hPSC как контр-примеры). «Храповик» = структурный слой, который нужно снять И переключить сеть.
+- **Фаза Rebuild** получает эндогенные контрольные точки (FBXW7, McIdas, STIL-BRCA1) — для безопасного «открытия» счётчика в регенерации.
+- **Новые Γ-ребра:** центриоль ↔ тотипотентная сеть (DUX/DPPA2/Obox4) ↔ хроматин (OTX2/CtBP1/2) — coupling Counter #1 с эпигенетическим слоем.
+- **Оценка MCARA:** кардиальная + тотипотентная ветви сходятся на «центриоль как гейт состояния» — **8.9/10 → 9.0/10** (с поправкой «контекст-зависимость», не «жёсткий причинный храповик»).
+
+---
+
+## 14. Oocyte: the Acentrosomal Dividing Lineage — Actin & Aneuploidy (2026-10-21)
+
+> Master analysis: `LC/docs/literature_analysis_2026-10-21_ActinAneuploidy.md`. All PMIDs verified PubMed/EUPMC 2026-10-21.
+> Source review: Zheng et al. *FASEB J* 2026;40(19):e72366 · DOI 10.1096/fj.202504914RR · PMID **42836570**.
+
+### Why this matters for MCARA/CEDAR
+The oocyte is the **only dividing lineage that operates without centrioles** (acentrosomal meiosis), and this costs fidelity: human oocytes are error-prone (aneuploidy is the leading cause of pregnancy loss). This is direct cell-level support for Counter #1 (centriole = division-fidelity ratchet) and clarifies why centriole elimination in somatic reprogramming requires a Rebuild step (CEDAR-γ).
+
+### Key evidence
+| Claim | Reference | PMID |
+|---|---|---|
+| Acentrosomal chromosome-mediated spindle assembly in human oocytes (~16 h, unstable) | Holubcová et al. *Science* 2015 | **26045437** |
+| huoMTOC (TACC3/CCP110/CKAP5/DISC1) — human backup spindle machinery (already §0a) | Wu et al. *Science* 2022 | **36395215** |
+| KIFC1 deficiency → spindle pole instability; KIFC1 rescue | So et al. *Science* 2022 | **35143306** |
+| Multipolar intermediates; HAUS6/KIF11/KIF18A mutations in infertile patients | *Science* 2024 | **39172836** |
+| Actin (Fmn2/Spire/Arp2/3) drives spindle positioning, cytoplasmic streaming, chromosome clustering, kinetochore-fiber fidelity | Schuh & Ellenberg *Curr Biol* 2008 **19062278**; Yi et al. *Nat Cell Biol* 2011 **21874009**; Pfender et al. *Curr Biol* 2011 **21620703**; Mogessie & Schuh *Science* 2017 **28839045**; *Nat Cell Biol* 2023 **36732633** | |
+| ⭐ Human centriolar gene variant CEP120 → egg aneuploidy (KI mouse; pericentrin-depletion to mimic human spindle) | *Biol Reprod* 2026 | **42096526** |
+| Artificial kinetochore decoys prevent age-related meiotic errors (synthetic fidelity rescue) | *Nat Cell Biol* 2025 | **41188464** |
+| Actin buffers age-related cohesion loss | *Sci Adv* 2023 | **36662854** |
+
+### Value for MCARA / CEDAR
+1. **Counter #1 nuance:** centriole-free division exists (germline) but is error-prone → the "centriole as fidelity ratchet" is supported; the cost side explains why Rebuild (de novo centriole) restores fidelity after elimination (ungulate post-fertilization model: divisions via aMTOC/actin until de novo centriole).
+2. **New risk line:** common genetic variants in centriolar/centrosome genes (CEP120) as aneuploidy risk — supports the "centriolar geometry/entropy" program; candidate biomarkers.
+3. **Intervention analog for Rebuild:** artificial kinetochore decoys = synthetic fidelity devices (restoring faithful division without the endogenous structure) — conceptual parallel to CEDAR "re-lock".
+4. **Molecular backup repertoire:** huoMTOC/aMTOC/RanGTP-HURP/KIFC1 — the set of "spare" spindle-building tools when centrioles are absent; relevant to somatic centriole-elimination protocols (which must ensure these acentrosomal pathways are available or reintroduced).
+
+### Weak spots (meta-analysis)
+- Mechanism largely from mouse; human functional data sparse (ethical limits).
+- Actin is a buffer, not the primary driver — cohesion loss (REC8/SMC1β) is primary (Gruhn 2019 **31604276**; Curr Biol 2016 **26858405**).
+- Species differences (mouse vs human spindle assembly) limit direct transfer.
+- FASEB 2026 review not yet independently cited (0 citations as of 2026-10-21).
+
+---
+
+## §. Enrichment 2026-10-22 — Centriole counter, PLK4 number-control, centromere (verified via PubMed esummary/efetch 22.10)
+
+> Источник: широкий поиск PubMed 2023–2026 (нити «centriole elimination», «PLK4 de novo», «CENP-A»); все PMID подтверждены абстрактами.
+
+| PMID | Finding | Role in MCARA |
+|:----:|---------|---------------|
+| 37773039 | Scott & Holland 2023, JCB — **PLK4 self-phosphorylation → выбор ОДНОЙ процентиоли** | Прямо поддерживает центральный механизм MCARA/CENTRIOLE-RATCHET: число центриолей определяется кинетикой PLK4 (ядро H-CR3/H-CR8 и счётчика) |
+| 42782439 | Ow & Aydogan 2026 — Centriole Biogenesis Cycle (обзор): временные механизмы, автономия, связь с клеточным циклом | Рамка «биогенез = временной процесс, сцепленный с клеточным циклом» — для счётчика и лицензирования |
+| 41644695 | McIdas локализуется на центриолях и контролирует их число через PLK4-фосфорилирование (2026) | Новый фактор number-control → доп. рычаг против амплификации/овер-дупликации |
+| 42324259 | Sensing centrosome amplification: интерфейс дупликации центриолей и автофагии (2026) | Безопасность амплификации (H-CR8/H-CR5); связь с протеостатическим стрессом |
+| 41099875 | Enriquez & Nechemia-Arbely 2025 — динамическая центромера (обзор) | Рамка для CENP-A/центромеры как эпигенетически-регулируемого узла (H-CR0: «почему добавление белка недостаточно») |
+| 38509386 | Vega-Sendino 2024, Nat Genet — **DUXBL контролирует выход из тотипотентности** | Эндогенный тормоз DUX → потенциальный рычаг «выключения» сброса (safety) в Rebuild-фазе |
+| 41417901 | Chammas 2025, Sci Adv — Dux–MERVL: тотипотентность И клеточная гибель | Подтверждает и программу, и риск гибели → обоснование viability/ISG-гейтов при сбросе |
+
+**Мета-вывод:** «центриоль = гейт G0» (уже подтверждён мульти-тканево) дополнительно якорится на механистический уровень: **число центриолей = PLK4-кинетика (одиночная процентиоль, автофосфорилирование, McIdas)**. **Слабые места:** все механизмы — в клеточных линиях/эмбрионах, не в постмитотических клетках; DUXBL — мышиная система (перенос на DUX4/человека требует проверки).

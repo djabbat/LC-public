@@ -48,6 +48,12 @@ LC/                                                     LC/ = Organismal Aging
 
 *To be specified — see project documentation.*
 
+### 🆕 2026-10-18 — Кандидат-счётчик: «трансляционная ёмкость» (CPEB/Orb2)
+
+> Мастер: `~/Desktop/Services/docs/ORB2_CPEB_CENTROSOME_ANALYSIS_2026-10-18.md`. См. также LC/EVIDENCE.md §0d, MCARA/EVIDENCE.md §12.
+
+CPEB-семейство (Drosophila Orb2, человеческие CPEB2-4) связывает три ядра LC: **центросомную асимметрию** (Orb2→Polo→PCM, DOI 10.1091/mbc.e26-06-0252), **митохондрии** (CPEB4→мито-адаптация→сенесценция, PMID 42764119) и **протеостаз** (Mrj→Orb2, PMID 38648719). Кандидат в интегративный счётчик «трансляционная ёмкость»; спад трансляции с возрастом (PMID 39082954) — сопряжённый, но отдельный счётчик. Фальсификатор: «очередность счётчиков (центриоль vs трансляция) определяет порог невозврата».
+
 
 ## Budget
 
@@ -59,3 +65,19 @@ LC/                                                     LC/ = Organismal Aging
 | # | Reference | PMID |
 |---|-----------|------|
 | 1 | See parent project | — |
+
+## Power Analysis
+
+> TODO (deep review): add sample size justification (effect size, alpha, beta).
+
+## Blinding Protocol
+
+> TODO (deep review): describe who is blinded and how.
+
+## Pre-registration
+
+> TODO (deep review): OSF link or reason for no pre-registration.
+
+## Limitations
+
+> TODO (deep review): list key limitations and mitigations.

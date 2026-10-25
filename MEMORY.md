@@ -1,6 +1,26 @@
 # LC · MEMORY (v7.6)  **Date:** 2026-08-02  ---
 
 <!-- lang:ru -->
+## 2026-10-22: 🖥️ Локальные агентные рои и on-device ИИ — DGX Station (GB300)
+<!-- /lang:ru -->
+
+<!-- lang:ru -->
+**Источник:** YouTube `qV_K0nTF6gY` (обзор NVIDIA DGX Station / GB300). Полный разбор: `~/Desktop/FORESIGHT_RFP_CALL3_2026-10-31/RFP_CALL3_DGX_GB300_ANALYSIS_2026-10-22.md`. Все DOI/arXiv/PMID проверены 2026-10-22.
+
+**Что это:** настольный ИИ-суперкомпьютер: 748 ГБ когерентной памяти (HBM+LPDR5X), NVFP4 4-бит нативно, модели до 1T параметров, локальные агентные рои 16–128 шт. (tool use, 24/7, zero per-token), MIG 7 инстансов. Цена ~$85–108K (reference, не бюджет).
+
+**Полезное для LC:**
+- **Локальный research agent swarm без per-token стоимости** — масштаб роя (ChemCrow/Coscientist/multi-agent направление из нашей MEMORY) определяется железом, а не бюджетом API. LC/ai/hive_queen.py — координатор; DGX-класс = фронтир-ёмкость локально.
+- **AFDB50 (60M+ структур белка) прямо в памяти → near-instant homology search** — проверено 2026-10-22: инструмент **FoldSeek** (PMID 37156916, Nat Biotechnol 2024) делает это на обычном сервере с большой RAM — НЕ обязателен DGX ($85–108K). База растёт: >214M структур (PMID 41273079, NAR 2026). Применения для LC: HAP (структуры FXR/TGR5 vs EcR/USP по таксонам), MCARA-мишени (TERT/sirtuins/p53/BCL-2 ортологи), сенолитик-мишени. См. LC/EVIDENCE.md §7.1.
+- **On-device privacy** — модели до 1T параметров локально = приватные данные пациентов (BioSense) не покидают устройство; федеративное обучение для мед. imaging (PMID 42835370) усиливает privacy-аргумент.
+- **Модели до 1T параметров локально** — альтернатива/дополнение к облачным LLM (DeepInfra) для анализа приватных данных.
+
+**Литературные якоря:** vLLM continuous batching (DOI 10.1145/3600006.3613165, SOSP'23); GPTQ 4-бит (arXiv:2210.17323, ICLR'23 — модель 4× меньше, 3.25–4.5× быстрее); Switch Transformers MoE (arXiv:2101.03961, JMLR'22); microscopy cell segmentation review (PMID 42506143); federated DL stroke (PMID 42835370).
+
+**Записано:** LC/EVIDENCE.md §7 (локальные агентные рои / on-device AI).
+<!-- /lang:ru -->
+
+<!-- lang:ru -->
 ## 2026-08-02: 🔴 Статус подач — проверка портала Springer
 <!-- /lang:ru -->
 

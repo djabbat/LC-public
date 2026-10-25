@@ -39,6 +39,19 @@ The centriole is a morphogenetic status regulator. An old centriole locks in age
 
 The cell stops dividing after ~50 divisions (Hayflick limit). Under hypoxia (2% O₂) and telomerase activity (hTERT), telomerase maintains long telomeres, and low oxygen protects mitochondria — but a limit is still reached: even stem cells stop after ~200 divisions. Something other than telomeres and mitochondria counts divisions. **MCARA models stem-cell entropy accumulation:** in asymmetric stem-cell divisions the older structures are retained by the stem cell (Yamashita 2007; Wang 2009 — Regime B of the Entropy Reset Protocol), so stem cells accumulate entropy *geometrically* across counters, and the replicative limit is the point where the accumulated entropy exceeds the cell's capacity to divide. **MCARA checks which counter's entropy finishes first.**
 
+### CPEB/Orb2 — кандидат в «трансляционный счётчик» (2026-10-18)
+
+> Мастер-анализ: `~/Desktop/Services/docs/ORB2_CPEB_CENTROSOME_ANALYSIS_2026-10-18.md`; refs: `CEDAR/refs/DOI_10.1091_mbc.e26-06-0252_…` + `PMID_42764119_…` + `PMID_42430239_…` + `PMID_41206465_…`. PMID/DOI верифицированы 2026-10-18.
+
+**Суть находки:** CPEB-семейство (Drosophila Orb2, человеческие CPEB2-4) = **трансляционные регуляторы**, связывающие все три ядра MCARA:
+1. **Центросомную асимметрию** — Orb2 → Polo-киназа → PCM-эффекторы (Buehler/Lerit, MBC 2026, DOI 10.1091/mbc.e26-06-0252). Трансляционный слой «морфогенетического замка».
+2. **Митохондрии** — потеря CPEB4 при старении → нарушение мито-адаптации → стресс-индуцированная сенесценция (PMID 42764119). Новое Γ-ребро Counter #2.
+3. **Протеостаз** — шаперон Mrj (Hsp40) контролирует прион-подобную олигомеризацию Orb2 ↔ долговременная память (PMID 38648719).
+
+**Для MCARA:** кандидат в интегративный счётчик «трансляционная ёмкость» — спад трансляционной способности с возрастом (PMID 39082954 — ооцит; 42764119 — AT2) как отдельный, но сопряжённый счётчик. **Новый фальсификатор-кандидат:** «очередность счётчиков — центриоль vs трансляция — определяет порог невозврата».
+
+**Контр-нюанс (Kill-критерий):** orb2-НСК делятся асимметрично и нормально, несмотря на нарушение Polo/PCM → **асимметрия PCM не достаточна для асимметричного деления** (ср. Strawbridge 2026). Не переоценивать каузальность.
+
 **Key Hardware/Software Difference:**
 - **Centriole = hardware:** non-repairable in situ. There is no coordinated quality-control mechanism that restores the entire organelle to a "young" state. But it can be **eliminated and created de novo** — exactly what happens in meiosis.
 - **Epigenome = software:** reprogrammable by Yamanaka factors, but unable to fix hardware defects.
