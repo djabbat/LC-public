@@ -1,4 +1,4 @@
-//! Tamper-evident audit journal — mirror of the Demon Core TRACE CONTINUITY
+//! Tamper-evident audit journal — mirror of the Auditor Core TRACE CONTINUITY
 //! (DCT10–DCT12) and Ed25519 journal signing (P2). An append-only log is only
 //! a discipline until it is tamper-evident: here the canonical digest of the
 //! whole audit trail is signed with HMAC-SHA256.

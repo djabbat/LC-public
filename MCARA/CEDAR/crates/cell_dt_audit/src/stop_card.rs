@@ -1,5 +1,5 @@
-//! STOP / NEED regime for pipeline stages — mirror of the Demon Core
-//! `GO / ASK / BLOCK / NEED` and the STOP CARD (DEMON_CORE_SPEC §7–8).
+//! STOP / NEED regime for pipeline stages — mirror of the Auditor Core
+//! `GO / ASK / BLOCK / NEED` and the STOP CARD (AUDITOR_CORE_SPEC §7–8).
 //!
 //! A pipeline stage that cannot proceed lawfully returns a classified
 //! `StageStopCard` instead of fabricating an output. Stopping at the right

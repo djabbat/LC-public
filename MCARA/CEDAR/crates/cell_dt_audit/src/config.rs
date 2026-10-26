@@ -1,4 +1,4 @@
-//! Data-driven pipeline policies (Demon Core Transfer, step 4 — 2026-10-16).
+//! Data-driven pipeline policies (Auditor Core Transfer, step 4 — 2026-10-16).
 //!
 //! The dependency graph and the dependency policies are declared in a config
 //! file (JSON), not hardcoded. Policies match on a TYPED `StatusTransition`

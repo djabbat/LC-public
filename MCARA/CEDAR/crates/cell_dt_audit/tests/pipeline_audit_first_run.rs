@@ -1,5 +1,5 @@
-//! FIRST RUN — CEDAR pipeline-audit end-to-end walk (Demon Core transfer,
-//! 2026-10-16). Mirrors the DAIS `demon_first_run` scenario but for the CEDAR
+//! FIRST RUN — CEDAR pipeline-audit end-to-end walk (Auditor Core transfer,
+//! 2026-10-16). Mirrors the DAIS `auditor_first_run` scenario but for the CEDAR
 //! computational pipeline (calibration → sensitivity → validation → datasets):
 //!
 //!   1. datasets stage recorded → calibration PROPOSED→SUPPORTED (epochs,

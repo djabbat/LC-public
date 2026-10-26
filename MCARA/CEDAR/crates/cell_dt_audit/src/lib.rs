@@ -1,9 +1,9 @@
-//! CEDAR pipeline-audit discipline — transfer of the Noepedia Demon Core
-//! principles (Demon Core Harvest 2026-10-16, DCT01–DCT20) to the CEDAR
+//! CEDAR pipeline-audit discipline — transfer of the Aletheia Auditor Core
+//! principles (Auditor Core Harvest 2026-10-16, DCT01–DCT20) to the CEDAR
 //! computational pipeline audit.
 //!
 //! The CEDAR pipeline (calibration → sensitivity → validation → datasets)
-//! must obey the same executive discipline as the ignorant demon:
+//! must obey the same executive discipline as the Agnostic Auditor:
 //!
 //! 1. **Non-destructive stage status / TRACE CONTINUITY** — re-running or
 //!    archiving a pipeline stage never erases the prior record. A stage's
@@ -23,7 +23,7 @@
 //!    (HMAC-SHA256); compaction/archiving are legitimate re-signing events,
 //!    silent rewrites fail verification.
 //!
-//! Master document: `docs/DEMON_CORE_TRANSFER_2026-10-16.md`.
+//! Master document: `docs/AUDITOR_CORE_TRANSFER_2026-10-16.md`.
 
 pub mod config;
 pub mod journal;

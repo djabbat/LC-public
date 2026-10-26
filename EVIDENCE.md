@@ -2,9 +2,9 @@
 
 **Status:** Empirical & theoretical support inventory · 2026-04-28 (CONCEPT v5.6)
 
-## 🔥 NEW 2026-10-16 — Noepedia KNOWLEDGE_CREDIT (гипотезы MCARA / центриолярная энтропия)
+## 🔥 NEW 2026-10-16 — Aletheia Epistemic Guardianship (гипотезы MCARA / центриолярная энтропия)
 
-> Мастер: `~/Desktop/Services/docs/NOEPEDIA_KNOWLEDGE_CREDIT_HARVEST_2026-10-16.md`
+> Мастер: `~/Desktop/Services/docs/ALETHEIA_DOCTRINE_HARVEST_2026-10-16.md`
 
 1. **«Красивый мир» — проверять мосты к физике:** внутренне когерентная гипотеза (напр. центриолярная энтропия) ≠ подтверждённая (BonJour изоляция 10.2307/2215192; Goodman grue 10.2307/2103789); каждый мост к данным = кредит с условием покрытия.
 2. **Считать обе стороны:** негативные результаты и контр-нюансы фиксировать/публиковать (PMID 40991668; асимметрия «нет» Popper 10.4324/9780203994627) — MCARA-гипотезы с Kill-критериями.
@@ -289,12 +289,12 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 | **42858325** | Mitochondria Beyond Bioenergetics: Canonical and Non-Canonical Functions in Isch | Митохондрии вне энергетики: новые мишени для терапии старения и ишемического инсульта. | ✅ verified |
 | **42856271** | The p53-p21-Cyclin D2 regulatory axis drives metabolic reprogramming and a disti | Связывает p53-сенесценцию макрофагов с метаболическим репрограммированием при старении и M | ✅ verified |
 
-## §. Noepedia Harvest — 2026-10-12 (эпистемический стандарт для EVIDENCE)
+## §. Aletheia Epistemic Standard — 2026-10-12 (эпистемический стандарт для EVIDENCE)
 
-> Мастер-анализ: `~/Desktop/Services/docs/NOEPEDIA_HARVEST_2026-10-12.md` (переписка Jaba↔Gakely + Noepedia; подтверждение: arXiv 2603.05828, 2604.08016, 2607.18564; PMID 18436948, 27339128, 16060722; DOI 10.1080/00207727008920220).
+> Мастер-анализ: `~/Desktop/Services/docs/ALETHEIA_EPISTEMIC_HARVEST_2026-10-12.md` (Aletheia; подтверждение: arXiv 2603.05828, 2604.08016, 2607.18564; PMID 18436948, 27339128, 16060722; DOI 10.1080/00207727008920220).
 
 **Полезное для LC / MCARA / BioSense / agentic-AI-гипотез по старению:**
-1. **K-лестница (K0–K9) для саб-EVIDENCE.md** (MCARA/MitoROS/Proteostasis/Telomere/EpigeneticDrift/CEDAR): вместо «✅ verified» — ступень: адрес/PMID есть → сертификат определён → кандидат сел → два независимых источника → стало процедурой. Карта на GRADE (PMID 18436948) + New Evidence Pyramid (PMID 27339128) + Oxford CEBM + NASA TRL.
+1. **Evidentiary Ladder (K0–K9) для саб-EVIDENCE.md** (MCARA/MitoROS/Proteostasis/Telomere/EpigeneticDrift/CEDAR): вместо «✅ verified» — ступень: адрес/PMID есть → сертификат определён → кандидат сел → два независимых источника → стало процедурой. Карта на GRADE (PMID 18436948) + New Evidence Pyramid (PMID 27339128) + Oxford CEBM + NASA TRL.
 2. **Сформированный неизвестный (REQUIRED_ROLE)** — мощный инструмент поиска пробелов в путях старения: отношение требует участника (киназа/субстрат/лиганд/регулятор), имя ещё неизвестно → это OPEN с ограничениями, а не «нет данных». Паттерн = orphan GPCR/рецепторы; формализация абдукции: arXiv 2604.08016 (survey), 2607.18564 (HALO, drug discovery), 2505.20948 (CtrlHGen: правило валидации против взрыва гипотез). Предупреждение: без валидационного правила — апорофения (ложная проекция ролей).
 3. **Provenance для AI-генерованных гипотез старения** (HART arXiv 2603.05828): каждая гипотеза от agentic-AI несёт метку происхождения (модель/шаг/источник); потеря метки = дефект. Это усиливает существующий гейтинг «ни одна гипотеза не выходит без проверки» (из анализа SYNAPS-I/Zenodo 21918325).
 4. **Проверка построением, не прецедентом** (Conant–Ashby DOI 10.1080/00207727008920220; Ioannidis PMID 16060722): гипотезу валидировать симуляцией/сценой (есть симуляторы Ze, CEDAR), а не «так написано в литературе»; модель при этом сама нуждается в независимой валидации.

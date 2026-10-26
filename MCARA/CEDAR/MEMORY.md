@@ -2,11 +2,11 @@
 
 <!-- lang:ru -->
 ### Решение
-- Перенести исполнительную дисциплину Noepedia демон-ядра (волна 3: DCT01–DCT20 / DEMON_CORE_SPEC) из DAIS в аудит вычислительного конвейера CEDAR. Волна-2 (K-лестница, два свидетеля) уже была в CEDAR; не хватало «как конвейер останавливается, не выдумывает, не затирает историю и не самолегитимизируется».
+- Перенести исполнительную дисциплину Aletheia аудитор-ядра (волна 3: ACT01–ACT20 / AUDITOR_CORE_SPEC) из DAIS в аудит вычислительного конвейера CEDAR. Волна-2 (Evidentiary Ladder, два свидетеля) уже была в CEDAR; не хватало «как конвейер останавливается, не выдумывает, не затирает историю и не самолегитимизируется».
 
 ### Что построено
 - **Кран `crates/cell_dt_audit`** (Rust, зависимость только hmac/sha2):
-  - `status.rs` — `StageStatus` (K-лестница) + `AuditRecord` (stage/epoch/scope, non-destructive);
+  - `status.rs` — `StageStatus` (Evidentiary Ladder) + `AuditRecord` (stage/epoch/scope, non-destructive);
   - `stop_card.rs` — `RegimeState` (GO/ASK/BLOCK/NEED) + `NeedClass` (12) + `StageStopCard`;
   - `policy.rs` — `StageDependencyPolicy` (ROLE=POLICY) + `CompositionPolicy`/`evaluate_composition`;
   - `journal.rs` — `AuditJournal` (append-only, archive/compact/check_trace_continuity) + `JournalGuard` (HMAC-SHA256);
@@ -21,7 +21,7 @@
 - Dependency-граф захардкожен; политики сравниваются строково; `StageStopCard` проще DAIS-версии; «молчание ≠ поддержка» структурно, автоматического конвейер-проверятеля нет; реальные MCMC-прогоны через аудит-слой не проверены (кран стоит отдельно).
 
 ### Мастер-документ
-- `docs/DEMON_CORE_TRANSFER_2026-10-16.md` · EVIDENCE.md обогащён · TODO пункт закрыт (кроме интеграции с реальными стадиями — отдельный PR).
+- `docs/AUDITOR_CORE_TRANSFER_2026-10-16.md` · EVIDENCE.md обогащён · TODO пункт закрыт (кроме интеграции с реальными стадиями — отдельный PR).
 <!-- /lang:ru -->
 
 ## ✅ 2026-10-16 (2) — Интеграция аудита с реальным конвейером (шаг 2)
@@ -32,7 +32,7 @@
 
 ### Что построено
 - **`cell_dt_validation/src/audited.rs`**: `AuditedPipeline` — `run_validation` (dependency-policy + мембрана + статус из реальных результатов), `record_calibration`, `record_sensitivity`, `run_full_pipeline` (datasets→calibration→sensitivity→validation со STOP CARD). Зависимость `cell_dt_validation → cell_dt_audit` (без цикла).
-- **`examples/audited_pipeline_run.rs`**: реальный MCMC (сходится, R²_train≈0.89), честная ±20% чувствительность (ΔR²≈0.0000), реальные фиты ROS/Telomere/CHIP VAF/MCAI → вердикт Accepted; вывод **NETWORK DELTA / STOP MAP / NEED MAP** (DEMON_CORE_SPEC §9); журнал подписан HMAC-SHA256.
+- **`examples/audited_pipeline_run.rs`**: реальный MCMC (сходится, R²_train≈0.89), честная ±20% чувствительность (ΔR²≈0.0000), реальные фиты ROS/Telomere/CHIP VAF/MCAI → вердикт Accepted; вывод **NETWORK DELTA / STOP MAP / NEED MAP** (AUDITOR_CORE_SPEC §9); журнал подписан HMAC-SHA256.
 - **4 новых теста** audited (полный прогон неразрушающе 2 эпохи; BLOCK при не-SUPPORTED upstream; мембрана отклоняет self-introduced threshold; статус отражает фактические результаты).
 
 ### Итог

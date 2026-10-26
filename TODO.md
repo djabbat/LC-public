@@ -2,9 +2,9 @@
 
 # LC · TODO  ## 🔴 July 4, 2026 - [x] ~~**Centrosome as Integrative Sensor** — submit to PBMB~~ (🔴 CLOSED 2026-08-09 — submission cancelled by owner decision)   - [x] ~~Check author guidelines (PBMB — Elsevier)~~   - [x] ~~Write cover letter~~   - [x] ~~Check references (Vancouver)~~   - [x] ~~Submit via Editorial Manager (v7.2 — post-28 peer review)~~  ## Active  > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`  **Date:** 2026-06-21  ---  ## ✅ COMPLETED  - [x] CONCEPT v7.2 — final architecture - [x] THEORY v3.0 — hierarchy A/B/C/D, null model, decision tree - [x] EVIDENCE v2.0 — 30 PMIDs verified - [x] sim_core v0.1.1 — 70 tests - [x] Bayesian contour — implemented - [x] Migration of 360+ files — key structures - [x] CLI `oa` — 4 commands - [x] README — EN, GitHub-ready - [x] 28 cycles of peer review  ## 🟡 IN PROGRESS  - [ ] Calibration on GTEx/UK Biobank (Phase 4) - [ ] OSF preregistration of protocols - [ ] ARGUS-LP bridge - [ ] INFOGEST bridge (code) - [ ] sim_api (REST) - [ ] sim_gui (Phoenix LiveView) - [ ] sim_py (PyO3)  ## 🔴 NOT STARTED  - [ ] Calibration of L_crit on clinical data - [ ] Validation of Z_conflict on longitudinal data - [ ] Causal inference analysis (Mendelian randomization) - [ ] Species parameterization (≥3 species) - [ ] Publication in PLOS ONE / Scientific Reports  ---  *LC TODO v7.2 — 2026-06-21.*  ## Pending  ## Done
 
-## 📌 Эпистемический стандарт (Noepedia Harvest) — 2026-10-12
+## 📌 Эпистемический стандарт (Aletheia Epistemic Standard) — 2026-10-12
 - [ ] Ввести K-лестницу (K0–K9, карта GRADE/Murad/TRL) во все саб-EVIDENCE.md MCARA
 - [ ] Перевести OPEN_PROBLEMS на формат OPEN≠отрицание: у каждой проблемы — правило валидации
 - [ ] Добавить REQUIRED_ROLE-поиск пробелов (недостающие киназы/субстраты/регуляторы) в пути старения
 - [ ] Provenance-метки на AI-генерованные гипотезы (модель/шаг/источник) — гейт атрибуции
-- [ ] Связать с мастером: ~/Desktop/Services/docs/NOEPEDIA_HARVEST_2026-10-12.md
+- [ ] Связать с мастером: ~/Desktop/Services/docs/ALETHEIA_EPISTEMIC_HARVEST_2026-10-12.md

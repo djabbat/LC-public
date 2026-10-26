@@ -1,7 +1,7 @@
 //! Audited pipeline runs — bridge between the `cell_dt_audit` discipline
-//! (Demon Core Transfer 2026-10-16) and the real CEDAR pipeline stages.
+//! (Auditor Core Transfer 2026-10-16) and the real CEDAR pipeline stages.
 //!
-//! Wraps `ValidationSuite` and calibration/sensitivity runs in the demon-core
+//! Wraps `ValidationSuite` and calibration/sensitivity runs in the auditor-core
 //! regime so that real pipeline execution is lawfully bounded:
 //!
 //! - **Dependency policy:** validation may be promoted to SUPPORTED only if an
@@ -47,7 +47,7 @@ impl ValidationStatus {
     }
 }
 
-/// Audited CEDAR pipeline: wraps real stage runs in the demon-core regime.
+/// Audited CEDAR pipeline: wraps real stage runs in the auditor-core regime.
 #[derive(Debug, Clone)]
 pub struct AuditedPipeline {
     pub audit: PipelineAudit,

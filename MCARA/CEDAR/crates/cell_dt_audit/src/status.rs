@@ -1,4 +1,4 @@
-//! Non-destructive stage status — CEDAR pipeline-audit mirror of the Demon
+//! Non-destructive stage status — CEDAR pipeline-audit mirror of the Auditor
 //! Core `HISTORY_STATUS`/`CURRENT_EPISTEMIC_STATUS` separation and the
 //! non-destructive MARK (DCT11–DCT12).
 //!
@@ -8,7 +8,7 @@
 
 use serde::{Deserialize, Serialize};
 
-/// Stage-status ladder — mirror of the Noepedia K-ladder
+/// Stage-status ladder — mirror of the Aletheia Evidentiary Ladder
 /// (GRADE / Murad / CEBM / TRL mapping, see `EVIDENCE.md` of CEDAR).
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "UPPERCASE")]
