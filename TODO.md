@@ -8,3 +8,15 @@
 - [ ] Добавить REQUIRED_ROLE-поиск пробелов (недостающие киназы/субстраты/регуляторы) в пути старения
 - [ ] Provenance-метки на AI-генерованные гипотезы (модель/шаг/источник) — гейт атрибуции
 - [ ] Связать с мастером: ~/Desktop/Services/docs/ALETHEIA_EPISTEMIC_HARVEST_2026-10-12.md
+
+---
+
+## 🟢 XERJ Corpus Hub — 2026-10-29 (LC-public отобран)
+
+- [ ] ⭐ Поставить звёзду xerj-org/xerj + вернуть hub-star на своей странице (hub.xerj.org/contributors/djabbat)
+- [ ] 🏷 Добавить README-бейдж XERJ в README LC-public
+- [ ] 📣 Расшарить contributor-страницу (кнопки X / LinkedIn / HN уже на странице)
+- [ ] ➕ Добавить другие репо на Hub через hub.xerj.org/add (выборочно и осознанно: только MIT-код как «эталон»): кандидаты — bristlebot-sim-public, PN-lean, Hyperbola-public, moss-sas6-alphafold-public, iron-bioavailability-factorial, ze-theory
+- [ ] 🧪 Пилот XERJ локально: установить (`curl -fsSL https://xerj.org/get | sh`), `xerj init` (MCP), проиндексировать LC и проверить «ref coding» на своих задачах (независимо от вендорных 2.7×)
+- [ ] 📎 (опц.) Пилот XERJ на .eml/mbox (почта по грантам/статьям) — поиск по переписке
+- [ ] 🔁 Синхронизировать пик корпуса LC-public (сейчас fac04e28 от 2026-10-16) — при новых значимых коммитах CEDAR/MCARA обновить пик

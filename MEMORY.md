@@ -1,6 +1,25 @@
 # LC · MEMORY (v7.6)  **Date:** 2026-08-02  ---
 
 <!-- lang:ru -->
+## 2026-10-29: 📦 LC-public отобран в XERJ Corpus Hub (reference memory для AI-агентов)
+<!-- /lang:ru -->
+
+<!-- lang:ru -->
+**Источник:** письмо Ivan N (founders@xerj.org) 2026-10-29 00:35 «LC-public: selected for the XERJ Corpus Hub» — все ссылки письма пройдены и проверены (hub.xerj.org/contributors/djabbat, /corpus/djabbat--lc-public, github.com/xerj-org/xerj, xerj.org/llms.txt; GitHub API 2026-10-29).
+
+**Что это:** XERJ — open-source (Apache-2.0) локальный поиск/RAG-движок для AI-агентов (один Rust-бинарник: BM25/вектор/гибрид/kNN, ES-совместимый API, `/_memory` для долгосрочной памяти агента). Corpus Hub = открытая «reference memory»: агент встречает ту же задачу → получает наш код (LC-public, коммит fac04e28, CEDAR/MCARA, 6 файлов, 513 строк) как worked example с атрибуцией Jaba Tqemaladze + репозиторий.
+
+**Что полезного для LC:**
+- **Канал видимости/атрибуции:** код LC распространяется как рабочий эталон для агентов (free, MIT, с авторством) — ранний сигнал, пока мал (1 корпус, 0 hub-звёзд).
+- **Инструмент:** XERJ можно поставить локально (`curl -fsSL https://xerj.org/get | sh`; `xerj init` = MCP в Claude Code/Cursor) и индексировать код LC (и др. проектов) — поиск без grep, `file:line`-цитаты. Дополняет lean-ctx.
+- **Заявленный эффект «ref coding»** (2.7× меньше токенов vs grep, 16/16 задач) — измерен вендором, проверить на своих задачах.
+- **Почта:** XERJ индексирует .eml/mbox (Google Takeout) — применимо к переписке по грантам/статьям.
+- **Соседние репо:** 10+ публичных репозиториев Jaba (Hyperbola-public, AlaoLine, bristlebot-sim-public, PN-lean, ze-theory и др.) — кандидаты на добавление в Hub через hub.xerj.org/add.
+
+**Записано:** LC/EVIDENCE.md §XERJ (2026-10-29) · LC/TODO.md (XERJ-акции) · LC/STATE.md (заметка) · полный разбор `~/Desktop/Services/docs/XERJ_CORPUS_HUB_ANALYSIS_2026-10-29.md`.
+<!-- /lang:ru -->
+
+<!-- lang:ru -->
 ## 2026-10-22: 🖥️ Локальные агентные рои и on-device ИИ — DGX Station (GB300)
 <!-- /lang:ru -->
 
