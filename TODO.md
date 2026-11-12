@@ -1,5 +1,7 @@
 ⚠️ FROZEN per 90-day plan until Oct 8, 2026. Active tasks: see Marketing/AlaoLine_CIRCBIO-07/TODO.md
 
+## Активные
+
 # LC · TODO  ## 🔴 July 4, 2026 - [x] ~~**Centrosome as Integrative Sensor** — submit to PBMB~~ (🔴 CLOSED 2026-08-09 — submission cancelled by owner decision)   - [x] ~~Check author guidelines (PBMB — Elsevier)~~   - [x] ~~Write cover letter~~   - [x] ~~Check references (Vancouver)~~   - [x] ~~Submit via Editorial Manager (v7.2 — post-28 peer review)~~  ## Active  > **📄 Articles and publications:** see `~/Desktop/Services/publications/PUBLICATIONS_TRACKER.md`  **Date:** 2026-06-21  ---  ## ✅ COMPLETED  - [x] CONCEPT v7.2 — final architecture - [x] THEORY v3.0 — hierarchy A/B/C/D, null model, decision tree - [x] EVIDENCE v2.0 — 30 PMIDs verified - [x] sim_core v0.1.1 — 70 tests - [x] Bayesian contour — implemented - [x] Migration of 360+ files — key structures - [x] CLI `oa` — 4 commands - [x] README — EN, GitHub-ready - [x] 28 cycles of peer review  ## 🟡 IN PROGRESS  - [ ] Calibration on GTEx/UK Biobank (Phase 4) - [ ] OSF preregistration of protocols - [ ] ARGUS-LP bridge - [ ] INFOGEST bridge (code) - [ ] sim_api (REST) - [ ] sim_gui (Phoenix LiveView) - [ ] sim_py (PyO3)  ## 🔴 NOT STARTED  - [ ] Calibration of L_crit on clinical data - [ ] Validation of Z_conflict on longitudinal data - [ ] Causal inference analysis (Mendelian randomization) - [ ] Species parameterization (≥3 species) - [ ] Publication in PLOS ONE / Scientific Reports  ---  *LC TODO v7.2 — 2026-06-21.*  ## Pending  ## Done
 
 ## 📌 Эпистемический стандарт (Aletheia Epistemic Standard) — 2026-10-12
@@ -20,3 +22,7 @@
 - [ ] 🧪 Пилот XERJ локально: установить (`curl -fsSL https://xerj.org/get | sh`), `xerj init` (MCP), проиндексировать LC и проверить «ref coding» на своих задачах (независимо от вендорных 2.7×)
 - [ ] 📎 (опц.) Пилот XERJ на .eml/mbox (почта по грантам/статьям) — поиск по переписке
 - [ ] 🔁 Синхронизировать пик корпуса LC-public (сейчас fac04e28 от 2026-10-16) — при новых значимых коммитах CEDAR/MCARA обновить пик
+
+## Ожидание
+
+## Готово
