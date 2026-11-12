@@ -8,9 +8,9 @@
 
 | Parameter | Formula | Value | Description |
 |----------|---------|:--------:|----------|
-| **v** (Ze velocity) | `(N_T - N_S) / N` | v* = 1−ln2 ≈ **0.3069** | Balance of T/S events (exact) |
+| **v** (Ze velocity) | `(N_S - N_T) / (N_S + N_T)` | v* = 1−ln2 ≈ **0.3069** | Balance of T/S events (exact) |
 | **τ** (Ze complexity) | `H(stream) / log₂(N)` | — | Normalized Shannon entropy |
-| **Z** (Ze index) | `N_T / N` | Z* ≈ **0.731** | Proportion of T-events |
+| **Z** (Ze index) | `N_S / N` | Z* ≈ **0.653** | Proportion of S-events |
 | **χ** (Ze variability) | `(max - min) / mean` | — | Oscillation amplitude |
 
 ## Simulator parameters  

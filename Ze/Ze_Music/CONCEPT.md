@@ -13,8 +13,8 @@ Music is a **Ze system**: a binary counter stream of T (rising) and S (falling) 
 
 | Symbol | Musical Meaning | Ze Meaning |
 |--------|----------------|-------------|
-| **T** (Tension) | Rising pitch, increasing loudness, harmonic tension, longer duration | Event exceeds prediction ↑ |
-| **S** (Stretch) | Falling pitch, decreasing loudness, harmonic resolution, shorter duration | Event falls below prediction ↓ |
+| **S** (Space) | Rising pitch, increasing loudness, harmonic tension, longer duration | Event exceeds prediction (change) ↑ |
+| **T** (Time) | Falling pitch, decreasing loudness, harmonic resolution, shorter duration | Event falls below prediction (stasis) ↓ |
 
 ---
 
@@ -22,7 +22,7 @@ Music is a **Ze system**: a binary counter stream of T (rising) and S (falling) 
 
 ### 2.1 Four Ze Channels for Music
 
-| Channel | T-event | S-event | Symbol |
+| Channel | S-event | T-event | Symbol |
 |---------|---------|---------|--------|
 | **Pitch** (melodic) | Next note higher than previous | Next note lower or equal | `z_pitch` |
 | **Rhythm** (duration) | Next note longer than previous | Next note shorter or equal | `z_rhythm` |
@@ -32,7 +32,7 @@ Music is a **Ze system**: a binary counter stream of T (rising) and S (falling) 
 ### 2.2 Ze Velocity for Music
 
 ```
-v_music = (N_T - N_S) / (N_T + N_S)  ∈  [-1, +1]
+v_music = (N_S - N_T) / (N_S + N_T)  ∈  [-1, +1]
 
 v_pitch, v_rhythm, v_dynamics, v_harmony — per-channel velocities
 v_total = weighted sum over channels
@@ -132,24 +132,24 @@ L_exposition / L_development ≈ φ
 L_recapitulation / L_exposition ≈ φ
 ```
 
-**Ze interpretation:** The golden ratio represents the optimal ratio of T-events to S-events for maximal τ:
+**Ze interpretation:** The golden ratio represents the optimal ratio of S-events to T-events for maximal τ:
 
 ```
-Z* = N_T / N = 1/(1 + e⁻¹) ≈ 0.731
+Z* = N_S / N = (2 − ln 2)/2 ≈ 0.653
 
 Note: v* = 1 - ln 2 ≈ 0.3069
      Z* = (1 + v*)/2 = (1 + 0.3069)/2 = 0.6535... 
 
 Wait — re-deriving.
 
-v = (N_T - N_S)/N = (N_T/N) - (N_S/N) = Z - (1-Z) = 2Z - 1
+v = (N_S - N_T)/(N_S + N_T) = (N_S/N) - (N_T/N) = Z - (1-Z) = 2Z - 1
 
 So Z = (1+v)/2.
 
 At v* = 1 − ln 2 ≈ 0.3069:
 Z* = (1 + 0.3069)/2 = 0.6535
 
-But earlier papers say Z* ≈ 0.731. Let's check:
+But some earlier drafts reported Z* ≈ 0.731 (empirical active-observer). Let's check:
 If Z* = 0.731, then v = 2·0.731 − 1 = 0.462.
 That corresponds to the empirical v ≈ 0.456 (active-observer regime), not the exact v* = 1 − ln 2.
 
@@ -507,7 +507,7 @@ Musical interpretation:
 | 4 | Orff ostinato has `|v| < 0.05` for any 8-bar window | Sliding window v computation |
 | 5 | `v_total` for any complete tonal work → 0 as t → T_final | Final cadence = equilibrium |
 | 6 | Ze-generated music under Bach profile is judged "Bach-like" by listeners | Blind A/B test (n≥30) |
-| 7 | Golden ratio φ appears in Mozart's Z = N_T/N distribution | Compute Z for 100 Mozart movements |
+| 7 | Golden ratio φ appears in Mozart's Z = N_S/N distribution | Compute Z for 100 Mozart movements |
 | 8 | Fugue subject and its inversion have opposite v_pitch | v(mirror) = −v(original) |
 
 ---

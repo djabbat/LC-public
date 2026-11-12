@@ -107,3 +107,20 @@
 - **Обогащены EVIDENCE.md:** LC (§0a, 8 строк), MCARA (Γ-связка), CEDAR (Counter #1 → 8.5), MitoROS (Counter #3 → 9.0), PhD (дайджест).
 - **Ключевое:** germline reset молекулярно обоснован; «D≈0» зиготы под вопросом (отцовская энтропия); центрриоль = автономный осциллятор.
 - **ARGUS/Entropy Reset:** addendum 2026-10-05 в ENTROPY_RESET_PROGRAM_COMPLETE.md (механика Eliminate→Rebuild из природы).
+
+---
+## 2026-11-03: Ze — кривизна пространства-времени как импеданс-поле (анализ по всем базам + статья)
+
+**Источник-триггер:** запрос Джабы «проанализировать измерение искривления пространства-времени с позиции Ze и дать формулу точнее всех известных». Поиск: arXiv API, Crossref, PubMed, Semantic Scholar. Математика верифицирована символьным счётом (SymPy 1.14). Всё записано: `LC/EVIDENCE.md §NEW 2026-11-03`, статья: `~/Desktop/Services/publications/Ze_Curvature_Submission/Spacetime_Curvature_Ze_2026-11-03.md`, трекер `PUBLICATIONS_TRACKER.md`.
+
+**Что полезного для LC:**
+1. **Математическое ядро Ze готово к статье:** импеданс-метрика ds²=z²c²dt²−z⁻²dr²−r²dΩ²; R(z)=2(r²(zz″+z′²)+4rzz′+z²−1)/r²; вакуум ⇒ Шварцшильд d(rz²)/dr=1 ⇒ z²=1−r_s/r (кривизна = счётный дефицит, «гравитация = градиент импеданса» получает точную форму).
+2. **Внешние якоря подтверждены (Crossref):** frame dragging 0.991±0.02 (Ciufolini 2019), прямое измерение кривизны поля атомными интерферометрами (Rosi 2015), кривизна-зависимость тестов ОТО по ГВ (Payne 2024), NANOGrav 15yr, MICROSCOPE 10⁻¹⁵, Мах-принцип (Barbour/Mashhoon/Schmid), пена пространства-времени (Christiansen/Carlip).
+3. ⚠️ **Найдено внутреннее расхождение Ze.md:** «Z_Ze→∞ на горизонте» против метрики z²=1−r_s/r ⇒ z→0. Унифицировать в следующей ревизии (помечено в EVIDENCE).
+4. **Честный статус:** «точнее всех известных» — фальсифицируемая гипотеза, а не факт; Ze воспроизводит GR в проверенной области и даёт тестируемые отклонения (Марс 0.5–1.5″/век, линзирование кластеров +5–15%, эхо ringdown, Δt GW/EM 0.1–0.3 с) — проверка 2026–2028.
+
+---
+## 2026-11-03: GRG inquiry отправлен (Ze × Curvature)
+- **Событие:** pre-submission inquiry отправлен в General Relativity and Gravitation (Springer) → `gerg@springernature.com` (адрес по конвенции Springer EM, код «gerg»; фолбэк gerg@springer.com при бонсе). Тема: «Curvature as a counting deficit: an impedance-field reformulation…».
+- **Пакет:** `~/Desktop/GRG_Submission_ZeCurvature/` (manuscript.docx/pdf, cover_letter, SUBMISSION_INFO.md — поля EM, INQUIRY_email_draft.md) + канон `Ze_Curvature_Submission/Spacetime_Curvature_Ze_2026-11-03.md` (rev. p/q, 58 реф.).
+- **Статус:** ждём ответа редакции; при «да» — подача через Editorial Manager; при бонсе — фолбэк; при «нет» — CQG/Found. Sci. (FoP исключён — перегружен Ze).

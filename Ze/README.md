@@ -12,13 +12,13 @@
 
 | Symbol | Meaning | Direction |
 |--------|---------|-----------|
-| **T** (Tension) | Event exceeds prediction / threshold | ↑ increase |
-| **S** (Stretch) | Event falls below prediction / threshold | ↓ decrease |
+| **S** (Space) | Event exceeds prediction / threshold (change) | ↑ increase |
+| **T** (Time) | Event falls below prediction / threshold (stasis) | ↓ decrease |
 
 A **Ze System** is any process that counts T and S events and computes the **Ze velocity**:
 
 ```
-v = (N_T - N_S) / (N_T + N_S) ∈ [-1, +1]
+v = (N_S - N_T) / (N_S + N_T) ∈ [-1, +1]
 ```
 
 The **critical point** `v* = 1 − ln 2 ≈ 0.3069` (exact, derived via entropy maximisation) is where the system is maximally complex and informationally stable — the "healthy equilibrium" of any Ze system. The value `0.456` used in earlier papers is an empirical approximation for the active-observer regime; the exact theoretical value is 0.3069.
@@ -29,9 +29,9 @@ The **critical point** `v* = 1 − ln 2 ≈ 0.3069` (exact, derived via entropy 
 
 | Parameter | Formula | Meaning |
 |-----------|---------|---------|
-| **v** (Ze velocity) | `(N_T - N_S) / N` | Balance of T/S events; v* = 1−ln2 ≈ 0.3069 (exact) |
+| **v** (Ze velocity) | `(N_S - N_T) / (N_S + N_T)` | Balance of T/S events; v* = 1−ln2 ≈ 0.3069 (exact) |
 | **τ** (Ze complexity) | `H(stream) / log₂(N)` | Normalized Shannon entropy of the stream |
-| **Z** (Ze index) | `N_T / N` | Fraction of T-events; Z* = 1/(1+e⁻¹) ≈ 0.731 |
+| **Z** (Ze index) | `N_S / N` | Fraction of S-events; Z* = (2 − ln 2)/2 ≈ 0.653 |
 | **χ** (Ze variability) | `(max - min) / mean` | Range normalized to mean; amplitude of oscillation |
 
 ### Antiparallelism Principle
@@ -41,7 +41,7 @@ The fundamental symmetry of Ze:
 S = −T (antiparallelism)
 ```
 
-Every T-event implies a corresponding S-event. The Ze stream is **not random** — it conserves the total state vector. This is the Ze analogue of energy conservation.
+Every S-event implies a corresponding T-event. The Ze stream is **not random** — it conserves the total state vector. This is the Ze analogue of energy conservation.
 
 ---
 
@@ -59,7 +59,7 @@ The Ze stream `Z = {z₁, z₂, ..., zₙ₋₁}` encodes the **dynamics**, not 
 
 ### Ze Velocity Field
 ```
-v(t) = lim_{Δt→0} [N_T(t,t+Δt) - N_S(t,t+Δt)] / N(t,t+Δt)
+v(t) = lim_{Δt→0} [N_S(t,t+Δt) - N_T(t,t+Δt)] / N(t,t+Δt)
 ```
 
 At equilibrium: `v → v* = 1 - ln 2 ≈ 0.3069` (exact derivation via entropy maximization).
@@ -127,7 +127,7 @@ Integrated into **AIM** (medical AI system): Ze metrics saved to SQLite, display
 
 ### Physics — Special Relativity from Ze
 Time dilation without postulating Lorentz transformation:
-A moving Ze counter counts fewer T-events per unit clock time → `τ_Ze` dilates → `Δt' = Δt/√(1-v²/c²)`.
+A moving Ze counter counts fewer S-events per unit clock time → `τ_Ze` dilates → `Δt' = Δt/√(1-v²/c²)`.
 Derived from first principles in `20260211_Direct Derivation of Time Dilation from Ze Counters`.
 
 ### Quantum Mechanics

@@ -11,7 +11,7 @@
 | Friction/conflict threshold | — | — | D_Ze > 0.3 |
 | Desynchronosis threshold | — | — | D_Ze > 0.5 |
 | Reference Ze-velocity | v* | 1 − ln2 | 0.3069 |
-| Reference Ze-index | Z* | 1/(1+e⁻¹) | 0.731 |
+| Reference Ze-index | Z* | (2 − ln 2)/2 | 0.653 |
 
 ## D_Ze between Tissues
 

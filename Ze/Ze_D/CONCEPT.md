@@ -12,9 +12,9 @@ In any system composed of multiple Ze-subsystems (tissues, organs, components), 
 
 ### Key hypotheses:
 
-- **H₁ (Ze-discordance):** D_Ze > 0.1 between two subsystems creates measurable excess T-events (Ze-friction, F_Ze > 0.05) at their boundary.
+- **H₁ (Ze-discordance):** D_Ze > 0.1 between two subsystems creates measurable excess S-events (Ze-friction, F_Ze > 0.05) at their boundary.
 - **H₂ (biological aging):** Biological age = Σ w_ij · D_Ze(i, j). Higher D_Ze → faster aging.
-- **H₃ (brain learning):** D_Ze between hippocampus (v=0.32) and neocortex (v=0.10) ≈ 0.22 is the mechanism of learning — T-events at zone boundaries = new connections.
+- **H₃ (brain learning):** D_Ze between hippocampus (v=0.32) and neocortex (v=0.10) ≈ 0.22 is the mechanism of learning — S-events at zone boundaries = new connections.
 - **H₄ (evolution):** D_Ze increases with evolutionary complexity: unicellular colonies (D_Ze < 0.05) < plants (0.05–0.10) < Metazoa (0.10–0.30). True somatic differentiation creates internal Ze-conflict.
 
 **Null hypothesis (H₀):** D_Ze does not correlate with any measurable biological or physical outcome — all Ze-subsystems are independent and their parameter differences are irrelevant.
@@ -34,7 +34,7 @@ Where:
 - Δτ = τ_A − τ_B (Ze-complexity difference)
 - ΔZ = Z_A − Z_B (Ze-index difference)
 
-**Ze-friction** (F_Ze) — the rate of excess T-events at the subsystem boundary:
+**Ze-friction** (F_Ze) — the rate of excess S-events at the subsystem boundary:
 
 \[
 F_{\text{Ze}} = D_{\text{Ze}} \cdot \frac{v_1 + v_2}{2}
@@ -47,7 +47,7 @@ F_{\text{Ze}} = D_{\text{Ze}} \cdot \frac{v_1 + v_2}{2}
 | State | D_Ze | F_Ze | Observable |
 |-------|:----:|:----:|------------|
 | **Health** | < 0.1 | < 0.05 | T/S balance preserved; system stable |
-| **Ze-friction** | 0.1–0.3 | 0.05–0.15 | Excess T-events at boundary; noisy operation |
+| **Ze-friction** | 0.1–0.3 | 0.05–0.15 | Excess S-events at boundary; noisy operation |
 | **Ze-conflict** | 0.3–0.5 | 0.15–0.3 | Macroscopic T-cascades; visible dysfunction |
 | **Ze-desynchronosis** | > 0.5 | > 0.3 | Irreversible degradation; aging / breakdown |
 
@@ -60,13 +60,13 @@ D_Ze maps directly to the difference in entropy production rates between hierarc
 | Ze parameter | Thermodynamic equivalent | Meaning |
 |--------------|-------------------------|---------|
 | τ = H/log₂(N) | S/k_B | Normalized entropy of event stream |
-| v = (N_T−N_S)/N | σΔt/k_B | Entropy production rate (in T/S units) |
-| Z = N_T/N | exp(σΔt/k_B) / (1+exp(σΔt/k_B)) | Forward/backward ratio in Fluctuation Theorem |
+| v = (N_S−N_T)/(N_S+N_T) | σΔt/k_B | Entropy production rate (in T/S units) |
+| Z = N_S/N | exp(σΔt/k_B) / (1+exp(σΔt/k_B)) | Forward/backward ratio in Fluctuation Theorem |
 
 **Fluctuation Theorem** (Evans & Searles, 1994) in Ze-form:
 
 \[
-\frac{P(T)}{P(S)} = \exp(v \cdot N)
+\frac{P(S)}{P(T)} = \exp(v \cdot N)
 \]
 
 **Hierarchical FT:** Each level k has its own FT with characteristic time Δt_k. D_Ze > 0 means P_k(T)/P_k(S) ≠ P_l(T)/P_l(S) — the two levels make contradictory predictions about the same event. This is the thermodynamic definition of disease.
@@ -107,7 +107,7 @@ Even cells of the same type differ: a stem hepatocyte (T_½ ~3–6mo, v=0.32) vs
 | Neocortex | 0.10 | 0.45 | ~100+ yr | Long-term memory |
 | Cerebellum | 0.08 | 0.47 | No renewal | Coordination, automatisms |
 
-**D_Ze(hippocampus, neocortex) ≈ 0.22** — significant internal conflict. Hypothesis: this is the **mechanism of learning**: T-events at zone boundaries create new connections. Brain diseases (dementia, schizophrenia) = disruption of this Ze-balance.
+**D_Ze(hippocampus, neocortex) ≈ 0.22** — significant internal conflict. Hypothesis: this is the **mechanism of learning**: S-events at zone boundaries create new connections. Brain diseases (dementia, schizophrenia) = disruption of this Ze-balance.
 
 ---
 
@@ -158,7 +158,7 @@ The expanded test matrix (F1–F4, G) in Ze-Hierarchy directly tests D_Ze:
 
 ### 9.1. In Vitro (Tissue Boundary)
 1. Co-culture two cell types with different T_½ (e.g., epithelium T_½=5d + fibroblasts T_½=6mo)
-2. Measure T-event frequency at boundary (Ca²⁺ imaging: T = spike above threshold)
+2. Measure S-event frequency at boundary (Ca²⁺ imaging: T = spike above threshold)
 3. Compute v₁, v₂, D_Ze from event streams
 4. Expected: D_Ze > 0.2 → chronic T-cascades → inflammation markers (IL-6, TNF-α)
 
@@ -191,7 +191,7 @@ The expanded test matrix (F1–F4, G) in Ze-Hierarchy directly tests D_Ze:
 | Work | Finding | Our difference |
 |------|---------|----------------|
 | Hierarchical thermodynamics (Prigogine, 1978) | Levels have different relaxation times | We map relaxation time → v → D_Ze |
-| Fluctuation Theorem (Evans & Searles, 1994) | P(+σ)/P(−σ) = exp(σΔt/k_B) | We rewrite as P(T)/P(S) = exp(v·N) |
+| Fluctuation Theorem (Evans & Searles, 1994) | P(+σ)/P(−σ) = exp(σΔt/k_B) | We rewrite as P(S)/P(T) = exp(v·N) |
 | Hayflick limit (1965) | Replicative senescence in cell culture | Cytogenetic status → v → T_½ |
 | Aging as entropy (Yates, 2002) | Entropy production increases with age | D_Ze = entropy production mismatch between tissues |
 | Neurogenesis (Eriksson, 1998) | Adult neurogenesis in hippocampus | Hippocampus (v=0.32) vs neocortex (v=0.10) = brain D_Ze |
