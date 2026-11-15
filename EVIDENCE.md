@@ -716,3 +716,17 @@ When PMID/DOI verification fails — move to §2 (Removed) with explicit reason.
 | **42990134** | From micro-architecture to networks: canonical neurobiological architecture of f | Интеграция микро- и макроархитектуры мозга для моделирования старения и психопатологии. | ✅ verified |
 | **42989704** | Mitochondrial Dysfunction as a Context-Dependent Driver and Amplifier of the SAS | Митохондриальный SASP и ось mtDNA-cGAS-STING как новая мишень сенотерапии. | ✅ verified |
 | **42989047** | Pyroptotic Macrophage Extracellular Vesicles Drive miR-103a-3p Mediated Mitochon | Механизм miR-103a-3p в экзосомах макрофагов связывает пироптоз с митохондриальной дисфункц | ✅ verified |
+
+## §NEW — Литературный дайджест 2026-11-15 (авто, literature-agent)
+
+> Автоматический анализ после еженедельного поиска. PMID верифицированы детерминированно.
+
+| PMID | Статья | Польза для проекта | Достоверность |
+|---|---|---|---|
+| **43020881** | StrataChip: a microphysiological system to capture dynamic keratinocyte fate and | Микросреда кожи для изучения морфогенеза и механических переходов кератиноцитов — полезна  | ✅ verified |
+| **43024061** | A Structurally Interpretable ElasticNet-Based Epigenetic Clock Reveals Distribut | Эпигенетические часы на ElasticNet: интерпретируемая структура и индивидуальная архитектур | ✅ verified |
+| **43019465** | Setting the Pace of Epigenetic Aging in Mammals: A Hierarchy from Species to Ind | Иерархия эпигенетических часов от вида до особи — ключ к точным aging-моделям. | ✅ verified |
+| **43018858** | Premature immune aging in obesity: a testable framework linking immunosenescence | Связывает ожирение, иммунное старение и мультиорганную дисфункцию — готовая основа для agi | ✅ verified |
+| **43028253** | Premature Senescence and Cardiovascular Disease Following Cancer Treatments: Mit | Механизмы преждевременного старения сосудов после терапии рака через митохондрии — ключ к  | ✅ verified |
+| **43028171** | Pantethine and Neurodegeneration: A Coenzyme A-Centered Framework Linking Metabo | Пантетин как CoA-центричный мост между метаболизмом, нейровоспалением и митохондриями — пе | ✅ verified |
+| **43023638** | Schisantherin B Preserves Cochlear Function and Hair Cell Integrity in Aging by  | Восстанавливает митофагию в улитке, защищая слух и волосковые клетки при старении. | ✅ verified |
