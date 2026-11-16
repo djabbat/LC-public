@@ -101,7 +101,7 @@ def main() -> None:
         "v2.1 WT (P=1, autophagy on)": ("v2.1_wt", {}),
         "v2.1 PIDD1-KO / CASP2-KO (P=0)": ("v2.1_pidd1_ko", {}),
         "v2.1 WT + Aurora A x3 (Tet-On)": ("v2.1_wt", {"aurA_mean": 3.0}),
-        "v2.1 WT + Aurora A x3, alisertib-like (AurA/2)": ("v2.1_wt", {"aurA_mean": 1.5}),
+        "v2.1 WT + Aurora A x3 + alisertib-like (x0.35)": ("v2.1_wt", {"aurA_mean": 1.05}),
         "v2.0 + Aurora A x3 (no PIDDosome, no autophagy)": ("v2.0_atm_only", {"aurA_mean": 3.0}),
     }
     results = {}

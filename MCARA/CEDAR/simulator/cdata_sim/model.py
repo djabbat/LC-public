@@ -84,12 +84,12 @@ class ModelParams:
     init_cv: float = 0.10         # per-cell heterogeneity of Ms/Mf/A at birth
     # --- v2.1 modules ---
     piddosome: float = 1.0        # PIDDosome competence P (1 = WT, 0 = PIDD1/CASP2 KO)
-    N_crit_P: float = 1.6         # mature centrosome count sensed by PIDD1
+    N_crit_P: float = 2.0         # mature centrosome count sensed by PIDD1
     k_P: float = 4.0              # sensing steepness
-    lam_p21: float = 0.60         # p21 arrest rate
+    lam_p21: float = 0.20         # p21 arrest rate
     autophagy: float = 1.0        # autophagy correction edge on/off
     p_lc3b: float = 0.12          # per-generation probability of entering LC3B+ state
-    k_auto: float = 0.45          # correction-rate multiplier (RAC1-ATG16L1 axis)
+    k_auto: float = 0.15          # correction-rate multiplier (RAC1-ATG16L1 axis)
     G215_silencing: float = 0.5   # transactivation gate below which arrest is blocked
 
     def copy(self, **kw) -> "ModelParams":
