@@ -79,6 +79,7 @@ class ModelParams:
     Nmat_max: float = 8.0
     G_max: int = 250              # hard generation cap
     s_D: float = 0.15             # damage scale in the ATM term (interpretive)
+    decay_scale: float = 1.0      # scalar on the asymmetry-decay sum (interpretive)
     r_mult_cv: float = 0.30       # per-cell heterogeneity of damage production
     init_cv: float = 0.10         # per-cell heterogeneity of Ms/Mf/A at birth
     # --- v2.1 modules ---
@@ -187,7 +188,7 @@ class CEDARModel:
             amp_seen[idx] |= nm > 1.5
 
             # --- asymmetry: additive decay + recovery (v2.0 scheme) ---
-            decay = (
+            decay = p.decay_scale * (
                 p.gamma_D * np.clip(d - p.D_healthy, 0.0, None)
                 + p.gamma_S * np.clip(p.M_healthy - ms, 0.0, None)
                 + p.gamma_F * np.clip(p.M_healthy - mf, 0.0, None)
