@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, cite the article and this repository."
+title: "CEDAR-v2.1 reference implementation"
+abstract: >-
+  Reference implementation of the CEDAR-v2 stochastic model of centriole-driven
+  stem cell exhaustion (Longevity Horizon 2(5), doi:10.65649/wjtcf387), extended
+  with a PIDDosome p53 input, an Aurora A(Ser215) transactivation gate and an
+  autophagy correction edge (v2.1).
+authors:
+  - family-names: Tqemaladze
+    given-names: Jaba
+    orcid: "https://orcid.org/0000-0001-8651-7243"
+version: 2.1.0
+date-released: "2026-11-16"
+license: GPL-3.0
+references:
+  - type: article
+    title: "A Stochastic Model of Centriole-Driven Stem Cell Exhaustion"
+    year: 2026
+    doi: "10.65649/wjtcf387"
+    authors:
+      - family-names: Tqemaladze
+        given-names: Jaba
