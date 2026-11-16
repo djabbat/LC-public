@@ -282,11 +282,13 @@ class CEDARModel:
 
     # -- many seeds ---------------------------------------------------------
     def validate(self, n_cells: int = 10_000, seeds=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)):
+        from .calibration import summary as _summary
+
         med, iqr, p53s, amps = [], [], [], []
         for s in seeds:
             self.rng = np.random.default_rng(s)
             out = self.simulate(n_cells)
-            st = summary(out)
+            st = _summary(out)
             finite = np.isfinite(out["exit_gen"])
             med.append(st["median_exit"])
             q75, q25 = np.percentile(out["exit_gen"][finite], [75, 25])
