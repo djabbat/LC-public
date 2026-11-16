@@ -6,3 +6,7 @@ dist/
 build/
 .DS_Store
 *.so
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.benchmarks/
