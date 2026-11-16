@@ -78,6 +78,9 @@ class ModelParams:
     p53_threshold: float = 1.0    # active p53 above this engages the arrest counter
     Nmat_max: float = 8.0
     G_max: int = 250              # hard generation cap
+    s_D: float = 0.15             # damage scale in the ATM term (interpretive)
+    r_mult_cv: float = 0.30       # per-cell heterogeneity of damage production
+    init_cv: float = 0.10         # per-cell heterogeneity of Ms/Mf/A at birth
     # --- v2.1 modules ---
     piddosome: float = 1.0        # PIDDosome competence P (1 = WT, 0 = PIDD1/CASP2 KO)
     N_crit_P: float = 1.6         # mature centrosome count sensed by PIDD1
@@ -100,7 +103,7 @@ def _sigmoid(x: np.ndarray) -> np.ndarray:
     return 1.0 / (1.0 + np.exp(-np.clip(x, -60, 60)))
 
 
-ROUTES = ("exhaustion", "atm", "piddosome", "silenced", "censored")
+ROUTES = ("exhaustion", "exhaustion_silenced", "atm", "piddosome", "censored")
 
 
 # ----------------------------------------------------------------------------
@@ -123,9 +126,10 @@ class CEDARModel:
         n = int(n_cells)
 
         D = np.zeros(n)
-        Ms = np.ones(n)
-        Mf = np.ones(n)
-        A = np.clip(p.A_init - 0.05 * rng.random(n), 0.0, 1.0)
+        r_mult = np.exp(p.r_mult_cv * rng.standard_normal(n))
+        Ms = np.clip(1.0 + p.init_cv * rng.standard_normal(n), 0.3, 2.0)
+        Mf = np.clip(1.0 + p.init_cv * rng.standard_normal(n), 0.3, 2.0)
+        A = np.clip(p.A_init + p.init_cv * rng.standard_normal(n), 0.3, 1.2)
         Nmat = np.ones(n)
         plk1 = np.ones(n)
         aurA = p.aurA_mean * np.exp(p.aurA_cv * rng.standard_normal(n))
@@ -137,6 +141,7 @@ class CEDARModel:
         amp_seen = np.zeros(n, dtype=bool)
         corrected = np.zeros(n, dtype=bool)
         silenced_ever = np.zeros(n, dtype=bool)
+        blocked_hist = np.zeros(n, dtype=bool)
         nmat_at_exit = np.full(n, np.nan)
 
         alive = np.ones(n, dtype=bool)
@@ -151,7 +156,7 @@ class CEDARModel:
 
             # --- damage: production, catalytic removal, hyperglutamylation ---
             ccp5 = np.exp(-p.lam_age * g)
-            d = d + p.r_0 * (1.0 + p.r_age * g) - p.k_cat * ccp5 * d + p.omega * d * (1.0 - ccp5)
+            d = d + p.r_0 * r_mult[idx] * (1.0 + p.r_age * g) - p.k_cat * ccp5 * d + p.omega * d * (1.0 - ccp5)
             d = np.clip(d, 0.0, None)
 
             # --- maintenance: decay, damage coupling, saturating synthesis ---
@@ -196,7 +201,7 @@ class CEDARModel:
             # ATM axis: centrosome amplification + direct damage, opposed by Aurora A(Ser315)
             atm = p.kappa * np.clip(nm - 1.0, 0.0, None) + p.kappa_D * np.clip(
                 d - p.D_senescence, 0.0, None
-            )
+            ) / p.s_D
             p53 = atm / (1.0 + p.alpha_AurA_315 * au)
 
             # transactivation gate (Aurora A -> p53 Ser215)
@@ -217,22 +222,27 @@ class CEDARModel:
             atm_arm = arrest_due & ~pid_arm
 
             silencing = G215 < p.G215_silencing
-            sil_exit = arrest_due & silencing & ~pid_arm
+            blocked = arrest_due & silencing
             atm_exit = atm_arm & ~silencing
 
             exhaust = a < p.A_exit
 
-            # --- apply exits (priority: exhaustion > arrest > silencing) -----
+            # --- apply exits ---------------------------------------------------
+            # exhaustion wins; a blocked (silenced) arrest is recorded as a
+            # sub-label of the exhaustion route, exactly as v2.0 folds the
+            # silenced branch into replicative exhaustion.
+            blocked_hist[idx] = blocked_hist[idx] | blocked
             ex_exhaust = exhaust
+            ex_exhaust_sil = ex_exhaust & blocked_hist[idx]
+            ex_exhaust_plain = ex_exhaust & ~blocked_hist[idx]
             ex_atm = (~ex_exhaust) & atm_exit
             ex_pid = (~ex_exhaust) & (~ex_atm) & pid_arm & (~silencing)
-            ex_sil = (~ex_exhaust) & (~ex_atm) & (~ex_pid) & sil_exit
 
             for mask, name in (
-                (ex_exhaust, "exhaustion"),
+                (ex_exhaust_plain, "exhaustion"),
+                (ex_exhaust_sil, "exhaustion_silenced"),
                 (ex_atm, "atm"),
                 (ex_pid, "piddosome"),
-                (ex_sil, "silenced"),
             ):
                 sel = idx[mask]
                 if sel.size:
@@ -240,7 +250,7 @@ class CEDARModel:
                     route[sel] = name
                     nmat_at_exit[sel] = nm[mask]
                     alive[sel] = False
-                    if name == "silenced":
+                    if name == "exhaustion_silenced":
                         silenced_ever[sel] = True
 
             # --- write back --------------------------------------------------

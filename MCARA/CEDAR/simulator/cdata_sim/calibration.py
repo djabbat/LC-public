@@ -36,7 +36,7 @@ def summary(out: Dict[str, np.ndarray]) -> Dict[str, float]:
     ex = out["exit_gen"][fin]
     q25, q50, q75 = np.percentile(ex, [25, 50, 75]) if ex.size else (np.nan,) * 3
     counts = {r: float(np.sum(route == r)) for r in
-              ("exhaustion", "atm", "piddosome", "silenced", "censored")}
+              ("exhaustion", "exhaustion_silenced", "atm", "piddosome", "censored")}
     return {
         "n": float(n),
         "median_exit": float(q50),
@@ -45,12 +45,13 @@ def summary(out: Dict[str, np.ndarray]) -> Dict[str, float]:
         "frac_exhaustion": counts["exhaustion"] / n,
         "frac_atm": counts["atm"] / n,
         "frac_piddosome": counts["piddosome"] / n,
-        "frac_silenced": counts["silenced"] / n,
+        "frac_silenced": counts["exhaustion_silenced"] / n,
         "frac_censored": counts["censored"] / n,
         "frac_amp_at_exit": float(np.mean(out["amplified_at_exit"])),
         "frac_amp_ever": float(np.mean(out["amplified_ever"])),
         "frac_corrected": float(np.mean(out["corrected"])),
-        "silenced_or_censored": (counts["silenced"] + counts["censored"]) / n,
+        "frac_exhaustion_total": (counts["exhaustion"] + counts["exhaustion_silenced"]) / n,
+        "silenced_or_censored": (counts["exhaustion_silenced"] + counts["censored"]) / n,
     }
 
 
