@@ -98,3 +98,15 @@
 - PMID 20861312 — Centriole disengagement after DNA damage
 - PMID 25690512 — Chlamydomonas cell cycle (LECA model)
 - PMID 22691130 — Evolution of land plant cilia
+
+### CEDAR-v2.1 provisional parameters (2026-11-16) — ⚠️ NOT CALIBRATED
+
+> Added with the PIDDosome module and the autophagy return edge. Draft text: `~/Desktop/NGO/GLA/Longevity_Horizon/issues/Vol2_No5/36a_Tqemaladze_CEDAR_v2.1_revision_DRAFT_2026-11-16.md`. No value below has been fitted; the simulator source is missing locally (`cedar_sim.egg-info` only).
+
+| Parameter | Symbol | Value | Units | Status |
+|-----------|--------|-------|-------|--------|
+| PIDDosome competence | P | 1.0 (WT) / 0 (PIDD1-KO, CASP2-KO) | dimensionless | perturbation definition, not fitted |
+| PIDD1 amplification threshold | N_crit,P | TBD | mature centrosomes | to calibrate |
+| PIDDosome sensing steepness | k_P | TBD | 1/centrosome | to calibrate |
+| p21 arrest rate | λ_p21 | TBD | 1/generation | to calibrate |
+| Autophagy correction rate (basal) | k_0 | TBD | 1/generation | to calibrate |

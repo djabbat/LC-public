@@ -100,3 +100,15 @@
 - [x] C1/C2 axioms + M1-M9 mechanisms (THEORY.md v5.6)
 - [x] Chk1 molecular mechanism for M1 (PMID 41844775, 2026-07-25)
 - [x] MCARA Biogerontology appeal filed (2026-07-15)
+
+## v2.1 revision — pending (2026-11-16)
+
+> Триггер: внешняя сверка 2026-11-16 нашла противоречие в опубликованной CEDAR-v2 (LH 2(5), DOI 10.65649/wjtcf387). Черновик правок: `~/Desktop/NGO/GLA/Longevity_Horizon/issues/Vol2_No5/36a_Tqemaladze_CEDAR_v2.1_revision_DRAFT_2026-11-16.md`. Опубликованный файл не тронут.
+
+- [ ] **Восстановить исходники симулятора** (`github.com/djabbat/CEDAR-sim`, пакет `cedar_sim`): локально только `simulator/cedar_sim.egg-info`, `import cedar_sim` падает → ни одна цифра v2.1 сейчас не воспроизводима. БЛОКИРУЕТ всё остальное.
+- [ ] Добавить PIDDosome-модуль (P, N_crit,P, k_P, λ_p21) и калибровать переразбиение путей (f_ATM / f_PIDDosome / f_exhaustion) как функцию P и G_215.
+- [ ] Критерий «silenced» переопределить: `p53+ / Ser215+ / p21− / LC3B− / caspase-2−` достижим только при высоком G_215 (Aurora A высокий). Добавить предиктор: alisertib → p21+, silenced исчезает.
+- [ ] LC3B переопределить как коррекцию с возвратом в healthy (k_auto, ATG16L1/RAC1); частота амплификации становится стационарной величиной, а не монотонным накоплением → пере-вывести 52%.
+- [ ] Sobol GSA пере-прогнать на v2.1 (возвратное ребро меняет атрибуцию дисперсии).
+- [ ] Панель 7 → 9 маркеров (+ active caspase-2 FLICA, + PIDD1) — согласовать с протоколом ARGUS-OS1.
+- [ ] Редакционное решение по маршруту: (A) corrigendum + новая галей Article 188 или (B) новая статья в LH. Требует подтверждения Джабы.
