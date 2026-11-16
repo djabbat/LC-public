@@ -130,14 +130,14 @@ def main() -> None:
                                      kappa=par["kappa"], N_crit_P=par["N_crit_P"],
                                      lam_p21=par["lam_p21"], k_auto=par["k_auto"]),
                        seed=4)
-        return summary(m.simulate(2000, regime="v2.1_wt"))["median_exit"]
+        return summary(m.simulate(4000, regime="v2.1_wt"))["mean_exit"]
 
     def f_silenced(par):
         m = CEDARModel(params=p.copy(decay_scale=par["decay_scale"], s_D=par["s_D"],
                                      kappa=par["kappa"], N_crit_P=par["N_crit_P"],
                                      lam_p21=par["lam_p21"], k_auto=par["k_auto"]),
                        seed=4)
-        return 100 * summary(m.simulate(2000, regime="v2.1_wt"))["frac_silenced"]
+        return 100 * summary(m.simulate(4000, regime="v2.1_wt"))["frac_silenced"]
 
     bounds = {
         "decay_scale": (2.0, 2.9),
@@ -147,8 +147,8 @@ def main() -> None:
         "lam_p21": (0.2, 1.0),
         "k_auto": (0.2, 0.8),
     }
-    sens_med = sobol_first_total(f_median, bounds, n_base=32, seed=9)
-    sens_sil = sobol_first_total(f_silenced, bounds, n_base=32, seed=9)
+    sens_med = sobol_first_total(f_median, bounds, n_base=96, seed=9)
+    sens_sil = sobol_first_total(f_silenced, bounds, n_base=96, seed=9)
     print("| parameter | S1 (median) | ST (median) | S1 (silenced %) | ST (silenced %) |")
     print("|---|---|---|---|---|")
     for name in bounds:

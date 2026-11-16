@@ -208,9 +208,11 @@ class CEDARModel:
             # transactivation gate (Aurora A -> p53 Ser215)
             G215 = 1.0 / (1.0 + (p.alpha_AurA_215 / 3.0) * au)
 
-            # v2.1 PIDDosome axis
+            # v2.1 PIDDosome axis: an Independent, ATM-independent p21 brake.
+            # Sensing is instantaneous (no tau delay), and the Aurora A(Ser215)
+            # gate blocks p53 transactivation, so high Aurora A silences the brake.
             A_PID = p.piddosome * _sigmoid(p.k_P * (nm - p.N_crit_P))
-            p_arrest = 1.0 - np.exp(-p.lam_p21 * A_PID * G215 * np.clip(p53, 0.0, 3.0))
+            p_p21 = 1.0 - np.exp(-p.lam_p21 * A_PID * G215)
 
             engaged = p53 > p.p53_threshold
             p53c[idx] = np.where(engaged, p53c[idx] + 1, 0)
@@ -218,8 +220,8 @@ class CEDARModel:
             tau_int = int(np.ceil(p.tau))
             arrest_due = p53c[idx] >= tau_int
 
-            # route attribution: p21-arm dominant if PIDDosome signal is above 0.5
-            pid_arm = arrest_due & (A_PID > 0.5) & (rng.random(k) < np.clip(p_arrest * 4.0, 0, 1))
+            # route attribution: the PIDDosome brake is its own exit event
+            pid_arm = rng.random(k) < np.clip(p_p21, 0.0, 1.0)
             atm_arm = arrest_due & ~pid_arm
 
             silencing = G215 < p.G215_silencing
@@ -236,8 +238,8 @@ class CEDARModel:
             ex_exhaust = exhaust
             ex_exhaust_sil = ex_exhaust & blocked_hist[idx]
             ex_exhaust_plain = ex_exhaust & ~blocked_hist[idx]
-            ex_atm = (~ex_exhaust) & atm_exit
-            ex_pid = (~ex_exhaust) & (~ex_atm) & pid_arm & (~silencing)
+            ex_atm = (~ex_exhaust) & atm_exit & (~pid_arm)
+            ex_pid = (~ex_exhaust) & pid_arm
 
             for mask, name in (
                 (ex_exhaust_plain, "exhaustion"),
