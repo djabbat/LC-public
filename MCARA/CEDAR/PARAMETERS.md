@@ -99,14 +99,21 @@
 - PMID 25690512 — Chlamydomonas cell cycle (LECA model)
 - PMID 22691130 — Evolution of land plant cilia
 
-### CEDAR-v2.1 provisional parameters (2026-11-16) — ⚠️ NOT CALIBRATED
+### CEDAR-v2.1 parameters — reference implementation (2026-11-16)
 
-> Added with the PIDDosome module and the autophagy return edge. Draft text: `~/Desktop/NGO/GLA/Longevity_Horizon/issues/Vol2_No5/36a_Tqemaladze_CEDAR_v2.1_revision_DRAFT_2026-11-16.md`. No value below has been fitted; the simulator source is missing locally (`cedar_sim.egg-info` only).
+> Implementation: `simulator/cdata_sim/` (`MODEL_SPEC_v2.1.md`). Results: `simulator/results/v21_results.md`. Status: **fitted to the published v2.0 targets, not measured.** Use the bracket, not the point value, in any manuscript text.
 
 | Parameter | Symbol | Value | Units | Status |
 |-----------|--------|-------|-------|--------|
 | PIDDosome competence | P | 1.0 (WT) / 0 (PIDD1-KO, CASP2-KO) | dimensionless | perturbation definition, not fitted |
-| PIDD1 amplification threshold | N_crit,P | TBD | mature centrosomes | to calibrate |
-| PIDDosome sensing steepness | k_P | TBD | 1/centrosome | to calibrate |
-| p21 arrest rate | λ_p21 | TBD | 1/generation | to calibrate |
-| Autophagy correction rate (basal) | k_0 | TBD | 1/generation | to calibrate |
+| PIDD1 amplification threshold | N_crit,P | 2.0 (bracket 2.0–3.0) | mature centrosomes | fitted; dominates the v2.1 output (S1 ≈ 0.94) |
+| PIDDosome sensing steepness | k_P | 4.0 | 1/centrosome | assumed |
+| p21 arrest rate | λ_p21 | 0.20 (bracket 0.03–0.20) | 1/generation | fitted |
+| Autophagy correction rate | k_auto | 0.15 | 1/generation | fitted; no experimental rate published |
+| LC3B+ entry probability | p_lc3b | 0.12·(1 + 1.5·max(0, 1 − Mf)) | 1/generation | assumed |
+| Transactivation-gate silencing threshold | G_215 < 0.5 | 0.5 | dimensionless | assumed |
+| Asymmetry-decay scale | decay_scale | 2.45 | dimensionless | fitted (article publishes no normalisation of D) |
+| ATM damage scale | s_D | 0.0060 | damage units | fitted |
+| Amplification-event rate | q_amp | 0.0079 | 1/generation | fitted |
+| Aurora A population spread | aurA_cv | 0.62 | log-normal σ | fitted |
+| Damage-production heterogeneity | r_mult_cv | 0.20 | log-normal σ | fitted |
