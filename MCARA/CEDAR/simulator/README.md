@@ -1,4 +1,8 @@
-# CEDAR-v2 Simulator
+# CEDAR-v2.1 Simulator (reference implementation)
+
+> ⚠️ **Provenance (2026-11-16).** The original `cdata_sim` sources are lost (the editable install pointed at a deleted directory, and `github.com/djabbat/CEDAR-sim` does not exist). This directory is an **independent re-implementation** of the published architecture, extended with the v2.1 modules. Every interpretive choice is listed in [`MODEL_SPEC_v2.1.md`](MODEL_SPEC_v2.1.md). Reproduction of the published v2.0 targets: median 50.5 vs 48, IQR 9.5 vs 8, p53 route 26.7% vs 28.5%, amplification 49.9% vs 52% — fitted, not exact.
+>
+> Results: `results/v21_results.md` · regenerate with `python3 scripts/run_v21_results.py` (≈50 s) · tests: `python3 -m pytest tests -q`
 
 **Stochastic, ABC-SMC-calibrated model of centriole-driven stem cell exhaustion with dual Aurora A-mediated p53 inactivation.**
 
@@ -12,31 +16,35 @@ Tqemaladze J. "CEDAR-v2: A Stochastic, ABC-SMC-Calibrated, GSA-Validated Model o
 ## Installation
 
 ```bash
-pip install git+https://github.com/djabbat/CEDAR-sim.git
+# NOTE (2026-11-16): this URL does not exist yet — the original code was lost.
+# Use the local reference implementation instead:
+pip install -e .
 ```
 
-Or from source:
+Or from the local reference implementation:
 
 ```bash
-git clone https://github.com/djabbat/CEDAR-sim.git
-cd CEDAR-sim
+cd ~/Desktop/LC/MCARA/CEDAR/simulator
 pip install -e .
 ```
 
 ## Quick Start
 
 ```python
-from cedar_sim import CEDARModel, ABCSMC, SobolGSA
+from cdata_sim import CEDARModel, calibrate, sobol_first_total
 
-# Simulate a lineage tree
+from cdata_sim.calibration import summary
+
+# v2.0 baseline (ATM-only architecture)
 model = CEDARModel(seed=42)
-trees = model.simulate_tree(max_generations=40, n_cells=100)
-stats = model.compute_statistics(trees)
-print(f"Hayflick median: {stats['hayflick_median']:.1f} generations")
+stats = summary(model.simulate(10_000, regime="v2.0_atm_only"))
+print(f"Hayflick median: {stats['median_exit']:.1f} generations")
 
-# Run global sensitivity analysis
-gsa = SobolGSA(n_samples=10000, seed=42)
-results = gsa.run()
+# v2.1 scenarios (PIDDosome brake + autophagy correction)
+print(summary(model.simulate(10_000, regime="v2.1_wt"))["frac_piddosome"])
+
+# Sensitivity (Saltelli estimators)
+results = sobol_first_total(lambda p: p["kappa"], {"kappa": (0.5, 1.1)}, n_base=64)
 for name, st in sorted(results["ST"].items(), key=lambda x: -x[1])[:5]:
     print(f"  {name}: S_T = {st:.3f}")
 ```

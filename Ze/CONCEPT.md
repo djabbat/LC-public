@@ -13,16 +13,16 @@
 
 | Symbol | Meaning | Direction |
 |--------|---------|-----------|
-| **T** (Tension) | Event exceeds prediction / threshold | ↑ increase |
-| **S** (Stretch) | Event falls below prediction / threshold | ↓ decrease |
+| **S** (Space) | Event exceeds prediction / threshold (change) | ↑ increase |
+| **T** (Time) | Event falls below prediction / threshold (stasis) | ↓ decrease |
 
 ## Key Parameters
 
 | Parameter | Formula | Meaning |
 |-----------|---------|---------|
-| **v** (Ze velocity) | `(N_T - N_S) / N` | Balance of T/S events; v* = 1−ln2 ≈ 0.3069 (exact) |
+| **v** (Ze velocity) | `(N_S - N_T) / (N_S + N_T)` | Balance of T/S events; v* = 1−ln2 ≈ 0.3069 (exact) |
 | **τ** (Ze complexity) | `H(stream) / log₂(N)` | Normalized Shannon entropy |
-| **Z** (Ze index) | `N_T / N` | Fraction of T-events; Z* ≈ 0.731 |
+| **Z** (Ze index) | `N_S / N` | Fraction of S-events; Z* ≈ 0.653 |
 | **χ** (Ze variability) | `(max - min) / mean` | Amplitude of oscillation |
 
 ## Subprojects
@@ -48,7 +48,7 @@
 
 ## Hypothesis
 
-*To be specified — see CONCEPT.md §1 for project rationale.*
+*To be specified — see CONCEPT.md 1 for project rationale.*
 
 
 ## References
