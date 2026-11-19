@@ -1,1 +1,24 @@
 # LC — MAP (v7.1: actual structure)  **Date:** 2026-07-14 (auto-audit)  ## Actual structure (July 2026)  ``` LC/ ├── CONCEPT.md  ← core ├── DESIGN.md  ← core ├── EVIDENCE.md  ← core ├── LICENSE  ← core ├── MAP.md  ← core ├── MEMORY.md  ← core ├── PARAMETERS.md  ← core ├── README.md  ← core ├── STATE.md  ← core ├── THEORY.md  ← core ├── TODO.md  ← core ├── _pi.md  ← core ├── BioSense/ │   ├── CONCEPT.md  ← core │   ├── MAP.md  ← core │   ├── MEMORY.md  ← core │   ├── PARAMETERS.md  ← core │   ├── README.md  ← core │   ├── STATE.md  ← core │   ├── TODO.md  ← core │   ├── _pi.md  ← core │   ├── Materials/ │   │   ├── Toward Integral Field Tomography of Living Systems.docx │   │   ├── Twin Paradox Without Paradox.docx │   │   └── Ze.docx │   ├── _archive/ │   │   ├── CONCEPT.md.bak_dedupe │   │   └── CONCEPT.md.pre-merge-2026-05-09 │   ├── audits/ │   │   └── 2026-05-08/ │   │       ├── LC_BioSense.check.v1.md │   │       ├── LC_BioSense.plan.v1.md │   │       └── LC_BioSense.review.md │   ├── backend/ │   │   ├── Cargo.lock │   │   ├── Cargo.toml │   │   ├── deploy/ │   │   │   ├── scripts/ │   │   │   │   └── deploy.sh │   │   │   └── systemd/ │   │   │       └── biosense-backend.service │   │   └── src/ │   │       └── main.rs │   ├── biosense-web/ │   │   ├── config/ │   │   │   └── runtime.exs │   │   └── lib/ │   │       └── biosense_web_web/ │   │           ├── components/ │   │           └── live/ │   ├── data/ │   │   ├── ze_Elder_72.json │   │   ├── ze_Middle_50.json │   │   ├── ze_Young_25.json │   │   ├── ze_age_comparison.png │   │   ├── cuban/ │   │   │   ├── oldgandalf-FirstWaveCubanHumanNormativeEEGProject-3783da7/ │   │   │   │   ├── CONCEPT.md  ← core │   │   │   │   ├── MAP.md  ← core │   │   │   │   ├── MEMORY.md  ← core │   │   │   │   ├── PARAMETERS.md  ← core │   │   │   │   ├── README.md  ← core │   │   │   │   ├── STATE.md  ← core │   │   │   │   ├── TODO.md  ← core │   │   │   │   ├── _pi.md  ← core │   │   │   │   ├── EyesOpen/ │   │   │   │   ├── data/ │   │   │   │   └── results/ │   │   │   └── results/ │   │   │       ├── ze_cuban_ec.json │   │   │       └── ze_cuban_lifespan.png │   │   ├── dortmund/ │   │   │   ├── participants.tsv │   │   │   └── results/ │   │   │       ├── ze_dortmund_combined.json │   │   │       ├── ze_dortmund_results.png │   │   │       ├── ze_sub-004.json │   │   │       ├── ze_sub-018.json │   │   │       ├── ze_sub-020.json │   │   │       ├── ze_sub-042.json │   │   │       ├── ze_sub-047.json │   │   │       ├── ze_sub-057.json │   │   │       ├── ze_sub-067.json │   │   │       ├── ze_sub-099.json │   │   │       ├── ze_sub-104.json │   │   │       ├── ze_sub-112.json │   │   │       ├── ze_sub-126.json │   │   │       ├── ze_sub-131.json │   │   │       ├── ze_sub-133.json │   │   │       ├── ze_sub-142.json │   │   │       ├── ze_sub-156.json │   │   │       ├── ze_sub-163.json │   │   │       ├── ze_sub-175
+
+## Автоструктура (deep-audit 2026-11-19)
+
+```
+LC-public/
+├── .git/
+├── .github/
+├── .pi/
+├── BioSense/
+├── HAP/
+├── MCAOA/
+├── MCARA/
+├── Organismal_Aging/
+├── Ze/
+├── ai/
+├── docs/
+├── realtime/
+├── scripts/
+├── server/
+├── shared-types/
+├── sim_core/
+├── web/
+```
