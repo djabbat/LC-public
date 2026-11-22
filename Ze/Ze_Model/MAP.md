@@ -46,3 +46,12 @@ Ze (parent project, ~/Desktop/LC/Ze/)
 | `README.md` | English overview |
 | `Articles/Ze_Model_FoP/manuscript.md` | Article for FoP |
 | `Articles/Ze_Model_FoP/cover_letter.md` | Cover letter |
+
+## Автоструктура (deep-audit 2026-11-19)
+
+```
+Ze_Model/
+├── Articles/
+├── docs/
+├── letters/
+```

@@ -23,3 +23,13 @@ simulator/
 - **Parent:** LC/Ze (theory, axioms)
 - **Related:** LC/Ze/Ze_CHSH, LC/Ze/Ze_D, LC/Ze/Ze-Hierarchy, LC/Ze/Ze_Model
 - **Web:** LC/Ze/website/ze_sim (visualization)
+
+## Автоструктура (deep-audit 2026-11-19)
+
+```
+simulator/
+├── data/
+├── scripts/
+├── ze-core/
+├── ze-runner/
+```

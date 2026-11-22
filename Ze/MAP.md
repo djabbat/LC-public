@@ -56,3 +56,29 @@ Ze_Model ──→ Ze_CHSH ──→ Ze_D ──→ Ze-Hierarchy
 - 4 articles submitted to journals (June 2026)
 - 1 NLNet grant accepted (Ze-Hierarchy)
 - Rust simulator (open source)
+
+## Автоструктура (deep-audit 2026-11-19)
+
+```
+Ze/
+├── Articles/
+├── Materials/
+├── PN/
+├── Ze-Hierarchy/
+├── Ze_CHSH/
+├── Ze_D/
+├── Ze_Model/
+├── Ze_Music/
+├── _archive/
+├── audits/
+├── bristlebot_sim/
+├── docs/
+├── grants/
+├── letters/
+├── refs/
+├── simulations/
+├── simulator/
+├── website/
+├── ze-public/
+├── ze-web/
+```

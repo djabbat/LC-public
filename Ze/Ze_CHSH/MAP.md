@@ -42,3 +42,13 @@ LC/
 | OpenAlex / Semantic Scholar | Reference verification |
 | arXiv.org | Preprint search |
 | Quantum optics labs | Potential collaborators |
+
+## Автоструктура (deep-audit 2026-11-19)
+
+```
+Ze_CHSH/
+├── FoP_Submission/
+├── docs/
+├── grants/
+├── scripts/
+```
